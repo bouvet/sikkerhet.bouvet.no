@@ -1,47 +1,47 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 ---
 
-# Tutorial Intro
+# Introduksjon
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Velkommen til __sikkerhet.bouvet__! :sparkles:
 
-## Getting Started
+Her vil systemutviklere i Bouvet finne omfattende informasjon til støtte for å utvikle sikre IT-systemer for våre kunder.
 
-Get started by **creating a new site**.
+Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.  
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Et annet mål med innholdet er å bevistgjøre leseren på hvilke ting man bør tenke på, og gi et vokabular for videre internettsøk og utforskning.
 
-### What you'll need
+For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
-## Generate a new site
+:::caution Husk!
+> Vi skal ikke ha noen bomber!  
+-- _Per Gunnar Tronsli - CEO_
+:::
 
-Generate a new Docusaurus site using the **classic template**.
+## Hva er Informasjonssikkerhet?
 
-The classic template will automatically be added to your project after you run the command:
+_Informasjonssikkerhet_ handler om å sikre disse aspektene ved et IT-system:
+  
+__Konfidensialitet__  
+Dataene systemet behandler skal ikke være tilgjengelig for uauthoriserte personer.
+> Eksempel på utfordringer her kan være et miskonfigurert adgangskontrollsystem, det som i OWASP Top 10 kalles - "Broken Access Control"
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+__Tilgjengelighet__  
+Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
+> Her vil alt fra at en VM går ned pga. full disk, til et målrettet DDoS-angrep være ting å tenke på
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+__Integritet__  
+Dataene systemet behandler er korekte
+> Integriteten kan bli kompromitert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
 
-The command also installs all necessary dependencies you need to run Docusaurus.
 
-## Start your site
 
-Run the development server:
+## Hvordan bruke sikkerhet.bouvet?
 
-```bash
-cd my-website
-npm run start
-```
+_sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
+Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller trenger tips rundt.  
+Eller du og ditt team kan gå systematisk igjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+`TODO:`_sikkerhet.bouvet.no_ kan også lastes ned som en sjekkliste ment til å være en del av kildekoden i ditt prosjekt.
