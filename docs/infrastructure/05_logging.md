@@ -38,7 +38,7 @@ import Tools from './_monitoring_tools.mdx'
         - Beskrivelse av hendelsen
         - Hendelsens alvorlighetsgrad (severity)
         - System-ID
-    - Det skal være mulig å spore system-kontoer til brukeren so initialiserte forespørselen (GDPR)
+    - Det skal være mulig å spore system-kontoer til brukeren so initialiserte forespørselen
 
 :::
 
