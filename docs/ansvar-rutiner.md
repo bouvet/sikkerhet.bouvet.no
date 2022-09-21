@@ -4,8 +4,8 @@ sidebar_position: 1
 
 # Ansvar & Rutiner
 
-For å unngå situasjoner hvor ingen har (tar?) ansvar for enkelte bestandeler av et system er det en fordel å kartlegge ansvars grensene.
-Her forsåker vi å svare på hvor starter og hvor stopper vårt ansvar i systemet. Konklusjonen man ender opp med vil være med å begrense omfanget for de andre kapitellene her.
+For å unngå situasjoner hvor ingen har (tar?) ansvar for enkelte bestanddeler av et system er det en fordel å kartlegge ansvarsgrensene.
+Her forsøker vi å svare på hvor vårt ansvar starter og stopper i systemet. Konklusjonen man ender opp med vil være med å begrense omfanget for de andre kapitlene her.
 
 :::note Eksempel
 

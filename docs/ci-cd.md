@@ -4,8 +4,8 @@ sidebar_position: 3
 
 # CI/CD
 
-Selv om vi her omtaler mange fallgruver ved bruk av _Continuous Integration and Continuous Delivery_ løsninger, så er det sterkt anbefalt å ha nettopp det allikevell.
-Et godt CI/CD system vil bidra til å øke sikkkerheten av systemet betydelig.
+Selv om vi her omtaler mange fallgruver ved bruk av _Continuous Integration and Continuous Delivery_ løsninger, så er det sterkt anbefalt å ha nettopp det allikevel.
+Et godt CI/CD system vil bidra til å øke sikkerheten til systemet betydelig.
 
 Systembrukere og miljø som benyttes i CI/CI har ofte vide og brede tilganger til det meste. Kildekode, Secrets, og Infrastruktur.
 Dette gjør et prosjekts CI/CD til et svært attraktivt mål...

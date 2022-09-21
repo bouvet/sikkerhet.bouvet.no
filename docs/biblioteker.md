@@ -11,7 +11,7 @@ Sikkerhetsrisikoen knyttet til biblioteker er 2-delt.
  1. De kan inneholde kjente sårbarheter ([CVE](https://cve.mitre.org)) som lar seg utnytte om vi ikke oppgraderer raskt nok
  2. De kan inneholde ondsinnet kode som får full tilgang til vårt system
 
-For å beskytte systemet mot disse trusslene er det flere effektive tiltak vi kan gjøre.
+For å beskytte systemet mot disse truslene er det flere effektive tiltak vi kan gjøre.
 
 - OpenSource vs Proprietær (vurder nøye...)
 - Vurder lisensmodell

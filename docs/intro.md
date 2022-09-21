@@ -6,7 +6,7 @@ sidebar_position: 0
 
 Velkommen til __sikkerhet.bouvet__! :sparkles:
 
-Her vil systemutviklere i Bouvet finne omfattende informasjon til støtte for å utvikle sikre IT-systemer for våre kunder.
+Her vil systemutviklere i Bouvet finne informasjon til støtte for å utvikle sikre IT-systemer for våre kunder.
 
 Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.  
 
@@ -25,7 +25,7 @@ For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi a
 _Informasjonssikkerhet_ handler om å sikre disse aspektene ved et IT-system:
   
 __Konfidensialitet__  
-Dataene systemet behandler skal ikke være tilgjengelig for uauthoriserte personer.
+Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte personer.
 > Eksempel på utfordringer her kan være et miskonfigurert adgangskontrollsystem, det som i OWASP Top 10 kalles - "Broken Access Control"
 
 __Tilgjengelighet__  
@@ -33,7 +33,7 @@ Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
 > Her vil alt fra at en VM går ned pga. full disk, til et målrettet DDoS-angrep være ting å tenke på
 
 __Integritet__  
-Dataene systemet behandler er korekte
+Dataene systemet behandler er korrekte
 > Integriteten kan bli kompromitert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
 
 
@@ -41,7 +41,7 @@ Dataene systemet behandler er korekte
 ## Hvordan bruke sikkerhet.bouvet?
 
 _sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
-Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller trenger tips rundt.  
-Eller du og ditt team kan gå systematisk igjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
+Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
+Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
 
 `TODO:`_sikkerhet.bouvet.no_ kan også lastes ned som en sjekkliste ment til å være en del av kildekoden i ditt prosjekt.
