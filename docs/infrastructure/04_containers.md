@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Informasjon rundt bruk av containere
 
-## Krav
+## Ting å tenke på
 - Ikke kjør som `root`
 - Ingen privilege flagg (capabilities)
 - Ikke kjør med `--privileged`
@@ -14,8 +14,6 @@ Informasjon rundt bruk av containere
 - Least privilege for alle filer
     - Kun `+r` (read) tilgang på kildekode
 - Oppdater OS-pakker ved bygging
-
-## Ting å tenke på
 - Hvilket image bygger du på?
     - Troverdig kilde?
     - Typosquatting
@@ -25,8 +23,6 @@ Informasjon rundt bruk av containere
 - Secrets inn i imaget?
     - Hva kopieres inn ved bygging?
     - Secrets skal inn ved kjøring (miljøvariabler), ikke under bygging
-- Dersom du skal eksponere Docker Socketen, vurder å bruk f.eks. [`docker-socket-proxy`](https://github.com/Tecnativa/docker-socket-proxy)
-    - NB: Eksponering av Docker Socket er potensielt farlig, og bør unngås om mulig.
 - Vurder å bruke verktøy som f.eks. `snyk` for å skanne Dockerfiles
 
 ---
