@@ -38,7 +38,7 @@ import Tools from './_monitoring_tools.mdx'
         - Beskrivelse av hendelsen
         - Hendelsens alvorlighetsgrad (severity)
         - System-ID
-    - Det skal være mulig å spore system-kontoer til brukeren so initialiserte forespørselen
+    - Det skal være mulig å spore system-kontoer til brukeren som initialiserte forespørselen
 
 :::
 
