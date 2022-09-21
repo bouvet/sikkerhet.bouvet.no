@@ -35,7 +35,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/bouvet/sikkerhet.bouvet.no',
+            'https://github.com/bouvet/sikkerhet.bouvet.no/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -48,9 +48,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Sikkerutvikling i Bouvet',
+        title: 'Sikker utvikling i Bouvet',
         logo: {
-          alt: 'Sikkerutvikling i Bouvet',
+          alt: 'Sikker utvikling i Bouvet',
           src: 'img/fav-192.png',
         },
         items: [
