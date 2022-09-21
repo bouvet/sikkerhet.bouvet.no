@@ -6,7 +6,6 @@ sidebar_position: 7
 
 Informasjon rundt data og databaser
 
-## Ting å tenke på
 - Begrens scope
 - Bruk TLS!
 - Konfigurer egen brannmur med hviteliste

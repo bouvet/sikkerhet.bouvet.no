@@ -6,7 +6,6 @@ sidebar_position: 4
 
 Informasjon rundt bruk av containere
 
-## Ting å tenke på
 - Ikke kjør som `root`
 - Ingen privilege flagg (capabilities)
 - Ikke kjør med `--privileged`

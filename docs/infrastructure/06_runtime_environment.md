@@ -6,7 +6,6 @@ sidebar_position: 6
 
 Informasjon rundt kjøremiljø
 
-## Ting å tenke på
 - Mating av secrets (KeyVault, miljøvariabler)
 - Ingen secrets i kildekode
     - Bruk miljøvariabler

@@ -6,7 +6,6 @@ sidebar_position: 1
 
 Informasjon rundt fysisk sikring av infrastruktur
 
-## Ting å tenke på
 - Er serverrommet låst?
     - Adgangskontroll
     - Adgangshistorikk
