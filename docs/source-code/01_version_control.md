@@ -12,11 +12,9 @@ Alle prosjekter skal, uavhengig av omfang, benytte versjonskontroll.
 
 :::
 
-## Krav
+## Ting å tenke på
 - Sørg for at produksjons-branchen (ofte `main` eller `master`) er beskyttet
     - Sett gjerne et krav om at pull requests må ha minst to godkjenninger før den kan merges
-
-## Ting å tenke på
 - Hvor lagres kildekoden?
     - Versjonskontroll skal benyttes. `git` er foretrukket
 - On-prem eller i skyen?
