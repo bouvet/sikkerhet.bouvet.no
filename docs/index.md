@@ -7,7 +7,7 @@ title: Introduksjon
 
 Velkommen til __sikkerhet.bouvet.no__! :sparkles:
 
-Her vil systemutviklere i Bouvet finne informasjon til støtte for å utvikle sikre IT-systemer for våre kunder.
+Her vil systemutviklere, infrastruktur-ingeniører, DevOpsere og andre i Bouvet finne informasjon til støtte for å drifte, utvikle og forvalte sikre IT-systemer for våre kunder. Det overordnede innholdet og temaene som diskuteres på disse sidene er også støttende for prosjektledere, rådgivere og andre som skal følge opp sikkerhet i prosjekter.
 
 Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.  
 
