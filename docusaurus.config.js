@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'nb-NO',
-    locales: ['nb-NO'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
@@ -51,7 +51,7 @@ const config = {
       navbar: {
         title: 'Sikker utvikling i Bouvet',
         logo: {
-          href: '/intro',
+          href: '/',
           alt: 'Sikker utvikling i Bouvet',
           src: 'img/fav-192.png',
         },
