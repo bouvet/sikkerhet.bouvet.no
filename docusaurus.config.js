@@ -16,15 +16,15 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'bouvet', // Usually your GitHub org/user name.
+  projectName: 'sikkerhet.bouvet.no', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'nb-NO',
+    locales: ['nb-NO'],
   },
 
   presets: [
@@ -33,6 +33,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/bouvet/sikkerhet.bouvet.no/tree/main/',
@@ -50,6 +51,7 @@ const config = {
       navbar: {
         title: 'Sikker utvikling i Bouvet',
         logo: {
+          href: '/intro',
           alt: 'Sikker utvikling i Bouvet',
           src: 'img/fav-192.png',
         },
