@@ -4,13 +4,13 @@ sidebar_position: 0
 
 # Introduksjon
 
-Velkommen til __sikkerhet.bouvet__! :sparkles:
+Velkommen til __sikkerhet.bouvet.no__! :sparkles:
 
 Her vil systemutviklere i Bouvet finne informasjon til støtte for å utvikle sikre IT-systemer for våre kunder.
 
 Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.  
 
-Et annet mål med innholdet er å bevistgjøre leseren på hvilke ting man bør tenke på, og gi et vokabular for videre internettsøk og utforskning.
+Et annet mål med innholdet er å bevisstgjøre leseren på hvilke ting man bør tenke på, og gi et vokabular for videre internettsøk og utforskning.
 
 For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
 
@@ -34,11 +34,11 @@ Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
 
 __Integritet__  
 Dataene systemet behandler er korrekte
-> Integriteten kan bli kompromitert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
+> Integriteten kan bli kompromittert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
 
 
 
-## Hvordan bruke sikkerhet.bouvet?
+## Hvordan bruke sikkerhet.bouvet.no?
 
 _sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
 Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
