@@ -50,6 +50,7 @@ const config = {
       navbar: {
         title: 'Sikker utvikling i Bouvet',
         logo: {
+          href: '/intro',
           alt: 'Sikker utvikling i Bouvet',
           src: 'img/fav-192.png',
         },
