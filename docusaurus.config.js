@@ -76,7 +76,7 @@ const config = {
               },
               {
                 label: 'Slack',
-                href: 'https://bouvet.slack.com/archives/C02GZQEEMBL',
+                href: 'https://bouvet.slack.com/archives/C0447R83U6M',
               },
             ],
           },
