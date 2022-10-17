@@ -1,41 +1,14 @@
-# Website
+# Velkommen til sikkerhet.bouvet.no
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+## Innhold
 
-### Installation
+### Retningslinjer for innhold
+Alt innhold på https://sikkerhet.bouvet.no skal være fritt tilgjengelig på det store Internett. Det vil si at alt andre har skrevet må refereres til på riktig vis, eventuelt bruk permalenker til innhold der dette er tilgjengelig.
 
-```
-$ yarn
-```
+Felles for alle artikler er at disse skal være teknologi-agnostiske. Bruk gjerne spesifikk teknologi i eksempler, men unngå artikler som kun gir mening på Azure eller AWS.
 
-### Local Development
+### Bidra med innholdsproduksjon
+Ønsker du å bidra med innhold så er det bare å lage et issue ([se om det finnes noe allerede](https://github.com/bouvet/sikkerhet.bouvet.no/issues)), lag en branch og skriv i vei! Alt av innhold blir reviewet og merget ned om det blir godkjent. Er det noe du lurer på i forhold til dette så er [Slack-kanalen vår](https://bouvet.slack.com/archives/C0447R83U6M) et godt startsted.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Noe du savner?
+Hvis det er konkrete forslag til artikler er det fint om listen i issue #22 oppdateres.
