@@ -1,6 +1,5 @@
 ---
 sidebar_position: 0
-title: Introduksjon
 ---
 
 # Introduksjon
@@ -14,6 +13,10 @@ Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har
 Et annet mål med innholdet er å bevisstgjøre leseren på hvilke ting man bør tenke på, og gi et vokabular for videre internettsøk og utforskning.
 
 For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
+
+:::success Husk!
+Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
+:::
 
 ## Hva er Informasjonssikkerhet?
 
@@ -30,6 +33,7 @@ Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.
 __Integritet__  
 Dataene systemet behandler er korrekte.
 > Integriteten kan bli kompromitert for eksempel via et SQL-injeksjons angrep, eller en svakt sikret SSH-server, hvor uautoriserte får tilgang til å endre datene.
+
 
 ## Hvordan bruke sikkerhet.bouvet.no?
 
