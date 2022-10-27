@@ -1,6 +1,5 @@
 ---
 sidebar_position: 0
-title: Introduksjon
 ---
 
 # Introduksjon
@@ -15,10 +14,9 @@ Et annet mål med innholdet er å bevisstgjøre leseren på hvilke ting man bør
 
 For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
 
-
 :::caution Husk!
 > Vi skal ikke ha noen bomber!  
--- _Per Gunnar Tronsli - CEO_
+-- _Sverre Hurum_
 :::
 
 ## Hva er Informasjonssikkerhet?
@@ -36,8 +34,6 @@ Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
 __Integritet__  
 Dataene systemet behandler er korrekte
 > Integriteten kan bli kompromittert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
-
-
 
 ## Hvordan bruke sikkerhet.bouvet.no?
 
