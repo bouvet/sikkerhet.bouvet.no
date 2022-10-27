@@ -21,26 +21,26 @@ Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
 ## Hva er Informasjonssikkerhet?
 
 _Informasjonssikkerhet_ handler om å sikre disse aspektene ved et IT-system:
-  
-### Konfidensialitet
 
-Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte personer.
+__Konfidensialitet__  
+Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte.
 > Eksempel på utfordringer her kan være et miskonfigurert adgangskontrollsystem, det som i OWASP Top 10 kalles - "Broken Access Control"
 
-### Tilgjengelighet
+__Tilgjengelighet__  
+Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.
+> Her vil alt fra at en virtuell maskin fryser pga. en full disk, til et målrettet DDoS-angrep være ting å tenke på
 
-Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
-> Her vil alt fra at en VM går ned pga. full disk, til et målrettet DDoS-angrep være ting å tenke på
+__Integritet__  
+Dataene systemet behandler er korrekte.
+> Integriteten kan bli kompromitert for eksempel via et SQL-injeksjons angrep, eller en svakt sikret SSH-server, hvor uautoriserte får tilgang til å endre datene.
 
-### Integritet
-
-Dataene systemet behandler er korrekte
-> Integriteten kan bli kompromittert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
 
 ## Hvordan bruke sikkerhet.bouvet.no?
 
 _sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
 Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
 Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
+
+Avsnitt merket med; 🧙‍♂️, er "avanserte", hvor gevinsten må vurderes opp mot innsatsfaktoren og prosjektes sikkerhetskrav.
 
 `TODO:`_sikkerhet.bouvet.no_ kan også lastes ned som en sjekkliste ment til å være en del av kildekoden i ditt prosjekt.
