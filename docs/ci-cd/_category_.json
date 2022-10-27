@@ -1,0 +1,8 @@
+{
+  "label": "CI/CD",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Selv om vi her omtaler mange fallgruver ved bruk av Continuous Integration and Continuous Delivery løsninger, så er det sterkt anbefalt å ha et CI/CD system. Et godt CI/CD system vil bidra til å øke sikkerheten til systemet betydelig."
+  }
+}
