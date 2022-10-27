@@ -21,3 +21,6 @@ yarn-error.log*
 
 # IntelliJ IDEA
 /.idea
+
+# We don't use yarn
+yarn.lock
