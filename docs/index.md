@@ -14,24 +14,26 @@ Et annet mål med innholdet er å bevisstgjøre leseren på hvilke ting man bør
 
 For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
 
-:::caution Husk!
-> Vi skal ikke ha noen bomber!  
--- _Sverre Hurum_
+:::success Husk!
+Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
 :::
 
 ## Hva er Informasjonssikkerhet?
 
 _Informasjonssikkerhet_ handler om å sikre disse aspektene ved et IT-system:
   
-__Konfidensialitet__  
+### Konfidensialitet
+
 Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte personer.
 > Eksempel på utfordringer her kan være et miskonfigurert adgangskontrollsystem, det som i OWASP Top 10 kalles - "Broken Access Control"
 
-__Tilgjengelighet__  
+### Tilgjengelighet
+
 Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det
 > Her vil alt fra at en VM går ned pga. full disk, til et målrettet DDoS-angrep være ting å tenke på
 
-__Integritet__  
+### Integritet
+
 Dataene systemet behandler er korrekte
 > Integriteten kan bli kompromittert via et SQL-injeksjons angrep, eller en svakt sikret SSH-server
 
