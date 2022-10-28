@@ -18,12 +18,13 @@ Merk; noen av verktøyene listet opp her har ulike lisense krav. Noen er helt gr
 Alle avhengigheter som taes med inn i et system kan ha kjente sårbarheter (CVE). Disse kan oppdages, og om satt opp riktig, automatisk patches.  
 Denne prosessen omtales ofte som _SCA_ (Software Composition Analysis).
 
-- [Renovate](https://docs.renovatebot.com) (Python, Java, JavaScript, C#, Go, ++)
+- [Mend Renovate](https://docs.renovatebot.com) (Python, Java, JavaScript, C#, Go, ++)
 - Python; [pip-audit](https://github.com/pypa/pip-audit)
 - Containers; [clair](https://quay.github.io/clair/)
 - JavaScript; [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit)
 - [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates) (Github) (Python, Java, JavaScript, C#, Go, ++)
 - [Snyk Open Source](https://docs.snyk.io/products/snyk-open-source) (Python, Java, JavaScript, C#, Go, ++)
+- [Dependency-Track](https://dependencytrack.org)
 
 ## Testing
 
@@ -40,6 +41,7 @@ Statisk kodeanalyse, også kjent som _SAST_ (Static Application Security Testing
 Noen alternativer:
 
 - [SonarQube](https://www.sonarqube.org/features/security/)
+- [SonarCloud](https://www.sonarcloud.io)
 - [CodeQL](https://codeql.github.com)
 - [Bandit](https://github.com/PyCQA/bandit) (kun for python)
 - [Snyk Code](https://snyk.io/product/snyk-code/)
