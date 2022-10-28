@@ -75,9 +75,7 @@ const config = {
                         position: 'right',
                     },
                 ],
-                style: {
-                    backgroundColor: '#11133c',
-                },
+                style: 'dark',
             },
             footer: {
                 style: 'dark',
