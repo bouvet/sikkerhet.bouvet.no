@@ -56,7 +56,7 @@ Sikkerhetsoppdateringer bør automatiseres dersom mulig. Om ikke, lag en rutine 
     - Disker
 
 ```mdx-code-block
-import Tools from './_monitoring_tools.mdx'
+import Tools from '../08_monitorere/_monitoring_tools.mdx'
 
 <Tools />
 ```

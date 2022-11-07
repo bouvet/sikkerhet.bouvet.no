@@ -27,7 +27,7 @@ Derfor bør konfigurasjonen og oppsettet av CI/CD være tekstbasert og en del av
 ## Kjøremiljø
 
 Om miljøet CI/CD skulle bli kompromitert kan det få alvorlige følger. Da kan publisert kildekode modifiseres, secrets bli hentet ut, og man kan kunne komme seg videre inn i systemet.  
-For generell sikring av [virtuelle maskiner](../infrastructure/virtual_machines) og [containere](../infrastructure/containers) finnes det egne sider om det.
+For generell sikring av [virtuelle maskiner](../deploye/virtual_machines) og [containere](../deploye/containers) finnes det egne sider om det.
 
 - Unngå å drifte kjøretidsmiljø for CI/CD selv (self hosted runners)
   - Om du må. Kjør i [kortlevde containere (Github eksempel)](https://docs.github.com/en/actions/hosting-your-own-runners/autoscaling-with-self-hosted-runners#using-ephemeral-runners-for-autoscaling)
