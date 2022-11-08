@@ -33,7 +33,7 @@ For generell sikring av [virtuelle maskiner](../deploye/virtual_machines) og [co
   - Om du må. Kjør i [kortlevde containere (Github eksempel)](https://docs.github.com/en/actions/hosting-your-own-runners/autoscaling-with-self-hosted-runners#using-ephemeral-runners-for-autoscaling)
 - Unngå Jenkins (om du må, vær svært nøye med å oppdatere og hvilke plugins som brukes.)
 - Bruk Github Actions, men pass på...
-  - Eksterne _actions_. Bør unngåes, ellers samme prinsipp som ved bruk av [biblioteker](../biblioteker). Kan også låses til commit SHA
+  - Eksterne _actions_. Bør unngåes, ellers samme prinsipp som ved bruk av [biblioteker](/utvikle/biblioteker). Kan også låses til commit SHA
   - Ikke tillat pull requests fra forks å kjøre i _self hosted runners_
   - Vurder å bruke environment secrets (per branch). Husk; alle som kan kjøre jobber har tilgang til alle secrets
   - Vurder [federated identity credential](https://learn.microsoft.com/en-us/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0) (Azure + Github)

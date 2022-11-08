@@ -1,0 +1,25 @@
+name: "Test"
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+
+jobs:
+  test-docs:
+    name: test-docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout GitHub Action"
+        uses: actions/checkout@main
+
+      - name: "Setup node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies and build website
+        run: |
+          npm install
+          npm run build
