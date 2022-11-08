@@ -1,8 +1,8 @@
 {
-  "label": "Kildekode",
+  "label": "Bygge",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Kildekodesikkerhet"
+    "description": "Bygge (Engelsk: Build)"
   }
 }
