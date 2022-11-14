@@ -8,7 +8,7 @@ Det er ganske enkelt, du er en Security Champion om du har bestemt deg for å bl
 ## Hjelp, jeg har definert meg selv som security champion!
 Gratulerer du har nå blitt en av de som jobber for å skape en bedre verden! Det vanskeligste er nå gjort, så nå skal vi bare å begynne med å ta små skritt i riktig retning.
 
-Uavhengig av din bakgrunn (utvikler, tester, prosjektleder eller gud forby avdelingsleder) kan punkt 1, 2 og 3 gjøres av alle.
+Uavhengig av din bakgrunn (utvikler, tester, prosjektleder osv) kan punkt 1, 2 og 3 gjøres av alle.
 
 ### 1. Skap bevissthet
 Du kan gjerne begynne med å stille deg selv noen spørsmål?
@@ -19,9 +19,9 @@ Du kan gjerne begynne med å stille deg selv noen spørsmål?
 
 Når du begynner å skape deg en bevissthet så kan vi gå videre å finne ut av mer. Nå kan du begynne å ta litt initiativ i teamet ditt.
 
-- Vi foreslår at du begynner med å invitere teamet til en trusselmodelleringsession.  Du trenger ikke kunne noe om trusselmodellering, men du kan få litt støtte her [https://www.threatmodelingmanifesto.org/](https://www.threatmodelingmanifesto.org/). Målet med denne trusselmodelleringen er at du og teamet skal få et bevisst forhold til trusler og kanskje få i gang tankeprosessen rundt mottiltak.
+- Et godt startsted er å organisere en trusselmodellerings-øvelse. Du trenger ikke kunne noe om trusselmodellering, men du kan få litt støtte her [https://www.threatmodelingmanifesto.org/](https://www.threatmodelingmanifesto.org/). Målet med denne trusselmodelleringen er at du og teamet skal få et bevisst forhold til trusler og kanskje få i gang tankeprosessen rundt mottiltak.
 
-- Be sjefen om penger til en liten premie og lag et bug bounty program i teamet ditt hvor den som finner en feil får en premie eller at dere kårer en vinner periodisk basert på hvem som har funnet flest etc.
+- Vurder å etablere et bug bounty program (premiering for å finne bugs) eller noe som får teamet ditt med på å aktive finne utfordringer som bør/må løses.
 
 Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke får med seg teamet får ofte ikke gjort så mye som han/hun ønsker.
 
@@ -40,7 +40,7 @@ Går man gjennom den listen får man støtte til å få kontroll på blant annet
 Husk du trenger ikke ta alt på en gang få med deg teamet og gjør del for del til dere har enda bedre kontroll på prosjektet. Du trenger ikke kunne alt om dette her men sammen i teamet ditt bør dere klare å finne ut av det.
 
 ### 3. Beskytte brukere og bedriftens rykte
-Her kan vi gå amok å benytte forsvarets etikk:
+Basert på etikken som læres bort i forsvaret får vi noen lure spørsmål vi kan bruke som utgangspunkt.
 
 - Er det lov?
 	-  Er løsningen vår lovlig eller risikerer vi f.eks bøter fra datatilsynet og kanskje vi skal fikse dette?
