@@ -8,7 +8,7 @@ Alt innhold på <https://sikkerhet.bouvet.no> skal være fritt tilgjengelig på 
 
 Felles for alle artikler er at disse skal være teknologi-agnostiske. Bruk gjerne spesifikk teknologi i eksempler, men unngå artikler som kun gir mening på Azure eller AWS.
 
-Les mer om hvordan artikler skal skrives og hva de skal inneholde i [content guidelines](content-guidelines.md)
+Les mer om hvordan artikler skal skrives og hva de skal inneholde i våre [retningslinjer for innhold](content-guidelines.md)
 
 ### Bidra med innholdsproduksjon
 
