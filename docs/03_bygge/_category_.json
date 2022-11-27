@@ -2,7 +2,7 @@
   "label": "Bygge",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Bygge (Engelsk: Build)"
+    "type": "doc",
+    "id": "introduction"
   }
 }

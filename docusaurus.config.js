@@ -65,7 +65,7 @@ const config = {
                 logo: {
                     href: '/',
                     alt: 'Sikker utvikling i Bouvet',
-                    src: 'img/fav-192.png',
+                    src: 'img/lock.svg',
                 },
                 items: [
                     // {to: '/checklist', label: 'Checklist', position: 'left'},
