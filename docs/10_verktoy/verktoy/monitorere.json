@@ -1,0 +1,26 @@
+[
+    {
+        "name": "uptime-kuma",
+        "description": "Et verktøy for monitorering av applikasjoner, inkl. tilgjengelighet og sertifikatutløp",
+        "url": "https://github.com/louislam/uptime-kuma",
+        "categories": ["Monitorering"]
+    },
+    {
+        "name": "netdata",
+        "description": "Et dashboard for monitorering av ytelse for systemer, hardware, containere og applikasjoner",
+        "url": "https://github.com/netdata/netdata",
+        "categories": ["Monitorering"]
+    },
+    {
+        "name": "loki",
+        "description": "Et verktøy for aggregering av logger",
+        "url": "https://github.com/grafana/loki",
+        "categories": ["Logging"]
+    },
+    {
+        "name": "Azure Monitor",
+        "description": "En løsning for logginnsamling og analyse",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/overview",
+        "categories": ["Logging", "Logganalyse"]
+    }
+]

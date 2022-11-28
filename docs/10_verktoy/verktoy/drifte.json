@@ -1,0 +1,14 @@
+[
+    {
+        "name": "fail2ban",
+        "description": "Et IPS (Intrusion prevention system) som blokkerer IPer med ondsinnet atferd",
+        "url": "https://github.com/fail2ban/fail2ban",
+        "categories": ["Intrusion Prevention"]
+    },
+    {
+        "name": "lynis",
+        "description": "Et verktøy for revisjon (eng: audit) av sikkerheten i Linux, macOS, og UNIX-baserte system, samt compliance",
+        "url": "https://github.com/CISOfy/lynis",
+        "categories": ["Audit", "Compliance"]
+    }
+]
