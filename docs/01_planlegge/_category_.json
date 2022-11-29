@@ -2,7 +2,7 @@
   "label": "Planlegge",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Planlegge (Engelsk: Plan)"
+    "type": "doc",
+    "id": "introduction"
   }
 }

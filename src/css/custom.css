@@ -21,26 +21,73 @@
   --ifm-color-primary-lighter: #141645;
   --ifm-color-primary-lightest: #16194e;
   --ifm-color-secondary: #c3d5e1;
-  --ifm-background-color: #ffffff;
+  --ifm-background-color: var(--bouvet-beige);
   --ifm-link-color: #f9a86f;
   --ifm-link-hover-color: #f8934c;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --bouvet-blue: #11133c;
+  --bouvet-beige: #FCF8F3;
   --search-local-highlight-color: #f8934c;
-  --search-local-hit-active-color: #000;
-  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
+  --search-local-hit-active-color: var(--bouvet-blue);
+  --search-local-modal-background: var(--bouvet-blue);
 }
 
 .navbar {
+  --ifm-navbar-background-color: var(--bouvet-beige);
+  --ifm-navbar-link-color: var(--bouvet-blue);
+  --ifm-navbar-link-hover-color: var(--bouvet-blue);
+  --ifm-color-content: var(--bouvet-blue);
+  --ifm-color-primary: var(--bouvet-blue);
+  box-shadow: var(--bouvet-beige);
+  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
+  --ifm-navbar-search-input-color: var(--bouvet-blue);
+  --ifm-navbar-search-input-backgroud-color: var(--bouvet-blue);
+  --ifm-navbar-search-input-placeholder-color: var(--bouvet-blue);
+}
+
+[data-theme="dark"] .navbar {
   --ifm-navbar-background-color: var(--bouvet-blue);
-  --ifm-navbar-link-color: #fff;
-  --ifm-navbar-link-hover-color: #fff;
-  --ifm-color-content: #fff;
+  --ifm-navbar-link-color: var(--bouvet-beige);
+  --ifm-navbar-link-hover-color: var(--bouvet-beige);
+  --ifm-color-content: var(--bouvet-beige);
+  --ifm-color-primary: var(--bouvet-beige);
+  box-shadow: var(--bouvet-blue);
+  --ifm-navbar-search-input-color: var(--bouvet-beige);
+  --ifm-navbar-search-input-backgroud-color: var(--bouvet-beige);
+  --ifm-navbar-search-input-placeholder-color: var(--bouvet-beige);
+}
+
+.navbar__search-input {
+  background-color: white;
+  /* color: var(--bouvet-blue); */
+  border-radius: 0;
+  width: 16rem;
+}
+
+.navbar__items {
+  justify-content: center;
+}
+
+.navbar__title {
+  font-size: x-large;
+}
+
+.navbar__logo {
+  height: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+[data-theme="dark"] .navbar__logo {
+  filter: invert(100%);
 }
 
 .clean-btn {
-  color: #fff;
+  color: var(--bouvet-blue);
+}
+
+[data-theme="dark"] .clean-btn {
+  color: var(--bouvet-beige);
 }
 
 .clean-btn:hover {
@@ -48,7 +95,89 @@
 }
 
 [data-theme="dark"] .clean-btn:hover {
-  color: #fff;
+  color: var(--bouvet-beige);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 3rem;
+}
+
+.devops-links-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.devops-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -2.5rem;
+}
+
+.bottom-section {
+  display: flex;
+  background: white;
+  padding-top: 5rem;
+}
+
+[data-theme="dark"] .bottom-section {
+  background: var(--bouvet-blue);
+}
+
+.bottom-section-left {
+  margin-left: 5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.bottom-section-right {
+  margin-left: 5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.bottom-section-left-heading {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 4rem;
+  font-size: xx-large;
+  font-weight: bold;
+  background: #11133C;
+  color: #F9A86F;
+  padding: 0.1rem 0.6rem;
+}
+
+.bottom-section-left-text {
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 8rem;
+}
+
+.devops-button {
+  margin: 1rem;
+  padding: 1rem;
+  color: var(--bouvet-blue);
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.devops-button:hover {
+  color: var(--bouvet-beige);
+  background-color: var(--bouvet-blue);
+}
+
+[data-theme="dark"] .quote {
+  filter: invert(30%);
 }
 
 .footer {
