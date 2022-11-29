@@ -7,6 +7,6 @@
         </p>
     </div>
     <div className="column">
-        <img alt="Plan" src="/img/devops_operate.svg"/>
+        <img alt="DevOps process diagram - Operate" src="/img/devops_operate.svg"/>
     </div>
 </div>
