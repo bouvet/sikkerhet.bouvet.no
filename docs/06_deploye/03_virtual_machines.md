@@ -83,7 +83,7 @@ Dersom du benytter SSH til fjernstyring er det viktig å gå gjennom konfigurasj
 
 ## Autentisering og pålogging
 
-Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever brukerinteraksjon må man naturlig nok også logge inn på disse. Tidligere ble dette ofte løst ved å åpne for Remote Desktop (RDP) eller SSH-tilkoblinger direkte til maskinen, noe som kan føre til at maskinen blir kompromittert. Valgene under kan bidra til å beskytte en VM, sammen med et sikkert oppsett av [nettverket](../07_drifte/02_network.md).
+Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever brukerinteraksjon må man naturlig nok også logge inn på disse. Tidligere ble dette ofte løst ved å åpne for Remote Desktop (RDP) eller SSH-tilkoblinger direkte til maskinen. Ved å istedenfor bruke en mellom-node ("jump host"), kan man enkelt konfigurere mer avansert autentisering, på ett sentralt sted. Valgene under kan bidra til å beskytte en VM, sammen med et sikkert oppsett av [nettverket](../07_drifte/02_network.md).
 
 - Bruk av en identity provider til å autentisere brukere
 - Bruk `Single Sign-On` der det er mulig
