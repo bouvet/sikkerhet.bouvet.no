@@ -4,7 +4,9 @@ sidebar_position: 3
 
 # Virtuelle maskiner
 
-Informasjon rundt bruk og sikring av virtuelle maskiner
+Tradisjonelt har virtuelle maskiner blitt benyttet til det samme som man brukte fysiske maskiner til, den store forskjellen var økt fleksibilitet med administrasjon, sikkerhetskopiering og migrering. En VM kjører et helt vanlig operativsystem, med samme kompleksitet og angrepsflate som en tilsvarende fysisk maskin.
+
+Mange tidligere typiske oppgaver for virtuelle (og fysiske) maskiner er nå tatt over av "serverløse" systemer, slik som containere eller instanser i skyløsninger. Dette abstraherer bort det meste av kompleksiteten med driften, og er i de fleste tilfeller en bedre løsning enn å kjøre samme tjeneste på en VM. Det er likevel fortsatt mange områder der man har behov for et fullt operativsystem. Typisk for disse er at man trenger å kjøre desktop/legacy-applikasjoner og støttetjenester til disse, eller har behov for kraftige maskiner med mye minne, prosessorkraft eller skjermkort.
 
 :::info Merk
 
@@ -14,46 +16,107 @@ Dersom du kan benytte containere, bør dette prioriteres.
 
 :::
 
-## Kernel-sikkerhetsmoduler (Linux)
-En av disse bør konfigureres dersom du skal benytte en virtuell maskin:
+- [Virtuelle maskiner](#virtuelle-maskiner)
+  - [Bruksområder](#bruksområder)
+    - [Desktopapplikasjoner](#desktopapplikasjoner)
+    - [Testmaskiner](#testmaskiner)
+    - [Legacy serverløsninger](#legacy-serverløsninger)
+  - [Programvare](#programvare)
+    - [Sikkerhetsoppdateringer](#sikkerhetsoppdateringer)
+    - [Kernel-sikkerhetsmoduler (Linux)](#kernel-sikkerhetsmoduler-linux)
+    - [Konfigurasjon av SSH](#konfigurasjon-av-ssh)
+  - [Autentisering og pålogging](#autentisering-og-pålogging)
+  - [Monitorering](#monitorering)
+  - [Automatisk avstengning](#automatisk-avstengning)
 
-- SELinux (*Security-Enhanced Linux*)
-- AppArmor
+## Bruksområder
 
-## Sikkerhetsoppdateringer
+Virtuelle maskiner kan brukes til flere ulike oppgaver. Sikkerhet må ivaretas på flere nivåer, spesielt på [nettverk](../07_drifte/02_network.md)- og operativsystemnivå.
 
-Sikkerhetsoppdateringer bør automatiseres dersom mulig. Om ikke, lag en rutine på det!
+### Desktopapplikasjoner
+
+Det er mulig å tilby brukere både fulle desktopløsninger og enkeltapplikasjoner som kjøres på virtuelle maskiner. Dette lar deg kjøre applikasjoner med høye sikkerhetskrav i et kontrollert miljø i stedet for på brukernes fysiske maskiner. Avhengig av hvilken løsning du velger kan du også sette opp isolerte nettverk / maskiner for de ulike applikasjonene på en måte som er transparent for brukeren. Andre vanlige bruksområder er applikasjoner som krever mye minne, CPU eller skjermkort, eller har behov for gode nettverksforbindelser mot servere i skyløsningen.
+
+### Testmaskiner
+
+Virtuelle maskiner brukes ofte til testing av desktop/legacy-applikasjoner, da de kan slettes og rulles ut på nytt raskt. Dette er løsninger som bør automatiseres med [CI/CD](../03_bygge/bruk-av-ci-cd.md), inkludert inn/utrullering av maskiner i Active Directory eller opprettelse av SSH-nøkler.
+
+### Legacy serverløsninger
+
+Dersom du ønsker å migrere fra on-prem til skyen er det mulig å gjøre en migrering av virtuelle maskiner. Dette kan løses enten ved direkte migrering av den eksisterende VM'en, eller ved at man setter opp nye VM'er med lignende konfigurasjon som det man har gjort. Den siste metoden er å foretrekke fra et sikkerhetsmessig og teknisk perspektiv, da man kan benytte seg av moderne [CI/CD](../03_bygge/bruk-av-ci-cd.md)-løsninger for å rulle ut og vedlikeholde applikasjonene. Man får også en mulighet til å få ryddet opp i eventuelle sikkerhetsproblemer i den gamle konfigurasjonen.
+
+En direkte migrering kan spare penger på kort sikt, men vil over lengre tid sannsynligvis gi mindre utbytte av en skyløsning da den ikke benytter seg av alle mulighetene man har der, og det er en større risiko for at eksisterende sikkerhetsproblemer blir dratt med inn i den nye løsningen. Det kan likevel være en akseptabel løsning der man vet at applikasjonen / tjenesten skal skiftes ut innen kort tid.
 
 ## Programvare
 
 - En gylden regel er å installere færrest mulig OS-pakker. Dette reduserer den potensielle angrepsoverflaten, og begrenser behovet for vedlikehold av utdaterte pakker.
-
+- Bruk script til å fjerne moduler og pakker det ikke er behov for
 - OS-pakker skal kun installeres fra kilder man stoler på.
 
-## Autentisering
+### Sikkerhetsoppdateringer
 
-- Bruk en Identity Provider om mulig
-    - På denne måten slipper man onboarding og offboarding
-- Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende
-- Konfigurer tidsbegrenset tilgang
-    - Just-in-Time nettverksåpning
+Sikkerhetsoppdateringer bør automatiseres dersom mulig. Dersom du [skrur av](#automatisk-avstengning) virtuelle maskiner når de ikke er i bruk bør disse startes automatisk før utrulling av sikkerhetsoppdateringen startes.
 
-### SSH
+:::info Merk
+
+Manuelle oppdateringer bør unngås. Lag rutiner for manuelle oppdateringer og oppfølging av VM'er som ikke kan oppdateres automatisk.
+
+:::
+
+### Kernel-sikkerhetsmoduler (Linux)
+
+En av disse bør konfigureres dersom du skal benytte Linux på en virtuell maskin:
+
+- SELinux (*Security-Enhanced Linux*)
+- AppArmor
+
+### Konfigurasjon av SSH
+
+Dersom du benytter SSH til fjernstyring er det viktig å gå gjennom konfigurasjonen av tjenesten.
+
 - Innlogging via ssh som `root`-bruker skal ikke tillates.
-    - `PermitRootLogin no`
+  - `PermitRootLogin no`
 - Innlogging med passord skal ikke tillates.
-    - `PasswordAuthentication no`
+  - `PasswordAuthentication no`
 - Slå av X11 forwarding.
-    - `X11Forwarding no`
+  - `X11Forwarding no`
 
-### Monitorering
+## Autentisering og pålogging
 
-*Monitorerer vi systemets tilstand?*
+Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever brukerinteraksjon må man naturlig nok også logge inn på disse. Tidligere ble dette ofte løst ved å åpne for Remote Desktop (RDP) eller SSH-tilkoblinger direkte til maskinen, noe som kan føre til at maskinen blir kompromittert. Valgene under kan bidra til å beskytte en VM, sammen med et sikkert oppsett av [nettverket](../07_drifte/02_network.md).
 
-- Ressursbruk:
-    - CPU
-    - Minne
-    - Disker
+- Bruk av en identity provider til å autentisere brukere
+- Bruk `Single Sign-On` der det er mulig
+- Krev MFA eller sertifikatbasert pålogging fra alle brukere på minst ett trinn av påloggingen
+  - Ikke overdriv bruken av MFA
+- [Isoler](../07_drifte/02_network.md#isolasjon-av-tjenester) maskinen
+  - Bruk `Bastion hosts` eller andre tjenester som lar deg koble til maskinen uten å ha direkte nettverkstilgang
+  - Eksponer aldri porter for fjernstyring på internett
+  - Konfigurer tidsbegrenset tilgang
+  - Bruk `Just-in-Time` nettverksåpning der `Bastion hosts` ikke er mulig
+    - Konfigurer standardvalg for Just-in-Time til å kun tillate spesifikke IP-ranger
+- Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende verktøy for å blokkere IP-adresser som feiler pålogging flere ganger
+
+## Monitorering
+
+For å få en oversikt over bruken av virtuelle maskiner bør man skru på flere typer monitorering. Dette kan gi deg muligheter til å for eksempel skalere VM'er til en mer passende størrelse, eller å vise deg om det er påskrudde VM'er som ikke er i bruk. Det finnes også monitoreringsverktøy som gir oversikt over status på [sikkerhetsoppdateringer](#sikkerhetsoppdateringer) og sikkerhetskonfigurasjonen på maskinene.
+
+- Ressursbruk
+  - CPU
+  - Minne
+  - Disker
+  - Nettverk
+- Påloggede brukere
+- Ubenyttede maskiner
+- Sikkerhet
+  - Manglende oppdateringer
+  - Feil/manglende sikkerhetskonfigurasjon
+
+## Automatisk avstengning
+
+De fleste skyløsninger lar deg betale for bruk av VM'er per minutt eller time. Det kan derfor være mye penger å spare på å skru av maskiner som ikke er i bruk. I de fleste tilfeller løses dette ved automatisk avstengning på et gitt klokkeslett, ved slike løsninger bør du implementere sjekker for om maskinene er i bruk eller ikke slik at brukere som er innlogget ikke mister arbeid.
+
+Avstengte maskiner kan gi både fordeler og ulemper i forhold til sikkerhet. De er naturlig nok mindre sårbare under pågående hendelser, men vil heller ikke få [sikkerhetsoppdateringer](#sikkerhetsoppdateringer) mens de er avskrudd, og man må vise ekstra varsomhet hvis de skal startes opp på nytt etter for eksempel et malwareangrep, da de fortsatt kan inneholde skadevaren.
 
 ```mdx-code-block
 import Tools from '../08_monitorere/_monitoring_tools.mdx'
