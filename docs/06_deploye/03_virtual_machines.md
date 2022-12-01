@@ -24,8 +24,7 @@ Dersom du kan benytte containere, bør dette prioriteres.
   - [Programvare](#programvare)
     - [Sikkerhetsoppdateringer](#sikkerhetsoppdateringer)
     - [Kernel-sikkerhetsmoduler (Linux)](#kernel-sikkerhetsmoduler-linux)
-    - [Konfigurasjon av SSH](#konfigurasjon-av-ssh)
-  - [Autentisering og pålogging](#autentisering-og-pålogging)
+  - [Autentisering og pålogging](#autentisering-og-pålogging),
 
 ## Bruksområder
 
@@ -68,17 +67,6 @@ En av disse bør konfigureres dersom du skal benytte Linux på en virtuell maski
 - SELinux (*Security-Enhanced Linux*)
 - AppArmor
 
-### Konfigurasjon av SSH
-
-Dersom du benytter SSH til fjernstyring er det viktig å gå gjennom konfigurasjonen av tjenesten.
-
-- Innlogging via ssh som `root`-bruker skal ikke tillates.
-  - `PermitRootLogin no`
-- Innlogging med passord skal ikke tillates.
-  - `PasswordAuthentication no`
-- Slå av X11 forwarding.
-  - `X11Forwarding no`
-
 ## Autentisering og pålogging
 
 Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever brukerinteraksjon må man naturlig nok også logge inn på disse. Tidligere ble dette ofte løst ved å åpne for Remote Desktop (RDP) eller SSH-tilkoblinger direkte til maskinen. Ved å istedenfor bruke en mellom-node ("jump host"), kan man enkelt konfigurere mer avansert autentisering, på ett sentralt sted. Valgene under kan bidra til å beskytte en VM, sammen med et sikkert oppsett av [nettverket](../07_drifte/02_network.md).
@@ -94,6 +82,10 @@ Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever bruk
   - Bruk `Just-in-Time` nettverksåpning der `Bastion hosts` ikke er mulig
     - Konfigurer standardvalg for Just-in-Time til å kun tillate spesifikke IP-ranger
 - Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende verktøy for å blokkere IP-adresser som feiler pålogging flere ganger
+- Konfigurer SSH-servere til å kun tillate den påloggingstypen du ønsker
+  - Skru alltid av muligheten til å logge inn som `root`
+  - Deaktiver passordinnlogging hvis sertifikater eller identity provider benyttes til autentisering
+  - Slå av X11-forwarding
 
 ```mdx-code-block
 import Tools from '../08_monitorere/_monitoring_tools.mdx'
