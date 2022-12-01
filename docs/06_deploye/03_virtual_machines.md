@@ -26,8 +26,6 @@ Dersom du kan benytte containere, bør dette prioriteres.
     - [Kernel-sikkerhetsmoduler (Linux)](#kernel-sikkerhetsmoduler-linux)
     - [Konfigurasjon av SSH](#konfigurasjon-av-ssh)
   - [Autentisering og pålogging](#autentisering-og-pålogging)
-  - [Monitorering](#monitorering)
-  - [Automatisk avstengning](#automatisk-avstengning)
 
 ## Bruksområder
 
