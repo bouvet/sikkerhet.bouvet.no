@@ -97,27 +97,6 @@ Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever bruk
     - Konfigurer standardvalg for Just-in-Time til å kun tillate spesifikke IP-ranger
 - Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende verktøy for å blokkere IP-adresser som feiler pålogging flere ganger
 
-## Monitorering
-
-For å få en oversikt over bruken av virtuelle maskiner bør man skru på flere typer monitorering. Dette kan gi deg muligheter til å for eksempel skalere VM'er til en mer passende størrelse, eller å vise deg om det er påskrudde VM'er som ikke er i bruk. Det finnes også monitoreringsverktøy som gir oversikt over status på [sikkerhetsoppdateringer](#sikkerhetsoppdateringer) og sikkerhetskonfigurasjonen på maskinene.
-
-- Ressursbruk
-  - CPU
-  - Minne
-  - Disker
-  - Nettverk
-- Påloggede brukere
-- Ubenyttede maskiner
-- Sikkerhet
-  - Manglende oppdateringer
-  - Feil/manglende sikkerhetskonfigurasjon
-
-## Automatisk avstengning
-
-De fleste skyløsninger lar deg betale for bruk av VM'er per minutt eller time. Det kan derfor være mye penger å spare på å skru av maskiner som ikke er i bruk. I de fleste tilfeller løses dette ved automatisk avstengning på et gitt klokkeslett, ved slike løsninger bør du implementere sjekker for om maskinene er i bruk eller ikke slik at brukere som er innlogget ikke mister arbeid.
-
-Avstengte maskiner kan gi både fordeler og ulemper i forhold til sikkerhet. De er naturlig nok mindre sårbare under pågående hendelser, men vil heller ikke få [sikkerhetsoppdateringer](#sikkerhetsoppdateringer) mens de er avskrudd, og man må vise ekstra varsomhet hvis de skal startes opp på nytt etter for eksempel et malwareangrep, da de fortsatt kan inneholde skadevaren.
-
 ```mdx-code-block
 import Tools from '../08_monitorere/_monitoring_tools.mdx'
 
