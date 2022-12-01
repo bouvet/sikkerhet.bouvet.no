@@ -81,7 +81,7 @@ Siden VM'er i mange tilfeller brukes til å kjøre applikasjoner som krever bruk
   - Konfigurer tidsbegrenset tilgang
   - Bruk `Just-in-Time` nettverksåpning der `Bastion hosts` ikke er mulig
     - Konfigurer standardvalg for Just-in-Time til å kun tillate spesifikke IP-ranger
-- Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende verktøy for å blokkere IP-adresser som feiler pålogging flere ganger
+- Konfigurer [`fail2ban`](https://www.fail2ban.org/wiki/index.php/Main_Page) eller tilsvarende verktøy for blokkere klienter som forsøker å gjette passordet gjentatte ganger.
 - Konfigurer SSH-servere til å kun tillate den påloggingstypen du ønsker
   - Skru alltid av muligheten til å logge inn som `root`
   - Deaktiver passordinnlogging hvis sertifikater eller identity provider benyttes til autentisering
