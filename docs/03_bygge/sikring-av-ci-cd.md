@@ -37,3 +37,7 @@ For generell sikring av [virtuelle maskiner](../deploye/virtual_machines) og [co
   - Ikke tillat pull requests fra forks å kjøre i _self hosted runners_
   - Vurder å bruke environment secrets (per branch). Husk; alle som kan kjøre jobber har tilgang til alle secrets
   - Vurder [federated identity credential](https://learn.microsoft.com/en-us/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0) (Azure + Github)
+
+:::info OWASP CI/CD Top 10
+Om du ønsker å lese mer om det å sikre en CI/CD, anbefaler vi [OWASP CI/CD Top 10](https://owasp.org/www-project-top-10-ci-cd-security-risks/) :star:
+:::
