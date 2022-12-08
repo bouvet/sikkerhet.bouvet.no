@@ -4,16 +4,15 @@ sidebar_position: 3
 
 # Kildekode
 
-Denne artikkelen handler om programvarens kildekode. Altså ikke det som er endel av versjonskontrolsystemet men som ikke eksikveres "i produksjon" (dokumentasjon, IaC, CI/CD, etc.).
+Denne artikkelen handler om programvarens kildekode. Det vil si alt som ligger til grunn for det som kjører i produksjon, men ikke andre ting som ligger i kildekodekontrol (dokumentasjon, IaC, CI/CD, etc.).
 
 ## Autentisering
 
-Autentisering handler om at en bruker skal bevise at den er den den er.  
-Denne prosessen kan være komplisert og svært utfordrende å få til på en sikker måte.
-Som en følge av det bør man bruke anerkjente ferdigløsninger, og ikke utvikle sin egen løsning.
+Autentisering handler om at en bruker skal bevise sin identitet.  
+Det kan være både komplisert og utfordrende å gjøre dette på en sikker måte, og man bør derfor alltid bruke anerkjente ferdigløsninger. Å lage egen autentisering må unngås.
 
-De fleste organisasjoner har allerede en etablert brukerdatabase (autentiseringsserver). For eksempel Azure Active Directory, IdentityServer, KeyCloak, eller LDAP.  
-Om det ikke finnes noen slik brukerdatabase vil vi anbefale [KeyCloak](https://www.keycloak.org), som er et gratis, åpen kildekode alternativ, med svært mange funksjoner.
+De fleste organisasjoner har allerede en etablert brukerdatabase (autentiseringsserver), for eksempel Azure Active Directory, IdentityServer, KeyCloak, eller LDAP.  
+Om det ikke finnes noen slik brukerdatabase, anbefaler vi [KeyCloak](https://www.keycloak.org). Dette er et gratis alternativ med svært mange funksjoner og et aktivt opensource miljø.
 
 - Ikke skriv din egen autentiseringslogikk
 - Separer autentiseringslogikk fra applikasjonslogikk hvis mulig
