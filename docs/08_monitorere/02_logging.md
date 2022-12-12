@@ -12,7 +12,8 @@ import Tools from './_monitoring_tools.mdx'
 <Tools />
 ```
 
-
+- Benytt et standardisert loggformat som kan konsumeres av aggregeringsverktøy
+  - Se [OWASP's anbefalinger](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html#event-attributes)
 - Logg alle feil
 - Sentralisert logg med backup (f.eks. Grafana + Loki)
     - Konfidensialitet av logger
