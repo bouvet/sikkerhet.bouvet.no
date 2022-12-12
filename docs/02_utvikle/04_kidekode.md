@@ -52,7 +52,7 @@ som kommer inn i f.eks et REST API's endepunkter, men er ikke like nøye på dat
 
 Ting å tenke på ved bruk av data fra tredjepartssystemer:
 
-- Valider og saniter all data (zero trust)
+- Valider og saniter all data ([zero trust](https://en.wikipedia.org/wiki/Zero_trust_security_model))
 - Hva skjer om tredjepart blir utilgjengelig?
   > En tredjeparts _[SLA](/planlegge/disaster-recovery#service-level-agreement-sla)_ vil direkte påvirke vår egen
 
@@ -88,8 +88,8 @@ Om noen i teamet peker på deler av koden som sikkerhetskritisk bør dette føre
 
 - Grundigere _review_ med spesielt fokus på sikkerhet
 - Parprogrammering
-- Ber om kvalitetssikring fra en senior/security champion/sikkerhetsekspert
-- Leser seg opp på sikkerhetsanbefalinger for det konkrete rammeverket
+- Be om kvalitetssikring fra en senior/security-champion/sikkerhetsekspert
+- Være godt kjent med sikkerhetsanbefalinger for det konkrete rammeverket
 
 ## Kryptering
 
@@ -102,14 +102,13 @@ AKA: Don't roll your own crypto
   - Databaser
   - Køsystemer
   - Tredjeparts-API
-  - Om hemmelig data
-- Om hemmelig data må lagres bør den _hashes_ med salt. Om det ikke er mulig skal den krypteres.
+- Dersom sensitive eller hemmelig data må lagres, skal disse _hashes_ med salt. Om det ikke er mulig skal dataene krypteres.
   - Les deg grundig opp på korrekt bruk av bibliotekene som brukes til dette
 
 ## Secrets
 
-Flere uønskede sikkerhetshendelser har startet med en secret som har kommet på avveie. Pinlig mange av disse ble lekket fordi secretene var hardkodet i kildekoden.  
-Vi skal bruke et versjonskontrollsystem, og du kan lese mer om hvordan det kan gjøres sikkert under artikkelen om [versjonskontroll](/utvikle/version_control).
+Flere uønskede sikkerhetshendelser har startet med en secret som har kommet på avveie. For eksempel ved at secrets har vært hardkodet i kildekoden.  
+Alle utviklings- og infrastrukturprosjekt skal bruke et versjonskontrollsystem. Du kan lese mer om hvordan det gjøres sikkert under artikkelen om [versjonskontroll](/utvikle/version_control).
 
 - Secrets skal aldri være en del av kildekoden
 - Bruk en `.gitignore`-fil for å hindre at filer som ikke skal _commites_ blir lagt til ved et uhell
@@ -125,6 +124,6 @@ INGEN secrets skal inn i kildekoden (passord, tokens, nøkler, etc.)
 
 ## Scanning av koden
 
-Det har kommet flere verktøy som kan scanne en kodebase, enten statisk eller dynamisk, med mål å identifisere feil og sårbarheter.
+Det har kommet flere verktøy som scanner kildekode, enten statisk eller dynamisk, med mål om å identifisere feil og sårbarheter.
 
 Dette kan du lese mer om under _[CI/CD for sikkerhet](/bygge/bruk-av-ci-cd)_
