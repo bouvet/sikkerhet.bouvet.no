@@ -3,7 +3,7 @@
 <div className="row">
     <div className="column">
         <p>
-            Litt tekst her om hva man bør gjøre i denne fasen.
+            Drift, eller Operations (Ops i DevSecOps), omfatter fysisk drift, applikasjons- og løsningsdrift samt drift av kjøremiljø og plattform. Det er ikke lengre tilstrekkelig å se at "lyset står på" for å være trygg på at løsningen kjører og at den fungerer som den skal. 
         </p>
     </div>
     <div className="column">
