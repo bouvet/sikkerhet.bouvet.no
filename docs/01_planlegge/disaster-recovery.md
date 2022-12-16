@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Disaster Recovery
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 _Disaster Recovery_ handler om hva vi kan gjøre _prevantivt_ for å få et system som opplever problemer, raskest mulig tilbake til normaltilstand
 
 - Kan infrastruktur gjenskapes korrekt og raskt nok?

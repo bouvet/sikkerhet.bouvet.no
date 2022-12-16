@@ -98,11 +98,3 @@ Vi ønsker å dra nytte av at containere i stor grad er isolerte, ved å mounte 
 
 Så istedenfor å bruke: `--volume /home:/app/home`,  
 kan man være mer spesifikk: `--volume /home/app/somefile.txt:/app/somefile.txt`.
-
----
-
-```mdx-code-block
-import WorkInProgress from '../_work_in_progress.mdx'
-
-<WorkInProgress />
-```

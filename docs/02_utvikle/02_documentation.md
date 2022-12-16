@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # Dokumentasjon
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt dokumentasjon av kildekode
 
 - Dokumentasjon skal behandles som kildekode

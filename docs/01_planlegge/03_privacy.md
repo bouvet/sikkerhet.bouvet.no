@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Personvern
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt personvern
 
 ## Sensitive data og personopplysninger

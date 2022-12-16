@@ -93,10 +93,3 @@ import Tools from '../08_monitorere/_monitoring_tools.mdx'
 <Tools />
 ```
 
----
-
-```mdx-code-block
-import WorkInProgress from '../_work_in_progress.mdx'
-
-<WorkInProgress />
-```
