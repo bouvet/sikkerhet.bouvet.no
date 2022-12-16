@@ -49,6 +49,7 @@ import Link from "@docusaurus/Link";
         <button className="devops-button">MONITOR</button>
     </Link>
 </div>
+
 <div className="row bottom-section">
     <div className="column bottom-left">
         <div className="bottom-section-left-heading">Informasjonssikkerhet</div>
@@ -63,5 +64,22 @@ import Link from "@docusaurus/Link";
         <p>Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.</p>
         <h3>Integritet</h3>
         <p>Dataene systemet behandler er korrekte.</p>
+    </div>
+</div>
+<div className="row bottom-section">
+    <div className="column bottom-left">
+        <div className="bottom-section-left-heading">Security Champion</div>
+        <p className="bottom-section-left-text">
+            
+        </p>
+    </div>
+    <div className="column bottom-section-right">
+        <h3>Er du, eller vil du bli en helt?</h3>
+        <p>
+            En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.
+        </p>
+        <p>
+            Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår <a href="/security_champion/security_champion_startpoint">oppstartspakke for Security Champions</a>
+        </p>
     </div>
 </div>
