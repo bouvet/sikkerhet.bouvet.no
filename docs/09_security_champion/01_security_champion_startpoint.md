@@ -1,4 +1,4 @@
-# Oppstartspakke Security Champions
+# Oppstartspakke
 ## Hva er en Security Champion?
 Det er ganske enkelt, du er en Security Champion om du har bestemt deg for å bli det. For å lese mer om hva en Security Champion er anbefales følgende kilder:
  - [https://minside.bouvet.no/bouvet-alle/sikkerhet-i-dna-et-vart/security-champions](https://minside.bouvet.no/bouvet-alle/sikkerhet-i-dna-et-vart/security-champions) (krever innlogging og er vår egen beskrivelse)

@@ -1,9 +1,8 @@
 {
-    "label": "Security Champion",
-    "position": 9,
-    "link": {
-      "type": "generated-index",
-      "description": "Security Champion"
-    }
+  "label": "Security Champion",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "introduction"
   }
-  
+}

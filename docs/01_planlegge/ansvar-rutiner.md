@@ -4,8 +4,9 @@ sidebar_position: 2
 
 # Ansvar & Rutiner
 
-For å unngå situasjoner hvor ingen har (tar?) ansvar for enkelte bestanddeler av et system er det en fordel å kartlegge ansvarsgrensene.
-Her forsøker vi å svare på hvor vårt ansvar starter og stopper i systemet. Konklusjonen man ender opp med vil være med å begrense omfanget for de andre kapitlene her.
+For å unngå situasjoner hvor ansvaret for enkelte bestanddeler av et system er uklart, er det en fordel å kartlegge ansvarsgrensene. Listen nedenfor er på ingen måte uttømmende og må tilpasses hvert enkelt prosjekt eller leveranse. Hovedmålet her er rett og slett at man har hatt en diskusjon rundt dette og at ansvarsfordeling og rutiner er kjent.
+
+De andre kapitlene på <a href="https://sikkerhet.bouvet.no">https://sikkerhet.bouvet.no</a> dekker alle fasene i en tradisjonell DevSecOps prosess og kan være til inspirasjon for hvilke roller og ansvar man velger å ta inn i denne listen.
 
 :::note Eksempel
 
@@ -17,8 +18,14 @@ Vi er ansvarlig for utvikling av applikasjonen, utrulling, innhold i databaser(m
 - Hvilket ansvar har Bouvet?
 - Hvilket ansvar har kunde?
 
-- Hvem er ansvarlig for alle punktene i dokumentet?
+- Foreligger det krav til oppetid?
+- Foreligger det toleransekrav til tap av data?
+  
 - Hvilke rutiner for vedlikehold har vi (patching)?
   - OS
   - Installerte pakker
   - Dependencies
+
+:::important Tips
+Når en slik oversikt er etablert er det lurt å lagre den i kildekodesystemet sammen med resten av det som produseres i prosjektet. Det øker synligheten og alle vet til enhver tid hvor listen finnes.
+:::
