@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Biblioteker
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Med _Biblioteker_ her menes implisitt _tredjepartsbiblioteker_, dvs. kode som importeres inn til vårt prosjekt, eksekverer på våre servere, men hvor vi ikke selv har skrevet koden.
 
 Sikkerhetsrisikoen knyttet til biblioteker er 2-delt.

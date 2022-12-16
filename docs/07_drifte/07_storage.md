@@ -4,6 +4,10 @@ sidebar_position: 7
 
 # Data og databaser
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt data og databaser
 
 - Begrens scope
@@ -15,12 +19,3 @@ Informasjon rundt data og databaser
 - Dedikert bruker for web-/kjørebruker
 - Beskytt brukerdata som er hemmelige/sensitive
     - Hashing/kryptering av data in transit/at rest
-
-
----
-
-```mdx-code-block
-import WorkInProgress from '../_work_in_progress.mdx'
-
-<WorkInProgress />
-```

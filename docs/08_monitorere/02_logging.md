@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # Logging
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt logging
 
 ```mdx-code-block
@@ -42,11 +46,3 @@ import Tools from './_monitoring_tools.mdx'
     - Det skal være mulig å spore system-kontoer til brukeren som initialiserte forespørselen
 
 :::
-
----
-
-```mdx-code-block
-import WorkInProgress from '../_work_in_progress.mdx'
-
-<WorkInProgress />
-```

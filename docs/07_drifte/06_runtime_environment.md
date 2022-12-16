@@ -4,6 +4,10 @@ sidebar_position: 6
 
 # Kjøremiljø
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt kjøremiljø
 
 - Mating av secrets (KeyVault, miljøvariabler)
@@ -20,11 +24,3 @@ Informasjon rundt kjøremiljø
 - Unngå sensitive data utenom produksjonsmiljø
     - Bruk testdata
 - Ikke gjenbruk secrets mellom dev-/test-/prod-miljø
-
----
-
-```mdx-code-block
-import WorkInProgress from '../_work_in_progress.mdx'
-
-<WorkInProgress />
-```

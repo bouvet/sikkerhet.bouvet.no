@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Versjonskontroll
 
+import WorkInProgress from '../_work_in_progress.mdx'
+
+<WorkInProgress />
+
 Informasjon rundt bruk av versjonskontroll
 
 - Bruk versjonskontroll for prosjektet
