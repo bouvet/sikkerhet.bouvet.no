@@ -10,7 +10,7 @@ sidebar_position: 1
   - [Bruke en ferdig løsning eller hoste selv](#bruke-en-ferdig-løsning-eller-hoste-selv)
   - [Backup](#backup)
 
-Bruk av et versjonskontroll er viktig for å holde orden på utviklingen av et prosjekt. Systemet inneholder som minimum kildekode, men kan også inneholde [dokumentasjon](02_documentation.md), definisjon av [CI/CD](../03_bygge/bruk-av-ci-cd.md)-systemer, releases av systemet og mye mer. Det finnes flere ulike systemer og tjenester for versjonskontroll. I dag er de fleste bygget rundt verktøyet [`git`](https://en.wikipedia.org/wiki/Git), med datalagring i skytjenester som [GitHub](https://www.github.com), [Azure DevOps Repos](https://dev.azure.com) eller selv-hostede løsninger.
+Bruk av versjonskontroll er viktig for å holde orden på utviklingen av et prosjekt. Systemet inneholder som minimum kildekode, men kan også inneholde [dokumentasjon](02_documentation.md), definisjon av [CI/CD](../03_bygge/bruk-av-ci-cd.md)-systemer, releases av systemet og mye mer. Det finnes flere ulike systemer og tjenester for versjonskontroll. I dag er de fleste bygget rundt verktøyet [`git`](https://en.wikipedia.org/wiki/Git), med datalagring i skytjenester som [GitHub](https://www.github.com), [Azure DevOps Repos](https://dev.azure.com) eller selv-hostede løsninger.
 
 ## Tilgjengelighet og skrivetilgang
 
