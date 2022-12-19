@@ -71,7 +71,7 @@ Alle komponenter bør isoleres og kun gjøres tilgjengelig for de tjenestene som
 
 ## Konfigurasjon
 
-Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](../03_bygge/bruk-av-ci-cd.md).
+Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](../03_bygge/ci-cd.md).
 
 - Begrens hvem som kan konfigurere både nettverket og nettverksregler direkte
   - Sett opp Just-in-time (JIT)-tilgang der det er mulig
