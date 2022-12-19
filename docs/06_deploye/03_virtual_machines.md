@@ -41,7 +41,7 @@ Virtuelle maskiner brukes ofte til testing av desktop/legacy-applikasjoner, da d
 
 ### Legacy serverløsninger
 
-Dersom du ønsker å migrere fra on-prem til skyen er det mulig å gjøre en migrering av virtuelle maskiner. Dette kan løses enten ved direkte migrering av den eksisterende VM'en, eller ved at man setter opp nye VM'er med lignende konfigurasjon som det man har gjort. Den siste metoden er å foretrekke fra et sikkerhetsmessig og teknisk perspektiv, da man kan benytte seg av moderne [CI/CD](../03_bygge/bruk-av-ci-cd.md)-løsninger for å rulle ut og vedlikeholde applikasjonene. Man får også en mulighet til å få ryddet opp i eventuelle sikkerhetsproblemer i den gamle konfigurasjonen.
+Dersom du ønsker å migrere fra on-prem til skyen er det mulig å gjøre en migrering av virtuelle maskiner. Dette kan løses enten ved direkte migrering av den eksisterende VM'en, eller ved at man setter opp nye VM'er med lignende konfigurasjon som det man har gjort. Den siste metoden er å foretrekke fra et sikkerhetsmessig og teknisk perspektiv, da man kan benytte seg av moderne [CI/CD](../03_bygge/ci-cd.md)-løsninger for å rulle ut og vedlikeholde applikasjonene. Man får også en mulighet til å få ryddet opp i eventuelle sikkerhetsproblemer i den gamle konfigurasjonen.
 
 En direkte migrering kan spare penger på kort sikt, men vil over lengre tid sannsynligvis gi mindre utbytte av en skyløsning da den ikke benytter seg av alle mulighetene man har der, og det er en større risiko for at eksisterende sikkerhetsproblemer blir dratt med inn i den nye løsningen. Det kan likevel være en akseptabel løsning der man vet at applikasjonen / tjenesten skal skiftes ut innen kort tid.
 
