@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+title: Kildekode
 ---
 
 # Kildekode
@@ -126,4 +127,4 @@ INGEN secrets skal inn i kildekoden (passord, tokens, nøkler, etc.)
 
 Det har kommet flere verktøy som scanner kildekode, enten statisk eller dynamisk, med mål om å identifisere feil og sårbarheter.
 
-Dette kan du lese mer om under _[CI/CD for sikkerhet](/bygge/bruk-av-ci-cd)_
+Dette kan du lese mer om under _[CI/CD](/bygge/ci-cd)_
