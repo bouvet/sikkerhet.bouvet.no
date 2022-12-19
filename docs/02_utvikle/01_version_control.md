@@ -37,7 +37,7 @@ I tillegg til hvem som kan lese repoet bør du velge hvem som får skrive til de
 
 ## Beskyttelse av brancher
 
-En av de mer grunnleggende beskyttelsene man bør sette på er beskyttelse av brancher, spesielt de som blir benyttet i [CI/CD](../03_bygge/bruk-av-ci-cd.md). Den vanligste beskyttelsen som settes på er krav til bruk av pull requests med et visst antall personer som godkjenner. Andre vanlige muligheter er å kjøre automatiske tester, sikkerhetssjekker av [pakker](biblioteker.md) eller å ha krav til alle innsjekkinger av kode er signerte.
+En av de mer grunnleggende beskyttelsene man bør konfigurere er beskyttelse av spesielle brancher. Dette vil typisk være brancher som blir benyttet i [CI/CD](../03_bygge/bruk-av-ci-cd.md) (master, main, prod, etc.). Den vanligste beskyttelsen er at branchene ikke kan slettes, force pushes til, og å ha krav til bruk av pull requests med et visst antall personer som godkjenner. Det er også vanlig å sette som krav at alle automatiske tester og sikkerhetssjekker er i orden.
 
 ## Bruke en ferdig løsning eller hoste selv
 
