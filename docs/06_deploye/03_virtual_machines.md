@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+title: Virtuelle maskiner
 ---
 
 # Virtuelle maskiner
@@ -36,7 +37,7 @@ Det er mulig å tilby brukere både fulle desktopløsninger og enkeltapplikasjon
 
 ### Testmaskiner
 
-Virtuelle maskiner brukes ofte til testing av desktop/legacy-applikasjoner, da de kan slettes og rulles ut på nytt raskt. Dette er løsninger som bør automatiseres med [CI/CD](../03_bygge/bruk-av-ci-cd.md), inkludert inn/utrullering av maskiner i Active Directory eller opprettelse av SSH-nøkler.
+Virtuelle maskiner brukes ofte til testing av desktop/legacy-applikasjoner, da de kan slettes og rulles ut på nytt raskt. Dette er løsninger som bør automatiseres med [CI/CD](../03_bygge/ci-cd.md), inkludert inn/utrullering av maskiner i Active Directory eller opprettelse av SSH-nøkler.
 
 ### Legacy serverløsninger
 
