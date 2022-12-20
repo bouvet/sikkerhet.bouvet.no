@@ -5,7 +5,7 @@ title: Penetrasjonstesting
 
 # Penetrasjonstesting
 
-__En penetrasjonstest er et målrettet angrep på nettverk og applikasjoner for å avdekke sikkerhetshull som lar seg utnytte av en trusselaktør.__
+__En penetrasjonstest er et målrettet, vennligsinnet angrep på nettverk og applikasjoner for å avdekke sikkerhetshull som lar seg utnytte av en trusselaktør.__
 
 Alle systemer bør penetrasjonstestes før man produksjonssetter for første gang. I tillegg bør man også jevnlig kjøre penetrasjonstester
 i hele levetiden til systemet, minimum en gang per år. Vær oppmerksom på at en penetrasjonstest aldri kan bevise fravær av sårbarheter.
