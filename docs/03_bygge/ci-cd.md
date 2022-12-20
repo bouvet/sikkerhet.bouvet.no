@@ -13,6 +13,12 @@ Et tips er å bruke [pre-commit](https://pre-commit.com) til å kjøre alt av li
 
 Merk; noen av verktøyene listet opp her har ulike lisense krav. Noen er helt gratis, andre kun for _non-commercial use_, og andre _må_ betales for. Hvilke verktøy man trenger, og ønsker å betale for må avklares i hvert prosjekt med hver enkelt kunde. For _public_ repositories på Github for man automatisk enkelte funksjoner som må betales for i private repositories.
 
+## Software compostion analysis (SCA)
+
+Software compostion analysis (SCA) kan settes opp automatisk som en del av CI/CD. Se [Software composition analysis (SCA)](software-composition-analysis-sca.md) for mer informasjon.
+Vær varsom med å hindre et bygg basert på tilbakemeldinger fra SCA-verktøy. Nye sårbarheter oppdages hele tiden,
+og ofte kan det være viktigere å få bygget systemet enn å måtte håndtere en nyoppdaget sårbarhet, som kanskje ikke er relevant for systemet.
+
 ## Testing
 
 Å kjøre tester i CI er lurt av flere grunner, men fra et sikkerhetsperspektiv er det enkelte tester som bør være med.
@@ -20,6 +26,11 @@ Merk; noen av verktøyene listet opp her har ulike lisense krav. Noen er helt gr
 - Test alle aktuelle endepunkter for 401/403 responser
 - Test kode som håndterer autorisasjon (hvem får gjøre hva). Her vil det være en fordel om all autorisasjonslogikk skjer på et sentralisert sted i kodebasen.
 - Test for strict [JWT valdiation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
+
+## Statisk kodeanalyse (SAST)
+
+Statisk kodeanalyse bør konfigueres til å kjøres automatisk som en del av CI/CD. Se [Statisk kodeanalyse (SAST)](statisk-kodeanalyse-sast.md) for mer informasjon.
+Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
 
 ## Secret scanning
 
