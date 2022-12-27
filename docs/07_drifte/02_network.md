@@ -7,6 +7,12 @@ sidebar_position: 2
 Riktig konfigurasjon av nettverk er viktig for både rene skyløsninger, hybride nettverk og rene on-prem-løsninger. Nettverk er et stort felt av faget, med store
 variasjoner i bruksområde, sikkerhet og kompleksitet. I denne artikkelen dekker vi grunnleggende konsepter for kommunikasjon til og fra servere og nettjenester.
 
+- [Nettverkskonsepter](#nettverkskonsepter)
+    - [Zero trust arkitektur](#zero-trust-arkitektur)
+    - [Få oversikt over nettverket](#få-oversikt-over-nettverket)
+    - [Isolasjon av tjenester](#isolasjon-av-tjenester)
+    - [Konfigurasjon](#konfigurasjon)
+
 ## Zero trust arkitektur
 
 [Zero trust](https://en.wikipedia.org/wiki/Zero_trust_security_model) er et viktig konsept innen nettverksdrift. Kort fortalt så skal man aldri stole på noe som
@@ -69,7 +75,7 @@ og Microsoft.
 - Lag et diagram over nettverksflyt med trafikkretning, port og protokoll, både nåværende og ønsket situasjon
 - Følg rådene lenger ned i artikkelen og innfør de som kan innføres stegvis for å sikre tjenestene uten unødvendig nedetid
 
-## Brannmur
+## Isolasjon av tjenester
 
 :::note Sammendrag
 Bruk brannmur til å begrense trafikk innad i systemer og mellom systemer og Internett. Bruk allowlist hvis mulig. Filtrer trafikk i applikasjonslaget hvis
