@@ -1,6 +1,6 @@
 # Teste
 
-<div className="row">
+<div className="row category-into">
     <div className="column">
         <p>
             I tillegg til ren funksjonell testing finnes det rene sikkerhetsrelaterte testmetoder, som penetrasjonstesting og fuzz-testing. Dette er testmetoder som bør være en del av et sikkert utviklingsløp.

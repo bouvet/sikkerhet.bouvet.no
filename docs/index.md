@@ -3,10 +3,12 @@ displayed_sidebar: null
 ---
 import Link from "@docusaurus/Link";
 
-# Velkommen!
+#   
 
-<div className="row">
+<div className="frontpage">
+<div className="row ingress" >
     <div className="column">
+        <h1>Velkommen!</h1>
         <p>
             Her vil systemutviklere, infrastruktur-ingeniører, DevOpsere og andre i Bouvet finne informasjon til
             støtte for å drifte, utvikle og forvalte sikre IT-systemer for våre kunder. Det overordnede
@@ -20,66 +22,59 @@ import Link from "@docusaurus/Link";
         <img alt="Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene" src="/img/quote.svg"/>
     </div>
 </div>
-<div className="row devops-links-header">
-    <h2>Hva ser du etter?</h2>
-</div>
-<div className="row devops-links">
-    <Link to="/planlegge/introduction">
-        <button className="devops-button">PLAN</button>
-    </Link>
-    <Link to="/utvikle/introduction">
-        <button className="devops-button">CODE</button>
-    </Link>
-    <Link to="/bygge/introduction">
-        <button className="devops-button">BUILD</button>
-    </Link>
-    <Link to="/teste/introduction">
-        <button className="devops-button">TEST</button>
-    </Link>
-    <Link to="/release/introduction">
-        <button className="devops-button">RELEASE</button>
-    </Link>
-    <Link to="/deploye/introduction">
-        <button className="devops-button">DEPLOY</button>
-    </Link>
-    <Link to="/drifte/introduction">
-        <button className="devops-button">OPERATE</button>
-    </Link>
-    <Link to="/monitorere/introduction">
-        <button className="devops-button">MONITOR</button>
-    </Link>
+
+<div className="dev-ops-links-wrapper">
+    <div className="dev-ops-links-backdrop" />
+    <h2 className="row devops-links-header">Hva ser du etter?</h2>
+    <div className="row devops-links">
+        <Link to="/planlegge/introduction">
+            <button className="devops-button">Plan</button>
+        </Link>
+        <Link to="/utvikle/introduction">
+            <button className="devops-button">Code</button>
+        </Link>
+        <Link to="/bygge/introduction">
+            <button className="devops-button">Build</button>
+        </Link>
+        <Link to="/teste/introduction">
+            <button className="devops-button">Test</button>
+        </Link>
+        <Link to="/release/introduction">
+            <button className="devops-button">Release</button>
+        </Link>
+        <Link to="/deploye/introduction">
+            <button className="devops-button">Deploy</button>
+        </Link>
+        <Link to="/drifte/introduction">
+            <button className="devops-button">Operate</button>
+        </Link>
+        <Link to="/monitorere/introduction">
+            <button className="devops-button">Monitor</button>
+        </Link>
+    </div>
 </div>
 
 <div className="row bottom-section">
-    <div className="column bottom-left">
-        <div className="bottom-section-left-heading">Informasjonssikkerhet</div>
-        <p className="bottom-section-left-text">
-            handler om å sikre disse aspektene ved et IT-system:
-        </p>
-    </div>
-    <div className="column bottom-section-right">
-        <h3>Konfidensialitet</h3>
+    <div className="column">
+        <h3>Informasjonssikkerhet</h3>
+        <b className="buttom-section-sub-header">handler om å sikre disse aspektene ved et IT-system:</b>
+        <b>Konfidensialitet</b>
         <p>Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte.</p>
-        <h3>Tilgjengelighet</h3>
+        <b>Tilgjengelighet</b>
         <p>Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.</p>
-        <h3>Integritet</h3>
+        <b>Integritet</b>
         <p>Dataene systemet behandler er korrekte.</p>
     </div>
+    <div className="column">
+        <div className="column">
+            <h3>Security Champion</h3>
+            <b className="buttom-section-sub-header">Er du, eller vil du bli en helt?</b>
+            <p>En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.</p>
+            <p>
+                Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår 
+                <a href="/security_champion/security_champion_startpoint" className="underlined-link"> oppstartspakke for Security Champions</a>
+            </p>
+        </div>
+    </div>
 </div>
-<div className="row bottom-section">
-    <div className="column bottom-left">
-        <div className="bottom-section-left-heading">Security Champion</div>
-        <p className="bottom-section-left-text">
-            
-        </p>
-    </div>
-    <div className="column bottom-section-right">
-        <h3>Er du, eller vil du bli en helt?</h3>
-        <p>
-            En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.
-        </p>
-        <p>
-            Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår <a href="/security_champion/security_champion_startpoint">oppstartspakke for Security Champions</a>
-        </p>
-    </div>
 </div>

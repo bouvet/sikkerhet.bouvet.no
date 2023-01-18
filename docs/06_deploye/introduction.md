@@ -1,6 +1,6 @@
 # Deploye
 
-<div className="row">
+<div className="row category-into">
     <div className="column">
         <p>
             Deployment eller publisering involverer ofte en kombinasjon av flere plattformer og kjøremiljør. Mange løsninger kjører i sky, enten som Cloud Native løsninger eller i containers, andre kjører i "sky" på virtuelle maskiner og noen løsninger kjører som installerte brukerapplikasjoner. Uansett plattform eller kjøremiljø, er sikkerhet fortsatt like viktig. 
