@@ -1,6 +1,6 @@
 # Bygge
 
-<div className="row">
+<div className="row category-into">
     <div className="column">
         <p>
             "If it builds, we can ship it!" er et godt kjent utsagn i IT-verden, men dessverre så er det ikke så enkelt!

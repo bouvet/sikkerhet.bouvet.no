@@ -1,6 +1,6 @@
 # Planlegge
 
-<div className="row">
+<div className="row category-into">
     <div className="column">
         <p>
             Fokuset på sikkerhet starter allerede på planleggingsstadiet, enten det gjelder roadmap, features eller prosjekter. Har vi noen tanker om hvilke sårbarheter, angrepsflater, sensitive data eller integrasjoner vi bør holde et ekstra øye på? Det er i denne fasen man må <a href="/security_champion/security_champion_startpoint#1-skap-bevissthet">skape bevissthet</a> rundt disse temaene og en Security Champion bør involveres tidlig.
