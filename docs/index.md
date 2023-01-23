@@ -19,7 +19,8 @@ import Link from "@docusaurus/Link";
         </p>
     </div>
     <div className="column quote">
-        <img alt="Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene" src="/img/quote.svg"/>
+        <img className="column quote illustration" alt="Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene" src="/img/quote-illustration.svg"/>
+        <p className="column quote">"Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene"</p>
     </div>
 </div>
 
