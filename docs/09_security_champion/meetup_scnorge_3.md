@@ -12,7 +12,7 @@ Tid og sted: 14:30 torsdag 2. Mars
 
 Sted: Sørkedalsveien 8, 0369 Oslo
 
-Påmeldingskjema ligger her: link til forms 
+Påmeldingskjema ligger her: [link til forms ](https://forms.office.com/r/SqyhNPWVCy)
 
 ## Program 
 
