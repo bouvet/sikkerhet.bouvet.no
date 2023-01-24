@@ -33,7 +33,7 @@ Går man gjennom den listen får man støtte til å få kontroll på blant annet
 - Tredjepartsprogramvare
 - Bygg og deploy av løsninger
 - Disaster recovery
-- Buisness Continuity
+- Business Continuity
 - Infrastruktur
 - Kildekode
 
