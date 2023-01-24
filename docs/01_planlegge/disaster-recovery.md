@@ -4,9 +4,8 @@ sidebar_position: 3
 
 # Disaster Recovery
 
-<WorkInProgress />
-
-_Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å få et system som opplever problemer, raskest mulig tilbake til normaltilstand. Det kan være nyttig å tenkte på dette som "actions on", altså; _"Viss X inntreffer, så gjør vi Y"_.
+_Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å raskest mulig komme 
+tilbake til normaltilstand. Det kan være nyttig å tenkte på dette som "actions on", altså; _"Hvis X inntreffer, så gjør vi Y"_.
 
 ## Målsetting
 
@@ -38,7 +37,7 @@ Det er viktig å vite hvem man skal kontakte når man står i en situasjon hvor 
 
 ## Gjennoppretting
 
-Det vil ikke være nødvendig å gjennskape tjenestene i alle _disaster_ hendelser. Ofte man man slippe unna med mindre omfattende, manuell feilretting. Allikevell bør man ha en plan for fullstendig gjennoppretting. Har man det kan man redde seg fra de fleste situasjoner.
+Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelser. Ofte kan man slippe unna med mindre omfattende og manuell feilretting. Uavhengig av dette bør man uansett ha en plan for fullstendig gjennoppretting. Har man det kan man redde seg fra de fleste situasjoner.
 
 - Fysisk infrastruktur (brann, flom, jordskjelv, etc.)
   - Har vi servere et annet sted vi kan benytte?
