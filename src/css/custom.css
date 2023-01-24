@@ -124,6 +124,15 @@
   margin-right: 3rem;
 }
 
+.quote {
+  font-weight: bold;
+}
+
+.illustration {
+  margin-bottom: 2rem;
+  max-height: 20vh;
+}
+
 .ingress {
   margin-bottom: 40px;
 }
@@ -197,10 +206,6 @@
 
 .buttom-section-sub-header {
   margin-bottom: 15px;
-}
-
-[data-theme="dark"] .quote {
-  filter: invert(30%);
 }
 
 .footer {
