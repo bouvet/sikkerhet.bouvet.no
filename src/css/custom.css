@@ -104,6 +104,10 @@
   color: var(--bouvet-beige);
 }
 
+.main-wrapper {
+  overflow: hidden;
+}
+
 .row {
   display: flex;
   flex-direction: row;
