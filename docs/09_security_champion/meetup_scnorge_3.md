@@ -16,4 +16,18 @@ Påmeldingskjema ligger her: [link til forms ](https://forms.office.com/r/SqyhNP
 
 ## Program 
 
-TBA.
+## Program 
+Oppdateres fortløpende. 
+
+| Tid   | Hva          | Hvem              |
+|-------|--------------|-------------------|
+| 14:00 | Dørene åpnes |                   |
+| 14:30 | Introduksjon | Bouvet            |
+| 14:35 | Lyntale 1    | Torkil            |
+| 14:40 | Lyntale 2    |                   |
+| 14:45 | Lyntale 3    |                   |
+| 14:50 | Pause        |                   |
+| 15:00 | Keynote 1    | Pål-Magnus Slåtto |
+| 15:30 | Pause        |                   |
+| 15:45 | Keynote 2    | Jonas Grimsgaard  |
+| 16:30 | Avsluttning  | Bouvet                  |
