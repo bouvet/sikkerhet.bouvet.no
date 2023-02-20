@@ -24,10 +24,10 @@ Oppdateres fortløpende.
 | 14:00 | Dørene åpnes |                   |
 | 14:30 | Introduksjon | Bouvet            |
 | 14:35 | Lyntale 1    | Torkil            |
-| 14:40 | Lyntale 2    |                   |
-| 14:45 | Lyntale 3    |                   |
+| 14:40 | Lyntale 2    | Sarmilan          |
+| 14:45 | Lyntale 3    | Julian            |
 | 14:50 | Pause        |                   |
 | 15:00 | Keynote 1    | Pål-Magnus Slåtto |
 | 15:30 | Pause        |                   |
 | 15:45 | Keynote 2    | Jonas Grimsgaard  |
-| 16:30 | Avsluttning  | Bouvet                  |
+| 16:30 | Avsluttning  | Bouvet            |
