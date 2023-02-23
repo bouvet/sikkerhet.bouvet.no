@@ -12,22 +12,21 @@ Tid og sted: 14:30 torsdag 2. Mars
 
 Sted: Sørkedalsveien 8, 0369 Oslo
 
-Påmeldingskjema ligger her: [link til forms ](https://forms.office.com/r/SqyhNPWVCy)
+Påmeldingskjema ligger her: [link til forms ](https://forms.office.com/r/SqyhNPWVCy)(STENGT)
+
+Digitalt oppmøte: Teams link kommer i slack kanalen før meetup.
 
 ## Program 
 
-## Program 
-Oppdateres fortløpende. 
-
-| Tid   | Hva          | Hvem              |
-|-------|--------------|-------------------|
-| 14:00 | Dørene åpnes |                   |
-| 14:30 | Introduksjon | Bouvet            |
-| 14:35 | Lyntale 1    | Torkil            |
-| 14:40 | Lyntale 2    | Sarmilan          |
-| 14:45 | Lyntale 3    | Julian            |
-| 14:50 | Pause        |                   |
-| 15:00 | Keynote 1    | Pål-Magnus Slåtto |
-| 15:30 | Pause        |                   |
-| 15:45 | Keynote 2    | Jonas Grimsgaard  |
-| 16:30 | Avsluttning  | Bouvet            |
+| Tid   | Hva                                                                      | Hvem                                                        |
+|-------|--------------------------------------------------------------------------|-------------------------------------------------------------|
+| 14:00 | Dørene åpnes                                                             |                                                             |
+| 14:30 | Introduksjon, praktisk info og oppsummering av tidligere sesjoner        | Bouvet                                                      |
+| 14:40 | Bruk av designmetodikk for sikkerhetsarbeid                              | Forretningsdesigner @ Bouvet                                |
+| 14:45 | Cybersikkerhet i den norske kraftbransjen                                | Senior konsulent @ Bekk                                     |
+| 14:50 | Pause                                                                    |                                                             |
+| 15:00 | Skyutvikling: Sikre klientene dine med kontaineriserte utviklingsmiljøer | Pål-Magnus SlåttoHead of Infrastructure & Security @ Favrit |
+| 15:30 | Pause                                                                    |                                                             |
+| 15:45 | Software Supply Chain Hardening                                          | Jonas Grimsgaard - Security Enginee @NHN                    |
+| 16:30 | Avsluttning                                                              | Bouvet                                                      |
+| 16:35 | Minling                                                                  |                                                             |
