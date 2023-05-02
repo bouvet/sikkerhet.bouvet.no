@@ -43,4 +43,4 @@ Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og note
 
 Avsnitt merket med; 🧙‍♂️, er "avanserte", hvor gevinsten må vurderes opp mot innsatsfaktoren og prosjektes sikkerhetskrav.
 
-`TODO:`_sikkerhet.bouvet.no_ kan også lastes ned som en sjekkliste ment til å være en del av kildekoden i ditt prosjekt.
+[Sjekklisten for sikkerhet](./checklist.md) kan brukes som et startpunkt for å vurdere prosjektets sikkerhet. Hvert punkt refererer videre til mer utfyllende informasjon. Den kan også lastes ned og implementeres som en del av kildekoden i ditt prosjektet.

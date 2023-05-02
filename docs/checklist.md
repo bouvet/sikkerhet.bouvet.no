@@ -7,11 +7,16 @@ title: Sjekklisten for sikkerhet
 import WorkInProgress from './_work_in_progress.mdx'
 
 <WorkInProgress />
+Denne sjekklisten kan brukes som et startpunkt for å vurdere prosjektets sikkerhet.
 
 Her finner du en liste med JA/NEI spørsmål som hvert utviklingsteam burde besvare.  
 Målet er å svare JA på alle spørsmål, men dette er selvsagt åpent for vurdering av systemet og kundens behov.
 - Svares det JA på et punkt skal det forklares hvordan dette er løst.
 - Svares det NEI på et punkt skal det forklares hvorfor det ikke er løst eller settes en frist for ny vurdering.
+
+Det burde også settes en regelmessig frist for revurdering av hele listen.
+
+Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementere den som en del av kildekoden i ditt prosjektet.
 
 ## Planlegge
 Er ansvarsområder* godt definert og fordelt mellom involverte parter (team, kunde, tredjepart)?  
