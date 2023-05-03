@@ -15,8 +15,6 @@ Målet er å svare JA på alle spørsmål, men dette er selvsagt åpent for vurd
 - Svares det JA på et punkt skal det forklares hvordan dette er løst.
 - Svares det NEI på et punkt skal det forklares hvorfor det ikke er løst eller settes en frist for ny vurdering.
 
-Det burde også settes en regelmessig frist for revurdering av hele listen.
-
 Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementere den som en del av kildekoden i ditt prosjektet.
 
 ## Planlegge
