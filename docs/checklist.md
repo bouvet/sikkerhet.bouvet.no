@@ -7,6 +7,7 @@ title: Sjekklisten for sikkerhet
 import WorkInProgress from './_work_in_progress.mdx'
 
 <WorkInProgress />
+
 Denne sjekklisten kan brukes som et startpunkt for å vurdere prosjektets sikkerhet.
 
 Her finner du en liste med JA/NEI spørsmål som hvert utviklingsteam burde besvare.  
@@ -19,92 +20,83 @@ Det burde også settes en regelmessig frist for revurdering av hele listen.
 Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementere den som en del av kildekoden i ditt prosjektet.
 
 ## Planlegge
-Er ansvarsområder* godt definert og fordelt mellom involverte parter (team, kunde, tredjepart)?  
-\*infrastruktur, kildekode, monitorering, vedlikehold, etc.  
-- Les mer om [ansvar & rutiner](https://sikkerhet.bouvet.no/planlegge/ansvar-rutiner).
+[Ansvar & rutiner](https://sikkerhet.bouvet.no/planlegge/ansvar-rutiner):
+- Er ansvarsområder* godt definert og fordelt mellom involverte parter (team, kunde, tredjepart)?  
+\*infrastruktur, kildekode, monitorering, vedlikehold, etc.
 
-Er sensitiv data sikret fra å komme på avveie (logging, testdata, etc.)?  
-- Les mer om [personvern](https://sikkerhet.bouvet.no/planlegge/privacy).
+[Personvern](https://sikkerhet.bouvet.no/planlegge/privacy):
+- Er sensitiv data sikret fra å komme på avveie (logging, testdata, etc.)?
+- Er personopplysninger håndtert i henhold til EU og Datatilsynets gjeldende regelverk?
 
-Er personopplysninger håndtert i henhold til EU og Datatilsynets gjeldende regelverk?  
-- Les mer om [personvern](https://sikkerhet.bouvet.no/planlegge/privacy).
+[Disaster recovery](https://sikkerhet.bouvet.no/planlegge/disaster-recovery) og [backup](https://sikkerhet.bouvet.no/drifte/storage#backup):
+- Kan systemet gjennopprettes ved en katastrofe (innen akseptabel tid og med akseptabelt tap av data)?
 
-Kan systemet gjennopprettes ved en katastrofe (innen akseptabel tid og med akseptabelt tap av data)?  
-- Les mer om [disaster recovery](https://sikkerhet.bouvet.no/planlegge/disaster-recovery)
-og [backup](https://sikkerhet.bouvet.no/drifte/storage#backup).
+[Business continuity planning](https://sikkerhet.bouvet.no/planlegge/business-continuity):
+- Har sluttbrukeren et provisorisk alternativ om systemet er nede (excel, epost, telefon, etc.)?
 
-Har sluttbrukeren et provisorisk alternativ om systemet er nede (excel, epost, telefon, etc.)?  
-- Les mer om [business continuity planning](https://sikkerhet.bouvet.no/planlegge/business-continuity).
-
-Er det utført en trusselmodellering for systemet?  
-- Les mer om [trusselmodellering](https://sikkerhet.bouvet.no/planlegge/trusselmodellering).
+[Trusselmodellering](https://sikkerhet.bouvet.no/planlegge/trusselmodellering):
+- Er det utført en trusselmodellering for systemet?
 
 ## Utvikle
-Er det satt opp rutiner for at produksjonsendringer testes og godkjennes av noen andre enn utvikleren?  
-- Les mer om [versjonskontroll](https://sikkerhet.bouvet.no/utvikle/version_control).
+[Versjonskontroll](https://sikkerhet.bouvet.no/utvikle/version_control):
+- Er det satt opp rutiner for at produksjonsendringer testes og godkjennes av noen andre enn utvikleren?
 
-Autentiseres brukere gjennom en anerkjent ferdigløsning?  
-- Les mer om [autentisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autentisering).
+[Autentisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autentisering):
+- Autentiseres brukere gjennom en anerkjent ferdigløsning?
 
-Har brukere bare tilgang til det de skal ha (gjennom en godt definert autoriseringsmodel)?  
-- Les mer om [autorisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autorisering).
+[Autorisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autorisering):
+- Har brukere bare tilgang til det de skal ha (gjennom en godt definert autoriseringsmodel)?
 
-Valideres data som sendes inn til systemet?  
-- Les mer om [angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder).
+[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
+- Valideres data som sendes inn til systemet?
 
-Valideres data som hentes fra andre systemer?  
-- Les mer om [tredjepartssystemer](https://sikkerhet.bouvet.no/utvikle/kildekode#tredjepartssystemer).
+[Tredjepartssystemer](https://sikkerhet.bouvet.no/utvikle/kildekode#tredjepartssystemer):
+- Valideres data som hentes fra andre systemer?
 
-Er teamet kjent med de mest vanlige angrepsmetodene?  
-- Les mer om [angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder).
+[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder):
+- Er teamet kjent med de mest vanlige angrepsmetodene?
 
-Krypteres nettverkstrafikk mellom alle tjenester (med et anerkjent krypterings bibliotek)?  
-- Les mer om [kryptering](https://sikkerhet.bouvet.no/utvikle/kildekode#kryptering).
+[Kryptering](https://sikkerhet.bouvet.no/utvikle/kildekode#kryptering):
+- Krypteres nettverkstrafikk mellom alle tjenester (med et anerkjent krypterings bibliotek)?
 
-Er secrets fjernet fra versjonskontrollert kildekode?  
-- Les mer om [secrets](https://sikkerhet.bouvet.no/utvikle/kildekode#secrets).
-
-Roteres secrets (innen akseptabelt tidsintervall)?  
-- Les mer om [secrets](https://sikkerhet.bouvet.no/utvikle/kildekode#secrets).
+[Secrets](https://sikkerhet.bouvet.no/utvikle/kildekode#secrets):
+- Er secrets fjernet fra versjonskontrollert kildekode?
+- Roteres secrets (innen akseptabelt tidsintervall)?
 
 ## Bygge
-Er systemets CI/CD sikret fra å bli påvirket av uønskede aktører?  
-- Les mer om [sikring av CI/CD](https://sikkerhet.bouvet.no/bygge/sikring-av-ci-cd).
+[Sikring av CI/CD](https://sikkerhet.bouvet.no/bygge/sikring-av-ci-cd):
+- Er systemets CI/CD sikret fra å bli påvirket av uønskede aktører?
 
-Er det satt opp automatisk sjekk for sårbarheter i kildekode?  
-- Les mer om [statisk kodeanalyse](https://sikkerhet.bouvet.no/bygge/statisk-kodeanalyse-sast)
-og [dynamisk kodeanalyse](https://sikkerhet.bouvet.no/bygge/dynamisk-kodeanalyse-dast).
+[Statisk kodeanalyse](https://sikkerhet.bouvet.no/bygge/statisk-kodeanalyse-sast) og [dynamisk kodeanalyse](https://sikkerhet.bouvet.no/bygge/dynamisk-kodeanalyse-dast):
+- Er det satt opp automatisk sjekk for sårbarheter i kildekode?
 
-Er det satt opp automatisk sjekk for sårbarheter i tredjepartsbiblioteker?  
-- Les mer om [software composition analysis](https://sikkerhet.bouvet.no/bygge/software-composition-analysis-sca)
-og [biblioteker](https://sikkerhet.bouvet.no/utvikle/biblioteker).
+[Software composition analysis](https://sikkerhet.bouvet.no/bygge/software-composition-analysis-sca) og [biblioteker](https://sikkerhet.bouvet.no/utvikle/biblioteker):
+- Er det satt opp automatisk sjekk for sårbarheter i tredjepartsbiblioteker?
 
 ## Teste
-Er det gjennomført en penetrasjonstest av systemtet?  
-- Les mer om [penetrasjonstesting](https://sikkerhet.bouvet.no/teste/penetrasjonstesting).
-
-Gjennomføres det regelmessige penetrasjonstester av systemet?  
-- Les mer om [penetrasjonstesting](https://sikkerhet.bouvet.no/teste/penetrasjonstesting).
+[Penetrasjonstesting](https://sikkerhet.bouvet.no/teste/penetrasjonstesting):
+- Er det gjennomført en penetrasjonstest av systemtet?
+- Gjennomføres det regelmessige penetrasjonstester av systemet?
 
 ## Deploye
-Oppdateres virtuelle maskiner og container images regelmessig?  
-- Les mer om [sikkerhetsoppdateringer](https://sikkerhet.bouvet.no/deploye/virtual_machines#sikkerhetsoppdateringer)
-og [regelmessig oppdatering av containere](https://sikkerhet.bouvet.no/deploye/containers#oppdater-regelmessig).
+[Sikkerhetsoppdateringer](https://sikkerhet.bouvet.no/deploye/virtual_machines#sikkerhetsoppdateringer):
+- Oppdateres virtuelle maskiner  regelmessig?
 
-Er det satt opp automatisk sjekk for sårbarheter i container images?  
-- Les mer om [containere](https://sikkerhet.bouvet.no/deploye/containers).
+[Regelmessig oppdatering av containere](https://sikkerhet.bouvet.no/deploye/containers#oppdater-regelmessig):
+- Oppdateres container images regelmessig?
+
+[Containere](https://sikkerhet.bouvet.no/deploye/containers):
+- Er det satt opp automatisk sjekk for sårbarheter i container images?
 
 ## Drifte
-Er det utført en kontroll på hvilke IP-adresser og porter som faktisk eksponeres fra systemet?  
-- Les mer om [nettverksoversikt](https://sikkerhet.bouvet.no/drifte/network#f%C3%A5-oversikt-over-nettverket).
+[Nettverksoversikt](https://sikkerhet.bouvet.no/drifte/network#f%C3%A5-oversikt-over-nettverket):
+- Er det utført en kontroll på hvilke IP-adresser og porter som faktisk eksponeres fra systemet?
+- Er det utført en kontroll på hvilke tjenester som lytter på portene til systemet?
 
-Er det utført en kontroll på hvilke tjenester som lytter på portene til systemet?  
-- Les mer om [nettverksoversikt](https://sikkerhet.bouvet.no/drifte/network#f%C3%A5-oversikt-over-nettverket).
-
-Isolerer brannmurene trafikken (inn og ut) til kun det nødvendige for hver komponent?  
-- Les mer om [isolasjon av tjenester](https://sikkerhet.bouvet.no/drifte/network#isolasjon-av-tjenester).
+[Isolasjon av tjenester](https://sikkerhet.bouvet.no/drifte/network#isolasjon-av-tjenester):
+- Isolerer brannmurene trafikken (inn og ut) til kun det nødvendige for hver komponent?
 
 ## Monitorere
-Logges alle adgangsforsøk med tilhørende alarmer*?  
-\*antall feilet, fra uventede land, mot endepunkter som ikke eksisterer, etc.  
-- Les mer om [logging](https://sikkerhet.bouvet.no/monitorere/logging).
+[Logging](https://sikkerhet.bouvet.no/monitorere/logging):
+- Logges alle adgangsforsøk med tilhørende alarmer*?  
+\*antall feilet, fra uventede land, mot endepunkter som ikke eksisterer, etc.
