@@ -116,7 +116,14 @@
 }
 
 .frontpage {
-  width: 110%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 480px) {
+  .frontpage {
+    width: 110%;
+  }
 }
 
 .category-into {
@@ -162,6 +169,14 @@
 
 .ingress {
   margin-bottom: 40px;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 480px) {
+  .ingress {
+    flex-direction: row;
+    padding: 0 0 0 16px;
+  }
 }
 
 .devops-links-header {
@@ -173,6 +188,13 @@
 .devops-links {
   display: flex;
   justify-content: center;
+  gap: 0.8rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .devops-links {
+    gap: 0.2rem;
+  }
 }
 
 .dev-ops-links-wrapper {
@@ -206,7 +228,6 @@
 }
 
 .devops-button {
-  margin: 0.2rem;
   padding: 0.6rem 1.8rem;
   color: var(--bouvet-blue);
   background-color: var(--bouvet-lightblue);
