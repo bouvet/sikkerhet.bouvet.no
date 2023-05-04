@@ -29,9 +29,9 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --bouvet-blue: #11133c;
-  --dark-mode-text: #E3E3E3;
+  --dark-mode-text: #e3e3e3;
   --bouvet-lightblue: #e5ecf1;
-  --bouvet-beige: #FCF8F3;
+  --bouvet-beige: #fcf8f3;
   --search-local-highlight-color: #f8934c;
   --search-local-hit-active-color: var(--bouvet-blue);
   --search-local-modal-background: var(--bouvet-blue);
@@ -64,7 +64,7 @@
 
 .underlined-link {
   text-decoration: underline;
-  color: black
+  color: black;
 }
 
 [data-theme="dark"] .underlined-link {
@@ -120,14 +120,35 @@
 }
 
 .category-into {
-  padding-left: 16px;
+  padding: 20px;
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 480px) {
+  .category-into {
+    flex-direction: row;
+    padding: 0 0 0 16px;
+  }
+}
+
+.category-into img {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 480px) {
+  .category-into img {
+    margin: 0;
+  }
 }
 
 .column {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: 3rem;
+
+  @media only screen and (min-width: 480px) {
+    margin-right: 3rem;
+  }
 }
 
 .quote {
@@ -185,8 +206,8 @@
 }
 
 .devops-button {
-  margin: .2rem;
-  padding: .6rem 1.8rem;
+  margin: 0.2rem;
+  padding: 0.6rem 1.8rem;
   color: var(--bouvet-blue);
   background-color: var(--bouvet-lightblue);
   font-weight: 700;
