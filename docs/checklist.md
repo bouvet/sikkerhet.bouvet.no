@@ -45,13 +45,13 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 [Autorisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autorisering):
 - Har brukere bare tilgang til det de skal ha (gjennom en godt definert autoriseringsmodel)?
 
-[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
+[Angrepsmetoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
 - Valideres data som sendes inn til systemet?
 
 [Tredjepartssystemer](https://sikkerhet.bouvet.no/utvikle/kildekode#tredjepartssystemer):
 - Valideres data som hentes fra andre systemer?
 
-[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder):
+[Angrepsmetoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder):
 - Er teamet kjent med de mest vanlige angrepsmetodene?
 
 [Kryptering](https://sikkerhet.bouvet.no/utvikle/kildekode#kryptering):
@@ -73,12 +73,12 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Teste
 [Penetrasjonstesting](https://sikkerhet.bouvet.no/teste/penetrasjonstesting):
-- Er det gjennomført en penetrasjonstest av systemtet?
+- Er det gjennomført en penetrasjonstest av systemet?
 - Gjennomføres det regelmessige penetrasjonstester av systemet?
 
 ## Deploye
 [Sikkerhetsoppdateringer](https://sikkerhet.bouvet.no/deploye/virtual_machines#sikkerhetsoppdateringer):
-- Oppdateres virtuelle maskiner  regelmessig?
+- Oppdateres virtuelle maskiner regelmessig?
 
 [Regelmessig oppdatering av containere](https://sikkerhet.bouvet.no/deploye/containers#oppdater-regelmessig):
 - Oppdateres container images regelmessig?
