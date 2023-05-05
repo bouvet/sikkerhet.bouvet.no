@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Planlegge": {
+    "message": "Planlegge",
+    "description": "The label for category Planlegge in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Utvikle": {
+    "message": "Utvikle",
+    "description": "The label for category Utvikle in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bygge": {
+    "message": "Bygge",
+    "description": "The label for category Bygge in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Teste": {
+    "message": "Teste",
+    "description": "The label for category Teste in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Release": {
+    "message": "Release",
+    "description": "The label for category Release in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Deploye": {
+    "message": "Deploye",
+    "description": "The label for category Deploye in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Drifte": {
+    "message": "Drifte",
+    "description": "The label for category Drifte in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Monitorere": {
+    "message": "Monitorere",
+    "description": "The label for category Monitorere in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Security Champion": {
+    "message": "Security Champion",
+    "description": "The label for category Security Champion in sidebar tutorialSidebar"
+  }
+}
