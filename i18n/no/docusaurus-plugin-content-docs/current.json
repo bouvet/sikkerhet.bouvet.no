@@ -3,20 +3,20 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Planlegge": {
-    "message": "Plan",
-    "description": "The label for category Planlegge in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Planlegge2": {
+    "message": "Planlegge",
+    "description": "The label for category Planlegge2 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Utvikle": {
-    "message": "Develop",
+    "message": "Utvikle",
     "description": "The label for category Utvikle in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Bygge": {
-    "message": "Build",
+    "message": "Bygge",
     "description": "The label for category Bygge in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Teste": {
-    "message": "Test",
+    "message": "Teste",
     "description": "The label for category Teste in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Release": {
@@ -24,15 +24,15 @@
     "description": "The label for category Release in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Deploye": {
-    "message": "Deploy",
+    "message": "Deploye",
     "description": "The label for category Deploye in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Drifte": {
-    "message": "Operate",
+    "message": "Drifte",
     "description": "The label for category Drifte in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Monitorere": {
-    "message": "Monitor",
+    "message": "Monitorere",
     "description": "The label for category Monitorere in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Security Champion": {
