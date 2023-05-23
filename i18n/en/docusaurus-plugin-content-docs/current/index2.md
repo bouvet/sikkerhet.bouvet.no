@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Introduksjon
+# Introduction
 
 Welcome to __sikkerhet.bouvet.no__! :sparkles:
 

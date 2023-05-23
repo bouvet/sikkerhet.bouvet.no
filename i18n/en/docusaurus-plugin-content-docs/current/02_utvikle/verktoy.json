@@ -1,80 +1,80 @@
 [
     {
         "name": "snyk open source",
-        "description": "Snyk open source er et verktøy for scanning av Dependencies i prosjekter",
+        "description": "Snyk open source is a tool used to scan dependencies in a project",
         "url": "https://snyk.io/product/open-source-security-management/",
         "categories": ["Dependencies"]
     },
     {
         "name": "pip-audit",
-        "description": "Scanner for sårbare Dependencies i Python-prosjekter, med støtte for automatisk patching",
+        "description": "Scanner for vulnerable dependencies in Python-prosjects. Also supports automatic patching.",
         "url": "https://github.com/pypa/pip-audit",
         "categories": ["Dependencies", "Python"]
     },
     {
         "name": "npm audit",
-        "description": "Scanner for sårbare Dependencies i Node-prosjekter, med støtte for automatisk patching",
+        "description": "Scanner for vulnerable dependencies in Node-prosjects. Also supports automatic patching.",
         "url": "https://docs.npmjs.com/cli/v8/commands/npm-audit",
         "categories": ["Dependencies", "Node"]
     },
     {
         "name": "Dependabot",
-        "description": "Overvåkning av sårbarheter i Dependencies, med støtte for automatisk patching",
+        "description": "Monitors dependencies for vulnerabilities.  Also supports automatic patching.",
         "url": "https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions",
         "categories": ["Dependencies", "GitHub"]
     },
     {
         "name": "snyk code",
-        "description": "Snyk code er et verktøy for SAST (Statisk Applikasjonssikkerhetstesting) av Source Code",
+        "description": "Snyk code is a SAST (Static Application Testing) tool for source code.",
         "url": "https://snyk.io/product/snyk-code/",
         "categories": ["Source Code"]
     },
     {
         "name": "CodeQL",
-        "description": "Identifiserer sårbarheter og feil i Source Coden",
+        "description": "Identifies vulnerabilities and errors in source code",
         "url": "https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql",
         "categories": ["Source Code", "GitHub"]
     },
     {
         "name": "Secret scanning",
-        "description": "Sørger for at tokens, privatnøkler, og andre kode-hemmeligheter ikke eksponeres i repositoriet",
+        "description": "Scans for passwords, keys and other secrets to avoid exposing them in repositories. ",
         "url": "https://docs.github.com/en/code-security/secret-scanning",
         "categories": ["Source Code", "GitHub"]
     },
     {
         "name": "bandit",
-        "description": "Finn vanlige sikkerhetsproblemer i Python-kode",
+        "description": "Detect common security issues in Python",
         "url": "https://pypi.org/project/bandit/",
         "categories": ["Source Code", "Python"]
     },
     {
         "name": "semgrep",
-        "description": "Nok et verktøy for SAST, med et egendefinerbart regelsett basert på YAML",
+        "description": "SAST-tool with a custom rule set based on YAML",
         "url": "https://github.com/returntocorp/semgrep",
         "categories": ["Source Code"]
     },
     {
         "name": "burp",
-        "description": "En plattform med flere verktøy for dynamisk testing av web-applikasjoner",
+        "description": "A platform containing multiple tools for dynamic web application security testing.",
         "url": "https://portswigger.net/burp",
-        "categories": ["Applikasjon"]
+        "categories": ["Application"]
     },
     {
         "name": "ZAP",
-        "description": "En plattform med flere verktøy for dynamisk testing av web-applikasjoner",
+        "description": "A platform containing multiple tools for dynamic web application security testing.",
         "url": "https://www.zaproxy.org/",
-        "categories": ["Applikasjon"]
+        "categories": ["Application"]
     },
     {
         "name": "nuclei",
-        "description": "Nuclei er et verktøy for DAST (Dynamisk Applikasjonssikkerhetstesting) av applikasjoner",
+        "description": "A tool used for dynamic application security testing (DAST).",
         "url": "https://github.com/projectdiscovery/nuclei",
-        "categories": ["Applikasjon"]
+        "categories": ["Application"]
     },
     {
         "name": "XSStrike",
-        "description": "Scanner web-applikasjoner for XSS (Cross-site scripting) sårbarheter",
+        "description": "Scanner for XSS (Cross-site scripting) vulnerabilities in web applications",
         "url": "https://github.com/s0md3v/XSStrike",
-        "categories": ["Applikasjon"]
+        "categories": ["Application"]
     }
 ]
