@@ -1,57 +1,57 @@
 [
     {
         "name": "snyk open source",
-        "description": "Snyk open source er et verktøy for scanning av avhengigheter i prosjekter",
+        "description": "Snyk open source er et verktøy for scanning av Dependencies i prosjekter",
         "url": "https://snyk.io/product/open-source-security-management/",
-        "categories": ["Avhengigheter"]
+        "categories": ["Dependencies"]
     },
     {
         "name": "pip-audit",
-        "description": "Scanner for sårbare avhengigheter i Python-prosjekter, med støtte for automatisk patching",
+        "description": "Scanner for sårbare Dependencies i Python-prosjekter, med støtte for automatisk patching",
         "url": "https://github.com/pypa/pip-audit",
-        "categories": ["Avhengigheter", "Python"]
+        "categories": ["Dependencies", "Python"]
     },
     {
         "name": "npm audit",
-        "description": "Scanner for sårbare avhengigheter i Node-prosjekter, med støtte for automatisk patching",
+        "description": "Scanner for sårbare Dependencies i Node-prosjekter, med støtte for automatisk patching",
         "url": "https://docs.npmjs.com/cli/v8/commands/npm-audit",
-        "categories": ["Avhengigheter", "Node"]
+        "categories": ["Dependencies", "Node"]
     },
     {
         "name": "Dependabot",
-        "description": "Overvåkning av sårbarheter i avhengigheter, med støtte for automatisk patching",
+        "description": "Overvåkning av sårbarheter i Dependencies, med støtte for automatisk patching",
         "url": "https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions",
-        "categories": ["Avhengigheter", "GitHub"]
+        "categories": ["Dependencies", "GitHub"]
     },
     {
         "name": "snyk code",
-        "description": "Snyk code er et verktøy for SAST (Statisk Applikasjonssikkerhetstesting) av kildekode",
+        "description": "Snyk code er et verktøy for SAST (Statisk Applikasjonssikkerhetstesting) av Source Code",
         "url": "https://snyk.io/product/snyk-code/",
-        "categories": ["Kildekode"]
+        "categories": ["Source Code"]
     },
     {
         "name": "CodeQL",
-        "description": "Identifiserer sårbarheter og feil i kildekoden",
+        "description": "Identifiserer sårbarheter og feil i Source Coden",
         "url": "https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql",
-        "categories": ["Kildekode", "GitHub"]
+        "categories": ["Source Code", "GitHub"]
     },
     {
         "name": "Secret scanning",
         "description": "Sørger for at tokens, privatnøkler, og andre kode-hemmeligheter ikke eksponeres i repositoriet",
         "url": "https://docs.github.com/en/code-security/secret-scanning",
-        "categories": ["Kildekode", "GitHub"]
+        "categories": ["Source Code", "GitHub"]
     },
     {
         "name": "bandit",
         "description": "Finn vanlige sikkerhetsproblemer i Python-kode",
         "url": "https://pypi.org/project/bandit/",
-        "categories": ["Kildekode", "Python"]
+        "categories": ["Source Code", "Python"]
     },
     {
         "name": "semgrep",
         "description": "Nok et verktøy for SAST, med et egendefinerbart regelsett basert på YAML",
         "url": "https://github.com/returntocorp/semgrep",
-        "categories": ["Kildekode"]
+        "categories": ["Source Code"]
     },
     {
         "name": "burp",
