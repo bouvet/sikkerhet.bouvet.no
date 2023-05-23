@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: Routines & responsibilities
 ---
 # Routines & Responsibilities 
 import WorkInProgress from '../_work_in_progress.mdx'
