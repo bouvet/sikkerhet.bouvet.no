@@ -1,0 +1,26 @@
+[
+    {
+        "name": "uptime-kuma",
+        "description": "A tool for monitoring applications, including availability and certificate expiry",
+        "url": "https://github.com/louislam/uptime-kuma",
+        "categories": ["Monitorering"]
+    },
+    {
+        "name": "netdata",
+        "description": "A dashboard for monitoring performance on systems, hardware, containers and applications",
+        "url": "https://github.com/netdata/netdata",
+        "categories": ["Monitorering"]
+    },
+    {
+        "name": "loki",
+        "description": "A log aggregation tool",
+        "url": "https://github.com/grafana/loki",
+        "categories": ["Logging"]
+    },
+    {
+        "name": "Azure Monitor",
+        "description": "Log aggregation and analysis",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/overview",
+        "categories": ["Logging", "Logganalyse"]
+    }
+]

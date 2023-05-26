@@ -18,16 +18,20 @@ const sidebars = {
 
   // But you can create a sidebar manually
   /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
+  docs: [
+    'planlegge/introduction',
     {
       type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
+      label: 'Planlegge',
+      items: [
+        {
+          type: 'doc',
+          id: 'planlegge/introduction'
+        }
+      ],
     },
   ],
-   */
+  */ 
 };
 
 module.exports = sidebars;

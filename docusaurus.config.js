@@ -23,8 +23,25 @@ const config = {
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
     i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
+        defaultLocale: 'no',
+        locales: ['no', 'en'],
+        path: 'i18n',
+        localeConfigs: {
+            en: {
+                label: 'English',
+                direction: 'ltr',
+                htmlLang: 'en-US',
+                calendar: 'gregory',
+                path: 'en',
+            },
+            no: {
+                label: 'Norsk',
+                direction: 'ltr',
+                htmlLang: 'no-NB',
+                calendar: 'gregory',
+                path: 'no',
+            },
+        },
     },
 
     themes: [
@@ -73,6 +90,10 @@ const config = {
                         href: 'https://github.com/bouvet/sikkerhet.bouvet.no',
                         label: 'GitHub',
                         position: 'right',
+                    },
+                    {
+                        type: 'localeDropdown',
+                        position: 'left',
                     },
                 ],
                 style: 'dark',
