@@ -1,2 +1,14 @@
 [
+    {
+        "name": "Draw.io",
+        "description": "Tegneverktøy med bibliotek for trusselmodellering",
+        "url": "https://github.com/michenriksen/drawio-threatmodeling",
+        "categories": ["Trusselmodellering"]
+    },
+    {
+        "name": "Microsoft Threat Modelling Tool",
+        "description": "Trusselmodelleringsverktøy fra Microsoft. Kan skreddersys med ekstra trusselmodelleringstemplates.",
+        "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool",
+        "categories": ["Trusselmodellering"]
+    }
 ]

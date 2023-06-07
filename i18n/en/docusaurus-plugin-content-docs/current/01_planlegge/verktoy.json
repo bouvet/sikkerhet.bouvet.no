@@ -1,2 +1,17 @@
 [
+    {
+        "name": "Draw.io",
+        "description": "Drawing tool with library for threat modelling",
+        "url": "https://github.com/michenriksen/drawio-threatmodeling",
+        "categories": ["Threat modelling"]
+    },
+    {
+        "name": "Microsoft Threat Modelling Tool",
+        "description": "Threat modelling tool from Microsoft. Can be customized using templates.",
+        "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool",
+        "categories": ["Threat modelling"]
+    }
+
+    
+
 ]
