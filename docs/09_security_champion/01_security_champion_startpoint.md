@@ -26,7 +26,7 @@ Når du begynner å skape deg en bevissthet så kan vi gå videre å finne ut av
 Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke får med seg teamet får ofte ikke gjort så mye som han/hun ønsker.
 
 ### 2. Har vi kontroll på hele prosjektet vårt?
-Hvis svaret er ja, så retter vi på det til nei. Det  er alltid mer som kan gjøres. Kollegaene våre i Nord (teknisk sett midt) har laget en fantastisk liste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i. Listen finner du her: [https://github.com/bouvet/nord-sikkerhetsforum/blob/main/templates/security-checklist.md](https://github.com/bouvet/nord-sikkerhetsforum/blob/main/templates/security-checklist.md)
+Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Kollegaene våre i Nord (teknisk sett midt) har laget en fantastisk liste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i. Listen finner du her: [https://sikkerhet.bouvet.no/checklist](https://sikkerhet.bouvet.no/checklist)
 
 Går man gjennom den listen får man støtte til å få kontroll på blant annet
 - Ansvar og rutiner
