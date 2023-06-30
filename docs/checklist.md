@@ -40,14 +40,11 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 [Autorisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autorisering):
 - Har brukere bare tilgang til det de skal ha (gjennom en godt definert autoriseringsmodel)?
 
-[Angrepsmetoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
+[Er teamet kjent med de meste vanlige agrepsmetodene, slik som manglende validering av data?](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
 - Valideres data som sendes inn til systemet?
 
 [Tredjepartssystemer](https://sikkerhet.bouvet.no/utvikle/kildekode#tredjepartssystemer):
 - Valideres data som hentes fra andre systemer?
-
-[Angrepsmetoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder):
-- Er teamet kjent med de mest vanlige angrepsmetodene?
 
 [Kryptering](https://sikkerhet.bouvet.no/utvikle/kildekode#kryptering):
 - Krypteres nettverkstrafikk mellom alle tjenester (med et anerkjent krypterings bibliotek)?
