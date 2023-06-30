@@ -1,0 +1,14 @@
+[
+    {
+        "name": "fail2ban",
+        "description": "An IPS (Intrusion prevention system) autoblocking malicious IP adresses",
+        "url": "https://github.com/fail2ban/fail2ban",
+        "categories": ["Intrusion Prevention"]
+    },
+    {
+        "name": "lynis",
+        "description": "A tool for auditing the security within Unix-like operating systems such as BSD, MacOS and Linux. ",
+        "url": "https://github.com/CISOfy/lynis",
+        "categories": ["Audit", "Compliance"]
+    }
+]

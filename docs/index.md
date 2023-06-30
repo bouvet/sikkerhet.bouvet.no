@@ -29,28 +29,28 @@ import Link from "@docusaurus/Link";
     <h2 className="row devops-links-header">Hva ser du etter?</h2>
     <div className="row devops-links">
         <Link to="/planlegge/introduction">
-            <button className="devops-button">Plan</button>
+            <button className="devops-button">Planlegge</button>
         </Link>
         <Link to="/utvikle/introduction">
-            <button className="devops-button">Code</button>
+            <button className="devops-button">Utvikle</button>
         </Link>
         <Link to="/bygge/introduction">
-            <button className="devops-button">Build</button>
+            <button className="devops-button">Bygge</button>
         </Link>
         <Link to="/teste/introduction">
-            <button className="devops-button">Test</button>
+            <button className="devops-button">Teste</button>
         </Link>
         <Link to="/release/introduction">
             <button className="devops-button">Release</button>
         </Link>
         <Link to="/deploye/introduction">
-            <button className="devops-button">Deploy</button>
+            <button className="devops-button">Deploye</button>
         </Link>
         <Link to="/drifte/introduction">
-            <button className="devops-button">Operate</button>
+            <button className="devops-button">Drifte</button>
         </Link>
         <Link to="/monitorere/introduction">
-            <button className="devops-button">Monitor</button>
+            <button className="devops-button">Monitorere</button>
         </Link>
     </div>
 </div>

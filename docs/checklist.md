@@ -3,11 +3,6 @@ title: Sjekklisten for sikkerhet
 ---
 
 # Sjekklisten for sikkerhet
-
-import WorkInProgress from './_work_in_progress.mdx'
-
-<WorkInProgress />
-
 Denne sjekklisten kan brukes som et startpunkt for å vurdere prosjektets sikkerhet.
 
 Her finner du en liste med JA/NEI spørsmål som hvert utviklingsteam burde besvare.  
