@@ -9,6 +9,8 @@
     "forwardPorts": [3000],
   
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "npm install"
-  
+    "postCreateCommand": "npm install",
+    "postStartCommand": {
+        "serve": "npm run serve"
+    }
   }
