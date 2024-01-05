@@ -8,9 +8,14 @@
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [3000],
   
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": {
-        "install": "npm install",
-        "serve": "npm run serve"
-    }
+   "portsAttributes": {
+    "3000": {
+       "label": "WebSitePreview",
+       "onAutoForward": "openPreview"
+     }
+   },
+    // install dependencies and start app
+    "updateContentCommand": "npm install",
+    "postAttachCommand": "npm run serve"
+
   }
