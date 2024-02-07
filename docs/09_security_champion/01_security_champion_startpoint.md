@@ -3,8 +3,9 @@
 ## Hva er en Security Champion?
 
 Det er ganske enkelt, du er en Security Champion om du har bestemt deg for å bli det. For å lese mer om hva en Security Champion er anbefales følgende kilder:
- - [Bouvet "Min side" - Security Champion](https://minside.bouvet.no/bouvet-alle/sikkerhet-i-dna-et-vart/security-champions) (krever innlogging og er vår egen beskrivelse)
- - [Security Champion i NAV](https://sikkerhet.nav.no/docs/bli-security-champion/)
+
+- [Bouvet "Min side" - Security Champion](https://minside.bouvet.no/bouvet-alle/sikkerhet-i-dna-et-vart/security-champions) (krever innlogging og er vår egen beskrivelse)
+- [Security Champion i NAV](https://sikkerhet.nav.no/docs/bli-security-champion/)
 - [Security Champion i Equinor](https://equinor.github.io/appsec/security-champion/)
 
 ## Hjelp, jeg har definert meg selv som security champion!
