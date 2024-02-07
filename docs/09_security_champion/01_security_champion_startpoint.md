@@ -25,7 +25,7 @@ Du kan gjerne begynne med å stille deg selv noen spørsmål?
 
 Når du begynner å skape deg en bevissthet så kan vi gå videre å finne ut av mer. Nå kan du begynne å ta litt initiativ i teamet ditt.
 
-- Et godt startsted er å organisere en trusselmodellerings-øvelse. Du trenger ikke kunne noe om trusselmodellering, men du kan få litt støtte her [https://www.threatmodelingmanifesto.org/](https://www.threatmodelingmanifesto.org/). Målet med denne trusselmodelleringen er at du og teamet skal få et bevisst forhold til trusler og kanskje få i gang tankeprosessen rundt mottiltak.
+- Et godt startsted er å organisere en trusselmodellerings-øvelse. Du trenger ikke kunne noe om trusselmodellering, men du kan få litt støtte her [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). Målet med denne trusselmodelleringen er at du og teamet skal få et bevisst forhold til trusler og kanskje få i gang tankeprosessen rundt mottiltak.
 
 - Vurder å etablere et bug bounty program (premiering for å finne bugs) eller noe som får teamet ditt med på å aktive finne utfordringer som bør/må løses.
 
@@ -33,7 +33,7 @@ Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke f�
 
 ### 2. Har vi kontroll på hele prosjektet vårt?
 
-Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Kollegaene våre i Nord (teknisk sett midt) har laget en fantastisk liste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i. Listen finner du her: [https://sikkerhet.bouvet.no/checklist](https://sikkerhet.bouvet.no/checklist)
+Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Kollegaene våre i Nord (teknisk sett midt) har laget en fantastisk liste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i. Listen [finner du her.](https://sikkerhet.bouvet.no/checklist)
 
 Går man gjennom den listen får man støtte til å få kontroll på blant annet:
 
