@@ -16,6 +16,6 @@
    },
     // install dependencies and start app
     "updateContentCommand": "npm install",
-    "postAttachCommand": "npm run serve"
+    "postAttachCommand": "npm run start"
 
   }
