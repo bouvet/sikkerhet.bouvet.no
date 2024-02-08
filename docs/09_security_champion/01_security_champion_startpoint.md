@@ -20,7 +20,7 @@ Du kan gjerne begynne med å stille deg selv noen spørsmål?
 
 - Hva gjør dette prosjektet jeg jobber med egentlig?
 - Hva er kritisk for at systemet skal fungerer?
-- Hvordan kan dette systemet misbrukes, hvilke angrepsflater eksisterer i systmet?
+- Hvordan kan dette systemet misbrukes, hvilke angrepsflater eksisterer i systemet?
 - Eksisterer det en oppdatert trusselmodell med dertil tiltak for å forhindre utnyttelse av svakhetene?
 
 Når du begynner å skape deg en bevissthet så kan vi gå videre å finne ut av mer. Nå kan du begynne å ta litt initiativ i teamet ditt.
