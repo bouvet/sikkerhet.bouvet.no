@@ -52,7 +52,7 @@ Husk du trenger ikke ta alt på en gang få med deg teamet og gjør del for del 
 Basert på etikken som læres bort i forsvaret får vi noen lure spørsmål vi kan bruke som utgangspunkt.
 
 - Er det lov?
-  - Er løsningen vår lovlig eller risikerer vi f.eks bøter fra datatilsynet og kanskje vi skal fikse dette?
+  - Er løsningen vår lovlig, eller risikerer vi f.eks bøter fra datatilsynet? Burde vi utbedre dette?
 - Er det taktisk lurt?
   - Vi stryker taktisk her og endrer til lurt. Er det lurt å lage denne featuren eller er det lurt å sette det opp slik?
 - Kan jeg leve med det?
