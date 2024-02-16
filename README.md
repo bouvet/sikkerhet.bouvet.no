@@ -8,7 +8,7 @@
 
 #### Retningslinjer for innhold
 
-Alt innhold som skrives her vil være fritt tilgjengelig på Internett. Les mer om hvordan artikler skal skrives og hva de skal inneholde i våre [retningslinjer for innhold](docs/content-guidelines.md)
+Alt innhold som skrives her vil være fritt tilgjengelig på Internett. Les mer om hvordan artikler skal skrives og hva de skal inneholde i våre [retningslinjer for innhold](docs/content-guidelines.md).
 
 ## Kjøre lokalt
 
