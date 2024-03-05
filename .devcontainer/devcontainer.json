@@ -1,0 +1,21 @@
+{
+    "name": "Node.js",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
+  
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+  
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [3000],
+  
+   "portsAttributes": {
+    "3000": {
+       "label": "WebSitePreview",
+       "onAutoForward": "openPreview"
+     }
+   },
+    // install dependencies and start app
+    "updateContentCommand": "npm install",
+    "postAttachCommand": "npm run start"
+
+  }
