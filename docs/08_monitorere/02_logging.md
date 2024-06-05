@@ -18,7 +18,7 @@ import Tools from './_monitoring_tools.mdx'
 
 - Benytt et standardisert loggformat som kan konsumeres av aggregeringsverktøy
   - Se [OWASP's anbefalinger](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html#event-attributes)
-- Logg alle feil
+- Logg alle feil, men vær nøye med å **ikke inkludere** sensitiv informasjon som CVV-numre, passord, fødselsnummer, personopplysninger, helsedata, tokens, sessions cookies og andre sensitive opplysninger som ikke strengt tatt er nødvendig. 
 - Sentralisert logg med backup (f.eks. Grafana + Loki)
     - Konfidensialitet av logger
 - Logg innlogginger

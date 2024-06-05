@@ -3,11 +3,6 @@ title: Sjekklisten for sikkerhet
 ---
 
 # Sjekklisten for sikkerhet
-
-import WorkInProgress from './_work_in_progress.mdx'
-
-<WorkInProgress />
-
 Denne sjekklisten kan brukes som et startpunkt for å vurdere prosjektets sikkerhet.
 
 Her finner du en liste med JA/NEI spørsmål som hvert utviklingsteam burde besvare.  
@@ -45,14 +40,11 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 [Autorisering](https://sikkerhet.bouvet.no/utvikle/kildekode#autorisering):
 - Har brukere bare tilgang til det de skal ha (gjennom en godt definert autoriseringsmodel)?
 
-[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
+[Er teamet kjent med de meste vanlige agrepsmetodene, slik som manglende validering av data?](https://sikkerhet.bouvet.no/utvikle/kildekode/#angreps-metoder):
 - Valideres data som sendes inn til systemet?
 
 [Tredjepartssystemer](https://sikkerhet.bouvet.no/utvikle/kildekode#tredjepartssystemer):
 - Valideres data som hentes fra andre systemer?
-
-[Angreps metoder](https://sikkerhet.bouvet.no/utvikle/kildekode#angreps-metoder):
-- Er teamet kjent med de mest vanlige angrepsmetodene?
 
 [Kryptering](https://sikkerhet.bouvet.no/utvikle/kildekode#kryptering):
 - Krypteres nettverkstrafikk mellom alle tjenester (med et anerkjent krypterings bibliotek)?
@@ -73,12 +65,12 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Teste
 [Penetrasjonstesting](https://sikkerhet.bouvet.no/teste/penetrasjonstesting):
-- Er det gjennomført en penetrasjonstest av systemtet?
+- Er det gjennomført en penetrasjonstest av systemet?
 - Gjennomføres det regelmessige penetrasjonstester av systemet?
 
 ## Deploye
 [Sikkerhetsoppdateringer](https://sikkerhet.bouvet.no/deploye/virtual_machines#sikkerhetsoppdateringer):
-- Oppdateres virtuelle maskiner  regelmessig?
+- Oppdateres virtuelle maskiner regelmessig?
 
 [Regelmessig oppdatering av containere](https://sikkerhet.bouvet.no/deploye/containers#oppdater-regelmessig):
 - Oppdateres container images regelmessig?
