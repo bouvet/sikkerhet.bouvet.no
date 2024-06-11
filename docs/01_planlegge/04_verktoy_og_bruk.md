@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 # Verktøy brukt i leveransen
 Alle utviklingsteam benytter ulike verktøy i utviklingsprosessen, og utvalget vil varierere fra team til team avhengig av personlige preferanser, teknologivalg, system og kundekrav og mye annet. 
