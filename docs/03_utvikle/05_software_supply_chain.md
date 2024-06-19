@@ -4,14 +4,17 @@ title: Software Supply Chain
 ---
 
 # Software supply chain
-Når vi bygger software har vi avhengigheter til en hel haug med ulike komponenter. En ting er selve verktøyene som er nevnt i artiklene om [utviklingsmiljøer](../03_utvikle/01_utviklingsmiljoer.md), men vi har også avhengigheter til en haug med rammeverk og biblioteker som brukes i koden vi skriver. 
 
-Kilder som blant annet Gartner, Sonatype og Snyk har anslått at så mye som 90% av koden i et typisk utviklingsprosjekt består av kode "skrevet av andre", altså de ulike avhengighetene vi har når vi bygger og deployer. 
+:::tip Kort oppsummert
+Alle som lager programvare bruker tredjepartspakker. Alle tredjepartspakker representerer kode skrevet av andre, og utgjør en risiko for leveransen dersom vi ikke har kontroll over hva vi bruker og oversikt over svakheter og risiko assosiert med disse.
+:::
 
-For å sikre at vi ikke utsetter oss selv for stor risiko når vi benytter oss av eksterne avhengigheter kan vi gjennomføre såkalt Source Composition Analysis - SCA for å få oversikt over risiko og mitigerende tiltak. 
+Når vi bygger software har vi avhengigheter til en hel haug med ulike tredjepartspakker, fra økosystem som npmjs, nuget, PyPi eller andre. Dette er kode "skrevet av andre", der vi er avhengige av at disse produserer pakker uten større svakheter og uten onde hensikter. Kilder som blant annet Gartner, Sonatype og Snyk har anslått at så mye som 90% av koden i et typisk utviklingsprosjekt kan bestå av slike tredjepartspakker, så risikoen er betydelig dersom vi ikke har kontroll.
+
+Et viktig hjelpemiddel er å gjennomføre en såkalt Source Composition Analysis - SCA for å få oversikt over pakkene vi bruker, både direkte og indirekte (transiente) avhengigheter, samt risikoen assosiert med disse. 
 
 ## Sikkerhetsrisiko
-Det finnes flere sikkerhetsrisikoer knyttet til biblioteker, men dessverre er økosystemene for slike pakker lite proaktive på sikkerhetsfronten. Infiserte pakker som identifiseres blir fjernet, men for alle som bruker automatikk for å holde avhengigheter oppdatert til siste versjon kan dette ofte være for sent. 
+Det finnes flere sikkerhetsrisikoer knyttet til tredjepartspakker, men dessverre er økosystemene for slike pakker lite proaktive på sikkerhetsfronten. Infiserte pakker som identifiseres blir fjernet, men for alle som bruker automatikk for å holde avhengigheter oppdatert til siste versjon kan dette ofte være for sent. 
 
  ### Sårbarheter
  De kan inneholde kjente sårbarheter ([CVE](https://cve.mitre.org)) som kan la seg utnytte. Noen av disse kan mitigeres ved å oppgradere pakkene til siste versjon, andre har mer grunnleggende utfordringer som kan mitigeres på annet vis. Det hender også at noen CVE'er lages på svakheter som teknisk sett er en sårbarhet, men der den er _'by-design'_. Et eksempel på dette er Python-pakken _Pandas_ som blant annet har sårbarheten [CVE-2020-13091](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13091). Denne lar brukeren deserialisere filer uten sjekk av hvor disse kommer fra - dette har da blitt registrert som en sårbarhet da det vil kunne være mulig utnytte dette om andre tiltak ikke er på plass. 
@@ -56,6 +59,5 @@ En av angrepsvektorene er når ondsinnede aktører overtar populære pakker, og 
 Software Bill Of Materials (SBOM) er en tilnærming der vi genererer en oversikt over alle avhengigheter med versjoner fra løsningene våre. Det finnes flere mer eller mindre standardiserte filformater for dette, disse kan også arkiveres eller legges inn i andre løsninger for å forenkle monitorering fra sentralt hold. 
 
 # Veien videre
-
 * [Sonatype: State of the software supply chain](https://www.sonatype.com/state-of-the-software-supply-chain/introduction)
 * [Wikipedia: Source Composition Analysis](https://en.wikipedia.org/wiki/Software_composition_analysis)
