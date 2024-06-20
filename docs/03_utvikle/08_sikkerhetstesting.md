@@ -37,3 +37,4 @@ DAST vil kun dekke funksjonalitet eksponert i den kjørende løsningen, så ders
 # Veien videre
 * [Wikipedia: Static application security testing](https://en.wikipedia.org/wiki/Static_application_security_testing)
 * [Wikipedia: Dynamic application security testing](https://en.wikipedia.org/wiki/Dynamic_application_security_testing)
+* [OWASP: Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

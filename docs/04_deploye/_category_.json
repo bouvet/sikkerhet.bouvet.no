@@ -1,6 +1,6 @@
 {
-  "label": "Planlegge",
-  "position": 1,
+  "label": "Deploye",
+  "position": 5,
   "link": {
     "type": "doc",
     "id": "introduction"
