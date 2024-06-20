@@ -3,6 +3,9 @@ sidebar_position: 2
 ---
 
 # Data og klassifisering
+:::tip Kort oppsummert
+De fleste organisasjoner opererer med ulike klassifikasjonsnivå på både data og systemer, der klassifiseringen stiller krav til hvordan data brukes, hvor det lagres og hvem som kan aksessere disse. Dette er nøkkelkrav for ethvert utviklingsprosjekt og må avklares i forkant.
+:::
 
 ## Klassifisering
 De aller fleste organisasjoner har rutiner og prosesser for klassifisering av data, og skiller typisk i disse eller liknende nivå:
@@ -38,3 +41,6 @@ Dersom en bruker data i forbindelse med utvikling og testing, er det viktig å h
 Teamet må sjekke behovet for anonymisering av dataene før disse brukes utenfor produksjonsmiljøet, slik at en ivaretar behovet for mengden data, fyllingsgrad og kvalitet samtidig som at en ikke risikerer at kundens data kommer på avveie. 
 
 Dette er spesielt viktig dersom utvikling skjer i Bouvets infrastruktur, men med produksjonsmiljø plassert hos kunden. I slike tilfeller er det viktig at Bouvet har dokumenterte rutiner som regulerer hvor og hvordan data oppbevares og brukes, og hvordan og når disse skal slettes. Dette må gås opp i samråd med kunde slik at det ikke er noe tvil rundt ansvar, plikter og risiko. 
+
+# Veien videre
+* [Datatilsynet: Innebygd personvern](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)

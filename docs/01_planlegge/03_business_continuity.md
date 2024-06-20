@@ -3,6 +3,9 @@ sidebar_position: 3
 ---
 
 # Business Continuity
+:::tip Kort oppsummert
+Dersom en katastrofal hendelse oppstår må vi vite hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet, men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og akseptabelt tap av data.
+:::
 
 _Business Continuity Planning_ er _ikke_ er IT-teknisk fag. Men det er vårt ansvar som leverandører av et IT-system å minne kunden på at systemet kan bli utilgjengelig.  
 Svaret fra denne planleggingen vil være med å beskrive hvilke krav som stilles til løsningens robusthet og sikkerhetsnivå, og er avgjørende for å finne riktig balanse av kostnad og ytelse hos systemet. 
@@ -84,3 +87,6 @@ Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelse
 * Konfidensialitetsbrudd: Hvordan håndterer du at noen har kommet seg inn i tjenesten(e) du drifter?
 * Kompromittert admin: Trenger du å planlegge for hva som skjer om eieren av subscription sletter hele Azure-subscriptionen din?
 * Kritisk sårbarhet: Hva skjer når noen oppdager en kritisk sårbarhet i din applikasjon? Det kan være lurt å ha protokoller klare for når du skal ta et valg om du stenger tjenesten ned.
+
+# Veien videre
+* [Wikipedia: Disaster Recovery](https://en.wikipedia.org/wiki/IT_disaster_recovery)

@@ -2,6 +2,10 @@
 sidebar_position: 5
 ---
 # Verktøy brukt i leveransen
+:::tip Kort oppsummert
+Feilkonfigurasjon er en vanlig kilde til feil og sårbarheter, dette gjelder også for verktøy. Dersom mulig bør teamet standardisere på bruk av verktøy og utvidelser til disse, og sikre at alle har en mest mulig lik (og dokumentert) arbeidsprosess.
+:::
+
 Alle utviklingsteam benytter ulike verktøy i utviklingsprosessen, og utvalget vil varierere fra team til team avhengig av personlige preferanser, teknologivalg, system og kundekrav og mye annet. 
 
 Et typisk team vil benytte seg av en eller annen form for
@@ -75,3 +79,7 @@ Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager 
 ### Secret scanning
 
 Om man skulle være så uheldig å pushe secrets til versjonskontrollsystemet, kan et CI/CD system redde deg ved å identifisere disse, og i noen tilfeller til og med gjøre de ugyldige mot den tjenesten de er ment for.
+
+# Veien videre
+* [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
+* [Github: About secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)

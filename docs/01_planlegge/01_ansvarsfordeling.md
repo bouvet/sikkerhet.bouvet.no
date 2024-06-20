@@ -3,6 +3,9 @@ sidebar_position: 1
 ---
 
 # Ansvarsfordeling
+:::tip Kort oppsummert
+Manglende klarhet i vårt og andres ansvar kan få enorme konsekvenser for et prosjekt, så dette må gås opp i forkant. Det er spesielt viktig dersom andre selskaper enn oss og kunden er involvert, da oppgaver og roller har lett for å falle mellom stoler fordi alle tror at "noen andre" tar seg av det.
+:::
 
 Bouvet gjennomfører utviklingsprosjekter på mange ulike måter, der vi tar mer eller mindre ansvar for prosjektledelse, planlegging, utviklingsfasen, kvalitetssikring og ikke minst drift og forvaltning av løsningen. Vi har også ulike innslag av eget, kundens og tredjepartsutstyr, både under utvikling og forvaltning av løsningen. 
 
@@ -31,3 +34,6 @@ Dersom vi kun har ansvar for utvikling av løsningen, er det viktig at vi har g�
 Dokumenter ansvarsfordeling og annen relevant informasjon i kildekodesystemet sammen med resten av det som produseres i prosjektet. Det øker synligheten og alle vet til enhver tid hvor informasjonen finnes.
 :::
 
+# Veien videre
+* 
+* 
