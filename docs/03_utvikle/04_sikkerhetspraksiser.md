@@ -3,6 +3,10 @@ sidebar_position: 5
 title: Sikkerhetspraksiser
 ---
 # Sikkerhetspraksiser
+:::tip Kort oppsummert
+Det er mye å tenke på dersom en skal bygge en sikker løsning, og et viktig utgangspunkt er OWASP Top 10. 
+:::
+
 Det finnes mange ulike typer sårbarheter og svakheter vi må forholde oss til når vi utvikler nye applikasjoner. Organisasjonen Open Worldwide Application Security Project har siden 2004 gitt ut en liste med de 10 mest vanlige typer sårbarheter, primært rettet mot webapplikasjoner. Selv om denne ikke inneholder alt, brukes den ofte som et utgangspunkt for sårbarheter som må håndteres i utviklingsprosjekter. 
 
 ## Gjeldende punkter på OWASP Top 10:

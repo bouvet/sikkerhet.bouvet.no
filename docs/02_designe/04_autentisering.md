@@ -3,6 +3,9 @@ sidebar_position: 4
 ---
 
 # Autentisering og autorisering
+:::tip Kort oppsummert
+Autentisering og autorisering sjekker henholdsvis _hvem_ du er og _hva_ du har lov til. Dette er viktige konsepter som må implementeres korrekt for at sikkerheten i en løsning skal ivaretas. 
+:::
 
 Autentisering og autorisering er viktig i alle utviklingsprosjekter. Kort fortalt går _autentisering_ ut på at en skal validere at en bruker representerer den identiteten den hevder å representere, typisk gjennom å sjekke brukernavn og tilhørende passord. _Autorisering_ går ut på å sjekke at brukeren har lov til å gjøre det den prøver på. Disse er ofte forkortet til _authn_ for autentisering og _authz_ for autorisering.
 
@@ -43,5 +46,6 @@ Bruk av roller, _role based access control_ (RBAC) er en vanlig tilnærming for 
 
 Dette gir en bedre oversikt over hvem som har tilgang til hva sammenliknet med brukere som har individuelle tilganger. 
 
-
-
+# Veien videre
+* [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)
+* [Wikipedia: Authorization](https://en.wikipedia.org/wiki/Authorization)

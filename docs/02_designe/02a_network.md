@@ -3,6 +3,9 @@ sidebar_position: 3
 ---
 
 # Nettverkskonsepter
+:::tip Kort oppsummert
+Nettverk er en grunnleggende komponent i alt vi lager, og det er viktig med en grunnleggende forståelse for hvordan dette fungerer og hvordan det kan utnyttes av andre. 
+:::
 
 Riktig konfigurasjon av nettverk er viktig for både rene skyløsninger, hybride nettverk og rene on-prem-løsninger. Nettverk er et stort felt av faget, med store
 variasjoner i bruksområde, sikkerhet og kompleksitet. I denne artikkelen dekker vi grunnleggende konsepter for kommunikasjon til og fra servere og nettjenester.
@@ -126,4 +129,5 @@ Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ve
 - Ta backup av eller dokumenter alle regler som settes opp uten scripting
     - Dokumenter alle regler som settes opp / håndteres av personer utenfor ditt team
 
-```
+# Veien videre
+* [IBM: What is networking](https://www.ibm.com/topics/networking)

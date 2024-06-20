@@ -3,6 +3,10 @@ sidebar_position: 3
 title: Hemmeligheter
 ---
 # Hemmeligheter
+:::tip Kort oppsummert
+Alle utviklingsprosjekter har behov for hemmeligheter som connection strings, identiteter, passord, sertifikater og masse annet. Disse må oppbevares på en trygg måte, og vi må sikre at vi bruker dem i en sikker kontekst med riktige støtteverktøy og prosesser. 
+:::
+
 Hemmeligheter er representert i utviklingsprosjekter i form av _connection strints_, _passord_, _nøkler_, _sertifikater_ og alt annet som regnes som sensitiv informasjon vi ikke ønsker at andre skal få kjennskap til. 
 
 Det finnes mange ulike tilnærminger for hvordan disse skal håndteres, og dette har også endret seg etter hvert som nye tjenester dukker opp. For skyløsninger har tjenester som Azure Key Vault og liknende nærmest blitt en standard, da disse tjenestene håndterer flere aspekter av hvordan en bruker og forvalter hemmeligheter. 
@@ -26,5 +30,5 @@ Det du derimot skal gjøre, er å:
 Hemmeligheter skal *aldri* sjekkes inn i kildekodesystemet!
 :::
 
-# Videre lesning
+# Veien videre
 * [Azure Key Vault - Quickstart for .NET](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-net?tabs=azure-cli)

@@ -26,3 +26,7 @@ Husk på at sikkerheten i en løsning aldri skal avhenge av ett enkelt tiltak; f
 
 ### Logging, monitorering og hendelseshåndtering
 Husk på at interne komponenter også må monitoreres. Selv om det er hyllevare må samme tiltak gjennomføres her også for å sikre at vi vet hva som skjer og at loggene er til å stole på og ikke kan manipuleres på linje med alt annet vi overvåker. 
+
+# Veien videre
+* 
+* 

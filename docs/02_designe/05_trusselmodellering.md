@@ -3,6 +3,9 @@ sidebar_position: 5
 title: Trusselmodellering
 ---
 # Trusselmodellering
+:::tip Kort oppsummert
+Trusselmodellering er en eksersis der målet er å identifisere trusler slik at risikoen ved disse kan identifiseres og vurderes opp mot et totalbilde av sikkerheten i løsningen. Fra en trusselmodell kan mitigerende tiltak identifiseres og implementeres for å redusere risiko.  
+:::
 
 __Dette er en kort introduksjon til trusselmodellering, dataflytdiagrammer, STRIDE og angrepstrær.__
 
@@ -77,7 +80,7 @@ Når en har identifisert en risiko, er det viktig at den som eier denne risikoen
   
 Det er viktig at mottiltak valideres for at dette skal ha noen hensikt. Trusselmodellen bør hentes opp med jevne mellomrom for å se hvordan situasjonen har endret seg, og dersom den totale kritikaliteten eller den residuelle risikoen overstiger en grense bør en vurdere tiltak for å redusere disse. 
 
-
+# Veien videre
 ## Verktøy
 
 - [Microsoft Threat Modeling Tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool) gir deg en kick-start ved at en del vanlige trusler for diverse tjenester allerede er beskrevet. Dette verktøyet er særlig nyttig dersom man opererer i Microsoft Azure.
@@ -91,7 +94,7 @@ Det er viktig at mottiltak valideres for at dette skal ha noen hensikt. Trusselm
 - [An Introduction to threat modeling (Javazone 2018)](https://vimeo.com/234010802)
 - [Threat Modeling in 2019 (RSA Conference 2019)](https://www.youtube.com/watch?v=ZoxHIpzaZ6U)
 
-## Kilder
+## Andre kilder
 
 - [Trusselmodellering](https://infosec.sintef.no/informasjonssikkerhet/2018/06/trusselmodellering/) - Martin Gilje Jaatun, Seniorforsker, Dr. Philos, SINTEF
 - [OWASP Application Threat Modeling](https://www.owasp.org/index.php/Application_Threat_Modeling)

@@ -3,6 +3,9 @@ sidebar_position: 2
 title: Utviklingsmiljø
 ---
 # Utviklingsmiljø, verktøy og byggmiljø
+:::tip Kort oppsummert
+Miljøene og verktøyene vi jobber med er essensielle for prosjektet, og det er viktig at vi har kontroll på hvilke verktøy som brukes og hvordan disse konfigureres. 
+:::
 
 Utviklingsmiljøet og byggmiljøet er noe av det viktigste vi har i et utviklingsprosjekt, og er en avhengighet det er utrolig viktig at vi har kontroll på. 
 
@@ -28,3 +31,6 @@ Viktige tiltak for å ta ned risiko vil være å
 * unngå bruk av generelle maskiner som brukes til surfing på nett, kontoraktiviteter og liknende til utvikling
 
 Det er klart at en ikke alltid kan forsvare å sette opp dedikerte maskiner som kun brukes til utvikling ut fra kost/nytte, men dette bør vurderes fra tilfelle til tilfelle for å sikre at en er kjent hvordan dette valget påvirker risikobildet i prosjektet. 
+
+# Veien videre
+* [Wikipedia: Programming tools](https://en.wikipedia.org/wiki/Programming_tool)

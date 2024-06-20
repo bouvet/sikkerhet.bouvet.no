@@ -3,6 +3,10 @@ sidebar_position: 2
 ---
 
 # Systemskisser
+:::tip Kort oppsummert
+Det er viktig med et godt underlag når vi skal bygge gode løsninger, og skisser og diagrammer som viser oppbygningen av infrastruktur, dataflyt, nettverk og tilgangsstyring er viktige elementer. Uten denne informasjonen er det vanskelig å validere om sluttresultatet matcher intensjonen.
+:::
+
 Når vi designer en løsning, er det viktig med gode og oversiktlige skisser og diagrammer som viser designet slik at det planlagt. Dette gjøres allerede av mange utviklerteam uten at det nødvendigvis stilles krav til det, men det er likevel greit å nevne her. 
 
 Systemskissene bør gi nok informasjon til at en i etterkant kan 
@@ -33,7 +37,7 @@ Diagrammene trenger ikke å være perfekte, eller inneholde alle tenkelige detal
 ### Netverksdiagram
 ![Nettverksdiagram](nettverksdiagram.png)
 
-:::important Husk
+:::tip Husk
 Nettverksdiagram bør lages for alle miljø, slik at en får nødvendig informasjon på alle ressurser i alle miljø, samt forbindelser mellom disse.  
 :::
 ### Dataflytdiagram
@@ -49,3 +53,7 @@ Nettverksdiagram bør lages for alle miljø, slik at en får nødvendig informas
     * Konsumerer datasett i containeren production-data-container
     * Lineage er synlig i Purview
     * Bruker kun datasett godkjent av dataeier
+
+# Veien videre
+* [Verktøy: Miro - Bruk SSO innlogging i Bouvet](https://miro.com/)
+* [Verktøy: Draw.io](https://draw.io/)
