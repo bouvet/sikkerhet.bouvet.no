@@ -26,6 +26,9 @@ Det finnes flere sikkerhetsrisikoer knyttet til tredjepartspakker, men dessverre
 
 Uavhengig av om noe er ment som malware eller protestware er konsekvensene alvorlige, og alle utviklingsprosjekter bør ha på plass tiltak for å begrense risiko og konsekvens dersom en hendelse inntreffer. 
 
+### Bruk av CDN
+Content-delivery-networks for å distribuere Javascript-bibliotek har blitt brukt av mange som en enkel måte å inkludere disse i koden uten å måtte inkludere dette i build eller deploy-prosessen. Tanken er god, men du får da en direkte avhengighet til en kilde du ikke har noen kontroll på som kan [misbrukes til å spre malware](https://sansec.io/research/polyfill-supply-chain-attackX). 
+
 ### Lisensmodell
 Det finnes mange ulike lisensmodeller; noen er helt frie og får ingen konsekvenser for brukerne, mens andre som AGPL og GPL stiller klare krav til alle som konsumerer kode under denne lisensen, også inkludert det øvrige systemet som benytter seg av den. De aller fleste økosystemer tillater også bruk av proprietære lisenser, som kan begrense hva du kan bruke en pakke til. Noen har spesifikke krav i lisensen, andre er gratis for personlig bruk, men krever at du kjøper en lisens dersom den skal brukes kommersielt. 
 
@@ -61,3 +64,5 @@ Software Bill Of Materials (SBOM) er en tilnærming der vi genererer en oversikt
 # Veien videre
 * [Sonatype: State of the software supply chain](https://www.sonatype.com/state-of-the-software-supply-chain/introduction)
 * [Wikipedia: Source Composition Analysis](https://en.wikipedia.org/wiki/Software_composition_analysis)
+* [Eksempel på CDN-angrep: Polyfill supply chain attack hits 100K+ sites](https://sansec.io/research/polyfill-supply-chain-attackX)
+* [Eksempel på kompromittert bibliotek: xz-Utils](https://arstechnica.com/security/2024/04/what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world/)
