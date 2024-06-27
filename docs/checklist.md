@@ -3,11 +3,11 @@ title: Sjekklisten for sikkerhet
 ---
 
 # Sjekklisten for sikkerhet
-Sikkerhet handler ikke bare om tekniske tiltak og kodeskanning, men også mye annet. Denne sjekklisten gir et utgangspunkt for å vurdere sikkerhetsnivå, ansvar og risiko i leveranser, og alle utviklingsteam skal ha et forhold til innholdet, med mindre annet er avtalt med kunden. 
+Sikkerhet handler ikke bare om tekniske tiltak og kodeskanning, men også mye annet. Denne sjekklisten gir et utgangspunkt for å vurdere sikkerhetsnivå, ansvar og risiko i leveranser, og alle utviklingsteam skal ha et forhold til innholdet med mindre annet er avtalt med kunden. 
 
-Det er ikke gitt at alle punktene er relevante i alle prosjekter, eller at innføring av alle tiltak er ønskelig. Hvert enkelt team må selv vurdere kost/nytte og hvilket ansvar og risiko en påtar seg på de ulike stegene.   
+Det er ikke gitt at alle punktene er relevante i alle prosjekter, eller at innføring av alle tiltak er ønskelig. Hvert enkelt team må selv vurdere kost/nytte og hvilket ansvar og risiko en påtar seg på de ulike stegene.
 
-Målet er ikke at alle skal gjøre alt som står under, men det er viktig at vi har det i bakhodet og tar det opp i teamet jevnlig for å vurdere om rammene har endret seg. 
+Målet er ikke at alle skal gjøre alt som står under, men det er viktig at vi har det i bakhodet og tar det opp i teamet jevnlig for å vurdere om rammene har endret seg.
 
 Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementer den som en del av kildekoden i ditt prosjekt!
 
