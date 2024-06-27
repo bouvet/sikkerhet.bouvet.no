@@ -1,12 +1,12 @@
-# Planlegge
+# Forvalte
 
 <div className="row category-into">
     <div className="column">
         <p>
-            Fokuset på sikkerhet starter allerede på planleggingsstadiet, enten det gjelder roadmap, features eller prosjekter. Har vi noen tanker om hvilke sårbarheter, angrepsflater, sensitive data eller integrasjoner vi bør holde et ekstra øye på? Det er i denne fasen man må <a href="/security_champion/security_champion_startpoint#1-skap-bevissthet">skape bevissthet</a> rundt disse temaene og en Security Champion bør involveres tidlig.
+            Når løsningen er designet, utviklet og deployet starter en annen jobb som for mange kanskje er litt fremmed: Forvaltning. Uavhengig av hvor mye utvikling som skjer, har vi likevel et ansvar for å forvalte det vi ruller ut i produksjon (eller til andre miljøer). 
         </p>
         <p>
-            Et annet viktig moment er å gå opp <a href="/planlegge/ansvar-rutiner">ansvar og rutiner</a> rundt det som skal implementeres. Kan det tenkes at dette vil føre til endring i rutiner, skal det benyttes nye komponenter eller involveres andre deler av organisasjonen? Forankring og bevisstgjøring av dette bør starte så tidlig som mulig i prosessen.
+            Disse må monitoreres, vi må sikre at vi har jevnlige backups _som også må testes_, at vi har oppdaterte planer for disaster recovery, følger opp sårbare avhengigheter og mye annet. 
         </p>
     </div>
     <div className="column">

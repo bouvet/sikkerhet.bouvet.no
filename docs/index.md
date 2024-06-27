@@ -14,8 +14,7 @@ import Link from "@docusaurus/Link";
             støtte for å drifte, utvikle og forvalte sikre IT-systemer for våre kunder. Det overordnede
             innholdet og temaene som diskuteres på disse sidene er også støttende for prosjektledere, rådgivere
             og andre som skal følge opp sikkerhet i prosjekter.
-            Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et
-            enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.
+            Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive ulike tiltak som kan dekke de vanligste svakhetene. 
         </p>
     </div>
     <div className="column quote">
@@ -31,26 +30,20 @@ import Link from "@docusaurus/Link";
         <Link to="/planlegge/introduction">
             <button className="devops-button">Planlegge</button>
         </Link>
+        <Link to="/designe/introduction">
+            <button className="devops-button">Designe</button>
+        </Link>
         <Link to="/utvikle/introduction">
             <button className="devops-button">Utvikle</button>
-        </Link>
-        <Link to="/bygge/introduction">
-            <button className="devops-button">Bygge</button>
-        </Link>
-        <Link to="/teste/introduction">
-            <button className="devops-button">Teste</button>
-        </Link>
-        <Link to="/release/introduction">
-            <button className="devops-button">Release</button>
         </Link>
         <Link to="/deploye/introduction">
             <button className="devops-button">Deploye</button>
         </Link>
-        <Link to="/drifte/introduction">
-            <button className="devops-button">Drifte</button>
+        <Link to="/forvalte/introduction">
+            <button className="devops-button">Forvalte</button>
         </Link>
-        <Link to="/monitorere/introduction">
-            <button className="devops-button">Monitorere</button>
+        <Link to="/security_champion/introduction">
+            <button className="devops-button">Security Champions</button>
         </Link>
     </div>
 </div>

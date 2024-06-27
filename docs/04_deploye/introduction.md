@@ -1,12 +1,13 @@
-# Planlegge
+# Deploye
 
 <div className="row category-into">
     <div className="column">
         <p>
-            Fokuset på sikkerhet starter allerede på planleggingsstadiet, enten det gjelder roadmap, features eller prosjekter. Har vi noen tanker om hvilke sårbarheter, angrepsflater, sensitive data eller integrasjoner vi bør holde et ekstra øye på? Det er i denne fasen man må <a href="/security_champion/security_champion_startpoint#1-skap-bevissthet">skape bevissthet</a> rundt disse temaene og en Security Champion bør involveres tidlig.
+            Når løsningen er designet og koden er skrevet er det "bare" å deploye, så er vi i mål, eller hva? Vi bruker ofte CICD-løsninger for å bygge og deploye, samt kjøre tester og mye annet. 
+            Dersom noen kan kompromittere pipelines, byggagenten som bygger løsningen eller forbindelsen mot ressursene vi deployer til vil vi ha store problemer.  
         </p>
         <p>
-            Et annet viktig moment er å gå opp <a href="/planlegge/ansvar-rutiner">ansvar og rutiner</a> rundt det som skal implementeres. Kan det tenkes at dette vil føre til endring i rutiner, skal det benyttes nye komponenter eller involveres andre deler av organisasjonen? Forankring og bevisstgjøring av dette bør starte så tidlig som mulig i prosessen.
+            Selv om det er vanskelig å dekke alt i noen få korte artikler, forsøker vi likevel å gi et innblikk i problemstillinger en bør ta opp i leveranseteamet. 
         </p>
     </div>
     <div className="column">
