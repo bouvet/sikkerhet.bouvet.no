@@ -21,24 +21,7 @@ const config = {
 
   i18n: {
     defaultLocale: 'no',
-    locales: ['no', 'en'],
-    path: 'i18n',
-    localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
-        calendar: 'gregory',
-        path: 'en',
-      },
-      no: {
-        label: 'Norsk',
-        direction: 'ltr',
-        htmlLang: 'no-NB',
-        calendar: 'gregory',
-        path: 'no',
-      },
-    },
+    locales: ['no']
   },
 
   themes: [
