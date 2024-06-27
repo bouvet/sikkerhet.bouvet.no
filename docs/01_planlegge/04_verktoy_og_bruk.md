@@ -59,7 +59,7 @@ Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag
 
 ### Software compostion analysis (SCA)
 
-Software compostion analysis (SCA) kan settes opp automatisk som en del av CI/CD. Se [Software composition analysis (SCA)](../Old/03_bygge/software-composition-analysis-sca.md) for mer informasjon.
+Software compostion analysis (SCA) kan settes opp automatisk som en del av CI/CD. Se [Software composition analysis (SCA)](../03_utvikle/05_software_supply_chain.md) for mer informasjon.
 Vær varsom med å hindre et bygg basert på tilbakemeldinger fra SCA-verktøy. Nye sårbarheter oppdages hele tiden,
 og ofte kan det være viktigere å få bygget systemet enn å måtte håndtere en nyoppdaget sårbarhet, som kanskje ikke er relevant for systemet.
 
@@ -73,7 +73,7 @@ og ofte kan det være viktigere å få bygget systemet enn å måtte håndtere e
 
 ### Statisk kodeanalyse (SAST)
 
-Statisk kodeanalyse bør konfigueres til å kjøres automatisk som en del av CI/CD. Se [Statisk kodeanalyse (SAST)](../Old/03_bygge/statisk-kodeanalyse-sast.md) for mer informasjon.
+Statisk kodeanalyse bør konfigueres til å kjøres automatisk som en del av CI/CD. Se [Statisk kodeanalyse (SAST)](../03_utvikle/08_sikkerhetstesting.md) for mer informasjon.
 Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
 
 ### Secret scanning
