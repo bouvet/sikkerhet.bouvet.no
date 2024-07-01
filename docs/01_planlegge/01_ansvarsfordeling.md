@@ -20,7 +20,7 @@ Dersom vi er ansvarlige for drift og forvaltning av løsning i vår infrastruktu
 
 Alle ressurser driftet av leveranseteamet må håndteres på linje med all annen infrastruktur, så teamet må ha rutiner for patching og vedlikehold eller sikre at dette blir håndtert. Sjekk gjerne med Intern-IT & Sikkerhet for å se hva de kan levere og dermed drifte på vegne av teamet for å forenkle forvaltningen. 
 
-[Bouvets Statement of Applicability/Anvendelseserklæring](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) tar for seg ulike kontroller relatert til informasjonssikkerheten og hvordan vi skal forholde oss til disse. SOA kan finnes i det interne ledelsessystemet. Dersom vi tar på oss denne rollen vil din regionale kvalitetsleder kunne bistå med råd og veiledning for å sikre at alt ansvar er ivaretatt. 
+[Bouvets Statement of Applicability/Anvendelseserklæring (SOA)](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) tar for seg ulike kontroller relatert til informasjonssikkerheten og hvordan vi skal forholde oss til disse. SOA kan finnes i det interne ledelsessystemet. Dersom vi tar på oss denne rollen vil din regionale kvalitetsleder kunne bistå med råd og veiledning for å sikre at alt ansvar er ivaretatt. 
 
 ## Drift og forvaltning av løsning - Kunde eller tredjepart
 
