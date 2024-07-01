@@ -41,6 +41,4 @@ _sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.
 Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
 Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
 
-Avsnitt merket med; 🧙‍♂️, er "avanserte", hvor gevinsten må vurderes opp mot innsatsfaktoren og prosjektes sikkerhetskrav.
-
 [Sjekklisten for sikkerhet](./checklist.md) kan brukes som et startpunkt for å vurdere prosjektets sikkerhet. Hvert punkt refererer videre til mer utfyllende informasjon. Den kan også lastes ned og implementeres som en del av kildekoden i ditt prosjektet.
