@@ -20,7 +20,7 @@ Avhengig av denne klassifiseringen kan det foreligge ulike krav til sikring av d
 * krever flerfaktor autentisering før aksess
 * har restriksjoner i forhold til bruk av skytjenester eller hvor data lagres
 
-Dette må gås opp med kunde i oppstarten av prosjektet slik at en kan sikre nødvendig etterlevelse. Dersom kunden ikke har et forhold til dataklassifisering, må en likevel kartlegge sensitiviteten til dataene som skal behandles.
+Dette må gås opp med kunde i oppstarten av prosjektet slik at en kan sikre nødvendig etterlevelse. Dersom kunden ikke har et forhold til dataklassifisering, bør en likevel kartlegge sensitiviteten til dataene som skal behandles for å sikre at vi innfører nødvendige tiltak. 
 
 ## Personvern
 Dersom leveranseteamet skal behandle personsensitive opplysninger, er det viktig at teamet setter seg inn i kravene rundt dette. Datatilsynet har publisert en egen veileder for ["Programvareutvikling med innebygd personvern"](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) som gir nyttig innblikk i problemstillingen. 
@@ -44,3 +44,4 @@ Dette er spesielt viktig dersom utvikling skjer i Bouvets infrastruktur, men med
 
 # Veien videre
 * [Datatilsynet: Innebygd personvern](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
+* [NSM: Kartlegg enheter og programvare](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)

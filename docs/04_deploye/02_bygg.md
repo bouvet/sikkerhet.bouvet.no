@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: CI/CD
+title: Bygging
 ---
 
 # Bygging 

@@ -23,7 +23,7 @@ Dette må gås opp slik at en er klar over hvilke konsekvenser nedetid vil få. 
 Dersom en går opp dette i forkant er det lettere å henvise til dokumentasjon og avtaler når løsningen blir utilgjengelig for å unngå dårlig stemning. 
 
 ## Håndtering av hendelser
-Alle kunder i Bouvet skal ha et definert kontaktpunkt for  hendelser i Kunder (CRM). Dersom det er andre kontaktpunkter fra teamet inn mot kunde er det lurt å dokumentere dette også slik at en kan løse oppståtte hendelser så raskt som mulig. 
+Alle kunder i Bouvet skal ha et definert kontaktpunkt for  hendelser i Kunder (CRM). Dersom det er andre kontaktpunkter fra teamet inn mot kunde som sikkerhetssenter (SOC) eller liknende er det lurt å dokumentere dette også slik at en kan løse oppståtte hendelser så raskt som mulig. 
 
 Dersom en hendelse oppstår og kunde eller andre har behov for kontakt med teamet, er det vanlige at leveranseleder er det formelle kontaktpunktet i Bouvet-teamet. 
 
