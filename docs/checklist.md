@@ -5,14 +5,11 @@ title: Sjekklisten for sikkerhet
 # Sjekklisten for sikkerhet
 Sikkerhet handler ikke bare om tekniske tiltak og kodeskanning, men også mye annet. Denne sjekklisten gir et utgangspunkt for å vurdere sikkerhetsnivå, ansvar og risiko i leveranser, og alle utviklingsteam skal ha et forhold til innholdet med mindre annet er avtalt med kunden. 
 
-Det er ikke gitt at alle punktene er relevante i alle prosjekter, eller at innføring av alle tiltak er ønskelig. Hvert enkelt team må selv vurdere kost/nytte og hvilket ansvar og risiko en påtar seg på de ulike stegene.
-
-Målet er ikke at alle skal gjøre alt som står under, men det er viktig at vi har det i bakhodet og tar det opp i teamet jevnlig for å vurdere om rammene har endret seg.
+Det er ikke gitt at alle punktene er relevante i alle prosjekter, eller at innføring av alle tiltak er ønskelig. Hvert enkelt team og leveranseansvarlig må selv vurdere kost/nytte og hvilket ansvar og risiko en påtar seg ved å ikke innføre tiltak. Sikkerhet krever kontinuerlig arbeid, så se over sjekklista jevnlig for å se om det er tiltak som kan eller bør innføres slik at en ikke overser noe. 
 
 Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementer den som en del av kildekoden i ditt prosjekt!
 
 ## Planlegge
-
 1.	[Ansvarsfordeling](./01_planlegge/01_ansvarsfordeling.md): Er det klart hvilket ansvar vi har i leveransen og er øvrig ansvar klart fordelt? Er det risiko for at det kan oppstå forvirring rundt ansvar i fremtiden, eksempelvis i forbindelse med sikkerhetshendelser?
     * Dersom Bouvet hoster løsningen på vegne av kunde, faller den inn under vår sertifisering på ISO 27001. 
     * Dette betyr at leveranseteamet har en del ekstra ansvar for informasjonssikkerheten. Referer til SOA for videre informasjon. 
@@ -43,6 +40,12 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
     2.	Pipelines brukt i forbindelse med bygging, deployment, testing og annet?
     3.	Har vi kontroll på hvor data og kildekode lagres? 
         * Noen selskaper har restriksjoner på hvor data kan oppbevares, eksempelvis kun på innenlands datasentre, innenfor EU eller i land dekket av samarbeidsavtaler. 
+5. [Hvilke kontrollmekanismer skal vi ha underveis i prosjektet?](./01_planlegge/05_sikkerhetsgater.md) 
+    * Ved designendringer
+    * Når vi comitter kodeendringer
+    * I pull requests
+    * Ved bygg og deployment
+    * Andre? 
 
 ## Designe
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?](./02_designe/01_sikkerhetskrav.md) 

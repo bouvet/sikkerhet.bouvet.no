@@ -18,13 +18,12 @@ Systemskissene bør gi nok informasjon til at en i etterkant kan
 Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste her: 
 * Overordnet systemskisse med de viktigste logiske komponentene
 * Detaljert nettverksskisse med ressurser, tjenester og nettverk
-* Dataflytdiagram
-* IAM-diagram
-* Viktige avhengigheter – andre systemer, tjenester, ressurser, onprem/cloud
-
+* Dataflytdiagram - viser hvordan data flyter mellom komponenter i løsningen
+* IAM-diagram - Viser identiteter, tilganger og roller samt hvor de hentes fra
+* Viktige avhengigheter – oversikt over andre systemer, tjenester, ressurser, onprem/cloud
 
 ## Eksempler
-Under finner du eksempler på punktene listet ovenfor. Diagrammene du produserer trenger ikke å være like, det viktigste er at de inneholder nok informasjon til at de kan brukes for det tiltenkte formålet. 
+Under finner du eksempler på punktene listet ovenfor. Diagrammene du produserer trenger ikke å være like, det viktigste er at de inneholder nok informasjon til at de kan brukes for det tiltenkte formålet og at de er forståelige for teamet. 
 
 For enkelt å komme igang med design av diagrammer og skisser kan verktøy som Miro eller Draw.io brukes. Sistnevnte er gratis og tilbyr lagring av tegniner i nettleser, lokalt på maskinen som XML og mye annet. 
 
@@ -44,6 +43,7 @@ Nettverksdiagram bør lages for alle miljø, slik at en får nødvendig informas
 ![Dataflytdiagram](dataflytdiagram.png)
 
 ### IAM-diagram
+![IAM-diagram](iam.png)
 
 ### Avhengigheter
 * On-prem databaseserver _production-sql-01_

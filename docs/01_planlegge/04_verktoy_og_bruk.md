@@ -36,7 +36,7 @@ Git har imidlertid også innebygd funksjonalitet for signering av commits, slik 
 En typisk tilnærming er å operere med en produksjonsbranch, ofte `main` eller `master`. Denne bør være beskyttet slik at alle endringer skjer i egne feature-branches som så merges inn via pull-request med dertilhørende review fra andre i teamet. Produksjonsbranchen blir så grunnlaget for alle deployments videre. 
 ![Trunk-based merging](src_trunk.png)
 
-Det finnes andre tilnærminger også, eksempelvis med separate branches samt tagging av versjoner:
+Det finnes andre og mer komplekse tilnærminger også, eksempelvis med separate branches samt tagging av versjoner. Denne er spesielt nyttig dersom en vedlikeholder flere ulike versjoner i ulike miljø, trenger mulighet for hotfixer eller liknende: 
 
 ![More advanced merging](src_advanced.png) 
 
@@ -53,32 +53,25 @@ Et tips er å bruke [pre-commit](https://pre-commit.com) til å kjøre alt av li
 :::
 
 ## CI/CD
-Et godt CI/CD-system (Continuous Integration / Continuous Deployment) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
+Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)](../04_deploye/01_cicd.md) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
 
 Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag ingen felleslisenser for utviklere i Bouvet, dette må gås opp per prosjekt avhengig av behov og krav. Dersom teamet håndterer dette på egenhånd, vær obs på lisensbetingelser og hvordan verktøy fungerer. Noen verktøy sender eksempelvis kildekode til egne servere for analyse, dette er i utgangspunktet ikke tillatt med mindre det på forhånd er avklart med kunden.
 
 ### Software compostion analysis (SCA)
-
-Software compostion analysis (SCA) kan settes opp automatisk som en del av CI/CD. Se [Software composition analysis (SCA)](../03_utvikle/05_software_supply_chain.md) for mer informasjon.
-Vær varsom med å hindre et bygg basert på tilbakemeldinger fra SCA-verktøy. Nye sårbarheter oppdages hele tiden,
-og ofte kan det være viktigere å få bygget systemet enn å måtte håndtere en nyoppdaget sårbarhet, som kanskje ikke er relevant for systemet.
+[Software composition analysis (SCA)](../03_utvikle/05_software_supply_chain.md) kan settes opp automatisk som en del av CI/CD. Vi har mange avhengigheter til komponenter laget av andre, så det er viktig å ha oversikt over eksisterende og nyoppdagede sårbarheter i det vi lager.
 
 ### Testing
-
 Å kjøre tester i CI er lurt av flere grunner, men fra et sikkerhetsperspektiv er det enkelte tester som bør være med.
 
-- Test alle aktuelle endepunkter for 401/403 responser
-- Test kode som håndterer autorisasjon (hvem får gjøre hva). Her vil det være en fordel om all autorisasjonslogikk skjer på et sentralisert sted i kodebasen.
-- Test for strict [JWT valdiation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
+* Test alle aktuelle endepunkter for 401/403 responser
+* Test kode som håndterer autorisasjon (hvem får gjøre hva). Her vil det være en fordel om all autorisasjonslogikk skjer på et sentralisert sted i kodebasen.
+* Test for strict [JWT valdiation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
 
 ### Statisk kodeanalyse (SAST)
-
-Statisk kodeanalyse bør konfigueres til å kjøres automatisk som en del av CI/CD. Se [Statisk kodeanalyse (SAST)](../03_utvikle/08_sikkerhetstesting.md) for mer informasjon.
-Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
+[Statisk kodeanalyse (SAST)](../03_utvikle/08_sikkerhetstesting.md) bør konfigueres til å kjøres automatisk som en del av CI/CD. Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
 
 ### Secret scanning
-
-Om man skulle være så uheldig å pushe secrets til versjonskontrollsystemet, kan et CI/CD system redde deg ved å identifisere disse, og i noen tilfeller til og med gjøre de ugyldige mot den tjenesten de er ment for.
+[Sjekking av hemmeligheter](../03_utvikle/02_secrets.md) - passord, nøkler og annen sensitiv informasjon som ikke skal inn i kildekoden er et viktig verktøy som kan implementeres i versjonskontrollsystemet og i CI/CD. Noen verktøy har kun varsling ved funn, andre kan også ugyldiggjøre hemmelighetene i tjenestene de er ment for. 
 
 # Veien videre
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)

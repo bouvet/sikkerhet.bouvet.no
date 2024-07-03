@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Business Continuity
 :::tip Kort oppsummert
-Dersom en katastrofal hendelse oppstår må vi vite hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet, men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og akseptabelt tap av data.
+Dersom en katastrofal hendelse oppstår må vi vite hvem som skal kontaktes, og hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og hva som er akseptabelt tap av data.
 :::
 
 _Business Continuity Planning_ er _ikke_ er IT-teknisk fag. Men det er vårt ansvar som leverandører av et IT-system å minne kunden på at systemet kan bli utilgjengelig.  
