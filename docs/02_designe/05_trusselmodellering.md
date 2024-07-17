@@ -4,7 +4,7 @@ title: Trusselmodellering
 ---
 # Trusselmodellering
 :::tip Kort oppsummert
-Trusselmodellering er en eksersis der målet er å identifisere trusler slik at risikoen ved disse kan identifiseres og vurderes opp mot et totalbilde av sikkerheten i løsningen. Fra en trusselmodell kan mitigerende tiltak identifiseres og implementeres for å redusere risiko.  
+Trusselmodellering er en øvelse der målet er å identifisere trusler i og rundt en løsning. Dette gjør at risikoene  kan identifiseres og vurderes opp mot et totalbilde av sikkerheten i løsningen. Fra en trusselmodell kan mitigerende tiltak identifiseres og implementeres for å redusere risiko.  
 :::
 
 __Dette er en kort introduksjon til trusselmodellering, dataflytdiagrammer, STRIDE og angrepstrær.__
@@ -69,7 +69,7 @@ I dataflytdiagrammet over kan man se at det er en fare for at noen med tilgang t
 
 Trusselmodellen må versjoneres og holdes oppdatert. Når en har identifisert trusler må mottiltak beskrives og effekten av disse vurderes. En vanlige tilnærming er å gi trusselen en verdi som indikerer alvorlighetsgrad, eksempelvis 1-10 der 10 er verst. Mottiltak vurderes tilsvarende, men med motsatt skala der 1 er liten effekt og 10 (eller opp til kritikalitet) er høyest effekt. Summen av disse gir en residuell risiko som sier noe om hva en sitter igjen med: 
 ```
-Identifiserte trusler       Kritikalitet    Mottiltak   Residuell risk
+Identifiserte trusler       Kritikalitet    Mottiltak   Gjenstående risk
 Trussel 1                   8               8           0
 Trussel 2                   2               0           2
 Trussel 3                   4               3           1
