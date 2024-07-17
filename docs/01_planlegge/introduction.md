@@ -3,10 +3,10 @@
 <div className="row category-into">
     <div className="column">
         <p>
-            Fokuset på sikkerhet starter allerede på planleggingsstadiet, enten det gjelder roadmap, features eller prosjekter. Har vi noen tanker om hvilke sårbarheter, angrepsflater, sensitive data eller integrasjoner vi bør holde et ekstra øye på? Det er i denne fasen man må <a href="/security_champion/security_champion_startpoint#1-skap-bevissthet">skape bevissthet</a> rundt disse temaene og en Security Champion bør involveres tidlig.
+            Det viktigste vi kan gjøre før vi skriver en eneste kodelinje er å blie enige om ansvarsfordelingen mellom oss og kunden, samt klassifiseringen av løsning og data: Hvilke krav stiller kunden og hvilke krav kommer fra lovverk eller andre parter? Kompetanse innenfor applikasjonssikkerhet (AppSec) bør være på banen allerede i denne fasen for å sikre at en ivaretar krav og forventninger til sikkerhet.
         </p>
         <p>
-            Et annet viktig moment er å gå opp <a href="/planlegge/ansvar-rutiner">ansvar og rutiner</a> rundt det som skal implementeres. Kan det tenkes at dette vil føre til endring i rutiner, skal det benyttes nye komponenter eller involveres andre deler av organisasjonen? Forankring og bevisstgjøring av dette bør starte så tidlig som mulig i prosessen.
+            Vi må også vite hva vi gjør ~~dersom~~når det oppstår en sikkerhetshendelse - hvilke krav står vi ovenfor, hva må til for at disaster recovery, backup og liknende skal lykkes, og hva vil konsekvensene av nedetid være for kunden? 
         </p>
     </div>
     <div className="column">

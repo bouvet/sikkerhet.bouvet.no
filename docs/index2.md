@@ -8,9 +8,9 @@ Velkommen til __sikkerhet.bouvet.no__! :sparkles:
 
 Her vil systemutviklere, infrastruktur-ingeniører, DevOpsere og andre i Bouvet finne informasjon til støtte for å drifte, utvikle og forvalte sikre IT-systemer for våre kunder. Det overordnede innholdet og temaene som diskuteres på disse sidene er også støttende for prosjektledere, rådgivere og andre som skal følge opp sikkerhet i prosjekter.
 
-Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive 20% av alle mulige tiltak som kan dekke 80% av sikkerhetshullene.  
+Bouvet er [sertifisert under ISO27001](https://www.bouvet.no/om-bouvet/vare-iso-sertifiseringer), som også stiller krav til sikkerhet i leveranser. [Sjekklista](./checklist.md) vil gi deg et godt utgangspunkt for tiltak som dekker vanlige sikkerhetshull og hjelper til å sikre kvalitet i leveransen. Hvert av punktene i sjekklista dekkes av mer utfyllende informasjon slik at det skal være lett å komme igang uten forkunnskaper om et tema. 
 
-Et annet mål med innholdet er å bevisstgjøre leseren på hvilke ting man bør tenke på, og gi et vokabular for videre internettsøk og utforskning.
+Målet er ikke at __sikkerhet.bouvet.no__ skal dekke absolutt alt, men du skal sitte igjen med forslag til tiltak og et vokabular som hjelper deg videre. Alle tema som presenteres skal også peke videre på eksterne ressurser som kan gi enda mer informasjon. 
 
 For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi anbefale [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
 
@@ -40,7 +40,5 @@ Dataene systemet behandler er korrekte.
 _sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
 Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
 Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
-
-Avsnitt merket med; 🧙‍♂️, er "avanserte", hvor gevinsten må vurderes opp mot innsatsfaktoren og prosjektes sikkerhetskrav.
 
 [Sjekklisten for sikkerhet](./checklist.md) kan brukes som et startpunkt for å vurdere prosjektets sikkerhet. Hvert punkt refererer videre til mer utfyllende informasjon. Den kan også lastes ned og implementeres som en del av kildekoden i ditt prosjektet.

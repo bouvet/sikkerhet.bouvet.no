@@ -25,9 +25,11 @@ title: Kortfattet tittel
 ---
 
 # Kortfattet tittel
+:::tip Kort oppsummert
+Kortfattet oppsummering av teamet - maks 1-2 setninger. 
+:::
 
-__Inngress__
-Inngressen skal være oppsummerende og bruke et språk som kan leses og forstås av alle.
+Ingressen skal være oppsummerende og bruke et språk som kan leses og forstås av alle.
 
 ## Brødtekst
 Alle artikler skal være teknologi-agnostiske. 
@@ -35,10 +37,14 @@ Bruk gjerne spesifikk teknologi i eksempler, men unngå artikler som kun gir men
 Bruk features i MD / Docosaurus til å understreke eller utheve viktige punkter.
 Bruk code fencing til å vise eksempler og del opp innholdet med headings (ingen liker wall of text)
 
+# Veien videre
+* [Ekstern lenke 1](URL)
+* [Ekstern lenke 2](URL)
+
 ```
 
-## Eksternt innhold
-Bruk permalenker der dette er mulig.
+# Eksterne lenker
+Bruk permalenker der dette er mulig. Hensikten med seksjonen _Veien videre_ er å peke på ressurser med mer dyptgående innhold slik at det er mulig å fordype seg videre etter å ha fått en smakebit fra et tema. 
 
 Bruker du tekst fra en annen artikkel eller kilde så må dette refereres til.
 
