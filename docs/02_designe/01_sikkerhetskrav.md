@@ -5,7 +5,7 @@ sidebar_position: 1
 # Sikkerhetskrav
 :::tip Kort oppsummert
 Hvordan kan en bygge sikkerhet i en løsning dersom en ikke har veldefinerte sikkerhetskrav? 
-Noen krav er implisitte, som eksempelvis bruk av HTTPS/TLS, mens andre vil være eksplisitte og definert av kunder eller tredjepart. Dersom kunden ikke har noen spesifikke krav er det likevel viktig at leveranseteamet lager en kravliste slik at rammene for prosjektet er dokumentert. 
+Noen krav er implisitte, som eksempelvis bruk av HTTPS/TLS, mens andre vil være eksplisitte og definert av lovverk, kunde eller tredjepart. Dersom kunden ikke har noen spesifikke krav er det likevel viktig at leveranseteamet lager en kravliste slik at rammene for prosjektet er dokumentert. 
 :::
 
 De fleste prosjekter må forholde seg til ulike krav fra Bouvet, kunden og eksterne parter. Alle utviklingsteam må ha kontroll på hvilke krav som stilles til leveransen:
