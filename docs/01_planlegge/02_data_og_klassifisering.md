@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Data og klassifisering
 :::tip Kort oppsummert
-De fleste organisasjoner opererer med ulike klassifikasjonsnivå på både data og systemer, der klassifiseringen stiller krav til hvordan data brukes, hvor det lagres og hvem som kan aksessere disse. Dette er nøkkelkrav for ethvert utviklingsprosjekt og må avklares i forkant.
+De fleste organisasjoner opererer med ulike klassifikasjonsnivå på både data og systemer. Klassifiseringen gjøres ofte med bakgrunn i hvordan data brukes, hvor det lagres og hvem som kan aksessere disse. Dette er nøkkelkrav for ethvert utviklingsprosjekt og må avklares i forkant.
 :::
 
 ## Klassifisering
-De aller fleste organisasjoner har rutiner og prosesser for klassifisering av data, og skiller typisk i disse eller liknende nivå:
+De aller fleste organisasjoner har rutiner og prosesser for klassifisering av data, for eksempel i følgende nivå:
 * Åpent
 * Internt
 * Konfidensielt
@@ -20,7 +20,7 @@ Avhengig av denne klassifiseringen kan det foreligge ulike krav til sikring av d
 * krever flerfaktor autentisering før aksess
 * har restriksjoner i forhold til bruk av skytjenester eller hvor data lagres
 
-Dette må gås opp med kunde i oppstarten av prosjektet slik at en kan sikre nødvendig etterlevelse. Dersom kunden ikke har et forhold til dataklassifisering, bør en likevel kartlegge sensitiviteten til dataene som skal behandles for å sikre at vi innfører nødvendige tiltak. 
+Dette avklares med kunde i oppstarten av prosjektet slik at en kan sikre nødvendig etterlevelse. Dersom kunden ikke har et forhold til dataklassifisering, bør en likevel kartlegge sensitiviteten til dataene som skal behandles for å sikre at vi innfører nødvendige tiltak. 
 
 ## Personvern
 Dersom leveranseteamet skal behandle personsensitive opplysninger, er det viktig at teamet setter seg inn i kravene rundt dette. Datatilsynet har publisert en egen veileder for ["Programvareutvikling med innebygd personvern"](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) som gir nyttig innblikk i problemstillingen. 
