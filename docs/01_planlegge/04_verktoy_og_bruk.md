@@ -12,7 +12,7 @@ Et typisk team vil benytte seg av en eller annen form for
 * [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 * et system for versjonskontroll av koden, typisk _git_
 * et verktøy for [CI/CD](https://en.wikipedia.org/wiki/CI/CD) som kan utføre ulike oppgaver relatert til bygging, testing eller deployment
-* andre tjenester driftet eller konsumert av teamet, f.eks. meldingstjenester, filoverføringstjenester eller liknende
+* andre tjenester driftet eller konsumert av teamet, f.eks. meldingstjenester, filoverføringstjenester, generativ AI (copilots) eller liknende
 
 Disse verktøyene kan ha stor betydning for sikkerhet og kvalitet i leveranser, så det er viktig at teamet har et forhold til hvordan disse settes opp. 
 
@@ -72,6 +72,9 @@ Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag
 
 ### Secret scanning
 [Sjekking av hemmeligheter](../03_utvikle/02_secrets.md) - passord, nøkler og annen sensitiv informasjon som ikke skal inn i kildekoden er et viktig verktøy som kan implementeres i versjonskontrollsystemet og i CI/CD. Noen verktøy har kun varsling ved funn, andre kan også ugyldiggjøre hemmelighetene i tjenestene de er ment for. 
+
+## Generativ AI (copilots)
+Det eksisterer mange slike generative AI-verktøy som utviklere kan benytte. Det er viktig at enhver bruk av slike verktøy avklares med kunden _før_ de tas i bruk. Her har Bouvet gjort mye arbeid i evaluering av flere slike verktøy og har god støtte internt for å gjøre slike vurderinger om kunden skulle ha behov for det.
 
 # Veien videre
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
