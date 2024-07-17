@@ -18,7 +18,7 @@ Her er det viktig å ha et forhold til
 ## Kundens forventninger 
 Har vi definert en Service Level Agreement (SLA) med kunden som legger føringer på oppetid, tilgjengelighet og liknende, eller har kunden implisitte forventninger til dette? 
 
-Dette må avklares slik at en kjenner konsekvensene nedetid vil få. I mange prosjekter benyttes det skykomponenter der en ikke har kontroll over alle variabler selv. Derfor er det viktig å tidlig i prosjektet gå opp de faktiske behovene med kunden. Vi kan sikre redundans på alle fronter dersom kunden ønsker det, men det koster da deretter. 
+Dette må avklares slik at en kjenner konsekvensene nedetid vil få. I mange prosjekter benyttes det skykomponenter der en ikke har kontroll over alle variabler selv. Derfor er det viktig å tidlig i prosjektet avklare de faktiske behovene med kunden. Vi kan sikre redundans på alle fronter dersom kunden ønsker det, men det koster da deretter. 
 
 Dersom en går opp dette i forkant er det lettere å henvise til dokumentasjon og avtaler når løsningen blir utilgjengelig for å unngå dårlig stemning. 
 

@@ -20,7 +20,7 @@ Dette er dekket i flere artikler under "[Planlegge](../01_planlegge/introduction
 # Når hendelsen inntreffer
 Hendelser kan ta mange ulike former. En hendelse kan være svakheter eller sårbarheter som oppdages i en applikasjon, avhengigheter eller kjøremiljø, men det kan også være angrep - både åpenbare eller mer i det skjulte. 
 
-Dersom dere oppdager, eller har grunn til å tro at en løsning er under angrep må dette varsles til kunden umiddelbart. Det er ikke alltid tilfelle at løsningen som angripes er den som er målet, i mange tilfeller er en løsning bare et springbrett videre til en annen. Derfor er det også viktig å vite hvilke tilganger og nettverksåpninger denne har til andre løsninger, slik at kundens IT-organisasjon kan gå opp disse for å se etter tegn på angrep der. 
+Dersom dere oppdager, eller har grunn til å tro at en løsning er under angrep må dette varsles til kunden umiddelbart. Det er ikke alltid tilfelle at løsningen som angripes er den som er målet, i mange tilfeller er en løsning bare et springbrett videre til en annen. Derfor er det også viktig å vite hvilke tilganger og nettverksåpninger denne har til andre løsninger, slik at kundens IT-organisasjon kan analysere disse for å se etter tegn på angrep der. 
 
 Om dere kommer over tegn på at en løsning har blitt angrepet eller brukt til et angrep er det også viktig å si ifra, slik at kunden kan sikre informasjon og bevis på dette for videre etterforskning. 
 
