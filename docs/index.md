@@ -14,7 +14,12 @@ import Link from "@docusaurus/Link";
             støtte for å drifte, utvikle og forvalte sikre IT-systemer for våre kunder. Det overordnede
             innholdet og temaene som diskuteres på disse sidene er også støttende for prosjektledere, rådgivere
             og andre som skal følge opp sikkerhet i prosjekter.
-            Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive ulike tiltak som kan dekke de vanligste svakhetene. 
+        </p>
+        <p>
+            Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive ulike tiltak som kan dekke de vanligste svakhetene.
+        </p>
+        <p>    
+        Hvis du er ny til sikkerhet.bouvet.no, anbefaler vi at du leser <a href="index2">introduksjonen</a> først
         </p>
     </div>
     <div className="column quote">
@@ -22,11 +27,13 @@ import Link from "@docusaurus/Link";
         <p className="column quote">"Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene"</p>
     </div>
 </div>
-
 <div className="dev-ops-links-wrapper">
     <div className="dev-ops-links-backdrop" />
     <h2 className="row devops-links-header">Hva ser du etter?</h2>
     <div className="row devops-links">
+        <Link to="/index2">
+            <button className="devops-button">Introduksjon</button>
+        </Link>
         <Link to="/planlegge/introduction">
             <button className="devops-button">Planlegge</button>
         </Link>
