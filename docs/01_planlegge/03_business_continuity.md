@@ -7,8 +7,8 @@ sidebar_position: 3
 Dersom en katastrofal hendelse oppstår må vi vite hvem som skal kontaktes, og hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og hva som er akseptabelt tap av data.
 :::
 
-_Business Continuity Planning_ er _ikke_ er IT-teknisk fag. Men det er vårt ansvar som leverandører av et IT-system å minne kunden på at systemet kan bli utilgjengelig.  
-Svaret fra denne planleggingen vil være med å beskrive hvilke krav som stilles til løsningens robusthet og sikkerhetsnivå, og er avgjørende for å finne riktig balanse av kostnad og ytelse hos systemet. 
+_Business Continuity Planning_ er _ikke_ utelukkende et IT-teknisk anliggende, men det er vårt ansvar som leverandører av et IT-system å minne kunden på at systemet kan bli utilgjengelig.  
+Svaret fra denne planleggingen vil være med å beskrive hvilke krav som stilles til løsningens robusthet og sikkerhetsnivå, og er avgjørende for å finne riktig balanse på kostnad og ytelse hos systemet. 
 
 Her er det viktig å ha et forhold til 
 * Kritikaliteten av løsningen
@@ -16,9 +16,9 @@ Her er det viktig å ha et forhold til
 * Konsekvenser eller merarbeid som følge av utilgjengelighet eller når løsningen igjen blir tilgjengelig.
 
 ## Kundens forventninger 
-Har vi definert en Service Level Agreement med kunden som regulerer oppetid, tilgjengelighet og liknende, eller har kunden implisitte forventninger til dette? 
+Har vi definert en Service Level Agreement (SLA) med kunden som legger føringer på oppetid, tilgjengelighet og liknende, eller har kunden implisitte forventninger til dette? 
 
-Dette må gås opp slik at en er klar over hvilke konsekvenser nedetid vil få. I mange prosjekter benyttes det skykomponenter, der en ikke har kontroll over alle variabler selv. Derfor er det viktig å tidlig i prosjektet gå opp de faktiske behovene med kunden. Vi kan sikre redundans på alle fronter dersom kunden ønsker det, men det koster da deretter. 
+Dette må avklares slik at en kjenner konsekvensene nedetid vil få. I mange prosjekter benyttes det skykomponenter der en ikke har kontroll over alle variabler selv. Derfor er det viktig å tidlig i prosjektet gå opp de faktiske behovene med kunden. Vi kan sikre redundans på alle fronter dersom kunden ønsker det, men det koster da deretter. 
 
 Dersom en går opp dette i forkant er det lettere å henvise til dokumentasjon og avtaler når løsningen blir utilgjengelig for å unngå dårlig stemning. 
 
