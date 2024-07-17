@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Ansvarsfordeling
 :::tip Kort oppsummert
-Manglende klarhet i vårt og andres ansvar kan få enorme konsekvenser for et prosjekt, så dette må gås opp i forkant. Det er spesielt viktig dersom andre selskaper enn oss og kunden er involvert, da oppgaver og roller har lett for å falle mellom stoler fordi alle tror at "noen andre" tar seg av det.
+Manglende klarhet i hvem som er ansvarlig for hva kan få store konsekvenser. Dette gjelder alle prosjekter, men er spesielt viktig dersom andre selskaper enn oss og kunden er involvert. Å ha en tydelig ansvarsfordeling med tilhørende varslingsrutiner og roller er avgjørende.
 :::
 
 Bouvet gjennomfører utviklingsprosjekter på mange ulike måter, der vi tar mer eller mindre ansvar for prosjektledelse, planlegging, utviklingsfasen, kvalitetssikring og ikke minst drift og forvaltning av løsningen. Vi har også ulike innslag av eget, kundens og tredjepartsutstyr, både under utvikling og forvaltning av løsningen. 
