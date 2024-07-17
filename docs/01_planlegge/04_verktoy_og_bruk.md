@@ -17,7 +17,7 @@ Et typisk team vil benytte seg av en eller annen form for
 Disse verktøyene kan ha stor betydning for sikkerhet og kvalitet i leveranser, så det er viktig at teamet har et forhold til hvordan disse settes opp. 
 
 ## IDE
-Det er mulig å installere utvidelser på de fleste IDEs idag, som gir støtte for nye språk, formatering, linting, skytjenester og masse annet. Disse kan forbedre produktivitet og effektiviteten til teamet betraktelig, men vi må være obs på hva som installeres. 
+Det er mulig å installere utvidelser på de fleste IDEs idag, som gir støtte for nye språk, formatering, linting, skytjenester og annet. Disse kan forbedre produktivitet og effektiviteten til teamet betraktelig, men vi må være obs på hva som installeres. 
 
 I likhet med alt annet som lastes ned og kjøres fra internett må vi ha et forhold til risiko, så det er viktig at vi er obs på hva vi laster ned, hvor det lastes ned fra og hvem som står bak for å unngå problemer. 
 
