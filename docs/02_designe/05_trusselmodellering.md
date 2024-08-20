@@ -58,7 +58,7 @@ Når man har tegnet opp dataflyten og tillitsgrensene til systemet, så bruker m
 
 <figure>
 
-![](dataflytdiagram.png)
+![](trusselflytdiagram.png)
 
 <figcaption>Her er et eksempel på et dataflytdiagram som viser dataflyten ved innlogging med brukernavn og passord. Pilene mellom tjenestene representerer kall. SSL-proxy er et sikkerhetslag som krypterer informasjon mellom tjenester. HTTPS er kall der informasjonen som sendes med er kryptert, og HTTP er kall der informasjonen som sendes med ikke er kryptert.</figcaption>
 </figure>
