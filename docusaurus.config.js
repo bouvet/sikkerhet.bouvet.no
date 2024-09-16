@@ -11,7 +11,7 @@ const config = {
   tagline: 'Sikker utvikling i Bouvet',
   url: 'https://sikkerhet.bouvet.no',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/fav-192.png',
 

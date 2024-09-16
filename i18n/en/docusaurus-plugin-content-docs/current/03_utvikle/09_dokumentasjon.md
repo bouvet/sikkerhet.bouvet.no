@@ -17,7 +17,7 @@ There are many reasons why we need to document the solution we are building; the
 The project must find a solution for where the documentation is stored that makes sense for the project. Remember that good documentation is as sensitive as the source code and must be treated accordingly. In many cases, it may be wise to use tools that support version control - in many cases, it may be wise to place the documentation together with the source code, or in separate repositories that can be used, for example, with Azure DevOps wiki.
 
 ## What Should Be Documented
-What we should document will vary from project to project. We should always have a [design](../02_design/02_systemskisser.md) that provides insight into, for example, infrastructure, IAM, and data flow so that it is possible to review this at a later date.
+What we should document will vary from project to project. We should always have a [design](../02_design/02_systemskisser) that provides insight into, for example, infrastructure, IAM, and data flow so that it is possible to review this at a later date.
 
 The threat model must always be documented and maintained, and any mitigating measures must also be documented.
 
