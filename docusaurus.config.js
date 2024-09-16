@@ -21,7 +21,7 @@ const config = {
 
   i18n: {
     defaultLocale: 'no',
-    locales: ['no']
+    locales: ['en', 'no']
   },
 
   themes: [
