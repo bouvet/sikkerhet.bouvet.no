@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+slug: /designe/autentisering_og_autorisasjon
 ---
 
 # Autentisering og autorisering

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Audit/Review
+id: en_audit
+slug: /manage/audit
 ---
 
 # Audit or Review of Project or Delivery

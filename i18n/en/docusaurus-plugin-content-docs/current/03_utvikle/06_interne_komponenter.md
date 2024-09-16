@@ -1,6 +1,9 @@
 ---
 sidebar_position: 6
 title: Internal Components
+id: en_internal_components
+slug: /Develop/Internal_Components
+
 ---
 
 # Internal Components

@@ -1,6 +1,9 @@
 ---
 sidebar_position: 5
 title: Software Supply Chain
+id: en_ssc
+slug: /develop/software_supply_chain
+
 ---
 
 # Software Supply Chain

@@ -1,3 +1,6 @@
+---
+slug: /manage/introduction
+---
 # Manage
 
 <div className="row category-intro">

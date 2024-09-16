@@ -1,6 +1,8 @@
 ---
 sidebar_position: 7
 title: Competence Building
+id: en_competence
+slug: /design/competence_building
 ---
 
 # Competence Building

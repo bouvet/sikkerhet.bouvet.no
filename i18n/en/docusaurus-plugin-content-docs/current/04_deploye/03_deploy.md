@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Deployment
+id: en_deploy
+slug: /deploy/deploy
 ---
 
 # Deployment

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Datavalidering
+slug: /utvikle/datavalidering
 ---
 # Datavalidering fra andre systemer
 :::tip Kort oppsummert

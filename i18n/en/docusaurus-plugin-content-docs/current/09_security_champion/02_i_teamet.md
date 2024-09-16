@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: In the Team
+id: en_sc_intheteam
+slug: /securitychampion/in_the_team
 ---
 
 # What a Security Champion Does in the Team
@@ -28,7 +30,7 @@ Be a bit creative and try to get the team involved; a Security Champion who does
 
 ## 2. Do We Have Control Over Our Entire Project?
 
-If the answer is yes, let's correct that to no. There is always more that can be done. We have created a checklist that should be checked for every single project we are involved in; all our delivery teams should have a relationship with the points in this list and understand the risks they pose if useful measures are not implemented. You can find the list [here](../checklist)
+If the answer is yes, let's correct that to no. There is always more that can be done. We have created a checklist that should be checked for every single project we are involved in; all our delivery teams should have a relationship with the points in this list and understand the risks they pose if useful measures are not implemented. You can find the list [here](/en/checklist)
 
 Going through this list helps you gain control over, among other things:
 * Responsibilities and routines
@@ -56,4 +58,4 @@ Based on the ethics taught in the military, we get some clever questions we can 
 
 ### 4. Technical Review of Solutions
 
-Now it's time to look at a classic called OWASP Top 10 and make sure we have avoided these mistakes, but this is basic. To really have control over the code and solutions, we need to tackle other measures - you can find several of these described in the [article on security practices](../03_develop/04_sikkerhetspraksiser)
+Now it's time to look at a classic called OWASP Top 10 and make sure we have avoided these mistakes, but this is basic. To really have control over the code and solutions, we need to tackle other measures - you can find several of these described in the [article on security practices](/en/develop/security_practices)

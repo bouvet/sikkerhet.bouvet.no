@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Beyond the Team
+id: en_sc_outside
+slug: /securitychampion/outside_the_team
 ---
 import Link from "@docusaurus/Link";
 
@@ -12,7 +14,7 @@ If you are interested in raising the security culture beyond the team, get invol
 
 Most regions in Bouvet have their own Security Champions gatherings on a regular basis, where knowledge, tips, tricks, and much more are shared. Get involved here and help build a regional security culture in the developer teams!
 
-All developers should be familiar with the basic principles of security and secure development, but to achieve this, we need to go out among people and share knowledge. [OWASP Top 10](../03_develop/04_sikkerhetspraksiser) is always relevant, so if you feel like it - set up a session with colleagues in the surrounding units. You can make it super fancy and run demos of every single point, but you can just as easily make it low-threshold and simply talk through the points.
+All developers should be familiar with the basic principles of security and secure development, but to achieve this, we need to go out among people and share knowledge. [OWASP Top 10](/en/develop/security_practices) is always relevant, so if you feel like it - set up a session with colleagues in the surrounding units. You can make it super fancy and run demos of every single point, but you can just as easily make it low-threshold and simply talk through the points.
 
 The most important thing is that you engage and help spread knowledge!
 

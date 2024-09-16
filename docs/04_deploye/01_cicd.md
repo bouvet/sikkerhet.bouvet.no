@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: CI/CD
+slug: /deploye/cicd
 ---
 
 # CI/CD

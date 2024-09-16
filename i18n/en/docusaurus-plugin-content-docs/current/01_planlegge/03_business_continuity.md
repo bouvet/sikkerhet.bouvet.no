@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+id: en_business_continuity
+slug: /plan/business_continuity
 ---
 
 # Business Continuity

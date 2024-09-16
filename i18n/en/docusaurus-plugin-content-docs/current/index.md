@@ -24,22 +24,22 @@ import Link from "@docusaurus/Link";
     <div className="dev-ops-links-backdrop" />
     <h2 className="row devops-links-header">What are you looking for?</h2>
     <div className="row devops-links">
-        <Link to="planlegge/introduction">
+        <Link to="/en/plan/introduction">
             <button className="devops-button">Plan</button>
         </Link>
-        <Link to="designe/introduction">
+        <Link to="/en/design/introduction">
             <button className="devops-button">Design</button>
         </Link>
-        <Link to="utvikle/introduction">
+        <Link to="/en/develop/introduction">
             <button className="devops-button">Develop</button>
         </Link>
-        <Link to="deploy/introduction">
+        <Link to="/en/deploy/introduction">
             <button className="devops-button">Deploy</button>
         </Link>
-        <Link to="manage/introduction">
+        <Link to="/en/manage/introduction">
             <button className="devops-button">Manage</button>
         </Link>
-        <Link to="security_champion/introduction">
+        <Link to="/en/security_champion/introduction">
             <button className="devops-button">Security Champions</button>
         </Link>
     </div>

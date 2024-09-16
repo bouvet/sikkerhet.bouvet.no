@@ -1,3 +1,6 @@
+---
+slug: /design/introduction
+---
 # Design
 
 <div className="row category-into">

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+id: en_system_diagrams
+slug: /design/system_diagrams
 ---
 
 # System diagrams and drawings

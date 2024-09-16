@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Forvaltning av avhengigheter
+slug: /forvalte/avhengigheter
 ---
 
 # Forvaltning av avhengigheter
@@ -8,7 +9,7 @@ title: Forvaltning av avhengigheter
 Status på avhengighetene vi har vil endre seg over tid, og det er ikke til å unngå at svakheter oppdages som må mitigeres av oss. Denne jobben kan være så enkel som at vi oppdaterer til en ny versjon, men kan også kreve større endringer i applikasjonen.
 :::
 
-Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Software Supply Chain](../03_utvikle/05_software_supply_chain.md). Dere vil komme i situasjoner der 
+Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Software Supply Chain](/utvikle/software_supply_chain). Dere vil komme i situasjoner der 
 * det oppdages en kritisk sårbarhet i en pakke dere bruker
 * pakker deprekeres og erstattes med noe nytt som ikke er direkte kompatibelt med det gamle
 * utviklere bak pakker slutter å vedlikeholde pakkene

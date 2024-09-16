@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+id: en_tools
+slug: /plan/tools
 ---
 # Tools Used in Delivery
 :::tip In Short
@@ -52,12 +54,12 @@ A tip is to use [pre-commit](https://pre-commit.com) to run all linting, formatt
 :::
 
 ## CI/CD
-A good [CI/CD system (Continuous Integration / Continuous Deployment)](../04_deploy/01_cicd) can be used to significantly increase the security of the final product by automating various checks and tests that ensure the quality of the delivery.
+A good [CI/CD system (Continuous Integration / Continuous Deployment)](/en/deploy/cicd) can be used to significantly increase the security of the final product by automating various checks and tests that ensure the quality of the delivery.
 
 Be aware that several of the points below require additional software. We currently do not have shared licenses for developers at Bouvet; this must be managed by each project depending on needs and requirements. If the team handles this on its own, be aware of license conditions and how tools work. Some tools, for example, send source code to their own servers for analysis, which is generally not allowed unless agreed upon with the customer.
 
 ### Software Composition Analysis (SCA)
-[Software composition analysis (SCA)](../03_develop/05_software_supply_chain) can be set up automatically as part of CI/CD. We have many dependencies on components made by others, so it is important to keep track of existing and newly discovered vulnerabilities in what we create.
+[Software composition analysis (SCA)](/develop/software_supply_chain) can be set up automatically as part of CI/CD. We have many dependencies on components made by others, so it is important to keep track of existing and newly discovered vulnerabilities in what we create.
 
 ### Testing
 Running tests in CI is beneficial for several reasons, but from a security perspective, there are specific tests that should be included.
@@ -67,10 +69,10 @@ Running tests in CI is beneficial for several reasons, but from a security persp
 * Test for strict [JWT validation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
 
 ### Static Application Security Testing (SAST)
-[Static application security testing (SAST)](../03_develop/07_sikkerhetstesting) should be configured to run automatically as part of CI/CD. Consider whether a build should fail if the static code analysis detects serious weaknesses in the code or low test coverage.
+[Static application security testing (SAST)](/en/develop/sikkerhetstesting) should be configured to run automatically as part of CI/CD. Consider whether a build should fail if the static code analysis detects serious weaknesses in the code or low test coverage.
 
 ### Secret Scanning
-[Secret scanning](../03_develop/02_secrets) - passwords, keys, and other sensitive information that should not be in the source code is an important tool that can be implemented in the version control system and in CI/CD. Some tools only provide alerts when secrets are found, while others can also invalidate the secrets in the services they are meant for.
+[Secret scanning](/en/develop/secrets) - passwords, keys, and other sensitive information that should not be in the source code is an important tool that can be implemented in the version control system and in CI/CD. Some tools only provide alerts when secrets are found, while others can also invalidate the secrets in the services they are meant for.
 
 # More Information
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)

@@ -1,3 +1,6 @@
+---
+slug: /develop/introduction
+---
 # Develop
 
 <div className="row category-intro">

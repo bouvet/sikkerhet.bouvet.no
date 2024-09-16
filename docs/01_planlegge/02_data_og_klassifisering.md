@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /planlegge/data_og_klassifisering
 ---
 
 # Data og klassifisering

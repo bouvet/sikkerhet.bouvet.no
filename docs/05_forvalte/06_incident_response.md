@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Beredskapsplaner og hendelseshåndtering
+slug: /forvalte/hendelseshåndtering
 ---
 import Link from "@docusaurus/Link";
 
@@ -15,7 +16,7 @@ Mange tenker gjerne på sikkerhetshendelser som målrettede angrep der _noen_ an
 NSM definerer en sikkerhetshendelse som _"En avvikssituasjon hvor det er et potensiale for tap av konfidensialitet, integritet, og/eller tilgjengelighet for informasjon eller IKT-tjenester. En sikkerhetshendelse kan oppstå som følge av et dataangrep, teknisk svikt, eller utilsiktede feilhandlinger."_ Med andre ord kan en hendelse være nesten hva som helst som påvirker konfidensialitet, integritet og tilgjengelighet, og avhengig av konteksten vil ulike kunder ha ulike krav til når vi må rapportere og/eller agere på dette. 
 
 ## Forberedelser
-Dette er dekket i flere artikler under "<Link to="../01_planlegge/introduction.md">Planlegge</Link>", men noe av det viktigste du gjør er å dokumentere hvilke krav vi må etterleve og hvilket ansvar vi har innenfor de ulike fasene i tillegg til kontaktpunkter hos kunden. Noen kunder er tett på sikkerhet og vil monitorere og varsle leveranseteam på egenhånd, andre basererer seg på at teamene selv følger med.
+Dette er dekket i flere artikler under "<Link to="/planlegge/introduksjon">Planlegge</Link>", men noe av det viktigste du gjør er å dokumentere hvilke krav vi må etterleve og hvilket ansvar vi har innenfor de ulike fasene i tillegg til kontaktpunkter hos kunden. Noen kunder er tett på sikkerhet og vil monitorere og varsle leveranseteam på egenhånd, andre basererer seg på at teamene selv følger med.
 
 [NSM lister en del nyttige punkter](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/handtere-og-gjenopprette/forbered-virksomheten-pa-handtering-av-hendelser/) en også bør vurdere innad i teamet; flere av disse peker på  organisasjonen som helhet, men det kan være viktig for teamet å være kjent med de ulike tiltakene. 
 

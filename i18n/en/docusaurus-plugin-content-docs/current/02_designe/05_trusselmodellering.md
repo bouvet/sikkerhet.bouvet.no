@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 title: Threat Modeling
+id: en_threat_modelling
+slug: /design/threat_modelling
 ---
 
 # Threat Modeling

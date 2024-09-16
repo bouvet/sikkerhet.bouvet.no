@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: Dependency Management
+id: en_dep_mgmt
+slug: /manage/dependency_management
 ---
 
 # Dependency Management
@@ -8,7 +10,7 @@ title: Dependency Management
 The status of the dependencies we have will change over time, and it is inevitable that vulnerabilities will be discovered that we must mitigate. This job can be as simple as updating to a new version, but may also require more significant changes to the application.
 :::
 
-When the team is in maintenance mode, most of the issues mentioned in the article on [Software Supply Chain](../03_develop/05_software_supply_chain) still apply. You will encounter situations where:
+When the team is in maintenance mode, most of the issues mentioned in the article on [Software Supply Chain](/en/develop/software_supply_chain) still apply. You will encounter situations where:
 * A critical vulnerability is discovered in a package you use
 * Packages are deprecated and replaced with something new that is not directly compatible with the old
 * Developers behind packages stop maintaining them

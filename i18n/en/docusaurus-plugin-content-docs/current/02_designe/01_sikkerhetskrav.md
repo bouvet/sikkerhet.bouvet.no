@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+id: en_security_requirements
+slug: /design/security_requirements
 ---
 
 # Security Requirements

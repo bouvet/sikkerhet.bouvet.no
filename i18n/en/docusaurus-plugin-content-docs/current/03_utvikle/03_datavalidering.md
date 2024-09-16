@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 title: Data Validation
+id: en_data_validation
+slug: /develop/data_validation
+
 ---
 
 # Data Validation

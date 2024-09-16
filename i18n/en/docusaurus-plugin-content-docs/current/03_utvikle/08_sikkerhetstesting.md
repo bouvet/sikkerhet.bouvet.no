@@ -1,6 +1,9 @@
 ---
 sidebar_position: 7
 title: Security Testing
+id: en_security_testing
+slug: /develop/security_testing
+
 ---
 
 # Security Testing
@@ -20,7 +23,7 @@ If this is not taken into account, it can have consequences, both for the custom
 :::
 
 ## Test Environment
-When conducting security testing against a running environment, it is important to always clarify this well in advance. Many types of testing can be destructive, so if the [environments are not sufficiently separated](../02_design/03_segregering), you risk affecting other environments than intended.
+When conducting security testing against a running environment, it is important to always clarify this well in advance. Many types of testing can be destructive, so if the [environments are not sufficiently separated](/en/design/segregation_of_environments), you risk affecting other environments than intended.
 
 A good solution, especially if using infrastructure-as-code (IaC), is to have a pipeline that deploys a dedicated environment for security testing. If this is designed into the delivery from the start, it is often easy to set up environments identical to the production environment, where you can also copy databases and possibly run anonymization processes on the data.
 

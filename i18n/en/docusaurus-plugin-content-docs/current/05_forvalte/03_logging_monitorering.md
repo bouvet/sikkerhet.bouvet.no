@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: Logging and Monitoring
+id: en_logging
+slug: /manage/logging_monitoring
 ---
 
 # Logging and Monitoring

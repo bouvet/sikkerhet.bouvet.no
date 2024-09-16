@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+id: en_network_concepts
+slug: /design/network_concepts
 ---
 
 # Network Concepts
@@ -53,7 +55,7 @@ Route all outgoing traffic through a dedicated proxy service that blocks everyth
 
 ## Configuration
 
-Network configuration should be automated as much as possible, preferably using a [CI/CD system](../01_plan/04_verktoy_og_bruk).
+Network configuration should be automated as much as possible, preferably using a [CI/CD system](/en/deploy/cicd).
 
 - Limit who can configure both the network and network rules directly
     - Set up Just-in-time (JIT) access where possible

@@ -1,6 +1,9 @@
 ---
 sidebar_position: 2
 title: Secrets
+id: en_secrets
+slug: /develop/secrets
+
 ---
 
 # Secrets

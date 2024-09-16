@@ -1,3 +1,6 @@
+--- 
+slug: /utvikle/introduksjon
+---
 # Utvikle
 
 <div className="row category-into">

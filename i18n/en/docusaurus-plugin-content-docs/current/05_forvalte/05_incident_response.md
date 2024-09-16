@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: Contingency Plans and Incident Management
+id: en_contingency_planning
+slug: /manage/contingency_planning_and_incident_management
 ---
 
 # Contingency Plans and Incident Management
@@ -13,7 +15,7 @@ Many people think of security incidents as targeted attacks where _someone_ atta
 NSM defines a security incident as _"A deviation situation where there is a potential for loss of confidentiality, integrity, and/or availability of information or ICT services. A security incident can occur as a result of a data attack, technical failure, or unintentional errors."_ In other words, an incident can be almost anything that affects confidentiality, integrity, and availability, and depending on the context, different customers will have different requirements for when we need to report and/or act on this.
 
 ## Preparations
-This is covered in several articles under "[Plan](../01_planlegge/introduction)," but one of the most important things you can do is document the requirements we must comply with and our responsibilities within the different phases, in addition to contact points with the customer. Some customers are very security-focused and will monitor and alert the delivery team on their own, while others rely on the teams to monitor themselves.
+This is covered in several articles under "[Plan](/en/plan/introduction)," but one of the most important things you can do is document the requirements we must comply with and our responsibilities within the different phases, in addition to contact points with the customer. Some customers are very security-focused and will monitor and alert the delivery team on their own, while others rely on the teams to monitor themselves.
 
 [NSM lists several useful points](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/handtere-og-gjenopprette/forbered-virksomheten-pa-handtering-av-hendelser/) that should also be considered within the team; many of these point to the organization as a whole, but it can be important for the team to be aware of the different measures.
 

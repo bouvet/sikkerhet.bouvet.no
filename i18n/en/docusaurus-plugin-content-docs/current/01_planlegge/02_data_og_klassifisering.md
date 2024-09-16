@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+id: en_data_classification
+slug: /plan/data_and_classification
 ---
 
 # Data and Classification

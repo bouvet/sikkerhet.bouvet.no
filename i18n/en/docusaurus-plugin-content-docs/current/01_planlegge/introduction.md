@@ -1,3 +1,7 @@
+---
+slug: /plan/introduction
+---
+
 # Plan
 
 <div className="row category-into">

@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 title: Development Environment
+id: en_development_environment
+slug: /develop/development_environment
+
 ---
 
 # Development Environment, Tools, and Build Environment

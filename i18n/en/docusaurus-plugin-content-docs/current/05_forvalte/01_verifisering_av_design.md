@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Verify the Design
+id: en_verify_design
+slug: /manage/verify_design
 ---
 
 # Verify the Design
@@ -8,7 +10,7 @@ title: Verify the Design
 When developing a solution, we should always validate that the solution adheres to the design. If it deviates, we must either correct the solution or update the design.
 :::
 
-When we create a [design](../02_design/02_systemskisser) for a new solution, there may be details we do not know, or unexpected complications may arise during implementation. This can result in the original design deviating from the final solution.
+When we create a [design](/en/design/system_diagrams) for a new solution, there may be details we do not know, or unexpected complications may arise during implementation. This can result in the original design deviating from the final solution.
 
 Documentation is crucial for understanding how a solution is set up and how it works, especially if an incident occurs that requires redeployment or disaster recovery. To ensure that the gap between documentation and the final product is not too large, we should always validate the design afterward.
 

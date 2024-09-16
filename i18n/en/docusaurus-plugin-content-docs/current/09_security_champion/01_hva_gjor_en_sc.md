@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: Bouvet Security Champion
+id: en_sc
+slug: /securitychampion/what_is_a_sc
 ---
 import Link from "@docusaurus/Link";
 

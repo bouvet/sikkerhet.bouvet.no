@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: Roles and responsibilities
+id: en_roles_responsibilities
+slug: /plan/roles_and_responsibilities
 ---
 
 # Roles and responsibilities

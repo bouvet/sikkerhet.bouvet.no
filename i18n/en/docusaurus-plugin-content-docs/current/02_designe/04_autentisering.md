@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+id: en_auth
+slug: /design/authentication_and_authorization
 ---
 
 # Authentication and Authorization

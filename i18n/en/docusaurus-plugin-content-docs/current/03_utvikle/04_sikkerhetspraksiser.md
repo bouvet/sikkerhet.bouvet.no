@@ -1,6 +1,9 @@
 ---
 sidebar_position: 4
 title: Security Practices
+id: en_security_practices
+slug: /develop/security_practices
+
 ---
 
 # Security Practices

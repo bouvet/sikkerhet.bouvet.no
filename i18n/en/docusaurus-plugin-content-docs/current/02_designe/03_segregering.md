@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+id: en_segregation
+slug: /design/segregation_of_environments
 ---
 
 # Segregation of Environments
