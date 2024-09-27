@@ -34,22 +34,22 @@ import Link from "@docusaurus/Link";
         <Link to="/index2">
             <button className="devops-button">Introduksjon</button>
         </Link>
-        <Link to="/planlegge/introduction">
+        <Link to="/planlegge/introduksjon">
             <button className="devops-button">Planlegge</button>
         </Link>
-        <Link to="/designe/introduction">
+        <Link to="/designe/introduksjon">
             <button className="devops-button">Designe</button>
         </Link>
-        <Link to="/utvikle/introduction">
+        <Link to="/utvikle/introduksjon">
             <button className="devops-button">Utvikle</button>
         </Link>
-        <Link to="/deploye/introduction">
+        <Link to="/deploye/introduksjon">
             <button className="devops-button">Deploye</button>
         </Link>
-        <Link to="/forvalte/introduction">
+        <Link to="/forvalte/introduksjon">
             <button className="devops-button">Forvalte</button>
         </Link>
-        <Link to="/security_champion/introduction">
+        <Link to="/security_champion/introduksjon">
             <button className="devops-button">Security Champions</button>
         </Link>
     </div>

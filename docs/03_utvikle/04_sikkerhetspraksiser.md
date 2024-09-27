@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Sikkerhetspraksiser
+slug: /utvikle/sikkerhetspraksiser
 ---
 # Sikkerhetspraksiser
 :::tip Kort oppsummert

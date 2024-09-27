@@ -1,3 +1,6 @@
+--- 
+slug: /deploye/introduksjon
+---
 # Deploye
 
 <div className="row category-into">

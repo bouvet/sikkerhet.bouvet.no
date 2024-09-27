@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /designe/nettverkskonsepter
 ---
 
 # Nettverkskonsepter
@@ -57,7 +58,7 @@ Send all utgående trafikk gjennom en egen proxytjeneste som blokkerer alt som s
 
 ## Konfigurasjon
 
-Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](../01_planlegge/04_verktoy_og_bruk.md).
+Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](/planlegge/verktøy).
 
 - Begrens hvem som kan konfigurere både nettverket og nettverksregler direkte
     - Sett opp Just-in-time (JIT)-tilgang der det er mulig

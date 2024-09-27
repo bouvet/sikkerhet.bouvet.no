@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Bygging
+slug: /deploye/bygging
 ---
 
 # Bygging 
@@ -18,7 +19,7 @@ Selvstyrte agenter er mer komplekse da du har ansvar for alt av vedlikehold og k
 
 Selv om det første alternativet somoftest er godt nok, er det viktig å være klar over mulighetene som finnes, og når en bør vurdere disse. Uansett løsning er det viktig å tenke på at byggmiljøet er et veldig sårbart punkt; dersom dette kompromitteres kan en angriper potensielt utføre endringer som påvirker _alt_ som bygges der. 
 
-Dette er spesielt viktig med bruk av [tredjepartspakker](../03_utvikle/05_software_supply_chain.md), og et minimum her bør være at pakker pinnes til spesifikke versjoner og at en aldri henter siste versjon av en pakke automatisk. 
+Dette er spesielt viktig med bruk av [tredjepartspakker](/utvikle/software_supply_chain), og et minimum her bør være at pakker pinnes til spesifikke versjoner og at en aldri henter siste versjon av en pakke automatisk. 
 
 # Veien videre
 * [Microsoft: Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)

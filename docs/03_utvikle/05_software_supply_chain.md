@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Software Supply Chain
+slug: /utvikle/software_supply_chain
 ---
 
 # Software supply chain

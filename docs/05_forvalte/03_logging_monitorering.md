@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Logging og monitorering
+slug: /forvalte/logging_og_monitorering
 ---
 
 # Logging og monitorering

@@ -1,0 +1,8 @@
+{
+  "label": "Deploy",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "introduction"
+  }
+}

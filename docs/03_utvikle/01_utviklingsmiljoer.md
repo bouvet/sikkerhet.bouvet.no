@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Utviklingsmiljø
+slug: /utvikle/utviklingsmiljø
 ---
 # Utviklingsmiljø, verktøy og byggmiljø
 :::tip Kort oppsummert

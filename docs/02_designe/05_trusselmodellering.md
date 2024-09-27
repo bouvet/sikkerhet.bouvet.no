@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Trusselmodellering
+slug: /designe/trusselmodellering
 ---
 # Trusselmodellering
 :::tip Kort oppsummert

@@ -1,3 +1,7 @@
+--- 
+slug: /planlegge/introduksjon
+---
+
 # Planlegge
 
 <div className="row category-into">

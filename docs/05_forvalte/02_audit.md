@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Audit/revisjon
+slug: /forvalte/revisjon
 ---
 
 # Audit eller revisjon av prosjekt eller leveranse

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Deployering
+slug: /deploye/deployering
 ---
 
 # Deployering

@@ -54,4 +54,4 @@ Basert på etikken som læres bort i forsvaret får vi noen lure spørsmål vi k
 
 ### 4. Teknisk gjennomgang av løsninger
 
-Her er det på tide å se på en klassiker som heter OWASP Top 10 og sørge for at vi har unngått disse tabbene, men dette er basic. Skal vi virkelig har kontroll på koden og løsningene må vi gå løs på andre tiltak - du finner flere av disse beskrevet under [artikkelen om sikkerhetspraksiser](../03_utvikle/04_sikkerhetspraksiser.md).
+Her er det på tide å se på en klassiker som heter OWASP Top 10 og sørge for at vi har unngått disse tabbene, men dette er basic. Skal vi virkelig har kontroll på koden og løsningene må vi gå løs på andre tiltak - du finner flere av disse beskrevet under [artikkelen om sikkerhetspraksiser](/utvikle/sikkerhetspraksiser).

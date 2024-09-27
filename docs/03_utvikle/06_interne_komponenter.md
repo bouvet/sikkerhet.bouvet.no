@@ -1,6 +1,7 @@
 ---
 sidebar_position: 7
 title: Interne komponenter
+slug: /utvikle/interne_komponenter
 ---
 
 # Interne komponenter
