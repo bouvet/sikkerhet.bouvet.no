@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Planlegge": {
+    "message": "Planlegge",
+    "description": "The label for category Planlegge in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Designe": {
+    "message": "Designe",
+    "description": "The label for category Designe in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Utvikle": {
+    "message": "Utvikle",
+    "description": "The label for category Utvikle in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Deploye": {
+    "message": "Deploye",
+    "description": "The label for category Deploye in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Forvalte": {
+    "message": "Forvalte",
+    "description": "The label for category Forvalte in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Security Champion": {
+    "message": "Security Champion",
+    "description": "The label for category Security Champion in sidebar tutorialSidebar"
+  }
+}

@@ -1,3 +1,6 @@
+--- 
+slug: /designe/introduksjon
+---
 # Designe
 
 <div className="row category-into">

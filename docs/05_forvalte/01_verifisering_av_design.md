@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Verifiser design
+slug: /forvalte/verifiser_design
 ---
 
 # Verifiser designet
@@ -8,7 +9,7 @@ title: Verifiser design
 Når vi utvikler en løsning bør vi alltid validere at løsningen er i henhold til designet. Dersom den avviker må vi enten korrigere løsningen eller oppdatere designet.
 :::
 
-Når vi lager et [design](../02_designe/02_systemskisser.md) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
+Når vi lager et [design](/designe/systemskisser) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
 
 Dokumentasjonen er viktig for å forstå hvordan en løsning er satt opp og hvordan den fungerer, spesielt om det oppstår en hendelse som krever redeployment eller disaster recovery. For å sikre at gapet mellom dokumentasjon og ferdig produkt ikke er for stort bør vi derfor alltid validere designet i etterkant. 
 

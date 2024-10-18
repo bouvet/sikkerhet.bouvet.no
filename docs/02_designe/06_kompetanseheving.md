@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Kompetanseheving
+slug: /designe/kompetanseheving
 ---
 # Kompetanseheving
 :::tip Kort oppsummert

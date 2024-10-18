@@ -1,3 +1,6 @@
+--- 
+slug: /forvalte/introduksjon
+---
 # Forvalte
 
 <div className="row category-into">

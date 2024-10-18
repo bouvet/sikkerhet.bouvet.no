@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Hemmeligheter
+slug: /utvikle/hemmeligheter
 ---
 # Hemmeligheter
 :::tip Kort oppsummert

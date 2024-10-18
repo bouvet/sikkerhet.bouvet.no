@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+slug: /planlegge/verkøy
 ---
 # Verktøy brukt i leveransen
 :::tip Kort oppsummert
@@ -53,12 +54,12 @@ Et tips er å bruke [pre-commit](https://pre-commit.com) til å kjøre alt av li
 :::
 
 ## CI/CD
-Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)](../04_deploye/01_cicd.md) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
+Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)](/deploye/cicd) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
 
 Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag ingen felleslisenser for utviklere i Bouvet, dette må gås opp per prosjekt avhengig av behov og krav. Dersom teamet håndterer dette på egenhånd, vær obs på lisensbetingelser og hvordan verktøy fungerer. Noen verktøy sender eksempelvis kildekode til egne servere for analyse, dette er i utgangspunktet ikke tillatt med mindre det på forhånd er avklart med kunden.
 
 ### Software compostion analysis (SCA)
-[Software composition analysis (SCA)](../03_utvikle/05_software_supply_chain.md) kan settes opp automatisk som en del av CI/CD. Vi har mange avhengigheter til komponenter laget av andre, så det er viktig å ha oversikt over eksisterende og nyoppdagede sårbarheter i det vi lager.
+[Software composition analysis (SCA)](/utvikle/software_supply_chain) kan settes opp automatisk som en del av CI/CD. Vi har mange avhengigheter til komponenter laget av andre, så det er viktig å ha oversikt over eksisterende og nyoppdagede sårbarheter i det vi lager.
 
 ### Testing
 Å kjøre tester i CI er lurt av flere grunner, men fra et sikkerhetsperspektiv er det enkelte tester som bør være med.
@@ -68,10 +69,10 @@ Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag
 * Test for strict [JWT valdiation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
 
 ### Statisk kodeanalyse (SAST)
-[Statisk kodeanalyse (SAST)](../03_utvikle/08_sikkerhetstesting.md) bør konfigueres til å kjøres automatisk som en del av CI/CD. Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
+[Statisk kodeanalyse (SAST)](/utvikle/sikkerhetstesting) bør konfigueres til å kjøres automatisk som en del av CI/CD. Man kan vurdere om et bygg skal feile dersom den statiske kodeanalysen oppdager alvorlige svakheter med koden eller lav testdekning.
 
 ### Secret scanning
-[Sjekking av hemmeligheter](../03_utvikle/02_secrets.md) - passord, nøkler og annen sensitiv informasjon som ikke skal inn i kildekoden er et viktig verktøy som kan implementeres i versjonskontrollsystemet og i CI/CD. Noen verktøy har kun varsling ved funn, andre kan også ugyldiggjøre hemmelighetene i tjenestene de er ment for. 
+[Sjekking av hemmeligheter](/utvikle/hemmeligheter) - passord, nøkler og annen sensitiv informasjon som ikke skal inn i kildekoden er et viktig verktøy som kan implementeres i versjonskontrollsystemet og i CI/CD. Noen verktøy har kun varsling ved funn, andre kan også ugyldiggjøre hemmelighetene i tjenestene de er ment for. 
 
 ## Generativ AI (copilots)
 Det eksisterer mange slike generative AI-verktøy som utviklere kan benytte. Det er viktig at enhver bruk av slike verktøy avklares med kunden _før_ de tas i bruk. Her har Bouvet gjort mye arbeid i evaluering av flere slike verktøy og har god støtte internt for å gjøre slike vurderinger om kunden skulle ha behov for det.

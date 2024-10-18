@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+slug: /planlegge/business_continuity
 ---
 
 # Business Continuity
