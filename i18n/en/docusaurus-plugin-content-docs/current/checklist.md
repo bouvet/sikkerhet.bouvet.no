@@ -12,6 +12,7 @@ Not all points are relevant in all projects, nor is it always desirable to imple
 Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md">checklist</Link> and implement it as part of the source code in your project!
 
 ## Plan
+
 1. <Link to="/en/plan/roles_and_responsibilities">Responsibility Distribution</Link>: Is it clear what responsibility we have in the delivery, and is other responsibility clearly distributed? Is there a risk of confusion about responsibility in the future, for example, in connection with security incidents?
     * If Bouvet hosts the solution on behalf of the customer, it falls under our ISO 27001 certification.
     * This means that the delivery team has some additional responsibility for information security. Refer to SOA for further information.
@@ -50,6 +51,7 @@ Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
     * Others?
 
 ## Design
+
 1. <Link to="/en/design/security_requirements">Is it clear what security requirements apply to the solution?</Link>
     1. Standard requirements
     2. Customer requirements
@@ -72,6 +74,7 @@ Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 6. <Link to="/en/design/competence_building">What is the need for skill development within the team</Link>, and is there a plan for how this will be handled?
 
 ## Develop
+
 1. <Link to="/en/develop/development_environment">Are the development environments well described?</Link>
     1. Are dedicated dev servers/dev boxes, laptops, others used?
         * Does the team have a contact point with the supplier of these?
@@ -88,7 +91,7 @@ Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 6. <Link to="/en/Develop/Internal_Components">Does the application require third-party software that the team must manage?</Link> E.g., web servers, messaging services, other types of server components?
     1. Does the team have a routine for keeping these updated?
     2. Are these included in any threat assessments?
-7. <Link to="/en/Develop/Internal_Components">Does the team have a routine for security testing, or is this validated in other ways?</Link>
+7. <Link to="/en/Develop/Security_Testing">Does the team have a routine for security testing, or is this validated in other ways?</Link>
     1. SAST
     2. DAST
 8. <Link to="/en/develop/documentation">How does the team handle documentation?</Link>
@@ -97,6 +100,7 @@ Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
     3. Does the team have a routine for keeping documentation updated?
 
 ## Deploy
+
 1. <Link to="/en/deploy/cicd">How is the solution built and deployed?</Link>
     1. When using pipelines, are these subject to the same regime as the application code in terms of change management?
     2. <Link to="/en/deploy/build">Does the team have a relationship with securing the build environment?</Link>
@@ -104,6 +108,7 @@ Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 2. <Link to="/en/deploy/pentest">Is penetration testing planned in connection with deployment?</Link>
 
 ## Manage
+
 1. <Link to="/en/manage/verify_design">Has the team verified that the network diagram is correctly implemented?</Link>
     1. That expected ports are open to specified IP addresses
     2. That there are no unexpected or unnecessary ports or services exposed?
