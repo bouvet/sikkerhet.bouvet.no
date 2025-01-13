@@ -49,18 +49,9 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Forvalte
 1.	[Har teamet verifisert at nettverksdiagrammet er korrekt implementert?](./05_forvalte/01_verifisering_av_design.md)
-    1.	At forventede porter er åpne mot angitte IP-addresser
-    2.	At det ikke er uventede eller unødvendige porter eller tjenester som eksponeres? 
-    3.	At trafikk filtreres korrekt av brannmur inn mot løsningen? 
 2.	[Dersom kunde eller andre krever audit av løsningen, har teamet planlagt for hvordan dette kan foregå?](./05_forvalte/02_audit.md) 
-    * Slik testing bør kunne gjennomføres på reelle data, men gjerne i et eget isolert miljø. 
-3.	[Logging er viktig dersom en hendelse oppstår.](./05_forvalte/03_logging_monitorering.md) Har teamet kontroll på 
-    1.	at en logger nok informasjon til å detektere hendelser – NB: Husk GDPR
-    2.	at loggene ikke lagres i et miljø en angriper kan manipulere 
-    4.	sikkerhetsrelaterte hendelser
-    5.	andre uventede hendelser
-    6.  for relevante funn, vet teamet hvem de skal eskalere til - sikkerhet- eller driftsteam hos Bouvet, kunde eller liknende?
-4.	[Har vi en rutine som sikrer at avhengigheter holdes oppdatert](./05_forvalte/04_forvaltning_avhengigheter.md), og at teamet vet og forstår sårbarheter som avdekkes i disse? Dette påvirker trusselmodellen samt residuell risiko, og kan tvinge frem aksjoner for å ta ned risiko. 
-5.	[Har teamet en rutine for å sjekke at backups blir tatt](./05_forvalte/05_preparedness.md), og testet at en faktisk er i stand til å restore ved behov? 
-    1.	Gjelder også offline/offsite backups. 
-6.	[Har teamet en prosedyre for hendelseshåndtering og en beredskapsplan dersom løsningen angripes](./05_forvalte/06_incident_response.md) eller går ned, og har denne blitt testet ut internt i teamet eller med kunde? 
+3.	[Er det satt opp nødvendig logging for å oppdage og få oversikt over uønskede hendelser?](./05_forvalte/03_logging_monitorering.md)
+4.	[Lagres loggene slik at de ikke kan manipuleres?](./05_forvalte/03_logging_monitorering.md#hvordan-logger-vi)
+5.	[Har teamet en rutine for å sikre mot sårbare avhengigheter?](./05_forvalte/04_forvaltning_avhengigheter.md)
+6.	[Har teamet en rutine for å øve på gjenoppretting av systemet?](./05_forvalte/05_preparedness.md)
+7.	[Har teamet en prosedyre for hendelseshåndtering og en beredskapsplan dersom løsningen angripes eller går ned?](./05_forvalte/06_incident_response.md)
