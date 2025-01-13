@@ -23,25 +23,13 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Designe
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?](./02_designe/01_sikkerhetskrav.md) 
-    1.	Standardkrav
-    2.	Kundekrav
-    3.	Lovpålagte krav
-2.	[Er følgende systemskisser og diagrammer laget?](./02_designe/02_systemskisser.md) 
-    * Dette er viktig dokumentasjon for å vurdere risiko og mulige trusler som kan påvirke løsningen, og også i forbindelse med onboarding av teammedlemmer eller handover.
-    1.	Overordnet systemskisse med de viktigste logiske komponentene
-    2.	Detaljert nettverksskisse med ressurser, tjenester og nettverk
-    3.	Dataflytdiagram
-    4.	IAM-diagram
-    5.	Viktigste avhengigheter – andre systemer, tjenester, ressurser, onprem/cloud
-3.	[Hvordan skal segregering av miljøer håndteres?](./02_designe/03_segregering.md) 
-4.	[Hvordan håndteres autentisering og autorisering?](./02_designe/04_autentisering.md) 
-5.	[Er det gjennomført trusselmodellering av løsningen?](./02_designe/05_trusselmodellering.md) Har teamet rutiner for
-    1.	Jevnlig oppdatering av trusselmodell
-    2.	Oppfølging av funn
-    3.	Mitigering av risiko? 
-    4.	Er det klart hvem som eier risiko og ansvar - hvilken risiko kan aksepteres?
-        * Dersom den totale risikoen overgår en gitt grense bør teamet vurdere en dedikert periode for å ta ned risiko til akseptabelt nivå.  
-6.	[Hva er behovet for kompetanseheving innad i teamet](./02_designe/06_kompetanseheving.md), og er det laget en plan for hvordan dette skal håndteres? 
+2.	[Er nødvendige skisser/diagrammer av systemet laget og oppdatert?](./02_designe/02_systemskisser.md)
+3.	[Har teamet den nødvendige oversikten over nettverket som systemet bruker?](./02_designe/02a_network.md)
+4.	[Er miljøene segregert for å reduserer eksponering av hendelser?](./02_designe/03_segregering.md) 
+5.	[Er det satt opp nødvendig autentisering på tilgang til systemet?](./02_designe/04_autentisering.md#autentisering)
+6.	[Er det satt opp nødvendig autorisering på handlinger i systemet?](./02_designe/04_autentisering.md#autorisering) 
+7.	[Er det gjennomført trusselmodellering av løsningen?](./02_designe/05_trusselmodellering.md)
+8.	[Har teamet den nødvendige kompetansen for prosjektet?](./02_designe/06_kompetanseheving.md)
 
 ## Utvikle
 1.	[Er utviklingsmiljøene godt beskrevet?](./03_utvikle/01_utviklingsmiljoer.md) 
