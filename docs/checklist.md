@@ -42,11 +42,10 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?](./03_utvikle/09_dokumentasjon.md)
 
 ## Deploye
-1.	[Hvordan utføres bygging og deployment av løsningen?](./04_deploye/01_cicd.md) 
-    1. Ved bruk av pipelines, er disse underlagt samme regime som applikasjonskoden mtp endringshåndtering? 
-    2. [Har teamet et forhold til sikring av byggmiljø?](./04_deploye/02_bygg.md)
-    3. [Kjøres det review i forkant av deployment?](./04_deploye/03_deploy.md)
-3.	[Er det planlagt for penetrasjonstesting i forbindelse med deployment?](./04_deploye/04_pentesting.md) 
+1.	[Er det satt opp automatiserte sikkerhetstiltak?](./04_deploye/01_cicd.md) 
+2.  [Har teamet et forhold til sikring av byggmiljø?](./04_deploye/02_bygg.md)
+3.  [Kjøres det review i forkant av deployment?](./04_deploye/03_deploy.md)
+4.	[Er det planlagt for penetrasjonstesting i forbindelse med deployment?](./04_deploye/04_pentesting.md) 
 
 ## Forvalte
 1.	[Har teamet verifisert at nettverksdiagrammet er korrekt implementert?](./05_forvalte/01_verifisering_av_design.md)
