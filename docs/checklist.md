@@ -10,42 +10,16 @@ Det er ikke gitt at alle punktene er relevante i alle prosjekter, eller at innf�
 Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) og implementer den som en del av kildekoden i ditt prosjekt!
 
 ## Planlegge
-1.	[Ansvarsfordeling](./01_planlegge/01_ansvarsfordeling.md): Er det klart hvilket ansvar vi har i leveransen og er øvrig ansvar klart fordelt? Er det risiko for at det kan oppstå forvirring rundt ansvar i fremtiden, eksempelvis i forbindelse med sikkerhetshendelser?
-    * Dersom Bouvet hoster løsningen på vegne av kunde, faller den inn under vår sertifisering på ISO 27001. 
-    * Dette betyr at leveranseteamet har en del ekstra ansvar for informasjonssikkerheten. Referer til SOA for videre informasjon. 
-    1.	Dersom vi drifter; hvilket ansvar har vi for infrastruktur og evt infrastruktur som kode (IAC)? 
-    2.	Dersom andre drifter, hvordan overleveres applikasjonen til disse? 
-        1. Har vi en klar ansvarsfordeling mellom oss og andre? 
-2.	[Klassifisering og data](./01_planlegge/02_data_og_klassifisering.md) 
-    1.	Er applikasjonen vurdert mtp klassifisering av data? Hvilke krav følger av klassifiseringen: 
-    2.	Er det klart om, og hvorvidt personopplysninger behandles i applikasjonen?
-    3.	Hvordan håndteres testdata i prosjektet? 
-        * Hvordan anonymiseres eller ivaretas eventuelle hensyn til sensitivitet og personvern? 
-3.	[Backup, disaster recovery og business continuity planning](./01_planlegge/03_business_continuity.md)
-    1.	Er det lagt en plan for hvordan og hvor ofte backup skal tas?  
-        * Husk også på backup av kildekodesystemer og andre relevante verktøy!
-    2.	Hvordan sikres sensitive data ifm backup, herunder også sletting av data?
-    3.	Er det definert en SLA for applikasjonen? 
-        * Hvilke forventninger har kunden og har vi rigget oss riktig for å møte disse? 
-    4.	Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden? 
-    5.	Er det definert en plan for disaster recovery?
-        * Har teamet dokumentert og eventuelt testet hvordan applikasjonen kan gjøres tilgjengelig vet plutselige hendelser, eksempelvis ved bortfall av datasenter hos oss eller eksterne leverandører, også inkludert skyleverandører?         
-    6.	Dersom applikasjonen blir utilgjengelig i kortere eller lengre perioder, hvilke følger får dette for oss og kunden?     
-        * Finnes det alternativer eller workarounds for løsningen? 
-        * Er disse dokumentert og beskrevet, også med tanke på eventuelt ekstraarbeid som må gjøres etter at løsningen bli tilgjengelig igjen? 
-        * Er det andre konsekvenser for oss eller kunde som må hensynstas? 
-4.	[Har teamet definert hvilke verktøy som skal brukes og hvordan disse skal håndteres?](./01_planlegge/04_verktoy_og_bruk.md)
-    1.	Er kildekodesystemer satt opp med fornuftige policyer? 
-        * Dette kan være beskyttet mainbranch, spesifikk branching strategi, code review ifm PR, dokumentering av endringer?
-    2.	Pipelines brukt i forbindelse med bygging, deployment, testing og annet?
-    3.	Har vi kontroll på hvor data og kildekode lagres? 
-        * Noen selskaper har restriksjoner på hvor data kan oppbevares, eksempelvis kun på innenlands datasentre, innenfor EU eller i land dekket av samarbeidsavtaler. 
-5. [Hvilke kontrollmekanismer skal vi ha underveis i prosjektet?](./01_planlegge/05_sikkerhetsgater.md) 
-    * Ved designendringer
-    * Når vi comitter kodeendringer
-    * I pull requests
-    * Ved bygg og deployment
-    * Andre? 
+1.	[Er det klart hvilket ansvar vi har i leveransen og er øvrig ansvar klart fordelt?](./01_planlegge/01_ansvarsfordeling.md)
+2.	[Er data i systemet klassifisert og håndteres deretter?](./01_planlegge/02_data_og_klassifisering.md#klassifisering)
+3.	[Håndteres data i utvikling- og test-miljø også i henhold til klassifisering?](./01_planlegge/02_data_og_klassifisering.md#data-til-bruk-under-utvikling-og-testing)
+4.	[Dersom applikasjonen blir utilgjengelig i kortere eller lengre perioder, hvilke følger får dette for oss og kunden?](./01_planlegge/03_business_continuity.md)     
+5.	[Er det definert en SLA for applikasjonen?](./01_planlegge/03_business_continuity.md#kundens-forventninger)
+6.	[Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden?](./01_planlegge/03_business_continuity.md#håndtering-av-hendelser)
+7.	[Er det definert en plan for hvordan og hvor ofte backup skal tas?](./01_planlegge/03_business_continuity.md#backup)
+8.	[Er det definert en plan for disaster recovery?](/01_planlegge/03_business_continuity.md#disaster-recovery)
+9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?](./01_planlegge/04_verktoy_og_bruk.md)
+10. [Er det definert kontrollmekanismer for sikkerhet underveis i prosjektet?](./01_planlegge/05_sikkerhetsgater.md) 
 
 ## Designe
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?](./02_designe/01_sikkerhetskrav.md) 

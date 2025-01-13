@@ -35,7 +35,7 @@ Viktige punkter en er nødt å være klar over er at
 
 Dersom vi behandler denne type informasjon på vegne av kunder skal de normalt kreve at vi signerer en databehandleravtale. Dersom dette ikke er på plass <u>må</u> det følges opp mot kundeansvarlig. 
 
-# Data til bruk under utvikling og testing
+## Data til bruk under utvikling og testing
 
 Dersom en bruker data i forbindelse med utvikling og testing, er det viktig å ha et forhold til klassifisering og sensitivitet. Dev-miljøer har ofte et annet sikringsnivå enn produksjonsmiljøet, og dette gjør i praksis at vi ikke alltid kan bruke relle data til utvikling. 
 
@@ -43,6 +43,6 @@ Teamet må sjekke behovet for anonymisering av dataene før disse brukes utenfor
 
 Dette er spesielt viktig dersom utvikling skjer i Bouvets infrastruktur, men med produksjonsmiljø plassert hos kunden. I slike tilfeller er det viktig at Bouvet har dokumenterte rutiner som regulerer hvor og hvordan data oppbevares og brukes, og hvordan og når disse skal slettes. Dette må gås opp i samråd med kunde slik at det ikke er noe tvil rundt ansvar, plikter og risiko. 
 
-# Veien videre
+## Veien videre
 * [Datatilsynet: Innebygd personvern](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
