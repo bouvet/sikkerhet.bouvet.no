@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-title: Software Supply Chain
+title: Dokumentasjon
 slug: /utvikle/dokumentasjon
 ---
 

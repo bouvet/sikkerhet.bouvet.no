@@ -19,7 +19,7 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 7.	[Er det definert en plan for hvordan og hvor ofte backup skal tas?](./01_planlegge/03_business_continuity.md#backup)
 8.	[Er det definert en plan for disaster recovery?](/01_planlegge/03_business_continuity.md#disaster-recovery)
 9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?](./01_planlegge/04_verktoy_og_bruk.md)
-10. [Er det definert kontrollmekanismer for sikkerhet underveis i prosjektet?](./01_planlegge/05_sikkerhetsgater.md) 
+10. [Er det definert kontrollmekanismer for å opprettholde sikkerhet i prosjektet?](./01_planlegge/05_sikkerhetsgater.md) 
 
 ## Designe
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?](./02_designe/01_sikkerhetskrav.md) 
@@ -33,28 +33,13 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Utvikle
 1.	[Er utviklingsmiljøene godt beskrevet?](./03_utvikle/01_utviklingsmiljoer.md) 
-    1.	Brukes dedikerte devservere/devbokser, laptoper, annet? 
-        * Har teamet et kontaktpunkt inn mot leverandøren av disse?
-    2.	Er oppsett godt dokumentert, slik at en unngår feil eller svakheter pga feilkonfigurering?
-        * Gjelder både utviklingsmiljø og kjøremiljø.  
-2.	[Hvordan håndteres secrets, nøkler, connection strings og liknende?](./03_utvikle/02_secrets.md) 
-    1.	Skannes kildekoden for disse? 
-    2.	Roteres secrets med jevnlige intervall? 
-    3.	Har teamet sjekket at kryptografiske nøkler og hashalgoritmer følger gjeldende best-practice? 
-3.	[Hvordan valideres data som hentes fra andre systemer?](./03_utvikle/03_datavalidering.md) 
-4.	[Har teamet innført noen rutiner som sikrer mot vanlige angrepstyper, f.eks. som beskrevet i OWASP Top 10?](./03_utvikle/04_sikkerhetspraksiser.md)
-5.	[Hvordan vurderer og sikrer teamet seg mot software supply-chain-attacks?](./03_utvikle/05_software_supply_chain.md) 
-    1.	Gjøres det noen vurderinger ift å bruke en avhengighet vs å lage selv? 
-6.	[Krever applikasjonen tredjepartssoftware som teamet selv må drifte?](./03_utvikle/06_interne_komponenter.md) F.eks. webservere, meldingstjenester, andre typer serverkomponenter?
-    1.	Har teamet en rutine for å holde disse oppdatert? 
-    2.  Inkluderes disse i eventuelle trusselvurderinger?
-7.	[Har teamet en rutine for sikkerhetstesting, eller valideres dette på annet vis?](./03_utvikle/08_sikkerhetstesting.md)
-    1.	SAST
-    2.	DAST
-8.	[Hvordan håndterer teamet dokumentasjon?](./03_utvikle/09_dokumentasjon.md)
-    1.	Hva dokumenteres utover det grunnleggende i denne sjekklista?
-    2.	Hvor oppbevares dokumentasjonen? 
-    3.  Har teamet en rutine for å holde dokumentasjon oppdatert? 
+2.	[Håndteres hemmeligheter og liknende i henhold til gjeldende best-practice?](./03_utvikle/02_secrets.md) 
+3.	[Valideres data som hentes fra andre systemer?](./03_utvikle/03_datavalidering.md) 
+4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?](./03_utvikle/04_sikkerhetspraksiser.md)
+5.	[Er det rutiner for å sikre seg mot software supply chain angrep?](./03_utvikle/05_software_supply_chain.md)
+6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?](./03_utvikle/06_interne_komponenter.md)
+7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?](./03_utvikle/08_sikkerhetstesting.md)
+8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?](./03_utvikle/09_dokumentasjon.md)
 
 ## Deploye
 1.	[Hvordan utføres bygging og deployment av løsningen?](./04_deploye/01_cicd.md) 
