@@ -25,7 +25,7 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?](./02_designe/01_sikkerhetskrav.md) 
 2.	[Er nødvendige skisser/diagrammer av systemet laget og oppdatert?](./02_designe/02_systemskisser.md)
 3.	[Har teamet den nødvendige oversikten over nettverket som systemet bruker?](./02_designe/02a_network.md)
-4.	[Er miljøene segregert for å reduserer eksponering av hendelser?](./02_designe/03_segregering.md) 
+4.	[Er miljøene segregert for å redusere eksponering av hendelser?](./02_designe/03_segregering.md) 
 5.	[Er det satt opp nødvendig autentisering på tilgang til systemet?](./02_designe/04_autentisering.md#autentisering)
 6.	[Er det satt opp nødvendig autorisering på handlinger i systemet?](./02_designe/04_autentisering.md#autorisering) 
 7.	[Er det gjennomført trusselmodellering av løsningen?](./02_designe/05_trusselmodellering.md)

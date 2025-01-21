@@ -49,7 +49,7 @@ import Link from "@docusaurus/Link";
         <Link to="/forvalte/introduksjon">
             <button className="devops-button">Forvalte</button>
         </Link>
-        <Link to="/security_champion/introduksjon">
+        <Link to="/security_champion/introduction">
             <button className="devops-button">Security Champions</button>
         </Link>
     </div>
