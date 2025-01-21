@@ -46,7 +46,7 @@ Alle applikasjoner har inputs som kan beskrives, selv fritekstinput der brukeren
 
 Dersom applikasjonen støtter filopplasting eller liknende bør avvik fra forventede filer som eksempelvis avvik mellom filtype og [filsignatur](https://en.wikipedia.org/wiki/List_of_file_signatures) eller unormalt store eller små filer logges. 
 
-# Hvordan logger vi? 
+## Hvordan logger vi? 
 Hvordan vi logger vil også variere fra prosjekt til prosjekt, hvilken platform vi kjører på og hvilke ressurser vi har lov til å bruke. Et viktig moment vi må ha i bakhodet når vi designer loggeløsningen er at _loggene er et angrepsmål!_ En angriper som kan utnytte sårbarheter og deretter manipulere loggene kan både skjule aktivitet og plante falske spor. 
 
 Alle loggene vi har bør lagres et sted der data kan legges til men ikke endres i etterkant. Fordelen med å bruke slike løsninger er at du kan samle logger fra mange ulike kilder som eksempelvis skyressurser, nettverkskomponenter og applikasjoner på ett sted. Dette kan gi deg innsikt i flere ulike dimensjoner når du ser på en hendelse som vil kunne være nyttig for å forstå helheten i det som skjer. 

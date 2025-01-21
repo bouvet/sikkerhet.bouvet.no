@@ -28,7 +28,7 @@ Alle kunder i Bouvet skal ha et definert kontaktpunkt for  hendelser i Kunder (C
 
 Dersom en hendelse oppstår og kunde eller andre har behov for kontakt med teamet, er det vanlige at leveranseleder er det formelle kontaktpunktet i Bouvet-teamet. 
 
-# Backup
+## Backup
 Backup er viktig i alle prosjekter. Selv om vi i mange prosjekter ikke har noe ansvar for drift av infrastruktur, kildekodesystemer eller andre verktøy, bør vi gjøre oss kjent med rutiner og begrensninger på området. 
 
 Dersom vi har ansvar for drift har vi også ansvar for at backup gjennomføres. Vanlige begrep her er 
@@ -54,7 +54,7 @@ Det er også viktig å ha et forhold til hvor backupene lagres, slik at en kan v
 Backup som ikke testes har ingen verdi - innfør rutiner for å teste at du kan restore fra backup!
 :::
 
-# Disaster recovery
+## Disaster recovery
 _Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å raskest mulig komme tilbake til normaltilstand. Det kan være nyttig å tenkte på dette som "actions on", altså; _"Hvis X inntreffer, så gjør vi Y"_.
 
 ## Gjenoppretting
