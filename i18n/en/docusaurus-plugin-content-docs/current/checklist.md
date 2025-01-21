@@ -4,116 +4,55 @@ title: Security Checklist
 import Link from "@docusaurus/Link";
 
 # Security Checklist
+Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility, and risk in deliveries, and all development teams should relate to its content unless otherwise agreed with the customer.
 
-Security is not just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the security level, responsibility, and risk in deliveries, and all development teams should have a relationship to the content unless otherwise agreed with the customer.
+It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each team and delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
-Not all points are relevant in all projects, nor is it always desirable to implement all measures. Each team and delivery manager must assess cost/benefit and the responsibility and risk involved in not implementing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be implemented to avoid overlooking anything.
-
-Download the <Link to="https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md">checklist</Link> and implement it as part of the source code in your project!
+Download [the checklist](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) and implement it as part of the source code in your project!
 
 ## Plan
-
-1. <Link to="/en/plan/roles_and_responsibilities">Responsibility Distribution</Link>: Is it clear what responsibility we have in the delivery, and is other responsibility clearly distributed? Is there a risk of confusion about responsibility in the future, for example, in connection with security incidents?
-    * If Bouvet hosts the solution on behalf of the customer, it falls under our ISO 27001 certification.
-    * This means that the delivery team has some additional responsibility for information security. Refer to SOA for further information.
-    1. If we manage; what responsibility do we have for infrastructure and possibly infrastructure as code (IAC)?
-    2. If others manage, how is the application handed over to them?
-        1. Do we have a clear division of responsibility between us and others?
-2. <Link to="/en/plan/data_and_classification">Classification and Data</Link>
-    1. Has the application been assessed in terms of data classification? What requirements follow from the classification:
-    2. Is it clear whether and how personal data is processed in the application?
-    3. How is test data handled in the project?
-        * How is the anonymity or sensitivity and privacy concerns maintained?
-3. <Link to="/en/plan/business_continuity">Backup, Disaster Recovery, and Business Continuity Planning</Link>
-    1. Is there a plan for how and how often backups should be taken?
-        * Remember to also back up source code systems and other relevant tools!
-    2. How are sensitive data secured in connection with backups, including data deletion?
-    3. Is there a defined SLA for the application?
-        * What expectations does the customer have, and have we prepared ourselves correctly to meet these?
-    4. In the event of an incident, have we clarified who should be contacted at Bouvet and with the customer?
-    5. Is there a defined disaster recovery plan?
-        * Has the team documented and possibly tested how the application can be made available in sudden incidents, for example, in the event of data center failure at us or external suppliers, including cloud providers?
-    6. If the application becomes unavailable for shorter or longer periods, what consequences will this have for us and the customer?
-        * Are there alternatives or workarounds for the solution?
-        * Are these documented and described, including any extra work that needs to be done after the solution becomes available again?
-        * Are there other consequences for us or the customer that need to be taken into account?
-4. <Link to="/en/plan/tools">Has the team defined which tools should be used and how these should be handled?</Link>
-    1. Are source code systems set up with reasonable policies?
-        * This can include protected main branch, specific branching strategy, code review in connection with PR, documenting changes?
-    2. Pipelines used in connection with building, deployment, testing, and more?
-    3. Do we have control over where data and source code are stored?
-        * Some companies have restrictions on where data can be stored, for example, only in domestic data centers, within the EU, or in countries covered by cooperation agreements.
-5. <Link to="/en/plan/security_checkpoints">What control mechanisms should we have during the project?</Link>
-    * For design changes
-    * When committing code changes
-    * In pull requests
-    * During build and deployment
-    * Others?
+1. [Is it clear what responsibilities we have in the delivery, and is the rest of the responsibility clearly allocated?](/en/plan/roles_and_responsibilities)
+2. [Are the system’s data classified and handled accordingly?](/en/plan/data_and_classification)
+3. [Are data in the development and test environments also handled according to the classification?](/en/plan/data_and_classification)
+4. [If the application becomes unavailable for shorter or longer periods, what consequences does this have for us and the customer?](/en/plan/business_continuity)
+5. [Is there a defined SLA for the application?](/en/plan/business_continuity)
+6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?](/en/plan/business_continuity)
+7. [Is there a defined plan for how and how often backups should be taken?](/en/plan/business_continuity)
+8. [Is there a defined plan for disaster recovery?](/en/plan/business_continuity)
+9. [Has the team clarified which tools should be used and how they should be handled?](/en/plan/tools)
+10. [Have control mechanisms been defined to maintain security in the project?](/en/plan/security_checkpoints)
 
 ## Design
-
-1. <Link to="/en/design/security_requirements">Is it clear what security requirements apply to the solution?</Link>
-    1. Standard requirements
-    2. Customer requirements
-    3. Legal requirements
-2. <Link to="/en/design/system_diagrams">Are the following system sketches and diagrams created?</Link>
-    * This is important documentation for assessing risk and potential threats that may affect the solution, and also in connection with onboarding team members or handover.
-    1. Overall system sketch with the most important logical components
-    2. Detailed network sketch with resources, services, and network
-    3. Data flow diagram
-    4. IAM diagram
-    5. Key dependencies – other systems, services, resources, on-prem/cloud
-3. <Link to="/en/design/segregation_of_environments">How will the segregation of environments be handled?</Link>
-4. <Link to="/en/design/authentication_and_authorization">How is authentication and authorization handled?</Link>
-5. <Link to="/en/design/threat_modelling">Has threat modeling been carried out for the solution?</Link> Does the team have routines for
-    1. Regular updating of the threat model
-    2. Follow-up of findings
-    3. Risk mitigation?
-    4. Is it clear who owns the risk and responsibility - what risk can be accepted?
-        * If the total risk exceeds a certain limit, the team should consider a dedicated period to reduce the risk to an acceptable level.
-6. <Link to="/en/design/competence_building">What is the need for skill development within the team</Link>, and is there a plan for how this will be handled?
+1. [Is it clear what security requirements apply to the solution?](/en/design/security_requirements)
+2. [Have the necessary sketches/diagrams of the system been created and updated?](/en/design/system_diagrams)
+3. [Does the team have the necessary overview of the network the system uses?](/en/design/system_diagrams)
+4. [Are the environments segregated to reduce exposure in the event of incidents?](/en/design/segregation_of_environments)
+5. [Has necessary authentication been set up for accessing the system?](/en/design/authentication_and_authorization)
+6. [Has necessary authorization been set up for actions in the system?](/en/design/authentication_and_authorization)
+7. [Has threat modeling of the solution been conducted?](/en/design/threat_modelling)
+8. [Does the team have the necessary expertise for the project?](/en/design/competence_building)
 
 ## Develop
-
-1. <Link to="/en/develop/development_environment">Are the development environments well described?</Link>
-    1. Are dedicated dev servers/dev boxes, laptops, others used?
-        * Does the team have a contact point with the supplier of these?
-    2. Is the setup well documented, to avoid errors or weaknesses due to misconfiguration?
-        * Applies to both development environment and runtime environment.
-2. <Link to="/en/develop/secrets">How are secrets, keys, connection strings, and similar handled?</Link>
-    1. Is the source code scanned for these?
-    2. Are secrets rotated at regular intervals?
-    3. Has the team checked that cryptographic keys and hash algorithms follow current best practice?
-3. <Link to="/en/develop/data_validation">How is data validation handled for data retrieved from other systems?</Link>
-4. <Link to="/en/develop/security_practices">Has the team implemented any routines to protect against common attack types, e.g., as described in OWASP Top 10?</Link>
-5. <Link to="/en/develop/software_supply_chain">How does the team assess and protect against software supply chain attacks?</Link>
-    1. Are assessments made regarding using a dependency vs. creating it themselves?
-6. <Link to="/en/Develop/Internal_Components">Does the application require third-party software that the team must manage?</Link> E.g., web servers, messaging services, other types of server components?
-    1. Does the team have a routine for keeping these updated?
-    2. Are these included in any threat assessments?
-7. <Link to="/en/Develop/Security_Testing">Does the team have a routine for security testing, or is this validated in other ways?</Link>
-    1. SAST
-    2. DAST
-8. <Link to="/en/develop/documentation">How does the team handle documentation?</Link>
-    1. What is documented beyond the basics in this checklist?
-    2. Where is the documentation stored?
-    3. Does the team have a routine for keeping documentation updated?
+1. [Are the development environments well described?](/en/develop/development_environment)
+2. [Are secrets and similar items handled according to best practices?](/en/develop/secrets)
+3. [Is data from other systems validated?](/en/develop/data_validation)
+4. [Are there routines to protect against today’s most common attack types?](/en/develop/security_practices)
+5. [Are there routines to protect against software supply chain attacks?](/en/develop/software_supply_chain)
+6. [Are there routines to secure internal components operated by the team?](/en/develop/internal_components)
+7. [Is security analyzed through testing or other forms of analysis?](/en/develop/security_testing)
+8. [Is necessary information about the system documented, updated, and stored securely?](/en/develop/documentation)
 
 ## Deploy
+1. [Have automated security measures been set up?](/en/deploy/cicd)
+2. [Does the team have procedures to secure the build environment?](/en/deploy/build)
+3. [Is a review conducted before deployment?](/en/deploy/deploy)
+4. [Is penetration testing planned in connection with deployment?](/en/deploy/pentest)
 
-1. <Link to="/en/deploy/cicd">How is the solution built and deployed?</Link>
-    1. When using pipelines, are these subject to the same regime as the application code in terms of change management?
-    2. <Link to="/en/deploy/build">Does the team have a relationship with securing the build environment?</Link>
-    3. <Link to="/en/deploy/deploy">Is a review conducted before deployment?</Link>
-2. <Link to="/en/deploy/pentest">Is penetration testing planned in connection with deployment?</Link>
-
-## Manage
-
-1. <Link to="/en/manage/verify_design">Has the team verified that the network diagram is correctly implemented?</Link>
-    1. That expected ports are open to specified IP addresses
-    2. That there are no unexpected or unnecessary ports or services exposed?
-    3. That traffic is correctly filtered by the firewall towards the solution?
-2. <Link to="/en/manage/audit">If the customer or others require an audit of the solution, has the team planned how this can be conducted?</Link>
-    * Such testing should be able to be conducted on real data, but preferably in a separate isolated environment.
-3. <Link to="/en/manage/logging_monitoring">Logging is important if an incident occurs.</Link> Does the team have control over
-    1. Logging sufficient information to detect incidents – NB: Remember GDPR
+## Operate
+1. [Has the team verified that the network diagram is correctly implemented?](/en/manage/verify_design)
+2. [If the customer or others require an audit of the solution, has the team planned how this can be carried out?](/en/manage/audit)
+3. [Has the necessary logging been set up to detect and get an overview of unwanted incidents?](/en/manage/logging_monitoring)
+4. [Are logs stored so that they cannot be tampered with?](/en/manage/logging_monitoring)
+5. [Does the team have a routine to protect against vulnerable dependencies?](/en/manage/dependency_management)
+6. [Does the team have a routine for practicing system recovery?](/en/manage/preparedness)
+7. [Does the team have a procedure for incident handling and a contingency plan if the solution is attacked or goes down?](/en/manage/contingency_planning_and_incident_management)
