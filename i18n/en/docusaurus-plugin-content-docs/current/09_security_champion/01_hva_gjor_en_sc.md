@@ -18,10 +18,8 @@ There are many ways to implement a Security Champion program; OWASP has a [relat
 
 # What does a Security Champion do?
 
-This will vary between regions, units, and teams, but largely it is up to each Security Champion to decide how much they can engage beyond their own project. We have a general Slack channel for Security Champions, as well as several regions with their own Slack channels:
-* General: `#security-champions`
-* Rogaland: `#security-champions-rogaland`
-  * Haugesund: `#hgsd-security-champions`
+This will vary between regions, units, and teams, but largely it is up to each Security Champion to decide how much they can engage beyond their own project. The Slack channel ```#security-champions``` is used to announce events, share useful information and anything else related to Security Champions in Bouvet.  
+
 
 In addition, many use the Slack channel `#sikkerhet` to share news, ask questions, or post tips and tricks. Some regions also have regular meetings for all Security Champions, in addition to arranging courses, meetups, lectures, and much more.
 

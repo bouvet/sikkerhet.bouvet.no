@@ -11,10 +11,7 @@ Begrepet "Security Champion" har etterhvert blitt et etablert begrep for å favn
 Det finnes mange måter å implementere et Security Champion-program på; OWASP har en [forholdsvis utfyllende liste](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/) med punkter for et program der Security Champions har en mer formell rolle. I Bouvet har vi valgt en annen løsning inspirert av [NAV](https://sikkerhet.nav.no/docs/bli-security-champion/) og [Equinor](https://equinor.github.io/appsec/security-champion/) der det hele er mer uformellt, og hver enkelt kan bidra med det en kan og har kapasitet til. 
 
 # Hva gjør en Security Champion?
-Her vil det variere mellom regioner, enheter og team, men i stor grad er det opp til hver enkelt Security Champion å vurdere hvor mye en kan engasjere seg utover eget prosjekt. Vi har en felleskanal på Slack for Security Champions, i tillegg til at flere regioner har egne Slack-kanaler:
-* Felles: ```#security-champions```
-* Rogaland: ```#security-champions-rogaland```
-  * Haugesund: ```#hgsd-security-champions``` 
+Her vil det variere mellom regioner, enheter og team, men i stor grad er det opp til hver enkelt Security Champion å vurdere hvor mye en kan engasjere seg utover eget prosjekt. Slack-kanalen ```#security-champions``` brukes for å annonsere eventer, dele nyttig informasjon og liknende som angår Security Champions i Bouvet.  
 
 I tillegg er det mange som bruker Slack-kanalen ```#sikkerhet``` for å dele nyheter, stille spørsmål eller poste tips og triks. Noen regioner har også faste samlinger for alle Security Champions, i tillegg til at det arrangeres kurs, meetups, foredrag og mye annet. 
 
