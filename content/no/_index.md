@@ -32,25 +32,25 @@ description: >
     <div class="dev-ops-links-backdrop" />
     <h2 class="row devops-links-header">Hva ser du etter?</h2>
     <div class="devops-links">
-        <a href="no/introduksjon">
+        <a href="introduksjon">
             Introduksjon
         </a>
-        <a href="no/planlegge/">
+        <a href="planlegge/">
             Planlegge
         </a>
-        <a href="no/designe/">
+        <a href="designe/">
             Designe
         </a>
-        <a href="no/utvikle/">
+        <a href="utvikle/">
             Utvikle
         </a>
-        <a href="no/deploye">
+        <a href="deploye">
             Deploye
         </a>
-        <a href="no/forvalte/">
+        <a href="forvalte/">
             Forvalte
         </a>
-        <a href="no/security-champion/">
+        <a href="security-champion/">
             Security Champions
         </a>
     </div>
