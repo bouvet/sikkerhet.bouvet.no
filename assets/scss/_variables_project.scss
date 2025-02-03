@@ -1,0 +1,105 @@
+/*
+
+Add styles or override variables from the theme here.
+
+*/
+$bouvet-blue: #11133c;
+$bouvet-lightblue: #e5ecf1;
+$bouvet-beige: #fcf8f3;
+
+
+// Add this to an existing SCSS file
+.tip-box {
+    border-left: 4px solid #28a745; /* Green border */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.important-box {
+    border-left: 4px solid #FFC552; 
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.caution-box {
+    border-left: 4px solid #FF1F52; 
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.tip-box strong, .important-box strong, .caution-box strong {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+figure img {
+    max-width: 800px !important;
+}
+
+.devops-links-header {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+.devops-links {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.devops-links a {
+    color: var(--bouvet-blue);
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #000;
+    color: var(--bouvet-blue);
+    cursor: pointer;
+    padding: .6rem 1.8rem;
+}
+
+.devops-links a:hover {
+    color: $bouvet-beige;
+    background-color: $bouvet-blue;
+}
+
+@media only screen and (min-width: 480px) {
+    .devops-links {
+      gap: 0.2rem;
+    }
+}
+
+.dev-ops-links-backdrop{
+    margin-bottom: 4rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    @media only screen and (min-width: 480px) {
+        margin-right: 3rem;
+    }
+}
+  
+.quote {
+font-weight: bold !important;
+}
+
+.illustration {
+margin-bottom: 2rem;
+max-height: 20vh;
+}
