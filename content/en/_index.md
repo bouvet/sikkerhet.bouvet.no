@@ -26,25 +26,25 @@ description: >
     <div class="dev-ops-links-backdrop" />
     <h2 class="row devops-links-header">What are you looking for?</h2>
     <div class="devops-links">
-        <a href="">
+        <a href="introduction">
             Introduction
         </a>
-        <a href="">
+        <a href="plan">
             Plan
         </a>
-        <a href="">
+        <a href="design">
             Design
         </a>
-        <a href="">
+        <a href="develop">
             Develop
         </a>
-        <a href="">
+        <a href="deploy">
             Deploy
         </a>
-        <a href="">
+        <a href="manage">
             Manage
         </a>
-        <a href="">
+        <a href="security-champion">
             Security Champions
         </a>
     </div>
