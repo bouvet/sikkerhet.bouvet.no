@@ -17,6 +17,6 @@ menu:
         </p>
     </div>
     <div class="column">
-        <img alt="DevOps process diagram - Plan" src="/devops_plan.svg"/>
+        <img src="./p_planning.png" />
     </div>
 </div>

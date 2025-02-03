@@ -11,7 +11,7 @@ All development teams use various tools in the development process, and the sele
 A typical team will use some form of
 * [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 * a version control system for the code, typically _git_
-* a tool for [CI/CD](deploy/cicd) that can perform various tasks related to building, testing, or deployment
+* a tool for [CI/CD]({{< ref "deploy/cicd.md" >}}) that can perform various tasks related to building, testing, or deployment
 * other services managed or consumed by the team, e.g., messaging services, file transfer services, or similar
 
 These tools can significantly impact security and quality in deliveries, so it is important that the team considers how these are configured.
@@ -24,7 +24,7 @@ As with everything else downloaded and run from the internet, we must consider t
 ## Version Control
 Version control provides excellent control over all changes, but it is important that we use the tool properly.
 
-Remember that source code is part of the project and must be considered in relation to [disaster recovery and backups](plan/business-continuity/)!
+Remember that source code is part of the project and must be considered in relation to [disaster recovery and backups]({{< ref "plan/business-continuity.md" >}})!
 
 ### Security in the Source Code System
 Many rely on solutions like Azure DevOps, GitHub, or similar that handle access control, reviews, and other functions related to confidentiality and integrity of the source code.
@@ -53,12 +53,12 @@ A tip is to use [pre-commit](https://pre-commit.com) to run all linting, formatt
 
 
 ## CI/CD
-A good [CI/CD system (Continuous Integration / Continuous Deployment)](deploy/cicd) can be used to significantly increase the security of the final product by automating various checks and tests that ensure the quality of the delivery.
+A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< ref "deploy/cicd.md" >}}) can be used to significantly increase the security of the final product by automating various checks and tests that ensure the quality of the delivery.
 
 Be aware that several of the points below require additional software. We currently do not have shared licenses for developers at Bouvet; this must be managed by each project depending on needs and requirements. If the team handles this on its own, be aware of license conditions and how tools work. Some tools, for example, send source code to their own servers for analysis, which is generally not allowed unless agreed upon with the customer.
 
 ### Software Composition Analysis (SCA)
-[Software composition analysis (SCA)](develop/software-supply-chain/) can be set up automatically as part of CI/CD. We have many dependencies on components made by others, so it is important to keep track of existing and newly discovered vulnerabilities in what we create.
+[Software composition analysis (SCA)]({{< ref "develop/software-supply-chain.md" >}}) can be set up automatically as part of CI/CD. We have many dependencies on components made by others, so it is important to keep track of existing and newly discovered vulnerabilities in what we create.
 
 ### Testing
 Running tests in CI is beneficial for several reasons, but from a security perspective, there are specific tests that should be included.
@@ -68,10 +68,10 @@ Running tests in CI is beneficial for several reasons, but from a security persp
 * Test for strict [JWT validation](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens)
 
 ### Static Application Security Testing (SAST)
-[Static application security testing (SAST)](develop/security-testing/#static-application-security-testing-sast) should be configured to run automatically as part of CI/CD. Consider whether a build should fail if the static code analysis detects serious weaknesses in the code or low test coverage.
+[Static application security testing (SAST)]({{< ref "develop/security-testing/#static-application-security-testing-sast.md" >}}) should be configured to run automatically as part of CI/CD. Consider whether a build should fail if the static code analysis detects serious weaknesses in the code or low test coverage.
 
 ### Secret Scanning
-[Secret scanning](develop/secrets/) - passwords, keys, and other sensitive information that should not be in the source code is an important tool that can be implemented in the version control system and in CI/CD. Some tools only provide alerts when secrets are found, while others can also invalidate the secrets in the services they are meant for.
+[Secret scanning]({{< ref "develop/secrets.md" >}}) - passwords, keys, and other sensitive information that should not be in the source code is an important tool that can be implemented in the version control system and in CI/CD. Some tools only provide alerts when secrets are found, while others can also invalidate the secrets in the services they are meant for.
 
 ## More Information
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)

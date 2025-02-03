@@ -7,7 +7,12 @@ $bouvet-blue: #11133c;
 $bouvet-lightblue: #e5ecf1;
 $bouvet-beige: #fcf8f3;
 
-
+nav.td-navbar{
+    background-color: $bouvet-blue !important;
+}
+a.nav-link {
+    color: #fff;
+}
 // Add this to an existing SCSS file
 .tip-box {
     border-left: 4px solid #28a745; /* Green border */

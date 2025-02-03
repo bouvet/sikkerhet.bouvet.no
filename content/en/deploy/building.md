@@ -16,7 +16,7 @@ Self-hosted agents are more complex because you are responsible for all maintena
 
 Although the first option is often good enough, it is important to be aware of the possibilities that exist and when to consider them. Regardless of the solution, it is important to remember that the build environment is a very vulnerable point; if compromised, an attacker could potentially make changes that affect _everything_ built there.
 
-This is especially important when using [third-party packages](develop/software-supply-chain/), and a minimum here should be that packages are pinned to specific versions and that you never fetch the latest version of a package automatically.
+This is especially important when using [third-party packages]({{< ref "develop/software-supply-chain.md" >}}), and a minimum here should be that packages are pinned to specific versions and that you never fetch the latest version of a package automatically.
 
 ## More Information
 * [Microsoft: Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)

@@ -20,7 +20,7 @@ You can start by asking yourself a few questions:
 
 As you begin to create awareness, you can move on to find out more. Now you can start taking some initiative in your team.
 
-* A good starting point is to organize a threat modeling exercise. You don't need to know anything about threat modeling, but you can get some support [here](design/threat-modelling/) and on the [Threatmodeling manifesto website](https://www.threatmodelingmanifesto.org). The goal of this threat modeling is for you and your team to become aware of threats and perhaps start the thought process around countermeasures.
+* A good starting point is to organize a threat modeling exercise. You don't need to know anything about threat modeling, but you can get some support [here]({{< ref "design/threat-modelling.md" >}}) and on the [Threatmodeling manifesto website](https://www.threatmodelingmanifesto.org). The goal of this threat modeling is for you and your team to become aware of threats and perhaps start the thought process around countermeasures.
 
 * Consider establishing a bug bounty program (rewarding for finding bugs) or something that gets your team actively involved in finding challenges that should/must be solved.
 
@@ -56,4 +56,4 @@ Based on the ethics taught in the military, we get some clever questions we can 
 
 ### 4. Technical Review of Solutions
 
-Now it's time to look at a classic called OWASP Top 10 and make sure we have avoided these mistakes, but this is basic. To really have control over the code and solutions, we need to tackle other measures - you can find several of these described in the [article on security practices](develop/security-practices/)
+Now it's time to look at a classic called OWASP Top 10 and make sure we have avoided these mistakes, but this is basic. To really have control over the code and solutions, we need to tackle other measures - you can find several of these described in the [article on security practices]({{< ref "develop/security-practices.md" >}})

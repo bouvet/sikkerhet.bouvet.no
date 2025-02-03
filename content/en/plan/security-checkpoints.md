@@ -15,7 +15,7 @@ These can be defined between logical phases in the project, for example, between
 [In a study by IBM](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) it was determined that defects in applications developed for the U.S. military cost significantly less to fix early in the process compared to later.  
 
 By implementing security checkpoints, it becomes easier to catch weaknesses early and to ensure compliance with security and quality requirements. A typical practice using checkpoints could include
-* creating a [design](design/system-diagrams-and-drawings/) of the project before the development cycle starts
+* creating a [design]({{< ref "design/system-diagrams-and-drawings.md" >}}) of the project before the development cycle starts
 * the implementation should always follow the design
 * verification that the design and implementation actually match before going into production
 

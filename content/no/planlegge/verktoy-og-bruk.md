@@ -11,7 +11,7 @@ Alle utviklingsteam benytter ulike verktøy i utviklingsprosessen, og utvalget v
 Et typisk team vil benytte seg av en eller annen form for
 * [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 * et system for versjonskontroll av koden, typisk _git_
-* et verktøy for [CI/CD](no/deploye/cicd) som kan utføre ulike oppgaver relatert til bygging, testing eller deployment
+* et verktøy for [CI/CD]({{< ref "deploye/cicd.md" >}}) som kan utføre ulike oppgaver relatert til bygging, testing eller deployment
 * andre tjenester driftet eller konsumert av teamet, f.eks. meldingstjenester, filoverføringstjenester, generativ AI (copilots) eller liknende
 
 Disse verktøyene kan ha stor betydning for sikkerhet og kvalitet i leveranser, så det er viktig at teamet har et forhold til hvordan disse settes opp. 
@@ -24,7 +24,7 @@ I likhet med alt annet som lastes ned og kjøres fra internett må vi ha et forh
 ## Versjonskontroll
 Versjonskontroll gir kjempekontroll over alle endringer, men det er viktig at vi bruker verktøyet på en god måte. 
 
-Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups](03_business_continuity.md)!
+Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< ref "business-continuity.md" >}})!
 
 ### Sikkerhet i kildekodesystemet
 Mange baserer seg på løsninger som Azure DevOps, Github eller liknende som håndterer tilgangsstyring, reviews og en del andre funksjoner knyttet til konfidensialitet og integritet mot kildekoden. 
@@ -54,7 +54,7 @@ Et tips er å bruke [pre-commit](https://pre-commit.com) til å kjøre alt av li
 {{< /tip >}}
 
 ## CI/CD
-Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)](deploye/cicd) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
+Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)]({{< ref "deploye/cicd.md" >}}) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
 
 Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag ingen felleslisenser for utviklere i Bouvet, dette må gås opp per prosjekt avhengig av behov og krav. Dersom teamet håndterer dette på egenhånd, vær obs på lisensbetingelser og hvordan verktøy fungerer. Noen verktøy sender eksempelvis kildekode til egne servere for analyse, dette er i utgangspunktet ikke tillatt med mindre det på forhånd er avklart med kunden.
 

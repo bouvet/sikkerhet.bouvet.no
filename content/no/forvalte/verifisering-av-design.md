@@ -7,7 +7,7 @@ description: >
 ---
 
 
-Når vi lager et [design](designe/systemskisser) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
+Når vi lager et [design]({{< ref "designe/systemskisser.md" >}}) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
 
 Dokumentasjonen er viktig for å forstå hvordan en løsning er satt opp og hvordan den fungerer, spesielt om det oppstår en hendelse som krever redeployment eller disaster recovery. For å sikre at gapet mellom dokumentasjon og ferdig produkt ikke er for stort bør vi derfor alltid validere designet i etterkant. 
 
