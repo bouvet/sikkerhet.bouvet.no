@@ -16,7 +16,7 @@ Dersom dette ikke tas hensyn til kan det få konsekvenser, både for kundeforhol
 {{< /caution >}}
 
 ## Testmiljø
-Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt](/designe/segregering) kan en risikere å påvirke andre miljø enn tiltenkt.
+Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt](designe/segregering) kan en risikere å påvirke andre miljø enn tiltenkt.
 
 En god løsning, spesielt dersom en bruker infrastruktur-som-kode (IAC) er å ha en pipeline som deployer et eget miljø som kan brukes for sikkerhetstesting. Dersom dette designes inn i leveransen fra starten, vil det ofte være enkelt å sette opp miljø som er identiske med produksjonsmiljøet, der en også kan kopiere databaser og eventuelt kjøre anonymiseringsprosesser mot dataene. 
 

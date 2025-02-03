@@ -18,7 +18,7 @@ Disse kan defineres mellom logiske faser i prosjektet, eksempelvis mellom design
 IBM har [i en studie](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) fastslått at generelle svakheter i applikasjoner utviklet for det amerikanske forsvaret kostet langt mindre å utbedre jo tidligere de ble oppdaget. 
 
 Ved å ta i bruk sikkerhetskontrollpunkt er det ikke bare lettere å sikre etterlevelse av sikkerhet- og kvalitetskrav, men også lettere å sikre at en fanger opp svakheter tidlig. En vanlig praksis der slike kontrollpunkt benyttes er at det eksempelvis 
-* skal foreligge et [design](/designe/systemskisser) av prosjektet før utviklingsløpet starter
+* skal foreligge et [design](designe/systemskisser) av prosjektet før utviklingsløpet starter
 * at implementasjonen skal følge designet
 * og at en har verifisert at design og implementasjon faktisk matcher før en kan gå i produksjon
 

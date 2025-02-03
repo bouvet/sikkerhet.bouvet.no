@@ -23,7 +23,7 @@ Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke f�
 
 ## 2. Har vi kontroll på hele prosjektet vårt?
 
-Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Vi har laget en sjekkliste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i; alle leveranseteamene våre bør ha et forhold til punktene i denne og hvilken risiko de utgjør dersom en ikke innfører nyttige tiltak. Listen [finner du her.](/no/sjekklisten)
+Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Vi har laget en sjekkliste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i; alle leveranseteamene våre bør ha et forhold til punktene i denne og hvilken risiko de utgjør dersom en ikke innfører nyttige tiltak. Listen [finner du her.](no/sjekklisten)
 
 Går man gjennom den listen får man støtte til å få kontroll på blant annet:
 * Ansvar og rutiner
@@ -52,6 +52,6 @@ Basert på etikken som læres bort i forsvaret får vi noen lure spørsmål vi k
 
 ### 4. Teknisk gjennomgang av løsninger
 
-Her er det på tide å se på en klassiker som heter OWASP Top 10 og sørge for at vi har unngått disse tabbene, men dette er basic. Skal vi virkelig har kontroll på koden og løsningene må vi gå løs på andre tiltak - du finner flere av disse beskrevet under [artikkelen om sikkerhetspraksiser](/utvikle/sikkerhetspraksiser).
+Her er det på tide å se på en klassiker som heter OWASP Top 10 og sørge for at vi har unngått disse tabbene, men dette er basic. Skal vi virkelig har kontroll på koden og løsningene må vi gå løs på andre tiltak - du finner flere av disse beskrevet under [artikkelen om sikkerhetspraksiser](utvikle/sikkerhetspraksiser).
 
 Uavhengig av din bakgrunn (utvikler, tester, prosjektleder osv) kan punkt 1, 2 og 3 gjøres av alle.

@@ -14,7 +14,7 @@ Det er mange årsaker til at vi må dokumentere løsningen vi bygger; den mest �
 Prosjektet må finne en løsning for hvor dokumentasjon oppbevares som gir mening i prosjektet. Husk at god dokumentasjon er like sensitivt som kildekoden, og må behandles deretter. I mange tilfeller kan det være lurt med verktøy som støtter versjonskontroll - i mange tilfeller kan det være lurt å legge dokumentasjon sammen med kildekoden, eller evt i egne repos som kan brukes f.eks. med Azure DevOps wiki. 
 
 ## Hva skal dokumenteres
-Hva vi bør dokumentere vil variere fra prosjekt til prosjekt. Vi bør alltid ha et [design](/designe/systemskisser) som gir et innblikk i eksempelvis infrastruktur, IAM og dataflyt slik at det er mulig å ettergå dette på senere tidspunkt. 
+Hva vi bør dokumentere vil variere fra prosjekt til prosjekt. Vi bør alltid ha et [design](designe/systemskisser) som gir et innblikk i eksempelvis infrastruktur, IAM og dataflyt slik at det er mulig å ettergå dette på senere tidspunkt. 
 
 Trusselmodell må alltid dokumenteres og vedlikeholdes, og eventuelle mitigerende tiltak må også dokumenteres. 
 

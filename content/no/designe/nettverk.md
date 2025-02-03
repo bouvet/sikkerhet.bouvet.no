@@ -61,7 +61,7 @@ Send all utgående trafikk gjennom en egen proxytjeneste som blokkerer alt som s
 
 ## Konfigurasjon
 
-Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](/planlegge/verktoy-og-bruk/).
+Konfigurasjon av nettverk bør automatiseres i så stor grad som mulig, helst ved bruk av et [CI/CD-system](planlegge/verktoy-og-bruk/).
 
 - Begrens hvem som kan konfigurere både nettverket og nettverksregler direkte
     - Sett opp Just-in-time (JIT)-tilgang der det er mulig
