@@ -3,7 +3,7 @@ name: Build and Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your primary branch
+      - '*'  # or your primary branch
 
 permissions:
   contents: write
