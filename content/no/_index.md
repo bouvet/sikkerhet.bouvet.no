@@ -24,7 +24,7 @@ description: >
         </p>
     </div>
     <div class="column quote">
-        <img class="column quote illustration" alt="Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene" src="/quote-illustration.svg"/>
+        <img class="column quote illustration" alt="Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene" src="quote-illustration.svg"/>
         <p class="column quote">"Vi skal gjøre vårt ytterste for å levere de sikreste tjenestene og løsningene"</p>
     </div>
 </div>

@@ -8,7 +8,7 @@ description: >
 
 It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each team and delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
-Download [the checklist](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet.no/main/docs/checklist.md) and implement it as part of the source code in your project!
+Download the checklist and implement it as part of the source code in your project!
 
 ## Plan
 1. [Is it clear what responsibilities we have in the delivery, and is the rest of the responsibility clearly allocated?]({{< ref "plan/roles-and-responsibilities.md" >}})

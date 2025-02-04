@@ -17,6 +17,6 @@ menu:
         </p>
     </div>
     <div class="column">
-        <img src="./p_sc.png" />
+        <img src="./p_sc.png" width="70%"/>
     </div>
 </div>

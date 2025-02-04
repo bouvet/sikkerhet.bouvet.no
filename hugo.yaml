@@ -46,14 +46,14 @@ imaging:
 languages:
   en:
     languageName: English
-    title: sikkerhet.bouvet.no
+    title: Sikkerhet.bouvet.no - For Security Champions in Bouvet
     params:
       description: sikkerhet.bouvet.no is a resource for Security Champions at Bouvet
   # cSpell:disable
   'no':
     languageName: Norsk
     contentDir: content/no
-    title: sikkerhet.bouvet.no
+    title: Sikkerhet.bouvet.no - For Security Champions i Bouvet
     params:
       description: sikkerhet.bouvet.no er en ressurs for Security Champions i Bouvet
       time_format_default: 02.01.2006

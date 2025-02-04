@@ -17,7 +17,7 @@ description: >
         </p>
     </div>
     <div class="column quote">
-        <img class="column quote illustration" alt="We will do our utmost to deliver the safest services and solutions" src="/quote-illustration.svg"/>
+        <img class="column quote illustration" alt="We will do our utmost to deliver the safest services and solutions" src="quote-illustration.svg"/>
         <p class="column quote">"We will do our utmost to deliver the safest services and solutions"</p>
     </div>
 </div>
