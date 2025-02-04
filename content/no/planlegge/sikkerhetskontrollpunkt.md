@@ -6,9 +6,6 @@ description: >
   Et sikkerhetskontrollpunkt er et kontrollpunkt underveis i et prosjekt der en setter krav som må oppfylles før en går videre. 
 ---
 
-{{< tip title="Kort oppsummert" >}}
-{{< /tip >}}
-
 Avhengig av sikkerhetsnivået en leveranse ønsker å legge seg på, kan det være nødvendig å definere mekanismer for å vurdere sikkerheten på faste punkter i utviklingsløpet, såkalte sikkerhetskontrollpunkt. 
 
 Disse kan defineres mellom logiske faser i prosjektet, eksempelvis mellom design og utviklingsfasene, eller når en går fra utvikling til første release i produksjon. Andre og flere kontrollpunkter kan også defineres, helt avhengig av kravene leveranseteamet må forholde seg til. 
