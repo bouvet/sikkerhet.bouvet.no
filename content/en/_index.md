@@ -4,7 +4,7 @@ weight: 1
 toc_hide: true
 hide_summary: true
 description: >
-  Page hidden from both the TOC menu and the section summary list.  
+  Sikkerhet.bouvet.no is used by system developers, infrastructure engineers, DevOps practitioners, and others in Bouvet to find information to support the operation, development, and maintenance of secure IT systems for our customers.
 ---
 
 <div class="frontpage">

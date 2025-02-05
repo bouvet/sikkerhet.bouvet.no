@@ -4,7 +4,7 @@ weight: 1
 toc_hide: true
 hide_summary: true
 description: >
-  Page hidden from both the TOC menu and the section summary list.  
+  Sikkerhet.bouvet.no brukes av systemutviklere, infrastruktur-ingeniører, DevOpsere og andre i Bouvet for å finne informasjon relatert til drift, utvikling og forvaltning av sikre IT-systemer for våre kunder.
 ---
 <div class="frontpage">
 <div class="row ingress" >
