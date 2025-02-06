@@ -168,6 +168,8 @@ params:
     readingtime:
       enable: false
 
+    showLightDarkModeMenu: true
+
   
 
   links:
