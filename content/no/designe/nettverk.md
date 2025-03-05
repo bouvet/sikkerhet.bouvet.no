@@ -3,10 +3,9 @@ title: "Nettverkskonsepter"
 weight: 2
 translationKey: network
 description: >
-  Introduksjon til ansvarsfordeling i leveranser - hva må vi ha klarhet i?
+  Nettverk er en grunnleggende komponent i alt vi lager, og det er viktig med en grunnleggende forståelse for hvordan dette fungerer og hvordan det kan utnyttes av andre. 
 ---
 
-Nettverk er en grunnleggende komponent i alt vi lager, og det er viktig med en grunnleggende forståelse for hvordan dette fungerer og hvordan det kan utnyttes av andre. 
 
 Riktig konfigurasjon av nettverk er viktig for både rene skyløsninger, hybride nettverk og rene on-prem-løsninger. Nettverk er et stort fagfelt, med store variasjoner i bruksområde, sikkerhet og kompleksitet. Under dekker vi grunnleggende konsepter for kommunikasjon til og fra servere og nettjenester.
 
