@@ -13,11 +13,15 @@ Regardless of how the project is executed, it is important that we are aware of 
 * Have contact points with all involved parties
 * Can follow up on deviations quickly so as to avoid misunderstandings or problems later in the project cycle
 
+{{< important title="Note" >}}
+The role <strong>delivery manager</strong> is responsible for security in the delivery, and is responsible for following up on any security concerns. 
+{{< /important >}}
+
 ## Operation and Management - Bouvet
 
 If we are responsible for the operation and management of the solution in our infrastructure, our certification for ISO 27001 - Information Security will apply to it. This means that we have a greater overall responsibility for the security of the solution, and it is important that the delivery team is aware of this.
 
-All resources managed by the delivery team must be handled in line with all other infrastructure in Bouvet, so the team must have routines for patching and maintenance or ensure that this is handled. Feel free to check with Internal IT & Security to see what they can deliver and thus manage on behalf of the team to simplify management.
+All resources managed by the delivery team must be handled in line with all other infrastructure in Bouvet, so the team must have routines for patching and maintenance or ensure that this is handled. Please note that any client resources and data requires their own backup regime - we don't want to mix customers or our own internal data. Feel free to contact Internal IT & Security to see what they can assist with to simplify delivery and management.
 
 [Bouvet's Statement of Applicability/Declaration of Application (SOA)](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) addresses various controls related to information security and how we should relate to them. The SOA can be found in the internal management system. If we take on responsibility for operation and management, your regional quality manager can assist with advice and guidance to ensure that all responsibilities are covered.
 
@@ -34,4 +38,5 @@ Document the roles and responsibilities and other relevant information in the so
 {{< /important >}}
 
 ## More information
+* [Bouvet: Leveranseansvarlig](https://wiki.bouvet.no/display/BLS/Leveranseansvarlig) (internal link, in Norwegian)
 * [Bouvet: Statement of Applicability](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) (internal link)
