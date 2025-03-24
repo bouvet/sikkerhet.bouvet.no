@@ -7,6 +7,15 @@ $bouvet-blue: #11133c;
 $bouvet-lightblue: #e5ecf1;
 $bouvet-beige: #fcf8f3;
 
+:root,
+[data-bs-theme="light"] {
+    --box-background: #dddddd;
+}
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --box-background: #666666;
+}
+
 nav.td-navbar{
     background-color: $bouvet-blue !important;
 }
@@ -16,7 +25,7 @@ a.nav-link {
 // Add this to an existing SCSS file
 .tip-box {
     border-left: 4px solid #28a745; /* Green border */
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: var(--box-background);
     padding: 10px 15px;
     margin: 20px 0;
     border-radius: 5px;
@@ -24,7 +33,7 @@ a.nav-link {
 
 .important-box {
     border-left: 4px solid #FFC552; 
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: var(--box-background);
     padding: 10px 15px;
     margin: 20px 0;
     border-radius: 5px;
@@ -32,7 +41,7 @@ a.nav-link {
 
 .caution-box {
     border-left: 4px solid #FF1F52; 
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: var(--box-background);
     padding: 10px 15px;
     margin: 20px 0;
     border-radius: 5px;
