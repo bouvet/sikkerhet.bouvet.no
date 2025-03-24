@@ -35,7 +35,7 @@ To protect the system against these threats, there are several effective measure
 ### Threat Model and Complexity
 In many cases, we depend on many packages that we do not use directly, so-called transitive dependencies. Each package in a solution represents an increase in complexity and attack surface, increasing the chance that something will go wrong at a later stage.
 
-![dependencies](dependencies.png)
+{{< figure src="../dependencies.png" >}}
 
 An important question everyone must ask is _"do we need this package?"_ What is the cost of creating the functionality ourselves compared to the risk and complexity associated with adding it?
 
