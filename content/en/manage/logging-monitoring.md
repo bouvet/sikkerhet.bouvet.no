@@ -20,7 +20,7 @@ The goal of logging has three primary purposes:
 ## What Should We Log?
 What we log will vary greatly depending on who the customer is, the risk and threat landscape they operate in, and their needs for log information. In some cases, the customer will have its own security organization, typically a Security Operations Center (SOC), responsible for monitoring networks and applications. They will then have requirements for what and how to log, but if this does not exist, we must define our own requirements to have a starting point.
 
-Below are some points that should be an absolute minimum, but the team must understand what is logged, why it is logged, and how this information relates to other requirements such as privacy.
+Below are some points that should be an absolute minimum, but the team must understand what is logged, why it is logged, and how this information relates to other requirements such as [privacy]({{< ref "plan/data-and-classification.md#privacy" >}}).
 
 ### Authentications and Failed Authentication Attempts
 If someone logs into the solution, this should be logged. This is especially important if it occurs from a place a user does not normally log in from, or if it happens with a different browser or client than usually seen.

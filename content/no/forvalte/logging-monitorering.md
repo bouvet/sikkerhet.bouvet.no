@@ -20,7 +20,7 @@ Målet med loggingen vil ha tre primære hensikter:
 ## Hva bør vi logge? 
 Hva vi logger vil variere veldig ut ifra hvem kunden er, risiko- og trusselbildet denne opererer i og hvilke behov de har for logginformasjon. I noen tilfeller vil kunden ha en egen sikkerhetsorganisasjon, typisk et Security Operations Center (SOC) som er ansvarlig for å monitorere nettverk og applikasjoner. Disse vil da ha krav til hva en logger og hvordan, men dersom dette ikke finnes må vi definere noen egne krav for å ha et utgangspunkt. 
 
-Under finner du noen punkter som bør være et absolutt minimum, men teamet må ha et forhold til hva som logges og hvorfor det logges, og hvordan denne informasjonen forholder seg til andre krav som eksempelvis personvern.
+Under finner du noen punkter som bør være et absolutt minimum, men teamet må ha et forhold til hva som logges og hvorfor det logges, og hvordan denne informasjonen forholder seg til andre krav som eksempelvis [personvern]({{< ref "planlegge/data-og-klassifisering.md#personvern" >}}).
 
 ### Autentiseringer og mislykkede autentiseringsforsøk
 Dersom noen logger seg på løsningen, bør dette logges. Dette er spesielt viktig dersom det skjer fra et sted en bruker normalt ikke logger seg på, eller dersom det skjer med en annen nettleser eller klient enn det man vanligvis ser. 
