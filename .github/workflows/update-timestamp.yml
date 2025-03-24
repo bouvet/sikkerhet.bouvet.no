@@ -1,0 +1,42 @@
+name: Update Last Modified Timestamp
+
+on:
+  push:
+    branches:
+      - main  # Adjust branch as needed
+
+jobs:
+  update-timestamps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          FILES=("content/en/checklist.md" "content/no/sjekklisten.md") 
+          MODIFIED_FILES=""
+          for FILE in "${FILES[@]}"; do
+            if git diff --name-only HEAD^ HEAD | grep -q "^$FILE$"; then
+              MODIFIED_FILES="$MODIFIED_FILES $FILE"
+            fi
+          done
+          echo "modified_files=$MODIFIED_FILES" >> $GITHUB_ENV
+
+      - name: Update Last Modified date
+        if: env.modified_files != ''
+        run: |
+          TODAY=$(date +"%d.%m.%Y")
+          for FILE in ${{ env.modified_files }}; do
+            sed -i "s/^Last Modified: .*/Last Modified: $TODAY/" "$FILE"
+            sed -i "s/^Sist endret: .*/Sist endret: $TODAY/" "$FILE"
+          done
+
+      - name: Commit and push changes
+        if: env.modified_files != ''
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "Updated Last Modified timestamp for changed files"
+          git push
