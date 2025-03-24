@@ -5,6 +5,7 @@ translationKey: checklist
 description: >
   Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility, and risk in deliveries, and all development teams should relate to its content unless otherwise agreed with the customer.
 ---
+Last Modified:
 
 It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each team and delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
