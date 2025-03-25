@@ -41,7 +41,7 @@ Mer informasjon og flere eksempler på angrepstrær finnes i artikkelen [Attack 
 Man starter med å lage et detaljert dataflytdiagram over systemet eller en del av systemet man skal trusselmodellering av.
 
 Når man har tegnet opp dataflyten og tillitsgrensene til systemet, så bruker man STRIDE for å identifisere trusler. STRIDE er et akronym for
-- **S**poofing - Kan man stole på at brukeren er man tror?
+- **S**poofing - Kan man stole på at brukeren er den man tror?
 - **T**ampering - Kan noen endre på data med vilje eller uforvarende?
 - **R**epudiation - Kan det bevises hvem som gjorde en gitt handling i systemet?
 - **I**nformation disclosure - Kan data stjeles eller komme på avveie?
