@@ -23,12 +23,21 @@ This needs to be clarified with the client at the start of the project to ensure
 ## Privacy
 If the delivery team is to handle personally sensitive information, it is important that the team familiarizes itself with the requirements surrounding this. The Norwegian Data Protection Authority has published a guide for ["Software development with built-in privacy" (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) which provides useful insight into the issue.
 
-Important points one must be aware of are that:
-* information should not be stored longer than the purpose of collecting it implies
-* certain types of information should not be registered under any circumstance
-* we must consider the use of-, and restrictions on using production data for testing 
-* users have the "right to be forgotten" where they can demand that personal information is deleted
-* we must deal with privacy also in the context of backup - we don't necessarily need to delete individuals from backups, but we must ensure that "the right to be forgotten" is maintained during a restore.
+{{< important title="Important" >}}
+Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries has to consider the definitions and requirements which follows from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
+{{< /important >}}
+
+The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GPDR has a number of requirements that define how PII can be used and for what. PII is defined as 
+
+<em>"any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person"</em>
+
+Privacy may look like a complex and difficult topic, but generally
+* Any piece of information that can be tied to an individual is PII
+* Any use of PII requires a valid basis for processing it
+* The data subject must consent to the use of the data
+* Data minimization is a requirement - do not collect information unless it is needed
+* The information should have an end-of-life - a date where you consider deleting it. Do not store it for longer than needed. 
+* The user has a right to be "forgotten" - also if you restore from a previous backup
 
 If we process this type of information on behalf of clients, they will normally require that we sign a data processing agreement. If this is not in place, it <u>must</u> be discussed with the client's representative.
 
@@ -42,3 +51,4 @@ This is especially important if development occurs in Bouvet's infrastructure bu
 ## More Information
 * [Datatilsynet: Programvareutvikling med innebygd personvern (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare (in Norwegian)](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
+* [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38) (in Norwegian)

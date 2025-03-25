@@ -35,7 +35,7 @@ For å beskytte systemet mot disse truslene er det flere effektive tiltak vi kan
 ### Trusselmodell og kompleksitet
 I mange tilfeller har vi avhengigheter til mange pakker som ikke brukes av oss direkte, såkalte transitive avhengigheter. Hver enkelt pakke vi avhenger av representerer en økning i kompleksitet og angrepsflate, og øker sjansen for at noe skjærer seg på et senere tidspunkt. 
 
-![dependencies](dependencies.png)
+{{< figure src="../dependencies.png" >}}
 
 Et viktig spørsmål alle må stille seg er _"trenger vi denne pakken?"_ Hva er kosten ved å lage funksjonaliteten selv sammenliknet med risikoen og kompleksiteten assosiert med å legge den til? 
 

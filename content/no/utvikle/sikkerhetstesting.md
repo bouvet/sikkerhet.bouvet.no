@@ -1,6 +1,6 @@
 ---
 title: "Sikkerhetstesting"
-weight: 6
+weight: 8
 translationKey: sectesting
 description: >
   På linje med annen elementer assosiert med teamet _kvalitet_ er vi avhengige av å kunne teste for å verifisere at vi har oppnådd målet. Sikkerhetstesting er et viktig ledd i dette, da vi gjennom testingen kan vise at leveransen ikke er sårbar for gitte angrepsmetoder.

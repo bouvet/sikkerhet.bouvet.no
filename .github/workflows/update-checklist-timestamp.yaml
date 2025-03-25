@@ -1,0 +1,42 @@
+name: Update checklist dates
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  update-dates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0  # So we can compare to HEAD^
+
+      - name: Set Git user identity
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Detect & update changed files
+        run: |
+          FILES=("content/en/checklist.md" "content/no/sjekklisten.md")
+          for FILE in "${FILES[@]}"; do
+            # Compare file between HEAD and HEAD^ 
+            if git diff --quiet HEAD^ -- "$FILE"; then
+              echo "$FILE unchanged, skipping."
+            else
+              echo "Updating $FILE"
+              LAST_MODIFIED=$(date +'%Y.%m.%d')
+              sed -i -E "s/^(Last modified:|Sist oppdatert:).*/\1 $LAST_MODIFIED/" "$FILE"
+              git add "$FILE"
+            fi
+          done
+          
+          # Commit if staged changes exist
+          git commit -m "Update last modified dates in checklist" || echo "No changes to commit."
+          git push origin HEAD

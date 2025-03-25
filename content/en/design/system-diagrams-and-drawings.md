@@ -34,7 +34,7 @@ This diagram should be a high-level introduction to the solution, showing all th
 {{< figure src="../overordnet_systemskisse.png" alt="Overordnet skisse">}}
 
 ### Network Diagram
-The goal of the network diagram is to show the network topology, with all the various virtual networks, subnets and resources or servers and firewall openings between them. 
+The goal of the network diagram is to show the network topology, with all the various virtual networks, subnets and resources or servers and firewall openings between them. A good network diagram visualizes the data flow between points for everyone to see, not just developers. 
 
 {{< figure src="../nettverksdiagram.png" alt="Nettverksdiagram">}}
 
@@ -48,6 +48,8 @@ The data flow diagram shows the data flow of the solution. This should include a
 {{< figure src="../dataflytdiagram.png" alt="Dataflytdiagram">}}
 
 ### IAM Diagram
+An IAM-diagram describes where users originate, and the roles and permissions assigned to users, services and devices on the various resources. 
+
 {{< figure src="../iam.png" alt="IAM-diagram">}}
 
 ### Dependencies

@@ -19,3 +19,6 @@ Radikale endringer i portalen skal ikke gjøres uten videre - sjekklista brukes 
 Endringer skal spilles inn via Github - vi kan ikke kompensere tid brukt på endringer, så om du ønsker å bidra må du enten gjøre det på egentid, eller spille det inn som et issue først slik at behov og muligheter kan avklares. 
 Bruk gjerne slackkanalen `#sikkerhet-bouvet-no` dersom du ønsker å lufte forslag og ikke er komfortabel med github. 
 
+# Kjøring
+
+Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes. 

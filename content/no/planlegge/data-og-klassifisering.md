@@ -29,14 +29,23 @@ Dette avklares med kunde i oppstarten av prosjektet slik at en kan sikre nødven
 ## Personvern
 Dersom leveranseteamet skal behandle personsensitive opplysninger, er det viktig at teamet setter seg inn i kravene rundt dette. Datatilsynet har publisert en egen veileder for ["Programvareutvikling med innebygd personvern"](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) som gir nyttig innblikk i problemstillingen. 
 
-Viktige punkter en er nødt å være klar over er at
-* informasjon ikke skal lagres lenger enn hensikten med å samle den inn tilsier
-* enkelte typer informasjon ikke skal registreres under noen omstendighet
-* vi må ha et forhold til bruk av produksjonsdata i testsammenheng og restriksjoner på dette
-* brukere har "retten til å bli glemt" der personinformasjon kan kreves slettet
-* vi må forholde oss til personvern også i backupsammenhenger - vi trenger ikke nødvendigvis å slette enkeltpersoner fra backup, men vi må sikre at "retten til å bli glemt" ivaretas ved en restore. 
+{{< important title="Viktig" >}}
+Norge er underlagt kravene i GDPR gjennom Personopplysningsloven, og det er viktig at leveransene har et forhold til en del krav og definisjoner i denne. Husk også at vi kan være underlagt databehandleravtaler som kan stille strengere krav enn lovverket!
+{{< /important >}}
 
-Dersom vi behandler denne type informasjon på vegne av kunder skal de normalt kreve at vi signerer en databehandleravtale. Dersom dette ikke er på plass <u>må</u> det følges opp mot kundeansvarlig. 
+Hensikten med GDPR er å sikre enkeltpersoners rettigheter ved å stille krav til hva personopplysninger kan brukes til samt hvilke, og hvordan disse kan brukes. Lovverket definerer personopplysninger som 
+
+<em>"enhver opplysning om en identifisert eller identifiserbar fysisk person («den registrerte»); en identifiserbar fysisk person er en person som direkte eller indirekte kan identifiseres, særlig ved hjelp av en identifikator, f.eks. et navn, et identifikasjonsnummer, lokaliseringsopplysninger, en nettidentifikator eller ett eller flere elementer som er spesifikke for nevnte fysiske persons fysiske, fysiologiske, genetiske, psykiske, økonomiske, kulturelle eller sosiale identitet"</em>
+
+Personvern kan virke komplekst og vanskelig, men i korte trekk så 
+* Er en personopplysning et informasjonsfragment som kan kobles til en bestemt person
+* Skal du ha behandlingsgrunnlag - hvorfor skal du behandle en personopplysning
+* Skal personen det gjelder gi sitt samtykke til at du kan behandle informasjonen
+* Du skal minimere mengden informasjon du henter inn - du skal kun samle inn det du trenger
+* Informasjonen skal ha en levetid - du skal ikke lagre data lenger enn nødvendig
+* Brukeren har retten til å bli glemt - også dersom du må restore fra en tidligere backup
+
+Dersom vi behandler denne type informasjon på vegne av kunder skal de normalt kreve at vi signerer en databehandleravtale. Dersom dette ikke er på plass <u>må</u> det følges opp mot leveranse- og kundeansvarlig. 
 
 # Data til bruk under utvikling og testing
 
@@ -49,3 +58,4 @@ Dette er spesielt viktig dersom utvikling skjer i Bouvets infrastruktur, men med
 # Veien videre
 * [Datatilsynet: Innebygd personvern](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
+* [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38)

@@ -1,6 +1,6 @@
 ---
 title: "Interne komponenter"
-weight: 8
+weight: 7
 translationKey: internalcomps
 description: >
   Dersom teamet avhenger av interne komponenter som servere, applikasjoner eller annet som driftes av teamet selv, må en ha en rutine for å holde disse oppdatert.  
@@ -25,5 +25,5 @@ Husk på at sikkerheten i en løsning aldri skal avhenge av ett enkelt tiltak; f
 Husk på at interne komponenter også må monitoreres. Selv om det er hyllevare må samme tiltak gjennomføres her også for å sikre at vi vet hva som skjer og at loggene er til å stole på og ikke kan manipuleres på linje med alt annet vi overvåker. 
 
 ## Veien videre
-* 
-* 
+* [IBM: Patch Management](https://www.ibm.com/think/topics/patch-management)
+* [NIST SP 800-40 Guide to Enterprise Patch Management Planning: Preventive Maintenance for Technology](https://csrc.nist.gov/pubs/sp/800/40/r4/final)

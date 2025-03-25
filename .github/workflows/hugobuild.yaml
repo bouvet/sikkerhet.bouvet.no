@@ -1,9 +1,7 @@
 name: Build and Deploy Hugo site to GitHub Pages
 
 on:
-  push:
-    branches:
-      - '*'  # or your primary branch
+  workflow_dispatch:
 
 permissions:
   contents: write
