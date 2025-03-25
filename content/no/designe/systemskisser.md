@@ -31,9 +31,13 @@ Diagrammene trenger ikke å være perfekte, eller inneholde alle tenkelige detal
 {{< /tip >}}
 
 ### Overordnet systemskisse
+Den overordnede systemskissen viser de viktigste komponentene, og hvordan disse forholder seg til hverandre. Viktige avhengigheter merkes, slik at det er lett å få et overblikk over systemene.
+
 {{< figure src="../overordnet_systemskisse.png" alt="Overordnet skisse">}}
 
 ### Netverksdiagram
+Målet med nettverksdiagrammet er å vise topologien, med alle virtuelle nettverk, subnett og ressurser og åpninger mellom disse. Et godt nettverksdiagram viser flyten mellom tjenester og enheter, slik at andre involverte kan danne seg et bilde av hvordan data flyter fra punkt til punkt. 
+
 {{< figure src="../nettverksdiagram.png" alt="Nettverksdiagram">}}
 
 {{< tip title="Husk:" >}}
@@ -41,13 +45,19 @@ Nettverksdiagram bør lages for alle miljø, slik at en får nødvendig informas
 {{< /tip >}}
 
 ### Dataflytdiagram
+Dataflytdiagrammet fokuserer primært på datakildene, og viser hvordan data flyter gjennom systemet. En kan også inkludere overordnet informasjon om hvordan data transformeres eller modifiseres, slik at det er enklere å gå opp eventuelle avvik i etterkant. 
+
 {{< figure src="../dataflytdiagram.png" alt="Dataflytdiagram">}}
 
 ### IAM-diagram
+Et IAM-diagram beskriver hvor brukerne kommer ifra, og hvilke roller som tildeles brukere og eventuelt tjenester eller enheter på de ulike ressursene. 
+
 {{< figure src="../iam.png" alt="IAM-diagram">}}
 
 
 ### Avhengigheter
+Dette kan tegnes som et diagram, men kan like gjerne være i form av en enkel liste. Denne oversikten bør beskrive alle direkte avhengigheter for prosjektet, med et kort sammendrag av hvordan den brukes og hvorfor. 
+
 * On-prem databaseserver _production-sql-01_
     * Bruker tre view vedlikeholdt av teamet
     * Data hentes inn via ADF
