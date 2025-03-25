@@ -25,4 +25,5 @@ Remember that the security of a solution should never depend on a single measure
 Remember that internal components must also be monitored. Even if it is off-the-shelf software, the same measures must be implemented here to ensure that we know what is happening and that the logs are trustworthy and cannot be manipulated, just like everything else we monitor.
 
 ## More Information
-* 
+* [IBM: Patch Management](https://www.ibm.com/think/topics/patch-management)
+* [NIST SP 800-40 Guide to Enterprise Patch Management Planning: Preventive Maintenance for Technology](https://csrc.nist.gov/pubs/sp/800/40/r4/final)
