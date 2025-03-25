@@ -1,6 +1,6 @@
 ---
 title: "Interne komponenter"
-weight: 8
+weight: 7
 translationKey: internalcomps
 description: >
   Dersom teamet avhenger av interne komponenter som servere, applikasjoner eller annet som driftes av teamet selv, må en ha en rutine for å holde disse oppdatert.  
