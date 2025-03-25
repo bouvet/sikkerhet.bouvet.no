@@ -24,4 +24,5 @@ When designing a new solution, we must consider how to separate the environments
 There are other approaches to this as well, but regardless of the solution the team chooses, it is important to consider the overall cost/benefit against the requirements to be met.
 
 ## More Information
+* [Network concepts]({{< ref "design/networking" >}})
 * [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://wiki.bouvet.no/display/BLS/Nettverkssikkerhet)

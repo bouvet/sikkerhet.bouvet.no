@@ -24,5 +24,6 @@ Når vi designer en ny løsning må vi derfor tenke på hvordan vi skiller mello
 Det finnes andre tilnærminger på dette også, men uansett hvilken løsning teamet går for er det viktig å se det totale bildet med kost/nytte opp mot kravene en må forholde seg til. 
 
 ## Veien videre
+* [Nettverkskonsepter]({{< ref "designe/nettverk" >}})
 * [ISO27001:2022 - Seksjon 8.22 - Segregation of networks - Krever Bouvetbruker](https://wiki.bouvet.no/display/BLS/Nettverkssikkerhet)
 
