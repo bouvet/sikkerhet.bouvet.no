@@ -13,9 +13,9 @@ description: >
 
 **Asymmetric encryption** Encryption using a public and private key. The sender can encrypt a message with the recipient’s public key, and the message can only be decrypted with the private key.
 
-**Authentication** Verifying that the user is who they claim to be.
+**Authentication** Verifying that the user is who they claim to be. Also known as _authn_
 
-**Authorization** Verifying that an authenticated user has permission to perform an action.
+**Authorization** Verifying that an authenticated user has permission to perform an action. Also known as _authz_
 
 **Availability** A core security principle in the CIA triad, referring to the accessibility of information when needed.
 
@@ -158,6 +158,8 @@ description: >
 
 ## S
 **Same-Origin Policy (SOP)** A fundamental web security mechanism restricting resource sharing to the same origin (protocol, host, and port).
+
+**Security Assertion Markup Language (SAML)** Open standard for authentication and authorization, typically between an identity provider and a service provider or application. 
 
 **Security Champion** An individual within a project who champions security best practices and awareness, though not necessarily an expert.
 

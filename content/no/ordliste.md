@@ -13,9 +13,9 @@ description: >
 
 **Asymmetrisk kryptering** Kryptering med åpen og privat nøkkel. Avsender kan kryptere en melding med mottakers åpne nøkkel, meldingen kan kun dekrypteres med den private nøkkelen. 
 
-**Autentisering** Å verifisere at brukeren er den hen utgir seg for å være
+**Autentisering** Å verifisere at brukeren er den hen utgir seg for å være. Ofte forkortet _authn_
 
-**Autorisering** Å verifisere at en autentisert bruker har tilgang til å utføre en handling
+**Autorisering** Å verifisere at en autentisert bruker har tilgang til å utføre en handling. Ofte forkortet _authz_
 
 ## B
 **Blacklisting** Prosess for å nekte spesifikke elementer, f.eks. tilgang til en ressurs fra gitte IP-adresser. Impliserer at alle andre har tilgang som standard. Bør ikke brukes, da det bryter med **Principle of least privilege**
@@ -155,6 +155,8 @@ description: >
 
 ## S
 **Same-origin Policy (SOP)** Grunnleggende mekanisme i sikkerhetsmodellen for WWW for å sikre at ressurser hentes fra samme origin; dvs kombinasjon av protokoll, host og port. 
+
+**Security Assertion Markup Language (SAML)** Åpen standard for utveksling av autentisering og autorisering mellom en identitetsleverandør (IDP) og en tjenesteleverandør eller applikasjon.
 
 **Security Champion** En person med interesse og engasjement innenfor sikkerhet. Ikke nødvendigvis en ekspert, men en person som bidrar til å fokusere på sikkerhet innad i et prosjekt. 
 
