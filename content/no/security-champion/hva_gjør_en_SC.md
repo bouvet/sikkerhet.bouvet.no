@@ -5,53 +5,38 @@ translationKey: hgsc
 description: >
   Gratulerer du har nå blitt en av de som jobber for å skape en bedre verden! Det vanskeligste er nå gjort, så nå skal vi bare å begynne med å ta små skritt i riktig retning.
 ---
-## 1. Skap bevissthet i leveranseteamet
-Du kan gjerne begynne med å stille deg selv noen spørsmål?
+## Hva gjør en Security Champion?
+Som Security Champion forventes det at du tar til deg ny kompetanse og holder deg oppdatert. Du er spydspissen på sikkerhet innefor leveransen og skal sammen med leveranseansvarlig passe på at vi leverer i henhold til Bouvets beste praksis - dokumentert med [sjekklista]({{< ref "sjekklisten.md" >}}) her på sikkerhet.bouvet.no.
 
-* Hva gjør dette prosjektet jeg jobber med egentlig?
-* Hva er kritisk for at systemet skal fungerer?
-* Hvordan kan dette systemet misbrukes, hvilke angrepsflater eksisterer i systemet?
-* Eksisterer det en oppdatert trusselmodell med dertil tiltak for å forhindre utnyttelse av svakhetene?
+Som Security Champion er det er ikke alltid enkelt å vite hvor man bør begynne. For å få en god start har vi forsøkt å oppsummere tre punkter du kan ta utgangspunkt i.
 
-Når du begynner å skape deg en bevissthet så kan vi gå videre å finne ut av mer. Nå kan du begynne å ta litt initiativ i teamet ditt.
+### Bli kjent med prosjektet
+Begynn med å stille deg selv noen spørsmål?
 
-* Et godt startsted er å organisere en trusselmodellerings-øvelse. Du trenger ikke kunne noe om trusselmodellering, men du kan få litt støtte her [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). Målet med denne trusselmodelleringen er at du og teamet skal få et bevisst forhold til trusler og kanskje få i gang tankeprosessen rundt mottiltak.
+* Hva er hensikten med prosjektet?
+* Har teamet noen eksisterende sikkerhetsrutiner eller dokumentasjon?
+* Hvordan kan dette produktet misbrukes, hvilke angrepsflater eller informasjon inneholder det?
 
-* Vurder å etablere et bug bounty program (premiering for å finne bugs) eller noe som får teamet ditt med på å aktive finne utfordringer som bør/må løses.
+Bruk gjerne [sjekklista]({{< ref "sjekklisten.md" >}}) som utgangspunkt for refleksjoner. Prat med de andre i teamet, og forsøk å finn ut hva teamet har gjort tidligere, og hvilken informasjon som er tilgjengelig. 
 
-Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke får med seg teamet får ofte ikke gjort så mye som han/hun ønsker.
+### Har vi kontroll på prosjektet vårt?
+[Sjekklista]({{< ref "sjekklisten.md" >}}) er Bouvets beste praksis for utviklingsprosjekter, og skal brukes såsant ikke leveransen eller kunden tilsier bruk av annet rammeverk. Har vi kontroll på punktene beskrevet i den - eller har vi gjort en vurdering av risiko dersom vi ser bort fra noen av punktene? 
 
-## 2. Har vi kontroll på hele prosjektet vårt?
+Dersom ja, bør du som Security Champion gå gjennom og gjøre deg kjent med informasjonen. Viktige momenter her er når den sist ble oppdatert eller revidert, og hvilke rutiner teamet har for å holde den oppdatert. Dersom nei, bør du som Security Champion prate med leveranseleder for å se hvordan dere i fellesskap kan etablere gode rutiner for å dokumentere samt revidere denne informasjonen jevnlig. 
 
-Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Vi har laget en sjekkliste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i; alle leveranseteamene våre bør ha et forhold til punktene i denne og hvilken risiko de utgjør dersom en ikke innfører nyttige tiltak. Listen [finner du her.](no/sjekklisten)
+Dere trenger ikke å løse alt på dag 1, det viktige er at dere kommer igang med arbeidet, og at eventuelle funn eller mangler tas opp i teamet, legges i backloggen og prioriteres med andre oppgaver som skal løses. 
 
-Går man gjennom den listen får man støtte til å få kontroll på blant annet:
-* Ansvar og rutiner
-* Tredjepartsprogramvare
-* Bygg og deploy av løsninger
-* Disaster recovery
-* Business Continuity
-* Infrastruktur
-* Kildekode
+### Etabler gode rutiner
+Det er ikke alle som har interesse av sikkerhetsarbeid - folk har ulike interesser og forutsetninger. Sikkerhet er imidlertid en viktig del av kvaliteten i håndtverket vi leverer, så det er viktig at teamet inkluderes i arbeidet og at det etableres gode rutiner som i minst mulig grad avhenger av enkeltpersoner. Du som Security Champion skal følge opp sikkerhetsspørsmål på vegne av teamet, og skal sikre at teamet får de svarene de trenger. 
 
-Husk du trenger ikke ta alt på en gang få med deg teamet og gjør del for del til dere har enda bedre kontroll på prosjektet. Du trenger ikke kunne alt om dette her men sammen i teamet ditt bør dere klare å finne ut av det.
+### Hva om sikkerhetsarbeidet stopper opp?
+Det kan være mange årsaker til at sikkerhetsarbeidet stopper opp - et vanlig eksempel er at kunden insisterer på å levere funksjonalitet først, sikkerhet "senere". På samme måte som med testing og UX  er sikkerhet en integrert del av utviklingsløpet - det er ikke noe en klatter på i etterkant - uten at det går utover kvalitet eller kost. 
 
-## 3. Beskytte brukere og bedriftens rykte
+Dersom sikkerhetsarbeidet stopper opp skal du som Security Champion først ta det opp med leveranseansvarlig, og deretter med din regionale kvalitetsleder dersom leveranseansvarlig er ute av stand til å påvirke situasjonen. Sikkerhetsarbeid er viktig - vi ønsker ikke å havne på forsiden av VG fordi vi ikke gjorde jobben vår!
 
-Basert på etikken som læres bort i forsvaret får vi noen lure spørsmål vi kan bruke som utgangspunkt.
+### Hva om jeg står fast?
+Dersom du som Security Champion er usikker på hva du skal gjøre, og ikke føler du kommer noen vei - prat med leveranseleder eller enhetsleder, eller ta kontakt med andre Security Champions! Bruk Slack-kanalen ```#security-champions``` for å nå andre Security Champions, eller kontakt et av medlemmene i [kjernegruppa for Security Champions i Bouvet]({{< ref "security-champion/hva_er_en_security_champion.md#hvem-driver-security-champion-i-bouvet" >}})
 
-* Er det lov?
-  * Er løsningen vår lovlig, eller risikerer vi f.eks bøter fra datatilsynet? Burde vi utbedre dette?
-* Er det taktisk lurt?
-  * Vi stryker taktisk her og endrer til lurt. Er det lurt å lage denne featuren eller er det lurt å sette det opp slik?
-* Kan jeg leve med det?
-  * Eksempel tåler vi å lage en løsning som kan brukes til trakasering? ref => [Lett å trakassere via vipps](https://nrkbeta.no/2022/09/14/lett-a-trakassere-via-vipps/)
-* Tåler vi at dette havner øverst på VG?
-  * [Russland stod bak Nortura Hacking](https://www.digi.no/artikler/tv-2-russland-sto-bak-nortura-hacking-ifolge-selskapet/519712)
-  
-
-### 4. Teknisk gjennomgang av løsninger
-
-Her er det på tide å se på en klassiker som heter OWASP Top 10 og sørge for at vi har unngått disse tabbene, men dette er basic. Skal vi virkelig har kontroll på koden og løsningene må vi gå løs på andre tiltak - du finner flere av disse beskrevet under [artikkelen om sikkerhetspraksiser](utvikle/sikkerhetspraksiser).
-
-Uavhengig av din bakgrunn (utvikler, tester, prosjektleder osv) kan punkt 1, 2 og 3 gjøres av alle.
+# Nyttige linker
+* [Rollebeskrivelse for Security Champions i BLS(Krever Bouvet-bruker)](https://wiki.bouvet.no/display/BLS/Security+Champion)
+* [Kvalitetsledere i Bouvet (Krever Bouvet-bruker)](https://wiki.bouvet.no/display/BLS/Om+kvalitetssystemet#Omkvalitetssystemet-Regionalekvalitetsledere)

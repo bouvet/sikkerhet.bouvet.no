@@ -5,14 +5,22 @@ translationKey: scutover
 description: >
   Dersom du er interessert i å løfte sikkerhetskulturen utenfor teamet, engasjer deg!
 ---
-I Bouvet kjører vi jevnlige samlinger - Bouvet ONE - der det kjøres foredrag om alt mellom himmel og jord, ofte med egne sikkerhetsspor. Vi har også kjørt egne Bouvet ONE dedikert til sikkerhet. Her er det fritt frem til å bidra - alle foredrag blir satt pris på, uansett hvor enkelt du selv mener noe måtte være. 
+I Bouvet digger vi deling! Det finnes mange interne arenaer det er mulig å bidra til for å dele kompetanse, erfaring og annet med kollegaer. 
 
-## Engasjer deg i Security Champions regionalt
-De fleste regionene i Bouvet har egne Security Champions samlinger på jevnlig basis, der en deler kunnskap, tips, triks og mye annet. Engasjer deg her, og bidra til å bygge opp en regional sikkerhetskultur i utviklerteamene! 
+## AppSec-Caffeine
+Dette er en samling som kjøres hver måned, med fysiske møterom booket i Stavanger og Oslo for de som ønsker det. For alle andre er samlingen tilgjengelig over Teams. Samlingene varer ca en time, og følger samme format hver gang: 
+* Sikkerhetsnyheter
+* Sikkerhetsrelatert innlegg eller presentasjon
+* Sikkerhetsquiz
 
-Alle utviklere bør kjenne til grunnprinsipper for sikkerhet og sikker utvikling, men for at vi skal oppnå dette er vi nødt til å gå ut blant folk og dele kunnskap. [OWASP Top 10](utvikle/sikkerhetspraksiser) er alltid relevant, så om du føler for det - sett opp en gjennomgang med kollegaer i enhetene rundt deg. Du kan gjøre den superfancy og kjøre demoer av hvert eneste punkt, men du kan like fint gjøre den lavterskel og bare prate gjennom punktene. 
+Samlingene er åpne for alle i Bouvet som ønsker å delta (men ta en innsjekk med nærmeste leder mtp timeføring), men vi forventer at Security Champions møter opp da dette er det eneste faste samlingspunktet vi har for Security Champions på tvers i Bouvet. Nytt program settes hver høst, kontakt et av medlemmen i styringsgruppa dersom du er interessert i å bidra med innlegg!
+Slack-kanalene ```#security-champions``` og ```#sikkerhet``` brukes aktivt for å dele informasjon, og det er også her vi informerer om eventer - både regionalt og på tvers i selskapet. 
 
-Det viktigste er uansett at du engasjerer deg og bidrar til å spre kunnskap!
+## Bouvet One
+I Bouvet kjører vi jevnlige samlinger - Bouvet One - der det kjøres foredrag om alt mellom himmel og jord, ofte med egne sikkerhetsspor. Vi har også hatt egne Bouvet One dedikert til sikkerhet. Her er det fritt frem til å bidra - alle foredrag blir satt pris på, uansett hvor enkelt du selv mener noe måtte være - det vil alltid være _noen_ som hører om akkurat ditt tema for første gang!
+
+## Fagkaffe/kompetansefrokost/kompetanselunsj...
+...kjært barn har mange navn. Det finnes mange ulike mindre lokale tilstelninger der folk møtes for å høre om ulike tema. Følg med på ditt lokale kontor for å se hva som rører seg, og hvordan akkurat **du** kan bidra.
 
 ## Engasjer deg nasjonalt
 Det finnes et [nasjonalt Security Champions-fellesskap](https://securitychampions.no/) der du kan engasjere deg for å treffe likesinnede. Det kjøres også flere konferanser og brukergrupper i Norge relatert til sikkerhet der det er mulig å bidra, som eksempelvis 

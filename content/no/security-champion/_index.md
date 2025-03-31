@@ -10,10 +10,7 @@ menu:
 <div class="row category-into">
     <div class="column">
         <p> 
-            En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.
-        </p>
-        <p>
-            Enkelt forklart så er en Security Champion en ambassadør for sikkerhet, teamets sikkerhetssamvittighet.
+            En Security Champion er en tverrfaglig konsulent som jobber aktivt i leveransen for å sette søkelyset på sikkerhetsspørsmål, slik at eventuelle problemer eller utfordringer kan løftes opp og prioriteres inn i øvrig arbeid. Leveranseansvarlig har det formelle sikkerhetsansvaret, men det forventes at Security Champions samarbeider tett med denne om oppgaver relatert til sikkerhet. 
         </p>
     </div>
     <div class="column">
