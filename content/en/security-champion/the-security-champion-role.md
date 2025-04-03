@@ -1,59 +1,42 @@
 ---
-title: "The Security Champion Role"
+title: "What does a Security Champion do"
 weight: 2
 translationKey: hgsc
 description: >
-  Congratulations, you have now become one of those who work to create a better world! The hardest part is now done, so let's start taking small steps in the right direction.
-
+  Congratulations, you have now become one of those working to create a better world! The hardest part is done, so now we just need to start by taking small steps in the right direction.
 ---
+## What does a Security Champion do?
+As a Security Champion, you are expected to acquire new knowledge and stay up to date. You are the spearhead for security within the delivery and, together with the delivery manager, you must ensure that we deliver in accordance with Bouvet’s best practices – documented with [the checklist]({{< ref "checklist.md" >}}) here on sikkerhet.bouvet.no.
 
-Regardless of your background (developer, tester, project manager, etc.), points 1, 2, and 3 can be done by everyone.
+As a Security Champion, it is not always easy to know where to begin. To get off to a good start, we’ve tried to summarize three points you can use as a starting point.
 
-## 1. Create Awareness in the Delivery Team
+### Get to know the project
+Start by asking yourself a few questions:
 
-You can start by asking yourself a few questions:
+* What is the purpose of the project?
+* Does the team have any existing security routines or documentation?
+* How can this product be misused, what attack surfaces or information does it contain?
 
-* What does this project I am working on actually do?
-* What is critical for the system to function?
-* How can this system be misused, what attack surfaces exist in the system?
-* Is there an updated threat model with corresponding measures to prevent the exploitation of weaknesses?
+Feel free to use [the checklist]({{< ref "checklist.md" >}}) as a basis for reflection. Talk to others on the team, and try to find out what the team has done previously, and what information is available.
 
-As you begin to create awareness, you can move on to find out more. Now you can start taking some initiative in your team.
+### Do we have control of our project?
+[The checklist]({{< ref "checklist.md" >}}) is Bouvet’s best practice for development projects and should be used unless the delivery or the customer requires another framework. Are we following the points described in it – or have we assessed the risk if we disregard some of those points?
 
-* A good starting point is to organize a threat modeling exercise. You don't need to know anything about threat modeling, but you can get some support [here]({{< ref "design/threat-modelling.md" >}}) and on the [Threatmodeling manifesto website](https://www.threatmodelingmanifesto.org). The goal of this threat modeling is for you and your team to become aware of threats and perhaps start the thought process around countermeasures.
+If yes, you as a Security Champion should go through and familiarize yourself with the information. Important details here include when it was last updated or revised, and what routines the team has in place to keep it updated. If no, you as a Security Champion should talk to the delivery manager to see how, together, you can establish good routines for documenting and regularly reviewing this information.
 
-* Consider establishing a bug bounty program (rewarding for finding bugs) or something that gets your team actively involved in finding challenges that should/must be solved.
+You don’t need to solve everything on day one; the important thing is to get started and to raise any findings or shortcomings with the team, add them to the backlog, and prioritize them alongside other tasks that need to be completed.
 
-Be a bit creative and try to get the team involved; a Security Champion who doesn't get the team involved often doesn't accomplish as much as they would like.
+### Establish good routines
+Not everyone is interested in security work – people have different interests and backgrounds. However, security is an important part of the quality of the craft we deliver, so it’s crucial that the team is involved in the work and that good routines are established, which depend as little as possible on individuals. As a Security Champion, you follow up on security issues on behalf of the team, and you ensure the team gets the answers they need.
 
-## 2. Do We Have Control Over Our Entire Project?
+### What if the security work stalls?
+There can be many reasons why security work stalls – a common example is when the customer insists on delivering functionality first and security “later.” Just like testing and UX, security is an integrated part of the development process – it’s not something to slap on afterwards without affecting quality or cost.
 
-If the answer is yes, let's correct that to no. There is always more that can be done. We have created a checklist that should be checked for every single project we are involved in; all our delivery teams should have a relationship with the points in this list and understand the risks they pose if useful measures are not implemented. You can find the list [here](checklist)
+If the security work stalls, you as the Security Champion should first discuss it with the delivery manager, and then with your regional quality manager if the delivery manager is unable to influence the situation. Security work is important – we do not want to end up on the front page of the newspapers because we didn’t do our job!
 
-Going through this list helps you gain control over, among other things:
-* Responsibilities and routines
-* Third-party software
-* Building and deploying solutions
-* Disaster recovery
-* Business Continuity
-* Infrastructure
-* Source code
+### What if I’m stuck?
+If you as a Security Champion are unsure what to do and feel like you’re getting nowhere – talk to the delivery manager or your unit manager, or get in touch with other Security Champions! Use the Slack channel ```#security-champions``` to reach other Security Champions, or contact one of the members of [the core group for Security Champions at Bouvet]({{< ref "security-champion/what-is-a-security-champion.md#who-leads-security-champion-at-bouvet" >}})
 
-Remember, you don't have to do everything at once; get the team involved and do it part by part until you have even better control over the project. You don't need to know everything about this, but together with your team, you should be able to figure it out.
-
-## 3. Protect Users and the Company's Reputation
-
-Based on the ethics taught in the military, we get some clever questions we can use as a starting point.
-
-* Is it legal?
-  * Is our solution legal, or do we risk fines from the data protection authority? Should we improve this?
-* Is it tactically smart?
-  * Let's strike out "tactically" and change it to smart. Is it smart to create this feature or set it up this way?
-* Can I live with it?
-  * For example, can we tolerate creating a solution that can be used for harassment? Ref => [Easy to harass via Vipps (In Norwegian)](https://nrkbeta.no/2022/09/14/lett-a-trakassere-via-vipps/)
-* Can we handle this being on the front page of VG?
-  * [Russia was behind Nortura hacking](https://www.digi.no/artikler/tv-2-russland-sto-bak-nortura-hacking-ifolge-selskapet/519712)
-
-### 4. Technical Review of Solutions
-
-Now it's time to look at a classic called OWASP Top 10 and make sure we have avoided these mistakes, but this is basic. To really have control over the code and solutions, we need to tackle other measures - you can find several of these described in the [article on security practices]({{< ref "develop/security-practices.md" >}})
+# Useful links
+* [Role Description for Security Champions in BLS (Requires Bouvet account)](https://wiki.bouvet.no/display/BLS/Security+Champion)
+* [Quality Managers in Bouvet (Requires Bouvet account)](https://wiki.bouvet.no/display/BLS/Om+kvalitetssystemet#Omkvalitetssystemet-Regionalekvalitetsledere)
