@@ -7,7 +7,7 @@ description: >
 ---
 Last modified: 2025.02.01
 
-It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each team and delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
+It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
 Download the checklist and implement it as part of the source code in your project!
 
