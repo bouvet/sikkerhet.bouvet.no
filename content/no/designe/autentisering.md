@@ -11,14 +11,16 @@ Autentisering og autorisering er viktig i alle utviklingsprosjekter. Kort fortal
 ## Autentisering
 Når en skal validere en bruker, er det viktigste at en *ikke* lager en egen autentiseringsløsning! Å sikre at slike løsninger faktisk er sikre er en kjempejobb, og man bør istedet benytte seg av etablerte løsninger for dette!
 
+Single sign-on er en vanlig løsning for å unngå at enkelttjenester må håndtere autentisering i bedriftsmiljø. Bruker autentiseres via en sentralt styrt tjeneste eller operativsystemet, hver applikasjon brukeren så åpner gjenbruker denne konteksten slik at en unngår å måtte logge på manuelt. Brukeropplevelsen strømlinjeformes, og brukerne 'trenes' opp til at applikasjoner ikke skal be om brukernavn og passord. Dersom en angriper forsøker å phishe slik informasjon vil det oppfattes som unormalt og suspekt. 
+
 Vanlige tilnærminger for å håndtere autentisering kan være bruk av tredjepartstjenester, eller protokoller som håndterer autentisering mot kundens AD/Entra. I mange tilfeller ønsker vi å benytte [Single-Sign-On](https://en.wikipedia.org/wiki/Single_sign-on)(SSO) for å unngå at brukeren må taste inn brukernavn og passord, spesielt for interne forretningsapplikasjoner. 
 
 Vanlige løsninger for å håndtere pålogging er å benytte seg av biblioteker som tar seg av hele flyten, som eksempelvis `Microsoft.Identity.Web`. Andre alternativer kan være bruk av 
-* SAML
-* Oauth 2.0
-* OpenID Connect (OIDC)
-* Kerberos
-* LDAP
+* SAML - XML-basert løsning som primært brukes for Single Sign-On og autorisering. 
+* Oauth 2.0 - Autorisasjonsløsning der en identitetsløsning (IDP) deler ut aksesstokens som så sjekkes og håndteres av Oauth
+* OpenID Connect (OIDC) - Autentiseringslag oppå Oauth, som muliggjør innhenting av informasjon relatert til bruker og sesjon fra IDP. 
+* Kerberos - Autentiseringsprotokoll mye brukt i OS-sammenheng. 
+* LDAP - Autentisering- og autoriseringsløning brukt mot ulike katalogløsninger som Active Directory. 
 
 Her er det viktig at en setter seg inn i behovene til løsningen og hvilke autentiseringsmetoder som er tilgjengelige og eventuelt ønskelige.
 
@@ -30,7 +32,7 @@ I likhet med autentisering finnes det flere tilnærminger for hvordan autoriseri
 Det finnes likevel noen hovedprinsipper en alltid skal ta med seg inn i utviklingsforløpet:
 
 ### _Standardtilgang_ skal alltid være _ingen tilgang_
-Dette er også kjent som _default deny_, og brukes for å sikre at eksempelvis en uautorisert bruker ikke har tilgang til noe utover det som er eksplisitt tillatt. 
+Dette er også kjent som _default deny_ eller _principle of least privilege_, og brukes for å sikre at eksempelvis en uautorisert bruker ikke har tilgang til noe utover det som er eksplisitt tillatt. 
 
 ### Autorisering skal alltid sjekkes
 Dersom en bruker forsøker å utføre en handling, skal det alltid sjekkes hvorvidt brukeren faktisk har tilgang til dette. Husk at denne sjekken må skje mot den autoritative kilden for tilganger, og aldri mot data brukeren kan manipulere!
@@ -48,3 +50,9 @@ Dette gir en bedre oversikt over hvem som har tilgang til hva sammenliknet med b
 ## Veien videre
 * [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)
 * [Wikipedia: Authorization](https://en.wikipedia.org/wiki/Authorization)
+* [Wikipedia: Single Sign-On](https://en.wikipedia.org/wiki/Single_sign-on)
+* [Microsoft: What is SAML](https://www.microsoft.com/en-us/security/business/security-101/what-is-security-assertion-markup-language-saml)
+* [Microsoft: What is OAuth?](https://www.microsoft.com/en-us/security/business/security-101/what-is-oauth)
+* [Microsoft: What is OIDC?](https://www.microsoft.com/en-us/security/business/security-101/what-is-openid-connect-oidc)
+* [Kerberos: The Network Authentication Protocol](https://web.mit.edu/kerberos/)
+* [Microsoft: What is LDAP](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/what-is-ldap)
