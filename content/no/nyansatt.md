@@ -11,7 +11,7 @@ Sikkerhet skal være en del av håndtverket vi leverer - uavhengig av kontekst. 
 
 ## Sikkerhetsopplæring
 
-Vi har en sikkerhetsinstruks som gjelder alle ansatte i Bouvet. Som ansatt er det forventet at du går gjennom en grunnleggende sikkerhetsopplæring i verktøyet _Security Journey_ - gå til [my.securityjourney.com](https://my.securityjourney.com/) og logg inn.
+Vi har en sikkerhetsinstruks som gjelder alle ansatte i Bouvet. Som nyansatt er det forventet at du går gjennom en grunnleggende sikkerhetsopplæring i verktøyet _Security Journey_ - gå til [my.securityjourney.com](https://my.securityjourney.com/) og logg inn.
 
 Avhengig av rollen din vil det også være andre kurs som kan være nyttige og relevante. Dersom du er utvikler skal du gjennomgå kurset _"OWASP Top 10 - Web Applications"_ - dette er et grunnleggende kurs som tar det gjennom de vanligste truslene knyttet til webapper. 
 
