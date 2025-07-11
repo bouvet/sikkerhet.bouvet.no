@@ -11,7 +11,7 @@ Security should be part of the craft we deliver – regardless of context. As an
 
 ## Security Training
 
-We have a security policy that applies to all employees at Bouvet. As an employee, you are expected to go through basic security training in the tool _Security Journey_ – go to [my.securityjourney.com](https://my.securityjourney.com/) and log in.
+We have a security policy that applies to all employees at Bouvet. As a new employee, you are expected to go through basic security training in the tool _Security Journey_ – go to [my.securityjourney.com](https://my.securityjourney.com/) and log in.
 
 Depending on your role, there may be other courses that are useful and relevant. If you are a developer, you must complete the course _"OWASP Top 10 - Web Applications"_ – this is a fundamental course that walks you through the most common threats related to web apps.
 
