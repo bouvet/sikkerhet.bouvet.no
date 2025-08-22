@@ -74,7 +74,7 @@ description: >
             <p>En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.</p>
             <p>
                 Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår 
-                <a href="/security_champion/introduction" class="underlined-link"> infopakke for Security Champions</a>
+                <a href="/no/security-champion/" class="underlined-link"> infopakke for Security Champions</a>
             </p>
         </div>
     </div>
