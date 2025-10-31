@@ -19,39 +19,12 @@ Disse verktøyene kan ha stor betydning for sikkerhet og kvalitet i leveranser, 
 ## IDE
 Det er mulig å installere utvidelser på de fleste IDEs idag, som gir støtte for nye språk, formatering, linting, skytjenester og annet. Disse kan forbedre produktivitet og effektiviteten til teamet betraktelig, men vi må være obs på hva som installeres. 
 
-I likhet med alt annet som lastes ned og kjøres fra internett må vi ha et forhold til risiko, så det er viktig at vi er obs på hva vi laster ned, hvor det lastes ned fra og hvem som står bak for å unngå problemer. 
+Mange IDEs støtter bruk av utvidelser som legger til manglende funksjonalitet, som støtte for flere programmeringsspråk, integrasjoner mot andre verktøy og liknende. Vi må imidlertid være klar over at dette er en angrepsvektor på linje med andre økosystemer, og at vi som utviklere må ha et forhold til risikoen forbundet med utvidelsene. Det er ikke nok å bare se på nedlastingstall, vi må også se på andre indikatorer som tilbakemeldinger, historikk og liknende. 
 
 ## Versjonskontroll
-Versjonskontroll gir kjempekontroll over alle endringer, men det er viktig at vi bruker verktøyet på en god måte. 
+Versjonskontroll gir kjempekontroll over alle endringer, men det er viktig at vi bruker verktøyet på en god måte. De-facto standard idag i de fleste prosjekter er [git](https://git-scm.com/), i Bouvet hovedsaklig med repositories hostet på Github eller Azure DevOps. Repositories og branchingstrategier må konfigureres etter behov; noen prosjekter har forholdsvis enkle arbeidsflyter som består av fork-fra-main; pull request; merge-to-main, mens andre har mer komplekse flyter som involverer mange ulike branches som håndterer ting som utvikling, testing, produksjon og annet. 
 
-Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< ref "business-continuity.md" >}})!
-
-### Sikkerhet i kildekodesystemet
-Mange baserer seg på løsninger som Azure DevOps, Github eller liknende som håndterer tilgangsstyring, reviews og en del andre funksjoner knyttet til konfidensialitet og integritet mot kildekoden. 
-
-Git har imidlertid også innebygd funksjonalitet for signering av commits, slik at hver enkelt commit kan spores til en person med en gitt nøkkel. Dette kan være et nyttig hjelpemiddel for å sikre integritet, og bør vurderes av teamet. 
-
-### Branchingstrategi
-
-En typisk tilnærming er å operere med en produksjonsbranch, ofte `main` eller `master`. Denne bør være beskyttet slik at alle endringer skjer i egne feature-branches som så merges inn via pull-request med dertilhørende review fra andre i teamet. Produksjonsbranchen blir så grunnlaget for alle deployments videre. 
-{{< figure src="../src_trunk.png" alt="Trunk-based merging">}}
-
-
-Det finnes andre og mer komplekse tilnærminger også, eksempelvis med separate branches samt tagging av versjoner. Denne er spesielt nyttig dersom en vedlikeholder flere ulike versjoner i ulike miljø, trenger mulighet for hotfixer eller liknende: 
-
-{{< figure src="../src_advanced.png" alt="More advanced merging" style="max-width: 800px; height: auto;" >}}
-
-I dette eksempelet jobber alle utviklere i egne feature branches mot develop-branchen, som beskyttes mot direkte endringer. Denne deployes til dev-miljøet for å verifisere at alt fungerer som det skal. 
-
-Når teamet er fornøyed med tilstanden på develop, merges denne til test via en egen pipeline som håndterer tagging av versjonsnummer automatisk. Denne pipelinen kan kreve godkjenning for å kjøre, slik at det trengs en person for å starte den, og en annen for å godkjenne. 
-
-Test-branchen deployes til testmiljøet, og når kunden er fornøyd med det som er levert merges den til prod-branchen på samme måte som til test. For både test og prod bruker vi versjonsnummeret som en del av branchnavnet, slik at vi kan ha branchen Test/v1 og Test/v2, som korresponderer med Prod/v1 og Prod/v2.
-
-Dersom det er behov for hotfixing mot prod kan dette eksempelvis gjøres mot den aktuelle prodbranchen slik at en får korrigert kritiske feil raskt, for så å ta hotfixen tilbake til dev. 
-
-{{< tip title="pre-commit" >}}
-Et tips er å bruke [pre-commit](https://pre-commit.com) til å kjøre alt av linting, formatering, og testing, for så å bruke den samme _pre-commit_ konfigurasjonen i CI/CD. Dette vil minimerer vedlikeholdet, gjøre det enkelt å teste lokalt, og fange opp problemer tidlig.
-{{< /tip >}}
+Github støtter også bruk av ulike actions, som kan utføre oppgaver på kode som sjekkes inn, som CI/CD, sikkerhetstesting og mye annet. Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< ref "business-continuity.md" >}})!
 
 ## CI/CD
 Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)]({{< ref "deploye/cicd.md" >}}) kan brukes til å øke sikkerheten på sluttproduktet betydelig, gjennom å automatisere ulike sjekker og tester som sikrer kvaliteten i leveransen. 
