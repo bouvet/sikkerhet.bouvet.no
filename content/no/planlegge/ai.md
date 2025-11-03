@@ -7,7 +7,7 @@ description: >
 ---
 
 Bruk av KI i prosjekter treffer en rekke problemstillinger vi _må_ ta stilling til, deriblant:
-* Hvem eier kode og data?
+* Hvem eier kode og data? Hvem vil eie resultatet som kommer fra KI?
 * Hvilke muligheter har vi til å følge opp mislighold eller brudd på avtaler?
 * Hva kan gå galt; kan data eller kode komme på avveie, eller kan verktøyet gjøre endringer vi ikke forstår eller har kontroll på?
 
