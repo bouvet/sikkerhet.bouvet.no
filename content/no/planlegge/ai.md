@@ -16,11 +16,11 @@ Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal_
 {{< /tip >}}
 
 ## Hva har vi lov til
-I Bouvet og på Bouvetutstyr har vi kun lov til å bruke KI-verktøy som er eksplisitt tilatt av den interne KI-policyen; på kundens utstyr har vi kun lov til å bruke de verktøyene kunden har godkjent. Bakgrunnen for disse begrensningene skyldes kompleksiteten rundt KI-verktøy. 
+I Bouvet og på Bouvetutstyr har vi kun lov til å bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://kb.bouvet.no/en/AnvendelseravKI-verkt%C3%B8y/Retninglinjerforanvendelseavkunstingintelligensibouvet); på kundens utstyr har vi kun lov til å bruke de verktøyene kunden har godkjent. Bakgrunnen for disse begrensningene skyldes kompleksiteten rundt KI-verktøy. 
 
 De kjører ofte i egne miljøer og utfører prosessering eller behandling av potensielt sensitiv informasjon og kan resultere i endringer som påvirker oss eller kunde. 
 
-Selv om vi har den tekniske muligheten __til__ å kjøre et KI-verktøy betyr det ikke at vi __bør__ kjøre det. Dersom det er et verktøy som kan hjelpe utviklingsprosessen eller prosjektet du er med i; lag en BSD-sak slik at det kan bli sjekket ut. 
+SSelv om vi __har den tekniske muligheten til å kjøre__ et KI-verktøy betyr det ikke __at vi bør kjøre det.__ Dersom det er et verktøy som kan hjelpe utviklingsprosessen eller prosjektet du er med i; lag en BSD-sak slik at det kan bli sjekket ut. 
 
 ### Nytt verktøy? Tenk over følgende
 Dersom du ønsker å ta i bruk et nytt verktøy er det viktig med klarhet i forhold til hvem som eier resultatet av det verktøyet produserer. 
@@ -49,9 +49,9 @@ Du som utvikler må vite hva du skal gjøre for å instruere verktøyet skikkeli
 * KI behandles som en juniorutvikler: alt den leverer skal gjennomgås, forstås og testes. KI-baserte bidrag skal være sporbare og etterprøvbare. 
 * Oppgaver deles opp i små, vurderbare komponenter du kan kvalitetssikre fullt ut. Unngå store blokker kode uten menneskelig innsikt.
 
-KI gjør oss i stand til å bli mer produktive, men det er viktig at vi forstår resultatene KI-verktøyene gir oss. Det har vært mange eksempler på kode som brukes mer eller mindre ukritisk, før det viser seg at den inneholder store og alvorlige svakheter som kan utnyttes for å manipulere eller hente ut data. Sikkerhetstesting bør alltid være en del av utviklingsløpet, men kanskje i enda større grad ved bruk av KI-verktøy for å skrive kode. 
+KI gjør oss i stand til å bli mer produktive, men det er viktig at vi forstår resultatene KI-verktøyene gir oss. Det har vært mange eksempler på kode som brukes mer eller mindre ukritisk, før det viser seg at den inneholder store og alvorlige svakheter som kan utnyttes for å manipulere eller hente ut data. Sikkerhetstesting bør alltid være en del av utviklingsløpet, men dette blir enda viktigere ved bruk av KI-verktøy for å skrive kode. KI-generert kode skal aldri ut i prod uten at den er gjennomgått, forstått og testet.
 
-En bør også vurdere tilleggsløsninger som regelbaserte filer der en har tilleggsinstrukser for KI der en kan komme med detaljerte beskrivelser på hva de skal gjøre og ikke gjøre for å skrive mest mulig robust kode. 
+En bør også vurdere ulike barrierer som kan hindre uventede og negative konsekvenser, som regelbaserte filer med tilleggsinstrukser for KI, tilgangsbegrensning slik at KI eksempelvis ikke kan merge kode selv og andre tiltak som forhindrer KI fra å gjøre endringer som ikke er gjennomgått og godkjent av en utvikler. 
 
 # Veien videre
 * [OpenSSF: Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
