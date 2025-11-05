@@ -22,6 +22,6 @@ Og viktigst av alt; vi selger primært kompetanse, og flere engasjerte Security 
 
 # Veien videre
 * [OWASP: Security Culture](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/)
-* [Bouvet: Security Champion (BLS)](https://wiki.bouvet.no/display/BLS/Security+Champion) (Krever Bouvet-bruker)
+* [Bouvet: Sikkerhet i oppdrag (BLS)](https://wiki.bouvet.no/spaces/BLS/pages/57873214/Sikkerhet+i+oppdrag) (Krever Bouvet-bruker)
 * [NAV: Security Champion](https://sikkerhet.nav.no/docs/bli-security-champion/)
 * [Equinor: Security Champion](https://equinor.github.io/appsec/security-champion/)
