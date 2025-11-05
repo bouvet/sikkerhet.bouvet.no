@@ -6,15 +6,15 @@ description: >
   Misconfiguration is a common source of errors and vulnerabilities, and this also applies to tools. If possible, the team should standardize the use of tools and their extensions, ensuring that everyone follows a similar (and documented) workflow.
 ---
 
-All development teams use various tools in the development process, and the selection will vary from team to team depending on personal preferences, technology choices, system and customer requirements, and much more.
+All development teams use various tools in the development process and the selection will vary from team to team depending on personal preferences, technology choices, systems, client requirements and more. 
 
 A typical team will use some form of
 * [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
-* a version control system for the code, typically _git_
-* a tool for [CI/CD]({{< ref "deploy/cicd.md" >}}) that can perform various tasks related to building, testing, or deployment
-* other services managed or consumed by the team, e.g., messaging services, file transfer services, or similar
+* a system for version control of code, typically _git_
+* a tool for [CI/CD]({{< ref "deploye/cicd.md" >}}) that can perform tasks related to building, testing or deployment
+* other services operated or consumed by the team, for example messaging services, file transfer services, generative AI (copilots) or similar
 
-These tools can significantly impact security and quality in deliveries, so it is important that the team considers how these are configured.
+These tools can have a large impact on the security and quality of deliveries so it is important that the team considers how they are configured. 
 
 ## IDE
 It is possible to install extensions in most IDEs today that add support for new languages, formatting, linting, cloud services and more. These can greatly improve the productivity and efficiency of the team but we must be mindful of what is installed. 
@@ -22,16 +22,11 @@ It is possible to install extensions in most IDEs today that add support for new
 Many IDEs support extensions that add missing functionality such as support for additional programming languages, integrations with other tools and similar. We must however be aware that this is an attack vector like any other ecosystem and that we as developers must assess the risks associated with extensions. It is not enough to only look at download counts, we must also consider other indicators such as reviews, history and similar. 
 
 ## Version Control
-Version control gives tremendous control over all changes but it is important that we use the tool in a good way. The de facto standard today in most projects is [git](https://git-scm.com/), at Bouvet mainly with repositories hosted on GitHub or Azure DevOps. 
+[Version control](../develop/git.md) gives tremendous control over all changes but it is important that we use the tool in a good way. The de facto standard today in most projects is [git](https://git-scm.com/), at Bouvet mainly with repositories hosted on GitHub or Azure DevOps. 
 
 Repositories and branching strategies must be configured as needed; some projects have relatively simple workflows consisting of fork-from-main; pull request; merge-to-main, while others have more complex flows that involve many different branches handling things like development, testing, production and more. 
 
 GitHub also supports the use of various actions that can perform tasks on checked-in code such as CI/CD, security testing and much more. Also remember that source code is part of the project and must be considered in relation to [disaster recovery and backups]({{< ref "plan/business-continuity.md" >}})!
-
-### Security in the Source Code System
-Many rely on solutions like Azure DevOps, GitHub, or similar that handle access control, reviews, and other functions related to confidentiality and integrity of the source code.
-
-However, Git also has built-in functionality for signing commits, so that each commit can be traced to a person with a given key. This can be a useful tool for ensuring integrity and should be considered by the team.
 
 ## CI/CD
 A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< ref "deploy/cicd.md" >}}) can be used to significantly increase the security of the final product by automating various checks and tests that ensure the quality of the delivery.
@@ -54,6 +49,10 @@ Running tests in CI is beneficial for several reasons, but from a security persp
 ### Secret Scanning
 [Secret scanning]({{< ref "develop/secrets.md" >}}) - passwords, keys, and other sensitive information that should not be in the source code is an important tool that can be implemented in the version control system and in CI/CD. Some tools only provide alerts when secrets are found, while others can also invalidate the secrets in the services they are meant for.
 
+## Generative AI (copilots)
+There are many generative [AI tools](../plan/ai.md) that developers can use. It is important that any use of such tools is cleared with the client before they are taken into use. Bouvet has done extensive work evaluating several such tools and has strong internal support to help make these assessments if the client requires it.
+
 ## More Information
+* [Version control](../develop/git.md)
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
 * [Github: About secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)

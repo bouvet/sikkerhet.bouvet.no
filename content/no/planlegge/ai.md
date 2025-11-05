@@ -41,6 +41,10 @@ Med mindre det er eksplisitt godkjent skal ikke verktøyet under _noen_ omstendi
 
 Sjekk at du ikke inkluderer datafiler, hemmeligheter eller annen sensitiv informasjon i repoet, og ekskluder eventuelt disse i [`.gitignore`]({{< ref "utvikle/git.md" >}}). Ta i bruk nøkkelhvelv der du kan for å unngå at hemmeligheter havner i repoet ved et uhell. 
 
+{{< tip title="Lekkasje av sensitive data" >}}
+Vær klar over at noen KI-verktøy kan commite og pushe kode til Github automatisk fra IDE'et ditt, og at du må sikre at sensitiv informasjon som passord, sertifikater og data ikke kommer på avveie.
+{{< /tip >}}
+
 ## Kvalitetssikring av KI-bidrag
 KI-løsninger kan ha en positiv effekt på fremdrift, men må alltid behandles som kode fra tredjepart og kvalitetssikres deretter. Kode skrevet av KI vil i mange tilfeller gjøre det du ønsker, men i mange tilfeller på en mer komplisert måte, med svakheter eller sårbarheter, eller rett og slett ved å hallusinere seg frem til løsninger som aldri vil fungere i praksis. 
 
