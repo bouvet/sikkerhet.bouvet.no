@@ -34,7 +34,7 @@ Feel free to use specific technology in examples, but avoid articles that only m
 Use features in MD / Hugo to emphasize or highlight important points.
 Use code fencing to show examples and break up the content with headings (no one likes a wall of text).
 
-## Further Reading
+## More information
 * [Eksternal link 1](URL)
 * [Eksternal link 2](URL)
 ```
@@ -51,4 +51,4 @@ Need help with Markdown?
 - [Markdown Emojis](https://gist.github.com/rxaviers/7360908)
 - [Hugo](https://gohugo.io/about/features/)
 
-Any questions about content, what you can contribute, etc.? Contact us on [Slack](https://bouvet.slack.com/archives/C0447R83U6M) or see [this issue](https://github.com/bouvet/sikkerhet.bouvet.no/issues/22)
+Any questions about content, what you can contribute, etc.? Contact us on [Slack](https://bouvet.slack.com/archives/C0447R83U6M)!
