@@ -10,15 +10,13 @@ All development teams use various tools in the development process and the selec
 
 A typical team will use some form of
 * [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
-* a system for version control of code, typically _git_
-* a tool for [CI/CD]({{< ref "deploye/cicd.md" >}}) that can perform tasks related to building, testing or deployment
+* a version control system, typically _git_
+* a tool for [CI/CD]({{< ref "deploy/cicd.md" >}}) that can perform tasks related to building, testing or deployment
 * other services operated or consumed by the team, for example messaging services, file transfer services, generative AI (copilots) or similar
 
 These tools can have a large impact on the security and quality of deliveries so it is important that the team considers how they are configured. 
 
 ## IDE
-It is possible to install extensions in most IDEs today that add support for new languages, formatting, linting, cloud services and more. These can greatly improve the productivity and efficiency of the team but we must be mindful of what is installed. 
-
 Many IDEs support extensions that add missing functionality such as support for additional programming languages, integrations with other tools and similar. We must however be aware that this is an attack vector like any other ecosystem and that we as developers must assess the risks associated with extensions. It is not enough to only look at download counts, we must also consider other indicators such as reviews, history and similar. 
 
 ## Version Control
