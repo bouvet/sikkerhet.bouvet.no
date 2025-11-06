@@ -17,8 +17,6 @@ Et typisk team vil benytte seg av en eller annen form for
 Disse verktøyene kan ha stor betydning for sikkerhet og kvalitet i leveranser, så det er viktig at teamet har et forhold til hvordan disse settes opp. 
 
 ## IDE
-Det er mulig å installere utvidelser på de fleste IDEs idag, som gir støtte for nye språk, formatering, linting, skytjenester og annet. Disse kan forbedre produktivitet og effektiviteten til teamet betraktelig, men vi må være obs på hva som installeres. 
-
 Mange IDEs støtter bruk av utvidelser som legger til manglende funksjonalitet, som støtte for flere programmeringsspråk, integrasjoner mot andre verktøy og liknende. Vi må imidlertid være klar over at dette er en angrepsvektor på linje med andre økosystemer, og at vi som utviklere må ha et forhold til risikoen forbundet med utvidelsene. Det er ikke nok å bare se på nedlastingstall, vi må også se på andre indikatorer som tilbakemeldinger, historikk og liknende. 
 
 ## Versjonskontroll
@@ -48,7 +46,7 @@ Vær obs på at flere av punktene under krever tilleggssoftware. Vi har per idag
 [Sjekking av hemmeligheter](utvikle/hemmeligheter) - passord, nøkler og annen sensitiv informasjon som ikke skal inn i kildekoden er et viktig verktøy som kan implementeres i versjonskontrollsystemet og i CI/CD. Noen verktøy har kun varsling ved funn, andre kan også ugyldiggjøre hemmelighetene i tjenestene de er ment for. 
 
 ## Generativ AI (copilots)
-Det eksisterer mange ulike generative [AI-verktøy](../plan/ai.md) som kan benyttes av utviklere. Det er viktig at enhver bruk av slike verktøy avklares med kunden _før_ de tas i bruk. Her har Bouvet gjort mye arbeid i evaluering av flere slike verktøy og har god støtte internt for å gjøre slike vurderinger om kunden skulle ha behov for det.
+Det eksisterer mange ulike generative [AI-verktøy](../planlegge/ai.md) som kan benyttes av utviklere. Det er viktig at enhver bruk av slike verktøy avklares med kunden _før_ de tas i bruk. Her har Bouvet gjort mye arbeid i evaluering av flere slike verktøy og har god støtte internt for å gjøre slike vurderinger om kunden skulle ha behov for det.
 
 # Veien videre
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
