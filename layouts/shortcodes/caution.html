@@ -1,4 +1,4 @@
 <div class="caution-box">
     <strong>{{ .Get "title" }}</strong>
-    <p>{{ .Inner }}</p>
+    <p>{{ .Inner | markdownify }}</p>
 </div>
