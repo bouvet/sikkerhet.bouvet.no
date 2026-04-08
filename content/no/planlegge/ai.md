@@ -16,7 +16,7 @@ Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal_
 {{< /tip >}}
 
 ## Hva har vi lov til
-I Bouvet og på Bouvetutstyr har vi kun lov til å bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://kb.bouvet.no/en/AnvendelseravKI-verkt%C3%B8y/Retninglinjerforanvendelseavkunstingintelligensibouvet); på kundens utstyr har vi kun lov til å bruke de verktøyene kunden har godkjent. Bakgrunnen for disse begrensningene skyldes kompleksiteten rundt KI-verktøy. 
+I Bouvet og på Bouvetutstyr har vi kun lov til å bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://ai-policy.bouvet.no/); på kundens utstyr har vi kun lov til å bruke de verktøyene kunden har godkjent. Bakgrunnen for disse begrensningene skyldes kompleksiteten rundt KI-verktøy. 
 
 De kjører ofte i egne miljøer og utfører prosessering eller behandling av potensielt sensitiv informasjon og kan resultere i endringer som påvirker oss eller kunde. 
 
