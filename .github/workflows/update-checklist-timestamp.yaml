@@ -38,5 +38,9 @@ jobs:
           done
           
           # Commit if staged changes exist
-          git commit -m "Update last modified dates in checklist" || echo "No changes to commit."
-          git push origin HEAD
+          if git commit -m "Update last modified dates in checklist"; then
+            git push origin HEAD
+          else
+            echo "No changes to commit; skipping push."
+          fi
+          ``
