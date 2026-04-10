@@ -16,7 +16,7 @@ Remember that Bouvet and most clients have guidelines for the use of AI that __m
 {{< /tip >}}
 
 ## What we are allowed to do
-At Bouvet and on Bouvet equipment, we are only allowed to use AI tools that are explicitly permitted in [Bouvet’s AI policy](https://kb.bouvet.no/en/AnvendelseravKI-verkt%C3%B8y/Retninglinjerforanvendelseavkunstingintelligensibouvet); on client equipment, we may only use tools approved by the client. These restrictions are in place because of the complexity surrounding AI tools.
+At Bouvet and on Bouvet equipment, we are only allowed to use AI tools that are explicitly permitted in [Bouvet’s AI policy](https://ai-policy.bouvet.no/); on client equipment, we may only use tools approved by the client. These restrictions are in place because of the complexity surrounding AI tools.
 
 They often run in their own environments and process or handle potentially sensitive information, which may result in changes that affect us or the client.
 
