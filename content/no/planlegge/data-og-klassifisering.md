@@ -59,7 +59,9 @@ Dette er spesielt viktig dersom utvikling skjer i Bouvets infrastruktur, men det
 
 Dersom en bygger løsninger med, eller ved hjelp av kunstig intelligens stiller den foreslåtte KI-loven krav til datakvalitet, spesielt for høyrisikosystemer. Dette er spesifikt nevnt for disse da de kan brukes i situasjoner som kan få alvorlige konsekvenser for enkeltpersoner utover rene personvernhensyn beskrevet i personopplysningsloven. KI-systemer som ikke regnes som høyrisiko må også forholde seg til krav om merking av informasjon produsert av KI. 
 
-Vær obs på at dette kommer i tillegg; personopplysningsloven gjelder også for KI-systemer. Under vurdering av leverandører har vi sett flere tilfeller der KI-leverandører leverer tjenester utenfor EU, der det er nødvendig med ekstra grundige vurderinger og gjennomganger for å sikre at vi etterlever kravene som stilles gjennom lovverket.
+Et annet viktig moement er læring i KI-modellen: De færreste selskap vil godta at KI-modellene lærer av deres data, da det har vært flere eksempler på at læringsdata kan rekonstrueres i etterkant. Bruk av enterpriseavtaler begrenser ofte KI-modellens evne til å lære av kundedata - dette er et punkt som **må** verifiseres av oss når vi bygger løsninger. 
+
+Vær obs på at personopplysningsloven også gjelder for KI-systemer. Under vurdering av leverandører har vi sett flere tilfeller der KI-leverandører leverer tjenester utenfor EU, der det er nødvendig med ekstra grundige vurderinger og gjennomganger for å sikre at vi etterlever kravene som stilles gjennom lovverket.
 
 Dersom du har spørsmål knyttet til bruk av KI kan du lage en sak gjennom [BSD](https://bsd.bouvet.no) eller på `#ai` (Slack)
 
