@@ -1,6 +1,6 @@
 ---
 title: "Kompetanseheving"
-weight: 6
+weight: 4
 translationKey: comp
 description: >
   Riktig kompetanse er viktig for alle team, ikke minst når det kommer til sikkerhet. Teamet må identifisere hvilke gap en har, slik at tiltak som eksempelvis opplæring kan iverksettes for å dekke disse. 

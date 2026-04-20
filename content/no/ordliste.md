@@ -1,6 +1,6 @@
 ---
 title: "Ordliste"
-weight: 9
+weight: 10
 translationKey: wordlist
 description: >
   Liste med vanlige ord og uttrykk relatert til applikasjonssikkerhet

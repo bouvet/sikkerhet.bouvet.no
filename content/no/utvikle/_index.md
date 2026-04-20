@@ -1,6 +1,6 @@
 ---
 title: "Utvikle"
-weight: 5
+weight: 6
 menu:
   sidebar:
     name: "Utvikle"

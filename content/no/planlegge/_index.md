@@ -1,7 +1,7 @@
 ---
 title: "Planlegg"
 translationKey: plan
-weight: 3
+weight: 4
 menu:
   sidebar:
     name: "Planlegg"

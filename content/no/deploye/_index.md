@@ -1,6 +1,6 @@
 ---
 title: "Deploye"
-weight: 6
+weight: 7
 translationKey: deploy
 menu:
   sidebar:
