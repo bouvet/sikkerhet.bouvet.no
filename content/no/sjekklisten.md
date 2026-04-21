@@ -21,7 +21,7 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 6.	[Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden?]({{< ref "planlegge/business-continuity#håndtering-av-hendelser.md" >}})
 7.	[Er det definert en plan for hvordan og hvor ofte backup skal tas?]({{< ref "planlegge/business-continuity#backup.md" >}})
 8.	[Er det definert en plan for disaster recovery?]({{< ref "planlegge/business-continuity#disaster-recovery.md" >}})
-9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "planlegge/verktoy-og-bruk.md" >}})
+9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "utvikle/utviklingsmiljoer.md" >}})
 10. [Er det definert kontrollmekanismer for å opprettholde sikkerhet i prosjektet?]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}})
 
 ## Designe
