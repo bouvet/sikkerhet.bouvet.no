@@ -32,7 +32,7 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 5.	[Er det satt opp nødvendig autentisering på tilgang til systemet?]({{< ref "designe/autentisering#autentisering.md" >}})
 6.	[Er det satt opp nødvendig autorisering på handlinger i systemet?]({{< ref "designe/autentisering#autorisering.md" >}})
 7.	[Er det gjennomført trusselmodellering av løsningen?]({{< ref "designe/trusselmodellering.md" >}})
-8.	[Har teamet den nødvendige kompetansen for prosjektet?]({{< ref "designe/kompetanseheving.md" >}})
+8.	[Har teamet den nødvendige kompetansen for prosjektet?]({{< ref "kompetanseheving.md" >}})
 
 ## Utvikle
 1.	[Er utviklingsmiljøene godt beskrevet?]({{< ref "utvikle/utviklingsmiljoer.md" >}})
