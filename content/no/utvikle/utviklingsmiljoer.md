@@ -104,7 +104,7 @@ Følgende bør minimum være dokumentert og vedlikeholdt:
 * logging og monitorering av miljøene
 * rutiner for patching og oppgraderinger
 * ansvar for forvaltning av verktøy og miljø
-
+ 
 # Veien videre
 * [Wikipedia: Programming tools](https://en.wikipedia.org/wiki/Programming_tool)
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
