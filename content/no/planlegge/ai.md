@@ -6,60 +6,113 @@ description: >
   Bruken av kunstig intelligens (KI) har eksplodert de siste årene, og teknologien har kommet så langt at den kan være et nyttig verktøy for å brainstorme løsninger, skrive,feilsøke eller vurdere kode. Men hva betyr dette for sikkerheten?
 ---
 
-Bruk av KI i prosjekter treffer en rekke problemstillinger vi _må_ ta stilling til, deriblant:
-* Hvem eier kode og data? Hvem vil eie resultatet som kommer fra KI?
-* Hvilke muligheter har vi til å følge opp mislighold eller brudd på avtaler?
-* Hva kan gå galt; kan data eller kode komme på avveie, eller kan verktøyet gjøre endringer vi ikke forstår eller har kontroll på?
+Denne siden handler om bruk av KI i utviklingsløpet, ikke generell bruk av KI-løsninger. Målet er å bruke KI som et produktivitetsverktøy uten å miste kontroll på sikkerhet, kvalitet og etterprøvbarhet.
 
-{{< tip title="Håndtering av hemmeligheter" >}}
-Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal__ følges. Det er __ikke__ lov å ta KI-verktøy i bruk uten eksplisitt godkjenning fra Bouvet eller kunde!
-{{< /tip >}}
+{{< caution title="Bruk av KI-verktøy" >}}
+Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal__ følges. Det er __ikke__ lov å ta KI-verktøy i bruk uten eksplisitt godkjenning fra Bouvet eller kunde.
+{{< /caution >}}
 
-## Hva har vi lov til
-I Bouvet og på Bouvetutstyr har vi kun lov til å bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://ai-policy.bouvet.no/); på kundens utstyr har vi kun lov til å bruke de verktøyene kunden har godkjent. Bakgrunnen for disse begrensningene skyldes kompleksiteten rundt KI-verktøy. 
+## Hva har vi lov til å bruke
+På Bouvet-utstyr kan vi kun bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://ai-policy.bouvet.no/). På kundens utstyr kan vi kun bruke verktøy kunden har godkjent.
 
-De kjører ofte i egne miljøer og utfører prosessering eller behandling av potensielt sensitiv informasjon og kan resultere i endringer som påvirker oss eller kunde. 
+Bakgrunnen er enkel: KI-verktøy behandler ofte sensitiv informasjon og kan utføre handlinger som påvirker kodebase, bygg og leveranser.
 
-SSelv om vi __har den tekniske muligheten til å kjøre__ et KI-verktøy betyr det ikke __at vi bør kjøre det.__ Dersom det er et verktøy som kan hjelpe utviklingsprosessen eller prosjektet du er med i; lag en BSD-sak slik at det kan bli sjekket ut. 
+Selv om vi __kan__ bruke et verktøy teknisk, betyr det ikke at vi __skal__ bruke det. Hvis et nytt verktøy kan gi nytte i prosjektet, opprett en BSD-sak for vurdering.
 
-### Nytt verktøy? Tenk over følgende
-Dersom du ønsker å ta i bruk et nytt verktøy er det viktig med klarhet i forhold til hvem som eier resultatet av det verktøyet produserer. 
+## Praktiske råd for trygg KI-bruk i utvikling
+For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha noen enkle, felles arbeidsregler. Disse bør brukes i daglig arbeid, ikke bare som policy på papir.
 
-Mange gratisvarianter og ikke-enterprisevarianter av verktøy har restriksjoner i lisenser og avtaler som tillater leverandøren å bruke input for treningsformål. Dette vil aldri være akseptabelt for Bouvet, og heller ikke for kundene våre. 
+### Dette bør vi gjøre
 
-Vi er også nødt til å ha kontroll på hvor data og informasjon flyter slik at personvernet og forpliktelsene våre i personvernloven kan ivaretas.
+* bruk KI på avgrensede oppgaver med tydelig mål og ferdig definert rammeverk
+* behandle KI-bidrag som kode fra tredjepart: review, test og verifiser før merge
+* dokumenter KI-bruk der det er relevant for sporbarhet og revisjon
+* bruk minst mulig data i prompt (dataminimering), og del kun det som trengs for oppgaven
+* begrens tilganger for KI-verktøy til minste nødvendige nivå
 
-### Hva deler du med KI?
-Dersom du har fått lov til å bruke et KI-verktøy i utviklingsprosjektet må du ha kontroll på følgende: 
-* Hva har du lov til å dele med verktøyet?
-* Hva har du faktisk delt med verktøyet?
-* Hvordan kan du sikre at du ikke deler mer enn du har lov til?
+### Dette bør vi unngå
 
-Hvordan du bruker verktøyet i utviklingsprosjekter vil variere; noen kodeverktøy kjører som assistenter i IDE'et ditt; mens andre kobler seg opp mot f.eks. Github, analyserer koden og foreslår endringer i en egen branch basert på promptene dine. 
+* lim inn hemmeligheter, persondata eller kundeinformasjon i prompt
+* la KI ta arkitektur- eller sikkerhetsbeslutninger uten menneskelig vurdering
+* slå av review- eller testkrav fordi koden ser riktig ut ved første øyekast
+* gi verktøy bred repo-, cloud- eller prod-tilgang uten tydelig behov og godkjenning
+* la KI merge, deploye eller rotere hemmeligheter uten eksplisitt menneskelig godkjenning
 
-Med mindre det er eksplisitt godkjent skal ikke verktøyet under _noen_ omstendigheter ha tilgang til data utover kodebasen. 
+Målet er ikke å bremse utviklingen, men å bruke KI på en måte som er trygg, forutsigbar og etterprøvbar.
 
-Sjekk at du ikke inkluderer datafiler, hemmeligheter eller annen sensitiv informasjon i repoet, og ekskluder eventuelt disse i [`.gitignore`]({{< ref "utvikle/git.md" >}}). Ta i bruk nøkkelhvelv der du kan for å unngå at hemmeligheter havner i repoet ved et uhell. 
+{{< caution title="Kjøring av KI-generert kode" >}}
+Kode og script foreslått av KI skal alltid gjennomgås før kjøring på utviklingsmaskin. Vær spesielt oppmerksom på kommandoer som laster ned innhold, endrer filrettigheter, starter bakgrunnsprosesser eller skriver til systemområder.
+{{< /caution >}}
 
-{{< tip title="Lekkasje av sensitive data" >}}
-Vær klar over at noen KI-verktøy kan commite og pushe kode til Github automatisk fra IDE'et ditt, og at du må sikre at sensitiv informasjon som passord, sertifikater og data ikke kommer på avveie.
-{{< /tip >}}
+## Prompting i praksis
+Gode prompt-rutiner reduserer risiko og øker kvaliteten. Et nyttig prinsipp er at prompten skal være konkret nok til å gi et godt svar, men begrenset nok til at du beholder kontroll på data og resultat.
 
-## Kvalitetssikring av KI-bidrag
-KI-løsninger kan ha en positiv effekt på fremdrift, men må alltid behandles som kode fra tredjepart og kvalitetssikres deretter. Kode skrevet av KI vil i mange tilfeller gjøre det du ønsker, men i mange tilfeller på en mer komplisert måte, med svakheter eller sårbarheter, eller rett og slett ved å hallusinere seg frem til løsninger som aldri vil fungere i praksis. 
+### Dette bør vi be om
 
-Du som utvikler må vite hva du skal gjøre for å instruere verktøyet skikkelig, og du må være klar over hvilke begrensninger verktøyet har. For å gjøre jobben litt enklere har vi noen grunnleggende prinsipper:
-* KI skal ikke ta design- eller arkitekturbeslutninger. Det brukes til å løse avgrensede oppgaver innenfor en menneskestyrt arkitektur.
-* KI behandles som en juniorutvikler: alt den leverer skal gjennomgås, forstås og testes. KI-baserte bidrag skal være sporbare og etterprøvbare. 
-* Oppgaver deles opp i små, vurderbare komponenter du kan kvalitetssikre fullt ut. Unngå store blokker kode uten menneskelig innsikt.
+* beskriv krav og rammer først (språk, rammeverk, sikkerhetskrav)
+* be om små, vurderbare endringer fremfor store omskrivninger
+* be om eksplisitte antagelser, avgrensninger og usikkerhet
+* be om testforslag sammen med kodeforslag
+* be KI forklare sikkerhetskonsekvenser av foreslått løsning
+* be om alternativer med fordeler og ulemper når løsningen påvirker sikkerhet eller drift
 
-KI gjør oss i stand til å bli mer produktive, men det er viktig at vi forstår resultatene KI-verktøyene gir oss. Det har vært mange eksempler på kode som brukes mer eller mindre ukritisk, før det viser seg at den inneholder store og alvorlige svakheter som kan utnyttes for å manipulere eller hente ut data. Sikkerhetstesting bør alltid være en del av utviklingsløpet, men dette blir enda viktigere ved bruk av KI-verktøy for å skrive kode. KI-generert kode skal aldri ut i prod uten at den er gjennomgått, forstått og testet.
+### Dette bør vi styre unna
 
-En bør også vurdere ulike barrierer som kan hindre uventede og negative konsekvenser, som regelbaserte filer med tilleggsinstrukser for KI, tilgangsbegrensning slik at KI eksempelvis ikke kan merge kode selv og andre tiltak som forhindrer KI fra å gjøre endringer som ikke er gjennomgått og godkjent av en utvikler. 
+* prompt som inneholder hemmeligheter, tokens eller kundedata
+* prompt som ber KI om å omgå policy, logging eller sikkerhetskontroller
+* prompt som gir KI åpne fullmakter til å "fikse alt" i hele kodebasen
+* prompt som ber KI gjøre endringer direkte i produksjonsnære miljø uten review
+* prompt som blander flere urelaterte oppgaver slik at resultatet blir vanskelig å kvalitetssikre
+
+Med mindre det er eksplisitt godkjent, skal KI-verktøy ikke få tilgang til data utover det som trengs for oppgaven.
+
+Sjekk at repoet ikke inneholder datafiler, hemmeligheter eller annen sensitiv informasjon. Bruk [`.gitignore`]({{< ref "utvikle/git.md" >}}) og nøkkelhvelv for å redusere risiko for lekkasje.
+
+## KI-spesifikke trusler i utviklingsløpet
+Når KI brukes i utvikling, oppstår trusler som ikke alltid dekkes av tradisjonelle kontroller:
+
+* prompt injection i kode, dokumentasjon eller issues som påvirker agentens oppførsel
+* dataeksfiltrering via prompt, logger, plugins eller integrasjoner
+* hallusinasjoner som introduserer falske API-er eller usikre mønstre
+* forgiftet kontekst fra kompromitterte avhengigheter eller ondsinnede kodeeksempler
+* overdreven tillit til autonom kjøring uten menneskelig kontroll
+
+Disse truslene må håndteres med tekniske barrierer, tydelige prosesser og aktiv oppfølging.
+
+## Agentisk utvikling, instruksjonsfiler og guardrails
+Agentiske verktøy kan analysere kodebase, foreslå endringer, opprette pull requests og i noen tilfeller utføre handlinger automatisk. Dette krever strengere styring enn vanlig kodeassistanse.
+
+{{< caution title="Lekkasje av sensitive data" >}}
+Noen KI-verktøy kan commite og pushe kode automatisk. Sikre at sensitiv informasjon som passord, sertifikater og data ikke kommer på avveie.
+{{< /caution >}}
+
+For team som vil komme raskt i gang med tryggere agentisk utvikling, finnes det et internt Bouvet-repo med eksempler og mønstre: [bouvet-ai-harness](https://github.com/Bouvet-AI/bouvet-ai-harness). Repoet tilbyr et sett med repoartefakter og arbeidsformer som gjør KI-assistert utvikling mer konsistent, effektiv og målbart, og kan brukes som et praktisk utgangspunkt for instruksjonsfiler, arbeidsflyt og målbare kvalitetskriterier.
+
+Anbefalte guardrails:
+
+* bruk instruksjonsfiler som avgrenser hva agenten kan gjøre og ikke gjøre
+* hold instruksjoner konkrete, testbare og prosjektspesifikke
+* begrens tillatelser (least privilege) for repo, CI/CD og skytilganger
+* krev menneskelig review før merge og deploy
+* blokker automatiske endringer i sikkerhetskritiske filer uten eksplisitt godkjenning
+* logg agentens handlinger slik at bidrag er sporbare og etterprøvbare
+
+For team som bruker instruksjonsfiler aktivt, bør disse behandles som en sikkerhetskontroll på linje med policy i CI/CD.
+
+## Kvalitetssikring før merge
+KI-bidrag skal ikke til produksjon uten full kvalitetssikring. Minimum bør være på plass:
+
+* kodegjennomgang av utvikler som forstår endringen
+* relevante tester, inkludert sikkerhetstester der det er aktuelt
+* kontroll av avhengigheter og lisenskrav
+* kontroll av at hemmeligheter ikke er introdusert
+* vurdering av om endringen påvirker trusselmodell eller sikkerhetskrav
 
 # Veien videre
 * [OpenSSF: Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
 * [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq)
 * [Content exclusion for GitHub Copilot](https://docs.github.com/en/copilot/concepts/context/content-exclusion)
 * [Rules Files for Safer Vibe Coding](https://www.wiz.io/blog/safer-vibe-coding-rules-files)
+* [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+* [Internt repo: bouvet-ai-harness](https://github.com/Bouvet-AI/bouvet-ai-harness)
 
