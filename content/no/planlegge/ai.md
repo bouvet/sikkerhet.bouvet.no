@@ -5,7 +5,7 @@ translationKey: ai
 description: >
   Bruken av kunstig intelligens (KI) har eksplodert de siste årene, og teknologien har kommet så langt at den kan være et nyttig verktøy for å brainstorme løsninger, skrive,feilsøke eller vurdere kode. Men hva betyr dette for sikkerheten?
 ---
-
+ 
 Denne siden handler om bruk av KI i utviklingsløpet, ikke generell bruk av KI-løsninger. Målet er å bruke KI som et produktivitetsverktøy uten å miste kontroll på sikkerhet, kvalitet og etterprøvbarhet.
 
 {{< caution title="Bruk av KI-verktøy" >}}
