@@ -3,12 +3,13 @@ title: "Segregering av miljø"
 weight: 3
 translationKey: seg
 description: >
-  Utviklingsprosjekter benytter flere ulike miljø til ulike formål som for å teste deployments i et eget dev-miljø, en eksponerer testmiljø mot produkteier og andre nøkkelpersoner samt produksjonsmiljø mot sluttbrukere. For å unngå at hendelser i ett miljø ikke påvirker et annet må vi segregere disse på et nivå som gir mening for teamet og konteksten man jobber i.  
+  Utviklingsprosjekter benytter flere ulike miljø til ulike formål. Det er viktig å skille på disse slik at en unngår sammenblanding, datalekkasjer eller andre uønskede hendelser.
 ---
 
 Når vi bygger løsninger setter vi ofte opp flere miljø, ofte for dev, test og prod slik at vi kan utvikle samtidig som at produkteier tester ny funksjonalitet og sluttbrukere bruker systemet i prod. Det er viktig at vi skiller mellom disse miljøene, slik at vi unngår å komme i situasjoner der endringer i ett miljø påvirker bruken av et annet. 
 
-Når vi designer en ny løsning må vi derfor tenke på hvordan vi skiller mellom miljøene. Dette gjelder uavhengig av cloudleverandør. Det viktige er at vi velger et skille som faktisk begrenser påvirkning mellom miljøene, og som er håndterbart for teamet over tid.
+Separate kontoer/abonnement/prosjekter per miljø gir et naturlig sikkerhetsskille fordi miljøene er isolert fra hverandre med mindre du eksplisitt oppretter tilganger mellom dem. Dette medfører noe mer overhead i administrasjon, men gir til gjengjeld sterkere isolasjon enn de andre mønstrene.
+For de fleste prosjekter av en viss størrelse, eller der det stilles krav til sikkerhet, er dette det anbefalte utgangspunktet. Selv i mindre prosjekter er det verdt å vurdere — kostnaden ved å separere tidlig er langt lavere enn å migrere senere når behovet oppstår.
 
 ## Vanlige segregeringsmønstre
 * Separate kontoer/abonnement/prosjekter per miljø:
