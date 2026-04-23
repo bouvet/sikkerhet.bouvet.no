@@ -40,7 +40,7 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 3.	[Valideres data som hentes fra andre systemer?]({{< ref "utvikle/datavalidering.md" >}})
 4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?]({{< ref "utvikle/sikkerhetspraksiser.md" >}})
 5.	[Er det rutiner for å sikre seg mot software supply chain angrep?]({{< ref "utvikle/software-supply-chain.md" >}})
-6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< ref "utvikle/interne-komponenter.md" >}})
+6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< ref "forvalte/avhengighetshandtering.md#interne-komponenter-som-teamet-drifter-selv" >}})
 7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< ref "utvikle/sikkerhetstesting.md" >}})
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?]({{< ref "utvikle/dokumentasjon.md" >}})
 
