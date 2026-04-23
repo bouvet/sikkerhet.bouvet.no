@@ -25,9 +25,22 @@ Dersom denne ikke er nok, og teamet eller kunden ønsker noe mer omfattende kan 
 * Nivå 2: Balansert - Punktene fra level 1, samt gjennomgang av elementer relatert til prosess, teknologi og implementasjon 
 * Nivå 3: Dyptgående gjennomgang som inkluderer de forrige nivåene, samt en mer detaljert gjennomgang av oppsett, arkitektur og annet. 
 
+## Sikkerhetskrav for AI-systemer
+
+Dersom løsningen inneholder eller er avhengig av kunstig intelligens (KI), kreves tilleggskrav utover standard sikkerhetskrav. AI-systemer introduserer egne risikodimensjoner som må håndteres på kravnivå.
+
+Sikkerhetskravene for AI-systemer bør dekke:
+
+* **Sikkerhet**: Hva er akseptabel oppførsel for modellen, og hvordan skal systemet respondere ved anomalier? Hvordan beskytter man systemet mot misbruk eller manipulering?
+* **Personvern og databruk**: Hvilke data bruker AI-systemet for trening eller inferens? Hvordan håndteres persondata, og hvordan sikres det at systemet ikke brukes til uintendert formål?
+* **Overvåking og misbruk**: Hvordan skal systemet overvåkes for anomal atferd? Hva er de akseptable bruksområdene, og hvordan avdekkes misbruk?
+
+For detaljerte råd om sikker implementering av KI i utvikling, se [Bruk av kunstig intelligens]({{< ref "planlegge/ai.md" >}}).
 
 ## Veien videre
 * [Lovdata: Lov om digital sikkerhet (digitalsikkerhetsloven)](https://lovdata.no/dokument/NL/lov/2023-12-20-108)
 * [Datatilsynet: Programvareutvikling med innebygd personvern - Krav](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/krav/)
 * [Sjekklisten for sikkerhet]({{< ref "sjekklisten.md" >}})
 * [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
+* [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
