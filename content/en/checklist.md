@@ -40,7 +40,7 @@ Download the checklist and implement it as part of the source code in your proje
 3. [Is data from other systems validated?]({{< ref "develop/data-validation.md" >}})
 4. [Are there routines to protect against today’s most common attack types?]({{< ref "develop/security-practices.md" >}})
 5. [Are there routines to protect against software supply chain attacks?]({{< ref "develop/software-supply-chain.md" >}})
-6. [Are there routines to secure internal components operated by the team?]({{< ref "develop/internal-components.md" >}})
+6. [Are there routines to secure internal components operated by the team?]({{< ref "manage/dependency-management.md#internal-components-operated-by-the-team" >}})
 7. [Is security analyzed through testing or other forms of analysis?]({{< ref "develop/security-testing.md" >}})
 8. [Is necessary information about the system documented, updated, and stored securely?]({{< ref "develop/documentation.md" >}})
 
