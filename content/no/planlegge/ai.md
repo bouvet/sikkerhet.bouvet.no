@@ -114,5 +114,7 @@ KI-bidrag skal ikke til produksjon uten full kvalitetssikring. Minimum bør vær
 * [Content exclusion for GitHub Copilot](https://docs.github.com/en/copilot/concepts/context/content-exclusion)
 * [Rules Files for Safer Vibe Coding](https://www.wiz.io/blog/safer-vibe-coding-rules-files)
 * [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+* [OWASP Cheat Sheet - AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
 * [Internt repo: bouvet-ai-harness](https://github.com/Bouvet-AI/bouvet-ai-harness)
+
 
