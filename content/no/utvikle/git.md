@@ -17,7 +17,7 @@ Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold t
 __Ikke__ baser deg på at du skal "huske" å ikke inkludere filer når du committer; det er fort gjort å bomme når du skal fikse noe i forbifarten. .gitignore sjekkes inn som med andre filer, slik at andre i teamet også kan få glede av den. Husk bare på at den kun gjelder nye filer; dersom du også vil ekskludere filer som allerede ligger i repoet må de først slettes fra githistorikken. 
 
 ## Hemmeligheter og historikk
-Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike hemmeligheter, og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
+Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike [hemmeligheter]({{< ref "hemmeligheter.md" >}})!, og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
 
 Å overskrive i git er ikke nok; historikken vil fremdeles være tilgjengelig for alle med tilgang. Alle som har klonet repoet vil også ha en kopi av historikken; selv om det finnes en teknisk mulighet for å omskrive historikken vil dette i mange tilfeller kunne være [vanskelig eller umulig](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#side-effects-of-rewriting-history). 
 
