@@ -39,4 +39,5 @@ Document the roles and responsibilities and other relevant information in the so
 
 ## More information
 * [Bouvet: Leveranseansvarlig](https://wiki.bouvet.no/display/BLS/Leveranseansvarlig) (internal link, in Norwegian)
-* [Bouvet: Statement of Applicability](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) (internal link)
+* [Bouvet: Statement of Applicability](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/SOA%20-%20ISO27001%3A2023/2) (internal link, in Norwegian)
+* [Bouvet: Statement of Applicability ISO 42001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/ISO42001-Ledelsessystem%20for%20kunstig%20intelligens/SOA%20-%20ISO42001%3A2023/) (internal link, in Norwegian)
