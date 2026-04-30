@@ -25,7 +25,7 @@ If the team has no processes around secure development, this would be a good sta
 OWASP publishes much more in addition, including other Top 10 lists and what they call ["_Cheatsheets_"](https://cheatsheetseries.owasp.org/); detailed information on specific security-related topics.
 
 ## More Information
-* [OWASP Top 10 (2021)](https://owasp.org/www-project-developer-guide/draft/training_education/owasp_top_ten/)
+* [OWASP Top 10 (2025)](https://owasp.org/Top10/2025/)
 * [OWASP Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
 * [The 18 CIS Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list)
 * [CISA - Secure by design](https://www.cisa.gov/securebydesign)
