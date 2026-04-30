@@ -6,7 +6,7 @@ description: >
   Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility and risk in deliveries. All development teams should relate to its content unless otherwise agreed with the customer.
 ---
 
-Last modified: 2025.07.10
+Last modified: 2026.04.30
 
 It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
@@ -17,11 +17,11 @@ Download the checklist and implement it as part of the source code in your proje
 2. [Are the system’s data classified and handled accordingly?]({{< ref "plan/data-and-classification.md" >}})
 3. [Are data in the development and test environments also handled according to the classification?]({{< ref "plan/data-and-classification/#data-for-use-during-development-and-testing.md" >}})
 4. [If the application becomes unavailable for shorter or longer periods, what consequences does this have for us and the customer?]({{< ref "plan/business-continuity.md" >}})
-5. [Is there a defined SLA for the application?]({{< ref "plan/business-continuity.md" >}})
-6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "plan/business-continuity.md" >}})
-7. [Is there a defined plan for how and how often backups should be taken?]({{< ref "plan/business-continuity.md" >}})
-8. [Is there a defined plan for disaster recovery?]({{< ref "plan/business-continuity.md" >}})
-9. [Has the team clarified which tools should be used and how they should be handled?]({{< ref "plan/tools.md" >}})
+5. [Is there a defined SLA for the application?]({{< ref "plan/business-continuity.md#customer-expectations" >}})
+6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "plan/business-continuity.md#incident-management" >}})
+7. [Is there a defined plan for how and how often backups should be taken?]({{< ref "plan/business-continuity.md#backup" >}})
+8. [Is there a defined plan for disaster recovery?]({{< ref "plan/business-continuity.md#disaster-recovery" >}})
+9. [Has the team clarified which tools should be used and how they should be handled?]({{< ref "plan/tools.md#Disaster Recovery" >}})
 10. [Have control mechanisms been defined to maintain security in the project?]({{< ref "plan/security-checkpoints.md" >}})
 
 ## Design
