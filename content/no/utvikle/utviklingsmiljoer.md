@@ -104,8 +104,10 @@ Følgende bør minimum være dokumentert og vedlikeholdt:
 * logging og monitorering av miljøene
 * rutiner for patching og oppgraderinger
 * ansvar for forvaltning av verktøy og miljø
- 
+
 # Veien videre
 * [Wikipedia: Programming tools](https://en.wikipedia.org/wiki/Programming_tool)
 * [Atlassian: Branching strategy: a path to greatness](https://www.atlassian.com/agile/software-development/branching)
 * [Github: About secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
+* [Bouvet: Retningslinjer for anvendelse av Kunstig Intelligens (KI) (intern lenke)](https://info.bouvet.no/bin/view/Bouvets%20AI-policy/)
+* [Bouvet: Godkjente KI-verktøy og tjenester (intern lenke)](https://info.bouvet.no/bin/view/Bouvets%20AI-policy/KI-verkt%C3%B8y%20%26%20tjenester/)
