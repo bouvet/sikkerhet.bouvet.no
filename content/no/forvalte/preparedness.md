@@ -12,7 +12,7 @@ Hvis teamet har gjort grunnarbeidet godt, har dere en plan for [gjenoppretting](
 
 Årsakene til gjenoppretting varierer: menneskelige feil, feil i leveranser, svikt hos leverandør, utilgjengelig infrastruktur eller ondsinnede hendelser. Målet er alltid det samme: redusere nedetid og datatap med forutsigbare prosesser.
 
-## Minimumskrav til recovery-evne
+## Minimumskrav til gjenoppretting
 Teamet bør som minimum ha kontroll på:
 * dokumenterte mål for gjenoppretting (RTO) og akseptabelt datatap (RPO)
 * verifiserte backups av data, konfigurasjon og avhengige artefakter
