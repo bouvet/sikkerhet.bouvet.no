@@ -21,7 +21,7 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 6.	[Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden?]({{< ref "planlegge/business-continuity#håndtering-av-hendelser.md" >}})
 7.	[Er det definert en plan for hvordan og hvor ofte backup skal tas?]({{< ref "planlegge/business-continuity#backup.md" >}})
 8.	[Er det definert en plan for disaster recovery?]({{< ref "planlegge/business-continuity#disaster-recovery.md" >}})
-9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "utvikle/utviklingsmiljoer.md" >}})
+9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "utvikle/utviklingsmiljoer.md#verktoy" >}})
 10. [Er det definert kontrollmekanismer for å opprettholde sikkerhet i prosjektet?]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}})
 
 ## Designe
@@ -35,20 +35,20 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 8.	[Har teamet den nødvendige kompetansen for prosjektet?]({{< ref "kompetanseheving.md" >}})
 
 ## Utvikle
-1.	[Er utviklingsmiljøene godt beskrevet?]({{< ref "utvikle/utviklingsmiljoer.md" >}})
+1.	[Er utviklingsmiljøene godt beskrevet?]({{< ref "utvikle/utviklingsmiljoer.md#minimum-som-bør-dokumenteres" >}})
 2.	[Håndteres hemmeligheter og liknende i henhold til gjeldende best-practice?]({{< ref "utvikle/hemmeligheter.md" >}})
 3.	[Valideres data som hentes fra andre systemer?]({{< ref "utvikle/datavalidering.md" >}})
 4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?]({{< ref "utvikle/sikkerhetspraksiser.md" >}})
 5.	[Er det rutiner for å sikre seg mot software supply chain angrep?]({{< ref "utvikle/software-supply-chain.md" >}})
 6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< ref "forvalte/avhengighetshandtering.md#interne-komponenter-som-teamet-drifter-selv" >}})
-7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< ref "utvikle/sikkerhetstesting.md" >}})
+7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< ref "utvikle/sikkerhetstesting.md#statisk-kodeanalyse-sast" >}})
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?]({{< ref "utvikle/dokumentasjon.md" >}})
 
 ## Deploye
-1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< ref "deploye/cicd.md" >}})
+1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< ref "deploye/cicd.md#bruk-av-cicd" >}})
 2.  [Har teamet et forhold til sikring av byggmiljø?]({{< ref "deploye/bygg.md" >}})
 3.  [Kjøres det review i forkant av deployment?]({{< ref "deploye/deploy.md" >}})
-4.	[Er det planlagt for penetrasjonstesting i forbindelse med deployment?]({{< ref "deploye/pentesting.md" >}})
+4.	[Er det planlagt for sikkerhetstesting, inkludert eventuell penetrasjonstesting, i forbindelse med deployment?]({{< ref "utvikle/sikkerhetstesting.md#når-pentest-er-aktuelt" >}})
 
 ## Forvalte
 1.	[Har teamet verifisert at nettverksdiagrammet er korrekt implementert?]({{< ref "forvalte/verifisering-av-design.md" >}})
