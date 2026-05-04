@@ -3,14 +3,34 @@ title: "Øv på gjenoppretting"
 weight: 5
 translationKey: preparedness
 description: >
-  En backup som ikke er testet er verdiløs, og det samme gjelder alt av planer for disaster recovery såsant disse ikke testes. Teamet må verifisere backups og planer jevnlig, slik at alle vet hva som må skje.  
+    Teamet må kunne gjenopprette tjenester og data etter destruktive hendelser. Denne artikkelen handler om praktisk recovery: planer, øvelser og verifisering av at gjenoppretting faktisk fungerer.
 ---
 
-Dersom teamet har gjort alt rett til nå har dere en plan for [disaster recovery]({{< ref "planlegge/business-continuity.md" >}}) som forteller dere hva som må gjøres for å gjenopprette infrastruktur, applikasjoner og data slik at en kommer tilbake til normal drift. 
+En backup som ikke er testet er verdiløs. Det samme gjelder en disaster recovery-plan som aldri har blitt testet.
 
-Årsakene til at en er nødt å gjenopprette kan være mange, og svært varierende i omfang. Hvem har vel ikke kjørt en ```delete from <table> where x = 'something'``` med manglende eller feil parametre, eller droppet feil tabell fra en database? Eller slettet en server eller appservice fra et prodmiljø ved en feil (_jeg skulle bare fikse noe kjapt...._). I slike tilfeller kan det gå kjapt å gjenopprette dersom en vet hva som gikk galt, men i andre og mer komplekse tilfeller som f.eks. involverer ukjente feil i programvaren eller problemer hos en skytjenesteleverandør kan det bli mer komplekst. 
+Hvis teamet har gjort grunnarbeidet godt, har dere en plan for [gjenoppretting]({{< ref "planlegge/business-continuity.md#disaster-recovery" >}}) som beskriver hvordan infrastruktur, applikasjon og data gjenopprettes til normal drift.
 
-For at planene skal ha noen reell verdi, er man nødt til å teste disse i praksis. I en perfekt verden bør planene være så detaljerte at gjenoppretting er mulig selv om [hele teamet blir påkjørt av bussen](https://en.wikipedia.org/wiki/Bus_factor), eller på annet vis blir utilgjengelige. I praksis er dette ofte vanskelig å oppnå, men teamet bør ha et mål om å lage en god oppskrift på hvordan en recovery kan foregå under gitte forutsetninger, og deretter teste denne regelmessig i et alternativt miljø. 
+Årsakene til gjenoppretting varierer: menneskelige feil, feil i leveranser, svikt hos leverandør, utilgjengelig infrastruktur eller ondsinnede hendelser. Målet er alltid det samme: redusere nedetid og datatap med forutsigbare prosesser.
+
+## Minimumskrav til recovery-evne
+Teamet bør som minimum ha kontroll på:
+* dokumenterte mål for gjenoppretting (RTO) og akseptabelt datatap (RPO)
+* verifiserte backups av data, konfigurasjon og avhengige artefakter
+* en konkret, stegvis recovery-oppskrift som kan følges av flere enn én person
+* nødvendige tilganger, roller og tilgangspakker for de som skal gjenopprette
+* et testmiljø der recovery-planen kan øves uten å påvirke produksjon
+* tydelige kriterier for når systemet kan åpnes for brukere igjen
+
+## Øving og verifisering
+Recovery må testes jevnlig. Teamet bør planlegge øvelser som dekker både enkle feil og mer komplekse scenarioer.
+
+Eksempler på øvelser:
+* gjenoppretting av enkeltkomponent (f.eks. database eller apptjeneste)
+* full gjenoppretting av kritisk tjeneste i alternativt miljø
+* validering av backup-kjede fra backup til verifisert restore
+* øvelse der nøkkelpersoner ikke er tilgjengelige
+
+Etter hver øvelse bør dere dokumentere hva som fungerte, hva som feilet og hvilke tiltak som må inn i backloggen.
 
 En tenkt oppskrift for løsningen tegnet opp i [artikkelen om systemskisser]({{< ref "designe/systemskisser.md" >}}) kan være som under. Premisset for planen under er at vi har kildekode og pipelines tilgjengelig i eksempelvis Azure DevOps, og at applikasjon og ressurser på mystisk vis er fjernet fra Azure:
 
@@ -26,13 +46,25 @@ En tenkt oppskrift for løsningen tegnet opp i [artikkelen om systemskisser]({{<
     1. Restore data til database fra siste backup 
     2. Deploy backend
     3. Deploy frontend
-9. Verifiser at applikasjon fungerer
-10. Publiser PowerBI-rapport
+7. Verifiser at applikasjon fungerer
+8. Publiser PowerBI-rapport
     * Verifiser at den kan lese data fra backend
-11. Skru på aksess for sluttbrukere slik at de kan bruke applikasjonen igjen.
+9. Skru på aksess for sluttbrukere slik at de kan bruke applikasjonen igjen.
 
-Det er vedt å nevne at hvert av punktene kan trenge utfyllende informasjon, med henvisninger til aksesspakker eller gruppemedlemsskap for at personen som restorer skal få nødvendig tilgang. 
+Det er verdt å nevne at hvert punkt ofte trenger utfyllende informasjon, med henvisninger til tilgangspakker eller gruppemedlemskap for at den som gjenoppretter skal få nødvendig tilgang.
+
+## Recovery for løsninger med AI-komponenter
+Hvis løsningen har AI-komponenter, må recovery-planen også dekke:
+* gjenoppretting av modellartefakter og versjoner
+* gjenoppretting av konfigurasjon for model routing, prompts og sikkerhetsgrenser
+* gjenoppretting av vektorindeks/feature store der dette brukes
+* verifisering av modellkvalitet etter restore (ikke bare at tjenesten svarer)
+* kontroll av AI-relaterte logger slik at hendelsesforløp fortsatt er sporbart
+
+Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i en operativ recovery-kontekst.
 
 ## Veien videre
-* [Nasjonal Sikkerhetsmyndighet: Forbered virkshomheten på håndtering av hendelser](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/handtere-og-gjenopprette/forbered-virksomheten-pa-handtering-av-hendelser/)
+* [Nasjonal Sikkerhetsmyndighet: Forbered virksomheten på håndtering av hendelser](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/handtere-og-gjenopprette/forbered-virksomheten-pa-handtering-av-hendelser/)
+* [Nasjonal Sikkerhetsmyndighet: Nasjonalt rammeverk for håndtering av digitale angrep og cyberhendelser](https://nsm.no/regelverk-og-hjelp/rapporter/nasjonalt-rammeverk-for-handtering-av-digitale-angrep-og-cyberhendelser)
+* [Wikipedia: Disaster recovery](https://en.wikipedia.org/wiki/Disaster_recovery)
 
