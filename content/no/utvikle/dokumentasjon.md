@@ -3,32 +3,53 @@ title: "Dokumentasjon"
 weight: 6
 translationKey: docs
 description: >
-  Alle utviklingsprosjekter må dokumenteres. Dette er ikke bare viktig for kontinuiteten i prosjektet, men også for å dokumentere sikkerhetsrelaterte tiltak og eventuelle hendelser. 
+  God dokumentasjon er avgjørende for kontinuitet, etterprøvbarhet og sikkerhet. Det gjelder valgene som er tatt, trusler som er vurdert, og systemets faktiske oppførsel – også i AI-systemer.
 ---
 
-Dokumentasjon er ofte sett på som et nødvendig onde, og vi er ikke alltid gode nok til å dokumentere prosjektene våre. Mange mener at kildekoden er den beste dokumentasjonen, men denne sier kun hvordan en applikasjon fungerer, ikke nødvendigvis hvorfor den fungerer som den gjør, eller hva som er den egentlige intensjonen. 
+Dokumentasjon er ofte nedprioritert under leveranse, men manglende dokumentasjon skaper reell risiko. Kildekode beskriver *hvordan* noe fungerer, men ikke *hvorfor* valg ble tatt, hvilke trusler som er vurdert, eller hvilke forutsetninger løsningen er avhengig av.
 
-Sikkerhetsbildet er en viktig del av dokumentasjonen: Hvilke vurderinger ligger til grunn for valgene som er gjort, og hvilken risiko og konsekvens medfører disse? En trusselvurdering er ofte et nyttig verktøy når en skal vurdere tiltak i prosjektet, ikke minst når en re-evaluerer trusselbildet og tiltakene en stund etterpå. 
+Sikkerhetskontekst som kun finnes i hodet på enkeltpersoner er en sårbarhet. Sikkerhetsmekanismer som ikke er dokumentert risikerer man at fjernes uten at noen forstår konsekvensen. Trusselmodeller som ikke er skrevet ned kan heller ikke vedlikeholdes eller revideres.
 
-Ved å sikre god dokumentasjon unngår vi i større grad å basere oss på en løsning der sikkerhetskonteksten ligger i hodet på enkeltpersoner. Vi reduserer også faren for at sikkerhetsmekanismer fjernes av utviklere som ikke har sikkerhetskompetanse eller kjennskap til kontekst. 
+God dokumentasjon gir teamet mulighet til å vurdere risiko over tid, ikke bare ved ferdigstilling.
 
 ## Dokumentasjonsløsning
-Prosjektet må finne en løsning for hvor dokumentasjon oppbevares som gir mening i prosjektet. Det finnes mange ulike løsninger som gir muligheten for å oppbevare dokumentasjon som f.eks. [Markdown](https://en.wikipedia.org/wiki/Markdown) i et git-repo - løsningen du ser på nå er bygget i [Hugo](https://gohugo.io/), men det finnes utallige andre varianter. 
+Teamet må velge en løsning som faktisk brukes. Dokumentasjon som lever i et verktøy ingen åpner, gir liten verdi.
 
-Når du skal velge løsning er det viktig å være klar over behovet. Hvilken strategi teamet har for å oppbevare f.eks. trusselmodeller som ikke er mitigert vil legge føringer for hvilken løsning som velges, og hvilken tilgang brukerne har til denne. Husk at god dokumentasjon kan være like sensitivt som kildekoden, og må behandles deretter.
+Populære tilnærminger inkluderer [docs-as-code](https://docsascode.org/), der dokumentasjon skrives i [Markdown](https://en.wikipedia.org/wiki/Markdown) og versjoneres i git ved siden av kildekoden. Dette gir lavere terskel for oppdateringer og full historikk over endringer.
+
+Uansett løsning: husk at god dokumentasjon kan være like sensitiv som kildekoden. Trusselmodeller med åpne funn, arkitekturbeskrivelser og sikkerhetskonfigurasjoner må beskyttes på linje med systemet de beskriver.
 
 ## Hva skal dokumenteres
-Hva vi bør dokumentere vil variere fra prosjekt til prosjekt. Vi bør alltid ha et [design]({{< ref "designe/systemskisser.md" >}}) som gir et innblikk i eksempelvis infrastruktur, IAM og dataflyt slik at det er mulig å ettergå dette på senere tidspunkt. 
+Hva som må dokumenteres vil variere med prosjektets størrelse og kritikalitet, men følgende bør alltid være på plass:
 
-Trusselmodell må alltid dokumenteres og vedlikeholdes, og eventuelle mitigerende tiltak må også dokumenteres. Vær imidlertid varsom med hvor en trusselmodell legges; dersom modellen inneholder kritiske funn som ikke er mitigert vil den være til god hjelp for en potensiell angriper. Vurder å oppbevare denne på et sted som kun er tilgjengelig for teamet frem til den eventuelt kan publiseres i en mer åpen løsning. 
+* **Systemdesign**: [Skisser og diagrammer]({{< ref "designe/systemskisser.md" >}}) som viser infrastruktur, dataflyt, IAM og integrasjoner – på et nivå som gjør det mulig å ettergå arkitekturvalgene som er tatt.
+* **Trusselmodell**: Hvilke trusler er vurdert, hvilke tiltak er innført og hvilken restrisiko er akseptert. Trusselmodellen må vedlikeholdes og oppdateres ved endringer.
+* **Sikkerhetskonfigurasjon**: Konfigurasjoner som er sikkerhetskritiske skal dokumenteres, slik at de ikke utilsiktet endres eller utelates ved oppgradering og nyoppsett.
+* **Hendelseslogg og avvik**: Sikkerhetshendelser og avvik bør loggføres og dokumenteres, inkludert hva som ble gjort og hvilke læringspunkter som ble identifisert.
+* **Kritiske avhengigheter**: Eksterne tjenester, tredjepartsbiblioteker og integrasjoner som løsningen er avhengig av for korrekt sikkerhetsfunksjon.
 
-OWASP Top 10 har flere punkter som kan relateres til utviklingsmiljøet og oppsettet av dette, så dersom det er spesielle konfigurasjoner som må på plass bør dette også dokumenteres, slik at en unngår svakheter eller sårbarheter som oppstår dersom noen glemmer viktige steg som ikke er skrevet ned. 
+Kritikaliteten til løsningen legger føringer for dybden: et system med 24/7-krav og høy konsekvens ved nedetid trenger mer detaljert dokumentasjon enn et internt lavrisikosystem.
 
-En må også ta inn over seg kritikaliteten til løsningen; dersom det er et system som har 24/7-oppetidskrav og er kritisk for kunden må dokumentasjonen stå i stil med dette, slik at selv den minst erfarne personen i teamet kan feilsøke problemer uten å kjenne løsningen i detalj. 
+## Dokumentasjon av KI-systemer
+KI-systemer stiller krav til dokumentasjon som tradisjonell teknisk dokumentasjon ikke fullt ut dekker. Modeller, treningsdata og evalueringsresultater endres over tid og påvirker systemets oppførsel på måter som ikke alltid er synlige i kode alene.
+
+Følgende bør dokumenteres for løsninger med KI-komponenter:
+
+* **Systemformål og tiltenkt bruk**: Hva systemet er designet for å gjøre, hvem det er ment for, og hvilke bruksscenarioer som er utenfor scope.
+* **Modellbeskrivelse**: Hvilken modell brukes, hvem som har utviklet den, hvilken versjon og hvilken arkitektur. Dersom modellen er egentrent: treningsoppsett og metodikk.
+* **Treningsdata og dataopphav**: Beskrivelse av hvilke data modellen er trent på, inkludert kilder, lisensiering, eventuelle begrensninger og kjente svakheter i datagrunnlaget.
+* **Evalueringsresultater**: Dokumenterte målinger på ytelse, nøyaktighet, robusthet og eventuelle bias-funn. Evalueringsgrunnlag og metrikker bør beskrives slik at resultatene kan reproduseres og sammenlignes over tid.
+* **Risikovurdering**: Hvilke risikoer er identifisert knyttet til modellens oppførsel, og hvilke tiltak er innført. Dette inkluderer risiko for feilklassifisering, hallusinasjoner, urettferdig behandling og misbruk.
+* **Menneskelig oversikt og grenser for autonomi**: Hvor og hvordan mennesker involveres i beslutninger, og hvilke begrensninger som er lagt på hva systemet kan gjøre autonomt.
+* **Endringsstyring**: Hvordan modellversjoner styres, testes og rulles ut. Endringer i modell, treningsdata eller konfigurasjon bør spores og begrunnes.
+
+Denne dokumentasjonen er nødvendig både for intern kontroll og for å kunne demonstrere etterlevelse overfor kunder, tilsynsmyndigheter og andre interessenter.
 
 ## Veien videre
-* [Dokumentasjonsløsning: Hugo](https://gohugo.io/)
-* [Dokumentasjonsløsning: docs-as-code](https://docsascode.org/)
-* [Atlassian: How to ace internal documentation](https://www.atlassian.com/work-management/knowledge-sharing/documentation)
 * [Mastering the Art of Software Documentation: A Comprehensive Guide for Developers and Tech Professionals](https://medium.com/@nomannayeem/mastering-the-art-of-software-documentation-a06aa5d7e697)
 * [Why documentation matters, and why you should include it in your code](https://www.freecodecamp.org/news/why-documentation-matters-and-why-you-should-include-it-in-your-code-41ef62dd5c2f/)
+* [Dokumentasjonsløsning: Hugo](https://gohugo.io/)
+* [Dokumentasjonsløsning: docs-as-code](https://docsascode.org/)
+* [EU AI Act – krav til teknisk dokumentasjon for høyrisikoystemer](https://artificialintelligenceact.eu/article/11/)
+* [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
+* [Atlassian: How to ace internal documentation](https://www.atlassian.com/work-management/knowledge-sharing/documentation)
