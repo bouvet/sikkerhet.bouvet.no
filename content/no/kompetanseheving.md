@@ -13,6 +13,8 @@ Det er viktig at teamet ser over hele utviklingsløpet med alle fasene og vurder
 
 Vi har mange ulike sikkerhetsmiljøer og enkeltpersoner med høy kompetanse som kan bidra innad i Bouvet; dersom akkurat ditt team har behov, ta det gjerne opp på din lokale Security-Champions-kanal på Bouvet-Slack, ```#sikkerhet``` eller med din regionale kvalitetsleder. 
 
+For team som vil jobbe mer systematisk med kultur og bevisstgjøring, kan [Tips til å bygge god sikkerhetskultur](https://www.bouvet.no/bouvet-deler/Tips-til-%C3%A5-bygge-god-sikkerhetskultur) være et nyttig supplement. Podcast-episoden [Er endringsledelse nøkkelen til en sikker virksomhet?](https://www.bouvet.no/podcasts/endringsledelseogsikkerhet) er også relevant for team og ledere som vil forstå hvordan sikkerhet må forankres bredere enn bare i teknologien.
+
 ## Kurs 
 Kursavdelingen til Bouvet kan tilby mange ulike kurs, også innenfor sikkerhet. Dersom teamet ønsker kursing utover det som leveres i Security Journey kan det være et alternativ, ikke minst dersom dere ønsker et mer skreddersydd kurs. Ta kontakt med [kursavdelingen](https://kurs.bouvet.no) dersom dere ikke finner det rette kurset. 
 
@@ -107,3 +109,5 @@ Under finner du en opplisting av noen kurs som tilbys i plattformen. Plattformen
 # Veien videre
 * [Bouvet: Kurs](https://kurs.bouvet.no)
 * [Security Journey Login](https://my.securityjourney.com/) (Single-Sign-On)
+* [Bouvet Deler: Tips til å bygge god sikkerhetskultur](https://www.bouvet.no/bouvet-deler/Tips-til-%C3%A5-bygge-god-sikkerhetskultur)
+* [Bouvet Podcast: Er endringsledelse nøkkelen til en sikker virksomhet?](https://www.bouvet.no/podcasts/endringsledelseogsikkerhet)

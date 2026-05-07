@@ -27,6 +27,8 @@ Per i dag er siste publiserte versjon OWASP Top 10:2025:
 ## Fra Top 10 til praksis i teamet
 Dersom teamet ikke har noen prosesser rundt sikker utvikling, er dette et godt sted å starte. For å få effekt i praksis må punktene omsettes til konkrete kontroller i leveranseløpet.
 
+For en mer praktisk gjennomgang av hvordan slike tiltak kan bygges inn i produktutvikling, se også [Slik etablerer bedriften gode sikkerhetstiltak i produktutviklingen](https://www.bouvet.no/bouvet-deler/slik-etablerer-bedriften-gode-sikkerhetstiltak-i-produktutviklingen).
+
 Et minimum er vanligvis å:
 
 * definere sikkerhetskrav tidlig og knytte dem til arkitektur og brukerhistorier
@@ -57,3 +59,4 @@ OWASP publiserer mye annet i tillegg, både andre Top 10-lister og det de kaller
 * [The 18 CIS Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list)
 * [CISA - Secure by Design](https://www.cisa.gov/securebydesign)
 * [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+* [Bouvet Deler: Slik etablerer bedriften gode sikkerhetstiltak i produktutviklingen](https://www.bouvet.no/bouvet-deler/slik-etablerer-bedriften-gode-sikkerhetstiltak-i-produktutviklingen)
