@@ -43,6 +43,19 @@ Følgende bør dokumenteres for løsninger med KI-komponenter:
 * **Menneskelig oversikt og grenser for autonomi**: Hvor og hvordan mennesker involveres i beslutninger, og hvilke begrensninger som er lagt på hva systemet kan gjøre autonomt.
 * **Endringsstyring**: Hvordan modellversjoner styres, testes og rulles ut. Endringer i modell, treningsdata eller konfigurasjon bør spores og begrunnes.
 
+### Minimumsmal for KI-dokumentasjon
+For å gjøre dette praktisk og konsistent kan teamet bruke en enkel minimumsmal per modellversjon eller vesentlig endring:
+
+* identifikator: modellnavn, versjon, dato og ansvarlig
+* formål og scope: hva modellen er godkjent for, og hva som er utenfor scope
+* datagrunnlag: kilder, avgrensninger, lisens og kjente svakheter
+* evaluering: testsett, metrikker, resultater og baseline-sammenligning
+* risiko og tiltak: sentrale funn, kompenserende kontroller og restrisiko
+* godkjenning: beslutning, godkjenner og eventuelle vilkår for produksjonsbruk
+* observabilitet: hva som logges/overvåkes i drift og hvilke terskler som utløser oppfølging
+
+Malen trenger ikke være omfattende, men den bør være lik hver gang slik at sammenligning, revisjon og gjenbruk blir enkelt.
+
 Denne dokumentasjonen er nødvendig både for intern kontroll og for å kunne demonstrere etterlevelse overfor kunder, tilsynsmyndigheter og andre interessenter.
 
 ## Veien videre

@@ -65,6 +65,11 @@ Det vil også være naturlig å kunne forklare:
 * hvilke menneskelige kontrollpunkter som finnes
 * hvordan teamet oppdager degradering, feilbruk eller uventet modellatferd
 
+Se også:
+* [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for struktur på teknisk og KI-relatert dokumentasjon
+* [Sikkerhetskontrollpunkt]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}}) for hvilke gates og beslutninger som bør kunne dokumenteres
+* [Verifiser designet]({{< ref "forvalte/verifisering-av-design.md" >}}) for hvordan teamet verifiserer at dokumentasjon og faktisk løsning samsvarer
+
 ## Etter revisjonen
 En revisjon er ikke ferdig når møtet er over. Teamet må sikre at funn, avvik og anbefalinger blir vurdert og fulgt opp på samme måte som annet forbedringsarbeid.
 

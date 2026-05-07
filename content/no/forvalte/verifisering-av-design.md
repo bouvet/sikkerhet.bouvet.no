@@ -66,6 +66,11 @@ I praksis bør dokumentasjonen gjøre det mulig å svare på:
 
 Sporbar dokumentasjon reduserer feilsøkingstid ved hendelser, og gjør re-verifisering enklere ved større endringer.
 
+Se også:
+* [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for minimumskrav til innhold og sporbarhet
+* [Sikkerhetskontrollpunkt]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}}) for pre-prod gates, inkludert AI-spesifikke beslutningspunkter
+* [Revisjon av prosjekt eller leveranse]({{< ref "forvalte/audit.md" >}}) for krav til evidens og etterprøvbarhet
+
 ## Hvordan kan vi sjekke?
 Dette avhenger veldig av form og farge på prosjektet, men i mange tilfeller vil IT-organisasjonen hos kunden (for prosjekter hostet hos kunde) kunne hjelpe. Dersom løsningen kjører hos Bouvet vil helt sikkert Intern IT & Sikkerhet kunne være behjelpelige på å sjekke ting som nettverkskonfigurasjoner og liknende, eventuelt peke deg i riktig retning. Det er mye du kan gjøre selv også, men sjekk med Intern IT & Sikkerhet før du installerer verktøy og kjører scans eller liknende. 
 
