@@ -41,7 +41,7 @@ For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha n
 Målet er ikke å bremse utviklingen, men å bruke KI på en måte som er trygg, forutsigbar og etterprøvbar.
 
 {{< caution title="Kjøring av KI-generert kode" >}}
-Kode og script foreslått av KI skal alltid gjennomgås før kjøring på utviklingsmaskin. Vær spesielt oppmerksom på kommandoer som laster ned innhold, endrer filrettigheter, starter bakgrunnsprosesser eller skriver til systemområder.
+Kode og script foreslått av KI skal alltid gjennomgås før kjøring på utviklingsmaskin. Vær spesielt oppmerksom på kommandoer som laster ned innhold, endrer filrettigheter, starter bakgrunnsprosesser eller skriver til systemområder. Om man kjører KI-verktøyet i en avgrenset sandbox, reduserer man risikoen og kan i større grad la KI-verktøyet jobbe autonomt.
 {{< /caution >}}
 
 ## Prompting i praksis
