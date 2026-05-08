@@ -64,6 +64,7 @@ Tiltak:
 * **Revider tredjeparts actions**: Gjennomgå kildekoden til actions du tar inn, spesielt de som håndterer secrets eller deployer til prod.
 * **Bruk interne eller offisielle actions**: Foretrekk actions fra den samme organisasjonen, eller fra verifiserte aktører med god historikk.
 * **Overvåk endringer**: Bruk Dependabot eller tilsvarende til å varsle når actions oppdateres, slik at oppdateringen er eksplisitt og sporet.
+* **Bruk av KI i pipeline**: Vær sikker på at du forstår risiko og potensielle utfordringer før du vurderer å bruke KI-baserte actions i pipeline. 
 
 Det generelle bildet for forsyningskjedesikkerhet er beskrevet i [Forsyningskjedesikkerhet]({{< ref "utvikle/software-supply-chain.md" >}}).
 

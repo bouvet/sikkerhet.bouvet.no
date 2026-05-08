@@ -42,7 +42,9 @@ Praktiske kontroller:
 * **Bygg provenance-attestering**: Dokumenter hva som bygde artefaktet, fra hvilken kilde og under hvilke forutsetninger.
 
 ## Bygging for KI-systemer
-For KI-løsninger omfatter bygging mer enn applikasjonskode. Modeller, tokenizer-filer, embeddings og inferensimages er også artefakter som må behandles kontrollert.
+For KI-løsninger omfatter bygging mer enn vanlig programmerkode. Treningsmodeller, støttefiler, datarepresentasjoner og kjørbare miljøer som brukes til å kjøre modellen må også håndteres kontrollert gjennom hele prosessen.
+
+
 
 * **Versjoner modellartefakter**: Behandle modellversjoner på lik linje med kodeversjoner.
 * **Signer modell- og inferensartefakter**: Bruk samme integritetskrav for modeller som for øvrige artefakter.
