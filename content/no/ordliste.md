@@ -11,6 +11,8 @@ description: >
 
 **Active Directory (AD)** Katalogtjeneste fra Microsoft brukt on-premise. Håndterer brukere, grupper, identiteter og mye annet. 
 
+**AI-agent** Programvarekomponent som bruker KI-modeller til å utføre oppgaver, ofte med tilgang til verktøy, data eller API-er. 
+
 **Asymmetrisk kryptering** Kryptering med åpen og privat nøkkel. Avsender kan kryptere en melding med mottakers åpne nøkkel, meldingen kan kun dekrypteres med den private nøkkelen. 
 
 **Autentisering** Å verifisere at brukeren er den hen utgir seg for å være. Ofte forkortet _authn_
@@ -53,6 +55,8 @@ description: >
 
 ## D
 **Dataintegritet** Mekanisme som forhindrer endring eller ødelgellse av data under transport eller lagring.
+
+**Data poisoning** Manipulering av trenings- eller evalueringsdata for å påvirke modellens oppførsel i en uønsket retning.
 
 **Dekryptering** Å transformere en kryptert melding tilbake til det originale formatet ved hjelp av en nøkkel.
 
@@ -100,6 +104,8 @@ description: >
 ## K
 **Kali Linux** Linuxdistribusjon rettet mot cybersikkerhet. 
 
+**Kunstig intelligens (KI)** Samlebetegnelse for metoder og systemer som kan utføre oppgaver som normalt krever menneskelig vurdering, for eksempel tekstforståelse, prediksjon og beslutningsstøtte.
+
 **Konfidensialitet** Grunnleggende sikkerhetsbegrep, del av CIA-triaden. I hvor stor grad informasjon kan holdes hemmelig
 
 **Kryptering** Mekanisme der data gjøres uleselig uten korrekt nøkkel. Se også asymmetrisk og symmetrisk kryptering. 
@@ -107,12 +113,18 @@ description: >
 **Kryptografiske nøkler** Hemmelige eller offentlige verdier som brukes i krypterings- og dekrypteringsprosesser. Se asymmetrisk kryptering. 
 
 ## L
+**Large Language Model (LLM)** Stor språkmodell trent på store mengder tekst for å forstå og generere naturlig språk.
+
 **Local Area Network (LAN)** Nettverk som dekker et begrenset fysisk område, som et bolighus, noen kontorer eller en bygning. 
 
 ## M
 **Malware** Ondsinnet programvare ment for å utføre skadelige handlinger. Kan ramme spesifikke mål, men kan også spres tilfeldig for å ramme bredest mulig. 
 
 **Man-in-the-middle (MITM)** Angrepsteknikk der en angriper forsøker å plassere seg mellom to noder som kommuniserer, i håp om å avlytte trafikkstrømmen mellom de to, eller alternativt for å manipulere denne. 
+
+**Model Context Protocol (MCP)** Åpen protokoll for å koble KI-agenter til eksterne verktøy og datakilder på en standardisert måte.
+
+**Modelldrift (Model drift)** Gradvis endring i modellens kvalitet eller oppførsel over tid, ofte som følge av endringer i data, kontekst eller bruksmønster.
 
 ## O
 
@@ -135,6 +147,8 @@ description: >
 
 **Principle of least privilege** Grunnleggende sikkerhetsprinsipp som tilsier at brukere eller enheter ikke får mer tilgang enn de absolutt trenger for å gjøre jobben sin. 
 
+**Prompt injection** Angrepsteknikk der input forsøker å overstyre instruksjoner og få en KI-modell eller agent til å utføre uønsket atferd.
+
 **Public key** Åpen nøkkel brukt i forbindelse med asymmetrisk kryptering. Meldinger til en mottaker krypteres med åpne nøkkelen, men kan kun dekrypteres med den private nøkkelen. 
 
 **Public Key Infrastructure (PKI)** Infrastruktur brukt for å publisere og distribuere public keys, slik at det er mulig å validere identitet. 
@@ -148,6 +162,8 @@ description: >
 **Ransomware** Ondsinnet programvare som krypterer et system på vegne av en angriper, slik at det blir ubrukelig for offeret. Målet er at offeret skal betale for å få nøkkelen til å dekryptere dataene. 
 
 **RBAC** Role-based Access Control. Brukere gis en rolle ut ifra oppgaver eller tilhørighet som definerer tilgangen de har, ofte basert på gruppemedlemsskap i AD eller Entra ID. 
+
+**Retrieval-Augmented Generation (RAG)** Tilnærming der en språkmodell henter relevant kontekst fra eksterne kilder før den genererer svar.
 
 **Risiko** Et element av usikkerhet kombinert med uønsket konsekvens. Ofte uttrykket med formelen _sannsynlighet_*_konsekvens_
 
@@ -167,6 +183,10 @@ description: >
 **Social engineering** Manipulering av mennesker for å få tilgang på informasjon eller en lokasjon. En angriper kan eksempelvis skaffe seg tilgang til et kontorlokale ved å utgi seg for å være en håndtverker på oppdrag.
 
 **Spear phishing** Phishingangrep rettet mot enkeltpersoner, eksempelvis lederen i en bedrift.
+
+**Software Bill of Materials (SBOM)** Maskinlesbar oversikt over hvilke komponenter og versjoner som inngår i et programvareprodukt eller artefakt.
+
+**Software Supply Chain** Hele kjeden av avhengigheter, verktøy, byggsteg og distribusjon som brukes for å utvikle og levere programvare.
 
 **SQL Injeksjon** Angrepsform der angriper utnytter en sårbarhet for å modifisere eller kjøre egne SQL-spørringer mot backend. 
 

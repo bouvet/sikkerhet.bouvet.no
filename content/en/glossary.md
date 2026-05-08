@@ -11,6 +11,10 @@ description: >
 
 **Active Directory (AD)** A directory service from Microsoft used on-premises. It manages users, groups, identities, and much more.
 
+**Artificial Intelligence (AI)** A broad term for methods and systems that can perform tasks typically requiring human judgment, such as language understanding, prediction, and decision support.
+
+**AI agent** A software component that uses AI models to perform tasks, often with access to tools, data, or APIs.
+
 **Asymmetric encryption** Encryption using a public and private key. The sender can encrypt a message with the recipient’s public key, and the message can only be decrypted with the private key.
 
 **Authentication** Verifying that the user is who they claim to be. Also known as _authn_
@@ -55,6 +59,8 @@ description: >
 
 ## D
 **Data integrity** Mechanisms preventing data alteration or corruption during transport or storage.
+
+**Data poisoning** Manipulation of training or evaluation data to influence a model’s behavior in an unintended or malicious direction.
 
 **Decryption** Transforming an encrypted message back into its original format using a key.
 
@@ -111,6 +117,8 @@ description: >
 
 
 ## L
+**Large Language Model (LLM)** A language model trained on large text corpora to understand and generate natural language.
+
 **Local Area Network (LAN)** A network that spans a small physical area, such as a home, a set of offices, or a building.
 
 ## M
@@ -119,6 +127,10 @@ description: >
 **Man-in-the-middle (MITM)** An attack technique where an attacker positions themselves between two communicating parties to eavesdrop or manipulate traffic.
 
 **Malicious software** Also called malware, viruses, trojans, or worms. Software developed for harmful intent.
+
+**Model Context Protocol (MCP)** An open protocol for connecting AI agents to external tools and data sources in a standardized way.
+
+**Model drift** A gradual change in model quality or behavior over time, often caused by changes in data, context, or usage patterns.
 
 ## O
 **OpenID Connect (OIDC)** An authentication layer on top of OAuth that also provides user identity information.
@@ -138,6 +150,8 @@ description: >
 
 **Principle of least privilege** A fundamental security principle dictating that users or systems have only the minimal access rights needed to perform their tasks.
 
+**Prompt injection** An attack technique where input attempts to override instructions and cause an AI model or agent to behave in unintended ways.
+
 **Private key** The secret key used in asymmetric encryption. A message is encrypted with the corresponding public key and can only be decrypted with this private key. Must be kept confidential.
 
 **Public key** Used in asymmetric encryption. A message is encrypted with the public key but can only be decrypted with the private key.
@@ -151,6 +165,8 @@ description: >
 **Ransomware** Malicious software that encrypts a system, rendering it unusable unless the victim pays for the decryption key.
 
 **RBAC** Role-Based Access Control. Users are assigned roles (often via group memberships in AD or Entra ID) that define their permissions.
+
+**Retrieval-Augmented Generation (RAG)** An approach where a language model retrieves relevant context from external sources before generating a response.
 
 **Risk** An element of uncertainty combined with an unwanted consequence, often expressed as _probability × consequence_.
 
@@ -168,6 +184,10 @@ description: >
 **Social engineering** Manipulating people to gain access to information or locations. For example, an attacker posing as a contractor to enter an office building.
 
 **Spear phishing** A phishing attack targeting a specific individual (e.g., a company CEO).
+
+**Software Bill of Materials (SBOM)** A machine-readable inventory of the components and versions included in a software product or artifact.
+
+**Software supply chain** The full chain of dependencies, tools, build steps, and distribution paths used to develop and deliver software.
 
 **SQL injection** An attack that exploits vulnerabilities to modify or run custom SQL queries on the backend.
 
