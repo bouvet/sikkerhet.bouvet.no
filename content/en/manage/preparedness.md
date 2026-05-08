@@ -32,5 +32,15 @@ An example recipe for the solution outlined in the [article on system diagrams](
 
 It is worth mentioning that each of the points may need additional information, with references to access packages or group memberships for the person restoring to gain the necessary access.
 
+## Recovery for AI System Components
+If the solution has AI components, the recovery plan must also cover:
+* restoration of model artifacts and versions
+* restoration of configuration for model routing, prompts, and security boundaries
+* restoration of vector indexes/feature stores where used
+* verification of model quality after restore (not only that the service responds)
+* review of AI-related logs so that incident sequences remain traceable
+
+This supports control areas such as "AI system operation and monitoring" and "AI system recording of event logs" in an operational recovery context.
+
 ## More Information
 * [Nasjonal Sikkerhetsmyndighet: Forbered virksomheten på håndtering av hendelser (in Norwegian)](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/handtere-og-gjenopprette/forbered-virksomheten-pa-handtering-av-hendelser/)
