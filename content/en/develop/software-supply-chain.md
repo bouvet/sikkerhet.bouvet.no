@@ -52,13 +52,46 @@ This can be difficult to quantify, but how active is the community around a pack
 
 How likely is it that the package will still be maintained in, for example, 5 years? How is the history in terms of vulnerabilities and quality; is there an active community reporting weaknesses that are then addressed, or do reported issues linger in limbo for extended periods? Tools like [libraries.io](https://libraries.io) and [Security Scorecard](https://securityscorecard.com/) can be useful for finding out more.
 
+### AI dependencies are also part of the supply chain
+For systems that use AI, dependencies are not limited to libraries from npm, nuget, or PyPI. Models, tokenizers, embeddings, evaluation datasets, and inference containers must be treated as third-party dependencies with the same requirements for control.
+
+This means the team should:
+
+* use approved sources and avoid downloading artifacts directly from unknown mirrors
+* pin versions and refer to immutable identifiers (a tag alone is not sufficient)
+* document which AI artifacts are actually included in a release
+* assess license and terms of use for models and datasets, not only code
+
+### Maturity
+This can be difficult to quantify, but how active is the community around a package? Is it maintained by individuals, groups of developers, or does it have economic or other support from a company?
+
+How likely is it that the package will still be maintained in, for example, 5 years? How is the history in terms of vulnerabilities and quality; is there an active community reporting weaknesses that are then addressed, or do reported issues linger in limbo for extended periods? Tools like [libraries.io](https://libraries.io) and [Security Scorecard](https://securityscorecard.com/) can be useful for finding out more.
+
 ### Pinning Versions
 One attack vector is when malicious actors take over popular packages and publish their own version with malicious content. If we have build or deploy processes that fetch the latest version of dependencies each time, they will automatically fetch the infected package. A measure here can be to pin the package versions we use, for example, in ```package-lock.json``` or similar.
 
+### Provenance and policy-gates in CI/CD
+In addition to pinning, the build pipeline should verify the origin and integrity of dependencies before they are used. The team should establish policy-gates in CI/CD that can stop a merge or deployment when critical issues are detected, such as severe vulnerabilities, disallowed licenses, or dependencies from unapproved sources.
+
+### Internal mirrors and forks of critical dependencies
+For especially critical dependencies, it may be appropriate to host artifacts in internal registries or maintain forks of packages, actions, and other build components. This reduces exposure to incidents at third parties, but also increases internal maintenance responsibilities.
+
+This should be used selectively, typically when the dependency is business-critical, has high impact if compromised, and the team actually has the capacity to maintain it over time.
+
+If you choose this approach, you should at minimum have:
+
+* clear ownership for maintenance, patching, and update frequency
+* routines for importing and verifying new upstream versions
+* traceability on what is an internal copy/fork and what is the original source
+* the same requirements for scanning, license control, and review as for other dependencies
+
 ### Use of SBOM
-Software Bill Of Materials (SBOM) is an approach where we generate an overview of all dependencies with versions from our solutions. There are several more or less standardized file formats for this, which can also be archived or included in other solutions to simplify central monitoring.
+Software Bill Of Materials (SBOM) is an approach where we generate an overview of all dependencies with versions from our solutions. This overview should be tied to each release so it is clear which dependencies were actually in use at a given point in time.
+
+For AI solutions, the overview should also include relevant AI artifacts such as models, model digests, tokenizers, and key dataset references where relevant. There are several more or less standardized file formats for SBOM, and they can be archived or included in other solutions to simplify central monitoring.
 
 ## More Information
+* [OWASP Cheat Sheet - Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
 * [Sonatype: State of the software supply chain](https://www.sonatype.com/state-of-the-software-supply-chain/introduction)
 * [Wikipedia: Source Composition Analysis](https://en.wikipedia.org/wiki/Software_composition_analysis)
 * [Example of CDN attack: Polyfill supply chain attack hits 100K+ sites](https://sansec.io/research/polyfill-supply-chain-attack)
