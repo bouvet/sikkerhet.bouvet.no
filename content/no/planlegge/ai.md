@@ -66,7 +66,7 @@ Gode prompt-rutiner reduserer risiko og øker kvaliteten. Et nyttig prinsipp er 
 
 Med mindre det er eksplisitt godkjent, skal KI-verktøy ikke få tilgang til data utover det som trengs for oppgaven.
 
-Sjekk at repoet ikke inneholder datafiler, hemmeligheter eller annen sensitiv informasjon. Bruk [`.gitignore`]({{< ref "utvikle/git.md" >}}) og nøkkelhvelv for å redusere risiko for lekkasje.
+Sjekk at repoet ikke inneholder datafiler, hemmeligheter eller annen sensitiv informasjon. Bruk [`.gitignore`]({{< ref "utvikle/git.md" >}}) , git pre-commit hook med hemmelighetsdeteksjon samt nøkkelhvelv for å redusere risiko for lekkasje.
 
 ## KI-spesifikke trusler i utviklingsløpet
 Når KI brukes i utvikling, oppstår trusler som ikke alltid dekkes av tradisjonelle kontroller:
