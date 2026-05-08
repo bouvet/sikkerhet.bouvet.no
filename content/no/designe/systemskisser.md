@@ -23,7 +23,7 @@ Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste
 
 
 ## Bruk av KI-komponenter
-Dersom løsningen inneholder kunstig intelligens eller maskinlæring-modeller, må disse være eksplisitt dokumentert i systemskissene:
+Dersom løsningen inneholder kunstig intelligens eller maskinlæring-modeller, må disse være eksplisitt dokumentert i systemdokumentasjonen:
 
 * I **dataflytdiagrammet**: Viser hvor treningsdata og inferensinput kommer fra, og hvordan resultater flyter videre
 * I **nettverksdiagrammet**: Dokumenter hvor modellen kjører (cloud API, edge device, on-prem server) og nettverkskonnektivitet

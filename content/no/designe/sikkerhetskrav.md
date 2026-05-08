@@ -33,7 +33,7 @@ Sikkerhetskravene for AI-systemer bør dekke:
 
 * **Sikkerhet**: Hva er akseptabel oppførsel for modellen, og hvordan skal systemet respondere ved anomalier? Hvordan beskytter man systemet mot misbruk eller manipulering?
 * **Personvern og databruk**: Hvilke data bruker AI-systemet for trening eller inferens? Hvordan håndteres persondata, og hvordan sikres det at systemet ikke brukes til uintendert formål?
-* **Overvåking og misbruk**: Hvordan skal systemet overvåkes for anomal atferd? Hva er de akseptable bruksområdene, og hvordan avdekkes misbruk?
+* **Overvåking og misbruk**: Hvordan skal systemet overvåkes for unormal atferd? Hva er de akseptable bruksområdene, og hvordan avdekkes misbruk?
 
 For detaljerte råd om sikker implementering av KI i utvikling, se [Bruk av kunstig intelligens]({{< ref "planlegge/ai.md" >}}).
 

@@ -20,12 +20,12 @@ Bakgrunnen er enkel: KI-verktøy behandler ofte sensitiv informasjon og kan utf�
 Selv om vi __kan__ bruke et verktøy teknisk, betyr det ikke at vi __skal__ bruke det. Hvis et nytt verktøy kan gi nytte i prosjektet, opprett en BSD-sak for vurdering.
 
 ## Praktiske råd for trygg KI-bruk i utvikling
-For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha noen enkle, felles arbeidsregler. Disse bør brukes i daglig arbeid, ikke bare som policy på papir.
+For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha noen enkle, felles arbeidsregler. Disse bør brukes i daglig arbeid, ikke bare som policy på papir. Hvert enkelt team bør utarbeide egne regler og rutiner som passer til konteksten teamet jobber i, slik at våre og kundens krav til sikkerhet kan ivaretas. 
 
 ### Dette bør vi gjøre
 
 * bruk KI på avgrensede oppgaver med tydelig mål og ferdig definert rammeverk
-* behandle KI-bidrag som kode fra tredjepart: review, test og verifiser før merge
+* behandle KI-bidrag som kode fra tredjepart: Du skal forstå og være i stand til å forklare koden før den merges eller kjøres. 
 * dokumenter KI-bruk der det er relevant for sporbarhet og revisjon
 * bruk minst mulig data i prompt (dataminimering), og del kun det som trengs for oppgaven
 * begrens tilganger for KI-verktøy til minste nødvendige nivå
