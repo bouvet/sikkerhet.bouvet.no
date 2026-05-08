@@ -37,7 +37,7 @@ When introducing new models or major changes, teams should consider mechanisms s
 
 ## More Information
 * [Network concepts]({{< ref "design/networking" >}})
-* [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://wiki.bouvet.no/display/BLS/Nettverkssikkerhet)
+* [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/Nettverksikkerhet/)
 * [Microsoft Cloud Adoption Framework - Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
 * [AWS Well-Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
 * [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework)

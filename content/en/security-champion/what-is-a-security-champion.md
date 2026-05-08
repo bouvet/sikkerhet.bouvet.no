@@ -23,6 +23,6 @@ And most importantly, we primarily sell competence, and more engaged Security Ch
 
 ## More information
 * [OWASP: Security Culture](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/)
-* [Bouvet: Sikkerhet i oppdrag (BLS)](https://wiki.bouvet.no/spaces/BLS/pages/57873214/Sikkerhet+i+oppdrag) (Requires Bouvet user)
+* [Bouvet: Sikkerhet i oppdrag (BLS)](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Gjennomf%C3%B8ring%20av%20oppdrag%20-%20Hovedprosess/St%C3%B8tteprosedyrer%20for%20gjennomf%C3%B8ring%20av%20oppdrag/Sikkerhet%20i%20oppdrag/) (Requires Bouvet user)
 * [NAV: Security Champion](https://sikkerhet.nav.no/docs/bli-security-champion/)
 * [Equinor: Security Champion](https://equinor.github.io/appsec/security-champion/)

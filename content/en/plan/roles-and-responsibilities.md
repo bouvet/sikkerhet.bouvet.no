@@ -23,7 +23,7 @@ If we are responsible for the operation and management of the solution in our in
 
 All resources managed by the delivery team must be handled in line with all other infrastructure in Bouvet, so the team must have routines for patching and maintenance or ensure that this is handled. Please note that any client resources and data requires their own backup regime - we don't want to mix customers or our own internal data. Feel free to contact Internal IT & Security to see what they can assist with to simplify delivery and management.
 
-[Bouvet's Statement of Applicability/Declaration of Application (SOA)](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) addresses various controls related to information security and how we should relate to them. The SOA can be found in the internal management system. If we take on responsibility for operation and management, your regional quality manager can assist with advice and guidance to ensure that all responsibilities are covered.
+[Bouvet's Statement of Applicability/Declaration of Application (SOA)](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/SOA%20-%20ISO27001%3A2023/) addresses various controls related to information security and how we should relate to them. The SOA can be found in the internal management system. If we take on responsibility for operation and management, your regional quality manager can assist with advice and guidance to ensure that all responsibilities are covered.
 
 ## Operation and Management - Client or Third Party
 
@@ -38,6 +38,6 @@ Document the roles and responsibilities and other relevant information in the so
 {{< /important >}}
 
 ## More information
-* [Bouvet: Leveranseansvarlig](https://wiki.bouvet.no/display/BLS/Leveranseansvarlig) (internal link, in Norwegian)
+* [Bouvet: Leveranseansvarlig](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Roller%20Kvalitet%20i%20leveranser/Leveranseansvarlig/) (internal link, in Norwegian)
 * [Bouvet: Statement of Applicability](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/SOA%20-%20ISO27001%3A2023/2) (internal link, in Norwegian)
 * [Bouvet: Statement of Applicability ISO 42001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/ISO42001-Ledelsessystem%20for%20kunstig%20intelligens/SOA%20-%20ISO42001%3A2023/) (internal link, in Norwegian)

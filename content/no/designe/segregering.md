@@ -43,7 +43,7 @@ Når nye modeller eller større endringer skal innføres, bør teamet vurdere me
 
 ## Veien videre
 * [Nettverkskonsepter]({{< ref "designe/nettverk" >}})
-* [ISO27001:2022 - Seksjon 8.22 - Segregation of networks - Krever Bouvetbruker](https://wiki.bouvet.no/display/BLS/Nettverkssikkerhet)
+* [ISO27001:2022 - Seksjon 8.22 - Segregation of networks - Krever Bouvetbruker](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Roller%20Kvalitet%20i%20leveranser/Leveranseansvarlig/)
 * [Microsoft Cloud Adoption Framework - Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
 * [AWS Well-Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
 * [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework)
