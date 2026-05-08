@@ -72,9 +72,6 @@ Konfigurasjon av nettverk bør automatiseres så langt det lar seg gjøre, helst
 - skann for avvik fra ønsket konfigurasjon og varsle ved ukjente regler
 - dokumenter manuelle unntak og tidsbegrens dem
 
-## Avgrensning mot systemskisser
-Denne siden dekker sikkerhetsprinsipper for nettverk. For detaljerte diagrammer av topologi, dataflyt og avhengigheter, se [Systemskisser]({{< ref "designe/systemskisser.md" >}}).
-
 ## Veien videre
 * [IBM: What is networking](https://www.ibm.com/topics/networking)
 * [Wikipedia: Zero trust](https://en.wikipedia.org/wiki/Zero_trust_security_model)

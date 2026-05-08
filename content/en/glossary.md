@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-weight: 9
+weight: 10
 translationKey: wordlist
 description: >
   A list of common words and terms related to application security

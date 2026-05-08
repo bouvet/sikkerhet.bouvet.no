@@ -1,6 +1,6 @@
 ---
 title: "Manage"
-weight: 7
+weight: 8
 translationKey: manage
 menu:
   sidebar:

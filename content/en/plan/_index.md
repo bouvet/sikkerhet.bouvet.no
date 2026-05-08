@@ -1,6 +1,6 @@
 ---
 title: "Plan"
-weight: 3
+weight: 4
 translationKey: plan
 menu:
   sidebar:
