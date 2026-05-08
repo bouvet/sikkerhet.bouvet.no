@@ -53,6 +53,19 @@ Avoid sending traffic over the internet even to your own cloud services, use pri
 
 Route all outgoing traffic through a dedicated proxy service that blocks everything by default, allowlisting as needed. Never expose services directly if you can avoid it. Exposing services on ports other than the standard ports is not a good idea; a network scan will quickly reveal this.
 
+## AI services and network control
+For AI solutions, your operating model should be evaluated against requirements for ingress and egress control.
+
+- **AI in your own tenant (for example in Azure)** usually gives better control over network boundaries, private endpoints, logging, and which systems can send data to and from the service.
+- **AI as pure SaaS** can provide faster startup, but often less control over network flows, allowed destinations, and traffic boundaries.
+
+Minimum checks for both models:
+
+- which data can be sent in (ingress), and who can send it
+- which destinations data can be sent to (egress)
+- how traffic is logged, monitored, and blocked when anomalies occur
+- how privacy, data flow, and data residency/geography requirements are documented
+
 ## Configuration
 
 Network configuration should be automated as much as possible, preferably using a [CI/CD system]({{< ref "deploy/cicd.md" >}}).
