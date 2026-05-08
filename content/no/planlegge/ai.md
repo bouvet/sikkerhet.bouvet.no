@@ -96,6 +96,7 @@ Anbefalte guardrails:
 * krev menneskelig review før merge og deploy
 * blokker automatiske endringer i sikkerhetskritiske filer uten eksplisitt godkjenning
 * logg agentens handlinger slik at bidrag er sporbare og etterprøvbare
+* bruk hooks i fra git og KI-verktøy for å etablere ekstra guardrails
 
 For team som bruker instruksjonsfiler aktivt, bør disse behandles som en sikkerhetskontroll på linje med policy i CI/CD.
 
