@@ -32,7 +32,7 @@ Download the checklist and implement it as part of the source code in your proje
 5. [Has necessary authentication been set up for accessing the system?]({{< ref "design/authentication-and-authorization.md" >}})
 6. [Has necessary authorization been set up for actions in the system?]({{< ref "design/authentication-and-authorization.md" >}})
 7. [Has threat modeling of the solution been conducted?]({{< ref "design/threat-modelling.md" >}})
-8. [Does the team have the necessary expertise for the project?]({{< ref "design/competence-building.md" >}})
+8. [Does the team have the necessary expertise for the project?]({{< ref "competence-building.md" >}})
 
 ## Develop
 1. [Are the development environments well described?]({{< ref "develop/dev_environments.md" >}})
