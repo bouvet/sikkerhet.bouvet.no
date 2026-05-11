@@ -99,6 +99,7 @@ When translating from Norwegian to English:
 - Avoid introducing new claims or stronger wording than the source.
 - Preserve the intent of the original tone: practical, precise, and security-focused.
 - Translate headings and body text consistently.
+- Keep heading levels equivalent between source and translation.
 - Keep site-specific terms aligned with the established English wording used elsewhere in the repository.
 - Preserve or update internal links so they point to the English equivalents.
 - If the Norwegian source has been merged into another article, update the English version accordingly rather than keeping a duplicate page.
@@ -112,13 +113,14 @@ When translating from Norwegian to English:
 
 - Draft in Norwegian first.
 - Use the Norwegian article as the reference for every English translation.
-- Only create separate skills if you want different rules for content creation and translation; for this repository, one combined bilingual skill is usually enough.
+- Use `bilingual-translation-qa.skill.md` for final parity and language QA before merge or publish.
 
 ## Translation Quality Checks
 
 Before considering a translation done:
 
 - Check that all sections from the source are represented.
+- Check that heading levels are consistent with the source.
 - Check that no meaning has shifted.
 - Check that no ambiguous wording was introduced.
 - Check that all links point to the correct English pages or valid external URLs.
