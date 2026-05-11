@@ -20,7 +20,7 @@ Rollen <strong>leveranseansvarlig</strong> har ansvar for sikkerheten i leverans
 ## Utvikling, Drift og forvaltning av løsning 
 ### Bouvet
 
-Prosjektet kan også komme inn under våre sertifiseringer på ISO 27001 - Informasjonssikkerhet og ISO 42001 - Ledelsessystem for KI. Dette gjelder spesielt dersom vi benytter vårt utstyr eller infrastruktur til utvikling, drift eller forvaltning på vegne av kunden. Dersom dette er tilfelle medfører det at vi har et større helhetlig ansvar for sikkerheten rundt løsningen, og det er viktig at leveranseteamet er klar over dette. 
+Prosjektet kan også komme inn under våre ISO-sertifiseringer. Dette gjelder spesielt dersom vi benytter vårt utstyr eller infrastruktur til utvikling, drift eller forvaltning på vegne av kunden. Dersom dette er tilfelle medfører det at vi har et større helhetlig ansvar for sikkerheten rundt løsningen, og det er viktig at leveranseteamet er klar over dette. 
 
 Alle ressurser driftet av leveranseteamet må håndteres på linje med all annen infrastruktur, så teamet må ha rutiner for patching og vedlikehold eller sikre at dette blir håndtert. Vær obs på at kunderessurser og data håndteres med egne backuprutiner, slik at vi ikke blander på tvers av kunder eller med våre egne interne data. 
 Sjekk gjerne med Intern-IT & Sikkerhet for å se hva de kan levere og bistå med for å forenkle leveranse og forvaltning.  

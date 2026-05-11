@@ -5,6 +5,11 @@ translationKey: data
 description: >
   Most organizations operate with various classification levels for both data and systems. The classification level dictates how data is used, where it is stored, and who can access it. These are key requirements for any development project and must be clarified in advance.
 ---
+
+{{< tip title="In short" >}}
+Most organizations have different classification levels for both data and systems. The classification is often based on how data is used, where it is stored, and who can access it. This is a key requirement for any development project and must be clarified in advance.
+{{< /tip >}}
+
 ## Classification
 Most organizations have routines and processes for data classification, typically distinguishing between these or similar levels:
 * Open
@@ -24,10 +29,10 @@ This needs to be clarified with the client at the start of the project to ensure
 If the delivery team is to handle personally sensitive information, it is important that the team familiarizes itself with the requirements surrounding this. The Norwegian Data Protection Authority has published a guide for ["Software development with built-in privacy" (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) which provides useful insight into the issue.
 
 {{< important title="Important" >}}
-Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries has to consider the definitions and requirements which follows from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
+Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries have to consider the definitions and requirements which follow from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
 {{< /important >}}
 
-The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GPDR has a number of requirements that define how PII can be used and for what. PII is defined as 
+The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GDPR has a number of requirements that define how PII can be used and for what. PII is defined as 
 
 <em>"any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person"</em>
 

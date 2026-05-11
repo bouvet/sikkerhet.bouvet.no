@@ -13,7 +13,7 @@ Det finnes mange måter å implementere et Security Champion-program på; OWASP 
 
 Dersom du ønsker en mer praktisk beskrivelse av hvordan dette kan fungere i Bouvet, kan du også lese [Alle trenger en sikkerhetsvenn](https://www.bouvet.no/bouvet-deler/alle-trenger-en-sikkerhetsvenn) og [Security Champions hever fokuset på sikkerhet](https://www.bouvet.no/bouvet-deler/security-champions-hever-fokuset-pa-sikkerhet-).
 
-# Hva gjør en Security Champion?
+## Hva gjør en Security Champion?
 Her vil det variere mellom regioner, enheter og team, men en typisk Security Champion vil ta opp saker og spørsmål relatert til sikkerhet, og hjelper teamet å fokusere på- og prioritere mellom saker relatert til sikkerhet og alt annet. Slack-kanalen ```#security-champions``` brukes for å annonsere eventer, dele nyttig informasjon og liknende som angår Security Champions i Bouvet. Hver måned kjøres det også en virtuell samling for alle Security Champions i Bouvet, typisk med et sammendrag av relevante nyheter, et faglig innlegg og en quiz med en symbolsk premie. 
 
 I tillegg er det mange som bruker Slack-kanalen ```#sikkerhet``` for å dele nyheter, stille spørsmål eller poste tips og triks. Noen regioner har også faste samlinger for alle Security Champions, i tillegg til at det arrangeres kurs, meetups, foredrag og mye annet. 
@@ -22,7 +22,7 @@ Bouvet begynner å bli et stort selskap med stort spenn i prosjektene vi jobber 
 
 Og viktigst av alt; vi selger primært kompetanse, og flere engasjerte Security Champions er aldri negativt. Dersom du er usikker på hva du får lov til å gjøre eller ikke, prat med nærmeste leder og andre Security Champions i regionen så finner dere helt sikkert en løsning.
 
-# Veien videre
+## Veien videre
 * [OWASP: Security Culture](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/)
 * [Bouvet: Sikkerhet i oppdrag (BLS)](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Gjennomf%C3%B8ring%20av%20oppdrag%20-%20Hovedprosess/St%C3%B8tteprosedyrer%20for%20gjennomf%C3%B8ring%20av%20oppdrag/Sikkerhet%20i%20oppdrag/) (Krever Bouvet-bruker)
 * [Bouvet Deler: Alle trenger en sikkerhetsvenn](https://www.bouvet.no/bouvet-deler/alle-trenger-en-sikkerhetsvenn)

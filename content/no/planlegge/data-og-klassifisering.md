@@ -66,7 +66,7 @@ Vær obs på at personopplysningsloven også gjelder for KI-systemer. Under vurd
 Dersom du har spørsmål knyttet til bruk av KI kan du lage en sak gjennom [BSD](https://bsd.bouvet.no) eller på `#ai` (Slack)
 
 
-# Veien videre
+## Veien videre
 * [Datatilsynet: Innebygd personvern](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
 * [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38)

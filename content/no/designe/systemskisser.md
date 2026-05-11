@@ -1,6 +1,6 @@
 ---
 title: "Systemskisser"
-weight: 2
+weight: 6
 translationKey: diagrams
 description: >
   Det er viktig med et godt underlag når vi skal bygge gode løsninger, og skisser og diagrammer som viser oppbygningen av infrastruktur, dataflyt, nettverk og tilgangsstyring er viktige elementer. Uten denne informasjonen er det vanskelig å validere om sluttresultatet matcher intensjonen.

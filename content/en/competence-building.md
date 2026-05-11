@@ -108,3 +108,5 @@ Below is a list of the most relevant training courses for us. We're currently de
 ## More Information
 * [Bouvet: Kurs](https://kurs.bouvet.no)
 * [Security Journey Login](https://my.securityjourney.com/) (Single-Sign-On)
+* [Bouvet Deler: Tips for Building a Good Security Culture](https://www.bouvet.no/bouvet-deler/Tips-til-%C3%A5-bygge-god-sikkerhetskultur) (in Norwegian)
+* [Bouvet Podcast: Is Change Management the Key to a Secure Organization?](https://www.bouvet.no/podcasts/endringsledelseogsikkerhet) (in Norwegian)

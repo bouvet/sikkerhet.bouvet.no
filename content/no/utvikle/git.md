@@ -71,7 +71,7 @@ Test-branchen deployes til testmiljøet, og når kunden er fornøyd med det som 
 
 Dersom det er behov for hotfixing mot prod kan dette eksempelvis gjøres mot den aktuelle prodbranchen slik at en får korrigert kritiske feil raskt, for så å ta hotfixen tilbake til dev. 
 
-# Veien videre
+## Veien videre
 * [Github: Gitignore templates](https://github.com/github/gitignore)
 * [Github: Signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
 * [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)

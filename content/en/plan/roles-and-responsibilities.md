@@ -19,7 +19,7 @@ The role <strong>delivery manager</strong> is responsible for security in the de
 
 ## Operation and Management - Bouvet
 
-The project may also fall under our certifications for ISO 27001 - Information Security and ISO 42001 - AI Management System. This is especially the case if we use our own equipment or infrastructure for development, operations, or management on behalf of the client. If this is the case, it means we have greater overall responsibility for the security of the solution, and it is important that the delivery team is aware of this.
+The project may also fall under our ISO certifications. This is especially the case if we use our own equipment or infrastructure for development, operations, or management on behalf of the client. If this is the case, it means we have greater overall responsibility for the security of the solution, and it is important that the delivery team is aware of this.
 
 All resources managed by the delivery team must be handled in line with all other infrastructure in Bouvet, so the team must have routines for patching and maintenance or ensure that this is handled. Be aware that client resources and data must be handled with separate backup routines so we do not mix data across clients or with our own internal data. Feel free to contact Internal IT & Security to see what they can deliver and assist with to simplify delivery and management.
 
