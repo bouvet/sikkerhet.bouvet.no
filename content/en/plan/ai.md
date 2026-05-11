@@ -154,7 +154,7 @@ Unless explicitly approved, the tool must _under no circumstances_ have access t
 Check that you are not including data files, secrets, or other sensitive information in the repository, and exclude them in [`.gitignore`]({{< ref "develop/git.md" >}}) if necessary. Use key vaults wherever possible to avoid secrets ending up in the repository by accident.
 
 {{< tip title="Sensitive data disclosure" >}}
-Be aware that some AI tools used in the IDE can commit and push code to Github automatically, and that precations are required to avoid uploading sensitive information such as keys, certificates and data. 
+Be aware that some AI tools used in the IDE can commit and push code to Github automatically, and that precautions are required to avoid uploading sensitive information such as keys, certificates and data. 
 {{< /tip >}}
 
 
