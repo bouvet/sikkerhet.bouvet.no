@@ -1,6 +1,5 @@
 entries:
   - date: 2026-05-07
-    title: "ISO42001"
+    title: "AI Security Updates"
     changes:
-      - "Sikkerhet.bouvet.no now covers a number of controls related to ISO-42001 - AI Management Systems."
-      - "Revised most articles to reflect the new controls and requirements. Also expanded and tweaked other existing content."
+      - "Checklist and most articles revised to add information on using AI securely"
