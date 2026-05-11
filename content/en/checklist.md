@@ -51,7 +51,7 @@ Download the checklist and implement it as part of the source code in your proje
 1. [Have automated security measures been set up?]({{< ref "deploy/cicd.md" >}})
 2. [Does the team have procedures to secure the build environment?]({{< ref "deploy/building.md" >}})
 3. [Is a review conducted before deployment?]({{< ref "deploy/deploy.md" >}})
-4. [Is penetration testing planned?]({{< ref "develop/security-testing.md#when-penetration-testing-is-relevant" >}})
+4. [Is security testing, including penetration testing planned for as part of the deployment?]({{< ref "develop/security-testing.md#when-penetration-testing-is-relevant" >}})
 5. [If the solution uses AI, has it been verified that AI components and models function as expected?]({{< ref "manage/verify-the-design.md#verification-of-ai-systems" >}})
 
 ## Manage
