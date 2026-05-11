@@ -109,7 +109,7 @@ AI contributions must not go to production without full quality assurance. At mi
 * verification that secrets have not been introduced
 * assessment of whether the change affects the threat model or security requirements
 
-# More information
+## More information
 * [OpenSSF: Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
 * [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq)
 * [Content exclusion for GitHub Copilot](https://docs.github.com/en/copilot/concepts/context/content-exclusion)

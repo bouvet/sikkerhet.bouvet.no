@@ -13,7 +13,7 @@ Innholdet på disse sidene er primært for teknikere og teknisk språk er derfor
 
 Husk også at alle artikler skal ha en inngress som skal kunne leses og forstås av alle fra ledere og leveranseorganisasjon til sikkerhetseksperten og juniorutvikleren.  
 
-## Artikeloppbygging
+## Artikkeloppbygging
 
 Alle artiklene skal ha følgende oppbygning
 

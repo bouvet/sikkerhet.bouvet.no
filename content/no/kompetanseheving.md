@@ -106,7 +106,7 @@ Under finner du en opplisting av noen kurs som tilbys i plattformen. Plattformen
 * Advanced: TypeScript (Frontend)
 * Advanced: ClojureScript
 
-# Veien videre
+## Veien videre
 * [Bouvet: Kurs](https://kurs.bouvet.no)
 * [Security Journey Login](https://my.securityjourney.com/) (Single-Sign-On)
 * [Bouvet Deler: Tips til å bygge god sikkerhetskultur](https://www.bouvet.no/bouvet-deler/Tips-til-%C3%A5-bygge-god-sikkerhetskultur)

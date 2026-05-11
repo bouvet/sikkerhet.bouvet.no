@@ -109,7 +109,7 @@ KI-bidrag skal ikke til produksjon uten full kvalitetssikring. Minimum bør vær
 * kontroll av at hemmeligheter ikke er introdusert
 * vurdering av om endringen påvirker trusselmodell eller sikkerhetskrav
 
-# Veien videre
+## Veien videre
 * [OpenSSF: Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions)
 * [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq)
 * [Content exclusion for GitHub Copilot](https://docs.github.com/en/copilot/concepts/context/content-exclusion)

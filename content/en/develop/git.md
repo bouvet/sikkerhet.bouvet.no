@@ -65,7 +65,7 @@ The test branch is deployed to the test environment, and when the customer is ha
 
 If there is a need for hotfixing against prod this can for example be done against the relevant prod branch so that critical bugs can be fixed quickly and then the hotfix can be brought back into dev. 
 
-# More information
+## More information
 * [GitHub: Gitignore templates](https://github.com/github/gitignore)
 * [GitHub: Signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
 * [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)

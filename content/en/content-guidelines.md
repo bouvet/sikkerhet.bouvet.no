@@ -39,7 +39,7 @@ Use code fencing to show examples and break up the content with headings (no one
 * [Eksternal link 2](URL)
 ```
 
-# External Links
+## External Links
 Use permalinks where possible. The purpose of the _Further Reading_ section is to point to resources with more in-depth content so that it is possible to delve further into a topic after getting a taste from an article.
 
 If you use text from another article or source, it must be referenced.
