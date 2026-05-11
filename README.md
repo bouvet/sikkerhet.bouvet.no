@@ -23,4 +23,4 @@ Bruk gjerne slackkanalen `#sikkerhet-bouvet-no` dersom du ønsker å lufte forsl
 
 # Kjøring
 
-Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes. 
+Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes.  
