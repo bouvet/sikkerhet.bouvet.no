@@ -1,6 +1,6 @@
 ---
 title: "Hemmeligheter"
-weight: 2
+weight: 7
 translationKey: secrets
 description: >
   Alle utviklingsprosjekter har behov for hemmeligheter som connection strings, identiteter, passord, sertifikater og annet. Disse må oppbevares på en trygg måte, og vi må sikre at vi bruker dem i en sikker kontekst med riktige støtteverktøy og prosesser.

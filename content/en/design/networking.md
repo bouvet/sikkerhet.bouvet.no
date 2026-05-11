@@ -1,6 +1,6 @@
 ---
 title: "Network Concepts"
-weight: 4
+weight: 2
 translationKey: network
 description: >
   Network is a fundamental component in everything we create, and it is important to have a basic understanding of how it works and how it can be exploited by others.

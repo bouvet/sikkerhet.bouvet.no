@@ -1,6 +1,6 @@
 ---
 title: "Secrets"
-weight: 2
+weight: 7
 translationKey: secrets
 description: >
   All development projects require secrets such as connection strings, identities, passwords, certificates, and much more. These must be stored securely, and we must ensure that we use them in a secure context with the right support tools and processes.

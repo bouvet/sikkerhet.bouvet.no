@@ -1,6 +1,6 @@
 ---
 title: Content Guidelines
-weight: 10
+weight: 11
 translationKey: contribute
 description: >
   It's great that you want to contribute content!

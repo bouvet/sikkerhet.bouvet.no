@@ -1,6 +1,6 @@
 ---
 title: "System diagrams and drawings"
-weight: 2
+weight: 6
 translationKey: diagrams
 description: >
   It's important to have a good foundation when building quality solutions, and drawings and diagrams showing the infrastructure, data flow, networks, and access control are crucial elements. Without this information, it is difficult to validate if the implementation matches the intended design.
