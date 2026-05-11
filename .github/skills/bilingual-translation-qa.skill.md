@@ -128,6 +128,17 @@ Verify:
 - external links are relevant and not clearly stale
 - language markers like '(in Norwegian)' are used where helpful
 
+## Shortcode and Callout Checks
+
+Verify:
+- callout types (`tip`, `caution`, `important`) match between source and translation
+- if Norwegian has a `caution` block at a particular section, English translation should have one at the equivalent section (content translated, shortcode type preserved)
+- callout count and ordering are consistent across language versions
+- no callouts have been added or removed in translation without clear justification
+- callout titles and labels are properly translated
+
+Flag as Minor if shortcode types differ but meaning is preserved (e.g., `tip` in NO becomes `important` in EN if editorial decision supports it, but this should be documented).
+
 ## AI-Specific Checks
 
 For pages that mention AI, verify parity for:
