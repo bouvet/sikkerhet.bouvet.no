@@ -110,6 +110,7 @@ Do not flag these unless they create confusion:
 
 Verify:
 - front matter exists and translationKey is aligned
+- top-level `weight` parity is aligned between Norwegian source and English counterpart (using `translationKey` for mapping)
 - page title and description are faithful to source intent
 - mandatory final section naming is localized:
   - Norwegian: Veien videre
@@ -119,6 +120,19 @@ Verify:
 - no stale blocks remain from previous versions
 
 If heading level differences are found, flag them at least as Major when they can impact navigation, deep links, or section discoverability.
+
+## Weight and Ordering Checks
+
+For ordering QA, Norwegian is authoritative.
+
+Verify:
+- `_index.md` files are excluded from duplicate-weight checks (their `weight` represents section/folder ordering)
+- within each folder, all non-`_index.md` articles have unique top-level `weight` values
+- English article `weight` matches the Norwegian source article `weight` for the same `translationKey`
+
+Severity guidance:
+- Major: duplicate non-`_index.md` weights within the same folder
+- Major: NO/EN `weight` mismatch for the same `translationKey`
 
 ## Link Checks
 
