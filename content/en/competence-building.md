@@ -1,6 +1,6 @@
 ---
 title: "Competence Building"
-weight: 6
+weight: 4
 translationKey: comp
 description: >
   Having the right competence is crucial for all teams, especially when it comes to security. The team must identify any gaps they have, so that measures such as training can be implemented to cover these gaps.
@@ -14,12 +14,12 @@ We have many different security environments and individuals with high competenc
 
 
 ## Training courses
-Bouvet offers training courses in many different areas, also including security. If your team needs training outside of what Security Journey has to offer, this might be an option. Please contact the [training department](https://kurs.bouvet.no) if you cannot find a suitable training course. 
+Bouvet offers training courses in many different areas, also including security. If your team needs training outside of what Security Journey has to offer, this might be an option. Please contact the [training department](https://kurs.bouvet.no) if you cannot find a suitable training course.
 
 ## Security Journey
 Bouvet has purchased licenses for Security Journey, which offers security-related training in many different areas. Each training course consists of multiple modules, which contains either a video+text followed by a short quiz, _or_ a coding challenge which gives you VS Code, a proxy and a browser. The coding challenges can be solved using any of the major programming languages, ensuring that most developers should be comfortable giving them a try. All training courses are delivered through your browser, and requires no local installation.
 
-Below is a list of the most relevant training courses for us. We're currently deploying the platform, more information on how to obtain a license will be published on Min Side in the near future.  
+Below is a list of the most relevant training courses for us. We're currently deploying the platform, more information on how to obtain a license will be published on Min Side in the near future.
 
 ### Training courses
 

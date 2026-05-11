@@ -47,6 +47,28 @@ Bruk av roller, _role based access control_ (RBAC) er en vanlig tilnærming for 
 
 Dette gir en bedre oversikt over hvem som har tilgang til hva sammenliknet med brukere som har individuelle tilganger. 
 
+## AI- og agenttilganger
+For løsninger med AI-agenter holder det ikke bare å styre sluttbrukertilgang. Agenten selv opptrer ofte som en egen identitet med tilgang til modeller, data, API-er og verktøy. Disse tilgangene må behandles som høyrisiko dersom de blir for brede.
+
+Praktiske prinsipper:
+
+- gi agenten en egen tjenesteidentitet, ikke gjenbruk bruker- eller admin-kontoer
+- bruk minste privilegium per verktøy (_tool access_), slik at agenten kun kan kalle funksjoner den faktisk trenger
+- skill mellom lesing, skriving og administrative operasjoner
+- begrens tilgang per miljø (dev/test/prod) og per datasett eller tjeneste
+- sett tidsbegrensede eller betingede tilganger der det er mulig
+
+Når en agent får tilgang til eksterne verktøy eller API-er, bør en også styre hvilke kommandoer, endepunkter og dataoperasjoner som er tillatt. Da reduseres risikoen for at feil, misbruk eller kompromittering gir stor effekt i drift.
+
+For MCP-baserte integrasjoner (Model Context Protocol) gjelder de samme prinsippene, men med ekstra krav til avgrensning:
+
+- hver MCP-server bør ha tydelig eierskap og en egen identitet/tjenestekonto
+- verktøy eksponert via MCP bør scopes og autoriseres eksplisitt, ikke gis generell full tilgang
+- klienten bør bare få tilgang til nødvendige MCP-servere, og tilgang bør kunne trekkes tilbake raskt
+- kall mot MCP-verktøy bør logges med hvem/hva/hvorfor, slik at misbruk kan spores
+
+Tilgangsstyring påvirker også operasjonell risiko: For brede agenttilganger gjør hendelser vanskeligere å oppdage og konsekvensene større. Derfor bør tilgangsendringer for agenter logges og følges opp sammen med øvrig driftsovervåking, se [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}).
+
 ## Veien videre
 * [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)
 * [Wikipedia: Authorization](https://en.wikipedia.org/wiki/Authorization)

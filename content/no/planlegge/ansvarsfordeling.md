@@ -17,15 +17,15 @@ Uavhengig av hvordan prosjektet gjennomføres er det viktig at vi har kontroll p
 Rollen <strong>leveranseansvarlig</strong> har ansvar for sikkerheten i leveransen, og er ansvarlig for at dette følges opp. 
 {{< /important >}}
 
-## Drift og forvaltning av løsning 
+## Utvikling, Drift og forvaltning av løsning 
 ### Bouvet
 
-Dersom vi er ansvarlige for drift og forvaltning av løsning i vår infrastruktur, vil denne komme inn under vår sertifisering på ISO 27001 - Informasjonssikkerhet. Dette medfører at vi har et større helhetlig ansvar for sikkerheten rundt løsningen, og det er viktig at leveranseteamet er klar over dette. 
+Prosjektet kan også komme inn under våre sertifiseringer på ISO 27001 - Informasjonssikkerhet og ISO 42001 - Ledelsessystem for KI. Dette gjelder spesielt dersom vi benytter vårt utstyr eller infrastruktur til utvikling, drift eller forvaltning på vegne av kunden. Dersom dette er tilfelle medfører det at vi har et større helhetlig ansvar for sikkerheten rundt løsningen, og det er viktig at leveranseteamet er klar over dette. 
 
 Alle ressurser driftet av leveranseteamet må håndteres på linje med all annen infrastruktur, så teamet må ha rutiner for patching og vedlikehold eller sikre at dette blir håndtert. Vær obs på at kunderessurser og data håndteres med egne backuprutiner, slik at vi ikke blander på tvers av kunder eller med våre egne interne data. 
 Sjekk gjerne med Intern-IT & Sikkerhet for å se hva de kan levere og bistå med for å forenkle leveranse og forvaltning.  
 
-[Bouvets Statement of Applicability/Anvendelseserklæring (SOA)](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) tar for seg ulike kontroller relatert til informasjonssikkerheten og hvordan vi skal forholde oss til disse. SOA kan finnes i det interne ledelsessystemet. Dersom vi tar på oss denne rollen vil din regionale kvalitetsleder kunne bistå med råd og veiledning for å sikre at alt ansvar er ivaretatt. 
+Bouvets Statement of Applicability/Anvendelseserklæring (SOA) for henholdsvis [ISO 27001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/SOA%20-%20ISO27001%3A2023/) og [ISO 42001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/ISO42001-Ledelsessystem%20for%20kunstig%20intelligens/SOA%20-%20ISO42001%3A2023/) tar for seg ulike kontroller relatert til informasjonssikkerheten og hvordan vi skal forholde oss til disse. Dersom vi tar på oss denne rollen vil din regionale kvalitetsleder kunne bistå med råd og veiledning for å sikre at vårt ansvar er ivaretatt. 
 
 ### Kunde eller tredjepart
 
@@ -39,6 +39,14 @@ Dersom vi kun har ansvar for utvikling av løsningen, er det viktig at vi har g�
 Dokumenter ansvarsfordeling og annen relevant informasjon i kildekodesystemet sammen med resten av det som produseres i prosjektet. Det øker synligheten og alle vet til enhver tid hvor informasjonen finnes.
 {{< /important >}}
 
+## Bruk av KI
+Dersom KI inngår i leveransen, må dere også gå opp hvordan dette reguleres i avtalen. KI åpner for mange muligheter, men introduserer også ny risiko i tillegg til å forsterke eksisterende risiko, spesielt knytttet til personvern. KI-loven er per nå ikke innført i Norge, men antagelsen er at denne kommer i nær fremtid, og prosjekter som bygger løsninger som omfattes av denne bør sikre at de er i samsvar med den [foreslåtte KI-loven](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/) i Norge. 
+
+### KI som verktøy
+Dersom dere skal bruke KI-verktøy, må dere være sikre på at dette er avklart med kunden og at avtalen tar høyde for det. KI kan være et fantastisk verktøy, men det åpner også for noen scenarier der vi eller kunden kan bli skadelidende om ikke ansvar og bruk er avklart. Dersom vårt utstyr eller infrastruktur skal benyttes mot nye verktøy må dette klareres med IIT&S før prosjektet starter opp slik at lisenser og nødvendige risikovurderinger kan gjennomføres.  
+
+
 ## Veien videre
-* [Bouvet: Leveranseansvarlig](https://wiki.bouvet.no/display/BLS/Leveranseansvarlig) (intern lenke)
-* [Bouvet: Statement of Applicability](https://wiki.bouvet.no/display/BLS/SOA+-+ISO27001%3A2022) (intern lenke)
+* [Bouvet: Leveranseansvarlig](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Roller%20Kvalitet%20i%20leveranser/Leveranseansvarlig/) (intern lenke)
+* [Bouvet: Statement of Applicability ISO 27001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/SOA%20-%20ISO27001%3A2023/) (intern lenke)
+* [Bouvet: Statement of Applicability ISO 42001](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/ISO42001-Ledelsessystem%20for%20kunstig%20intelligens/SOA%20-%20ISO42001%3A2023/) (intern lenke)

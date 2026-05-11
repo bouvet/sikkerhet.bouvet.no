@@ -21,8 +21,9 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 6.	[Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden?]({{< ref "planlegge/business-continuity#håndtering-av-hendelser.md" >}})
 7.	[Er det definert en plan for hvordan og hvor ofte backup skal tas?]({{< ref "planlegge/business-continuity#backup.md" >}})
 8.	[Er det definert en plan for disaster recovery?]({{< ref "planlegge/business-continuity#disaster-recovery.md" >}})
-9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "planlegge/verktoy-og-bruk.md" >}})
+9.	[Har teamet avklart hvilke verktøy som skal brukes og hvordan disse skal håndteres?]({{< ref "utvikle/utviklingsmiljoer.md#verktoy" >}})
 10. [Er det definert kontrollmekanismer for å opprettholde sikkerhet i prosjektet?]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}})
+11. [Dersom løsningen bruker KI, er det avklart hvordan KI-komponenter, modeller og data skal håndteres?]({{< ref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
 
 ## Designe
 1.	[Er det klart hvilke sikkerhetskrav som gjelder for løsningen?]({{< ref "designe/sikkerhetskrav.md" >}})
@@ -32,23 +33,26 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 5.	[Er det satt opp nødvendig autentisering på tilgang til systemet?]({{< ref "designe/autentisering#autentisering.md" >}})
 6.	[Er det satt opp nødvendig autorisering på handlinger i systemet?]({{< ref "designe/autentisering#autorisering.md" >}})
 7.	[Er det gjennomført trusselmodellering av løsningen?]({{< ref "designe/trusselmodellering.md" >}})
-8.	[Har teamet den nødvendige kompetansen for prosjektet?]({{< ref "designe/kompetanseheving.md" >}})
+8.	[Har teamet den nødvendige kompetansen for prosjektet?]({{< ref "kompetanseheving.md" >}})
+9.	[Dersom løsningen bruker KI, er KI-spesifikke sikkerhetskrav definert?]({{< ref "designe/sikkerhetskrav.md" >}})
 
 ## Utvikle
-1.	[Er utviklingsmiljøene godt beskrevet?]({{< ref "utvikle/utviklingsmiljoer.md" >}})
+1.	[Er utviklingsmiljøene godt beskrevet?]({{< ref "utvikle/utviklingsmiljoer.md#minimum-som-bør-dokumenteres" >}})
 2.	[Håndteres hemmeligheter og liknende i henhold til gjeldende best-practice?]({{< ref "utvikle/hemmeligheter.md" >}})
 3.	[Valideres data som hentes fra andre systemer?]({{< ref "utvikle/datavalidering.md" >}})
 4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?]({{< ref "utvikle/sikkerhetspraksiser.md" >}})
 5.	[Er det rutiner for å sikre seg mot software supply chain angrep?]({{< ref "utvikle/software-supply-chain.md" >}})
-6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< ref "utvikle/interne-komponenter.md" >}})
-7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< ref "utvikle/sikkerhetstesting.md" >}})
+6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< ref "forvalte/avhengighetshandtering.md#interne-komponenter-som-teamet-drifter-selv" >}})
+7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< ref "utvikle/sikkerhetstesting.md#statisk-kodeanalyse-sast" >}})
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?]({{< ref "utvikle/dokumentasjon.md" >}})
+9.	[Dersom løsningen bruker KI, er modeller, treningsdata og evalueringsresultater dokumentert?]({{< ref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
 
 ## Deploye
-1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< ref "deploye/cicd.md" >}})
+1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< ref "deploye/cicd.md#bruk-av-cicd" >}})
 2.  [Har teamet et forhold til sikring av byggmiljø?]({{< ref "deploye/bygg.md" >}})
 3.  [Kjøres det review i forkant av deployment?]({{< ref "deploye/deploy.md" >}})
-4.	[Er det planlagt for penetrasjonstesting i forbindelse med deployment?]({{< ref "deploye/pentesting.md" >}})
+4.	[Er det planlagt for sikkerhetstesting, inkludert eventuell penetrasjonstesting, i forbindelse med deployment?]({{< ref "utvikle/sikkerhetstesting.md#når-pentest-er-aktuelt" >}})
+5.	[Dersom løsningen bruker KI, er det verifisert at AI-komponenter og modeller fungerer som forventa?]({{< ref "forvalte/verifisering-av-design.md#verifisering-av-ai-systemer" >}})
 
 ## Forvalte
 1.	[Har teamet verifisert at nettverksdiagrammet er korrekt implementert?]({{< ref "forvalte/verifisering-av-design.md" >}})
@@ -58,3 +62,4 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 5.	[Har teamet en rutine for å sikre mot sårbare avhengigheter?]({{< ref "forvalte/avhengighetshandtering.md" >}})
 6.	[Har teamet en rutine for å øve på gjenoppretting av systemet?]({{< ref "forvalte/preparedness.md" >}})
 7.	[Har teamet en prosedyre for hendelseshåndtering og en beredskapsplan dersom løsningen angripes eller går ned?]({{< ref "forvalte/hendelseshandtering.md" >}})
+8.	[Dersom løsningen bruker KI, overvåkes modellens ytelse og oppførsel i drift?]({{< ref "forvalte/logging-monitorering.md#logging-og-monitorering-av-ki-responser" >}})

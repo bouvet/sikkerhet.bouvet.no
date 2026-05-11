@@ -19,16 +19,29 @@ In many cases, it is clear to both Bouvet and the customer what applies, but it 
 
 ## Basic requirements
 
-If no other securiy requirements have been defined, the [security checklist]({{< ref "checklist.md" >}}) can be a good starting point. It covers the major elements, and can be completed by most teams without outside assistance. Through using this checklist the team will get an overview and a status of the delivery - with insights into potential weaknesses and threats. 
+If no other security requirements have been defined, the [security checklist]({{< ref "checklist.md" >}}) can be a good starting point. It covers the major elements and can be completed by most teams without outside assistance. By using this checklist, the team gets an overview of the delivery status, including potential weaknesses and threats.
 
-If the delivery requires a more through checklist, [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) might be a good alternative. This is a more comprehensive checklist that offers three levels of testing:
+If the delivery requires a more thorough checklist, [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) might be a good alternative. This is a more comprehensive checklist that offers three levels of testing:
 
 * Level 1: Black box - all testing is done against the running system
 * Level 2: Everything from level 1, with additional checks targeting process, technology and the implementation.
-* Level 3: Thourough assessment covering all previous checks, as well as more detailed testing of the environment, architecture and more. 
+* Level 3: Thorough assessment covering all previous checks, as well as more detailed testing of the environment, architecture, and more.
+
+## Security requirements for AI systems
+If the solution includes, or depends on, artificial intelligence (AI), additional requirements are needed beyond standard security requirements. AI systems introduce their own risk dimensions and these should be handled explicitly at the requirements level.
+
+Security requirements for AI systems should cover:
+
+* **Security**: What model behavior is acceptable, and how should the system respond to anomalies? How is the system protected against misuse or manipulation?
+* **Privacy and data use**: What data does the AI system use for training or inference? How is personal data handled, and how do you ensure the system is not used for unintended purposes?
+* **Monitoring and misuse**: How should the system be monitored for abnormal behavior? What are acceptable use cases, and how is misuse detected?
+
+For detailed implementation guidance, see [Using Artificial Intelligence]({{< ref "plan/ai.md" >}}).
 
 ## More Information
 * [Lovdata: Lov om digital sikkerhet (digitalsikkerhetsloven, in Norwegian)](https://lovdata.no/dokument/NL/lov/2023-12-20-108)
 * [Datatilsynet: Programvareutvikling med innebygd personvern - Krav (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/krav/)
 * [Security Checklist]({{< ref "checklist.md" >}})
 * [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
+* [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)

@@ -48,7 +48,18 @@ The team must check the need for anonymizing the data before it is used outside 
 
 This is especially important if development occurs in Bouvet's infrastructure but with a production environment located at the client's site. In such cases, it is vital that Bouvet has documented routines regulating where and how data is stored and used, and how and when it should be deleted. This must be clarified in consultation with the client so that there is no doubt about responsibility, duties, and risk.
 
+## Artificial Intelligence and Data
+
+If you are building solutions with, or by means of artificial intelligence, the proposed AI law imposes requirements for data quality, especially for high-risk systems. This is specifically mentioned for these as they can be used in situations that could have serious consequences for individuals beyond the privacy considerations described in the Personal Data Act. AI systems that are not classified as high-risk must also comply with requirements for marking information produced by AI.
+
+Another important consideration is learning in the AI model: Few companies will accept that AI models learn from their data, as there have been several examples of training data being reconstructed afterwards. The use of enterprise agreements often limits the AI model's ability to learn from customer data - this is a point that **must** be verified by us when we build solutions.
+
+Be aware that the Personal Data Act also applies to AI systems. When evaluating vendors, we have seen several cases where AI vendors provide services outside the EU, where extra careful assessments and reviews are necessary to ensure that we comply with the requirements laid down in the law.
+
+If you have questions about using AI, you can create a case through [BSD](https://bsd.bouvet.no) or on `#ai` (Slack).
+
 ## More Information
 * [Datatilsynet: Programvareutvikling med innebygd personvern (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare (in Norwegian)](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
 * [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38) (in Norwegian)
+* [Government of Norway: Proposed AI law in Norway](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/)

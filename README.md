@@ -12,7 +12,9 @@ Ingen skal bli fullverdige eksperter av denne portalen alene, den skal gi pekere
 
 Innholdet er ikke satt i stein - men det skal supportere sjekklista. Dersom et tema ikke er en del av sjekklista bør det ikke være en egen artikkel. Sjekklista skal holdes kompakt, vi skal ikke finne opp vår egen versjon av ASVS. Dersom et leveranseteam trenger en mer detaljert sjekkliste, bruk ASVS eller et annet eksternt verktøy!
 
-Radikale endringer i portalen skal ikke gjøres uten videre - sjekklista brukes allerede av flere team - store endringer i denne vil være forstyrrende for deres aktiviteter og potensielt påføre Bouvet kostnader som ikke kan hentes inn hos kunde. 
+### NB - Endringer
+
+Radikale endringer i portalen skal ikke gjøres uten videre. Portalen er en del av SOA for Bouvets ISO 27001 og ISO 42001-sertifiseringer, og sjekklista brukes allerede av flere team. Store endringer vil være forstyrrende for deres aktiviteter og potensielt påføre Bouvet kostnader som ikke kan hentes inn hos kunde. 
 
 ## Endringsforslag
 

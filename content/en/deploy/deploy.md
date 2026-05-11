@@ -3,23 +3,55 @@ title: "Deploy"
 weight: 3
 translationKey: deploy2
 description: >
-  When we deploy a solution, we move it from an artifact repository into the runtime environments. How this happens depends on the platform used.
+  Deployment is about controlled movement of a verified artifact to runtime environments. The goal is safe rollout, fast rollback, and predictable operations.
 ---
 
-When setting up runtime environments, it is important to consider how the solution we are developing can be built and deployed to these in a way that makes it easy and removes the need for a person to spend time and energy doing the same thing each time.
+Deployment starts after the artifact has been built and verified. The main principle is that the same artifact is promoted across environments without rebuilding in between.
+
+This article focuses on rollout to environments. Overall pipeline management is covered in [CI/CD]({{< ref "deploy/cicd.md" >}}), and details about safe artifact production in [Building]({{< ref "deploy/building.md" >}}).
 
 {{< figure src="../cicd.png" >}}
 
-When deploying an application, you start with the artifact that was built, which is then uploaded to the desired runtime environment. To ensure consistency, it is common to build only once so that the same artifact is deployed to multiple locations - if the environments are the same and the artifact is the same, we should see the same result everywhere.
+## Principles for safe deployment
+To reduce operational and security risk, the deployment process should be built on:
 
-It is common to have several steps in the pipeline that handle deployment to different environments, so that you only deploy to the next environment if the previous step was successful. If necessary, you can also restart a step in the pipeline if unexpected errors occur to rule out that it was the deployment itself that caused this.
+* **Promotion of the same artifact**: Don't rebuild for each environment.
+* **Verification before rollout**: Deployment should stop if required checks don't pass.
+* **Automated and idempotent rollout**: Same deployment command should produce the same result.
+* **Traceability**: Each deployment should be traceable to artifact, commit, and approval.
 
 {{< figure src="../deploy.png" >}}
 
-In a deployment pipeline, it is important to consider when it is appropriate to deploy. Running a deployment should not be dangerous, as the entire process is automated. However, in many cases, you want to avoid rolling out changes or new functionality in certain environments before this is cleared with the product owner. To prevent someone from accidentally deploying to the wrong environment, there should be some approval steps along the way, where it is required that others on the team approve a deployment before it can start.
+## What a deployment process should cover
+A mature deployment process should cover at minimum:
 
-## More Information
-* [Microsoft: Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
-* [Github: Github Actions](https://docs.github.com/en/actions)
+* **Environment promotion (dev-test-prod)**: Clear gates between environments.
+* **Approval and change control**: Requirements for approval before production.
+* **Release strategy**: Support for blue/green, canary, or rolling deployment where appropriate.
+* **Rollback**: Defined and tested procedure for fast reversal.
+* **Smoke tests after deployment**: Verify that the solution actually works in the target environment.
+* **Observability**: Monitoring and alerting that catch errors early after rollout.
+
+## Access management and environment security
+Deployment access must be treated as a privileged operation:
+
+* **Least privilege for deployment identities**: Give only access needed for deployment.
+* **Separate roles**: Separate roles for development and production deployment where possible.
+* **Limit production deployment triggers**: Restrict who can start deployment to production.
+* **Traceability on deployments**: Log who deployed what, when, and to which environment.
+
+## Deployment of AI systems
+For AI solutions, the deployment process must also handle model behavior and data-driven risk:
+
+* **Model rollout with control**: Use gradual rollout (for example canary) to reduce impact if model behavior is wrong.
+* **Clear version linkage**: Your running solution should be traceable to the exact model version, code version, and configuration.
+* **Verification in target environment**: Run relevant quality and security checks in the target environment after deployment, not just during the build phase.
+* **Operational monitoring**: Watch model quality, response time, and signs of data or output drift.
+* **Fast rollback**: Have clear procedure to switch back to previous model version if issues occur.
+
+## Further reading
+* [Microsoft: Deployment jobs](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops)
+* [Microsoft: Introduction to deployment patterns](https://learn.microsoft.com/en-us/training/modules/introduction-to-deployment-patterns/)
+* [GitHub: Environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 * [OWASP: Top 10 CI/CD Security Risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/)
 * [OWASP: CI/CD Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CI_CD_Security_Cheat_Sheet.html)

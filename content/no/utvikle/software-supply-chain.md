@@ -1,5 +1,5 @@
 ---
-title: "Software supply chain"
+title: "Forsyningskjedesikkerhet"
 weight: 5
 translationKey: ssc
 description: >
@@ -24,7 +24,7 @@ Det finnes flere sikkerhetsrisikoer knyttet til tredjepartspakker, men dessverre
 Uavhengig av om noe er ment som malware eller protestware er konsekvensene alvorlige, og alle utviklingsprosjekter bør ha på plass tiltak for å begrense risiko og konsekvens dersom en hendelse inntreffer. 
 
 ### Bruk av CDN
-Content-delivery-networks for å distribuere Javascript-bibliotek har blitt brukt av mange som en enkel måte å inkludere disse i koden uten å måtte inkludere dette i build eller deploy-prosessen. Tanken er god, men du får da en direkte avhengighet til en kilde du ikke har noen kontroll på som kan [misbrukes til å spre malware](https://sansec.io/research/polyfill-supply-chain-attackX). 
+Content-delivery-networks for å distribuere Javascript-bibliotek har blitt brukt av mange som en enkel måte å inkludere disse i koden uten å måtte inkludere dette i build eller deploy-prosessen. Tanken er god, men du får da en direkte avhengighet til en kilde du ikke har noen kontroll på som kan [misbrukes til å spre malware](https://sansec.io/research/polyfill-supply-chain-attack). 
 
 ### Lisensmodell
 Det finnes mange ulike lisensmodeller; noen er helt frie og får ingen konsekvenser for brukerne, mens andre som AGPL og GPL stiller klare krav til alle som konsumerer kode under denne lisensen, også inkludert det øvrige systemet som benytter seg av den. De aller fleste økosystemer tillater også bruk av proprietære lisenser, som kan begrense hva du kan bruke en pakke til. Noen har spesifikke krav i lisensen, andre er gratis for personlig bruk, men krever at du kjøper en lisens dersom den skal brukes kommersielt. 
@@ -47,6 +47,16 @@ Et viktig hjelpemiddel er analyseverktøy som hjelper oss å ha kontroll på så
 * Integrasjoner og varsling - Mange verktøy som eksempelvis Snyk SCA kan integreres i IDE og i CICD.
 * Risikobilde - Mange løsninger gir deg en totaloversikt der du kan se det totale risikobildet for enkeltapplikasjoner eller større deler av porteføljen
 
+### AI-avhengigheter er også en del av forsyningskjeden
+For systemer som bruker KI er ikke avhengigheter bare biblioteker fra npm, nuget eller PyPI. Modeller, tokenizers, embeddings, evalueringsdatasett og containere for inferens må behandles som tredjepartsavhengigheter med samme krav til kontroll.
+
+Det betyr blant annet at teamet bør:
+
+* bruke godkjente kilder og unngå nedlasting av artefakter direkte fra ukjente speil
+* låse versjoner og referere til immutable identifikatorer (tag alene er ikke nok)
+* dokumentere hvilke AI-artefakter som faktisk inngår i en release
+* vurdere lisens og bruksvilkår også for modeller og datasett, ikke bare kode
+
 ### Modenhet
 Denne kan være vanskelig å si noe konkret om, men hvor aktivt er miljøet rundt en pakke? Vedlikeholdes den av enkeltpersoner, grupper med utviklere eller har den økonomisk eller annen støtte fra et selskap?
 
@@ -55,11 +65,29 @@ Hvor sannsynlig er det at pakken fortsatt kommer til å være vedlikeholdt om ek
 ### Pinning av versjoner
 En av angrepsvektorene er når ondsinnede aktører overtar populære pakker, og publiserer sin egen versjon med ondsinnet innhold. Dersom vi har bygg eller deployprosesser som henter siste versjon av avhengighetene hver gang, vil disse automatisk hente den infiserte pakken. Et tiltak her kan være å låse pakkeversjonene vi bruker, eksempelvis i ```package-lock.json``` eller liknende. 
 
+### Provenance og policy-gates i CI/CD
+I tillegg til pinning bør byggløpet verifisere opprinnelse og integritet for avhengigheter før de tas i bruk. Teamet bør etablere policy-gates i CI/CD som kan stoppe merge eller deploy ved kritiske avvik, eksempelvis ved alvorlige sårbarheter, ulovlige lisenser eller avhengigheter fra ikke-godkjente kilder.
+
+### Interne speil og fork av kritiske avhengigheter
+For spesielt kritiske avhengigheter kan det være riktig å hoste artefakter i interne registre eller bruke fork av pakker, actions og andre byggkomponenter. Dette reduserer eksponering mot hendelser hos tredjepart, men øker samtidig forvaltningsansvaret internt.
+
+Dette bør brukes selektivt, typisk når avhengigheten er forretningskritisk, har høy påvirkning ved kompromittering, og teamet faktisk har kapasitet til å forvalte den over tid.
+
+Hvis dere velger denne tilnærmingen, bør dere minimum ha:
+
+* tydelig eierskap for vedlikehold, patching og oppdateringsfrekvens
+* rutiner for å hente inn og verifisere nye upstream-versjoner
+* sporbarhet på hva som er intern kopi/fork, og hva som er original kilde
+* samme krav til skanning, lisenskontroll og review som for øvrige avhengigheter
+
 ### Bruk av SBOM
-Software Bill Of Materials (SBOM) er en tilnærming der vi genererer en oversikt over alle avhengigheter med versjoner fra løsningene våre. Det finnes flere mer eller mindre standardiserte filformater for dette, disse kan også arkiveres eller legges inn i andre løsninger for å forenkle monitorering fra sentralt hold. 
+Software Bill Of Materials (SBOM) er en tilnærming der vi genererer en oversikt over alle avhengigheter med versjoner fra løsningene våre. Denne oversikten bør knyttes til hver release, slik at det er tydelig hvilke avhengigheter som faktisk var i bruk på et gitt tidspunkt.
+
+For KI-løsninger bør oversikten også inkludere relevante AI-artefakter som modeller, modelldigests, tokenizers og sentrale datasett-referanser der dette er relevant. Det finnes flere mer eller mindre standardiserte filformater for SBOM, og de kan arkiveres eller legges inn i andre løsninger for å forenkle monitorering fra sentralt hold. 
 
 ## Veien videre
+* [OWASP Cheat Sheet - Software Supply Chain Security](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
 * [Sonatype: State of the software supply chain](https://www.sonatype.com/state-of-the-software-supply-chain/introduction)
 * [Wikipedia: Source Composition Analysis](https://en.wikipedia.org/wiki/Software_composition_analysis)
-* [Eksempel på CDN-angrep: Polyfill supply chain attack hits 100K+ sites](https://sansec.io/research/polyfill-supply-chain-attackX)
+* [Eksempel på CDN-angrep: Polyfill supply chain attack hits 100K+ sites](https://sansec.io/research/polyfill-supply-chain-attack)
 * [Eksempel på kompromittert bibliotek: xz-Utils](https://arstechnica.com/security/2024/04/what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world/)

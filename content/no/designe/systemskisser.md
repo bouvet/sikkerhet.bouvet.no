@@ -15,11 +15,22 @@ Systemskissene bør gi nok informasjon til at en i etterkant kan
 * Brukes av leveranseteamet for onboarding av nye kollegaer eller handover til andre team. 
 
 Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste her: 
-* Overordnet systemskisse med de viktigste logiske komponentene
-* Detaljert nettverksskisse med ressurser, tjenester og nettverk
-* Dataflytdiagram - viser hvordan data flyter mellom komponenter i løsningen
-* IAM-diagram - Viser identiteter, tilganger og roller samt hvor de hentes fra
-* Viktige avhengigheter – oversikt over andre systemer, tjenester, ressurser, onprem/cloud
+* **Overordnet systemskisse** med de viktigste logiske komponentene
+* **Detaljert nettverksskisse** med ressurser, tjenester og nettverk
+* **Dataflytdiagram** viser hvordan data flyter mellom komponenter i løsningen
+* **IAM-diagram** viser identiteter, tilganger og roller samt hvor de hentes fra
+* **Viktige avhengigheter** viser oversikt over andre systemer, tjenester, ressurser, onprem/cloud
+
+
+## Bruk av KI-komponenter
+Dersom løsningen inneholder kunstig intelligens eller maskinlæring-modeller, må disse være eksplisitt dokumentert i systemdokumentasjonen:
+
+* I **dataflytdiagrammet**: Viser hvor treningsdata og inferensinput kommer fra, og hvordan resultater flyter videre
+* I **nettverksdiagrammet**: Dokumenter hvor modellen kjører (cloud API, edge device, on-prem server) og nettverkskonnektivitet
+* I **avhengighetslisten**: Eierskap av modeller, versjonering, og hvor de oppdateres
+* I **IAM-diagrammet**: Hvem kan deploye, oppdate eller monitorere modellen
+
+Uten denne informasjonen er det vanskelig å få oversikt over risiko, dataflyt og compliance rundt AI-komponenter.
 
 ## Eksempler
 Under finner du eksempler på punktene listet ovenfor. Diagrammene du produserer trenger ikke å være like, det viktigste er at de inneholder nok informasjon til at de kan brukes for det tiltenkte formålet og at de er forståelige for teamet. 

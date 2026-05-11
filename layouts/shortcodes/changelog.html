@@ -1,0 +1,31 @@
+{{- $source := .Get "source" | default "changelog" -}}
+{{- $data := index site.Data $source -}}
+{{- if not $data -}}
+  <p>Changelog data source '{{ $source }}' not found.</p>
+{{- else -}}
+  {{- $entries := $data.entries -}}
+  {{- if not $entries -}}
+    <p>No changelog entries yet.</p>
+  {{- else -}}
+    <div class="changelog-list">
+      {{- range sort $entries "date" "desc" -}}
+        <section class="changelog-entry">
+          <h3>
+            <time datetime="{{ .date }}">{{ .date }}</time>
+            {{- with .title }} - {{ . }}{{ end -}}
+          </h3>
+          {{- with .summary }}
+            <p>{{ . }}</p>
+          {{- end }}
+          {{- with .changes }}
+            <ul>
+              {{- range . }}
+                <li>{{ . | markdownify }}</li>
+              {{- end }}
+            </ul>
+          {{- end }}
+        </section>
+      {{- end -}}
+    </div>
+  {{- end -}}
+{{- end -}}
