@@ -14,7 +14,9 @@ Innholdet er ikke satt i stein - men det skal supportere sjekklista. Dersom et t
 
 ### NB - Endringer
 
-Radikale endringer i portalen skal ikke gjøres uten videre. Portalen er en del av SOA for Bouvets ISO 27001 og ISO 42001-sertifiseringer, og sjekklista brukes allerede av flere team. Store endringer vil være forstyrrende for deres aktiviteter og potensielt påføre Bouvet kostnader som ikke kan hentes inn hos kunde. 
+Radikale endringer i portalen skal ikke gjøres uten videre. Portalen er en del av SOA for Bouvets ISO 27001 og ISO 42001-sertifiseringer, og styringssystemene lenker allerede direkte til seksjoner i flere sider. Større endringer må samkjøres med oppdatering av intern wikiløsning.
+
+Vær restriktiv med endring av sjekklista. Endringer her kan resultere i at team må endre arbeidsprosesser, så ikke introduser endringer uten at disse er godt gjennomtenkt i forkant. 
 
 ## Endringsforslag
 
