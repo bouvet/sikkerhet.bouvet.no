@@ -65,6 +65,8 @@ Hvor sannsynlig er det at pakken fortsatt kommer til å være vedlikeholdt om ek
 ### Pinning av versjoner
 En av angrepsvektorene er når ondsinnede aktører overtar populære pakker, og publiserer sin egen versjon med ondsinnet innhold. Dersom vi har bygg eller deployprosesser som henter siste versjon av avhengighetene hver gang, vil disse automatisk hente den infiserte pakken. Et tiltak her kan være å låse pakkeversjonene vi bruker, eksempelvis i ```package-lock.json``` eller liknende. 
 
+Et beslektet tiltak er å innføre en form for cooldown eller alderskrav på nye versjoner, slik at vi ikke tar i bruk oppdateringer før de er et visst antall dager gamle. Hensikten er å redusere risikoen for å plukke opp fersk malware eller kompromitterte pakker før økosystemet rekker å oppdage problemet og fjerne eller flagge versjonen. Dette kan være spesielt nyttig for automatiserte oppdateringsløp, men bør brukes risikobasert slik at kritiske sikkerhetsoppdateringer fortsatt kan tas inn raskt gjennom en kontrollert unntaksprosess.
+
 ### Provenance og policy-gates i CI/CD
 I tillegg til pinning bør byggløpet verifisere opprinnelse og integritet for avhengigheter før de tas i bruk. Teamet bør etablere policy-gates i CI/CD som kan stoppe merge eller deploy ved kritiske avvik, eksempelvis ved alvorlige sårbarheter, ulovlige lisenser eller avhengigheter fra ikke-godkjente kilder.
 
