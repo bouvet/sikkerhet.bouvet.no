@@ -70,6 +70,8 @@ How likely is it that the package will still be maintained in, for example, 5 ye
 ### Pinning Versions
 One attack vector is when malicious actors take over popular packages and publish their own version with malicious content. If we have build or deploy processes that fetch the latest version of dependencies each time, they will automatically fetch the infected package. A measure here can be to pin the package versions we use, for example, in ```package-lock.json``` or similar.
 
+A related measure is to introduce a cooldown or minimum-age requirement for new versions, so updates are not adopted until they are a certain number of days old. The purpose is to reduce the risk of pulling in fresh malware or compromised packages before the ecosystem has time to detect the problem and remove or flag the version. This can be especially useful for automated update flows, but it should be applied based on risk so critical security fixes can still be brought in quickly through a controlled exception process.
+
 ### Provenance and policy-gates in CI/CD
 In addition to pinning, the build pipeline should verify the origin and integrity of dependencies before they are used. The team should establish policy-gates in CI/CD that can stop a merge or deployment when critical issues are detected, such as severe vulnerabilities, disallowed licenses, or dependencies from unapproved sources.
 
