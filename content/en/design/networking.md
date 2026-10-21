@@ -1,6 +1,6 @@
 ---
 title: "Network Concepts"
-weight: 4
+weight: 2
 translationKey: network
 description: >
   Network is a fundamental component in everything we create, and it is important to have a basic understanding of how it works and how it can be exploited by others.
@@ -12,9 +12,9 @@ Proper configuration of the network is important for pure cloud solutions, hybri
 [Zero trust](https://en.wikipedia.org/wiki/Zero_trust_security_model) is an important concept in network operations. In short, you should never trust anything coming from other systems, and you should assume that all communication will be compromised. Zero trust cannot be solved just by securing the network, but must be a goal in itself when designing solutions and the infrastructure around them. By implementing zero-trust, you will eliminate many potential attack vectors and thus protect the services that use the network.
 
 ## Getting an Overview of the Network
-{{< important title="Important" >}}
+{{< tip title="Important" >}}
 Keep track of which IP addresses and ports you expose, and which services are listening on the ports. Check firewall rules, look in logs, and scan your systems with nmap.
-{{< /important >}}
+{{< /tip >}}
 
 Keep an overview of which IP addresses, ports, and protocols an IT system exposes to the outside. This applies regardless of whether you are setting up a new system, changing an existing one, or just investigating what you already have. A targeted attacker will map open endpoints to find targets, and there have been several examples of data breaches starting with a forgotten, insecure service.
 
@@ -35,9 +35,9 @@ The use of scanner tools like `nmap` must **always** be clarified with the owner
 
 
 ## Service Isolation
-{{< important title="Important" >}}
+{{< tip title="Important" >}}
 Use a firewall to restrict traffic within systems and between systems and the Internet. Use allowlist if possible. Filter traffic at the application layer if necessary.
-{{< /important >}}
+{{< /tip >}}
 
 _Firewall_ is a common term for barriers in a network that stop unwanted traffic. In most contexts, the definition is a bit narrower, referring to barriers at the TCP/IP layer, but a firewall can also operate at the application layer.
 
@@ -52,6 +52,19 @@ Also use firewalls between all services within the network to ensure multiple la
 Avoid sending traffic over the internet even to your own cloud services, use private endpoints and VPN tunnels where possible. Services that must be exposed to other systems (both internal, external, and on the internet) should be placed behind security functions such as `web application firewalls` and/or `API gateways`, and you must ensure that these also protect against, for example, DDOS attacks.
 
 Route all outgoing traffic through a dedicated proxy service that blocks everything by default, allowlisting as needed. Never expose services directly if you can avoid it. Exposing services on ports other than the standard ports is not a good idea; a network scan will quickly reveal this.
+
+## AI services and network control
+For AI solutions, your operating model should be evaluated against requirements for ingress and egress control.
+
+- **AI in your own tenant (for example in Azure)** usually gives better control over network boundaries, private endpoints, logging, and which systems can send data to and from the service.
+- **AI as pure SaaS** can provide faster startup, but often less control over network flows, allowed destinations, and traffic boundaries.
+
+Minimum checks for both models:
+
+- which data can be sent in (ingress), and who can send it
+- which destinations data can be sent to (egress)
+- how traffic is logged, monitored, and blocked when anomalies occur
+- how privacy, data flow, and data residency/geography requirements are documented
 
 ## Configuration
 

@@ -6,7 +6,7 @@ description: >
   Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility and risk in deliveries. All development teams should relate to its content unless otherwise agreed with the customer.
 ---
 
-Last modified: 2025.07.10
+Last modified: 2026.05.11
 
 It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
@@ -17,12 +17,13 @@ Download the checklist and implement it as part of the source code in your proje
 2. [Are the system’s data classified and handled accordingly?]({{< ref "plan/data-and-classification.md" >}})
 3. [Are data in the development and test environments also handled according to the classification?]({{< ref "plan/data-and-classification/#data-for-use-during-development-and-testing.md" >}})
 4. [If the application becomes unavailable for shorter or longer periods, what consequences does this have for us and the customer?]({{< ref "plan/business-continuity.md" >}})
-5. [Is there a defined SLA for the application?]({{< ref "plan/business-continuity.md" >}})
-6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "plan/business-continuity.md" >}})
-7. [Is there a defined plan for how and how often backups should be taken?]({{< ref "plan/business-continuity.md" >}})
-8. [Is there a defined plan for disaster recovery?]({{< ref "plan/business-continuity.md" >}})
-9. [Has the team clarified which tools should be used and how they should be handled?]({{< ref "plan/tools.md" >}})
+5. [Is there a defined SLA for the application?]({{< ref "plan/business-continuity.md#customer-expectations" >}})
+6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "plan/business-continuity.md#incident-management" >}})
+7. [Is there a defined plan for how and how often backups should be taken?]({{< ref "plan/business-continuity.md#backup" >}})
+8. [Is there a defined plan for disaster recovery?]({{< ref "plan/business-continuity.md#disaster-recovery" >}})
+9. [Has the team clarified which tools should be used and how they should be handled?]({{< ref "develop/dev_environments.md#tools" >}})
 10. [Have control mechanisms been defined to maintain security in the project?]({{< ref "plan/security-checkpoints.md" >}})
+11. [If the solution uses AI, has it been clarified how AI components, models, and data will be handled?]({{< ref "develop/documentation.md#documentation-of-ai-systems" >}})
 
 ## Design
 1. [Is it clear what security requirements apply to the solution?]({{< ref "design/security-requirements.md" >}})
@@ -32,7 +33,8 @@ Download the checklist and implement it as part of the source code in your proje
 5. [Has necessary authentication been set up for accessing the system?]({{< ref "design/authentication-and-authorization.md" >}})
 6. [Has necessary authorization been set up for actions in the system?]({{< ref "design/authentication-and-authorization.md" >}})
 7. [Has threat modeling of the solution been conducted?]({{< ref "design/threat-modelling.md" >}})
-8. [Does the team have the necessary expertise for the project?]({{< ref "design/competence-building.md" >}})
+8. [Does the team have the necessary expertise for the project?]({{< ref "competence-building.md" >}})
+9. [If the solution uses AI, are AI-specific security requirements defined?]({{< ref "design/security-requirements.md" >}})
 
 ## Develop
 1. [Are the development environments well described?]({{< ref "develop/dev_environments.md" >}})
@@ -40,15 +42,17 @@ Download the checklist and implement it as part of the source code in your proje
 3. [Is data from other systems validated?]({{< ref "develop/data-validation.md" >}})
 4. [Are there routines to protect against today’s most common attack types?]({{< ref "develop/security-practices.md" >}})
 5. [Are there routines to protect against software supply chain attacks?]({{< ref "develop/software-supply-chain.md" >}})
-6. [Are there routines to secure internal components operated by the team?]({{< ref "develop/internal-components.md" >}})
+6. [Are there routines to secure internal components operated by the team?]({{< ref "manage/dependency-management.md#internal-components-operated-by-the-team" >}})
 7. [Is security analyzed through testing or other forms of analysis?]({{< ref "develop/security-testing.md" >}})
 8. [Is necessary information about the system documented, updated, and stored securely?]({{< ref "develop/documentation.md" >}})
+9. [If the solution uses AI, are models, training data, and evaluation results documented?]({{< ref "develop/documentation.md#documentation-of-ai-systems" >}})
 
 ## Deploy
 1. [Have automated security measures been set up?]({{< ref "deploy/cicd.md" >}})
 2. [Does the team have procedures to secure the build environment?]({{< ref "deploy/building.md" >}})
 3. [Is a review conducted before deployment?]({{< ref "deploy/deploy.md" >}})
-4. [Is penetration testing planned in connection with deployment?]({{< ref "deploy/pentesting.md" >}})
+4. [Is security testing, including penetration testing planned for as part of the deployment?]({{< ref "develop/security-testing.md#when-penetration-testing-is-relevant" >}})
+5. [If the solution uses AI, has it been verified that AI components and models function as expected?]({{< ref "manage/verify-the-design.md#verification-of-ai-systems" >}})
 
 ## Manage
 1. [Has the team verified that the network diagram is correctly implemented?]({{< ref "manage/verify-the-design.md" >}})
@@ -58,3 +62,4 @@ Download the checklist and implement it as part of the source code in your proje
 5. [Does the team have a routine to protect against vulnerable dependencies?]({{< ref "manage/dependency-management.md" >}})
 6. [Does the team have a routine for practicing system recovery?]({{< ref "manage/preparedness.md" >}})
 7. [Does the team have a procedure for incident handling and a contingency plan if the solution is attacked or goes down?]({{< ref "manage/incident-response.md" >}})
+8. [If the solution uses AI, is the model's performance and behavior monitored in production?]({{< ref "manage/logging-monitoring.md#logging-and-monitoring-of-ai-responses" >}})

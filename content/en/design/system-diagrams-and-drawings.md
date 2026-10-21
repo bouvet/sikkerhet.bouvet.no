@@ -1,6 +1,6 @@
 ---
 title: "System diagrams and drawings"
-weight: 2
+weight: 6
 translationKey: diagrams
 description: >
   It's important to have a good foundation when building quality solutions, and drawings and diagrams showing the infrastructure, data flow, networks, and access control are crucial elements. Without this information, it is difficult to validate if the implementation matches the intended design.
@@ -19,6 +19,16 @@ Although there is a lot that can be documented here, we focus on the most import
 * Data flow diagram showing how data flows between components in the solution
 * IAM diagram showing identities, accesses, and roles and where they are sourced from
 * Important dependencies – overview of other systems, services, resources, on-prem/cloud
+
+## Use of AI components
+If the solution includes artificial intelligence or machine learning models, these should be explicitly documented in the system documentation:
+
+* In the **data flow diagram**: Show where training data and inference input come from, and how results continue through the system
+* In the **network diagram**: Document where the model runs (cloud API, edge device, on-prem server) and related network connectivity
+* In the **dependencies list**: Include model ownership, versioning, and where updates happen
+* In the **IAM diagram**: Show who can deploy, update, or monitor the model
+
+Without this information, it is difficult to maintain a clear overview of risk, data flow, and compliance around AI components.
 
 ## Examples
 Below are examples of the points listed above. The diagrams you produce do not need to be identical; the most important thing is that they contain enough information to be used for their intended purpose and are understandable to the team.

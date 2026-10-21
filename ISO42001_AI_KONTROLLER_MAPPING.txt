@@ -1,0 +1,121 @@
+ISO 42001 AI-KONTROLLER TIL ARTIKKEL-MAPPING
+===========================================
+
+Denne matrisen viser hvilke artikler i sikkerhet.bouvet.no som adresserer hver ISO 42001 AI-kontroll.
+
+
+B.6.1.2 - Objectives for responsible development of AI system
+-----------------------------------------------------------
+Primær dekning:
+  - Designe: Sikkerhetskrav
+  - Planlegge: Ansvarsfordeling
+Supplerende:
+  - Planlegge: AI
+  - Utvikle: Sikkerhetspraksiser
+
+B.6.1.3 - Process for responsible design and development of AI systems
+---------------------------------------------------------------------
+Primær dekning:
+  - Planlegge: AI
+  - Planlegge: Sikkerhetskontrollpunkt
+Supplerende:
+  - Designe: Trusselmodellering
+  - Deploye: CI/CD
+  - Forvalte: Verifisering av design
+
+B.6.2.2 - AI system requirements and specification
+-------------------------------------------------
+Primær dekning:
+  - Designe: Sikkerhetskrav
+  - Designe: Systemskisser
+Supplerende:
+  - Designe: Trusselmodellering
+  - Planlegge: Sikkerhetskontrollpunkt
+
+B.6.2.3 - Documentation of AI system design and development
+---------------------------------------------------------
+Primær dekning:
+  - Utvikle: Dokumentasjon
+  - Forvalte: Verifisering av design
+Supplerende:
+  - Designe: Systemskisser
+  - Forvalte: Audit
+
+B.6.2.4 - AI system verification and validation
+----------------------------------------------
+Primær dekning:
+  - Forvalte: Verifisering av design
+  - Planlegge: Sikkerhetskontrollpunkt
+Supplerende:
+  - Utvikle: Sikkerhetstesting
+  - Deploye: Deploy
+
+B.6.2.5 - AI system development
+-------------------------------
+Primær dekning:
+  - Planlegge: AI
+  - Utvikle: Sikkerhetspraksiser
+Supplerende:
+  - Deploye: CI/CD
+  - Utvikle: Sikkerhetstesting
+
+B.6.2.6 - AI system operation and monitoring
+-------------------------------------------
+Primær dekning:
+  - Forvalte: Logging & Monitorering
+  - Deploye: Deploy
+Supplerende:
+  - Designe: Nettverk
+  - Designe: Autentisering
+
+B.6.2.7 - AI system technical documentation
+------------------------------------------
+Primær dekning:
+  - Utvikle: Dokumentasjon
+Supplerende:
+  - Designe: Systemskisser
+  - Forvalte: Audit
+
+B.6.2.8 - AI system recording of event logs
+-------------------------------------------
+Primær dekning:
+  - Forvalte: Logging & Monitorering
+  - Planlegge: Sikkerhetskontrollpunkt
+Supplerende:
+  - Designe: Autentisering
+  - Forvalte: Audit
+
+B.7.2 - Data for development and enhancement of AI system
+---------------------------------------------------------
+Primær dekning:
+  - Planlegge: Data og klassifisering
+  - Designe: Segregering
+Supplerende:
+  - Utvikle: Datavalidering
+  - Deploye: Deploy
+
+B.7.3 - Acquisition of data
+---------------------------
+Primær dekning:
+  - Planlegge: Data og klassifisering
+  - Planlegge: Sikkerhetskontrollpunkt
+Supplerende:
+  - Utvikle: Dokumentasjon
+
+B.7.4 - Quality of data for AI systems
+--------------------------------------
+Primær dekning:
+  - Utvikle: Datavalidering
+  - Planlegge: Sikkerhetskontrollpunkt
+Supplerende:
+  - Planlegge: Data og klassifisering
+  - Utvikle: Sikkerhetstesting
+
+B.7.5 - Data provenance
+-----------------------
+Primær dekning:
+  - Utvikle: Software Supply Chain
+  - Utvikle: Dokumentasjon
+Supplerende:
+  - Utvikle: Datavalidering
+  - Forvalte: Verifisering av design

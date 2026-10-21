@@ -43,6 +43,13 @@ All applications have inputs that can be described, even free text inputs where 
 
 If the application supports file uploads or similar, deviations from expected files, such as discrepancies between file type and [file signature](https://en.wikipedia.org/wiki/List_of_file_signatures) or unusually large or small files, should be logged.
 
+## Logging and Monitoring of AI Responses
+Logging and monitoring for AI solutions should be designed as an ongoing operational and governance mechanism that makes it possible to detect failures, anomalies, and security incidents, as well as document that the solution continues to operate as expected in production.
+
+System and performance logs (e.g., error rates, response time/latency, availability, and service quality) should be collected in one place so that alarms or other notifications can be configured for unexpected events. Model/function performance should also be monitored with clear metrics (e.g., task success rate, quality/confidence scores where relevant), including alerts when unexpected behavior changes or degradation occurs over time.
+
+The logs should support the principles outlined at the top of this article and should be included in the process for managing updates and changes to the application. Monitoring should also cover compliance and customer/other requirements, and should have an established support channel so that users can report failures, unexpected results, or misuse, allowing the organization to assess whether the system is being used outside its intended purpose.
+
 ## How Do We Log?
 How we log will also vary from project to project, the platform we run on, and the resources we are allowed to use. An important point to keep in mind when designing the logging solution is that _logs are a target for attacks!_ An attacker who can exploit vulnerabilities and then manipulate the logs can both hide activity and plant false evidence.
 

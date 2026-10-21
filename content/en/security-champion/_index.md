@@ -1,6 +1,6 @@
 ---
 title: "Security Champion"
-weight: 8
+weight: 9
 translationKey: sc
 menu:
   sidebar:

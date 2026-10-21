@@ -21,4 +21,6 @@ We must do our best to deliver the most secure services and solutions
 
 ## Help – I’m stuck!
 
-If you’re stuck somewhere, or are unsure – phone a friend. Talk with your immediate manager, local Security Champions, or use Slack. The channel `#security-journey-support` was created to support the use of Security Journey – you will certainly find someone there who can help.
+If you're stuck somewhere or uncertain - reach out to a friend. Talk to your nearest manager, local Security Champions, or use Slack. The channel `#security-journey-support` has been created to support the use of Security Journey - you'll definitely find someone there who can help.
+
+If you want a shorter and more informal explanation of why this is useful, you can read [Everyone needs a security friend (in Norwegian)](https://www.bouvet.no/bouvet-deler/alle-trenger-en-sikkerhetsvenn).

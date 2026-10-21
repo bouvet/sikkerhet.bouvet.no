@@ -26,7 +26,7 @@ Alle kunder i Bouvet skal ha et definert kontaktpunkt for  hendelser i Kunder (C
 
 Dersom en hendelse oppstår og kunde eller andre har behov for kontakt med teamet, er det vanlige at leveranseleder er det formelle kontaktpunktet i Bouvet-teamet. 
 
-# Backup
+## Backup
 Backup er viktig i alle prosjekter. Selv om vi i mange prosjekter ikke har noe ansvar for drift av infrastruktur, kildekodesystemer eller andre verktøy, bør vi gjøre oss kjent med rutiner og begrensninger på området. 
 
 Dersom vi har ansvar for drift har vi også ansvar for at backup gjennomføres. Vanlige begrep her er 
@@ -52,10 +52,10 @@ Det er også viktig å ha et forhold til hvor backupene lagres, slik at en kan v
 Backup som ikke testes har ingen verdi - innfør rutiner for å teste at du kan restore fra backup!
 {{< /tip >}}
 
-# Disaster recovery
+## Disaster recovery
 _Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å raskest mulig komme tilbake til normaltilstand. Det kan være nyttig å tenkte på dette som "actions on", altså; _"Hvis X inntreffer, så gjør vi Y"_.
 
-## Gjenoppretting
+### Gjenoppretting
 
 Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelser. Ofte kan man slippe unna med mindre omfattende og manuell feilretting. Uavhengig av dette bør man uansett ha en plan for fullstendig gjennoppretting. Har man det kan man redde seg fra de fleste situasjoner.
 
@@ -73,7 +73,7 @@ Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelse
   * Husk at støttesystemer kan spille en viktig rolle i det totale systmet. Disse må også kunne erstattes eller gjennopprettes ved hendelser
   * Eksempelvis: Git, CI-pipeline, logging og monitorering
 
-## Scenarier som kan diskuteres
+### Scenarier som kan diskuteres
 
 * Slettet tjeneste: Hvordan gjenoppretter du en tjeneste som har blitt slettet?
 * Korrupt tjeneste: Reparerer eller gjenoppretter man en VM eller andre tjenester med problemer?
@@ -87,5 +87,5 @@ Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelse
 * Kompromittert admin: Trenger du å planlegge for hva som skjer om eieren av subscription sletter hele Azure-subscriptionen din?
 * Kritisk sårbarhet: Hva skjer når noen oppdager en kritisk sårbarhet i din applikasjon? Det kan være lurt å ha protokoller klare for når du skal ta et valg om du stenger tjenesten ned.
 
-# Veien videre
+## Veien videre
 * [Wikipedia: Disaster Recovery](https://en.wikipedia.org/wiki/IT_disaster_recovery)

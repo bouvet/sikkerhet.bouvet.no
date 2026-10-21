@@ -48,6 +48,28 @@ Using roles, _role based access control_ (RBAC), is a common approach to grantin
 
 This provides a better overview of who has access to what compared to users with individual access.
 
+## AI and agent access
+For solutions with AI agents, it is not enough to control end-user access alone. The agent itself often acts as a separate identity with access to models, data, APIs, and tools. These access rights should be treated as high-risk when they are too broad.
+
+Practical principles:
+
+- use a dedicated service identity for the  agent; do not reuse user or admin accounts
+- apply least privilege per tool (_tool access_), so the agent can only call functions it actually needs
+- separate read, write, and administrative operations
+- limit access per environment (dev/test/prod) and per dataset or service
+- use time-limited or conditional access where possible
+
+When an agent gets access to external tools or APIs, you should also control which commands, endpoints, and data operations are allowed. This reduces the risk that mistakes, misuse, or compromise have a large operational impact.
+
+For MCP-based integrations (Model Context Protocol), the same principles apply, with extra requirements for clear boundaries:
+
+- each MCP server should have clear ownership and its own identity/service account
+- tools exposed through MCP should be explicitly scoped and authorized, not given broad, unrestricted access
+- the client should only get access to required MCP servers, and access should be revocable quickly
+- calls to MCP tools should be logged with who/what/why so misuse can be traced
+
+Access management also affects operational risk: broad agent permissions make incidents harder to detect and increase impact. Changes to agent access should therefore be logged and followed up together with normal operational monitoring, see [Logging and monitoring]({{< ref "manage/logging-monitoring.md" >}}).
+
 ## More Information
 * [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)
 * [Wikipedia: Authorization](https://en.wikipedia.org/wiki/Authorization)

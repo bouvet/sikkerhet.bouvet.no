@@ -5,6 +5,11 @@ translationKey: data
 description: >
   Most organizations operate with various classification levels for both data and systems. The classification level dictates how data is used, where it is stored, and who can access it. These are key requirements for any development project and must be clarified in advance.
 ---
+
+{{< tip title="In short" >}}
+Most organizations have different classification levels for both data and systems. The classification is often based on how data is used, where it is stored, and who can access it. This is a key requirement for any development project and must be clarified in advance.
+{{< /tip >}}
+
 ## Classification
 Most organizations have routines and processes for data classification, typically distinguishing between these or similar levels:
 * Open
@@ -24,10 +29,10 @@ This needs to be clarified with the client at the start of the project to ensure
 If the delivery team is to handle personally sensitive information, it is important that the team familiarizes itself with the requirements surrounding this. The Norwegian Data Protection Authority has published a guide for ["Software development with built-in privacy" (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) which provides useful insight into the issue.
 
 {{< important title="Important" >}}
-Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries has to consider the definitions and requirements which follows from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
+Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries have to consider the definitions and requirements which follow from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
 {{< /important >}}
 
-The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GPDR has a number of requirements that define how PII can be used and for what. PII is defined as 
+The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GDPR has a number of requirements that define how PII can be used and for what. PII is defined as 
 
 <em>"any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person"</em>
 
@@ -48,7 +53,18 @@ The team must check the need for anonymizing the data before it is used outside 
 
 This is especially important if development occurs in Bouvet's infrastructure but with a production environment located at the client's site. In such cases, it is vital that Bouvet has documented routines regulating where and how data is stored and used, and how and when it should be deleted. This must be clarified in consultation with the client so that there is no doubt about responsibility, duties, and risk.
 
+## Artificial Intelligence and Data
+
+If you are building solutions with, or by means of artificial intelligence, the proposed AI law imposes requirements for data quality, especially for high-risk systems. This is specifically mentioned for these as they can be used in situations that could have serious consequences for individuals beyond the privacy considerations described in the Personal Data Act. AI systems that are not classified as high-risk must also comply with requirements for marking information produced by AI.
+
+Another important consideration is learning in the AI model: Few companies will accept that AI models learn from their data, as there have been several examples of training data being reconstructed afterwards. The use of enterprise agreements often limits the AI model's ability to learn from customer data - this is a point that **must** be verified by us when we build solutions.
+
+Be aware that the Personal Data Act also applies to AI systems. When evaluating vendors, we have seen several cases where AI vendors provide services outside the EU, where extra careful assessments and reviews are necessary to ensure that we comply with the requirements laid down in the law.
+
+If you have questions about using AI, you can create a case through [BSD](https://bsd.bouvet.no) or on `#ai` (Slack).
+
 ## More Information
 * [Datatilsynet: Programvareutvikling med innebygd personvern (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare (in Norwegian)](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
 * [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38) (in Norwegian)
+* [Government of Norway: Proposed AI law in Norway](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/)

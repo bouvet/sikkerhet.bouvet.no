@@ -1,18 +1,88 @@
 ---
-title: "Audit eller revisjon av prosjekt eller leveranse"
+title: "Revisjon av prosjekt eller leveranse"
 weight: 2
 translationKey: audit
 description: >
-  Uavhengig av egne kontroller kommer vi noen ganger i situasjoner der kunde eller mottaker ønsker å gjennomgå kvalitet og rutiner rundt det som leveres. Sikkerhet og kvalitet i en løsning krever andre tiltak enn det funksjonelle, som typisk er lettere å verifisere opp mot kundens krav.  
+  Kunde eller mottaker kan kreve revisjon av leveransen. Da må teamet kunne dokumentere krav, designvalg, sikkerhetstiltak og hvordan disse faktisk er fulgt opp i praksis.
 ---
 
-Det er langt fra alle leveranser som er aktuelle for revisjon eller audit fra kundens side, dette vil typisk gjelde leveranser der Bouvet har tatt styring og kunden i større grad mottar en løsning uten at de er tungt involvert i driften av prosjektet. En revisjon er verktøy kunden kan benytte for å sikre at Bouvet har gjort jobben som avtalt, der kunden har mulighet til å gjennomgå våre rutiner og arbeidsprosesser for å sikre at vi har levert som vi skal. 
+Det er langt fra alle leveranser som blir revidert, men dersom kunde eller mottaker ber om revisjon må teamet kunne vise mer enn at løsningen fungerer. En revisjon handler ofte om å dokumentere at krav er forstått, at riktige kontroller er valgt, og at disse faktisk er implementert og fulgt opp.
 
-En slik revisjon vil være avklart i kontrakten vi jobber mot, men det er langt ifra alle kunder som benytter seg av denne muligheten. I mange tilfeller vil det være mest aktuelt med en revisjon når prosjektet leveres eller på et tidspunkt etter levering når det er i drift. Målet vil da være å verifisere at kravene til prosjektet er oppfylt, og at det forvaltes og driftes på en måte som er i samsvar med det kunden forventer og krever.
+En slik revisjon vil normalt være forankret i kontrakt, lovkrav eller interne styringskrav hos kunden. I praksis er det ofte mest aktuelt ved levering eller etter at løsningen har vært i drift en stund.
 
-## Hva kreves av oss? 
-Her vil det kunne variere fra kontrakt til kontrakt, men helt overordnet bør man sikre at prosjektet har den nødvendige dokumentasjonen som kreves og forventes slik at man kan vise at sikkerheten i leveransen er ivaretatt. Vi bør alltid levere et minimum av sikkerhet, men dersom kunden har valgt å ikke ta hensyn til anbefalinger eller har valgt å takke nei til eventuelle tilleggstjenester må vi sikre at dette er dokumentert på en skikkelig måte.
+## Hva må kunne dokumenteres?
+Kravene vil variere, men teamet bør som minimum kunne vise:
+* hvilke krav leveransen skal oppfylle
+* hvilke designvalg som er gjort og hvorfor
+* hvilke sikkerhetstiltak som er implementert
+* hvem som har ansvar for drift, tilgang og oppfølging
+* hvilke avvik, risikovurderinger og aksepterte unntak som finnes
+
+Dette betyr ikke nødvendigvis store dokumentpakker. Det viktige er at dokumentasjonen er oppdatert, etterprøvbar og tilgjengelig for de som faktisk trenger den.
+
+## Før en revisjon
+Den enkleste måten å håndtere revisjon på er å være forberedt før kunden spør. Teamet bør derfor ha et bevisst forhold til hvor dokumentasjon ligger, hvem som eier den, og hvordan den holdes oppdatert.
+
+Det er spesielt nyttig å ha avklart:
+* hvem som representerer teamet i revisjonen
+* hvor sentrale dokumenter og evidens hentes fra
+* hvilke deler av dokumentasjonen som kan deles direkte, og hva som krever særskilt avklaring
+* hvordan avvik, unntak og risikobeslutninger er dokumentert
+
+Revisjon blir fort tungvint dersom informasjonen finnes, men er spredt mellom ulike systemer, mapper og enkeltpersoner.
+
+## Typisk evidens i en revisjon
+En revisjon vil ofte be om konkrete bevis, ikke bare beskrivelser. Det kan for eksempel være:
+* [systemskisser]({{< ref "designe/systemskisser.md" >}}) og oversikt over avhengigheter
+* [sikkerhetskrav]({{< ref "designe/sikkerhetskrav.md" >}}) og hvordan de er omsatt i design og drift
+* [dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) av arkitektur, prosesser og beslutninger
+* resultater fra testing, verifisering og gjennomganger
+* logger eller rapporter som viser at kontroller faktisk er aktive
+* oversikt over roller, tilganger og godkjenninger
+
+Hvis kunden har valgt bort anbefalte tiltak eller tilleggstjenester, må dette også være dokumentert tydelig. Det er viktig både for forventningsstyring og for å kunne forklare gjenværende risiko.
+
+## Del bare det som er nødvendig
+En revisjon betyr ikke at all dokumentasjon skal deles ukritisk. Noe materiale kan inneholde sensitiv informasjon om sårbarheter, interne nettverk, tilganger eller svakheter som ennå ikke er lukket.
+
+Teamet bør derfor vurdere:
+* om revisjonen krever fullt innsyn eller om sammendrag/evidens er tilstrekkelig
+* om deler av materialet må skjermes eller deles i kontrollert form
+* hvordan tilgang til revisjonsmateriale logges og avgrenses
+
+Målet er å være åpen nok til å dokumentere etterlevelse, uten å eksponere mer enn nødvendig.
+
+## Revisjon av AI-systemer
+For løsninger med AI-komponenter må teamet i tillegg kunne dokumentere:
+* hvilke modeller, versjoner og datakilder som brukes
+* hvilke krav som gjelder for kvalitet, sikkerhet og bruk av modellen
+* hvordan evalueringsresultater er vurdert og godkjent
+* hvordan endringer i modell, prompt, policy eller datasett spores
+* hvordan logging og monitorering støtter drift, hendelseshåndtering og etterprøvbarhet
+
+Det vil også være naturlig å kunne forklare:
+* hva som er systemets tilsiktede bruk og begrensninger
+* hvilke menneskelige kontrollpunkter som finnes
+* hvordan teamet oppdager degradering, feilbruk eller uventet modellatferd
+
+Se også:
+* [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for struktur på teknisk og KI-relatert dokumentasjon
+* [Sikkerhetskontrollpunkt]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}}) for hvilke gates og beslutninger som bør kunne dokumenteres
+* [Verifiser designet]({{< ref "forvalte/verifisering-av-design.md" >}}) for hvordan teamet verifiserer at dokumentasjon og faktisk løsning samsvarer
+
+## Etter revisjonen
+En revisjon er ikke ferdig når møtet er over. Teamet må sikre at funn, avvik og anbefalinger blir vurdert og fulgt opp på samme måte som annet forbedringsarbeid.
+
+Minimum bør være å:
+* registrere funn med tydelig eier
+* vurdere alvorlighet og frist for oppfølging
+* dokumentere eventuelle uenigheter eller avklaringer med kunden
+* oppdatere design, rutiner eller dokumentasjon dersom revisjonen avdekket hull
+
+## Hold det enkelt og ryddig
+Det viktigste er sjelden å produsere mer dokumentasjon. Det viktigste er å kunne svare tydelig på hva som er bygget, hvorfor det er bygget slik, og hvilken evidens som viser at kontrollene virker.
 
 ## Veien videre
-* 
-* 
+* [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
+* [Nasjonal sikkerhetsmyndighet: Grunnprinsipper for IKT-sikkerhet](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/)

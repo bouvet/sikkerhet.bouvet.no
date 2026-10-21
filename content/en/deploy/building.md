@@ -3,23 +3,56 @@ title: "Building"
 weight: 2
 translationKey: build
 description: >
-  When building a solution, various considerations must be taken. Is it acceptable for the customer to build in third-party managed cloud environments, or must this happen in our or the customer's own environments?
+  Building is about producing a reproducible artifact that can be verified and trusted before deployment. Build environment, dependencies, and signing are critical control points.
 ---
 
-Building is often the first step in the process and is typically done only once per release. The build environments used in a CI/CD process, often called build agents, usually come in two forms:
+Building is the step where source code becomes a deployable artifact. The goal is for the artifact to be reproducible, verifiable, and traceable back to a specific commit and pipeline run.
+
+This article focuses on the building process itself. Overall pipeline management is described in [CI/CD]({{< ref "deploy/cicd.md" >}}), and deployment to environments is described in [Deployment]({{< ref "deploy/deploy.md" >}}).
+
+## Build environments and build agents
+Build agents typically come in two main forms:
+
 * Cloud provider-managed agents
-* Self-hosted agents - these can be hosted both in the cloud or on-premise
+* Self-hosted agents (in the cloud or on-premise)
 
-With cloud provider-managed agents, standard images pre-configured for this task are used. They are deployed when you start a build process and contain all the tools needed for building. Once deployed, they check out your source code, build it, store the artifact in a suitable system, and then the instance is stopped and deleted.
+Cloud provider-managed agents often provide lower operating costs and simpler maintenance. Self-hosted agents give you more control but full responsibility for hardening, patching, and access management.
 
-Self-hosted agents are more complex because you are responsible for all maintenance and configuration. In return, you have dedicated agents used only by the teams or projects granted access to them.
+Regardless of which model you choose, the build environment is a high-risk point. If it's compromised, all artifacts produced there become unreliable.
 
-Although the first option is often good enough, it is important to be aware of the possibilities that exist and when to consider them. Regardless of the solution, it is important to remember that the build environment is a very vulnerable point; if compromised, an attacker could potentially make changes that affect _everything_ built there.
+## Requirements for secure building
+A robust build setup should have at least:
 
-This is especially important when using [third-party packages]({{< ref "develop/software-supply-chain.md" >}}), and a minimum here should be that packages are pinned to specific versions and that you never fetch the latest version of a package automatically.
+* **Reproducibility**: Same input should produce the same artifact. Avoid hidden dependencies and undocumented manual steps.
+* **Pinned dependencies**: Lock versions explicitly and avoid "latest" in builds.
+* **Isolation**: Separate build jobs between projects with different risk levels.
+* **Control over build tools**: Compilers, base images, and plugins should be versioned and approved.
+* **Traceability**: The artifact must be traceable back to the commit, pipeline run, and build configuration.
 
-## More Information
-* [Microsoft: Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
-* [Github: Github Actions](https://docs.github.com/en/actions)
+Risk in third-party dependencies is described in [Software Supply Chain Security]({{< ref "develop/software-supply-chain.md" >}}).
+
+## Signing and artifact integrity
+Yes, signing naturally belongs in the build phase. Signing should happen right after the artifact is produced and verified.
+
+Practical controls:
+
+* **Sign artifacts**: Sign containers, binaries, and packages with a controlled key.
+* **Verify signature on deployment**: Deployment should stop if the signature is missing or invalid.
+* **Generate SBOM**: Create an inventory of what's in the artifact for traceability and vulnerability management.
+* **Build provenance attestation**: Document what built the artifact, where it came from, and under what conditions.
+
+## Building for AI systems
+For AI solutions, building encompasses more than just application code. Trained models, supporting files for text processing, data representations, and runtime containers are all artifacts that need controlled handling throughout the process.
+
+* **Version model artifacts**: Treat model versions the same way as code versions.
+* **Sign model and runtime artifacts**: Use the same integrity requirements for models as for other artifacts.
+* **Document dataset and model versions**: Clearly describe what's included in each release.
+* **Avoid dynamic downloads in production**: Don't download model files outside of controlled release workflows.
+
+## Further reading
+* [Microsoft: Secure your Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/security/overview?view=azure-devops)
+* [SLSA: Supply-chain Levels for Software Artifacts](https://slsa.dev/)
+* [Sigstore: Cosign](https://www.sigstore.dev/)
+* [OWASP: Software Supply Chain Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)
 * [OWASP: Top 10 CI/CD Security Risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/)
 * [OWASP: CI/CD Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CI_CD_Security_Cheat_Sheet.html)

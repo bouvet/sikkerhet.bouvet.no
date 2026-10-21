@@ -12,7 +12,11 @@ Ingen skal bli fullverdige eksperter av denne portalen alene, den skal gi pekere
 
 Innholdet er ikke satt i stein - men det skal supportere sjekklista. Dersom et tema ikke er en del av sjekklista bør det ikke være en egen artikkel. Sjekklista skal holdes kompakt, vi skal ikke finne opp vår egen versjon av ASVS. Dersom et leveranseteam trenger en mer detaljert sjekkliste, bruk ASVS eller et annet eksternt verktøy!
 
-Radikale endringer i portalen skal ikke gjøres uten videre - sjekklista brukes allerede av flere team - store endringer i denne vil være forstyrrende for deres aktiviteter og potensielt påføre Bouvet kostnader som ikke kan hentes inn hos kunde. 
+### NB - Endringer
+
+Radikale endringer i portalen skal ikke gjøres uten videre. Portalen er en del av SOA for Bouvets ISO 27001 og ISO 42001-sertifiseringer, og styringssystemene lenker allerede direkte til seksjoner i flere sider. Større endringer må samkjøres med oppdatering av intern wikiløsning.
+
+Vær restriktiv med endring av sjekklista. Endringer her kan resultere i at team må endre arbeidsprosesser, så ikke introduser endringer uten at disse er godt gjennomtenkt i forkant. 
 
 ## Endringsforslag
 
@@ -21,4 +25,4 @@ Bruk gjerne slackkanalen `#sikkerhet-bouvet-no` dersom du ønsker å lufte forsl
 
 # Kjøring
 
-Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes. 
+Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes.  

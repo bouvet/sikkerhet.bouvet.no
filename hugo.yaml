@@ -45,13 +45,13 @@ imaging:
 # Language configuration
 languages:
   en:
-    languageName: English
+    label: English
     title: Sikkerhet.bouvet.no - For Security Champions in Bouvet
     params:
       description: sikkerhet.bouvet.no is a resource for Security Champions at Bouvet
   # cSpell:disable
   'no':
-    languageName: Norsk
+    label: Norsk
     contentDir: content/no
     title: Sikkerhet.bouvet.no - For Security Champions i Bouvet
     params:

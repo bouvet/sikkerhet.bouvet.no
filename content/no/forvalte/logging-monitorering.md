@@ -13,14 +13,14 @@ Uavhengig av behov, husk at personvern gjelder for logger også! Ikke samle inn 
 {{< /caution >}}
 
 Målet med loggingen vil ha tre primære hensikter: 
-* Inntrengelsesdeteksjon - Vi må være i stand til å kunne oppdage om noen angriper systemet
+* Avviksdeteksjon - Vi må være i stand til å kunne oppdage unormal eller mistenkelig aktivitet, eksempelvis om noen angriper eller forsøker å utnytte systemet
 * Etterforskningsgrunnlag - Vi må ha nok informasjon til å forstå hva som har skjedd, hvordan det skjedde og hvem som gjorde det 
 * Tilfredsstille krav fra kunde eller eksterne som eksempelvis myndighetene
 
 ## Hva bør vi logge? 
 Hva vi logger vil variere veldig ut ifra hvem kunden er, risiko- og trusselbildet denne opererer i og hvilke behov de har for logginformasjon. I noen tilfeller vil kunden ha en egen sikkerhetsorganisasjon, typisk et Security Operations Center (SOC) som er ansvarlig for å monitorere nettverk og applikasjoner. Disse vil da ha krav til hva en logger og hvordan, men dersom dette ikke finnes må vi definere noen egne krav for å ha et utgangspunkt. 
 
-Under finner du noen punkter som bør være et absolutt minimum, men teamet må ha et forhold til hva som logges og hvorfor det logges, og hvordan denne informasjonen forholder seg til andre krav som eksempelvis [personvern]({{< ref "planlegge/data-og-klassifisering.md#personvern" >}}).
+Under finner du noen punkter som bør være et absolutt minimum, men teamet må ha et forhold til hva som logges og hvorfor det logges, og hvordan denne informasjonen forholder seg til andre krav som eksempelvis [personvern]({{< ref "planlegge/data-og-klassifisering.md#personvern" >}}). 
 
 ### Autentiseringer og mislykkede autentiseringsforsøk
 Dersom noen logger seg på løsningen, bør dette logges. Dette er spesielt viktig dersom det skjer fra et sted en bruker normalt ikke logger seg på, eller dersom det skjer med en annen nettleser eller klient enn det man vanligvis ser. 
@@ -42,6 +42,13 @@ Dersom applikasjonen har et forhold til nettverk, eksempelvis gjennom at den mon
 Alle applikasjoner har inputs som kan beskrives, selv fritekstinput der brukeren kan legge inn hva som helst. Input som bryter valideringsregler eller tilfeller der en bruker forsøker å endre informasjon som normalt ikke skal kunne endres er typiske tilfeller som må logges. 
 
 Dersom applikasjonen støtter filopplasting eller liknende bør avvik fra forventede filer som eksempelvis avvik mellom filtype og [filsignatur](https://en.wikipedia.org/wiki/List_of_file_signatures) eller unormalt store eller små filer logges. 
+
+## Logging og monitorering av KI-responser
+Logging og monitorering for KI‑løsninger bør designes som en løpende drifts- og styringsmekanisme som gjør det mulig å oppdage feil, avvik og sikkerhetshendelser, samt dokumentere at løsningen fortsatt fungerer som forutsatt i produksjon. 
+
+System‑ og ytelseslogger (f.eks. feilrater, responstid/latens, tilgjengelighet og tjenestekvalitet) bør samles ett sted, slik at det er mulig å konfigurere alarmer eller annen varsling ved uventede hendelser. Modell-/funksjonsytelse bør også overvåkes med tydelige måleparametere (f.eks. suksessrate på oppgaver, kvalitets-/konfidensmål der det er relevant), inkludert varsling ved uventet endring i adferd eller degradering over tid. 
+
+Loggene bør støtte prinsippene øverst i artikkelen, og bør inngå i prosessen for håndtering av oppdateringer og endringer i applikasjonen.  Overvåkingen bør også dekke etterlevelse og kunde/andre krav, samt ha en etablert supportkanal slik at brukere kan rapportere feil, uventede resultater eller misbruk, og slik at organisasjonen kan vurdere om systemet brukes utenfor tiltenkt formål. 
 
 ## Hvordan logger vi? 
 Hvordan vi logger vil også variere fra prosjekt til prosjekt, hvilken platform vi kjører på og hvilke ressurser vi har lov til å bruke. Et viktig moment vi må ha i bakhodet når vi designer loggeløsningen er at _loggene er et angrepsmål!_ En angriper som kan utnytte sårbarheter og deretter manipulere loggene kan både skjule aktivitet og plante falske spor. 

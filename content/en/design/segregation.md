@@ -10,7 +10,7 @@ When we build solutions, we often set up multiple environments, typically for de
 
 When designing a new solution, we must consider how to separate the environments. For cloud services, a common approach is to use different subscriptions per environment where possible. One subscription cannot affect another unless explicitly configured, but there are other possibilities as well.
 
-## Brief Overview of the Most Common Solutions (Azure):
+## Common Segregation Patterns
 * Separate subscriptions per environment:
     * Natural separation unless explicitly defined access
     * More overhead with managing multiple subscriptions
@@ -23,6 +23,24 @@ When designing a new solution, we must consider how to separate the environments
 
 There are other approaches to this as well, but regardless of the solution the team chooses, it is important to consider the overall cost/benefit against the requirements to be met.
 
+## Segregation for AI systems
+For solutions that include artificial intelligence or machine learning, infrastructure segregation alone is not always enough. Teams should also consciously separate data, models, and rollout practices across environments.
+
+### Separation of training, evaluation, and production data
+Data used for training, evaluation, and production should be clearly separated. This reduces the risk of validating models on the wrong basis or allowing test and development activity to affect production-adjacent data.
+
+### Separation of model versions per environment
+Models, weights, and related configuration should be versioned and clearly tied to the right environment. The production model should not be overwritten by experimentation in dev or test.
+
+### Gradual rollout of changes
+When introducing new models or major changes, teams should consider mechanisms such as feature flags, controlled rollout, or other techniques that allow limited validation before full production rollout.
+
 ## More Information
 * [Network concepts]({{< ref "design/networking" >}})
-* [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://wiki.bouvet.no/display/BLS/Nettverkssikkerhet)
+* [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/Nettverksikkerhet/)
+* [Microsoft Cloud Adoption Framework - Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
+* [AWS Well-Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
+* [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework)
+* [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
+* [OWASP LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+* [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)

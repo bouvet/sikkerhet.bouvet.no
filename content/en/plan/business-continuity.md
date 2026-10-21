@@ -46,9 +46,9 @@ A common approach to backup is to run:
 
 It is also important to consider where the backups are stored, so that one is best prepared for catastrophic events. This can be solved by having offline and offsite backups, i.e., backups stored on, for example, tape and kept at a different physical location than other backups.
 
-{{< caution title="Test" >}}
+{{< tip title="Test!" >}}
 Backups that are not tested have no value - implement a strategy that includes testing restore from backup!
-{{< /caution >}}
+{{< /tip >}}
 
 
 ## Disaster Recovery

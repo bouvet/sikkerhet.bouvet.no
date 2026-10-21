@@ -22,3 +22,5 @@ Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
 ## Hjelp - jeg sitter fast!
 
 Dersom du sitter fast et sted, eller er usikker - ring en venn. Prat med nærmeste leder, lokale Security Champions eller bruk Slack. Kanalen `#security-journey-support` er opprettet for å supportere bruken av Security Journey - der vil du helt sikker finne noen som kan svare. 
+
+Hvis du vil ha en kortere og mer uformell forklaring på hvorfor dette er nyttig, kan du lese [Alle trenger en sikkerhetsvenn](https://www.bouvet.no/bouvet-deler/alle-trenger-en-sikkerhetsvenn).
