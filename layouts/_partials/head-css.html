@@ -19,8 +19,7 @@ browsers. */ -}}
 {{ end -}}
 
 {{/* Fingerprint in development too: the dev server sends no cache headers, so
-     without a hash in the file name edits look like they "don't work".
-     See REDESIGN-NOTAT.md. */ -}}
+     without a hash in the file name edits look like they "don't work". */ -}}
 {{ $css = $css | fingerprint -}}
 
 {{ if hugo.IsProduction -}}

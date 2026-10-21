@@ -1,7 +1,6 @@
 {{/* Copy of Docsy's sidebar-tree with two classes removed: `ps-0` on every
      link (it cancels the depth indent with !important) and `pe-md-3` on the
-     root list (it stops the active highlight short of the right edge).
-     See REDESIGN-NOTAT.md. */ -}}
+     root list (it stops the active highlight short of the right edge). */ -}}
 {{/* We cache this partial for bigger sites and set the active class client side. */ -}}
 {{ $sidebarCacheLimit := .Site.Params.ui.sidebar_cache_limit | default 2000 -}}
 {{ $shouldDelayActive := ge (len .Site.Pages) $sidebarCacheLimit -}}

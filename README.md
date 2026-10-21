@@ -26,8 +26,7 @@ Bruk gjerne slackkanalen `#sikkerhet-bouvet-no` dersom du ønsker å lufte forsl
 # Design
 
 Portalen bruker Docsy med et eget designlag basert på Bouvets merkevare
-(navy, krem og grønn, Inter, firkantede hjørner). Designet er beskrevet i
-`REDESIGN-NOTAT.md`.
+(navy, krem og grønn, Inter, firkantede hjørner).
 
 * `assets/scss/_redesign.scss` – designtokens for lys og mørk modus, og all
   styling av topp, sidemeny, innhold, høyrekolonne, bokser, bunn og forside.

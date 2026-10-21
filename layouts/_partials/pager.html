@@ -2,7 +2,7 @@
 
      Hugo's `.NextInSection` points at the page *before* this one in reading
      order when pages are sorted by weight, so the two are swapped here on
-     purpose — see REDESIGN-NOTAT.md. */ -}}
+     purpose. */ -}}
 {{ $prev := .NextInSection -}}
 {{ $next := .PrevInSection -}}
 {{ if or $prev $next -}}
