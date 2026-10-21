@@ -1,0 +1,10 @@
+//
+// Docsy loads this file at the very end of `main.scss`, after Bootstrap.
+// The redesign tokens have to land here — not in `_variables_project.scss` —
+// or Bootstrap overwrites the `--bs-*` variables again.
+//
+@import "redesign";
+@import "site";
+// The botbird chat. Must come after `redesign`: several rules in here override
+// `.botbird` at the same specificity and lose if they come first.
+@import "spor_bls";

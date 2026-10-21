@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="td-content">
+  {{ .Content }}
+  {{/* Tiles at the foot of the front page. Which pages they point at is a
+       content decision, so the list lives in the front matter of
+       content/<language>/_index.md as `front_page_links`. */ -}}
+  {{ $links := slice -}}
+  {{ range .Params.front_page_links -}}
+    {{ with $.Site.GetPage . -}}
+      {{ $links = $links | append . -}}
+    {{ else -}}
+      {{ warnf "front_page_links: page %q not found" . -}}
+    {{ end -}}
+  {{ end -}}
+  {{ with $links -}}
+  <div class="section-index">
+    {{ partial "tiles.html" . -}}
+  </div>
+  {{ end -}}
+</div>
+{{ end -}}

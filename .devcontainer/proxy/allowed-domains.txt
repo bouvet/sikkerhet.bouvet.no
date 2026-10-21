@@ -1,0 +1,29 @@
+# Utgående allowlist for dev-containeren (brukt av squid.conf).
+# Ett domene per linje. Ledende punkt = alle subdomener + domenet selv;
+# uten punkt = eksakt match. Verifiser mot leverandørens gjeldende nettverkskrav.
+# IP-adresser tillates også (eksakt match, ikke CIDR).
+# Kun HTTPS-tjenester – aldri verter som kjører SSH på 443 (K-NET-7).
+#
+# NB: flere verter er både nedlastings- og PUBLISERINGS-endepunkter – hold
+# publish-tokens utenfor containeren (se README «Hemmeligheter i containeren»).
+# Bevisst utelatt – ikke legg til igjen: upload.pypi.org (publisering) og
+# .sentry.io (hvem som helst kan sende data til egen Sentry-konto = eksfil-kanal).
+
+# --- Claude Code -----------------------------------------------------------
+api.anthropic.com            # selve API-et (påkrevd)
+console.anthropic.com        # innlogging/OAuth, API-nøkler (eldre)
+claude.ai                    # OAuth-innlogging (abonnement)
+platform.claude.com          # innlogging/OAuth (ny plattform-vert; påkrevd for /login)
+registry.npmjs.org           # install/oppdatering av CLI
+
+# --- VS Code (laste extensions inn i containeren) --------------------------
+marketplace.visualstudio.com # extension-marketplace
+.vsassets.io                 # extension-nedlasting (CDN, dekker også gallerycdn)
+update.code.visualstudio.com # VS Code server/oppdatering
+.vscode-unpkg.net            # extension-metadata/nedlasting
+
+# --- Hugo / Go-moduler -----------------------------------------------------
+# Docsy-temaet hentes som Hugo-modul via go-verktøykjeden (GOPROXY).
+proxy.golang.org             # modulnedlasting (docsy m/avhengigheter)
+sum.golang.org               # sjekksumdatabase – kreves for modulverifisering
+github.com

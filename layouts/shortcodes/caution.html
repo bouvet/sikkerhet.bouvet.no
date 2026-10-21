@@ -1,4 +1,10 @@
-<div class="caution-box">
-    <strong>{{ .Get "title" }}</strong>
-    <p>{{ .Inner | markdownify }}</p>
+{{- /* The label is the author's own `title` when there is one; `note_caution`
+       is only a fallback. See tip.html. */ -}}
+{{- $label := .Get "title" | default (T "note_caution") -}}
+<div class="sb-note sb-note--caution" role="note">
+  {{ partial "icon.html" "octagon-alert" -}}
+  <span class="sb-note__label">{{ $label }}</span>
+  <div class="sb-note__body">
+    {{ .Inner | .Page.RenderString (dict "display" "block") }}
+  </div>
 </div>

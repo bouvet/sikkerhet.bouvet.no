@@ -1,119 +1,68 @@
-/*
+//
+// Bootstrap-level variables for the sikkerhet.bouvet.no redesign.
+//
+// NOTE: this file is imported *before* Bootstrap. Only Sass variables belong
+// here. CSS custom properties (the design tokens) live in `_redesign.scss`,
+// which is loaded last via `_styles_project.scss` — otherwise Bootstrap
+// overwrites `--bs-*` again. See REDESIGN-NOTAT.md.
+//
 
-Add styles or override variables from the theme here.
+// Raw Bouvet brand palette, sampled from the brand book.
+$bouvet-navy: #11133c;
+$bouvet-navy-deep: #0a0b24;
+$bouvet-navy-raised: #1a1d52;
+$bouvet-cream: #f9ead4;
+$bouvet-green: #79fe9d;
+$bouvet-sky: #c3d5e1;
+$bouvet-ice: #eef5f9;
+$bouvet-coral: #f9a86f;
+$bouvet-pink: #eb1d4b;
+$bouvet-blue: #1d43c6;
 
-*/
-$bouvet-blue: #11133c;
-$bouvet-lightblue: #e5ecf1;
+// Kept for backwards compatibility with older project styles.
+$bouvet-lightblue: $bouvet-ice;
 $bouvet-beige: #fcf8f3;
 
-:root,
-[data-bs-theme="light"] {
-    --box-background: #dddddd;
-}
-[data-bs-theme="dark"] {
-    color-scheme: dark;
-    --box-background: #666666;
-}
+// Theme colors
+$primary: $bouvet-navy;
+$secondary: $bouvet-sky;
+$info: $bouvet-blue;
+$success: #1a7f45;
+$warning: $bouvet-coral;
+$danger: $bouvet-pink;
+$light: $bouvet-ice;
+$dark: $bouvet-navy-deep;
 
-nav.td-navbar{
-    background-color: $bouvet-blue !important;
-}
-a.nav-link {
-    color: #fff;
-}
-// Add this to an existing SCSS file
-.tip-box {
-    border-left: 4px solid #28a745; /* Green border */
-    background-color: var(--box-background);
-    padding: 10px 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
+// Bouvet uses sharp corners everywhere — no exceptions.
+$enable-rounded: false;
+$enable-gradients: false;
+$enable-shadows: false;
 
-.important-box {
-    border-left: 4px solid #FFC552; 
-    background-color: var(--box-background);
-    padding: 10px 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
+// Typography. Inter is the official Bouvet typeface and is self-hosted
+// (see the `@font-face` rule in `_redesign.scss`), so Docsy's Google Fonts
+// link is switched off.
+$td-enable-google-fonts: false;
+$font-family-sans-serif:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  system-ui,
+  sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-weight-body-text: 400;
+$headings-font-weight: 800;
 
-.caution-box {
-    border-left: 4px solid #FF1F52; 
-    background-color: var(--box-background);
-    padding: 10px 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
+// Links are underlined and inherit the surface's foreground color; the exact
+// hue per theme is set with `--link` in `_redesign.scss`.
+$link-color: $bouvet-navy;
+$link-decoration: underline;
+$link-shade-percentage: 0%;
 
-.tip-box strong, .important-box strong, .caution-box strong {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+// Height of the fixed top banner. Used to offset the sticky sidebar and TOC.
+$sb-header-height: 76px;
 
-figure img {
-    max-width: 800px !important;
-}
-
-.devops-links-header {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
-  
-.devops-links {
-    display: flex;
-    flex-direction: row;
-    gap: 0.8rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.devops-links a {
-    color: var(--bouvet-blue);
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid #000;
-    color: var(--bouvet-blue);
-    cursor: pointer;
-    padding: .6rem 1rem;
-}
-
-.devops-links a:hover {
-    color: $bouvet-beige;
-    background-color: $bouvet-blue;
-}
-
-@media only screen and (min-width: 480px) {
-    .devops-links {
-      gap: 0.2rem;
-    }
-}
-
-.dev-ops-links-backdrop{
-    margin-bottom: 4rem;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-  }
-.column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-
-    @media only screen and (min-width: 480px) {
-        margin-right: 3rem;
-    }
-}
-  
-.quote {
-font-weight: bold !important;
-}
-
-.illustration {
-margin-bottom: 2rem;
-max-height: 20vh;
-}
+// Sidebar widths. Bootstrap's 2/12 column is too narrow once a scrollbar
+// appears, so the sidebar gets a fixed width instead.
+$sb-sidebar-width-md: 260px;
+$sb-sidebar-width-xl: 300px;
