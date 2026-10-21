@@ -1,0 +1,63 @@
+{{/* Top banner: navy, white Bouvet logo, site name, language, GitHub, theme and search. */ -}}
+{{ $host := (urls.Parse .Site.BaseURL).Host -}}
+{{ $brand := .Site.Params.brand_name | default $host -}}
+{{ $first := index (split $brand ".") 0 -}}
+{{ $rest := strings.TrimPrefix $first $brand -}}
+
+<nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+  <div class="container-fluid flex-row align-items-center">
+    <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+      {{- /**/ -}}
+      <span class="navbar-brand__logo navbar-logo">
+        <img src="{{ "img/bouvet-logo-hvit.png" | relURL }}" alt="Bouvet" width="143" height="36">
+      </span>
+      {{- /**/ -}}
+      <span class="navbar-brand__name"><b>{{ $first }}</b>{{ $rest }}</span>
+      {{- /**/ -}}
+    </a>
+
+    <div class="td-navbar-nav-scroll ms-auto" id="main_navbar">
+      <ul class="navbar-nav">
+        {{ $p := . -}}
+        {{ range .Site.Menus.main -}}
+        <li class="nav-item">
+          {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
+          {{ $href := "" -}}
+          {{ with .Page -}}
+            {{ $active = or $active ($.IsDescendant .) -}}
+            {{ $href = .RelPermalink -}}
+          {{ else -}}
+            {{ $href = .URL | relLangURL -}}
+          {{ end -}}
+          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $href }}">{{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}</a>
+        </li>
+        {{ end -}}
+
+        {{ if gt (len .Site.Home.Translations) 0 -}}
+        <li class="nav-item dropdown d-none d-md-block">
+          {{ partial "navbar-lang-selector.html" . -}}
+        </li>
+        {{ end -}}
+
+        {{ with .Site.Params.github_repo -}}
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link sb-navbar-icon" href="{{ . }}" target="_blank" rel="noopener"
+             aria-label="{{ T "github_link" }}" title="{{ T "github_link" }}">
+            {{ partial "icon.html" "github" -}}
+          </a>
+        </li>
+        {{ end -}}
+
+        {{ if .Site.Params.ui.showLightDarkModeMenu -}}
+        <li class="td-light-dark-menu nav-item dropdown">
+          {{ partial "theme-toggler" . -}}
+        </li>
+        {{ end -}}
+      </ul>
+    </div>
+
+    <div class="d-none d-lg-block">
+      {{ partial "search-input.html" . -}}
+    </div>
+  </div>
+</nav>

@@ -15,7 +15,14 @@ browsers. */ -}}
 {{ end -}}
 
 {{ if hugo.IsProduction -}}
-  {{ $css = $css | minify | fingerprint -}}
+  {{ $css = $css | minify -}}
+{{ end -}}
+
+{{/* Fingerprint in development too: the dev server sends no cache headers, so
+     without a hash in the file name edits look like they "don't work". */ -}}
+{{ $css = $css | fingerprint -}}
+
+{{ if hugo.IsProduction -}}
   <link rel="preload" href="{{ $css.RelPermalink }}" as="style" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
 

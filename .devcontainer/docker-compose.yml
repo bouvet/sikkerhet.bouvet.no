@@ -1,0 +1,136 @@
+# KANONISK KILDE – kopieres inn i konsument-configene av
+# scripts/generate-consumer-configs.sh. Endre HER og regenerer, ikke i output.
+#
+# Egress håndheves på NETTVERKSNIVÅ (se README «Utgående nett»):
+#   internal (internal: true)  ← dev-containeren. Ingen rute ut.
+#   egress                     ← nett med utgang. Kun proxyen er koblet hit.
+#
+# MERK: ikke sett fast `name:` her – VS Code setter compose-prosjektnavnet
+# <mappenavn>_devcontainer. Det skiller volumer/nett per prosjekt, men KUN når
+# prosjektmappene har unike navn: to mapper som begge heter «app» deler alt.
+
+services:
+  # Egress-gateway: eneste vei ut av dev-containeren.
+  proxy:
+    # Eget image (images/proxy): OpenSSL-Squid for SNI-sjekken i squid.conf.
+    # Generatoren setter registry-tag; X.Y republiseres ukentlig.
+    image: ghcr.io/bouvet/devcontainer-proxy:1.4
+    pull_policy: always
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /run:mode=1777     # dummy-cert for ssl-bump-porten lages her ved start
+    volumes:
+      # Read-only: containeren skal ikke kunne endre sin egen kontrollgrense.
+      # (SELinux-host? Legg til ,Z bakerst på begge.)
+      - ./proxy/squid.conf:/etc/squid/squid.conf:ro
+      - ./proxy/allowed-domains.txt:/etc/squid/allowed-domains.txt:ro
+    networks:
+      - egress
+      - internal
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 256m
+    pids_limit: 128
+    cpus: 1.0
+    # Liveness + at policyen er lastet (403 på ulistet navn). Sperren er nettet.
+    healthcheck:
+      test: ["CMD", "proxy-healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # Utviklingsmiljøet: der kode og Claude Code kjører.
+  dev:
+    # Prosjekt-image: base 1.4 + Hugo/Go fra .devcontainer/Dockerfile. Eget,
+    # prosjektlokalt navn (localhost/-prefiks så podman ikke leter i registry)
+    # – IKKE base-taggen, ellers skygger bygget for det ekte base-imaget.
+    # Privat registry krever innlogget vert (podman login) før bygg.
+    image: localhost/sikkerhet-bouvet-no-dev:local
+    # build, IKKE always: always hopper over build-blokken og kjører rått
+    # base-image (uten Hugo). Ukentlig base-oppdatering ivaretas av pull: true.
+    pull_policy: build
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      # Re-pull base-taggen ved hvert bygg (taggen X.Y republiseres ukentlig).
+      pull: true
+      args:
+        BASE: ghcr.io/bouvet/devcontainer-base:1.4
+    networks:
+      - internal
+    depends_on:
+      proxy:
+        condition: service_healthy
+    environment:
+      # Ruter LEGITIM trafikk via proxyen; selve sperren er nettet uten rute ut.
+      HTTPS_PROXY: http://proxy:3128
+      HTTP_PROXY: http://proxy:3128
+      https_proxy: http://proxy:3128
+      http_proxy: http://proxy:3128
+      NO_PROXY: localhost,127.0.0.1,proxy
+      no_proxy: localhost,127.0.0.1,proxy
+      # npm-pakka hugo-extended legger en .bin/hugo-shim i node_modules som
+      # kjører en binær lastet ned for VERTENS plattform (macOS her). Peker vi
+      # den på containerens Hugo, virker `npm run serve`/`build` som normalt,
+      # og shimmet trenger ingen nedlasting ved npm install.
+      HUGO_BIN_PATH: /usr/local/bin/hugo
+      HUGO_SKIP_DOWNLOAD: "1"
+    # Herding. Seccomp: runtimens default-profil gjelder – ship ingen egen,
+    # og sett ALDRI seccomp:unconfined.
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    userns_mode: "keep-id:uid=1000,gid=1000"
+    # Ressursgrenser – juster fritt for tunge bygg/testkjøringer.
+    mem_limit: 4g
+    pids_limit: 512
+    cpus: 2.0
+    volumes:
+      # Prosjektkoden bind-monteres. Host-mount-fritt alternativ (navngitt
+      # volum): se README «Host-mount-fri kode».
+      - ..:/workspace:cached
+      # Kontrollgrensen er read-only fra innsiden: overlayet gjør
+      # .devcontainer/ uskrivbar i containeren. Rediger fra HOST + Rebuild.
+      # (SELinux-host: ,Z)
+      - ../.devcontainer:/workspace/.devcontainer:ro
+      # .git read-only: stenger hooks/config i .git/ og persistens der. Git skjer
+      # host-side (se README «Git host-side»); hooks som peker inn i arbeidstreet
+      # fanges av check-host.sh. (SELinux-host: ,Z)
+      - ../.git:/workspace/.git:ro
+      # Opt-in: gjør også .vscode/ uskrivbar fra innsiden. Workspace-settings kan
+      # ellers slå på port-autoforward og åpne vertens nettleser (Kravspec A11).
+      # Prisen: settings/launch.json/tasks.json redigeres fra verten.
+      # - ../.vscode:/workspace/.vscode:ro
+      # Hjemmekatalog i eget volum PER PROSJEKT – overlever Rebuild (også det
+      # sandboxen la der; reset.sh er hendelsesrutinen).
+      - devhome:/home/node
+      # NB: med default-innstillinger overstyrer VS Code denne mounten med et
+      # GLOBALT delt volum («vscode», Kravspec A8). Sett
+      # dev.containers.cacheVolume: false på verten (se Kom-i-gang) for
+      # server per prosjekt.
+      - vscodeserver:/vscode
+    # Hold containeren i live for VS Code (overrideCommand: false i devcontainer.json).
+    command: sleep infinity
+    init: true
+
+networks:
+  # internal gjør dobbelt arbeid: egress-sperre OG isolasjon mot andre
+  # prosjekters nett. Flytt aldri dev-tjenesten til et rutbart nett.
+  internal:
+    internal: true
+  egress:
+    # netavark isolerer ikke bridge-nett fra hverandre by default. strict
+    # stenger trafikk til/fra ALLE andre nett, også ikke-isolerte (default-
+    # nettet, podman run); isolate: true stenger bare mot andre isolerte nett.
+    # NB: compose-broen (podmans Docker-API) degraderer strict til true på
+    # podman 5.8 – derfor lytter proxyen uansett bare på det interne nettet.
+    driver_opts:
+      isolate: "strict"
+
+volumes:
+  devhome:
+  vscodeserver:

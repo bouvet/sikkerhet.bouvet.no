@@ -1,0 +1,27 @@
+{{/* Previous / next within the section.
+
+     Hugo's `.NextInSection` points at the page *before* this one in reading
+     order when pages are sorted by weight, so the two are swapped here on
+     purpose. */ -}}
+{{ $prev := .NextInSection -}}
+{{ $next := .PrevInSection -}}
+{{ if or $prev $next -}}
+<nav class="sb-pager d-print-none" aria-label="{{ T "pager_label" }}">
+  {{ with $prev -}}
+  <div class="sb-pager__prev">
+    <a href="{{ .RelPermalink }}">
+      <span class="sb-pager__label">{{ T "ui_pager_prev" }}</span>
+      <span class="sb-pager__title">{{ .LinkTitle }}</span>
+    </a>
+  </div>
+  {{ end -}}
+  {{ with $next -}}
+  <div class="sb-pager__next">
+    <a href="{{ .RelPermalink }}">
+      <span class="sb-pager__label">{{ T "ui_pager_next" }}</span>
+      <span class="sb-pager__title">{{ .LinkTitle }}</span>
+    </a>
+  </div>
+  {{ end -}}
+</nav>
+{{ end -}}

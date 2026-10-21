@@ -1,6 +1,6 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage"
-    {{- with .Site.Language.Direction }} dir="{{ . }}" {{- end -}}
+    {{- with .Site.Language.LanguageDirection }} dir="{{ . }}" {{- end -}}
     {{ with .Site.Language.Lang }} lang="{{ . }}" {{- end }} {{/**/ -}}
     class="no-js">
   <head>
@@ -13,17 +13,17 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
+          {{ if not .IsHome -}}
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
             {{ partial "sidebar.html" . }}
           </aside>
-          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-            {{ partial "page-meta-links.html" . }}
+          <aside class="d-none d-xxl-block td-sidebar-toc d-print-none">
             {{ partial "toc.html" . }}
-            {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+          {{ end -}}
+          <main class="col-12 col-md-9 col-xl-8" role="main">
             {{ partial "version-banner.html" . }}
-            {{ if not (.Param "ui.breadcrumb_disable") -}}
+            {{ if and (not .IsHome) (not (.Param "ui.breadcrumb_disable")) -}}
               {{ partial "breadcrumb.html" . -}}
             {{ end -}}
             {{ block "main" . }}{{ end }}
@@ -32,6 +32,7 @@
       </div>
       {{ partial "footer.html" . }}
     </div>
+    {{ partial "botbird.html" . }}
     {{ partial "scripts.html" . }}
   </body>
 </html>

@@ -23,6 +23,31 @@ Vær restriktiv med endring av sjekklista. Endringer her kan resultere i at team
 Endringer skal spilles inn via Github - vi kan ikke kompensere tid brukt på endringer, så om du ønsker å bidra må du enten gjøre det på egentid, eller spille det inn som et issue først slik at behov og muligheter kan avklares. 
 Bruk gjerne slackkanalen `#sikkerhet-bouvet-no` dersom du ønsker å lufte forslag og ikke er komfortabel med github. 
 
+# Design
+
+Portalen bruker Docsy med et eget designlag basert på Bouvets merkevare
+(navy, krem og grønn, Inter, firkantede hjørner).
+
+* `assets/scss/_redesign.scss` – designtokens for lys og mørk modus, og all
+  styling av topp, sidemeny, innhold, høyrekolonne, bokser, bunn og forside.
+  Tokens må ligge her, ikke i `_variables_project.scss`, fordi Docsy laster
+  variabelfila før Bootstrap.
+* `assets/scss/_variables_project.scss` – Sass-variabler som må settes før
+  Bootstrap (palett, `$primary`, `$enable-rounded: false`, Inter).
+* `assets/scss/_site.scss` – styling av HTML som står i innholdsfilene.
+* `static/font/Inter/` – Inter lastes lokalt; Docsys Google Fonts-lenke er av.
+* `static/img/` – hvit Bouvet-logo, botbird og forsideillustrasjonen.
+
+Fuglen nederst til høyre er dekorasjon for alle, og chatknapp for ansatte som
+slipper gjennom Cloudflare Access på `/api/chat/me`. Skriptet ligger i
+`assets/js/spor-bls.js`, stilene i `assets/scss/_spor_bls.scss`, og
+oppsettet er beskrevet i `BOTBIRD-NOTAT.md`. Under `hugo serve` later
+`assets/js/spor-bls-dev.js` som Cloudflare svarer, så chatten og
+introdialogen kan prøves lokalt (`?bls=ny` spiller introen om igjen,
+`?bls=av` skrur chatten av, `?bls=utenwarp` gir chat uten intro). Fuglen
+fjernes ved å ta bort `{{ partial "botbird.html" . }}` i
+`layouts/*/baseof.html`.
+
 # Kjøring
 
 Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes.  

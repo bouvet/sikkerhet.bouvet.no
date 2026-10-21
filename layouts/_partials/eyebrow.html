@@ -1,0 +1,15 @@
+{{/* Small tracked-out kicker above the page title. Shows the parent section
+     for ordinary pages, and a generic label for section landing pages. */ -}}
+{{ $text := "" -}}
+{{ if .IsHome -}}
+  {{ $text = "" -}}
+{{ else if .IsSection -}}
+  {{ $text = T "eyebrow_section" -}}
+{{ else if and .Parent (not .Parent.IsHome) -}}
+  {{ $text = .Parent.LinkTitle -}}
+{{ else -}}
+  {{ $text = (urls.Parse .Site.BaseURL).Host -}}
+{{ end -}}
+{{ with $text -}}
+<span class="sb-eyebrow">{{ . }}</span>
+{{ end -}}
