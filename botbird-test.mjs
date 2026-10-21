@@ -1,4 +1,4 @@
-// Logikktester for botbird-introen (se BOTBIRD-NOTAT.md).
+// Logikktester for botbird-introen.
 //
 //   npm install jsdom --no-save
 //   node botbird-test.mjs

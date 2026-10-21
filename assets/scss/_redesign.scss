@@ -522,6 +522,177 @@ figure img {
   }
 }
 
+// Feedback pill — the invitation to Slack, and deliberately the only colourful
+// thing in the navy top bar. Three layers stacked on one element: a drifting
+// contrast-colour gradient, a pulsing glow, and a sheen sweeping across on
+// `::after`. The text stays Colossus navy on every frame of the gradient, so it
+// never loses contrast.
+//
+// The pulse animates `box-shadow`, which replaces the whole property — so the
+// white ring has to be repeated in every keyframe, not just on the base rule.
+$pill-ring: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+$pill-ring-lit: inset 0 0 0 1px #fff;
+// Layered warm glow: orange outermost, cream inside it. Kept inside ~10px of
+// the edge so it reads as a glow and not as a blur over the navbar.
+$pill-glow-low: 0 0 8px rgba(249, 168, 111, 0.35), 0 0 4px rgba(249, 234, 212, 0.28);
+$pill-glow-high: 0 0 16px rgba(249, 168, 111, 0.6), 0 0 8px rgba(249, 234, 212, 0.48);
+$pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 0.64);
+
+// Hidden until spor-bls.js confirms the visitor came through Cloudflare and is
+// in the chat group. Bootstrap's display utilities are `!important`, so the
+// `d-lg-block` on the same element has to be outweighed here.
+.sb-feedback-pill-item[hidden] {
+  display: none !important;
+}
+
+.sb-feedback-pill {
+  position: relative;
+  // Keep the gradient, glow and sheen from leaking into the navbar's stacking
+  // context.
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--brand-navy);
+  background-image: linear-gradient(
+    100deg,
+    #f9a86f 0%,
+    #f9ead4 20%,
+    #79fe9d 40%,
+    #c3d5e1 60%,
+    #f9ead4 80%,
+    #f9a86f 100%
+  );
+  background-size: 300% 100%;
+  box-shadow: $pill-ring, $pill-glow-low;
+  animation:
+    sb-feedback-pill-drift 9s linear infinite,
+    sb-feedback-pill-pulse 2.4s ease-in-out infinite;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--brand-navy);
+    text-decoration: none;
+    // Hold the glow steady while pointed at; only the gradient keeps moving.
+    animation: sb-feedback-pill-drift 9s linear infinite;
+    box-shadow: $pill-ring-lit, $pill-glow-lit;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+
+  // Sheen: a diagonal highlight that sweeps across and then waits.
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 999px;
+    pointer-events: none;
+    background-image: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.55) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    animation: sb-feedback-pill-sheen 3.6s linear infinite;
+  }
+
+  // Icon and text ride above the sheen.
+  &__icon {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text--short {
+    display: none;
+  }
+
+  // Below xxl the full sentence crowds the menu, so swap in the short one.
+  @include media-breakpoint-down(xxl) {
+    padding: 0 12px;
+
+    .sb-feedback-pill__text--full {
+      display: none;
+    }
+
+    .sb-feedback-pill__text--short {
+      display: inline;
+    }
+  }
+
+  // Below xl only the icon is left; the tooltip still carries the full text.
+  @include media-breakpoint-down(xl) {
+    padding: 0 10px;
+
+    .sb-feedback-pill__text--short {
+      display: none;
+    }
+  }
+}
+
+@keyframes sb-feedback-pill-drift {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes sb-feedback-pill-pulse {
+  0%,
+  100% {
+    box-shadow: $pill-ring, $pill-glow-low;
+  }
+
+  50% {
+    box-shadow: $pill-ring, $pill-glow-high;
+  }
+}
+
+@keyframes sb-feedback-pill-sheen {
+  0%,
+  35% {
+    background-position: 120% 0;
+  }
+
+  65%,
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sb-feedback-pill {
+    animation: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
 // -----------------------------------------------------------------------------
 // 6. Page frame
 // -----------------------------------------------------------------------------
@@ -1626,7 +1797,7 @@ figure img {
 // 14. Botbird in its nest. Decoration for everyone; the chat layer in
 //     _spor_bls.scss builds on this geometry (bird 100px wide at right 30px /
 //     bottom 80px, nest 120px high, hidden under 980px). Change one, change
-//     both. See BOTBIRD-NOTAT.md.
+//     both.
 // -----------------------------------------------------------------------------
 .botbird {
   position: fixed;
@@ -1670,6 +1841,7 @@ figure img {
 // -----------------------------------------------------------------------------
 @media print {
   .botbird,
+  .sb-feedback-pill,
   .sb-pager,
   .sb-page-meta {
     display: none !important;

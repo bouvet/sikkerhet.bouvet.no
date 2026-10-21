@@ -40,12 +40,11 @@ Portalen bruker Docsy med et eget designlag basert på Bouvets merkevare
 
 Fuglen nederst til høyre er dekorasjon for alle, og chatknapp for ansatte som
 slipper gjennom Cloudflare Access på `/api/chat/me`. Skriptet ligger i
-`assets/js/spor-bls.js`, stilene i `assets/scss/_spor_bls.scss`, og
-oppsettet er beskrevet i `BOTBIRD-NOTAT.md`. Under `hugo serve` later
-`assets/js/spor-bls-dev.js` som Cloudflare svarer, så chatten og
-introdialogen kan prøves lokalt (`?bls=ny` spiller introen om igjen,
-`?bls=av` skrur chatten av, `?bls=utenwarp` gir chat uten intro). Fuglen
-fjernes ved å ta bort `{{ partial "botbird.html" . }}` i
+`assets/js/spor-bls.js` og stilene i `assets/scss/_spor_bls.scss`. Under
+`hugo serve` later `assets/js/spor-bls-dev.js` som Cloudflare svarer, så
+chatten og introdialogen kan prøves lokalt (`?bls=ny` spiller introen om
+igjen, `?bls=av` skrur chatten av, `?bls=utenwarp` gir chat uten intro).
+Fuglen fjernes ved å ta bort `{{ partial "botbird.html" . }}` i
 `layouts/*/baseof.html`.
 
 # Kjøring

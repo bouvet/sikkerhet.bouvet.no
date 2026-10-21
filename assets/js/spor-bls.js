@@ -1,6 +1,6 @@
 // «Bouvet botbird»: turns the botbird into a chat button for employees in the
 // chat group. Everyone else sees exactly what they saw before. Copied from
-// ai.bouvet.no («Spør BLS»); see BOTBIRD-NOTAT.md.
+// ai.bouvet.no («Spør BLS»).
 //
 // The check is a background call to /api/chat/me, which sits behind Cloudflare
 // Access (only the chat group gets 200). On any other answer nothing happens.
@@ -56,9 +56,20 @@
       return res.ok && json ? res.json() : null;
     })
     .then((me) => {
-      if (me && me.employee === true) mount();
+      if (!me || me.employee !== true) return;
+      visFeedbackPille();
+      mount();
     })
     .catch(() => {});
+
+  // The feedback pill in the top bar points at an internal Slack channel, so it
+  // rides on the same answer as the chat. Kept out of mount(), which gives up
+  // on the pages that have no bird — the pill is in the navbar on all of them.
+  function visFeedbackPille() {
+    document.querySelectorAll('.sb-feedback-pill-item').forEach((el) => {
+      el.hidden = false;
+    });
+  }
 
   function opener(className) {
     const button = document.createElement('button');

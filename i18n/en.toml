@@ -16,6 +16,14 @@ other = "Previous and next page"
 [github_link]
 other = "sikkerhet.bouvet.no on GitHub"
 
+# The feedback pill in the top bar. The full text doubles as the tooltip and the
+# screen reader label, so it has to make sense on its own.
+[feedback_slack]
+other = "Feedback or suggestions? Use #sikkerhet-bouvet-no on Slack!"
+
+[feedback_slack_short]
+other = "Feedback? #sikkerhet-bouvet-no on Slack"
+
 [note_tip]
 other = "Tip"
 

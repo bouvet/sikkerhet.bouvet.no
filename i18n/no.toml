@@ -19,6 +19,14 @@ other = "Forrige og neste side"
 [github_link]
 other = "sikkerhet.bouvet.no på GitHub"
 
+# Tilbakemeldingspilla i toppbaren. Den fulle teksten brukes også som tooltip og
+# for skjermlesere, så den må gi mening alene.
+[feedback_slack]
+other = "Innspill eller tilbakemeldinger? Bruk #sikkerhet-bouvet-no på Slack!"
+
+[feedback_slack_short]
+other = "Innspill? #sikkerhet-bouvet-no på Slack"
+
 [note_tip]
 other = "Tips"
 
