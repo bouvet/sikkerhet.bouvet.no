@@ -33,6 +33,32 @@
         </li>
         {{ end -}}
 
+        {{/* Feedback pill — the one colourful element in the navy top bar. The
+             full text is the tooltip and the screen reader label; the visible
+             text shrinks to the short variant and then to the bare icon as the
+             bar gets narrower.
+
+             It points at an internal Slack channel, so it ships `hidden` and
+             assets/js/spor-bls.js reveals it on the same /api/chat/me answer
+             that mounts the chat. Outside visitors never get that answer, and
+             with JavaScript off nobody does. */ -}}
+        {{ with .Site.Params.feedback_slack_url | default "https://bouvet.slack.com/archives/C0447R83U6M" -}}
+        <li class="nav-item d-none d-lg-block sb-feedback-pill-item" hidden>
+          <a class="sb-feedback-pill" href="{{ . }}" target="_blank" rel="noopener"
+             title="{{ T "feedback_slack" }}" aria-label="{{ T "feedback_slack" }}">
+            <svg class="sb-feedback-pill__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true" focusable="false">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+            </svg>
+            {{- /**/ -}}
+            <span class="sb-feedback-pill__text sb-feedback-pill__text--full" aria-hidden="true">{{ T "feedback_slack" }}</span>
+            {{- /**/ -}}
+            <span class="sb-feedback-pill__text sb-feedback-pill__text--short" aria-hidden="true">{{ T "feedback_slack_short" }}</span>
+          </a>
+        </li>
+        {{ end -}}
+
         {{ if gt (len .Site.Home.Translations) 0 -}}
         <li class="nav-item dropdown d-none d-md-block">
           {{ partial "navbar-lang-selector.html" . -}}

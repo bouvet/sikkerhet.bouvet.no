@@ -122,6 +122,10 @@ params:
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
   github_repo: https://github.com/bouvet/sikkerhet.bouvet.no
 
+  # The Slack channel behind the feedback pill in the top bar. The channel name
+  # itself lives in the `feedback_slack*` strings in i18n/.
+  feedback_slack_url: https://bouvet.slack.com/archives/C0447R83U6M
+
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
 

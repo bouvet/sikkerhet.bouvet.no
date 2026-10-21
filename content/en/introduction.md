@@ -15,25 +15,28 @@ For many projects, a more thorough review may be necessary. In that case, we rec
 We will do our best to deliver the safest services and solutions.
 {{< /tip >}}
 
-## What is Information Security?
+## What is an SSDLC?
 
-_Information security_ is about securing these aspects of an IT system:
+_SSDLC_ – Secure Software Development Lifecycle – is a development lifecycle where security belongs in every phase, rather than being a review at the end. The phases are the same as in any project: you plan, design, develop, deploy and manage. The difference is that each phase also carries security work of its own.
 
-__Confidentiality__  
-The data processed by the system should not be accessible to unauthorized individuals.
-> Examples of challenges here can include a misconfigured access control system, known in OWASP Top 10 as "Broken Access Control."
+The reason it pays off is that few serious security problems originate in the code – they originate in the decisions. A penetration test two weeks before launch finds the symptoms of a design choice made long before, and by then it is both expensive and awkward to put right.
 
-__Integrity__  
-The data processed by the system is correct.
-> Integrity can be compromised through, for example, an SQL injection attack or a poorly secured SSH server where unauthorized individuals gain access to alter data.
+The chapters on this site follow the phases, and each chapter has an introduction of its own:
 
-__Availability__  
-The functions offered by the system are available when users need them.
-> Considerations range from a virtual machine freezing due to a full disk to a targeted DDoS attack.
+* __[Plan]({{< ref "/plan" >}})__ – Clarify responsibilities, classify the data, and set requirements for availability and recovery before the work starts.
+* __[Design]({{< ref "/design" >}})__ – Turn the requirements into architecture: threat model, networks, segregation of environments and access control.
+* __[Develop]({{< ref "/develop" >}})__ – Write the code with OWASP Top 10 in mind, handle secrets properly, and validate data arriving from outside.
+* __[Deploy]({{< ref "/deploy" >}})__ – Build an artifact that can be verified, and test the solution before it goes into operation.
+* __[Manage]({{< ref "/manage" >}})__ – Log and monitor, keep track of weaknesses in your dependencies, and know who does what when something happens.
+
+An SSDLC is not a gate you pass through once. The phases repeat for every change of significance, and a design choice that was right at the outset can be wrong two years later.
+
+The effort should be proportionate to the risk. An internal tool holding no personal data does not need the same effort as a solution processing sensitive data for many users – but both should have been through an assessment, so that the scope is a choice rather than an oversight.
+
+If you want a more formal framework to measure yourselves against, [OWASP SAMM](https://owaspsamm.org/), [NIST SSDF](https://csrc.nist.gov/projects/ssdf) and [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl) are good places to look.
 
 ## How to use sikkerhet.bouvet.no?
 
-_sikkerhet.bouvet.no_ is organized into chapters based on the domains they cover.  
 You can either click through and read about a single topic you are unsure about or seek tips on. Alternatively, you and your team can systematically go through each chapter and note what is in order and what needs improvement in your project.
 
 The [Security Checklist](checklist) can be used as a starting point to assess the project's security. Each point refers to more detailed information. It can also be downloaded and implemented as part of the source code in your project.
