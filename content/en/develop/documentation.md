@@ -19,6 +19,8 @@ Popular approaches include [docs-as-code](https://docsascode.org/), where docume
 
 Regardless of the solution: remember that good documentation can be just as sensitive as the source code. Threat models with open findings, architecture descriptions, and security configurations must be protected on par with the system they describe.
 
+The same applies when someone outside the team asks for access, for example during an audit. Consider whether a summary covers the need, whether parts of the material must be shielded, and how access is logged and limited. The goal is to be open enough to document compliance, without exposing vulnerabilities that have not yet been closed.
+
 ## What should be documented
 What needs to be documented will vary with the project's size and criticality, but the following should always be in place:
 

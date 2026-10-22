@@ -1,6 +1,6 @@
 ---
 title: "Utviklingsmiljø, verktøy og byggmiljø"
-weight: 1
+weight: 5
 translationKey: toolsenv
 description: >
   Miljøene og verktøyene vi jobber med er essensielle for prosjektet. Teamet bør standardisere verktøybruk, dokumentere oppsett og redusere risiko i utviklings- og byggkjeden.

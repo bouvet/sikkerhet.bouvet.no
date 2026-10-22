@@ -1,11 +1,11 @@
 ---
 title: "Planlegg"
 translationKey: plan
-weight: 4
+weight: 6
 menu:
   sidebar:
     name: "Planlegg"
-    weight: 1
+    weight: 2
 ---
 <div class="row category-into">
     <div class="column">

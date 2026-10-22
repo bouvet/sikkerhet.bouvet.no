@@ -1,6 +1,6 @@
 ---
 title: "Development Environment, Tools, and Build Environment"
-weight: 1
+weight: 5
 translationKey: toolsenv
 description: >
   The environments and tools we work with are essential for the project. The team should standardize tool usage, document configuration, and reduce risk in the development and build chain.

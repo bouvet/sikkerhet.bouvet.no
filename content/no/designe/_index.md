@@ -1,11 +1,11 @@
 ---
 title: "Design"
-weight: 5
+weight: 7
 translationKey: design
 menu:
   sidebar:
     name: "Design"
-    weight: 2
+    weight: 3
 ---
 <div class="row category-into">
     <div class="column">

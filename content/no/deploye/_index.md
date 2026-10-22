@@ -1,11 +1,11 @@
 ---
 title: "Deploye"
-weight: 7
+weight: 9
 translationKey: deploy
 menu:
   sidebar:
     name: "Deploye"
-    weight: 4
+    weight: 5
 ---
 <div class="row category-into">
     <div class="column">

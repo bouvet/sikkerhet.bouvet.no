@@ -27,6 +27,19 @@ other = "Innspill eller tilbakemeldinger? Bruk #sikkerhet-bouvet-no på Slack!"
 [feedback_slack_short]
 other = "Innspill? #sikkerhet-bouvet-no på Slack"
 
+# Avhengighetskjeden (shortcoden `dependency-chain`)
+[depchain_own]
+other = "Din kode"
+
+[depchain_direct]
+other = "Avhengighet"
+
+[depchain_transitive]
+other = "Transitive avhengigheter"
+
+[depchain_caption]
+other = "Koden din avhenger av én pakke, men drar samtidig inn pakkene den igjen avhenger av. Hver av dem kjører med de samme tilgangene som din egen kode."
+
 [note_tip]
 other = "Tips"
 

@@ -24,6 +24,19 @@ other = "Feedback or suggestions? Use #sikkerhet-bouvet-no on Slack!"
 [feedback_slack_short]
 other = "Feedback? #sikkerhet-bouvet-no on Slack"
 
+# The dependency chain (the `dependency-chain` shortcode)
+[depchain_own]
+other = "Your code"
+
+[depchain_direct]
+other = "Dependency"
+
+[depchain_transitive]
+other = "Transitive dependencies"
+
+[depchain_caption]
+other = "Your code depends on one package, but pulls in the packages that one depends on as well. Each of them runs with the same access as your own code."
+
 [note_tip]
 other = "Tip"
 

@@ -27,6 +27,8 @@ Before an incident occurs, the following must be clarified and documented:
 * which requirements apply to reporting, audit, and deviations
 * which dependencies the solution has on other systems
 
+All customers in Bouvet should have a defined contact point for incidents in Kunder (CRM). If the team has other contact points towards the customer, such as a security operations center (SOC), these should be documented as well so that an incident can be resolved as quickly as possible. In the other direction, the delivery manager is normally the formal contact point in the Bouvet team when the customer needs to reach you.
+
 This must be known throughout the team, not just by individual persons.
 
 ## Monitoring and Logging

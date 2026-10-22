@@ -100,7 +100,7 @@ For systemer i aktiv drift bør trusselmodellen også brukes når man vurderer h
 ### Kurs og foredrag
 
 - [Threat Modeling Fundamentals (pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
-- [Trusselmodellering - hva er det? (BouvetOne 2020, intern lenke)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
+- [Trusselmodellering - hva er det? (Bouvet One 2020, intern lenke)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
 - [An Introduction to threat modeling (Javazone 2018)](https://vimeo.com/234010802)
 - [Threat Modeling in 2019 (RSA Conference 2019)](https://www.youtube.com/watch?v=ZoxHIpzaZ6U)
 

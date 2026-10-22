@@ -53,7 +53,6 @@ For mer om drift av logger og oppfølging i produksjon, se [Logging og monitorer
 Se også:
 * [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for hva som bør dokumenteres før og etter gate-beslutninger
 * [Verifiser designet]({{< ref "forvalte/verifisering-av-design.md" >}}) for kontroll av at løsning i drift matcher dokumentasjon og beslutninger
-* [Revisjon av prosjekt eller leveranse]({{< ref "forvalte/audit.md" >}}) for hvilken evidens som typisk etterspørres
 
 
 ## Veien videre

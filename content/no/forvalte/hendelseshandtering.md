@@ -29,6 +29,8 @@ Før en hendelse oppstår må følgende være avklart og dokumentert:
 * hvilke krav som gjelder for rapportering, revisjon og avvik
 * hvilke avhengigheter løsningen har mot andre systemer
 
+Alle kunder i Bouvet skal ha et definert kontaktpunkt for hendelser i Kunder (CRM). Har teamet andre kontaktpunkter inn mot kunden, som et sikkerhetssenter (SOC), bør også disse dokumenteres slik at en hendelse kan løses så raskt som mulig. Andre veien er leveranseleder normalt det formelle kontaktpunktet i Bouvet-teamet når kunden trenger å nå dere.
+
 Dette må være kjent i hele teamet, ikke bare hos enkeltpersoner.
 
 ## Overvåking og logger

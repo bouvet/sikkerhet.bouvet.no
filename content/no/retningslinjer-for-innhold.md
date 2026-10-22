@@ -1,6 +1,6 @@
 ---
 title: Retningslinjer for innhold
-weight: 11
+weight: 12
 translationKey: contribute
 description: >
   Så fint at du vil bidra med innhold!

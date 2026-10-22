@@ -1,5 +1,9 @@
 {{/* Meta strip under the page lead: last modified on the left, repository
-     actions on the right. Replaces Docsy's right-column `page-meta-links`. */ -}}
+     actions on the right. Replaces Docsy's right-column `page-meta-links`.
+
+     The date is the only date the checklist pages have, and the checklist is
+     meant to be downloaded, so it has to survive printing — only the links are
+     dropped there. */ -}}
 {{ $gh_repo := .Param "github_repo" -}}
 {{ $gh_branch := .Param "github_branch" | default "main" -}}
 {{ $gh_subdir := .Param "github_subdir" | default "" -}}
@@ -11,13 +15,13 @@
 {{ if and .File (or $gh_repo $printPage) -}}
   {{ $path := strings.TrimPrefix (add hugo.WorkingDir "/") .File.Filename -}}
   {{ $repoPath := replaceRE "//+" "/" (printf "%s/%s/%s" $gh_branch $gh_subdir $path) -}}
-<div class="sb-page-meta d-print-none">
+<div class="sb-page-meta">
   {{ if and .GitInfo $gh_repo -}}
   <span class="sb-page-meta__date">
     {{- T "post_last_mod" }} {{ .Lastmod.Format (.Site.Params.time_format_default | default "2006-01-02") -}}
   </span>
   {{ end -}}
-  <div class="sb-page-meta__links">
+  <div class="sb-page-meta__links d-print-none">
     {{ with $gh_repo -}}
       <a href="{{ . }}/tree/{{ $repoPath }}" target="_blank" rel="noopener">{{ T "post_view_this" }}</a>
       <a href="{{ . }}/edit/{{ $repoPath }}" target="_blank" rel="noopener">{{ T "post_edit_this" }}</a>

@@ -1,0 +1,43 @@
+{{- /* Avhengighetskjede. Første pakke er den direkte avhengigheten, resten er
+       transitive. Tekstene hentes fra i18n, så begge språk deler komponenten.
+
+       {{< dependency-chain "braces, fill-range, to-regex-range, is-number" >}} */ -}}
+{{- $packages := slice -}}
+{{- range split (.Get 0) "," -}}
+  {{- with trim . " " -}}
+    {{- $packages = $packages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- if lt (len $packages) 1 -}}
+  {{- errorf "dependency-chain: oppgi minst én pakke (%s)" .Position -}}
+{{- end -}}
+{{- $direct := index $packages 0 -}}
+{{- $transitive := after 1 $packages -}}
+<figure class="sb-depchain">
+  <div class="sb-depchain__track">
+    <div class="sb-depchain__group">
+      <div class="sb-depchain__boxes">
+        <span class="sb-depchain__box sb-depchain__box--own">{{ T "depchain_own" }}</span>
+      </div>
+    </div>
+    {{- /**/ -}}
+    <div class="sb-depchain__group">
+      <div class="sb-depchain__boxes">
+        <code class="sb-depchain__box">{{ $direct }}</code>
+      </div>
+      <span class="sb-depchain__label">{{ T "depchain_direct" }}</span>
+    </div>
+    {{- with $transitive }}
+    {{- /**/ -}}
+    <div class="sb-depchain__group">
+      <div class="sb-depchain__boxes">
+        {{- range . }}
+        <code class="sb-depchain__box">{{ . }}</code>
+        {{- end }}
+      </div>
+      <span class="sb-depchain__label">{{ T "depchain_transitive" }}</span>
+    </div>
+    {{- end }}
+  </div>
+  <figcaption>{{ T "depchain_caption" }}</figcaption>
+</figure>

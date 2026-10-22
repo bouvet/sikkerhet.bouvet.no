@@ -22,6 +22,8 @@ When design is verified during the operations phase, the team should at minimum 
 
 If there are elements in the design that are not implemented, these should be removed from the documentation. If we have implemented elements not in the design, the design should be updated, or the elements should be removed from the solution.
 
+If the customer has opted out of a recommended measure or an additional service, that is not a deviation to be hidden. Document the decision and the residual risk it leaves. This matters both for managing expectations and so that someone can later explain why the solution looks the way it does.
+
 ## Requirements → Design → Implementation
 To make verification traceable, the team should use a simple traceability matrix:
 * requirement ID → design choice → implemented control → test/evidence
@@ -68,7 +70,6 @@ Traceable documentation reduces troubleshooting time during incidents and makes 
 See also:
 * [Documentation]({{< ref "develop/documentation.md" >}}) for minimum requirements for content and traceability
 * [Security Control Points]({{< ref "plan/security-checkpoints.md" >}}) for pre-prod gates, including AI-specific decision points
-* [Audit or Review]({{< ref "manage/audit.md" >}}) for evidence and traceability requirements
 
 ## How Can We Check?
 This depends greatly on the form and nature of the project, but in many cases, the IT organization at the customer (for projects hosted at the customer) can help. If the solution runs at Bouvet, Internal IT & Security can certainly assist with checking things like network configurations or point you in the right direction. There is also much you can do yourself, but check with Internal IT & Security before installing tools and running scans or similar.
