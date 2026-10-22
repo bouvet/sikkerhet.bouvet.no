@@ -3,38 +3,8 @@
 // Loaded after `_redesign.scss` so it can lean on the design tokens.
 //
 
-// Two-column intro used at the top of the section landing pages
-// (`content/<lang>/<section>/_index.md`).
+// Images in content are capped so they do not overflow the column.
 .td-content {
-  .row.category-into {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0 0 2rem;
-    // Cancel Bootstrap's `.row` gutters; this is not a grid row.
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-
-    @include media-breakpoint-up(md) {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-
-    .column {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      min-width: 0;
-      margin: 0;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
   figure img {
     max-width: 800px;
   }
