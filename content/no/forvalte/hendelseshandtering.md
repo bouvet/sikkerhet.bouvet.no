@@ -42,7 +42,7 @@ For løsninger med AI-komponenter betyr dette i tillegg:
 * varsling ved uventet endring i kvalitet, respons eller adferd
 * sporbarhet for beslutninger som påvirker sikkerhet eller etterlevelse
 
-Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i ISO 420001.
+Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i ISO 42001.
 
 Se også [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}) for mer detaljert informasjon rundt temaet.
 

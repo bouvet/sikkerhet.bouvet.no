@@ -8,12 +8,21 @@
   {{ $printPage = .RelPermalink -}}
 {{ end -}}
 {{ $hasDate := and .File .GitInfo $gh_repo -}}
+{{/* Forfatterne kommer fra data/forfattere.json, generert av
+     scripts/forfattere.mjs. Slått opp på `translationKey`, så begge språk
+     viser dem som skrev den norske originalen. */ -}}
+{{ $authors := index (default dict .Site.Data.forfattere) (default "" .Params.translationKey) -}}
 
 {{ if or $hasDate $printPage -}}
 <div class="sb-page-meta">
   {{ if $hasDate -}}
   <span class="sb-page-meta__date">
     {{- T "post_last_mod" }} {{ .Lastmod.Format (.Site.Params.time_format_default | default "2006-01-02") -}}
+  </span>
+  {{ end -}}
+  {{ with $authors -}}
+  <span class="sb-page-meta__authors">
+    {{- T "post_authors" }} {{ delimit . ", " (printf " %s " (T "post_authors_and")) -}}
   </span>
   {{ end -}}
   {{ with $printPage -}}
