@@ -53,7 +53,6 @@ For more on log operations and production follow-up, see [Logging and Monitoring
 See also:
 * [Documentation]({{< ref "develop/documentation.md" >}}) for what should be documented before and after gate decisions
 * [Verify the Design]({{< ref "manage/verify-the-design.md" >}}) for checking that the production solution matches documentation and decisions
-* [Audit a Project or Delivery]({{< ref "manage/audit.md" >}}) for which evidence is typically requested
 
 ## More Information
 * [Dawson, Maurice, et al. "Integrating software assurance into the software development life cycle (SDLC)." Journal of Information Systems Technology and Planning 3.6 (2010): 49-53.](https://d1wqtxts1xzle7.cloudfront.net/43105461/fulltext_stamped-libre.pdf?1456510133=&response-content-disposition=inline%3B+filename%3DIntegrating_Software_Assurance_into_the.pdf&Expires=1719440984&Signature=eH8UCTexOuHmFfCL~FAtaw4tuESm5nRoKrrlOAt~UqP2Od6V7lis-gvCNcmZtLIJYpAQ1LaznsUPbUDIk39imYfEqHeqk9JpODsYN5T4aF32VM6-RhkhIBYRDHL)

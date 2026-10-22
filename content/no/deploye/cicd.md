@@ -24,13 +24,15 @@ En trygg CI/CD-praksis bygger på noen enkle grunnprinsipper:
 ## Sikkerhetskontroller i pipeline
 En pipeline bør minimum ha:
 
-* **Skann for hemmeligheter**: Finn hardkodede nøkler, tokens og annen sensitiv informasjon.
-* **Skann avhengigheter**: Finn kjente sårbarheter i tredjepartsbiblioteker.
-* **Statisk kodeanalyse (SAST)**: Finn vanlige svakheter tidlig.
-* **Automatiserte tester**: Kjør enhets-, integrasjons- og relevante sikkerhetstester.
+* **Skann for hemmeligheter**: Finn hardkodede nøkler, tokens og annen sensitiv informasjon, se [Hemmeligheter]({{< ref "utvikle/hemmeligheter.md" >}}).
+* **Skann avhengigheter**: Finn kjente sårbarheter i tredjepartsbiblioteker, såkalt [Software Composition Analysis]({{< ref "utvikle/software-supply-chain.md" >}}).
+* **Statisk kodeanalyse (SAST)**: Finn vanlige svakheter tidlig, se [Sikkerhetstesting]({{< ref "utvikle/sikkerhetstesting.md" >}}).
+* **Automatiserte tester**: Kjør enhets-, integrasjons- og relevante sikkerhetstester, inkludert kontroll av autorisasjon, 401/403-responser og JWT-håndtering.
 * **Kjøringslogg**: Ta vare på logger og metadata for revisjon.
 
 Kritiske funn bør stoppe utrulling, ikke bare gi en advarsel.
+
+Flere av kontrollene krever tilleggsverktøy og lisenser. Vær særlig oppmerksom på verktøy som sender kode til eksterne tjenester for analyse — det er en dataflyt ut av prosjektet som må være avklart.
 
 ## Branching og promote-modell
 Branching henger tett sammen med CI/CD, men detaljene hører hjemme i [Git-artikkelen]({{< ref "utvikle/git.md#branchingstrategi" >}}).

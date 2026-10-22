@@ -8,9 +8,9 @@ description: >
 
 This page is about the use of AI in the development cycle, not the general use of AI solutions. The goal is to use AI as a productivity tool without losing control of security, quality, and traceability.
 
-{{< caution title="Use of AI tools" >}}
-Remember that Bouvet and most clients have guidelines for the use of AI that __must__ be followed. It is __not__ permitted to use AI tools without explicit approval from Bouvet or the client.
-{{< /caution >}}
+{{< tip title="Want to learn more about AI?" >}}
+Bouvet has its own portal for artificial intelligence at [ai.bouvet.no](https://ai.bouvet.no), which helps you understand the technology and how it can be used in different roles. This article covers only the security side of the development cycle.
+{{< /tip >}}
 
 ## What we are allowed to use
 On Bouvet equipment, we can only use AI tools that are explicitly permitted in [Bouvet's AI policy](https://ai-policy.bouvet.no/). On client equipment, we can only use tools that the client has approved.
@@ -18,6 +18,10 @@ On Bouvet equipment, we can only use AI tools that are explicitly permitted in [
 The reason is simple: AI tools often process sensitive information and can perform actions that affect codebases, builds, and deliveries.
 
 Even though we __can__ use a tool technically, that doesn't mean we __should__ use it. If a new tool can provide value in the project, create a BSD ticket for evaluation.
+
+{{< caution title="Use of AI tools" >}}
+Remember that Bouvet and most clients have guidelines for the use of AI that __must__ be followed. It is __not__ permitted to use AI tools without explicit approval from Bouvet or the client.
+{{< /caution >}}
 
 ## Practical advice for safe AI use in development
 To get value from AI in development without unnecessarily increasing risk, the team should have some simple, shared working rules. These should be used in daily work, not just as policy on paper. Each team should develop their own rules and procedures that fit the context they work in, so that both our and the client's security requirements can be met.
@@ -43,6 +47,21 @@ The goal is not to slow down development, but to use AI in a way that is safe, p
 {{< caution title="Running AI-generated code" >}}
 Code and scripts suggested by AI should always be reviewed before running on a development machine. Pay special attention to commands that download content, change file permissions, start background processes, or write to system areas. If you run the AI tool in a confined sandbox, you reduce the risk and can to a greater extent let the AI tool work autonomously.
 {{< /caution >}}
+
+## How AI can support security work
+Much of what we write about AI concerns what it must be secured against. But AI is also a useful tool _in_ security work, particularly in teams without a security specialist on hand day to day.
+
+Some concrete uses:
+
+* **Sparring partner for threat modelling**: Ask the model to suggest misuse scenarios for the solution, or to challenge the threat model you already have. It is good at raising angles nobody in the room thought of.
+* **Reviewing your own code**: Get a pass against known weakness patterns before you ask a colleague to look at the change. That way your colleague spends their time on what actually requires judgement.
+* **Interpreting findings**: Let the model explain what a SAST or DAST finding actually means, and help separate real findings from noise.
+* **Test cases**: Ask for draft tests, especially the negative ones that rarely get written when time is short.
+* **Assessing vulnerabilities**: Ask what a CVE means for _your_ use of the package, not just what it does in theory.
+
+{{< important title="AI certifies nothing" >}}
+AI is good at finding candidates and explaining connections, but it offers no guarantee. A model finding nothing does not mean there is nothing there, and an AI review replaces neither code review, security testing nor a real risk assessment. Treat the output as input, not as a certificate.
+{{< /important >}}
 
 ## Prompting in practice
 Good prompting practices reduce risk and increase quality. A useful principle is that the prompt should be specific enough to give a good answer, but limited enough that you maintain control of the data and results.

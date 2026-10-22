@@ -1,10 +1,11 @@
 ---
 title: "Utvikle"
-weight: 6
+translationKey: develop
+weight: 8
 menu:
   sidebar:
     name: "Utvikle"
-    weight: 3
+    weight: 4
 ---
 <div class="row category-into">
     <div class="column">

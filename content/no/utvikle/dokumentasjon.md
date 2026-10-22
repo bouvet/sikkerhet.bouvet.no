@@ -19,6 +19,8 @@ Populære tilnærminger inkluderer [docs-as-code](https://docsascode.org/), der 
 
 Uansett løsning: husk at god dokumentasjon kan være like sensitiv som kildekoden. Trusselmodeller med åpne funn, arkitekturbeskrivelser og sikkerhetskonfigurasjoner må beskyttes på linje med systemet de beskriver.
 
+Det gjelder også når noen utenfra ber om innsyn, for eksempel ved en revisjon. Vurder om et sammendrag dekker behovet, om deler av materialet må skjermes, og hvordan tilgangen logges og avgrenses. Målet er å være åpen nok til å dokumentere etterlevelse, uten å eksponere sårbarheter som ennå ikke er lukket.
+
 ## Hva skal dokumenteres
 Hva som må dokumenteres vil variere med prosjektets størrelse og kritikalitet, men følgende bør alltid være på plass:
 

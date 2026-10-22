@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-weight: 10
+weight: 11
 translationKey: wordlist
 description: >
   A list of common words and terms related to application security
@@ -186,6 +186,8 @@ description: >
 **Spear phishing** A phishing attack targeting a specific individual (e.g., a company CEO).
 
 **Software Bill of Materials (SBOM)** A machine-readable inventory of the components and versions included in a software product or artifact.
+
+**Software Composition Analysis (SCA)** Analysis that maps which third-party components a solution uses — both direct and transitive dependencies — and the risk associated with them.
 
 **Software supply chain** The full chain of dependencies, tools, build steps, and distribution paths used to develop and deliver software.
 

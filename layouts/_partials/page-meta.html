@@ -1,31 +1,25 @@
-{{/* Meta strip under the page lead: last modified on the left, repository
-     actions on the right. Replaces Docsy's right-column `page-meta-links`. */ -}}
+{{/* Meta strip under the page lead: last modified on the left, the link to the
+     print view on the right. The date is also the only date the checklist
+     pages carry, and the checklist is meant to be downloaded, so it has to
+     survive printing — the print link itself obviously does not. */ -}}
 {{ $gh_repo := .Param "github_repo" -}}
-{{ $gh_branch := .Param "github_branch" | default "main" -}}
-{{ $gh_subdir := .Param "github_subdir" | default "" -}}
 {{ $printPage := "" -}}
 {{ with .CurrentSection.AlternativeOutputFormats.Get "print" -}}
   {{ $printPage = .RelPermalink -}}
 {{ end -}}
+{{ $hasDate := and .File .GitInfo $gh_repo -}}
 
-{{ if and .File (or $gh_repo $printPage) -}}
-  {{ $path := strings.TrimPrefix (add hugo.WorkingDir "/") .File.Filename -}}
-  {{ $repoPath := replaceRE "//+" "/" (printf "%s/%s/%s" $gh_branch $gh_subdir $path) -}}
-<div class="sb-page-meta d-print-none">
-  {{ if and .GitInfo $gh_repo -}}
+{{ if or $hasDate $printPage -}}
+<div class="sb-page-meta">
+  {{ if $hasDate -}}
   <span class="sb-page-meta__date">
     {{- T "post_last_mod" }} {{ .Lastmod.Format (.Site.Params.time_format_default | default "2006-01-02") -}}
   </span>
   {{ end -}}
-  <div class="sb-page-meta__links">
-    {{ with $gh_repo -}}
-      <a href="{{ . }}/tree/{{ $repoPath }}" target="_blank" rel="noopener">{{ T "post_view_this" }}</a>
-      <a href="{{ . }}/edit/{{ $repoPath }}" target="_blank" rel="noopener">{{ T "post_edit_this" }}</a>
-      <a href="{{ . }}/issues/new?title={{ $.Title | urlquery }}" target="_blank" rel="noopener">{{ T "post_create_issue" }}</a>
-    {{ end -}}
-    {{ with $printPage -}}
-      <a id="print" href="{{ . | safeURL }}">{{ T "print_entire_section" }}</a>
-    {{ end -}}
+  {{ with $printPage -}}
+  <div class="sb-page-meta__links d-print-none">
+    <a id="print" href="{{ . | safeURL }}">{{ T "print_entire_section" }}</a>
   </div>
+  {{ end -}}
 </div>
 {{ end -}}

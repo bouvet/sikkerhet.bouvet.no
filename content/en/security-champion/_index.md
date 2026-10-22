@@ -1,19 +1,19 @@
 ---
 title: "Security Champion"
-weight: 9
+weight: 5
 translationKey: sc
 menu:
   sidebar:
     name: "Security Champion"
-    weight: 6
+    weight: 1
 ---
 <div class="row category-into">
     <div class="column">
         <p> 
-            A Security Champion is a person who acts as a driving force and motivator for security work within a team or department/unit. The responsibility for security lies with the team as a whole, but as a Security Champion, you contribute to awareness and focus.
+            Security Champion is an established role in many development organisations: someone on the team who keeps an extra eye on security, and who connects the formal security functions with the people actually building the solutions. The role does not require you to be a security expert — it requires someone who cares enough to ask the questions.
         </p>
         <p>
-            Simply put, a Security Champion is an ambassador for security, the team's security conscience.
+            Security is handled by the team as a whole, not delegated to one person. A Security Champion does not take on that responsibility, but makes sure it is not forgotten in a busy delivery. How the role is organised varies a great deal between companies — the articles below describe how we do it at Bouvet.
         </p>
     </div>
     <div class="column">

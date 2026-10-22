@@ -101,7 +101,7 @@ For systems in active operation, the threat model should also be used when decid
 ### Courses and Lectures
 
 - [Threat Modeling Fundamentals (pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
-- [Threat Modeling - what is it? (BouvetOne 2020, internal link)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
+- [Threat Modeling - what is it? (Bouvet One 2020, internal link)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
 - [An Introduction to threat modeling (Javazone 2018)](https://vimeo.com/234010802)
 - [Threat Modeling in 2019 (RSA Conference 2019)](https://www.youtube.com/watch?v=ZoxHIpzaZ6U)
 

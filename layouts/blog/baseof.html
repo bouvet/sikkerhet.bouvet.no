@@ -13,10 +13,10 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          {{ if not .IsHome -}}
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
             {{ partial "sidebar.html" . }}
           </aside>
+          {{ if not .IsHome -}}
           <aside class="d-none d-xxl-block td-sidebar-toc d-print-none">
             {{ partial "toc.html" . }}
           </aside>

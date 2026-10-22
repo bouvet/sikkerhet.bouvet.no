@@ -63,6 +63,114 @@
   }
 }
 
+// Avhengighetskjede (shortcoden `dependency-chain`). Vannrett kjede på brede
+// skjermer, loddrett under md. Pilene tegnes med border slik at de ikke leses
+// opp av skjermlesere; figcaption bærer meningen i tekst.
+.sb-depchain {
+  margin: 3.5rem 0;
+
+  &__track {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2.25rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 2.25rem;
+    }
+  }
+
+  // Skrevet som etterkommer, ikke `&__box`: pakkenavnene er `<code>`, og
+  // `.td-content code` ville ellers vunnet på bakgrunn, ramme og padding.
+  .sb-depchain__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 0.875rem;
+    // `--bg-3` og ikke `--bg-2`: sistnevnte ligger bare ett hakk over
+    // sidebakgrunnen i mørkt tema og forsvinner nesten.
+    background: var(--bg-3);
+    border: 2px solid var(--border-3);
+    color: var(--fg-1);
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+
+    // Pil inn mot boksen, tegnet i mellomrommet foran den.
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-top-color: var(--fg-4);
+      border-bottom-width: 0;
+      top: -1.375rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media-breakpoint-up(md) {
+        border: 6px solid transparent;
+        border-left-color: var(--fg-4);
+        border-right-width: 0;
+        top: 50%;
+        left: -1.5rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    // Din egen kode står først og har ingenting foran seg.
+    &--own {
+      background: var(--bg-5);
+      font-weight: 600;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  // Klammen under gruppa. Loddrett blir den en skinne langs venstre kant.
+  &__label {
+    padding: 0.5rem 0 0;
+    border-top: 2px solid var(--border-3);
+    color: var(--fg-2);
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+
+  figcaption {
+    margin-top: 1.5rem;
+    color: var(--fg-3);
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+}
+
 // Links written as `class="underlined-link"` in older content.
 .underlined-link {
   text-decoration: underline;

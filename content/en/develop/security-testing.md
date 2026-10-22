@@ -52,7 +52,7 @@ In addition to model validation, the overall solution must be tested for:
 These threats must be handled with the same rigor as traditional application security testing. For projects with AI components, the team should use [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) as a basis.
 
 ## Penetration testing
-A penetration test goes deeper than SAST and DAST by testing the system as a whole, including infrastructure, network, and possibly physical security. Where DAST primarily focuses on web applications, a pentest is more comprehensive and often uncovers vulnerabilities that only become visible when several threats are combined.
+A penetration test goes deeper than SAST and DAST by testing the system as a whole, including infrastructure, network, and in some cases physical security — where the testers may attempt to gain access to premises to uncover weaknesses in physical barriers or routines. Where DAST primarily focuses on web applications, a pentest is more comprehensive and often uncovers vulnerabilities that only become visible when several threats are combined.
 
 A penetration test always has an agreed scope that regulates what the testers can do, when they can do it, and which resources can be tested. It is not possible to prove that a solution is secure, only that it is not vulnerable to specific attacks. Penetration testing is therefore particularly useful when the solution has strict security requirements or operates under agreements that require independent verification.
 
@@ -69,7 +69,7 @@ In an ideal world, you would conduct a pentest after all major changes, but this
 ### Follow-up during and after the test
 If the test has been announced in advance, it is a good opportunity to monitor logs and alerts to see whether the events are being detected. If the findings in the report can be correlated with what you observe in logs and alerts, it provides a solid basis for improving detection and notification.
 
-After the test, the team will normally receive a report describing what was tested, how the test was conducted, and what findings were made. The findings must be reviewed with the product owner, classified, and added to the backlog. Some findings must be closed quickly, while others can be accepted or planned later if other measures reduce the risk. Security is not an individual responsibility; it is the team's responsibility to follow up on the requirements that apply to the solution.
+After the test, the team will normally receive a report describing what was tested, how the test was conducted, and what findings were made. The findings must be reviewed with the product owner, classified, and added to the backlog. Some findings must be closed quickly, while others can be accepted or planned later if other measures reduce the risk. Security is not an individual responsibility: the delivery manager is responsible for ensuring that security measures are implemented, but it is the team's collective responsibility to follow up on the requirements that apply to the solution.
 
 ### AI-focused penetration tests
 If the solution includes AI components, the penetration test should also cover:
@@ -83,6 +83,7 @@ For solutions with AI components, the pentest should also consider prompt inject
 ## Further reading
 * [Wikipedia: Static application security testing](https://en.wikipedia.org/wiki/Static_application_security_testing)
 * [Wikipedia: Dynamic application security testing](https://en.wikipedia.org/wiki/Dynamic_application_security_testing)
+* [Wikipedia: Penetration test](https://en.wikipedia.org/wiki/Penetration_test)
 * [OWASP: Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
 * [OWASP: Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
 * [OWASP: Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

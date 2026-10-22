@@ -1,6 +1,6 @@
 ---
 title: "Development Environment, Tools, and Build Environment"
-weight: 1
+weight: 5
 translationKey: toolsenv
 description: >
   The environments and tools we work with are essential for the project. The team should standardize tool usage, document configuration, and reduce risk in the development and build chain.
@@ -43,22 +43,12 @@ Key points to clarify:
 A simple rule of thumb: treat code, architecture, logs, and configuration as sensitive information until otherwise agreed.
 
 ### Version control
-Version control provides traceability and control over changes, but the security benefit depends on how the workflow is used in practice. Repositories and branching strategy should be configured to the project's needs.
+Version control provides traceability and control over changes, but the security benefit depends on how the workflow is used in practice. Setting up repositories, branching strategy, signing and hooks is described in [Version Control]({{< ref "develop/git.md" >}}).
 
 Source code is a critical asset in the project and should be considered in the context of [disaster recovery and backups]({{< ref "plan/business-continuity.md" >}}).
 
 ### CI/CD as a security control
-A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< ref "deploy/cicd.md" >}}) can significantly increase security by automating quality and security controls early in the chain.
-
-Relevant controls include:
-
-* [Software Composition Analysis (SCA)]({{< ref "develop/software-supply-chain.md" >}})
-* Testing authorization and 401/403 responses
-* Validating JWT handling
-* [Static code analysis (SAST)]({{< ref "develop/security-testing.md" >}})
-* [Secret scanning]({{< ref "develop/secrets.md" >}})
-
-Several controls require additional tools and licenses. Be particularly mindful of tools that send code to external services for analysis. It is also important to be aware that actions used as part of CI/CD are an attack vector and must be assessed and treated like any other component in the supply chain.
+A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< ref "deploy/cicd.md" >}}) can significantly increase security by automating quality and security controls early in the chain. Which controls the pipeline should run, and how third-party actions must be treated as part of the supply chain, is described in the CI/CD article.
 
 ## Supply chain security in practice
 Modern software is built from many dependencies. The team must therefore have control over the entire supply chain, not only its own code. Remember that the supply chain covers all dependencies the team has, not just packages and libraries.

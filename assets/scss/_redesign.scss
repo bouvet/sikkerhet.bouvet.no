@@ -850,12 +850,16 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     font-weight: 600;
   }
 
+  // Toppnivået er en overskrift, ikke et menyvalg. På forsiden regnes det som
+  // gjeldende side og får `.active`, så aktiv-stilen må nøytraliseres her for
+  // at overskriften skal se lik ut overalt.
   .td-sidebar-link.tree-root {
     margin-bottom: 0.75rem;
     padding-bottom: 0.875rem;
     color: var(--fg-1);
     font-size: 0.875rem;
     font-weight: 700;
+    background: transparent;
     border-bottom: 1px solid var(--border-2);
     border-left: 0;
   }
@@ -1045,9 +1049,7 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
   }
 
   > h2 {
-    margin-top: 3rem;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--border-2);
+    margin-top: 4.75rem;
   }
 
   > h3,
@@ -1704,9 +1706,9 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
   }
 }
 
-// The front page is a full-bleed layout: no sidebar, no table of contents.
+// The front page keeps the sidebar, but drops the table of contents and the
+// breadcrumbs — neither has anything to show on a landing page.
 .td-home {
-  .td-sidebar,
   .td-sidebar-toc,
   .td-breadcrumbs {
     display: none;
@@ -1842,8 +1844,16 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
 @media print {
   .botbird,
   .sb-feedback-pill,
-  .sb-pager,
-  .sb-page-meta {
+  .sb-pager {
     display: none !important;
+  }
+
+  // The meta strip stays, but only for its date — it is the one place the
+  // checklist carries a last-modified date, and the checklist is made to be
+  // printed and kept. The repository links are dropped in the partial.
+  .sb-page-meta {
+    margin: 0 0 1.5rem;
+    padding: 0 0 0.5rem;
+    border-top: 0;
   }
 }

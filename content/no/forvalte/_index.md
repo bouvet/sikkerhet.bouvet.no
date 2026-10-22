@@ -1,11 +1,11 @@
 ---
 title: "Forvalte"
-weight: 8
+weight: 10
 translationKey: manage
 menu:
   sidebar:
     name: "Forvalte"
-    weight: 5
+    weight: 6
 ---
 
 <div class="row category-into">

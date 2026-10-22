@@ -6,8 +6,6 @@ description: >
   Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility and risk in deliveries. All development teams should relate to its content unless otherwise agreed with the customer.
 ---
 
-Last modified: 2026.05.11
-
 It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
 Download the checklist and implement it as part of the source code in your project!
@@ -15,10 +13,10 @@ Download the checklist and implement it as part of the source code in your proje
 ## Plan
 1. [Is it clear what responsibilities we have in the delivery, and is the rest of the responsibility clearly allocated?]({{< ref "plan/roles-and-responsibilities.md" >}})
 2. [Are the system’s data classified and handled accordingly?]({{< ref "plan/data-and-classification.md" >}})
-3. [Are data in the development and test environments also handled according to the classification?]({{< ref "plan/data-and-classification/#data-for-use-during-development-and-testing.md" >}})
+3. [Are data in the development and test environments also handled according to the classification?]({{< ref "plan/data-and-classification.md#data-for-use-during-development-and-testing" >}})
 4. [If the application becomes unavailable for shorter or longer periods, what consequences does this have for us and the customer?]({{< ref "plan/business-continuity.md" >}})
 5. [Is there a defined SLA for the application?]({{< ref "plan/business-continuity.md#customer-expectations" >}})
-6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "plan/business-continuity.md#incident-management" >}})
+6. [In the event of an incident, have we clarified who should be contacted at Bouvet and at the customer?]({{< ref "manage/incident-response.md#what-the-team-must-control" >}})
 7. [Is there a defined plan for how and how often backups should be taken?]({{< ref "plan/business-continuity.md#backup" >}})
 8. [Is there a defined plan for disaster recovery?]({{< ref "plan/business-continuity.md#disaster-recovery" >}})
 9. [Has the team clarified which tools should be used and how they should be handled?]({{< ref "develop/dev_environments.md#tools" >}})
@@ -56,7 +54,7 @@ Download the checklist and implement it as part of the source code in your proje
 
 ## Manage
 1. [Has the team verified that the network diagram is correctly implemented?]({{< ref "manage/verify-the-design.md" >}})
-2. [If the customer or others require an audit of the solution, has the team planned how this can be carried out?]({{< ref "manage/audit.md" >}})
+2. [Can the team show that requirements have been translated into implemented controls, if the customer or others ask for insight?]({{< ref "manage/verify-the-design.md" >}})
 3. [Has the necessary logging been set up to detect and get an overview of unwanted incidents?]({{< ref "manage/logging-monitoring.md" >}})
 4. [Are logs stored so that they cannot be tampered with?]({{< ref "manage/logging-monitoring.md" >}})
 5. [Does the team have a routine to protect against vulnerable dependencies?]({{< ref "manage/dependency-management.md" >}})
