@@ -17,7 +17,7 @@ If this is not taken into account, it can have consequences, both for the custom
 {{< /caution >}}
 
 ## Test Environment
-When conducting security testing against a running environment, it is important to always clarify this well in advance. Many types of testing can be destructive, so if the [environments are not sufficiently separated]({{< ref "design/segregation.md" >}}), you risk affecting other environments than intended.
+When conducting security testing against a running environment, it is important to always clarify this well in advance. Many types of testing can be destructive, so if the [environments are not sufficiently separated]({{< relref "design/segregation.md" >}}), you risk affecting other environments than intended.
 
 A good solution, especially if using infrastructure-as-code (IaC), is to have a pipeline that deploys a dedicated environment for security testing. If this is designed into the delivery from the start, it is often easy to set up environments identical to the production environment, where you can also copy databases and possibly run anonymization processes on the data.
 
@@ -57,7 +57,7 @@ A penetration test goes deeper than SAST and DAST by testing the system as a who
 A penetration test always has an agreed scope that regulates what the testers can do, when they can do it, and which resources can be tested. It is not possible to prove that a solution is secure, only that it is not vulnerable to specific attacks. Penetration testing is therefore particularly useful when the solution has strict security requirements or operates under agreements that require independent verification.
 
 ### Planning and scope
-A pentest requires expertise and should not be carried out alone without relevant experience. As a team, you must ensure that the environment to be tested is clearly identified and that the scope is well defined before testing begins. It must be possible to distinguish an actual attack from an agreed test. If you see signs of activity against an environment that is not part of the test and you have [segregated the environments]({{< ref "design/segregation.md" >}}), this should be handled as a real incident.
+A pentest requires expertise and should not be carried out alone without relevant experience. As a team, you must ensure that the environment to be tested is clearly identified and that the scope is well defined before testing begins. It must be possible to distinguish an actual attack from an agreed test. If you see signs of activity against an environment that is not part of the test and you have [segregated the environments]({{< relref "design/segregation.md" >}}), this should be handled as a real incident.
 
 As part of planning, you must also clarify the customer's routines for penetration testing. Many organizations have a security operations center (SOC) and/or network operations center (NOC) that continuously monitors infrastructure. These must be informed when the test is scheduled, so that an agreed test does not trigger unnecessary escalation.
 

@@ -68,7 +68,7 @@ For MCP-based integrations (Model Context Protocol), the same principles apply, 
 - the client should only get access to required MCP servers, and access should be revocable quickly
 - calls to MCP tools should be logged with who/what/why so misuse can be traced
 
-Access management also affects operational risk: broad agent permissions make incidents harder to detect and increase impact. Changes to agent access should therefore be logged and followed up together with normal operational monitoring, see [Logging and monitoring]({{< ref "manage/logging-monitoring.md" >}}).
+Access management also affects operational risk: broad agent permissions make incidents harder to detect and increase impact. Changes to agent access should therefore be logged and followed up together with normal operational monitoring, see [Logging and monitoring]({{< relref "manage/logging-monitoring.md" >}}).
 
 ## More Information
 * [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)

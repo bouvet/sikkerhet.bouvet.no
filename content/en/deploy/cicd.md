@@ -24,9 +24,9 @@ Safe CI/CD practice is built on a few simple foundational principles:
 ## Security controls in the pipeline
 A pipeline should have at minimum:
 
-* **Secret scanning**: Find hardcoded keys, tokens, and other sensitive information, see [Secrets]({{< ref "develop/secrets.md" >}}).
-* **Dependency scanning**: Find known vulnerabilities in third-party libraries, known as [Software Composition Analysis]({{< ref "develop/software-supply-chain.md" >}}).
-* **Static code analysis (SAST)**: Find common weaknesses early, see [Security Testing]({{< ref "develop/security-testing.md" >}}).
+* **Secret scanning**: Find hardcoded keys, tokens, and other sensitive information, see [Secrets]({{< relref "develop/secrets.md" >}}).
+* **Dependency scanning**: Find known vulnerabilities in third-party libraries, known as [Software Composition Analysis]({{< relref "develop/software-supply-chain.md" >}}).
+* **Static code analysis (SAST)**: Find common weaknesses early, see [Security Testing]({{< relref "develop/security-testing.md" >}}).
 * **Automated tests**: Run unit, integration, and relevant security tests, including checks of authorization, 401/403 responses and JWT handling.
 * **Audit logging**: Keep logs and metadata for audit trails.
 
@@ -35,7 +35,7 @@ Critical findings should stop deployment, not just give a warning.
 Several of these controls require additional tools and licenses. Be particularly mindful of tools that send code to external services for analysis — that is a flow of data out of the project, and it has to be cleared.
 
 ## Branching and promotion model
-Branching is closely connected to CI/CD, but the details belong in the [Git article]({{< ref "develop/git.md#branching-strategy" >}}).
+Branching is closely connected to CI/CD, but the details belong in the [Git article]({{< relref "develop/git.md#branching-strategy" >}}).
 
 In CI/CD context, the main points are:
 
@@ -68,12 +68,12 @@ Measures:
 * **Monitor changes**: Use Dependabot or similar to notify you when actions are updated, so updates are explicit and tracked.
 * **Using AI in pipelines**: Be sure you understand the risks and potential challenges before considering using AI-based actions in your pipeline.
 
-The general picture for supply chain security is described in [Software Supply Chain Security]({{< ref "develop/software-supply-chain.md" >}}).
+The general picture for supply chain security is described in [Software Supply Chain Security]({{< relref "develop/software-supply-chain.md" >}}).
 
 ## AI in CI/CD
 For AI solutions, the same pipeline principles should apply to code, models, datasets, and configuration. Deployment should stop if verification fails.
 
-Details about safe building of artifacts (including signing) are described in [Building]({{< ref "deploy/building.md" >}}), and safe deployment to environments in [Deployment]({{< ref "deploy/deploy.md" >}}).
+Details about safe building of artifacts (including signing) are described in [Building]({{< relref "deploy/building.md" >}}), and safe deployment to environments in [Deployment]({{< relref "deploy/deploy.md" >}}).
 
 ## Practical adoption in teams
 CI/CD implementation should be done gradually:

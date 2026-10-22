@@ -25,11 +25,11 @@ Du kan gjerne begynne med å stille deg selv noen spørsmål?
 
 * Hva gjør dette prosjektet jeg jobber med egentlig?
 * Hva er kritisk for at systemet skal fungere, og hvordan kan systemet misbrukes eller manipuleres?
-* Eksisterer det en oppdatert [trusselmodell]({{< ref "designe/trusselmodellering.md" >}}) med tiltak for å forhindre utnyttelse av svakhetene?
+* Eksisterer det en oppdatert [trusselmodell]({{< relref "designe/trusselmodellering.md" >}}) med tiltak for å forhindre utnyttelse av svakhetene?
 
 Begynn med å etablere en mental modell av prosjektet, så kan du bygge videre på denne. 
 
-* En god start er ofte å gjennomføre en trusselmodellerings-øvelse. Du trenger ikke kunne mye om trusselmodellering, men du kan få litt støtte i [artikkelen om trusselmodellering]({{< ref "designe/trusselmodellering.md" >}}) og hos [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). 
+* En god start er ofte å gjennomføre en trusselmodellerings-øvelse. Du trenger ikke kunne mye om trusselmodellering, men du kan få litt støtte i [artikkelen om trusselmodellering]({{< relref "designe/trusselmodellering.md" >}}) og hos [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). 
 
 * Prat med andre Security Champions i Bouvet. Hør med dem hva de har gjort som funker, og hva som ikke funker. 
 
@@ -39,7 +39,7 @@ Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke f�
 
 ### 2. Har vi kontroll på hele prosjektet vårt?
 
-Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Vi har laget en sjekkliste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i; alle leveranseteamene våre bør ha et forhold til punktene i denne og hvilken risiko de utgjør dersom en ikke innfører nyttige tiltak. Listen [finner du her]({{< ref "sjekklisten.md" >}}).
+Hvis svaret er ja, så retter vi på det til nei. Det er alltid mer som kan gjøres. Vi har laget en sjekkliste som bør sjekkes ut for hvert eneste prosjekt vi er involvert i; alle leveranseteamene våre bør ha et forhold til punktene i denne og hvilken risiko de utgjør dersom en ikke innfører nyttige tiltak. Listen [finner du her]({{< relref "sjekklisten.md" >}}).
 
 Denne portalen beskriver også en livssyklus som skal ivareta sikkerheten i utviklingsprosjekter. Mye av innholdet er også relevant for andre typer prosjekter, og husk at du ikke trenger å ta alt på en gang. Få med deg teamet og tygg dere gjennom del for del til dere har enda bedre kontroll på prosjektet. 
 
@@ -55,7 +55,7 @@ Formålet med alt sikkerhetsarbeid er å unngå uønskede hendelser. Når en job
 
 ### 4. Teknisk gjennomgang av løsninger
 
-Avhengig av ambisjonsnivået bør en bruke en sjekkliste som støtteverktøy for å gjennomgå løsningen. Vi har laget [en sjekkliste]({{< ref "sjekklisten.md" >}}) som dekker et absolutt minimum, men dersom en virkelig har ambisjoner finnes det andre verktøy som [OWASPs Application Security Verification Standard - ASVS](https://owasp.org/www-project-application-security-verification-standard/). Denne dekker sikkerhetsgjennomganger med ulike detaljeringsnivå, alt etter hvor dypt en vil gå.
+Avhengig av ambisjonsnivået bør en bruke en sjekkliste som støtteverktøy for å gjennomgå løsningen. Vi har laget [en sjekkliste]({{< relref "sjekklisten.md" >}}) som dekker et absolutt minimum, men dersom en virkelig har ambisjoner finnes det andre verktøy som [OWASPs Application Security Verification Standard - ASVS](https://owasp.org/www-project-application-security-verification-standard/). Denne dekker sikkerhetsgjennomganger med ulike detaljeringsnivå, alt etter hvor dypt en vil gå.
 
 ## Veien videre
 * [OWASP: Security Culture](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/)

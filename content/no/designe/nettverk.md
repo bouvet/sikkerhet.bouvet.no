@@ -64,7 +64,7 @@ Minimumsvurderinger for begge modeller:
 
 ## Konfigurasjon
 
-Konfigurasjon av nettverk bør automatiseres så langt det lar seg gjøre, helst via [CI/CD]({{< ref "deploye/cicd.md" >}}) og infrastruktur som kode.
+Konfigurasjon av nettverk bør automatiseres så langt det lar seg gjøre, helst via [CI/CD]({{< relref "deploye/cicd.md" >}}) og infrastruktur som kode.
 
 - begrens hvem som kan endre nettverksregler direkte
 - bruk JIT-tilgang der det er mulig

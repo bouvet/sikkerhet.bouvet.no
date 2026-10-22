@@ -85,7 +85,7 @@ Good prompting practices reduce risk and increase quality. A useful principle is
 
 Unless explicitly approved, AI tools should not have access to data beyond what is needed for the task.
 
-Check that the repository does not contain data files, secrets, or other sensitive information. Use [`.gitignore`]({{< ref "develop/git.md" >}}), git pre-commit hooks with secret detection, and key vaults to reduce the risk of leaks.
+Check that the repository does not contain data files, secrets, or other sensitive information. Use [`.gitignore`]({{< relref "develop/git.md" >}}), git pre-commit hooks with secret detection, and key vaults to reduce the risk of leaks.
 
 ## AI-specific threats in the development cycle
 When AI is used in development, threats emerge that are not always covered by traditional controls:

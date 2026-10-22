@@ -7,7 +7,7 @@ description: >
 ---
 
 
-Når vi lager et [design]({{< ref "designe/systemskisser.md" >}}) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
+Når vi lager et [design]({{< relref "designe/systemskisser.md" >}}) for en ny løsning hender det at det er detaljer vi ikke kjenner, eller at det oppstår uventede komplikasjoner underveis i implementeringen. Dette kan resultere i at designet vi opprinnelig laget avviker fra den ferdige løsningen. 
 
 Dokumentasjonen er viktig for å forstå hvordan en løsning er satt opp og hvordan den fungerer, spesielt om det oppstår en hendelse som krever redeployment eller disaster recovery. For å sikre at gapet mellom dokumentasjon og ferdig produkt ikke er for stort bør vi derfor alltid validere designet i etterkant. 
 
@@ -15,8 +15,8 @@ Dokumentasjonen er viktig for å forstå hvordan en løsning er satt opp og hvor
 Noe av det viktigste er alt rundt som ikke nødvendigvis kommer i kodeform. Hvilke ressurser vi bruker, nettverksoppsett og brannmuråpninger er grunnleggende, men vi bør også se på IAM og hvilke tilganger som er gitt til ressurser og applikasjon.
 
 Når designet verifiseres i forvaltningsfasen, bør teamet som minimum sjekke:
-* at implementerte komponenter faktisk matcher [systemskisser]({{< ref "designe/systemskisser.md" >}})
-* at kravene i [sikkerhetskrav]({{< ref "designe/sikkerhetskrav.md" >}}) er dekket i løsning og drift
+* at implementerte komponenter faktisk matcher [systemskisser]({{< relref "designe/systemskisser.md" >}})
+* at kravene i [sikkerhetskrav]({{< relref "designe/sikkerhetskrav.md" >}}) er dekket i løsning og drift
 * at nettverk, identiteter, roller og tilgangsregler er i tråd med design
 * at avhengigheter (interne og eksterne) er dokumentert og fortsatt gyldige
 * at teamet har en rutine for å vedlikeholde design sammen med applikasjonen
@@ -69,8 +69,8 @@ I praksis bør dokumentasjonen gjøre det mulig å svare på:
 Sporbar dokumentasjon reduserer feilsøkingstid ved hendelser, og gjør re-verifisering enklere ved større endringer.
 
 Se også:
-* [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for minimumskrav til innhold og sporbarhet
-* [Sikkerhetskontrollpunkt]({{< ref "planlegge/sikkerhetskontrollpunkt.md" >}}) for pre-prod gates, inkludert AI-spesifikke beslutningspunkter
+* [Dokumentasjon]({{< relref "utvikle/dokumentasjon.md" >}}) for minimumskrav til innhold og sporbarhet
+* [Sikkerhetskontrollpunkt]({{< relref "planlegge/sikkerhetskontrollpunkt.md" >}}) for pre-prod gates, inkludert AI-spesifikke beslutningspunkter
 
 ## Hvordan kan vi sjekke?
 Dette avhenger veldig av form og farge på prosjektet, men i mange tilfeller vil IT-organisasjonen hos kunden (for prosjekter hostet hos kunde) kunne hjelpe. Dersom løsningen kjører hos Bouvet vil helt sikkert Intern IT & Sikkerhet kunne være behjelpelige på å sjekke ting som nettverkskonfigurasjoner og liknende, eventuelt peke deg i riktig retning. Det er mye du kan gjøre selv også, men sjekk med Intern IT & Sikkerhet før du installerer verktøy og kjører scans eller liknende. 

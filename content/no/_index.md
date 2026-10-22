@@ -20,7 +20,7 @@ front_page_links:
     <p>Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive ulike tiltak som kan dekke de vanligste svakhetene.</p>
     <div class="home-cta">
       <span class="home-cta__hint">Hvis du er ny til sikkerhet.bouvet.no, anbefaler vi at du leser introduksjonen først</span>
-      <a class="sb-button" href="{{< ref "introduksjon.md" >}}">Les introduksjonen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="sb-button" href="{{< relref "introduksjon.md" >}}">Les introduksjonen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </div>
   <figure class="home-figure">
@@ -31,13 +31,13 @@ front_page_links:
 <section class="home-section">
   <h2>Hva ser du etter?</h2>
   <ul class="home-tiles">
-    <li><a href="{{< ref "introduksjon.md" >}}">Introduksjon</a></li>
-    <li><a href="{{< ref "/planlegge" >}}">Planlegge</a></li>
-    <li><a href="{{< ref "/designe" >}}">Designe</a></li>
-    <li><a href="{{< ref "/utvikle" >}}">Utvikle</a></li>
-    <li><a href="{{< ref "/deploye" >}}">Deploye</a></li>
-    <li><a href="{{< ref "/forvalte" >}}">Forvalte</a></li>
-    <li><a href="{{< ref "/security-champion" >}}">Security Champions</a></li>
+    <li><a href="{{< relref "introduksjon.md" >}}">Introduksjon</a></li>
+    <li><a href="{{< relref "/planlegge" >}}">Planlegge</a></li>
+    <li><a href="{{< relref "/designe" >}}">Designe</a></li>
+    <li><a href="{{< relref "/utvikle" >}}">Utvikle</a></li>
+    <li><a href="{{< relref "/deploye" >}}">Deploye</a></li>
+    <li><a href="{{< relref "/forvalte" >}}">Forvalte</a></li>
+    <li><a href="{{< relref "/security-champion" >}}">Security Champions</a></li>
   </ul>
 </section>
 <section class="home-cards">
@@ -68,7 +68,7 @@ front_page_links:
     <p>En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.</p>
     <p>Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår infopakke for Security Champions.</p>
     <div class="home-card__spacer"></div>
-    <a class="sb-button sb-button--ghost" href="{{< ref "/security-champion" >}}">Infopakke for Security Champions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    <a class="sb-button sb-button--ghost" href="{{< relref "/security-champion" >}}">Infopakke for Security Champions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
   </article>
 </section>
 </div>

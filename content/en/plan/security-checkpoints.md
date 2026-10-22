@@ -15,7 +15,7 @@ These can be defined between logical phases in the project, for example, between
 [In a study by IBM](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) it was determined that defects in applications developed for the U.S. military cost significantly less to fix early in the process compared to later.
 
 By implementing security checkpoints, it becomes easier to catch weaknesses early and to ensure compliance with security and quality requirements. A typical practice using checkpoints could include
-* creating a [design]({{< ref "design/system-diagrams-and-drawings.md" >}}) of the project before the development cycle starts
+* creating a [design]({{< relref "design/system-diagrams-and-drawings.md" >}}) of the project before the development cycle starts
 * ensuring that implementation follows the design
 * verifying that design and implementation actually match before going into production
 
@@ -48,11 +48,11 @@ Before production, the operations team should verify that required observability
 * which alerts and thresholds should trigger follow-up
 * who is responsible for ongoing monitoring and incident handling
 
-For more on log operations and production follow-up, see [Logging and Monitoring]({{< ref "manage/logging-monitoring.md" >}}).
+For more on log operations and production follow-up, see [Logging and Monitoring]({{< relref "manage/logging-monitoring.md" >}}).
 
 See also:
-* [Documentation]({{< ref "develop/documentation.md" >}}) for what should be documented before and after gate decisions
-* [Verify the Design]({{< ref "manage/verify-the-design.md" >}}) for checking that the production solution matches documentation and decisions
+* [Documentation]({{< relref "develop/documentation.md" >}}) for what should be documented before and after gate decisions
+* [Verify the Design]({{< relref "manage/verify-the-design.md" >}}) for checking that the production solution matches documentation and decisions
 
 ## More Information
 * [Dawson, Maurice, et al. "Integrating software assurance into the software development life cycle (SDLC)." Journal of Information Systems Technology and Planning 3.6 (2010): 49-53.](https://d1wqtxts1xzle7.cloudfront.net/43105461/fulltext_stamped-libre.pdf?1456510133=&response-content-disposition=inline%3B+filename%3DIntegrating_Software_Assurance_into_the.pdf&Expires=1719440984&Signature=eH8UCTexOuHmFfCL~FAtaw4tuESm5nRoKrrlOAt~UqP2Od6V7lis-gvCNcmZtLIJYpAQ1LaznsUPbUDIk39imYfEqHeqk9JpODsYN5T4aF32VM6-RhkhIBYRDHL)

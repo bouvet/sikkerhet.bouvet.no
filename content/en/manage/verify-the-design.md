@@ -6,7 +6,7 @@ description: >
   When developing a solution, we should always validate that the solution adheres to the design. If it deviates, we must either correct the solution or update the design.
 ---
 
-When we create a [design]({{< ref "design/system-diagrams-and-drawings.md" >}}) for a new solution, there may be details we do not know, or unexpected complications may arise during implementation. This can result in the original design deviating from the final solution.
+When we create a [design]({{< relref "design/system-diagrams-and-drawings.md" >}}) for a new solution, there may be details we do not know, or unexpected complications may arise during implementation. This can result in the original design deviating from the final solution.
 
 Documentation is crucial for understanding how a solution is set up and how it works, especially if an incident occurs that requires redeployment or disaster recovery. To ensure that the gap between documentation and the final product is not too large, we should always validate the design afterward.
 
@@ -14,8 +14,8 @@ Documentation is crucial for understanding how a solution is set up and how it w
 One of the most important aspects is everything around the code that may not necessarily be in code form. This includes the resources we use, network setup, and firewall openings. We should also review IAM and the permissions granted to resources and applications.
 
 When design is verified during the operations phase, the team should at minimum check:
-* that implemented components actually match [system diagrams]({{< ref "design/system-diagrams-and-drawings.md" >}})
-* that the requirements in [security requirements]({{< ref "design/security-requirements.md" >}}) are covered in the solution and operations
+* that implemented components actually match [system diagrams]({{< relref "design/system-diagrams-and-drawings.md" >}})
+* that the requirements in [security requirements]({{< relref "design/security-requirements.md" >}}) are covered in the solution and operations
 * that network, identities, roles, and access rules align with the design
 * that dependencies (internal and external) are documented and still valid
 * that the team has a routine to maintain design alongside the application
@@ -68,8 +68,8 @@ In practice, the documentation should make it possible to answer:
 Traceable documentation reduces troubleshooting time during incidents and makes re-verification easier with major changes.
 
 See also:
-* [Documentation]({{< ref "develop/documentation.md" >}}) for minimum requirements for content and traceability
-* [Security Control Points]({{< ref "plan/security-checkpoints.md" >}}) for pre-prod gates, including AI-specific decision points
+* [Documentation]({{< relref "develop/documentation.md" >}}) for minimum requirements for content and traceability
+* [Security Control Points]({{< relref "plan/security-checkpoints.md" >}}) for pre-prod gates, including AI-specific decision points
 
 ## How Can We Check?
 This depends greatly on the form and nature of the project, but in many cases, the IT organization at the customer (for projects hosted at the customer) can help. If the solution runs at Bouvet, Internal IT & Security can certainly assist with checking things like network configurations or point you in the right direction. There is also much you can do yourself, but check with Internal IT & Security before installing tools and running scans or similar.

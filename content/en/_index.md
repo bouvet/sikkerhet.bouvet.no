@@ -20,7 +20,7 @@ front_page_links:
     <p>The information on this site is by no means exhaustive on any subject, but aims to use simple language to describe various measures that covers the most common weaknesses.</p>
     <div class="home-cta">
       <span class="home-cta__hint">If you are new to sikkerhet.bouvet.no, we recommend reading the introduction first</span>
-      <a class="sb-button" href="{{< ref "introduction.md" >}}">Read the introduction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="sb-button" href="{{< relref "introduction.md" >}}">Read the introduction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </div>
   <figure class="home-figure">
@@ -31,13 +31,13 @@ front_page_links:
 <section class="home-section">
   <h2>What are you looking for?</h2>
   <ul class="home-tiles">
-    <li><a href="{{< ref "introduction.md" >}}">Introduction</a></li>
-    <li><a href="{{< ref "/plan" >}}">Plan</a></li>
-    <li><a href="{{< ref "/design" >}}">Design</a></li>
-    <li><a href="{{< ref "/develop" >}}">Develop</a></li>
-    <li><a href="{{< ref "/deploy" >}}">Deploy</a></li>
-    <li><a href="{{< ref "/manage" >}}">Manage</a></li>
-    <li><a href="{{< ref "/security-champion" >}}">Security Champions</a></li>
+    <li><a href="{{< relref "introduction.md" >}}">Introduction</a></li>
+    <li><a href="{{< relref "/plan" >}}">Plan</a></li>
+    <li><a href="{{< relref "/design" >}}">Design</a></li>
+    <li><a href="{{< relref "/develop" >}}">Develop</a></li>
+    <li><a href="{{< relref "/deploy" >}}">Deploy</a></li>
+    <li><a href="{{< relref "/manage" >}}">Manage</a></li>
+    <li><a href="{{< relref "/security-champion" >}}">Security Champions</a></li>
   </ul>
 </section>
 <section class="home-cards">
@@ -68,7 +68,7 @@ front_page_links:
     <p>A Security Champion is a person who acts as a driving force and motivator for security work in a team or department/unit. Responsibility for security lies with the team as a whole, but as a Security Champion, you contribute to awareness and focus within the team.</p>
     <p>A good place to start, whether you are or want to be a hero, is our info package for Security Champions.</p>
     <div class="home-card__spacer"></div>
-    <a class="sb-button sb-button--ghost" href="{{< ref "/security-champion" >}}">Info package for Security Champions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    <a class="sb-button sb-button--ghost" href="{{< relref "/security-champion" >}}">Info package for Security Champions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
   </article>
 </section>
 </div>

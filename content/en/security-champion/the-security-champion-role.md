@@ -25,11 +25,11 @@ A good place to start is to ask yourself a few questions:
 
 * What does this project I am working on actually do?
 * What is critical for the system to work, and how can the system be misused or manipulated?
-* Is there an up-to-date [threat model]({{< ref "design/threat-modelling.md" >}}) with measures to prevent weaknesses from being exploited?
+* Is there an up-to-date [threat model]({{< relref "design/threat-modelling.md" >}}) with measures to prevent weaknesses from being exploited?
 
 Start by establishing a mental model of the project, then build on it from there.
 
-* A good start is often to run a threat modelling exercise. You do not need to know much about threat modelling, but you can get some support in the [article on threat modelling]({{< ref "design/threat-modelling.md" >}}) and from the [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/).
+* A good start is often to run a threat modelling exercise. You do not need to know much about threat modelling, but you can get some support in the [article on threat modelling]({{< relref "design/threat-modelling.md" >}}) and from the [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/).
 
 * Talk to other Security Champions at Bouvet. Ask them what they have done that works, and what does not.
 
@@ -39,7 +39,7 @@ Be a bit creative and try to get the team involved; a Security Champion who does
 
 ### 2. Do we have control over our entire project?
 
-If the answer is yes, let us correct that to no. There is always more that can be done. We have made a checklist that should be reviewed for every single project we are involved in; all our delivery teams should have a relationship with the points in it and the risk they pose if useful measures are not introduced. You can find the list [here]({{< ref "checklist.md" >}}).
+If the answer is yes, let us correct that to no. There is always more that can be done. We have made a checklist that should be reviewed for every single project we are involved in; all our delivery teams should have a relationship with the points in it and the risk they pose if useful measures are not introduced. You can find the list [here]({{< relref "checklist.md" >}}).
 
 This portal also describes a lifecycle intended to safeguard security in development projects. Much of the content is relevant for other types of projects as well, and remember that you do not have to take it all at once. Bring the team along and work through it part by part until you have even better control over the project.
 
@@ -55,7 +55,7 @@ The purpose of all security work is to avoid unwanted incidents. When working on
 
 ### 4. Technical review of solutions
 
-Depending on your level of ambition, you should use a checklist as a support tool when reviewing the solution. We have made [a checklist]({{< ref "checklist.md" >}}) that covers an absolute minimum, but if you really have ambitions there are other tools such as [OWASP's Application Security Verification Standard - ASVS](https://owasp.org/www-project-application-security-verification-standard/). It covers security reviews at different levels of detail, depending on how deep you want to go.
+Depending on your level of ambition, you should use a checklist as a support tool when reviewing the solution. We have made [a checklist]({{< relref "checklist.md" >}}) that covers an absolute minimum, but if you really have ambitions there are other tools such as [OWASP's Application Security Verification Standard - ASVS](https://owasp.org/www-project-application-security-verification-standard/). It covers security reviews at different levels of detail, depending on how deep you want to go.
 
 ## More information
 * [OWASP: Security Culture](https://owasp.org/www-project-security-culture/stable/4-Security_Champions/)

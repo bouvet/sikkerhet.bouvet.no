@@ -61,7 +61,7 @@ Minimum checks for both models:
 
 ## Configuration
 
-Network configuration should be automated as far as possible, preferably through [CI/CD]({{< ref "deploy/cicd.md" >}}) and infrastructure as code.
+Network configuration should be automated as far as possible, preferably through [CI/CD]({{< relref "deploy/cicd.md" >}}) and infrastructure as code.
 
 - limit who can change network rules directly
 - use JIT access where possible

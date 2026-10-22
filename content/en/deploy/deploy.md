@@ -8,7 +8,7 @@ description: >
 
 Deployment starts after the artifact has been built and verified. The main principle is that the same artifact is promoted across environments without rebuilding in between.
 
-This article focuses on rollout to environments. Overall pipeline management is covered in [CI/CD]({{< ref "deploy/cicd.md" >}}), and details about safe artifact production in [Building]({{< ref "deploy/building.md" >}}).
+This article focuses on rollout to environments. Overall pipeline management is covered in [CI/CD]({{< relref "deploy/cicd.md" >}}), and details about safe artifact production in [Building]({{< relref "deploy/building.md" >}}).
 
 {{< figure src="../cicd.png" >}}
 

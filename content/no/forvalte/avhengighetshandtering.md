@@ -6,7 +6,7 @@ description: >
   Status på avhengighetene vi har vil endre seg over tid, og det er ikke til å unngå at svakheter oppdages som må mitigeres av oss. Denne jobben kan være så enkel som at vi oppdaterer til en ny versjon, men kan også kreve større endringer i applikasjonen.
 ---
 
-Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Forsyningskjedesikkerhet]({{< ref "utvikle/software-supply-chain.md" >}}). Dere vil komme i situasjoner der 
+Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}). Dere vil komme i situasjoner der 
 * det oppdages en kritisk sårbarhet i en pakke dere bruker
 * pakker deprekeres og erstattes med noe nytt som ikke er direkte kompatibelt med det gamle
 * utviklere bak pakker slutter å vedlikeholde pakkene
@@ -39,7 +39,7 @@ Interne komponenter må holdes oppdatert med en planlagt patchrutine. Følg leve
 Komponentene må være en del av helhetlig sikkerhetsdesign. Teamet bør ha oversikt over nettverksflater, identiteter/roller og eksponering internt og eksternt. Bruk prinsippet "deny by default": åpne kun eksplisitt for det som faktisk trengs.
 
 ### Logging og monitorering
-Interne komponenter må monitoreres på linje med øvrige tjenester. Logger må være pålitelige og beskyttet mot manipulering, og inngå i teamets rutiner for hendelseshåndtering. Se også [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}).
+Interne komponenter må monitoreres på linje med øvrige tjenester. Logger må være pålitelige og beskyttet mot manipulering, og inngå i teamets rutiner for hendelseshåndtering. Se også [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md" >}}).
 
 ## Bruk av SBOM
 Software Bill Of Materials (SBOM) er en tilnærming der vi genererer en oversikt over alle avhengigheter med versjoner fra løsningene våre. Denne oversikten bør knyttes til hver release, slik at det er tydelig hvilke avhengigheter som faktisk var i bruk på et gitt tidspunkt.
