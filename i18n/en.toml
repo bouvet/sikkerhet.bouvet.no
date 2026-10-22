@@ -83,3 +83,130 @@ other = "Ask a question"
 
 [bls_intro_ok]
 other = "Got it"
+
+[netdiag_title]
+other = "Network diagram for a development environment"
+
+[netdiag_desc]
+other = "An internal user reaches an Azure Firewall over HTTPS 443. The firewall passes traffic on to the Frontend-dev subnet (10.0.0.0/27), which holds an app service and a key vault, and to the Dev workspace reporting area with two reports. Both continue to an Azure WAF, which lets traffic into the Backend-dev subnet (10.0.0.32/27). That subnet holds two app services and an ingress factory, all of which use the same SQL database and key vault. The ingress factory pulls data from the datalake-somedata-prod01 data lake in the company data platform, which sits outside the environment."
+
+
+[netdiag_user]
+other = "Internal user"
+
+[netdiag_report]
+other = "Report"
+
+
+
+[diag_dataplatform]
+other = "Company data platform"
+
+[diag_dependency]
+other = "(dependency)"
+
+[sketch_title]
+other = "High-level system sketch"
+
+[sketch_desc]
+other = "The frontend talks to the backend. The backend reads from two databases, On-prem SQL and Azure SQL, and exchanges data with the company data platform, which is a dependency outside the solution. The backend also feeds Power BI Reports, which additionally reads from the data platform."
+
+[sketch_caption]
+other = "Example of a high-level system sketch. It shows only the largest components and how they relate to each other. Dependencies outside the solution are dashed, so it is easy to see what the team controls itself."
+
+[dataflow_stage_sources]
+other = "Sources"
+
+[dataflow_stage_ingest]
+other = "Ingestion"
+
+[dataflow_stage_storage]
+other = "Storage"
+
+[dataflow_stage_reporting]
+other = "Reporting"
+
+[dataflow_views]
+other = "Views used"
+
+[dataflow_container]
+other = "Container"
+
+[dataflow_pipelines]
+other = "Pipelines"
+
+[dataflow_schemas]
+other = "Schemas"
+
+[dataflow_reports]
+other = "Reports"
+
+
+[dataflow_p1]
+other = "Copies production data"
+
+
+[dataflow_p3]
+other = "Updates the product index"
+
+
+
+
+
+
+
+[iam_sp]
+other = "Service principal"
+
+[iam_developer]
+other = "Developer"
+
+[iam_appuser]
+other = "Application user"
+
+[iam_managed]
+other = "Managed identities"
+
+
+[iam_role_user]
+other = "User role"
+
+[iam_scope_sub]
+other = "Subscription"
+
+[iam_scope_rg]
+other = "Resource group"
+
+[iam_onprem]
+other = "On-prem, outside the subscription"
+
+
+[iam_title]
+other = "IAM diagram for a development environment"
+
+[iam_desc]
+other = "On the left are the identities in Entra ID: a service principal for Azure DevOps, the managed identities of Backend and ingest-factory, a developer and an application user. On the right is Dev Subscription with the resources backend-dev-sql01 and dev-keyvault, the resource groups Backend and Frontend, and production-sql-01, which runs on separate hardware outside the subscription. The service principal is Owner on the subscription and the developer is Contributor. The developer is also Key Vault Secrets Officer on dev-keyvault and SQL Admin on both backend-dev-sql01 and production-sql-01. The managed identities are Key Vault Secrets User on dev-keyvault and db_datareader on backend-dev-sql01. The application user holds a user role on Frontend."
+
+[iam_entra_sub]
+other = "Users and service principals"
+
+[iam_caption]
+other = "Example of an IAM diagram. Identities are on the left, scopes on the right, and every arrow is one role assignment labelled with the role name. Arrows ending on the edge of the subscription box are assigned at subscription level and inherit down to everything inside it; arrows ending on a resource apply to that resource only. The point is that no access goes undocumented."
+
+[netdiag_caption]
+other = "Example network diagram for a development environment. Every subnet is labelled with its address range, every resource has its own address, and the arrows show the direction of traffic and which port is open. The reporting workspace reaches the backend API through the same WAF as the frontend. The dashed box is a dependency outside the team's own environment."
+
+[dataflow_p2]
+other = "Updates the summary"
+
+[dataflow_p4]
+other = "Reads from the data lake"
+
+[dataflow_title]
+other = "Data flow diagram for a development environment"
+
+[dataflow_desc]
+other = "The data comes from two sources: the production-sql-01 database on separate hardware, where three views are in use, and the datalake-somedata-prod01 container in the company data platform. Both are loaded by ingest-factory-dev-01, which runs four pipelines. From there the data is written to the CurrentData and HistoricalData schemas in backend-dev-sql01. HistoricalData is read by Report01 and Report02 in dev-workspace, CurrentData by Report03."
+
+[dataflow_caption]
+other = "Example of a data flow diagram. It follows the data from source to report and names the views, pipelines and schemas actually in use at each step. That naming is what makes the diagram useful when a discrepancy has to be traced back."

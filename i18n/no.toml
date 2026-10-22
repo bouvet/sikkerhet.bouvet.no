@@ -86,3 +86,130 @@ other = "Still et spørsmål"
 
 [bls_intro_ok]
 other = "Ok, skjønner"
+
+[netdiag_title]
+other = "Nettverksdiagram for et utviklingsmiljø"
+
+[netdiag_desc]
+other = "En intern bruker når en Azure Firewall over HTTPS 443. Brannmuren slipper trafikk videre til subnettet Frontend-dev (10.0.0.0/27), som inneholder en app service og en key vault, og til rapportområdet Dev workspace med to rapporter. Begge går videre til en Azure WAF, som slipper trafikken inn i subnettet Backend-dev (10.0.0.32/27). Der ligger to app services og en ingress-factory, som alle bruker den samme SQL-databasen og key vaulten. Ingress-factory henter data fra datasjøen datalake-somedata-prod01 i bedriftens dataplattform, som ligger utenfor miljøet."
+
+
+[netdiag_user]
+other = "Intern bruker"
+
+[netdiag_report]
+other = "Rapport"
+
+
+
+[diag_dataplatform]
+other = "Bedriftens dataplattform"
+
+[diag_dependency]
+other = "(avhengighet)"
+
+[sketch_title]
+other = "Overordnet systemskisse"
+
+[sketch_desc]
+other = "Frontend snakker med Backend. Backend henter data fra to databaser, On-prem SQL og Azure SQL, og utveksler data med bedriftens dataplattform, som er en avhengighet utenfor løsningen. Backend leverer også data til Power BI Reports, som i tillegg henter fra dataplattformen."
+
+[sketch_caption]
+other = "Eksempel på overordnet systemskisse. Den viser bare de største komponentene og hvordan de henger sammen. Avhengigheter utenfor løsningen er stiplet, slik at det er lett å se hva teamet selv rår over."
+
+[dataflow_stage_sources]
+other = "Kilder"
+
+[dataflow_stage_ingest]
+other = "Innlasting"
+
+[dataflow_stage_storage]
+other = "Lagring"
+
+[dataflow_stage_reporting]
+other = "Rapportering"
+
+[dataflow_views]
+other = "Views i bruk"
+
+[dataflow_container]
+other = "Container"
+
+[dataflow_pipelines]
+other = "Pipelines"
+
+[dataflow_schemas]
+other = "Skjemaer"
+
+[dataflow_reports]
+other = "Rapporter"
+
+
+[dataflow_p1]
+other = "Kopierer produksjonsdata"
+
+
+[dataflow_p3]
+other = "Oppdaterer produktindeksen"
+
+
+
+
+
+
+
+[iam_sp]
+other = "Tjenesteprinsipal"
+
+[iam_developer]
+other = "Utvikler"
+
+[iam_appuser]
+other = "Applikasjonsbruker"
+
+[iam_managed]
+other = "Administrerte identiteter"
+
+
+[iam_role_user]
+other = "Brukerrolle"
+
+[iam_scope_sub]
+other = "Abonnement"
+
+[iam_scope_rg]
+other = "Ressursgruppe"
+
+[iam_onprem]
+other = "On-prem, utenfor abonnementet"
+
+
+[iam_title]
+other = "IAM-diagram for et utviklingsmiljø"
+
+[iam_desc]
+other = "Til venstre ligger identitetene i Entra ID: en tjenesteprinsipal for Azure DevOps, de administrerte identitetene til Backend og ingest-factory, en utvikler og en applikasjonsbruker. Til høyre ligger Dev Subscription med ressursene backend-dev-sql01, dev-keyvault og ressursgruppene Backend og Frontend, samt production-sql-01 som står på egen maskinpark utenfor abonnementet. Tjenesteprinsipalen er Owner på abonnementet og utvikleren Contributor. Utvikleren er i tillegg Key Vault Secrets Officer på dev-keyvault og SQL Admin på både backend-dev-sql01 og production-sql-01. De administrerte identitetene er Key Vault Secrets User på dev-keyvault og db_datareader på backend-dev-sql01. Applikasjonsbrukeren har en brukerrolle på Frontend."
+
+[iam_entra_sub]
+other = "Brukere og tjenesteprinsipaler"
+
+[iam_caption]
+other = "Eksempel på IAM-diagram. Identitetene står til venstre, omfangene til høyre, og hver pil er én rolletildeling med rollenavnet påskrevet. Piler som ender på kanten av abonnementsboksen er tildelt på abonnementsnivå og arves ned til alt som ligger i det; piler som ender på en ressurs gjelder bare den ressursen. Poenget er at ingen tilgang står udokumentert."
+
+[netdiag_caption]
+other = "Eksempel på nettverksdiagram for et utviklingsmiljø. Hvert subnett er navngitt med adresseområdet sitt, hver ressurs har sin egen adresse, og pilene viser retningen på trafikken og hvilken port som er åpnet. Rapportområdet når backend-API-et gjennom samme WAF som frontenden. Den stiplede boksen er en avhengighet utenfor teamets eget miljø."
+
+[dataflow_p2]
+other = "Oppdaterer sammendraget"
+
+[dataflow_p4]
+other = "Henter data fra datasjøen"
+
+[dataflow_title]
+other = "Dataflytdiagram for et utviklingsmiljø"
+
+[dataflow_desc]
+other = "Dataene kommer fra to kilder: databasen production-sql-01 på egen maskinpark, der tre views er i bruk, og containeren datalake-somedata-prod01 i bedriftens dataplattform. Begge lastes inn av ingest-factory-dev-01, som kjører fire pipelines. Derfra skrives dataene til skjemaene CurrentData og HistoricalData i backend-dev-sql01. HistoricalData leses av Report01 og Report02 i dev-workspace, CurrentData av Report03."
+
+[dataflow_caption]
+other = "Eksempel på dataflytdiagram. Det følger dataene fra kilde til rapport, og navngir hvilke views, pipelines og skjemaer som faktisk er i bruk i hvert steg. Det er den navngivingen som gjør diagrammet brukbart når et avvik skal spores tilbake."

@@ -1,0 +1,101 @@
+{{- /* IAM-diagram, tegnet som inline SVG. Identitetene står til venstre og
+       omfangene til høyre, med én pil per rolletildeling og rollenavnet på
+       pila. Det er den formen et IAM-diagram har: hvem — hvilken rolle — på
+       hva.
+
+       Pilene som ender på kanten av abonnementsboksen er tildelt på
+       abonnementsnivå og arves nedover til ressursene i den; pilene som ender
+       på en ressursboks gjelder bare den ressursen.
+
+       Rollenavnene er Azure-roller og står uoversatt med vilje.
+
+       {{< iam-diagram >}} */ -}}
+{{- $m := printf "iam-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 980 556" style="--sbd-min: 860px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "iam_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "iam_desc" }}</desc>
+      <defs>
+        <marker id="{{ $m }}" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path class="sbd-arrow" d="M0 0 L10 5 L0 10 z" />
+        </marker>
+      </defs>
+
+      {{- /* Soner */}}
+      <rect class="sbd-group" x="40" y="56" width="270" height="386" />
+      <text class="sbd-title" x="56" y="86">Entra ID</text>
+      <text class="sbd-meta sbd-start" x="56" y="104">{{ T "iam_entra_sub" }}</text>
+
+      <rect class="sbd-group" x="620" y="56" width="320" height="386" />
+      <text class="sbd-title" x="636" y="86">Dev Subscription</text>
+      <text class="sbd-meta sbd-start" x="636" y="104">{{ T "iam_scope_sub" }}</text>
+
+      {{- /* Rolletildelinger. Stigerne tegnes først, så pilene, så boksene. */}}
+      <path class="sbd-line" d="M280 227 H350 M350 159 V241 M280 309 H380 M380 96 V507" />
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M280 145 H330 V70 H620" />
+      <text class="sbd-edge sbd-edge--end" x="610" y="64">Owner</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M380 96 H620" />
+      <text class="sbd-edge sbd-edge--end" x="610" y="90">Contributor</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M380 131 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="125">SQL Admin</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M350 159 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="153">db_datareader</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M380 213 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="207">Key Vault Secrets Officer</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M350 241 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="235">Key Vault Secrets User</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M280 391 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="385">{{ T "iam_role_user" }}</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M380 507 H650" />
+      <text class="sbd-edge sbd-edge--end" x="640" y="501">SQL Admin</text>
+
+      {{- /* Identiteter */}}
+      <rect class="sbd-box" x="70" y="116" width="210" height="58" />
+      <text class="sbd-name" x="175" y="141">{{ T "iam_sp" }}</text>
+      <text class="sbd-meta" x="175" y="159">Azure DevOps</text>
+
+      <rect class="sbd-box" x="70" y="198" width="210" height="58" />
+      <text class="sbd-name" x="175" y="223">{{ T "iam_managed" }}</text>
+      <text class="sbd-meta" x="175" y="241">Backend, ingest-factory</text>
+
+      <rect class="sbd-box sbd-box--user" x="70" y="280" width="210" height="58" />
+      <text class="sbd-name" x="175" y="314">{{ T "iam_developer" }}</text>
+
+      <rect class="sbd-box sbd-box--user" x="70" y="362" width="210" height="58" />
+      <text class="sbd-name" x="175" y="396">{{ T "iam_appuser" }}</text>
+
+      {{- /* Omfang */}}
+      <rect class="sbd-box" x="650" y="116" width="270" height="58" />
+      <text class="sbd-name" x="785" y="141">backend-dev-sql01</text>
+      <text class="sbd-meta" x="785" y="159">Azure SQL</text>
+
+      <rect class="sbd-box" x="650" y="198" width="270" height="58" />
+      <text class="sbd-name" x="785" y="223">dev-keyvault</text>
+      <text class="sbd-meta" x="785" y="241">Key Vault</text>
+
+      <rect class="sbd-box" x="650" y="280" width="270" height="58" />
+      <text class="sbd-name" x="785" y="305">Backend</text>
+      <text class="sbd-meta" x="785" y="323">{{ T "iam_scope_rg" }}</text>
+
+      <rect class="sbd-box" x="650" y="362" width="270" height="58" />
+      <text class="sbd-name" x="785" y="387">Frontend</text>
+      <text class="sbd-meta" x="785" y="405">{{ T "iam_scope_rg" }}</text>
+
+      <rect class="sbd-box sbd-box--ekstern" x="650" y="478" width="270" height="58" />
+      <text class="sbd-name" x="785" y="503">production-sql-01</text>
+      <text class="sbd-meta" x="785" y="521">{{ T "iam_onprem" }}</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "iam_caption" }}</figcaption>
+</figure>

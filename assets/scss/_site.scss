@@ -141,6 +141,149 @@
   }
 }
 
+// Diagrammer tegnet som inline SVG: `system-sketch`, `network-diagram`,
+// `dataflow-diagram` og `iam-diagram`. Faste koordinater i et viewBox gir
+// presise forbindelser uten JavaScript, og alle farger kommer fra
+// designtokens slik at figurene følger lyst og mørkt tema.
+//
+// Alle fire er lagt liggende med vilje. Som loddrette kjeder ble de høyere
+// enn et skjermbilde, og en figur du må bla forbi for å lese videre er verre
+// enn en figur du må dra litt på.
+.sb-diagram {
+  margin: 3rem 0;
+
+  &__scroll {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    // Hvert diagram setter selv punktet der teksten blir for liten, med
+    // `--sbd-min` på <svg>. Under det kan figuren dras sidelengs i stedet for
+    // å krympe videre.
+    min-width: var(--sbd-min, 560px);
+    height: auto;
+    // Tekstene arver sideskrifta; SVG har sin egen standard uten dette.
+    font-family: inherit;
+  }
+
+  // Sone: subnett, ressursgruppe eller eksternt system.
+  .sbd-group {
+    fill: var(--bg-2);
+    stroke: var(--border-2);
+    stroke-width: 1.5;
+  }
+
+  // Avhengigheter utenfor teamets eget miljø tegnes stiplet.
+  .sbd-group--ekstern {
+    fill: none;
+    stroke-dasharray: 6 5;
+  }
+
+  .sbd-box {
+    fill: var(--bg-3);
+    stroke: var(--border-3);
+    stroke-width: 1.5;
+  }
+
+  // Brannmur og WAF — det er disse som faktisk håndhever noe.
+  .sbd-box--sec {
+    fill: var(--bg-5);
+    stroke: var(--marker);
+    stroke-width: 2;
+  }
+
+  .sbd-box--user {
+    fill: var(--warm-quiet);
+    stroke: var(--warm);
+    stroke-width: 2;
+  }
+
+  .sbd-box--ekstern {
+    fill: none;
+    stroke-dasharray: 6 5;
+  }
+
+  .sbd-line {
+    fill: none;
+    stroke: var(--fg-4);
+    stroke-width: 1.5;
+  }
+
+  .sbd-arrow {
+    fill: var(--fg-4);
+    stroke: none;
+  }
+
+  // Den synlige fremre kanten av lokket på en sylinder. Følger bokskanten og
+  // ikke forbindelseslinjene, siden den er en del av formen.
+  .sbd-rim {
+    fill: none;
+    stroke: var(--border-3);
+    stroke-width: 1.5;
+  }
+
+  text {
+    text-anchor: middle;
+  }
+
+  .sbd-title {
+    fill: var(--fg-2);
+    font-size: 13px;
+    font-weight: 600;
+    text-anchor: start;
+  }
+
+  // Adresseområder, IP-adresser og annen småtekst under navnet.
+  .sbd-meta {
+    fill: var(--fg-3);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sbd-name {
+    fill: var(--fg-1);
+    font-size: 13px;
+  }
+
+  // Ressursnavn i tette diagrammer, der boksene må være smale for at figuren
+  // skal holde seg bred og lav.
+  .sbd-name--sm {
+    font-size: 11.5px;
+  }
+
+  // Overskrift inne i en sone: «Pipelines», «Skjemaer», «Rapporter».
+  .sbd-head {
+    fill: var(--fg-2);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .sbd-edge {
+    fill: var(--fg-3);
+    font-size: 11px;
+    text-anchor: start;
+  }
+
+  .sbd-edge--end {
+    text-anchor: end;
+  }
+
+  // Venstrestilt småtekst, f.eks. undertittelen i en sone.
+  .sbd-start {
+    text-anchor: start;
+  }
+
+  figcaption {
+    margin-top: 1.25rem;
+    color: var(--fg-3);
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+}
+
 // Links written as `class="underlined-link"` in older content.
 .underlined-link {
   text-decoration: underline;

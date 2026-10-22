@@ -1,0 +1,44 @@
+{{- /* Overordnet systemskisse, tegnet som inline SVG i stedet for en bildefil.
+       Viser bare de største komponentene og hvordan de henger sammen —
+       forbindelsene er uten pilspiss fordi skissen sier hvem som snakker med
+       hvem, ikke hvilken vei dataene går.
+
+       {{< system-sketch >}} */ -}}
+{{- $m := printf "sk-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 720 420" style="--sbd-min: 620px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "sketch_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "sketch_desc" }}</desc>
+
+      {{- /* Forbindelser tegnes først, så boksene dekker endepunktene. */}}
+      <path class="sbd-line" d="M280 76 V160 M575 76 V160 M370 188 H470" />
+      <path class="sbd-line" d="M370 175 H420 V48 H470" />
+      <path class="sbd-line" d="M280 216 V270 M170 270 H370 M170 270 V330 M370 270 V330" />
+
+      <rect class="sbd-box" x="190" y="20" width="180" height="56" />
+      <text class="sbd-name" x="280" y="53">Frontend</text>
+
+      <rect class="sbd-box" x="190" y="160" width="180" height="56" />
+      <text class="sbd-name" x="280" y="193">Backend</text>
+
+      <rect class="sbd-box" x="470" y="20" width="210" height="56" />
+      <text class="sbd-name" x="575" y="53">Power BI Reports</text>
+
+      <rect class="sbd-box sbd-box--ekstern" x="470" y="160" width="210" height="62" />
+      <text class="sbd-name" x="575" y="188">{{ T "diag_dataplatform" }}</text>
+      <text class="sbd-meta" x="575" y="207">{{ T "diag_dependency" }}</text>
+
+      {{- /* Databaser tegnes som sylindre, slik de konvensjonelt gjøres. */}}
+      <path class="sbd-box" d="M90 330 A80 14 0 0 1 250 330 V382 A80 14 0 0 1 90 382 Z" />
+      <path class="sbd-rim" d="M90 330 A80 14 0 0 0 250 330" />
+      <text class="sbd-name" x="170" y="364">On-prem SQL</text>
+
+      <path class="sbd-box" d="M290 330 A80 14 0 0 1 450 330 V382 A80 14 0 0 1 290 382 Z" />
+      <path class="sbd-rim" d="M290 330 A80 14 0 0 0 450 330" />
+      <text class="sbd-name" x="370" y="364">Azure SQL</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "sketch_caption" }}</figcaption>
+</figure>
