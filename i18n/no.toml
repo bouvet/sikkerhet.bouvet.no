@@ -40,6 +40,13 @@ other = "Transitive avhengigheter"
 [depchain_caption]
 other = "Koden din avhenger av én pakke, men drar samtidig inn pakkene den igjen avhenger av. Hver av dem kjører med de samme tilgangene som din egen kode."
 
+# Forfatterlista i meta-stripa (data/forfattere.json)
+[post_authors]
+other = "Skrevet av"
+
+[post_authors_and]
+other = "og"
+
 [note_tip]
 other = "Tips"
 

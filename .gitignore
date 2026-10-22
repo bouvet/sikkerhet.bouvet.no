@@ -36,3 +36,8 @@ package-lock.json
 
 # Working notes, kept locally rather than in the repo
 /BOTBIRD-NOTAT.md
+/FORFATTERE.md
+/PROMPT-forfatterliste.md
+
+# Genereres av scripts/forfattere.mjs ved bygg
+/data/forfattere.json
