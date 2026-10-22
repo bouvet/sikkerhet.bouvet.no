@@ -36,7 +36,7 @@ Models, weights, and related configuration should be versioned and clearly tied 
 When introducing new models or major changes, teams should consider mechanisms such as feature flags, controlled rollout, or other techniques that allow limited validation before full production rollout.
 
 ## More Information
-* [Network concepts]({{< ref "design/networking" >}})
+* [Network concepts]({{< relref "design/networking" >}})
 * [ISO27001:2022 - Section 8.22 - Segregation of networks - Requires Bouvet user](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/Nettverksikkerhet/)
 * [Microsoft Cloud Adoption Framework - Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
 * [AWS Well-Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)

@@ -8,7 +8,7 @@ description: >
 
 An untested backup is worthless. The same applies to a disaster recovery plan that has never been tested.
 
-If the team has done the groundwork well, you have a plan for [disaster recovery]({{< ref "plan/business-continuity.md#disaster-recovery" >}}) that describes how infrastructure, applications, and data are restored to normal operations.
+If the team has done the groundwork well, you have a plan for [disaster recovery]({{< relref "plan/business-continuity.md#disaster-recovery" >}}) that describes how infrastructure, applications, and data are restored to normal operations.
 
 The reasons for restoration vary: human error, delivery errors, vendor failure, unavailable infrastructure, or malicious events. The goal is always the same: to reduce downtime and data loss with predictable processes.
 
@@ -34,7 +34,7 @@ Examples of exercises:
 
 After each exercise, you should document what worked, what failed, and what measures need to go on the backlog.
 
-An example recipe for the solution outlined in the [article on system diagrams]({{< ref "design/system-diagrams-and-drawings.md" >}}) could be as follows. The premise of the plan below is that we have source code and pipelines available in, for example, Azure DevOps, and the application and resources have mysteriously disappeared from Azure:
+An example recipe for the solution outlined in the [article on system diagrams]({{< relref "design/system-diagrams-and-drawings.md" >}}) could be as follows. The premise of the plan below is that we have source code and pipelines available in, for example, Azure DevOps, and the application and resources have mysteriously disappeared from Azure:
 
 1. Check that new subscriptions are in place in Azure
     * Configure Azure Pipelines to deploy to these

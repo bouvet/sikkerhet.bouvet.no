@@ -41,3 +41,4 @@ package-lock.json
 
 # Genereres av scripts/forfattere.mjs ved bygg
 /data/forfattere.json
+/lenker.json

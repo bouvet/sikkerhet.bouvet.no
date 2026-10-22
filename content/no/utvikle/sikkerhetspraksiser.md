@@ -47,7 +47,7 @@ For prosjekter med KI-komponenter bør teamet i tillegg bruke:
 * [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 * [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
 
-Detaljer om trygg bruk av KI i utviklingsløpet er beskrevet i [Bruk av kunstig intelligens]({{< ref "planlegge/ai.md" >}}). Risiko rundt avhengigheter, artefakter og byggkjede er beskrevet i [Forsyningskjedesikkerhet]({{< ref "utvikle/software-supply-chain.md" >}}).
+Detaljer om trygg bruk av KI i utviklingsløpet er beskrevet i [Bruk av kunstig intelligens]({{< relref "planlegge/ai.md" >}}). Risiko rundt avhengigheter, artefakter og byggkjede er beskrevet i [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}).
 
 OWASP publiserer mye annet i tillegg, både andre Top 10-lister og det de kaller ["cheat sheets"](https://cheatsheetseries.owasp.org/), som gir mer detaljert informasjon om spesifikke sikkerhetstema. 
 

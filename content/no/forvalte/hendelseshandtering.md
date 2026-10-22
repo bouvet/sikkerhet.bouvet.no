@@ -19,7 +19,7 @@ Denne artikkelen handler om overordnet hendelseshåndtering og beredskap:
 * hvordan varsling og eskalering skal skje
 * hvilke logger og hvilken monitorering som må være på plass
 
-Operativ gjenoppretting etter destruktive hendelser er beskrevet i artikkelen om [gjenoppretting]({{< ref "forvalte/preparedness.md" >}}).
+Operativ gjenoppretting etter destruktive hendelser er beskrevet i artikkelen om [gjenoppretting]({{< relref "forvalte/preparedness.md" >}}).
 
 ## Dette må teamet ha kontroll på
 Før en hendelse oppstår må følgende være avklart og dokumentert:
@@ -44,7 +44,7 @@ For løsninger med AI-komponenter betyr dette i tillegg:
 
 Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i ISO 42001.
 
-Se også [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}) for mer detaljert informasjon rundt temaet.
+Se også [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md" >}}) for mer detaljert informasjon rundt temaet.
 
 ## Når en hendelse inntreffer
 Hendelser kan ta mange former: sårbarheter i applikasjon eller avhengigheter, driftsavvik eller aktive angrep.

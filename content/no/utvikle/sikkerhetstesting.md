@@ -16,7 +16,7 @@ Dersom dette ikke tas hensyn til kan det få konsekvenser, både for kundeforhol
 {{< /caution >}}
 
 ## Testmiljø
-Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt]({{< ref "designe/segregering.md" >}}) kan en risikere å påvirke andre miljø enn tiltenkt.
+Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt]({{< relref "designe/segregering.md" >}}) kan en risikere å påvirke andre miljø enn tiltenkt.
 
 En god løsning, spesielt dersom en bruker infrastruktur-som-kode (IAC) er å ha en pipeline som deployer et eget miljø som kan brukes for sikkerhetstesting. Dersom dette designes inn i leveransen fra starten, vil det ofte være enkelt å sette opp miljø som er identiske med produksjonsmiljøet, der en også kan kopiere databaser og eventuelt kjøre anonymiseringsprosesser mot dataene. 
 
@@ -56,7 +56,7 @@ En penetrasjonstest går dypere enn SAST og DAST ved å teste systemet som en he
 En penetrasjonstest vil alltid ha et avtalt omfang som regulerer hva pentesterne kan gjøre, når de kan gjøre det og hvilke ressurser som kan testes. Det er ikke mulig å bevise at en løsning er sikker, kun at den ikke er sårbar mot gitte angrep. Pentesting er derfor særlig nyttig når løsningen har strenge sikkerhetskrav eller opererer innenfor et avtaleverk som krever uavhengig verifisering.
 
 ### Planlegging og omfang
-En pentest krever kompetanse og skal ikke gjennomføres på egen hånd uten relevant erfaring. Som team må dere sikre at miljøet som skal testes er tydelig identifisert, og at omfanget er godt definert før testingen starter. Det må være mulig å skille et faktisk angrep fra en avtalt test. Dersom du ser tegn på aktivitet mot et miljø som ikke er en del av testen og dere har [segregert miljøene]({{< ref "designe/segregering.md" >}}), bør dette håndteres som en reell hendelse.
+En pentest krever kompetanse og skal ikke gjennomføres på egen hånd uten relevant erfaring. Som team må dere sikre at miljøet som skal testes er tydelig identifisert, og at omfanget er godt definert før testingen starter. Det må være mulig å skille et faktisk angrep fra en avtalt test. Dersom du ser tegn på aktivitet mot et miljø som ikke er en del av testen og dere har [segregert miljøene]({{< relref "designe/segregering.md" >}}), bør dette håndteres som en reell hendelse.
 
 Som en del av planleggingen må dere også avklare kundens rutiner for pentesting. Mange virksomheter har et sikkerhetssenter (SOC) og/eller nettverkssenter (NOC) som overvåker infrastrukturen kontinuerlig. Disse må være informert når testen er varslet, slik at en avtalt test ikke utløser unødvendig eskalering.
 

@@ -1,4 +1,4 @@
-{{/* One navy strip: copyright, licence, privacy policy and a GitHub link. */ -}}
+{{/* One navy strip: copyright, licence and privacy policy. */ -}}
 <footer class="td-footer d-print-none">
   <div class="td-footer__inner">
     <div class="td-footer__group">
@@ -8,12 +8,5 @@
         <a href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a>
       {{- end }}
     </div>
-    {{ with .Site.Params.github_repo -}}
-    <div class="td-footer__group">
-      <a href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ T "github_link" }}" title="{{ T "github_link" }}">
-        {{ partial "icon.html" "github" -}}
-      </a>
-    </div>
-    {{ end -}}
   </div>
 </footer>

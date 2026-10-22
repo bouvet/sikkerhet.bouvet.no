@@ -15,7 +15,7 @@ Disse kan defineres mellom logiske faser i prosjektet, eksempelvis mellom design
 IBM har [i en studie](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) fastslått at generelle svakheter i applikasjoner utviklet for det amerikanske forsvaret kostet langt mindre å utbedre jo tidligere de ble oppdaget. 
 
 Ved å ta i bruk sikkerhetskontrollpunkt er det ikke bare lettere å sikre etterlevelse av sikkerhet- og kvalitetskrav, men også lettere å sikre at en fanger opp svakheter tidlig. En vanlig praksis der slike kontrollpunkt benyttes er at det eksempelvis 
-* skal foreligge et [design]({{< ref "designe/systemskisser.md" >}}) av prosjektet før utviklingsløpet starter
+* skal foreligge et [design]({{< relref "designe/systemskisser.md" >}}) av prosjektet før utviklingsløpet starter
 * at implementasjonen skal følge designet
 * og at en har verifisert at design og implementasjon faktisk matcher før en kan gå i produksjon
 
@@ -48,11 +48,11 @@ Før produksjon bør driftsteamet verifisere at nødvendig observabilitet er på
 * hvilke alarmer og terskler som skal utløse oppfølging
 * hvem som har ansvar for løpende overvåking og hendelseshåndtering
 
-For mer om drift av logger og oppfølging i produksjon, se [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}).
+For mer om drift av logger og oppfølging i produksjon, se [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md" >}}).
 
 Se også:
-* [Dokumentasjon]({{< ref "utvikle/dokumentasjon.md" >}}) for hva som bør dokumenteres før og etter gate-beslutninger
-* [Verifiser designet]({{< ref "forvalte/verifisering-av-design.md" >}}) for kontroll av at løsning i drift matcher dokumentasjon og beslutninger
+* [Dokumentasjon]({{< relref "utvikle/dokumentasjon.md" >}}) for hva som bør dokumenteres før og etter gate-beslutninger
+* [Verifiser designet]({{< relref "forvalte/verifisering-av-design.md" >}}) for kontroll av at løsning i drift matcher dokumentasjon og beslutninger
 
 
 ## Veien videre

@@ -24,7 +24,7 @@ The same applies when someone outside the team asks for access, for example duri
 ## What should be documented
 What needs to be documented will vary with the project's size and criticality, but the following should always be in place:
 
-* **System design**: [Diagrams and drawings]({{< ref "design/system-diagrams-and-drawings.md" >}}) showing infrastructure, data flows, IAM, and integrations — at a level that makes it possible to review the architectural decisions made.
+* **System design**: [Diagrams and drawings]({{< relref "design/system-diagrams-and-drawings.md" >}}) showing infrastructure, data flows, IAM, and integrations — at a level that makes it possible to review the architectural decisions made.
 * **Threat model**: Which threats have been assessed, which mitigations have been introduced, and what residual risk has been accepted. The threat model must be maintained and updated when changes are made.
 * **Security configuration**: Security-critical configurations must be documented so they are not inadvertently changed or omitted during upgrades and re-provisioning.
 * **Incident log and deviations**: Security incidents and deviations should be logged and documented, including what was done and what lessons were identified.

@@ -8,7 +8,7 @@ description: >
 
 Git is today the standard in most projects run at Bouvet, but if you end up in a project that uses something else many of the principles will still be transferable. Git itself is the version control tool that manages history and versioning, while GitHub handles the surrounding services such as CI/CD, security testing and similar. Azure DevOps offers many of the same features described below; even though GitHub is used as an example you should assume the same applies for Azure DevOps. 
 {{< tip title="Source code is critical" >}}
-Remember that source code is part of the project, and must be considered in relation to [disaster recovery and backups]({{< ref "business-continuity.md" >}})!
+Remember that source code is part of the project, and must be considered in relation to [disaster recovery and backups]({{< relref "business-continuity.md" >}})!
 {{< /tip >}}
 
 ## .gitignore

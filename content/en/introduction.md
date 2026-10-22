@@ -23,11 +23,11 @@ The reason it pays off is that few serious security problems originate in the co
 
 The chapters on this site follow the phases, and each chapter has an introduction of its own:
 
-* __[Plan]({{< ref "/plan" >}})__ – Clarify responsibilities, classify the data, and set requirements for availability and recovery before the work starts.
-* __[Design]({{< ref "/design" >}})__ – Turn the requirements into architecture: threat model, networks, segregation of environments and access control.
-* __[Develop]({{< ref "/develop" >}})__ – Write the code with OWASP Top 10 in mind, handle secrets properly, and validate data arriving from outside.
-* __[Deploy]({{< ref "/deploy" >}})__ – Build an artifact that can be verified, and test the solution before it goes into operation.
-* __[Manage]({{< ref "/manage" >}})__ – Log and monitor, keep track of weaknesses in your dependencies, and know who does what when something happens.
+* __[Plan]({{< relref "/plan" >}})__ – Clarify responsibilities, classify the data, and set requirements for availability and recovery before the work starts.
+* __[Design]({{< relref "/design" >}})__ – Turn the requirements into architecture: threat model, networks, segregation of environments and access control.
+* __[Develop]({{< relref "/develop" >}})__ – Write the code with OWASP Top 10 in mind, handle secrets properly, and validate data arriving from outside.
+* __[Deploy]({{< relref "/deploy" >}})__ – Build an artifact that can be verified, and test the solution before it goes into operation.
+* __[Manage]({{< relref "/manage" >}})__ – Log and monitor, keep track of weaknesses in your dependencies, and know who does what when something happens.
 
 An SSDLC is not a gate you pass through once. The phases repeat for every change of significance, and a design choice that was right at the outset can be wrong two years later.
 

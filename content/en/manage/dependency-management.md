@@ -6,7 +6,7 @@ description: >
   The status of the dependencies we have will change over time, and it is inevitable that vulnerabilities will be discovered that we must mitigate. This job can be as simple as updating to a new version, but may also require more significant changes to the application.
 ---
 
-When the team is in maintenance mode, most of the issues mentioned in the article on [Software Supply Chain]({{< ref "develop/software-supply-chain.md" >}}) still apply. You will encounter situations where:
+When the team is in maintenance mode, most of the issues mentioned in the article on [Software Supply Chain]({{< relref "develop/software-supply-chain.md" >}}) still apply. You will encounter situations where:
 * A critical vulnerability is discovered in a package you use
 * Packages are deprecated and replaced with something new that is not directly compatible with the old
 * Developers behind packages stop maintaining them
@@ -39,7 +39,7 @@ Internal components should be kept up to date through a planned patch routine. F
 Components must be part of the overall security design. The team should maintain an overview of network exposure, identities/roles, and internal and external access paths. Apply a "deny by default" approach and only allow what is explicitly needed.
 
 ### Logging and Monitoring
-Internal components must be monitored in the same way as other services. Logs should be trustworthy, protected against tampering, and included in incident handling routines. See also [Logging and Monitoring]({{< ref "manage/logging-monitoring.md" >}}).
+Internal components must be monitored in the same way as other services. Logs should be trustworthy, protected against tampering, and included in incident handling routines. See also [Logging and Monitoring]({{< relref "manage/logging-monitoring.md" >}}).
 
 ## Use of SBOM
 Software Bill Of Materials (SBOM) is an approach where we generate an overview of all dependencies with versions from our solutions. This overview should be tied to each release so it is clear which dependencies were actually in use at a given point in time.

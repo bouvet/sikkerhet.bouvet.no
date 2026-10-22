@@ -8,7 +8,7 @@ description: >
 
 En backup som ikke er testet er verdiløs. Det samme gjelder en disaster recovery-plan som aldri har blitt testet.
 
-Hvis teamet har gjort grunnarbeidet godt, har dere en plan for [gjenoppretting]({{< ref "planlegge/business-continuity.md#disaster-recovery" >}}) som beskriver hvordan infrastruktur, applikasjon og data gjenopprettes til normal drift.
+Hvis teamet har gjort grunnarbeidet godt, har dere en plan for [gjenoppretting]({{< relref "planlegge/business-continuity.md#disaster-recovery" >}}) som beskriver hvordan infrastruktur, applikasjon og data gjenopprettes til normal drift.
 
 Årsakene til gjenoppretting varierer: menneskelige feil, feil i leveranser, svikt hos leverandør, utilgjengelig infrastruktur eller ondsinnede hendelser. Målet er alltid det samme: redusere nedetid og datatap med forutsigbare prosesser.
 
@@ -32,7 +32,7 @@ Eksempler på øvelser:
 
 Etter hver øvelse bør dere dokumentere hva som fungerte, hva som feilet og hvilke tiltak som må inn i backloggen.
 
-En tenkt oppskrift for løsningen tegnet opp i [artikkelen om systemskisser]({{< ref "designe/systemskisser.md" >}}) kan være som under. Premisset for planen under er at vi har kildekode og pipelines tilgjengelig i eksempelvis Azure DevOps, og at applikasjon og ressurser på mystisk vis er fjernet fra Azure:
+En tenkt oppskrift for løsningen tegnet opp i [artikkelen om systemskisser]({{< relref "designe/systemskisser.md" >}}) kan være som under. Premisset for planen under er at vi har kildekode og pipelines tilgjengelig i eksempelvis Azure DevOps, og at applikasjon og ressurser på mystisk vis er fjernet fra Azure:
 
 1. Sjekk at nye subscriptions er på plass i Azure 
     * Konfigurer Azure Pipelines slik at de deployer til disse 

@@ -46,7 +46,11 @@ const BOTER = [/^github-actions/i, /\[bot\]$/i, /^dependabot/i];
 //   _index.md        seksjonsintroer. Rene inngangstekster uten eget innhold
 //                    — alt som står der skal også finnes i artiklene under.
 //   endringslogg.md  oppsummering av endringer, ikke en artikkel.
-const IKKE_ARTIKLER = ["_index.md", "endringslogg.md"];
+//   sjekklisten.md   en liste med lenker inn i de andre artiklene; innholdet
+//                    hører hjemme der, ikke her.
+//
+// Navnene er de norske filnavnene — det er bare kildespråket som blames.
+const IKKE_ARTIKLER = ["_index.md", "endringslogg.md", "sjekklisten.md"];
 
 function mdFiler(dir) {
   return readdirSync(dir).flatMap((navn) => {
