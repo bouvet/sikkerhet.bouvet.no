@@ -24,13 +24,15 @@ Safe CI/CD practice is built on a few simple foundational principles:
 ## Security controls in the pipeline
 A pipeline should have at minimum:
 
-* **Secret scanning**: Find hardcoded keys, tokens, and other sensitive information.
-* **Dependency scanning**: Find known vulnerabilities in third-party libraries.
-* **Static code analysis (SAST)**: Find common weaknesses early.
-* **Automated tests**: Run unit, integration, and relevant security tests.
+* **Secret scanning**: Find hardcoded keys, tokens, and other sensitive information, see [Secrets]({{< ref "develop/secrets.md" >}}).
+* **Dependency scanning**: Find known vulnerabilities in third-party libraries, known as [Software Composition Analysis]({{< ref "develop/software-supply-chain.md" >}}).
+* **Static code analysis (SAST)**: Find common weaknesses early, see [Security Testing]({{< ref "develop/security-testing.md" >}}).
+* **Automated tests**: Run unit, integration, and relevant security tests, including checks of authorization, 401/403 responses and JWT handling.
 * **Audit logging**: Keep logs and metadata for audit trails.
 
 Critical findings should stop deployment, not just give a warning.
+
+Several of these controls require additional tools and licenses. Be particularly mindful of tools that send code to external services for analysis — that is a flow of data out of the project, and it has to be cleared.
 
 ## Branching and promotion model
 Branching is closely connected to CI/CD, but the details belong in the [Git article]({{< ref "develop/git.md#branching-strategy" >}}).

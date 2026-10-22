@@ -1,5 +1,6 @@
 ---
 title: "Utvikle"
+translationKey: develop
 weight: 8
 menu:
   sidebar:

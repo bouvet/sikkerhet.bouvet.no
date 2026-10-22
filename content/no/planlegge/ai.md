@@ -8,9 +8,9 @@ description: >
  
 Denne siden handler om bruk av KI i utviklingsløpet, ikke generell bruk av KI-løsninger. Målet er å bruke KI som et produktivitetsverktøy uten å miste kontroll på sikkerhet, kvalitet og etterprøvbarhet.
 
-{{< caution title="Bruk av KI-verktøy" >}}
-Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal__ følges. Det er __ikke__ lov å ta KI-verktøy i bruk uten eksplisitt godkjenning fra Bouvet eller kunde.
-{{< /caution >}}
+{{< tip title="Vil du lære mer om KI?" >}}
+Bouvet har en egen portal for kunstig intelligens på [ai.bouvet.no](https://ai.bouvet.no), som hjelper deg å forstå teknologien og hvordan den kan brukes i ulike roller. Denne artikkelen tar kun for seg sikkerhetssiden i utviklingsløpet.
+{{< /tip >}}
 
 ## Hva har vi lov til å bruke
 På Bouvet-utstyr kan vi kun bruke KI-verktøy som er eksplisitt tillatt i [Bouvets KI-policy](https://ai-policy.bouvet.no/). På kundens utstyr kan vi kun bruke verktøy kunden har godkjent.
@@ -18,6 +18,10 @@ På Bouvet-utstyr kan vi kun bruke KI-verktøy som er eksplisitt tillatt i [Bouv
 Bakgrunnen er enkel: KI-verktøy behandler ofte sensitiv informasjon og kan utføre handlinger som påvirker kodebase, bygg og leveranser.
 
 Selv om vi __kan__ bruke et verktøy teknisk, betyr det ikke at vi __skal__ bruke det. Hvis et nytt verktøy kan gi nytte i prosjektet, opprett en BSD-sak for vurdering.
+
+{{< caution title="Bruk av KI-verktøy" >}}
+Husk at Bouvet og de fleste kunder har retningslinjer for bruk av KI som __skal__ følges. Det er __ikke__ lov å ta KI-verktøy i bruk uten eksplisitt godkjenning fra Bouvet eller kunde.
+{{< /caution >}}
 
 ## Praktiske råd for trygg KI-bruk i utvikling
 For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha noen enkle, felles arbeidsregler. Disse bør brukes i daglig arbeid, ikke bare som policy på papir. Hvert enkelt team bør utarbeide egne regler og rutiner som passer til konteksten teamet jobber i, slik at våre og kundens krav til sikkerhet kan ivaretas. 
@@ -43,6 +47,21 @@ Målet er ikke å bremse utviklingen, men å bruke KI på en måte som er trygg,
 {{< caution title="Kjøring av KI-generert kode" >}}
 Kode og script foreslått av KI skal alltid gjennomgås før kjøring på utviklingsmaskin. Vær spesielt oppmerksom på kommandoer som laster ned innhold, endrer filrettigheter, starter bakgrunnsprosesser eller skriver til systemområder. Om man kjører KI-verktøyet i en avgrenset sandbox, reduserer man risikoen og kan i større grad la KI-verktøyet jobbe autonomt.
 {{< /caution >}}
+
+## Slik kan KI støtte sikkerhetsarbeidet
+Mye av det vi skriver om KI handler om hva den må sikres mot. Men KI er også et nyttig verktøy *i* sikkerhetsarbeidet, særlig i team som ikke har en sikkerhetsekspert tilgjengelig til daglig.
+
+Noen konkrete bruksområder:
+
+* **Sparringspartner i trusselmodellering**: Be modellen foreslå misbruksscenarier for løsningen, eller utfordre trusselmodellen dere allerede har. Den er god til å komme med vinkler ingen i rommet tenkte på.
+* **Gjennomgang av egen kode**: Få en gjennomgang mot kjente svakhetsmønstre før du ber en kollega se på endringen. Da bruker kollegaen tiden sin på det som faktisk krever vurdering.
+* **Tolking av funn**: La modellen forklare hva et funn fra SAST eller DAST faktisk betyr, og hjelpe til med å skille reelle funn fra støy.
+* **Testtilfeller**: Be om utkast til tester, særlig de negative som sjelden blir skrevet når tiden er knapp.
+* **Vurdering av sårbarheter**: Be om en forklaring på hva en CVE betyr for _deres_ bruk av pakken, ikke bare hva den gjør i teorien.
+
+{{< important title="KI attesterer ingenting" >}}
+KI er god til å finne kandidater og forklare sammenhenger, men den gir ingen garanti. At en modell ikke fant noe betyr ikke at det ikke er noe der, og en KI-gjennomgang erstatter verken kodegjennomgang, sikkerhetstesting eller en reell risikovurdering. Behandle resultatet som innspill, ikke som en attest.
+{{< /important >}}
 
 ## Prompting i praksis
 Gode prompt-rutiner reduserer risiko og øker kvaliteten. Et nyttig prinsipp er at prompten skal være konkret nok til å gi et godt svar, men begrenset nok til at du beholder kontroll på data og resultat.

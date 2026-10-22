@@ -44,22 +44,12 @@ Sentrale avklaringer er:
 En enkel tommelfingerregel er at kode, arkitektur, logger og konfigurasjon behandles som sensitiv informasjon inntil annet er avklart.
 
 ### Versjonskontroll
-Versjonskontroll gir sporbarhet og kontroll over endringer, men sikkerhetsgevinsten avhenger av hvordan arbeidsflyten brukes i praksis. Repositories og branchingstrategi bør konfigureres etter prosjektets behov.
+Versjonskontroll gir sporbarhet og kontroll over endringer, men sikkerhetsgevinsten avhenger av hvordan arbeidsflyten brukes i praksis. Oppsett av repositories, branchingstrategi, signering og hooks er beskrevet i [Versjonskontroll]({{< ref "utvikle/git.md" >}}).
 
 Kildekode er en kritisk verdi i prosjektet og bør vurderes i sammenheng med [disaster recovery og backups]({{< ref "planlegge/business-continuity.md" >}}).
 
 ### CI/CD som sikkerhetskontroll
-Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)]({{< ref "deploye/cicd.md" >}}) kan øke sikkerheten betydelig ved å automatisere kvalitets- og sikkerhetskontroller tidlig i kjeden.
-
-Relevante kontroller er blant annet:
-
-* [Software Composition Analysis (SCA)]({{< ref "utvikle/software-supply-chain.md" >}})
-* Testing av autorisasjon og 401/403-responser
-* Validering av JWT-håndtering
-* [Statisk kodeanalyse (SAST)]({{< ref "utvikle/sikkerhetstesting.md" >}})
-* [Secret scanning]({{< ref "utvikle/hemmeligheter.md" >}})
-
-Flere kontroller krever tilleggsverktøy og lisenser. Vær særlig oppmerksom på verktøy som sender kode til eksterne tjenester for analyse. Det er også viktig å være klar over at eksempelvis actions som brukes som en del av CI/CD er en angrepsvektor, og at de må vurderes og behandles som alle andre komponenter i forsyningskjeden.
+Et godt [CI/CD-system (Continuous Integration / Continuous Deployment)]({{< ref "deploye/cicd.md" >}}) kan øke sikkerheten betydelig ved å automatisere kvalitets- og sikkerhetskontroller tidlig i kjeden. Hvilke kontroller pipelinen bør kjøre, og hvordan tredjeparts actions må behandles som en del av forsyningskjeden, er beskrevet i CI/CD-artikkelen.
 
 ## Forsyningskjedesikkerhet i praksis
 Moderne programvare bygges av mange avhengigheter. Derfor må teamet ha kontroll på hele forsyningskjeden, ikke bare egen kode. Husk på at forsyningskjeden dekker alle avhengigheter teamet har, ikke bare pakker og biblioteker. 

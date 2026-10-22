@@ -1,5 +1,6 @@
 ---
 title: "Develop"
+translationKey: develop
 weight: 8
 menu:
   sidebar:
