@@ -5,11 +5,6 @@ toc_hide: true
 hide_summary: true
 description: >
   Sikkerhet.bouvet.no is used by system developers, infrastructure engineers, DevOps practitioners, and others in Bouvet to find information to support the operation, development, and maintenance of secure IT systems for our customers.
-# Tiles at the foot of the page, in this order.
-front_page_links:
-  - /checklist
-  - /new-hire
-  - /glossary
 ---
 <div class="home">
 <section class="home-hero">
@@ -20,7 +15,7 @@ front_page_links:
     <p>The information on this site is by no means exhaustive on any subject, but aims to use simple language to describe various measures that covers the most common weaknesses.</p>
     <div class="home-cta">
       <span class="home-cta__hint">If you are new to sikkerhet.bouvet.no, we recommend reading the introduction first</span>
-      <a class="sb-button" href="{{< relref "introduction.md" >}}">Read the introduction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="sb-button sb-button--soft" href="{{< relref "introduction.md" >}}">Read the introduction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </div>
   <figure class="home-figure">
@@ -31,13 +26,11 @@ front_page_links:
 <section class="home-section">
   <h2>What are you looking for?</h2>
   <ul class="home-tiles">
-    <li><a href="{{< relref "introduction.md" >}}">Introduction</a></li>
     <li><a href="{{< relref "/plan" >}}">Plan</a></li>
     <li><a href="{{< relref "/design" >}}">Design</a></li>
     <li><a href="{{< relref "/develop" >}}">Develop</a></li>
     <li><a href="{{< relref "/deploy" >}}">Deploy</a></li>
     <li><a href="{{< relref "/manage" >}}">Manage</a></li>
-    <li><a href="{{< relref "/security-champion" >}}">Security Champions</a></li>
   </ul>
 </section>
 <section class="home-cards">
@@ -51,14 +44,14 @@ front_page_links:
         <span class="home-kit__desc">The data processed by the system should not be accessible to unauthorized individuals.</span>
       </div>
       <div class="home-kit__item">
-        <span class="home-kit__key">A</span>
-        <span class="home-kit__term">Availability</span>
-        <span class="home-kit__desc">The functions offered by the system are available when users need them.</span>
-      </div>
-      <div class="home-kit__item">
         <span class="home-kit__key">I</span>
         <span class="home-kit__term">Integrity</span>
         <span class="home-kit__desc">The data processed by the system is correct.</span>
+      </div>
+      <div class="home-kit__item">
+        <span class="home-kit__key">A</span>
+        <span class="home-kit__term">Availability</span>
+        <span class="home-kit__desc">The functions offered by the system are available when users need them.</span>
       </div>
     </div>
   </article>

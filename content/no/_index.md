@@ -5,11 +5,6 @@ toc_hide: true
 hide_summary: true
 description: >
   Sikkerhet.bouvet.no brukes av systemutviklere, infrastruktur-ingeniører, DevOpsere og andre i Bouvet for å finne informasjon relatert til drift, utvikling og forvaltning av sikre IT-systemer for våre kunder.
-# Flisene nederst på siden, i denne rekkefølgen.
-front_page_links:
-  - /sjekklisten
-  - /nyansatt
-  - /ordliste
 ---
 <div class="home">
 <section class="home-hero">
@@ -20,7 +15,7 @@ front_page_links:
     <p>Informasjonen på denne siden er på ingen måte uttømmende om et emne, men har som mål å bruke et enkelt språk til å beskrive ulike tiltak som kan dekke de vanligste svakhetene.</p>
     <div class="home-cta">
       <span class="home-cta__hint">Hvis du er ny til sikkerhet.bouvet.no, anbefaler vi at du leser introduksjonen først</span>
-      <a class="sb-button" href="{{< relref "introduksjon.md" >}}">Les introduksjonen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a class="sb-button sb-button--soft" href="{{< relref "introduksjon.md" >}}">Les introduksjonen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </div>
   <figure class="home-figure">
@@ -31,13 +26,11 @@ front_page_links:
 <section class="home-section">
   <h2>Hva ser du etter?</h2>
   <ul class="home-tiles">
-    <li><a href="{{< relref "introduksjon.md" >}}">Introduksjon</a></li>
-    <li><a href="{{< relref "/planlegge" >}}">Planlegge</a></li>
-    <li><a href="{{< relref "/designe" >}}">Designe</a></li>
+    <li><a href="{{< relref "/planlegge" >}}">Planlegg</a></li>
+    <li><a href="{{< relref "/designe" >}}">Design</a></li>
     <li><a href="{{< relref "/utvikle" >}}">Utvikle</a></li>
     <li><a href="{{< relref "/deploye" >}}">Deploye</a></li>
     <li><a href="{{< relref "/forvalte" >}}">Forvalte</a></li>
-    <li><a href="{{< relref "/security-champion" >}}">Security Champions</a></li>
   </ul>
 </section>
 <section class="home-cards">
@@ -51,14 +44,14 @@ front_page_links:
         <span class="home-kit__desc">Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte.</span>
       </div>
       <div class="home-kit__item">
-        <span class="home-kit__key">T</span>
-        <span class="home-kit__term">Tilgjengelighet</span>
-        <span class="home-kit__desc">Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.</span>
-      </div>
-      <div class="home-kit__item">
         <span class="home-kit__key">I</span>
         <span class="home-kit__term">Integritet</span>
         <span class="home-kit__desc">Dataene systemet behandler er korrekte.</span>
+      </div>
+      <div class="home-kit__item">
+        <span class="home-kit__key">T</span>
+        <span class="home-kit__term">Tilgjengelighet</span>
+        <span class="home-kit__desc">Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.</span>
       </div>
     </div>
   </article>
