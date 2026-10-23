@@ -59,9 +59,9 @@ Noen konkrete bruksområder:
 * **Testtilfeller**: Be om utkast til tester, særlig de negative som sjelden blir skrevet når tiden er knapp.
 * **Vurdering av sårbarheter**: Be om en forklaring på hva en CVE betyr for _deres_ bruk av pakken, ikke bare hva den gjør i teorien.
 
-{{< important title="KI attesterer ingenting" >}}
+{{< tip title="KI attesterer ingenting" >}}
 KI er god til å finne kandidater og forklare sammenhenger, men den gir ingen garanti. At en modell ikke fant noe betyr ikke at det ikke er noe der, og en KI-gjennomgang erstatter verken kodegjennomgang, sikkerhetstesting eller en reell risikovurdering. Behandle resultatet som innspill, ikke som en attest.
-{{< /important >}}
+{{< /tip >}}
 
 ## Prompting i praksis
 Gode prompt-rutiner reduserer risiko og øker kvaliteten. Et nyttig prinsipp er at prompten skal være konkret nok til å gi et godt svar, men begrenset nok til at du beholder kontroll på data og resultat.

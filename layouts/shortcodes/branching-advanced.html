@@ -1,0 +1,83 @@
+{{- /* Branching med egne miljøbrancher og tagging, tegnet som inline SVG.
+       Fem baner: feature, develop, test, prod og hotfix. Hver tagget versjon
+       på develop forplanter seg ned gjennom test til prod.
+
+       Den stiplede linja er en hotfix som er plukket tilbake til develop, så
+       rettelsen ikke forsvinner ved neste release.
+
+       {{< branching-advanced >}} */ -}}
+{{- $m := printf "ba-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 1180 450" style="--sbd-min: 900px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "gitadv_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "gitadv_desc" }}</desc>
+
+      <text class="sbd-title" x="20" y="54">{{ T "git_feature" }}</text>
+      <text class="sbd-title" x="20" y="144">{{ T "git_develop" }}</text>
+      <text class="sbd-title" x="20" y="234">{{ T "git_test" }}</text>
+      <text class="sbd-title" x="20" y="324">{{ T "git_prod" }}</text>
+      <text class="sbd-title" x="20" y="414">{{ T "git_hotfix" }}</text>
+
+      <text class="sbd-meta sbd-slutt" x="1160" y="144">{{ T "git_to_dev" }}</text>
+      <text class="sbd-meta sbd-slutt" x="1160" y="234">{{ T "git_to_test" }}</text>
+      <text class="sbd-meta sbd-slutt" x="1160" y="324">{{ T "git_to_prod" }}</text>
+
+      {{- /* Develop: beskyttet, alt arbeid kommer inn via feature-brancher. */}}
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-2)">
+        <path class="sbd-gren" d="M170 140 H1000" />
+        <circle class="sbd-node" cx="220" cy="140" r="9" />
+        <circle class="sbd-node" cx="360" cy="140" r="9" />
+        <circle class="sbd-node" cx="620" cy="140" r="9" />
+        <circle class="sbd-node" cx="760" cy="140" r="9" />
+        <circle class="sbd-node" cx="910" cy="140" r="9" />
+      </g>
+
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-1)">
+        <path class="sbd-gren" d="M170 50 H230 C295 50 295 140 360 140" />
+        <path class="sbd-gren" d="M360 140 C405 140 405 50 450 50 H650 C705 50 705 140 760 140" />
+        <path class="sbd-gren" d="M760 140 C800 140 800 50 840 50 H870 C905 50 905 140 910 140" />
+        <circle class="sbd-node" cx="200" cy="50" r="9" />
+        <circle class="sbd-node" cx="490" cy="50" r="9" />
+        <circle class="sbd-node" cx="550" cy="50" r="9" />
+        <circle class="sbd-node" cx="610" cy="50" r="9" />
+        <circle class="sbd-node" cx="855" cy="50" r="9" />
+      </g>
+
+      {{- /* Hver tag på develop blir grunnlaget for en testbranch. */}}
+      <text class="sbd-meta sbd-slutt" x="348" y="170">{{ T "git_tag" }} V1</text>
+      <text class="sbd-meta sbd-slutt" x="748" y="170">{{ T "git_tag" }} V2</text>
+      <text class="sbd-meta sbd-slutt" x="898" y="170">{{ T "git_tag" }} V3</text>
+
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-3)">
+        <path class="sbd-gren" d="M170 230 H1000" />
+        <path class="sbd-gren" d="M360 140 C395 140 395 230 430 230" />
+        <path class="sbd-gren" d="M760 140 C780 140 780 230 800 230" />
+        <path class="sbd-gren" d="M910 140 C930 140 930 230 950 230" />
+        <circle class="sbd-node" cx="430" cy="230" r="9" />
+        <circle class="sbd-node" cx="800" cy="230" r="9" />
+        <circle class="sbd-node" cx="950" cy="230" r="9" />
+      </g>
+
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-4)">
+        <path class="sbd-gren" d="M170 320 H1000" />
+        <path class="sbd-gren" d="M430 230 C465 230 465 320 500 320" />
+        <path class="sbd-gren" d="M800 230 C835 230 835 320 870 320" />
+        <path class="sbd-gren" d="M950 230 C970 230 970 320 990 320" />
+        <circle class="sbd-node" cx="500" cy="320" r="9" />
+        <circle class="sbd-node" cx="745" cy="320" r="9" />
+        <circle class="sbd-node" cx="870" cy="320" r="9" />
+        <circle class="sbd-node" cx="990" cy="320" r="9" />
+      </g>
+
+      {{- /* Hotfix: ut fra prod, tilbake til prod, og plukket opp i develop. */}}
+      <path class="sbd-plukk" d="M620 401 V149" />
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-5)">
+        <path class="sbd-gren" d="M500 320 C545 320 545 410 590 410 H655 C700 410 700 320 745 320" />
+        <circle class="sbd-node" cx="620" cy="410" r="9" />
+      </g>
+    </svg>
+  </div>
+  <figcaption>{{ T "gitadv_caption" }}</figcaption>
+</figure>

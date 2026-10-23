@@ -10,7 +10,7 @@ Deployment starts after the artifact has been built and verified. The main princ
 
 This article focuses on rollout to environments. Overall pipeline management is covered in [CI/CD]({{< relref "deploy/cicd.md" >}}), and details about safe artifact production in [Building]({{< relref "deploy/building.md" >}}).
 
-{{< figure src="../cicd.png" >}}
+{{< pipeline-flow >}}
 
 ## Principles for safe deployment
 To reduce operational and security risk, the deployment process should be built on:
@@ -20,7 +20,7 @@ To reduce operational and security risk, the deployment process should be built 
 * **Automated and idempotent rollout**: Same deployment command should produce the same result.
 * **Traceability**: Each deployment should be traceable to artifact, commit, and approval.
 
-{{< figure src="../deploy.png" >}}
+{{< deploy-promotion >}}
 
 ## What a deployment process should cover
 A mature deployment process should cover at minimum:

@@ -13,9 +13,9 @@ Regardless of how the project is executed, it is important that we are aware of 
 * Have contact points with all involved parties
 * Can follow up on deviations quickly so as to avoid misunderstandings or problems later in the project cycle
 
-{{< important title="Note" >}}
+{{< tip title="Note" >}}
 The role <strong>delivery manager</strong> is responsible for security in the delivery, and is responsible for following up on any security concerns. 
-{{< /important >}}
+{{< /tip >}}
 
 ## Operation and Management - Bouvet
 
@@ -33,9 +33,9 @@ If we are only responsible for the development of the solution, it is important 
 * How do we ensure that the necessary hardware and systems have been set up and configured correctly
 * How do we ensure that all parties are aware of the requirements related to deployment, operational incidents, error corrections and similar
 
-{{< important title="Tip" >}}
+{{< tip title="Tip" >}}
 Document the roles and responsibilities and other relevant information in the source code system along with other documentation. This increases its visibility and everyone always knows where the information is.
-{{< /important >}}
+{{< /tip >}}
 
 ## Use of AI
 If AI is included in the delivery, you must also clarify how this is regulated in the agreement. AI opens up many opportunities but also introduces new risks in addition to amplifying existing risks, particularly related to privacy. The AI Act is not yet enacted in Norway, but it is expected to come in the near future, and projects that build solutions covered by this should ensure compliance with the [proposed AI Act](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/) in Norway.
