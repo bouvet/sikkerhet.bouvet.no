@@ -39,6 +39,10 @@ package-lock.json
 /FORFATTERE.md
 /PROMPT-forfatterliste.md
 
-# Genereres av scripts/forfattere.mjs ved bygg
-/data/forfattere.json
+# Genereres ved bygg
 /lenker.json
+
+# data/forfattere.json er med vilje IKKE ignorert. Cloudflare Pages kjører
+# `hugo` direkte, uten npm, så byggsteget i package.json kjøres ikke i
+# produksjon. Fila må derfor ligge i repoet for at bylinen skal vises.
+# .github/workflows/update-article-authors.yaml holder den oppdatert.

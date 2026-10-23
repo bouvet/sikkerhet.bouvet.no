@@ -1,0 +1,67 @@
+name: Forfatterliste
+
+# Cloudflare Pages kjører `hugo` direkte, uten npm, så `_forfattere`-steget i
+# package.json kjøres bare lokalt. Derfor ligger data/forfattere.json i
+# repoet, og denne jobben er det som holder den fersk.
+#
+# En pre-commit-hook hadde ikke fungert: den ser bare HEAD, så en ny artikkel
+# ville ikke fått byline i commiten som oppretter den.
+
+on:
+  push:
+    branches: [main, testing]
+    # Jobben committer data/forfattere.json, som ikke står her. Derfor
+    # trigger den ikke seg selv. Det betyr også at en commit som bare rører
+    # workflowen eller README ikke starter noe — det ser ut som en feil, men
+    # er riktig. Bruk «Run workflow» hvis du trenger en kjøring likevel.
+    paths:
+      - 'content/no/**'
+      - '.mailmap'
+      - 'scripts/forfattere.mjs'
+  workflow_dispatch:
+
+# Uten dette køer brancher bak hverandre når begge pushes omtrent samtidig.
+concurrency:
+  group: forfattere-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  forfattere:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # `git blame` trenger hele historikken. Standard er --depth 1, og da
+          # avbryter skriptet uten å skrive noe (med vilje — se forfattere.mjs).
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Workflowen må ligge på standardbranchen for å dukke opp i
+      # Actions-menyen og få en «Run workflow»-knapp. Har ikke branchen
+      # skriptet ennå, skal jobben være en no-op framfor å feile.
+      - name: Generer forfatterliste
+        run: |
+          if [ ! -f scripts/forfattere.mjs ]; then
+            echo "scripts/forfattere.mjs finnes ikke på ${{ github.ref_name }} — hopper over."
+            exit 0
+          fi
+          node scripts/forfattere.mjs
+
+      - name: Commit hvis lista endret seg
+        run: |
+          # --porcelain fanger både endret og ennå ikke sporet fil.
+          if [ -z "$(git status --porcelain -- data/forfattere.json)" ]; then
+            echo "Forfatterlista er uendret."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/forfattere.json
+          git commit -m 'Oppdaterer forfatterliste'
+          git push origin HEAD:${{ github.ref_name }}

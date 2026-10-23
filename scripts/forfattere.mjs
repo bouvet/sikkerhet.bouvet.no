@@ -7,6 +7,10 @@
 // rørte fila, ikke en liste over bidragsytere. Derfor kjøres dette før hugo,
 // se `_hugo` i package.json.
 //
+// data/forfattere.json er committet, ikke gitignorert. Cloudflare Pages kjører
+// `hugo` direkte uten npm, så byggsteget over kjøres bare lokalt. I produksjon
+// er det .github/workflows/update-article-authors.yaml som holder fila oppdatert.
+//
 // Metoden er `git blame` og ikke commit-telling, fordi commit-telling
 // krediterer den som har gjort flest småfikser framfor den som skrev teksten.
 // `-w` ignorerer ren formatering, `-C` følger tekst som er flyttet mellom
@@ -18,11 +22,12 @@
 // oversatt fra den, så begge språk viser samme liste. Oppslaget skjer på
 // `translationKey`, som er det eneste begge språk deler.
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname.replace(/\/$/, "");
 const KILDE = join(ROOT, "content/no");
+const UT_JSON = join(ROOT, "data/forfattere.json");
 
 // En forfatter må eie minst denne andelen av brødteksten for å bli listet på
 // nettstedet. Uten terskelen havner den som rettet én skrivefeil på lista.
@@ -51,6 +56,35 @@ const BOTER = [/^github-actions/i, /\[bot\]$/i, /^dependabot/i];
 //
 // Navnene er de norske filnavnene — det er bare kildespråket som blames.
 const IKKE_ARTIKLER = ["_index.md", "endringslogg.md", "sjekklisten.md"];
+
+// Byggtjenester kloner ofte med `--depth 1`. `git blame` feiler ikke da — den
+// tilskriver hele fila til den ene commiten som finnes, altså den som sist
+// merget. Det gir byline med feil navn, og det er verre enn ingen byline.
+// Derfor: på en grunn klone, eller uten git i det hele tatt, beholder vi
+// fila som allerede ligger i repoet framfor å overskrive den med søppel.
+function erGrunnKlone() {
+  try {
+    const svar = execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    return svar.trim() !== "false";
+  } catch {
+    return true; // ingen git
+  }
+}
+
+if (erGrunnKlone()) {
+  mkdirSync(join(ROOT, "data"), { recursive: true });
+  if (existsSync(UT_JSON)) {
+    console.log("forfattere: grunn klone eller ingen git — beholder data/forfattere.json fra repoet");
+  } else {
+    writeFileSync(UT_JSON, "{}\n");
+    console.log("forfattere: grunn klone eller ingen git, og ingen datafil fra før — skrev tom fil");
+  }
+  process.exit(0);
+}
 
 function mdFiler(dir) {
   return readdirSync(dir).flatMap((navn) => {
@@ -150,7 +184,7 @@ for (const a of artikler) {
 }
 
 mkdirSync(join(ROOT, "data"), { recursive: true });
-writeFileSync(join(ROOT, "data/forfattere.json"), JSON.stringify(data, null, 2) + "\n");
+writeFileSync(UT_JSON, JSON.stringify(data, null, 2) + "\n");
 
 // --- FORFATTERE.md --------------------------------------------------------
 
