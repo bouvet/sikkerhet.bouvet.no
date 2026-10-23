@@ -10,7 +10,7 @@ Avhengig av sikkerhetsnivået en leveranse ønsker å legge seg på, kan det væ
 
 Disse kan defineres mellom logiske faser i prosjektet, eksempelvis mellom design og utviklingsfasene, eller når en går fra utvikling til første release i produksjon. Andre og flere kontrollpunkter kan også defineres, helt avhengig av kravene leveranseteamet må forholde seg til. 
 
-{{< figure src="../ibm_relative_cost2.png" >}}
+{{< cost-of-defects >}}
 
 IBM har [i en studie](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) fastslått at generelle svakheter i applikasjoner utviklet for det amerikanske forsvaret kostet langt mindre å utbedre jo tidligere de ble oppdaget. 
 

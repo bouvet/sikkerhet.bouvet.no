@@ -1,0 +1,109 @@
+{{- /* Eksempel på nettverksdiagram, tegnet som inline SVG i stedet for en
+       bildefil. Fargene kommer fra designtokens, så figuren følger lyst og
+       mørkt tema, og all tekst som faktisk må oversettes hentes fra i18n.
+       Ressursnavn og adresser er egennavn og står likt på begge språk.
+
+       Flyten går i to bånd — først mot høyre gjennom perimeteren, så tilbake
+       mot venstre gjennom backend. Lagt slik for at figuren skal bli bred og
+       lav; som én loddrett kjede ble den høyere enn et skjermbilde.
+
+       Markør-id-en er suffikset med .Ordinal slik at to diagrammer på samme
+       side ikke deler pilspiss.
+
+       {{< network-diagram >}} */ -}}
+{{- $m := printf "nd-pil-%d" .Ordinal -}}
+{{- $https := "HTTPS 443" -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 1020 520" style="--sbd-min: 900px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "netdiag_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "netdiag_desc" }}</desc>
+      <defs>
+        <marker id="{{ $m }}" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path class="sbd-arrow" d="M0 0 L10 5 L0 10 z" />
+        </marker>
+      </defs>
+
+      {{- /* Bånd 1: bruker → brannmur → de to frontsonene → WAF */}}
+      <rect class="sbd-box sbd-box--user" x="20" y="116" width="130" height="46" rx="23" />
+      <text class="sbd-name" x="85" y="144">{{ T "netdiag_user" }}</text>
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M150 139 H230" />
+      <text class="sbd-edge" x="156" y="131">{{ $https }}</text>
+
+      <rect class="sbd-box sbd-box--sec" x="230" y="114" width="140" height="50" />
+      <text class="sbd-name" x="300" y="144">Azure Firewall</text>
+
+      <path class="sbd-line" d="M370 139 H400 M400 78 V200" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M400 78 H440" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M400 200 H440" />
+
+      <rect class="sbd-group" x="440" y="24" width="320" height="108" />
+      <text class="sbd-title" x="456" y="47">Frontend-dev</text>
+      <text class="sbd-meta sbd-slutt" x="744" y="47">10.0.0.0/27</text>
+      <rect class="sbd-box" x="445" y="58" width="140" height="54" />
+      <text class="sbd-name sbd-name--sm" x="515" y="80">frontend-dev-appsvc</text>
+      <text class="sbd-meta" x="515" y="97">10.0.0.2</text>
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M585 85 H615" />
+      <rect class="sbd-box" x="615" y="58" width="140" height="54" />
+      <text class="sbd-name sbd-name--sm" x="685" y="90">frontend-dev-keyvault</text>
+
+      <rect class="sbd-group" x="440" y="146" width="320" height="108" />
+      <text class="sbd-title" x="456" y="169">Dev workspace</text>
+      <rect class="sbd-box" x="445" y="180" width="140" height="50" />
+      <text class="sbd-name sbd-name--sm" x="515" y="210">{{ T "netdiag_report" }} 1</text>
+      <rect class="sbd-box" x="615" y="180" width="140" height="50" />
+      <text class="sbd-name sbd-name--sm" x="685" y="210">{{ T "netdiag_report" }} 2</text>
+
+      <path class="sbd-line" d="M760 78 H840 M760 200 H840 M840 78 V200" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M840 139 H880" />
+      <text class="sbd-edge" x="766" y="70">{{ $https }}</text>
+      <text class="sbd-edge" x="766" y="192">{{ $https }}</text>
+
+      <rect class="sbd-box sbd-box--sec" x="880" y="114" width="120" height="50" />
+      <text class="sbd-name" x="940" y="144">Azure WAF</text>
+
+      {{- /* Bånd 2: WAF ned og tilbake mot venstre, inn i backend-subnettet */}}
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M940 164 V282 H380 V310" />
+      <text class="sbd-edge" x="948" y="230">{{ $https }}</text>
+
+      <rect class="sbd-group" x="20" y="310" width="720" height="190" />
+      <text class="sbd-title" x="36" y="333">Backend-dev</text>
+      <text class="sbd-meta sbd-slutt" x="724" y="333">10.0.0.32/27</text>
+
+      <rect class="sbd-box" x="40" y="346" width="210" height="52" />
+      <text class="sbd-name" x="145" y="368">backend-dev-appsvc01</text>
+      <text class="sbd-meta" x="145" y="386">10.0.0.36</text>
+      <rect class="sbd-box" x="275" y="346" width="210" height="52" />
+      <text class="sbd-name" x="380" y="368">backend-dev-appsvc02</text>
+      <text class="sbd-meta" x="380" y="386">10.0.0.37</text>
+      <rect class="sbd-box" x="510" y="346" width="210" height="52" />
+      <text class="sbd-name" x="615" y="368">ingress-factory-dev-01</text>
+      <text class="sbd-meta" x="615" y="386">10.0.0.43</text>
+
+      <path class="sbd-line" d="M145 398 V416 M380 398 V416 M615 398 V416 M145 416 H615" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M235 416 V434" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M525 416 V434" />
+
+      <rect class="sbd-box" x="130" y="434" width="210" height="52" />
+      <text class="sbd-name" x="235" y="456">backend-dev-sql01</text>
+      <text class="sbd-meta" x="235" y="474">10.0.0.40</text>
+      <rect class="sbd-box" x="420" y="434" width="210" height="52" />
+      <text class="sbd-name" x="525" y="456">backend-dev-keyvault</text>
+      <text class="sbd-meta" x="525" y="474">10.0.0.50</text>
+
+      {{- /* Ut til dataplattformen */}}
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M720 372 H765 V467 H800" />
+      <text class="sbd-edge" x="726" y="364">{{ $https }}</text>
+
+      <rect class="sbd-group sbd-group--ekstern" x="790" y="392" width="210" height="108" />
+      <text class="sbd-title" x="806" y="416">{{ T "diag_dataplatform" }}</text>
+      <text class="sbd-meta sbd-start" x="806" y="433">{{ T "diag_dependency" }}</text>
+      <rect class="sbd-box" x="800" y="444" width="190" height="46" />
+      <text class="sbd-name sbd-name--sm" x="895" y="464">datalake-somedata-prod01</text>
+      <text class="sbd-meta" x="895" y="481">10.10.10.10</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "netdiag_caption" }}</figcaption>
+</figure>

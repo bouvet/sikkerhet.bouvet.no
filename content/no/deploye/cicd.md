@@ -10,7 +10,7 @@ Continuous Integration og Continuous Delivery (CI/CD) er praksis for å automati
 
 Poenget med CI/CD er ikke bare fart, men kontroll. Hver kjøring bør være sporbar, kunne gjentas og ha tydelige stoppunkt før noe går til produksjon.
 
-{{< figure src="../cicd.png" >}}
+{{< pipeline-flow >}}
 
 ## Prinsipper for CI/CD
 En trygg CI/CD-praksis bygger på noen enkle grunnprinsipper:

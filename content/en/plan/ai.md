@@ -59,9 +59,9 @@ Some concrete uses:
 * **Test cases**: Ask for draft tests, especially the negative ones that rarely get written when time is short.
 * **Assessing vulnerabilities**: Ask what a CVE means for _your_ use of the package, not just what it does in theory.
 
-{{< important title="AI certifies nothing" >}}
+{{< tip title="AI certifies nothing" >}}
 AI is good at finding candidates and explaining connections, but it offers no guarantee. A model finding nothing does not mean there is nothing there, and an AI review replaces neither code review, security testing nor a real risk assessment. Treat the output as input, not as a certificate.
-{{< /important >}}
+{{< /tip >}}
 
 ## Prompting in practice
 Good prompting practices reduce risk and increase quality. A useful principle is that the prompt should be specific enough to give a good answer, but limited enough that you maintain control of the data and results.

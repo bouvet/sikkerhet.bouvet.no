@@ -57,11 +57,11 @@ Vær obs på at workflows spinner opp en VM eller en container på baksiden der 
 Git støtter ulike former for branching, avhengig av hvor kompleks arbeidsflyt en trenger. Uavhengig av hva en går for, er det viktig å ha et forhold til hvordan arbeidsflyten vil være dersom det plutselig dukker opp svakheter eller sårbarheter som _må_ fikses, uavhengig av hva en ellers jobber med. 
 
 En typisk tilnærming er å operere med en produksjonsbranch, ofte `main` eller `master`. Denne bør være beskyttet slik at alle endringer skjer i egne feature-branches som så merges inn via pull-request med dertilhørende review fra andre i teamet. Produksjonsbranchen blir så grunnlaget for alle deployments videre. 
-{{< figure src="../src_trunk.png" alt="Trunk-based merging">}}
+{{< branching-trunk >}}
 
 Det finnes andre og mer komplekse tilnærminger også, eksempelvis med separate branches samt tagging av versjoner. Denne er spesielt nyttig dersom en vedlikeholder flere ulike versjoner i ulike miljø, trenger mulighet for hotfixer eller liknende: 
 
-{{< figure src="../src_advanced.png" alt="More advanced merging" style="max-width: 800px; height: auto;" >}}
+{{< branching-advanced >}}
 
 I dette eksempelet jobber alle utviklere i egne feature branches mot develop-branchen, som beskyttes mot direkte endringer. Denne deployes til dev-miljøet for å verifisere at alt fungerer som det skal. 
 

@@ -1,0 +1,92 @@
+{{- /* Dataflytdiagram, tegnet som inline SVG. Følger dataene fra kilde til
+       rapport i fire kolonner mot høyre, slik at figuren blir bred og lav.
+
+       Pipelinenavn, viewnavn og skjemanavn er egennavn og står likt på begge
+       språk; bare beskrivelsene og kolonneoverskriftene oversettes. Tekstene
+       må holdes korte — SVG bryter ikke linjer.
+
+       {{< dataflow-diagram >}} */ -}}
+{{- $m := printf "df-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 1120 310" style="--sbd-min: 900px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "dataflow_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "dataflow_desc" }}</desc>
+      <defs>
+        <marker id="{{ $m }}" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path class="sbd-arrow" d="M0 0 L10 5 L0 10 z" />
+        </marker>
+      </defs>
+
+      {{- /* Kilder */}}
+      <text class="sbd-title" x="20" y="22">{{ T "dataflow_stage_sources" }}</text>
+      <rect class="sbd-box" x="20" y="40" width="230" height="118" />
+      <text class="sbd-name" x="135" y="62">production-sql-01</text>
+      <text class="sbd-meta" x="135" y="79">on-prem</text>
+      <text class="sbd-head" x="135" y="100">{{ T "dataflow_views" }}</text>
+      <text class="sbd-meta" x="135" y="117">v_get_all_production_data</text>
+      <text class="sbd-meta" x="135" y="132">v_get_production_summary_12mth</text>
+      <text class="sbd-meta" x="135" y="147">v_get_products_info</text>
+
+      <rect class="sbd-box sbd-box--ekstern" x="20" y="178" width="230" height="100" />
+      <text class="sbd-name" x="135" y="200">{{ T "diag_dataplatform" }}</text>
+      <text class="sbd-meta" x="135" y="217">{{ T "diag_dependency" }}</text>
+      <text class="sbd-head" x="135" y="238">{{ T "dataflow_container" }}</text>
+      <text class="sbd-meta" x="135" y="255">datalake-somedata-prod01/</text>
+      <text class="sbd-meta" x="135" y="270">production-data-container</text>
+
+      <path class="sbd-line" d="M250 99 H280 M250 228 H280 M280 99 V228" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M280 164 H310" />
+
+      {{- /* Innlasting */}}
+      <text class="sbd-title" x="310" y="22">{{ T "dataflow_stage_ingest" }}</text>
+      <rect class="sbd-group" x="310" y="40" width="255" height="250" />
+      <text class="sbd-title" x="326" y="62">ingest-factory-dev-01</text>
+      <text class="sbd-head sbd-start" x="326" y="79">{{ T "dataflow_pipelines" }}</text>
+
+      <rect class="sbd-box" x="322" y="92" width="231" height="44" />
+      <text class="sbd-name sbd-name--sm" x="437" y="111">Copy_production_data</text>
+      <text class="sbd-meta" x="437" y="127">{{ T "dataflow_p1" }}</text>
+      <rect class="sbd-box" x="322" y="140" width="231" height="44" />
+      <text class="sbd-name sbd-name--sm" x="437" y="159">Update_production_summary</text>
+      <text class="sbd-meta" x="437" y="175">{{ T "dataflow_p2" }}</text>
+      <rect class="sbd-box" x="322" y="188" width="231" height="44" />
+      <text class="sbd-name sbd-name--sm" x="437" y="207">Refresh_products_info</text>
+      <text class="sbd-meta" x="437" y="223">{{ T "dataflow_p3" }}</text>
+      <rect class="sbd-box" x="322" y="236" width="231" height="44" />
+      <text class="sbd-name sbd-name--sm" x="437" y="255">Copy_datalake_data</text>
+      <text class="sbd-meta" x="437" y="271">{{ T "dataflow_p4" }}</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M565 165 H625" />
+
+      {{- /* Lagring */}}
+      <text class="sbd-title" x="625" y="22">{{ T "dataflow_stage_storage" }}</text>
+      <rect class="sbd-group" x="625" y="40" width="220" height="164" />
+      <text class="sbd-title" x="641" y="62">backend-dev-sql01</text>
+      <text class="sbd-head sbd-start" x="641" y="79">{{ T "dataflow_schemas" }}</text>
+      <rect class="sbd-box" x="637" y="92" width="196" height="44" />
+      <text class="sbd-name" x="735" y="119">CurrentData</text>
+      <rect class="sbd-box" x="637" y="144" width="196" height="44" />
+      <text class="sbd-name" x="735" y="171">HistoricalData</text>
+
+      {{- /* Rapportering. Skjemaene mates til hver sin rapport. */}}
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M833 114 H855 V195 H917" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M833 166 H875 V111 H917" />
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M875 153 H917" />
+
+      <text class="sbd-title" x="905" y="22">{{ T "dataflow_stage_reporting" }}</text>
+      <rect class="sbd-group" x="905" y="40" width="195" height="180" />
+      <text class="sbd-title" x="921" y="62">dev-workspace</text>
+      <text class="sbd-head sbd-start" x="921" y="79">{{ T "dataflow_reports" }}</text>
+      <rect class="sbd-box" x="917" y="94" width="171" height="34" />
+      <text class="sbd-name sbd-name--sm" x="1002" y="116">Report01</text>
+      <rect class="sbd-box" x="917" y="136" width="171" height="34" />
+      <text class="sbd-name sbd-name--sm" x="1002" y="158">Report02</text>
+      <rect class="sbd-box" x="917" y="178" width="171" height="34" />
+      <text class="sbd-name sbd-name--sm" x="1002" y="200">Report03</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "dataflow_caption" }}</figcaption>
+</figure>

@@ -141,6 +141,228 @@
   }
 }
 
+// Diagrammer tegnet som inline SVG: `system-sketch`, `network-diagram`,
+// `dataflow-diagram` og `iam-diagram`. Faste koordinater i et viewBox gir
+// presise forbindelser uten JavaScript, og alle farger kommer fra
+// designtokens slik at figurene følger lyst og mørkt tema.
+//
+// Alle fire er lagt liggende med vilje. Som loddrette kjeder ble de høyere
+// enn et skjermbilde, og en figur du må bla forbi for å lese videre er verre
+// enn en figur du må dra litt på.
+.sb-diagram {
+  margin: 3rem 0;
+
+  &__scroll {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    // Hvert diagram setter selv punktet der teksten blir for liten, med
+    // `--sbd-min` på <svg>. Under det kan figuren dras sidelengs i stedet for
+    // å krympe videre.
+    min-width: var(--sbd-min, 560px);
+    height: auto;
+    // Tekstene arver sideskrifta; SVG har sin egen standard uten dette.
+    font-family: inherit;
+  }
+
+  // Sone: subnett, ressursgruppe eller eksternt system.
+  .sbd-group {
+    fill: var(--bg-2);
+    stroke: var(--border-2);
+    stroke-width: 1.5;
+  }
+
+  // Avhengigheter utenfor teamets eget miljø tegnes stiplet.
+  .sbd-group--ekstern {
+    fill: none;
+    stroke-dasharray: 6 5;
+  }
+
+  .sbd-box {
+    fill: var(--bg-3);
+    stroke: var(--border-3);
+    stroke-width: 1.5;
+  }
+
+  // Brannmur og WAF — det er disse som faktisk håndhever noe.
+  .sbd-box--sec {
+    fill: var(--bg-5);
+    stroke: var(--marker);
+    stroke-width: 2;
+  }
+
+  .sbd-box--user {
+    fill: var(--warm-quiet);
+    stroke: var(--warm);
+    stroke-width: 2;
+  }
+
+  .sbd-box--ekstern {
+    fill: none;
+    stroke-dasharray: 6 5;
+  }
+
+  // Miljøer merkes med grenfargen sin, så dev, test og prod er de samme
+  // fargene her som i gitgrafene. Fargen ligger i ramma og ikke i flata,
+  // slik at teksten beholder kontrasten mot `--bg-3`.
+  .sbd-box--miljo {
+    stroke: var(--sbd-c);
+    stroke-width: 2.5;
+  }
+
+  .sbd-line {
+    fill: none;
+    stroke: var(--fg-4);
+    stroke-width: 1.5;
+  }
+
+  .sbd-arrow {
+    fill: var(--fg-4);
+    stroke: none;
+  }
+
+  // Den synlige fremre kanten av lokket på en sylinder. Følger bokskanten og
+  // ikke forbindelseslinjene, siden den er en del av formen.
+  .sbd-rim {
+    fill: none;
+    stroke: var(--border-3);
+    stroke-width: 1.5;
+  }
+
+  text {
+    text-anchor: middle;
+  }
+
+  .sbd-title {
+    fill: var(--fg-2);
+    font-size: 13px;
+    font-weight: 600;
+    text-anchor: start;
+  }
+
+  // Adresseområder, IP-adresser og annen småtekst under navnet.
+  .sbd-meta {
+    fill: var(--fg-3);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sbd-name {
+    fill: var(--fg-1);
+    font-size: 13px;
+  }
+
+  // Ressursnavn i tette diagrammer, der boksene må være smale for at figuren
+  // skal holde seg bred og lav.
+  .sbd-name--sm {
+    font-size: 11.5px;
+  }
+
+  // Overskrift inne i en sone: «Pipelines», «Skjemaer», «Rapporter».
+  .sbd-head {
+    fill: var(--fg-2);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .sbd-edge {
+    fill: var(--fg-3);
+    font-size: 11px;
+    text-anchor: start;
+  }
+
+  // Rene justeringsmodifikatorer, uavhengige av .sbd-edge: brukes også på
+  // adresseområder og annen småtekst i en sonetittel.
+  .sbd-start {
+    text-anchor: start;
+  }
+
+  .sbd-slutt {
+    text-anchor: end;
+  }
+
+  // Grenfarger for gitgrafene. Egne verdier per tema: paletthuene er valgt
+  // for flater, og en prikk på 9 px trenger mer metning mot hvitt enn mot
+  // navy. Settes på `.sb-diagram` og plukkes opp av `--sbd-c` nedenfor.
+  --sbd-gren-1: #0f8a55;
+  --sbd-gren-2: #1d43c6;
+  --sbd-gren-3: #6d35c4;
+  --sbd-gren-4: #b8521c;
+  --sbd-gren-5: #c4123b;
+
+  // Én bane er én <g> med `--sbd-c` satt, så fargen følger både linja og
+  // commitene uten en klasse per gren.
+  .sbd-gren {
+    fill: none;
+    stroke: var(--sbd-c);
+    stroke-width: 2.5;
+  }
+
+  // Ringen i sidefargen skiller commiten fra linjer som går under den.
+  .sbd-node {
+    fill: var(--sbd-c);
+    stroke: var(--bg-1);
+    stroke-width: 2.5;
+  }
+
+  // Kostnadsrampe for søylediagrammet: grønt tidlig, rødt sent. Egne verdier
+  // per tema, på samme måte som grenfargene.
+  --sbd-kost-1: #0f8a55;
+  --sbd-kost-2: #a8730c;
+  --sbd-kost-3: #b8521c;
+  --sbd-kost-4: #c4123b;
+
+  .sbd-bar {
+    fill: var(--sbd-c);
+  }
+
+  // Grunnlinja søylene måles fra.
+  .sbd-akse {
+    fill: none;
+    stroke: var(--border-3);
+    stroke-width: 1.5;
+  }
+
+  .sbd-verdi {
+    fill: var(--fg-1);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  // Endring plukket over til en annen gren, ikke en vanlig merge.
+  .sbd-plukk {
+    fill: none;
+    stroke: var(--fg-4);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 4;
+  }
+
+  figcaption {
+    margin-top: 1.25rem;
+    color: var(--fg-3);
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+}
+
+// Må stå etter `.sb-diagram`, og etter blokka for mørkt tema i _redesign.scss.
+[data-bs-theme="dark"] .sb-diagram {
+  --sbd-gren-1: #79fe9d;
+  --sbd-gren-2: #8fa8ff;
+  --sbd-gren-3: #c6a2ff;
+  --sbd-gren-4: #f9a86f;
+  --sbd-gren-5: #ff7a97;
+
+  --sbd-kost-1: #79fe9d;
+  --sbd-kost-2: #f4d06f;
+  --sbd-kost-3: #f9a86f;
+  --sbd-kost-4: #ff7a97;
+}
+
 // Links written as `class="underlined-link"` in older content.
 .underlined-link {
   text-decoration: underline;

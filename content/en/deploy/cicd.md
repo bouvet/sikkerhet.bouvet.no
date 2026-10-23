@@ -10,7 +10,7 @@ Continuous Integration and Continuous Delivery (CI/CD) are practices for automat
 
 The point of CI/CD is not just speed but control. Each run should be traceable, repeatable, and have clear stopping points before anything goes to production.
 
-{{< figure src="../cicd.png" >}}
+{{< pipeline-flow >}}
 
 ## Principles for CI/CD
 Safe CI/CD practice is built on a few simple foundational principles:

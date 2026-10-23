@@ -52,11 +52,11 @@ Git supports different branching models depending on how complex a workflow you 
 
 A typical approach is to operate with a production branch, often `main` or `master`. This should be protected so that all changes are made in separate feature branches which are then merged in via pull requests with the accompanying review from others in the team. The production branch then becomes the basis for all deployments going forward. 
 
-{{< figure src="../src_trunk.png" alt="Trunk-based merging">}}
+{{< branching-trunk >}}
 
 There are other and more complex approaches as well, for example with separate branches plus tagging of versions. This is especially useful if you maintain multiple versions across environments, need the ability for hotfixes or similar: 
 
-{{< figure src="../src_advanced.png" alt="More advanced merging" style="max-width: 800px; height: auto;" >}}
+{{< branching-advanced >}}
 
 In this example all developers work in their own feature branches against the develop branch which is protected from direct changes. This is deployed to the dev environment to verify that everything works as it should. 
 

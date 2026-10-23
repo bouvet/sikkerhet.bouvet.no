@@ -41,12 +41,12 @@ The diagrams do not need to be perfect or contain every conceivable detail. Asse
 
 ### High-level System Diagram
 This diagram should be a high-level introduction to the solution, showing all the major components and interactions between them. 
-{{< figure src="../overordnet_systemskisse.png" alt="Overordnet skisse">}}
+{{< system-sketch >}}
 
 ### Network Diagram
 The goal of the network diagram is to show the network topology, with all the various virtual networks, subnets and resources or servers and firewall openings between them. A good network diagram visualizes the data flow between points for everyone to see, not just developers. 
 
-{{< figure src="../nettverksdiagram.png" alt="Nettverksdiagram">}}
+{{< network-diagram >}}
 
 {{< tip title="Keep in mind:" >}}
 Network diagrams should be created for all environments, providing necessary information on all resources in all environments, as well as connections between them.
@@ -55,12 +55,12 @@ Network diagrams should be created for all environments, providing necessary inf
 ### Data Flow Diagram
 The data flow diagram shows the data flow of the solution. This should include all direct dependencies not part of the project, so that it is possible to understand where data originates and all the nodes it interacts with. 
 
-{{< figure src="../dataflytdiagram.png" alt="Dataflytdiagram">}}
+{{< dataflow-diagram >}}
 
 ### IAM Diagram
 An IAM-diagram describes where users originate, and the roles and permissions assigned to users, services and devices on the various resources. 
 
-{{< figure src="../iam.png" alt="IAM-diagram">}}
+{{< iam-diagram >}}
 
 ### Dependencies
 This can also be drawn, but often a simple list is enough. This should contain all direct dependencies of the solution being developed, with a brief summary containing descriptions of what the team depend on. 

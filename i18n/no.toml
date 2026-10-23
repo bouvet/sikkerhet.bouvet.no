@@ -86,3 +86,253 @@ other = "Still et spørsmål"
 
 [bls_intro_ok]
 other = "Ok, skjønner"
+
+[netdiag_title]
+other = "Nettverksdiagram for et utviklingsmiljø"
+
+[netdiag_desc]
+other = "En intern bruker når en Azure Firewall over HTTPS 443. Brannmuren slipper trafikk videre til subnettet Frontend-dev (10.0.0.0/27), som inneholder en app service og en key vault, og til rapportområdet Dev workspace med to rapporter. Begge går videre til en Azure WAF, som slipper trafikken inn i subnettet Backend-dev (10.0.0.32/27). Der ligger to app services og en ingress-factory, som alle bruker den samme SQL-databasen og key vaulten. Ingress-factory henter data fra datasjøen datalake-somedata-prod01 i bedriftens dataplattform, som ligger utenfor miljøet."
+
+
+[netdiag_user]
+other = "Intern bruker"
+
+[netdiag_report]
+other = "Rapport"
+
+
+
+[diag_dataplatform]
+other = "Bedriftens dataplattform"
+
+[diag_dependency]
+other = "(avhengighet)"
+
+[sketch_title]
+other = "Overordnet systemskisse"
+
+[sketch_desc]
+other = "Frontend snakker med Backend. Backend henter data fra to databaser, On-prem SQL og Azure SQL, og utveksler data med bedriftens dataplattform, som er en avhengighet utenfor løsningen. Backend leverer også data til Power BI Reports, som i tillegg henter fra dataplattformen."
+
+[sketch_caption]
+other = "Eksempel på overordnet systemskisse. Den viser bare de største komponentene og hvordan de henger sammen. Avhengigheter utenfor løsningen er stiplet, slik at det er lett å se hva teamet selv rår over."
+
+[dataflow_stage_sources]
+other = "Kilder"
+
+[dataflow_stage_ingest]
+other = "Innlasting"
+
+[dataflow_stage_storage]
+other = "Lagring"
+
+[dataflow_stage_reporting]
+other = "Rapportering"
+
+[dataflow_views]
+other = "Views i bruk"
+
+[dataflow_container]
+other = "Container"
+
+[dataflow_pipelines]
+other = "Pipelines"
+
+[dataflow_schemas]
+other = "Skjemaer"
+
+[dataflow_reports]
+other = "Rapporter"
+
+
+[dataflow_p1]
+other = "Kopierer produksjonsdata"
+
+
+[dataflow_p3]
+other = "Oppdaterer produktindeksen"
+
+
+
+
+
+
+
+[iam_sp]
+other = "Tjenesteprinsipal"
+
+[iam_developer]
+other = "Utvikler"
+
+[iam_appuser]
+other = "Applikasjonsbruker"
+
+[iam_managed]
+other = "Administrerte identiteter"
+
+
+[iam_role_user]
+other = "Brukerrolle"
+
+[iam_scope_sub]
+other = "Abonnement"
+
+[iam_scope_rg]
+other = "Ressursgruppe"
+
+[iam_onprem]
+other = "On-prem, utenfor abonnementet"
+
+
+[iam_title]
+other = "IAM-diagram for et utviklingsmiljø"
+
+[iam_desc]
+other = "Til venstre ligger identitetene i Entra ID: en tjenesteprinsipal for Azure DevOps, de administrerte identitetene til Backend og ingest-factory, en utvikler og en applikasjonsbruker. Til høyre ligger Dev Subscription med ressursene backend-dev-sql01, dev-keyvault og ressursgruppene Backend og Frontend, samt production-sql-01 som står på egen maskinpark utenfor abonnementet. Tjenesteprinsipalen er Owner på abonnementet og utvikleren Contributor. Utvikleren er i tillegg Key Vault Secrets Officer på dev-keyvault og SQL Admin på både backend-dev-sql01 og production-sql-01. De administrerte identitetene er Key Vault Secrets User på dev-keyvault og db_datareader på backend-dev-sql01. Applikasjonsbrukeren har en brukerrolle på Frontend."
+
+[iam_entra_sub]
+other = "Brukere og tjenesteprinsipaler"
+
+[iam_caption]
+other = "Eksempel på IAM-diagram. Identitetene står til venstre, omfangene til høyre, og hver pil er én rolletildeling med rollenavnet påskrevet. Piler som ender på kanten av abonnementsboksen er tildelt på abonnementsnivå og arves ned til alt som ligger i det; piler som ender på en ressurs gjelder bare den ressursen. Poenget er at ingen tilgang står udokumentert."
+
+[netdiag_caption]
+other = "Eksempel på nettverksdiagram for et utviklingsmiljø. Hvert subnett er navngitt med adresseområdet sitt, hver ressurs har sin egen adresse, og pilene viser retningen på trafikken og hvilken port som er åpnet. Rapportområdet når backend-API-et gjennom samme WAF som frontenden. Den stiplede boksen er en avhengighet utenfor teamets eget miljø."
+
+[dataflow_p2]
+other = "Oppdaterer sammendraget"
+
+[dataflow_p4]
+other = "Henter data fra datasjøen"
+
+[dataflow_title]
+other = "Dataflytdiagram for et utviklingsmiljø"
+
+[dataflow_desc]
+other = "Dataene kommer fra to kilder: databasen production-sql-01 på egen maskinpark, der tre views er i bruk, og containeren datalake-somedata-prod01 i bedriftens dataplattform. Begge lastes inn av ingest-factory-dev-01, som kjører fire pipelines. Derfra skrives dataene til skjemaene CurrentData og HistoricalData i backend-dev-sql01. HistoricalData leses av Report01 og Report02 i dev-workspace, CurrentData av Report03."
+
+[dataflow_caption]
+other = "Eksempel på dataflytdiagram. Det følger dataene fra kilde til rapport, og navngir hvilke views, pipelines og skjemaer som faktisk er i bruk i hvert steg. Det er den navngivingen som gjør diagrammet brukbart når et avvik skal spores tilbake."
+
+[git_feature]
+other = "Feature-brancher"
+
+[git_production]
+other = "Produksjonsbranch"
+
+[git_develop]
+other = "Develop-branch"
+
+[git_test]
+other = "Test-branch"
+
+[git_prod]
+other = "Prod-branch"
+
+[git_hotfix]
+other = "Hotfixer"
+
+[git_to_dev]
+other = "Deployes til dev"
+
+[git_to_test]
+other = "Deployes til test"
+
+[git_to_prod]
+other = "Deployes til prod"
+
+[git_tag]
+other = "Tag + branch:"
+
+[gittrunk_title]
+other = "Trunk-based branching"
+
+[gittrunk_desc]
+other = "Produksjonsbranchen går vannrett gjennom figuren. Feature-brancher greiner ut fra den, får noen commits hver, og merges tilbake inn i produksjonsbranchen. Flere feature-brancher er i arbeid samtidig, men alt ender i den samme branchen."
+
+[gittrunk_caption]
+other = "Trunk-based branching. Produksjonsbranchen er beskyttet, og all kode kommer inn via feature-brancher som merges tilbake etter review. Det er den enkleste modellen som fortsatt gir deg kontroll på hva som havner i produksjon."
+
+[gitadv_title]
+other = "Branching med egne miljøbrancher"
+
+[gitadv_desc]
+other = "Fem baner ligger over hverandre: feature, develop, test, prod og hotfix. Utviklerne jobber i feature-brancher som merges inn i develop, som deployes til dev-miljøet. Hver versjon tagges på develop og blir grunnlaget for en testbranch, som deployes til testmiljøet og videre til prod. En hotfix greiner ut fra prod, rettes og merges tilbake til prod, og plukkes i tillegg over til develop med den stiplede linja."
+
+[gitadv_caption]
+other = "Branching med egne brancher per miljø og tagging av versjoner. Nyttig når flere versjoner lever i ulike miljø samtidig, eller når du må kunne rette noe i produksjon uten å dra med deg alt som ligger i develop. Den stiplede linja er hotfixen plukket tilbake til develop, slik at rettelsen ikke forsvinner ved neste release."
+
+[pipe_title]
+other = "CI/CD-flyt fra kodeendring til produksjon"
+
+[pipe_desc]
+other = "Utvikleren committer endringer fra utviklingsmiljøet til versjonskontrollen. Derfra starter utvikleren CI/CD-kjøringen, som bygger artefaktet på en byggeagent. Byggeagenten deployer til dev-miljøet, dev-miljøet videre til test, og fra test til produksjon kreves en godkjenning først."
+
+[pipe_caption]
+other = "CI/CD-flyten fra kodeendring til produksjon. Det samme artefaktet følger hele veien, og stoppunktet før produksjon er bevisst: hver kjøring skal kunne spores, gjentas og godkjennes før den når sluttbrukerne."
+
+[pipe_devenv]
+other = "Utviklingsmiljø"
+
+[pipe_vcs]
+other = "Versjonskontroll"
+
+[pipe_agent]
+other = "Byggeagent"
+
+[pipe_commits]
+other = "Committer endringer"
+
+[pipe_starts]
+other = "CI/CD starter"
+
+[pipe_deploys]
+other = "Deployer til"
+
+[pipe_approval_1]
+other = "Krever godkjenning,"
+
+[pipe_approval_2]
+other = "deployer til"
+
+[promo_title]
+other = "Promotering av artefakt gjennom miljøene"
+
+[promo_desc]
+other = "Det samme artefaktet rulles ut til dev, så til test og til slutt til produksjon. Før utrulling til test kreves en godkjenning, og før utrulling til produksjon kreves godkjenning fra fire øyne."
+
+[promo_caption]
+other = "Samme artefakt promoteres mellom miljøene uten ny bygging underveis. Godkjenningene mellom hvert steg er det som skiller en promotering fra en ny utrulling — det er den samme koden som allerede er verifisert i miljøet før."
+
+[promo_dev]
+other = "Deploy til dev"
+
+[promo_test]
+other = "Deploy til test"
+
+[promo_prod]
+other = "Deploy til prod"
+
+[promo_gate1]
+other = "Godkjenning før deploy"
+
+[promo_gate2]
+other = "4-øyne-godkjenning før deploy"
+
+[kost_title]
+other = "Relativ kostnad ved å rette en svakhet"
+
+[kost_desc]
+other = "Søylediagram over hva det koster å rette en svakhet, avhengig av hvilken fase den blir oppdaget i. Relativt til design, som er satt til 1: design 1, implementasjon 6,5, testing 15 og vedlikehold 100."
+
+[kost_caption]
+other = "Relativ kostnad ved å rette en svakhet, etter hvilken fase den oppdages i. Tallene er relative til design, som er satt til 1. En svakhet som først blir funnet i vedlikeholdsfasen koster hundre ganger så mye å rette som den samme svakheten funnet under design."
+
+[kost_impl]
+other = "Implementasjon"
+
+[kost_drift]
+other = "Vedlikehold"
+
+[kost_v_impl]
+other = "6,5"

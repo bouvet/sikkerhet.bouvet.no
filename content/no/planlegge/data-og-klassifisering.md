@@ -29,9 +29,9 @@ Dette avklares med kunde i oppstarten av prosjektet slik at en kan sikre nødven
 ## Personvern
 Dersom leveranseteamet skal behandle personsensitive opplysninger, er det viktig at teamet setter seg inn i kravene rundt dette. Datatilsynet har publisert en egen veileder for ["Programvareutvikling med innebygd personvern"](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) som gir nyttig innblikk i problemstillingen. 
 
-{{< important title="Viktig" >}}
+{{< caution title="Viktig" >}}
 Norge er underlagt kravene i GDPR gjennom Personopplysningsloven, og det er viktig at leveransene har et forhold til en del krav og definisjoner i denne. Husk også at vi kan være underlagt databehandleravtaler som kan stille strengere krav enn lovverket!
-{{< /important >}}
+{{< /caution >}}
 
 Hensikten med GDPR er å sikre enkeltpersoners rettigheter ved å stille krav til hva personopplysninger kan brukes til samt hvilke, og hvordan disse kan brukes. Lovverket definerer personopplysninger som 
 

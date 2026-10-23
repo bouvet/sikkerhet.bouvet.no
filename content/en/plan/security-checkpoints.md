@@ -10,7 +10,7 @@ Depending on the security level a delivery aims to achieve, it may be necessary 
 
 These can be defined between logical phases in the project, for example, between the design and development phases, or when transitioning from development to the first release in production. Other and additional checkpoints can also be defined, entirely depending on the requirements the delivery team must adhere to.
 
-{{< figure src="../ibm_relative_cost2.png" >}}
+{{< cost-of-defects >}}
 
 [In a study by IBM](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523) it was determined that defects in applications developed for the U.S. military cost significantly less to fix early in the process compared to later.
 
