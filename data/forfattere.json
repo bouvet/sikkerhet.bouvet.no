@@ -1,0 +1,118 @@
+{
+  "build": [
+    "Christoffer Hafsahl"
+  ],
+  "cicd": [
+    "Christoffer Hafsahl"
+  ],
+  "deploy2": [
+    "Christoffer Hafsahl"
+  ],
+  "authz": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "network": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "seg": [
+    "Christoffer Hafsahl"
+  ],
+  "req": [
+    "Christoffer Hafsahl"
+  ],
+  "diagrams": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "threatmodelling": [
+    "Christoffer Hafsahl",
+    "Jostein Tveit"
+  ],
+  "depsmgmt": [
+    "Christoffer Hafsahl"
+  ],
+  "ir": [
+    "Christoffer Hafsahl"
+  ],
+  "logging": [
+    "Andreas Skaret"
+  ],
+  "preparedness": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "verify": [
+    "Christoffer Hafsahl"
+  ],
+  "intro": [
+    "Christoffer Hafsahl"
+  ],
+  "comp": [
+    "Christoffer Hafsahl"
+  ],
+  "nyansatt": [
+    "Christoffer Hafsahl"
+  ],
+  "wordlist": [
+    "Christoffer Hafsahl"
+  ],
+  "ai": [
+    "Christoffer Hafsahl"
+  ],
+  "rolesresp": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "bc": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "data": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "secgates": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "contribute": [
+    "Andreas Skaret"
+  ],
+  "scutover": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "hgsc": [
+    "Christoffer Hafsahl"
+  ],
+  "dataval": [
+    "Christoffer Hafsahl"
+  ],
+  "docs": [
+    "Christoffer Hafsahl"
+  ],
+  "git": [
+    "Christoffer Hafsahl"
+  ],
+  "secrets": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "sikkerhetspraksiser": [
+    "Christoffer Hafsahl"
+  ],
+  "sectesting": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "ssc": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ],
+  "toolsenv": [
+    "Christoffer Hafsahl",
+    "Andreas Skaret"
+  ]
+}
