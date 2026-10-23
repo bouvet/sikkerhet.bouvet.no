@@ -332,13 +332,20 @@ figure img {
   .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    // Keep this in step with the container padding above: the logo bitmap is
+    // cropped tight, so the gap is the only thing holding the air on its right
+    // and the two sides should read as equal.
+    gap: 1rem;
     min-width: 0;
     padding: 0;
     margin: 0;
     color: #fff;
     text-decoration: none;
     overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+      gap: 2rem;
+    }
   }
 
   .navbar-brand__logo {
@@ -1531,6 +1538,24 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     transform: scale(0.97);
   }
 
+  // The quiet surface treatment. On the front page the filled emphasis sits on
+  // the category tiles, so the hero call to action steps back to this.
+  &--soft {
+    background: var(--bg-3);
+    border: 1px solid var(--border-2);
+    color: var(--fg-1);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--bg-4);
+      color: var(--fg-1);
+    }
+
+    &:active {
+      background: var(--bg-5);
+    }
+  }
+
   &--ghost {
     background: transparent;
     border: 1px solid var(--border-3);
@@ -1601,9 +1626,9 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     width: 156px;
     min-height: 72px;
     padding: 0.875rem 1rem;
-    background: var(--bg-3);
-    border: 1px solid var(--border-2);
-    color: var(--fg-1);
+    background: var(--btn-primary-bg);
+    border: 1px solid transparent;
+    color: var(--btn-primary-fg);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.25;
@@ -1615,10 +1640,13 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
 
     &:hover,
     &:focus-visible {
-      background: var(--btn-primary-bg);
-      border-color: transparent;
+      background: var(--btn-primary-bg-hover);
       color: var(--btn-primary-fg);
       text-decoration: none;
+    }
+
+    &:active {
+      background: var(--btn-primary-bg-press);
     }
   }
 
