@@ -1,4 +1,4 @@
-// Local stand-in for the Cloudflare side of the botbird chat.
+// Local stand-in for the Cloudflare side of the BirdBot chat.
 //
 // LOADED ONLY UNDER `hugo server`: hooks/body-end.html wraps the script tag in
 // `hugo.IsServer`, which is false for every build, including the `-e dev`
@@ -20,7 +20,7 @@
   // `hugo server` answers 404 here, so without a stand-in the intro would
   // never show in development.
   const TRACE = '/cdn-cgi/trace';
-  const INTRO_KEY = 'botbird-intro-sett';
+  const INTRO_KEY = 'birdbot-intro-sett';
 
   const valg = new URLSearchParams(location.search).get('bls');
   const ansatt = valg !== 'av';
@@ -108,7 +108,7 @@
 
   window.addEventListener('load', () => {
     console.info(
-      '[Bouvet botbird] Lokal attrapp aktiv (kun under `hugo server`).\n'
+      '[Bouvet BirdBot] Lokal attrapp aktiv (kun under `hugo server`).\n'
       + '  ?bls=ny        spiller introen om igjen\n'
       + '  ?bls=av        later som du står utenfor chatgruppa\n'
       + '  ?bls=utenwarp  later som maskinen ikke er en Bouvetmaskin',

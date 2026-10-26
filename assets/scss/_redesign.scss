@@ -22,7 +22,7 @@
 //  11. Breadcrumbs, pager, section index
 //  12. Front page
 //  13. Footer
-//  14. Botbird
+//  14. BirdBot
 //  15. Print
 // =============================================================================
 
@@ -1753,7 +1753,7 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
       padding-inline: 3rem !important;
     }
 
-    // Botbirden ligger fast nederst til høyre og kan dermed skygge for hva
+    // BirdBot ligger fast nederst til høyre og kan dermed skygge for hva
     // som helst du scroller forbi. Artiklene holdes unna av høyrekolonnen,
     // men forsiden har ingen, så plassen reserveres her i stedet. Samme
     // avstand som footeren bruker. Under lg er fuglen skjult.
@@ -1787,7 +1787,7 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     font-size: 0.8125rem;
     line-height: 1.5;
 
-    // Keep clear of the botbird nest in the bottom-right corner.
+    // Keep clear of the BirdBot nest in the bottom-right corner.
     @include media-breakpoint-up(lg) {
       padding-right: calc(var(--nest-width) + 2rem);
     }
@@ -1836,12 +1836,12 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
 }
 
 // -----------------------------------------------------------------------------
-// 14. Botbird in its nest. Decoration for everyone; the chat layer in
+// 14. BirdBot in its nest. Decoration for everyone; the chat layer in
 //     _spor_bls.scss builds on this geometry (bird 100px wide at right 30px /
 //     bottom 80px, nest 120px high, hidden under 980px). Change one, change
 //     both.
 // -----------------------------------------------------------------------------
-.botbird {
+.birdbot {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -1882,7 +1882,7 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
 // 15. Print
 // -----------------------------------------------------------------------------
 @media print {
-  .botbird,
+  .birdbot,
   .sb-feedback-pill,
   .sb-pager {
     display: none !important;

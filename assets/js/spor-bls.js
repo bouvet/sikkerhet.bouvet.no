@@ -1,4 +1,4 @@
-// «Bouvet botbird»: turns the botbird into a chat button for employees in the
+// «Bouvet BirdBot»: turns BirdBot into a chat button for employees in the
 // chat group. Everyone else sees exactly what they saw before. Copied from
 // ai.bouvet.no («Spør BLS»).
 //
@@ -18,7 +18,7 @@
   const TRACE = '/cdn-cgi/trace';
 
   // Set once the intro has been shown and closed.
-  const INTRO_KEY = 'botbird-intro-sett';
+  const INTRO_KEY = 'birdbot-intro-sett';
   // Must match the transition lengths in _spor_bls.scss.
   const FLIGHT_MS = 1100;
   // The bird arrives this far above the nest and then sinks into it.
@@ -27,11 +27,11 @@
   // Strings from i18n/, written into the page by hooks/body-end.html. The
   // fallbacks only matter if that block is missing.
   const TEKST = Object.assign({
-    navn: 'Bouvet botbird',
+    navn: 'Bouvet BirdBot',
     lukk: 'Lukk',
     sporMeg: 'Spør meg!',
     introMerkelapp: '',
-    introTittel: 'Møt Bouvet botbird',
+    introTittel: 'Møt Bouvet BirdBot',
     introIngress: '',
     introRede: '',
     introSporsmal: 'Still et spørsmål',
@@ -83,9 +83,9 @@
 
   function mount() {
     // Pages without the bird (the /_print/ views) get no chat.
-    const bird = document.querySelector('.botbird');
+    const bird = document.querySelector('.birdbot');
     if (!bird) return;
-    const birdImg = bird.querySelector('.botbird__bird');
+    const birdImg = bird.querySelector('.birdbot__bird');
 
     // Plain button for narrow screens, where the bird is hidden.
     const button = opener('spor-bls-knapp');
@@ -114,19 +114,19 @@
     // The bird itself is the button: a transparent hit area over the bird, with
     // a small «Spør meg!» bubble inside it, shown on hover and keyboard focus.
     // Being inside the button, the bubble can be hovered and clicked too.
-    const birdButton = opener('botbird__knapp');
+    const birdButton = opener('birdbot__knapp');
     birdButton.setAttribute('aria-label', TEKST.navn);
     const hint = document.createElement('span');
-    hint.className = 'botbird__hint';
+    hint.className = 'birdbot__hint';
     hint.setAttribute('aria-hidden', 'true');
     hint.textContent = TEKST.sporMeg;
     birdButton.append(hint);
     // The button must come before the bird image so CSS can lift the bird on
-    // hover (.botbird__knapp:hover ~ .botbird__bird).
+    // hover (.birdbot__knapp:hover ~ .birdbot__bird).
     bird.prepend(birdButton);
     // No longer purely decorative: it now holds a real button.
     bird.removeAttribute('aria-hidden');
-    bird.classList.add('botbird--aktiv');
+    bird.classList.add('birdbot--aktiv');
 
     // Only one of the two is visible at any width.
     const openers = [button, birdButton];
@@ -134,7 +134,7 @@
 
     function setExpanded(open) {
       openers.forEach((b) => b.setAttribute('aria-expanded', String(open)));
-      bird.classList.toggle('botbird--snakker', open);
+      bird.classList.toggle('birdbot--snakker', open);
     }
 
     function focusChat() {
@@ -149,7 +149,7 @@
     function onKey(e) {
       if (e.key !== 'Escape') return;
       if (!panel.hidden) hide();
-      else if (birdButton.matches(':hover, :focus-visible')) bird.classList.add('botbird--stille');
+      else if (birdButton.matches(':hover, :focus-visible')) bird.classList.add('birdbot--stille');
     }
 
     function open() {
@@ -184,7 +184,7 @@
       else hide();
     }
 
-    const quiet = () => bird.classList.remove('botbird--stille');
+    const quiet = () => bird.classList.remove('birdbot--stille');
     birdButton.addEventListener('mouseleave', quiet);
     birdButton.addEventListener('blur', quiet);
     openers.forEach((b) => b.addEventListener('click', toggle));
@@ -274,7 +274,7 @@
     overlay.append(dialog);
 
     // The bird waits in the dialog, so the nest is empty until it lands.
-    bird.classList.add('botbird--borte');
+    bird.classList.add('birdbot--borte');
 
     function onIntroKey(e) {
       if (e.key === 'Escape') {
@@ -309,7 +309,7 @@
       if (!apneChat) fokuserOpner();
 
       if (!til || rolig()) {
-        bird.classList.remove('botbird--borte');
+        bird.classList.remove('birdbot--borte');
         if (apneChat) openChat();
         return;
       }
@@ -379,10 +379,10 @@
   // Hand the bird back to the nest: it appears where the flight ended, then
   // sinks the last bit with the ordinary nest transition.
   function land(bird) {
-    bird.classList.add('botbird--lander');
-    bird.classList.remove('botbird--borte');
+    bird.classList.add('birdbot--lander');
+    bird.classList.remove('birdbot--borte');
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      bird.classList.remove('botbird--lander');
+      bird.classList.remove('birdbot--lander');
     }));
   }
 })();
