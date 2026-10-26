@@ -36,7 +36,7 @@ Portalen bruker Docsy med et eget designlag basert på Bouvets merkevare
   Bootstrap (palett, `$primary`, `$enable-rounded: false`, Inter).
 * `assets/scss/_site.scss` – styling av HTML som står i innholdsfilene.
 * `static/font/Inter/` – Inter lastes lokalt; Docsys Google Fonts-lenke er av.
-* `static/img/` – hvit Bouvet-logo, botbird og forsideillustrasjonen.
+* `static/img/` – hvit Bouvet-logo, BirdBot og forsideillustrasjonen.
 
 Fuglen nederst til høyre er dekorasjon for alle, og chatknapp for ansatte som
 slipper gjennom Cloudflare Access på `/api/chat/me`. Skriptet ligger i
@@ -44,7 +44,7 @@ slipper gjennom Cloudflare Access på `/api/chat/me`. Skriptet ligger i
 `hugo serve` later `assets/js/spor-bls-dev.js` som Cloudflare svarer, så
 chatten og introdialogen kan prøves lokalt (`?bls=ny` spiller introen om
 igjen, `?bls=av` skrur chatten av, `?bls=utenwarp` gir chat uten intro).
-Fuglen fjernes ved å ta bort `{{ partial "botbird.html" . }}` i
+Fuglen fjernes ved å ta bort `{{ partial "birdbot.html" . }}` i
 `layouts/*/baseof.html`.
 
 # Kjøring

@@ -5,6 +5,6 @@
 //
 @import "redesign";
 @import "site";
-// The botbird chat. Must come after `redesign`: several rules in here override
-// `.botbird` at the same specificity and lose if they come first.
+// The BirdBot chat. Must come after `redesign`: several rules in here override
+// `.birdbot` at the same specificity and lose if they come first.
 @import "spor_bls";

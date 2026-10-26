@@ -35,7 +35,7 @@ package-lock.json
 .hugo_build.lock
 
 # Working notes, kept locally rather than in the repo
-/BOTBIRD-NOTAT.md
+/BIRDBOT-NOTAT.md
 /FORFATTERE.md
 /PROMPT-forfatterliste.md
 

@@ -59,9 +59,9 @@ other = "Pass på"
 [breadcrumb_home]
 other = "Forside"
 
-# Botbird-chatten (assets/js/spor-bls.js, skrevet inn via hooks/body-end.html)
+# BirdBot-chatten (assets/js/spor-bls.js, skrevet inn via hooks/body-end.html)
 [bls_navn]
-other = "Bouvet botbird"
+other = "Bouvet BirdBot"
 
 [bls_lukk]
 other = "Lukk"
@@ -73,13 +73,13 @@ other = "Spør meg!"
 other = "Ny på sikkerhet.bouvet.no"
 
 [bls_intro_tittel]
-other = "Møt Bouvet botbird"
+other = "Møt Bouvet BirdBot"
 
 [bls_intro_ingress]
-other = "Botbird hjelper deg å finne fram. Still et spørsmål om sikkerhet, så får du et kort svar og en lenke til riktig side."
+other = "BirdBot hjelper deg å finne fram. Still et spørsmål om sikkerhet, så får du et kort svar og en lenke til riktig side."
 
 [bls_intro_rede]
-other = "Når du lukker denne, flyr botbird til redet sitt nede til høyre. Der er den alltid tilgjengelig."
+other = "Når du lukker denne, flyr BirdBot til redet sitt nede til høyre. Der er den alltid tilgjengelig."
 
 [bls_intro_sporsmal]
 other = "Still et spørsmål"

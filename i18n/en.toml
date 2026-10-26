@@ -56,9 +56,9 @@ other = "Caution"
 [breadcrumb_home]
 other = "Home"
 
-# The botbird chat (assets/js/spor-bls.js, written into the page by hooks/body-end.html)
+# The BirdBot chat (assets/js/spor-bls.js, written into the page by hooks/body-end.html)
 [bls_navn]
-other = "Bouvet botbird"
+other = "Bouvet BirdBot"
 
 [bls_lukk]
 other = "Close"
@@ -70,13 +70,13 @@ other = "Ask me!"
 other = "New on sikkerhet.bouvet.no"
 
 [bls_intro_tittel]
-other = "Meet Bouvet botbird"
+other = "Meet Bouvet BirdBot"
 
 [bls_intro_ingress]
-other = "Botbird helps you find your way. Ask a question about security and you get a short answer and a link to the right page."
+other = "BirdBot helps you find your way. Ask a question about security and you get a short answer and a link to the right page."
 
 [bls_intro_rede]
-other = "When you close this, botbird flies to its nest in the bottom right corner. It is always available there."
+other = "When you close this, BirdBot flies to its nest in the bottom right corner. It is always available there."
 
 [bls_intro_sporsmal]
 other = "Ask a question"
