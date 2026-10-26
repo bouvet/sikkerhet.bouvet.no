@@ -996,7 +996,9 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     margin-left: -1px;
     padding: 0.4375rem 0.75rem 0.4375rem 0.875rem;
     border-left: 2px solid transparent;
-    color: var(--fg-3);
+    // Samme farge som sidemenyen. `--fg-3` var blått på blått i mørk modus;
+    // innholdsfortegnelsen holdes underordnet med størrelse og vekt i stedet.
+    color: var(--fg-2);
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.4;
@@ -1014,12 +1016,31 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     padding-left: 1.625rem;
     font-size: 0.8125rem;
   }
+
+  // Fargen må settes om igjen her, med id-en i selektoren. Docsy fargelegger
+  // lenkene med `#TableOfContents a` og hover med `#TableOfContents a:focus,
+  // ...:hover { color: initial }`. En id slår et hvilket som helst antall
+  // klasser uansett rekkefølge, så `a`-blokka over taper mot begge: i hvile ble
+  // det Docsys `--bs-secondary-color` (som peker på `--fg-3`), og på hover
+  // `initial` i stedet for `--fg-1`. Her er spesifisiteten lik og vi kommer
+  // sist, så disse vinner.
+  #TableOfContents a {
+    color: var(--fg-2);
+
+    // Docsy bruker `:focus`; vi tar begge, ellers blir en klikket lenke
+    // stående igjen med `initial`.
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: var(--fg-1);
+    }
+  }
 }
 
 .sb-toc-title {
   @extend .sb-eyebrow;
 
-  color: var(--fg-3);
+  color: var(--fg-2);
 }
 
 // -----------------------------------------------------------------------------
