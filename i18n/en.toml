@@ -1,0 +1,335 @@
+# Project strings. Docsy ships the rest in its own en.toml.
+
+# Redesign
+[eyebrow_section]
+other = "Section"
+
+[section_index_label]
+other = "In this section"
+
+[toc_title]
+other = "On this page"
+
+[pager_label]
+other = "Previous and next page"
+
+[github_link]
+other = "sikkerhet.bouvet.no on GitHub"
+
+# The feedback pill in the top bar. The full text doubles as the tooltip and the
+# screen reader label, so it has to make sense on its own.
+[feedback_slack]
+other = "Feedback or suggestions? Use #sikkerhet-bouvet-no on Slack!"
+
+[feedback_slack_short]
+other = "Feedback? #sikkerhet-bouvet-no on Slack"
+
+# The dependency chain (the `dependency-chain` shortcode)
+[depchain_own]
+other = "Your code"
+
+[depchain_direct]
+other = "Dependency"
+
+[depchain_transitive]
+other = "Transitive dependencies"
+
+[depchain_caption]
+other = "Your code depends on one package, but pulls in the packages that one depends on as well. Each of them runs with the same access as your own code."
+
+# The author list in the meta strip (data/forfattere.json)
+[post_authors]
+other = "Written by"
+
+[post_authors_and]
+other = "and"
+
+[note_tip]
+other = "Tip"
+
+[note_important]
+other = "Important"
+
+[note_caution]
+other = "Caution"
+
+[breadcrumb_home]
+other = "Home"
+
+# The BirdBot chat (assets/js/spor-bls.js, written into the page by hooks/body-end.html)
+[bls_navn]
+other = "Bouvet BirdBot"
+
+[bls_lukk]
+other = "Close"
+
+[bls_spor_meg]
+other = "Ask me!"
+
+[bls_intro_merkelapp]
+other = "New on sikkerhet.bouvet.no"
+
+[bls_intro_tittel]
+other = "Meet Bouvet BirdBot"
+
+[bls_intro_ingress]
+other = "BirdBot helps you find your way. Ask a question about security and you get a short answer and a link to the right page."
+
+[bls_intro_rede]
+other = "When you close this, BirdBot flies to its nest in the bottom right corner. It is always available there."
+
+[bls_intro_sporsmal]
+other = "Ask a question"
+
+[bls_intro_ok]
+other = "Got it"
+
+[netdiag_title]
+other = "Network diagram for a development environment"
+
+[netdiag_desc]
+other = "An internal user reaches an Azure Firewall over HTTPS 443. The firewall passes traffic on to the Frontend-dev subnet (10.0.0.0/27), which holds an app service and a key vault, and to the Dev workspace reporting area with two reports. Both continue to an Azure WAF, which lets traffic into the Backend-dev subnet (10.0.0.32/27). That subnet holds two app services and an ingress factory, all of which use the same SQL database and key vault. The ingress factory pulls data from the datalake-somedata-prod01 data lake in the company data platform, which sits outside the environment."
+
+
+[netdiag_user]
+other = "Internal user"
+
+[netdiag_report]
+other = "Report"
+
+
+
+[diag_dataplatform]
+other = "Company data platform"
+
+[diag_dependency]
+other = "(dependency)"
+
+[sketch_title]
+other = "High-level system sketch"
+
+[sketch_desc]
+other = "The frontend talks to the backend. The backend reads from two databases, On-prem SQL and Azure SQL, and exchanges data with the company data platform, which is a dependency outside the solution. The backend also feeds Power BI Reports, which additionally reads from the data platform."
+
+[sketch_caption]
+other = "Example of a high-level system sketch. It shows only the largest components and how they relate to each other. Dependencies outside the solution are dashed, so it is easy to see what the team controls itself."
+
+[dataflow_stage_sources]
+other = "Sources"
+
+[dataflow_stage_ingest]
+other = "Ingestion"
+
+[dataflow_stage_storage]
+other = "Storage"
+
+[dataflow_stage_reporting]
+other = "Reporting"
+
+[dataflow_views]
+other = "Views used"
+
+[dataflow_container]
+other = "Container"
+
+[dataflow_pipelines]
+other = "Pipelines"
+
+[dataflow_schemas]
+other = "Schemas"
+
+[dataflow_reports]
+other = "Reports"
+
+
+[dataflow_p1]
+other = "Copies production data"
+
+
+[dataflow_p3]
+other = "Updates the product index"
+
+
+
+
+
+
+
+[iam_sp]
+other = "Service principal"
+
+[iam_developer]
+other = "Developer"
+
+[iam_appuser]
+other = "Application user"
+
+[iam_managed]
+other = "Managed identities"
+
+
+[iam_role_user]
+other = "User role"
+
+[iam_scope_sub]
+other = "Subscription"
+
+[iam_scope_rg]
+other = "Resource group"
+
+[iam_onprem]
+other = "On-prem, outside the subscription"
+
+
+[iam_title]
+other = "IAM diagram for a development environment"
+
+[iam_desc]
+other = "On the left are the identities in Entra ID: a service principal for Azure DevOps, the managed identities of Backend and ingest-factory, a developer and an application user. On the right is Dev Subscription with the resources backend-dev-sql01 and dev-keyvault, the resource groups Backend and Frontend, and production-sql-01, which runs on separate hardware outside the subscription. The service principal is Owner on the subscription and the developer is Contributor. The developer is also Key Vault Secrets Officer on dev-keyvault and SQL Admin on both backend-dev-sql01 and production-sql-01. The managed identities are Key Vault Secrets User on dev-keyvault and db_datareader on backend-dev-sql01. The application user holds a user role on Frontend."
+
+[iam_entra_sub]
+other = "Users and service principals"
+
+[iam_caption]
+other = "Example of an IAM diagram. Identities are on the left, scopes on the right, and every arrow is one role assignment labelled with the role name. Arrows ending on the edge of the subscription box are assigned at subscription level and inherit down to everything inside it; arrows ending on a resource apply to that resource only. The point is that no access goes undocumented."
+
+[netdiag_caption]
+other = "Example network diagram for a development environment. Every subnet is labelled with its address range, every resource has its own address, and the arrows show the direction of traffic and which port is open. The reporting workspace reaches the backend API through the same WAF as the frontend. The dashed box is a dependency outside the team's own environment."
+
+[dataflow_p2]
+other = "Updates the summary"
+
+[dataflow_p4]
+other = "Reads from the data lake"
+
+[dataflow_title]
+other = "Data flow diagram for a development environment"
+
+[dataflow_desc]
+other = "The data comes from two sources: the production-sql-01 database on separate hardware, where three views are in use, and the datalake-somedata-prod01 container in the company data platform. Both are loaded by ingest-factory-dev-01, which runs four pipelines. From there the data is written to the CurrentData and HistoricalData schemas in backend-dev-sql01. HistoricalData is read by Report01 and Report02 in dev-workspace, CurrentData by Report03."
+
+[dataflow_caption]
+other = "Example of a data flow diagram. It follows the data from source to report and names the views, pipelines and schemas actually in use at each step. That naming is what makes the diagram useful when a discrepancy has to be traced back."
+
+[git_feature]
+other = "Feature branches"
+
+[git_production]
+other = "Production branch"
+
+[git_develop]
+other = "Develop branch"
+
+[git_test]
+other = "Test branch"
+
+[git_prod]
+other = "Prod branch"
+
+[git_hotfix]
+other = "Hotfixes"
+
+[git_to_dev]
+other = "Deploys to dev"
+
+[git_to_test]
+other = "Deploys to test"
+
+[git_to_prod]
+other = "Deploys to prod"
+
+[git_tag]
+other = "Tag + branch:"
+
+[gittrunk_title]
+other = "Trunk-based branching"
+
+[gittrunk_desc]
+other = "The production branch runs horizontally through the figure. Feature branches split off from it, take a few commits each, and are merged back into the production branch. Several feature branches are in progress at once, but everything ends up in the same branch."
+
+[gittrunk_caption]
+other = "Trunk-based branching. The production branch is protected, and all code arrives through feature branches that are merged back after review. It is the simplest model that still gives you control over what reaches production."
+
+[gitadv_title]
+other = "Branching with separate environment branches"
+
+[gitadv_desc]
+other = "Five lanes sit above each other: feature, develop, test, prod and hotfix. Developers work in feature branches that are merged into develop, which deploys to the dev environment. Each version is tagged on develop and becomes the basis for a test branch, which deploys to the test environment and on to prod. A hotfix splits off from prod, is fixed and merged back into prod, and is additionally picked over to develop along the dashed line."
+
+[gitadv_caption]
+other = "Branching with a separate branch per environment and tagged versions. Useful when several versions live in different environments at once, or when you have to fix something in production without dragging along everything sitting in develop. The dashed line is the hotfix picked back to develop, so the fix does not disappear at the next release."
+
+[pipe_title]
+other = "CI/CD flow from code change to production"
+
+[pipe_desc]
+other = "The developer commits changes from the dev environment to version control. From there the developer starts the CI/CD run, which builds the artefact on a build agent. The build agent deploys to the dev environment, the dev environment on to test, and going from test to production requires an approval first."
+
+[pipe_caption]
+other = "The CI/CD flow from code change to production. The same artefact travels the whole way, and the stopping point before production is deliberate: every run should be traceable, repeatable and approved before it reaches end users."
+
+[pipe_devenv]
+other = "Dev environment"
+
+[pipe_vcs]
+other = "Version control"
+
+[pipe_agent]
+other = "Build agent"
+
+[pipe_commits]
+other = "Commits changes"
+
+[pipe_starts]
+other = "CI/CD starts"
+
+[pipe_deploys]
+other = "Deploys to"
+
+[pipe_approval_1]
+other = "Requires approval,"
+
+[pipe_approval_2]
+other = "deploys to"
+
+[promo_title]
+other = "Promoting an artefact through the environments"
+
+[promo_desc]
+other = "The same artefact is rolled out to dev, then to test and finally to production. Deploying to test requires an approval, and deploying to production requires four-eyes approval."
+
+[promo_caption]
+other = "The same artefact is promoted between environments with no rebuild along the way. The approvals between each step are what separate a promotion from a fresh deployment — it is the same code already verified in the environment before."
+
+[promo_dev]
+other = "Deploy to dev"
+
+[promo_test]
+other = "Deploy to test"
+
+[promo_prod]
+other = "Deploy to prod"
+
+[promo_gate1]
+other = "Approval before deploy"
+
+[promo_gate2]
+other = "Four-eyes approval before deploy"
+
+[kost_title]
+other = "Relative cost of fixing a defect"
+
+[kost_desc]
+other = "Bar chart of what it costs to fix a defect depending on the phase in which it is found. Relative to design, which is set to 1: design 1, implementation 6.5, testing 15 and maintenance 100."
+
+[kost_caption]
+other = "Relative cost of fixing a defect, by the phase in which it is found. The numbers are relative to design, which is set to 1. A defect first found during maintenance costs a hundred times as much to fix as the same defect found during design."
+
+[kost_impl]
+other = "Implementation"
+
+[kost_drift]
+other = "Maintenance"
+
+[kost_v_impl]
+other = "6.5"

@@ -17,7 +17,7 @@ This article addresses overall incident response and preparedness:
 * how notifications and escalation should occur
 * which logs and monitoring must be in place
 
-Operational recovery after destructive incidents is covered in the article about [preparedness]({{< ref "manage/preparedness.md" >}}).
+Operational recovery after destructive incidents is covered in the article about [preparedness]({{< relref "manage/preparedness.md" >}}).
 
 ## What the Team Must Control
 Before an incident occurs, the following must be clarified and documented:
@@ -26,6 +26,8 @@ Before an incident occurs, the following must be clarified and documented:
 * who can authorize actions, downtime, and external communication
 * which requirements apply to reporting, audit, and deviations
 * which dependencies the solution has on other systems
+
+All customers in Bouvet should have a defined contact point for incidents in Kunder (CRM). If the team has other contact points towards the customer, such as a security operations center (SOC), these should be documented as well so that an incident can be resolved as quickly as possible. In the other direction, the delivery manager is normally the formal contact point in the Bouvet team when the customer needs to reach you.
 
 This must be known throughout the team, not just by individual persons.
 
@@ -40,7 +42,7 @@ For AI-component solutions, this additionally means:
 
 This supports control areas such as "AI system operation and monitoring" and "AI system recording of event logs" in ISO 42001.
 
-See also [Logging and Monitoring]({{< ref "manage/logging-monitoring.md" >}}) for more detailed information on this topic.
+See also [Logging and Monitoring]({{< relref "manage/logging-monitoring.md" >}}) for more detailed information on this topic.
 
 ## When an Incident Occurs
 Incidents can take many forms: vulnerabilities in applications or dependencies, operational anomalies, or active attacks.

@@ -1,0 +1,68 @@
+{{- /* CI/CD-flyten fra kodeendring til produksjon, tegnet som inline SVG i
+       stedet for en bildefil. Brukes av både cicd.md og deploy.md.
+
+       To bånd: først mot høyre fram til byggeagenten, så ned og tilbake og
+       mot høyre gjennom miljøene. Miljøboksene har samme farger som banene i
+       gitgrafene, slik at dev, test og prod er gjenkjennelige på tvers.
+
+       Mellomrommene mellom boksene er satt etter den lengste etiketten på
+       begge språk, ikke etter hva som ser luftig ut.
+
+       {{< pipeline-flow >}} */ -}}
+{{- $m := printf "pf-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 900 340" style="--sbd-min: 700px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "pipe_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "pipe_desc" }}</desc>
+      <defs>
+        <marker id="{{ $m }}" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path class="sbd-arrow" d="M0 0 L10 5 L0 10 z" />
+        </marker>
+      </defs>
+
+      {{- /* Bånd 1: fra utviklerens maskin til byggeagenten */}}
+      <rect class="sbd-box sbd-box--user" x="20" y="40" width="170" height="60" />
+      <text class="sbd-name" x="105" y="75">{{ T "pipe_devenv" }}</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M190 70 H330" />
+      <text class="sbd-edge" x="196" y="62">{{ T "pipe_commits" }}</text>
+
+      <path class="sbd-box" d="M330 44 A85 13 0 0 1 500 44 V96 A85 13 0 0 1 330 96 Z" />
+      <path class="sbd-rim" d="M330 44 A85 13 0 0 0 500 44" />
+      <text class="sbd-name" x="415" y="76">{{ T "pipe_vcs" }}</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M500 70 H650" />
+      <text class="sbd-edge" x="508" y="62">{{ T "pipe_starts" }}</text>
+
+      <rect class="sbd-box" x="650" y="40" width="170" height="60" />
+      <text class="sbd-name" x="735" y="75">{{ T "pipe_agent" }}</text>
+
+      {{- /* Bånd 2: ned og tilbake, så gjennom miljøene */}}
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M735 100 V170 H105 V240" />
+      <text class="sbd-edge" x="743" y="140">{{ T "pipe_deploys" }}</text>
+
+      <rect class="sbd-box sbd-box--miljo" style="--sbd-c: var(--sbd-gren-2)"
+            x="20" y="240" width="170" height="60" />
+      <text class="sbd-name" x="105" y="275">Dev</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M190 270 H330" />
+      <text class="sbd-edge" x="198" y="262">{{ T "pipe_deploys" }}</text>
+
+      <rect class="sbd-box sbd-box--miljo" style="--sbd-c: var(--sbd-gren-3)"
+            x="330" y="240" width="170" height="60" />
+      <text class="sbd-name" x="415" y="275">Test</text>
+
+      <path class="sbd-line" marker-end="url(#{{ $m }})" d="M500 270 H650" />
+      <text class="sbd-edge" x="508" y="250">{{ T "pipe_approval_1" }}</text>
+      <text class="sbd-edge" x="508" y="263">{{ T "pipe_approval_2" }}</text>
+
+      <rect class="sbd-box sbd-box--miljo" style="--sbd-c: var(--sbd-gren-4)"
+            x="650" y="240" width="170" height="60" />
+      <text class="sbd-name" x="735" y="275">Prod</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "pipe_caption" }}</figcaption>
+</figure>

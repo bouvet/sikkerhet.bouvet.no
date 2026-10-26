@@ -1,0 +1,16 @@
+{{- if .Site.Params.ui.showLightDarkModeMenu -}}
+{{/* Docsy applies the stored theme from a script at the end of <body>, which
+     makes the page flash light before switching to dark. Apply it here first;
+     `dark-mode.js` still owns the toggle itself. */ -}}
+<script>
+  (() => {
+    try {
+      const stored = localStorage.getItem('td-color-theme');
+      const theme = stored === 'light' || stored === 'dark'
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+{{- end -}}

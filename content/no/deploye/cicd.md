@@ -10,7 +10,7 @@ Continuous Integration og Continuous Delivery (CI/CD) er praksis for å automati
 
 Poenget med CI/CD er ikke bare fart, men kontroll. Hver kjøring bør være sporbar, kunne gjentas og ha tydelige stoppunkt før noe går til produksjon.
 
-{{< figure src="../cicd.png" >}}
+{{< pipeline-flow >}}
 
 ## Prinsipper for CI/CD
 En trygg CI/CD-praksis bygger på noen enkle grunnprinsipper:
@@ -24,16 +24,18 @@ En trygg CI/CD-praksis bygger på noen enkle grunnprinsipper:
 ## Sikkerhetskontroller i pipeline
 En pipeline bør minimum ha:
 
-* **Skann for hemmeligheter**: Finn hardkodede nøkler, tokens og annen sensitiv informasjon.
-* **Skann avhengigheter**: Finn kjente sårbarheter i tredjepartsbiblioteker.
-* **Statisk kodeanalyse (SAST)**: Finn vanlige svakheter tidlig.
-* **Automatiserte tester**: Kjør enhets-, integrasjons- og relevante sikkerhetstester.
+* **Skann for hemmeligheter**: Finn hardkodede nøkler, tokens og annen sensitiv informasjon, se [Hemmeligheter]({{< relref "utvikle/hemmeligheter.md" >}}).
+* **Skann avhengigheter**: Finn kjente sårbarheter i tredjepartsbiblioteker, såkalt [Software Composition Analysis]({{< relref "utvikle/software-supply-chain.md" >}}).
+* **Statisk kodeanalyse (SAST)**: Finn vanlige svakheter tidlig, se [Sikkerhetstesting]({{< relref "utvikle/sikkerhetstesting.md" >}}).
+* **Automatiserte tester**: Kjør enhets-, integrasjons- og relevante sikkerhetstester, inkludert kontroll av autorisasjon, 401/403-responser og JWT-håndtering.
 * **Kjøringslogg**: Ta vare på logger og metadata for revisjon.
 
 Kritiske funn bør stoppe utrulling, ikke bare gi en advarsel.
 
+Flere av kontrollene krever tilleggsverktøy og lisenser. Vær særlig oppmerksom på verktøy som sender kode til eksterne tjenester for analyse — det er en dataflyt ut av prosjektet som må være avklart.
+
 ## Branching og promote-modell
-Branching henger tett sammen med CI/CD, men detaljene hører hjemme i [Git-artikkelen]({{< ref "utvikle/git.md#branchingstrategi" >}}).
+Branching henger tett sammen med CI/CD, men detaljene hører hjemme i [Git-artikkelen]({{< relref "utvikle/git.md#branchingstrategi" >}}).
 
 I CI/CD-sammenheng er hovedpoenget:
 
@@ -66,12 +68,12 @@ Tiltak:
 * **Overvåk endringer**: Bruk Dependabot eller tilsvarende til å varsle når actions oppdateres, slik at oppdateringen er eksplisitt og sporet.
 * **Bruk av KI i pipeline**: Vær sikker på at du forstår risiko og potensielle utfordringer før du vurderer å bruke KI-baserte actions i pipeline. 
 
-Det generelle bildet for forsyningskjedesikkerhet er beskrevet i [Forsyningskjedesikkerhet]({{< ref "utvikle/software-supply-chain.md" >}}).
+Det generelle bildet for forsyningskjedesikkerhet er beskrevet i [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}).
 
 ## AI i CI/CD
 For KI-løsninger bør samme pipeline-prinsipper gjelde for kode, modeller, datasett og konfigurasjon. Utrulling bør stoppes hvis verifikasjon ikke er bestått.
 
-Detaljer om trygg bygging av artefakter (inkludert signering) er beskrevet i [Bygging]({{< ref "deploye/bygg.md" >}}), og trygg utrulling til miljøer i [Deployering]({{< ref "deploye/deploy.md" >}}).
+Detaljer om trygg bygging av artefakter (inkludert signering) er beskrevet i [Bygging]({{< relref "deploye/bygg.md" >}}), og trygg utrulling til miljøer i [Deployering]({{< relref "deploye/deploy.md" >}}).
 
 ## Praktisk opptak i team
 Implementering av CI/CD bør gjøres trinnvis:

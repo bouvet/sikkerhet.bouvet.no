@@ -1,0 +1,34 @@
+{{/* Meta strip under the page lead: last modified on the left, the link to the
+     print view on the right. The date is also the only date the checklist
+     pages carry, and the checklist is meant to be downloaded, so it has to
+     survive printing — the print link itself obviously does not. */ -}}
+{{ $gh_repo := .Param "github_repo" -}}
+{{ $printPage := "" -}}
+{{ with .CurrentSection.AlternativeOutputFormats.Get "print" -}}
+  {{ $printPage = .RelPermalink -}}
+{{ end -}}
+{{ $hasDate := and .File .GitInfo $gh_repo -}}
+{{/* Forfatterne kommer fra data/forfattere.json, generert av
+     scripts/forfattere.mjs. Slått opp på `translationKey`, så begge språk
+     viser dem som skrev den norske originalen. */ -}}
+{{ $authors := index (default dict .Site.Data.forfattere) (default "" .Params.translationKey) -}}
+
+{{ if or $hasDate $printPage -}}
+<div class="sb-page-meta">
+  {{ if $hasDate -}}
+  <span class="sb-page-meta__date">
+    {{- T "post_last_mod" }} {{ .Lastmod.Format (.Site.Params.time_format_default | default "2006-01-02") -}}
+  </span>
+  {{ end -}}
+  {{ with $authors -}}
+  <span class="sb-page-meta__authors">
+    {{- T "post_authors" }} {{ delimit . ", " (printf " %s " (T "post_authors_and")) -}}
+  </span>
+  {{ end -}}
+  {{ with $printPage -}}
+  <div class="sb-page-meta__links d-print-none">
+    <a id="print" href="{{ . | safeURL }}">{{ T "print_entire_section" }}</a>
+  </div>
+  {{ end -}}
+</div>
+{{ end -}}

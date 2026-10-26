@@ -8,9 +8,9 @@ description: >
 
 Deployering starter etter at artefaktet er bygget og verifisert. Hovedprinsippet er at samme artefakt promoteres mellom miljøer, uten ny bygging underveis.
 
-Denne artikkelen fokuserer på utrulling til miljøer. Selve pipeline-styringen er dekket i [CI/CD]({{< ref "deploye/cicd.md" >}}), og detaljer om trygg artefaktproduksjon i [Bygging]({{< ref "deploye/bygg.md" >}}).
+Denne artikkelen fokuserer på utrulling til miljøer. Selve pipeline-styringen er dekket i [CI/CD]({{< relref "deploye/cicd.md" >}}), og detaljer om trygg artefaktproduksjon i [Bygging]({{< relref "deploye/bygg.md" >}}).
 
-{{< figure src="../cicd.png" >}}
+{{< pipeline-flow >}}
 
 ## Prinsipper for trygg deploy
 For å redusere drifts- og sikkerhetsrisiko bør deployprosessen bygge på:
@@ -20,7 +20,7 @@ For å redusere drifts- og sikkerhetsrisiko bør deployprosessen bygge på:
 * **Automatisert og idempotent utrulling**: Samme deploykommando skal gi samme resultat.
 * **Sporbarhet**: Hver utrulling skal kunne kobles til artefakt, commit og godkjenning.
 
-{{< figure src="../deploy.png" >}}
+{{< deploy-promotion >}}
 
 ## Hva en deployprosess bør dekke
 En moden deployprosess bør minimum dekke:

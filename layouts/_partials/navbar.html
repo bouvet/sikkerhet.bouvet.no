@@ -1,0 +1,89 @@
+{{/* Top banner: navy, white Bouvet logo, site name, language, GitHub, theme and search. */ -}}
+{{ $host := (urls.Parse .Site.BaseURL).Host -}}
+{{ $brand := .Site.Params.brand_name | default $host -}}
+{{ $first := index (split $brand ".") 0 -}}
+{{ $rest := strings.TrimPrefix $first $brand -}}
+
+<nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+  <div class="container-fluid flex-row align-items-center">
+    <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+      {{- /**/ -}}
+      <span class="navbar-brand__logo navbar-logo">
+        <img src="{{ "img/bouvet-logo-hvit.png" | relURL }}" alt="Bouvet" width="143" height="36">
+      </span>
+      {{- /**/ -}}
+      <span class="navbar-brand__name"><b>{{ $first }}</b>{{ $rest }}</span>
+      {{- /**/ -}}
+    </a>
+
+    <div class="td-navbar-nav-scroll ms-auto" id="main_navbar">
+      <ul class="navbar-nav">
+        {{ $p := . -}}
+        {{ range .Site.Menus.main -}}
+        <li class="nav-item">
+          {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
+          {{ $href := "" -}}
+          {{ with .Page -}}
+            {{ $active = or $active ($.IsDescendant .) -}}
+            {{ $href = .RelPermalink -}}
+          {{ else -}}
+            {{ $href = .URL | relLangURL -}}
+          {{ end -}}
+          <a class="nav-link{{ if $active }} active{{ end }}" href="{{ $href }}">{{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}</a>
+        </li>
+        {{ end -}}
+
+        {{/* Feedback pill — the one colourful element in the navy top bar. The
+             full text is the tooltip and the screen reader label; the visible
+             text shrinks to the short variant and then to the bare icon as the
+             bar gets narrower.
+
+             It points at an internal Slack channel, so it ships `hidden` and
+             assets/js/spor-bls.js reveals it on the same /api/chat/me answer
+             that mounts the chat. Outside visitors never get that answer, and
+             with JavaScript off nobody does. */ -}}
+        {{ with .Site.Params.feedback_slack_url | default "https://bouvet.slack.com/archives/C0447R83U6M" -}}
+        <li class="nav-item d-none d-lg-block sb-feedback-pill-item" hidden>
+          <a class="sb-feedback-pill" href="{{ . }}" target="_blank" rel="noopener"
+             title="{{ T "feedback_slack" }}" aria-label="{{ T "feedback_slack" }}">
+            <svg class="sb-feedback-pill__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true" focusable="false">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+            </svg>
+            {{- /**/ -}}
+            <span class="sb-feedback-pill__text sb-feedback-pill__text--full" aria-hidden="true">{{ T "feedback_slack" }}</span>
+            {{- /**/ -}}
+            <span class="sb-feedback-pill__text sb-feedback-pill__text--short" aria-hidden="true">{{ T "feedback_slack_short" }}</span>
+          </a>
+        </li>
+        {{ end -}}
+
+        {{ if gt (len .Site.Home.Translations) 0 -}}
+        <li class="nav-item dropdown d-none d-md-block">
+          {{ partial "navbar-lang-selector.html" . -}}
+        </li>
+        {{ end -}}
+
+        {{ with .Site.Params.github_repo -}}
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link sb-navbar-icon" href="{{ . }}" target="_blank" rel="noopener"
+             aria-label="{{ T "github_link" }}" title="{{ T "github_link" }}">
+            {{ partial "icon.html" "github" -}}
+          </a>
+        </li>
+        {{ end -}}
+
+        {{ if .Site.Params.ui.showLightDarkModeMenu -}}
+        <li class="td-light-dark-menu nav-item dropdown">
+          {{ partial "theme-toggler" . -}}
+        </li>
+        {{ end -}}
+      </ul>
+    </div>
+
+    <div class="d-none d-lg-block">
+      {{ partial "search-input.html" . -}}
+    </div>
+  </div>
+</nav>

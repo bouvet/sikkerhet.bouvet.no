@@ -8,7 +8,7 @@ description: >
 
 Building is the step where source code becomes a deployable artifact. The goal is for the artifact to be reproducible, verifiable, and traceable back to a specific commit and pipeline run.
 
-This article focuses on the building process itself. Overall pipeline management is described in [CI/CD]({{< ref "deploy/cicd.md" >}}), and deployment to environments is described in [Deployment]({{< ref "deploy/deploy.md" >}}).
+This article focuses on the building process itself. Overall pipeline management is described in [CI/CD]({{< relref "deploy/cicd.md" >}}), and deployment to environments is described in [Deployment]({{< relref "deploy/deploy.md" >}}).
 
 ## Build environments and build agents
 Build agents typically come in two main forms:
@@ -29,7 +29,7 @@ A robust build setup should have at least:
 * **Control over build tools**: Compilers, base images, and plugins should be versioned and approved.
 * **Traceability**: The artifact must be traceable back to the commit, pipeline run, and build configuration.
 
-Risk in third-party dependencies is described in [Software Supply Chain Security]({{< ref "develop/software-supply-chain.md" >}}).
+Risk in third-party dependencies is described in [Software Supply Chain Security]({{< relref "develop/software-supply-chain.md" >}}).
 
 ## Signing and artifact integrity
 Yes, signing naturally belongs in the build phase. Signing should happen right after the artifact is produced and verified.

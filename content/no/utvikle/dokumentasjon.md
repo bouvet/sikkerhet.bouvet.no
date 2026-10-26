@@ -19,10 +19,12 @@ Populære tilnærminger inkluderer [docs-as-code](https://docsascode.org/), der 
 
 Uansett løsning: husk at god dokumentasjon kan være like sensitiv som kildekoden. Trusselmodeller med åpne funn, arkitekturbeskrivelser og sikkerhetskonfigurasjoner må beskyttes på linje med systemet de beskriver.
 
+Det gjelder også når noen utenfra ber om innsyn, for eksempel ved en revisjon. Vurder om et sammendrag dekker behovet, om deler av materialet må skjermes, og hvordan tilgangen logges og avgrenses. Målet er å være åpen nok til å dokumentere etterlevelse, uten å eksponere sårbarheter som ennå ikke er lukket.
+
 ## Hva skal dokumenteres
 Hva som må dokumenteres vil variere med prosjektets størrelse og kritikalitet, men følgende bør alltid være på plass:
 
-* **Systemdesign**: [Skisser og diagrammer]({{< ref "designe/systemskisser.md" >}}) som viser infrastruktur, dataflyt, IAM og integrasjoner – på et nivå som gjør det mulig å ettergå arkitekturvalgene som er tatt.
+* **Systemdesign**: [Skisser og diagrammer]({{< relref "designe/systemskisser.md" >}}) som viser infrastruktur, dataflyt, IAM og integrasjoner – på et nivå som gjør det mulig å ettergå arkitekturvalgene som er tatt.
 * **Trusselmodell**: Hvilke trusler er vurdert, hvilke tiltak er innført og hvilken restrisiko er akseptert. Trusselmodellen må vedlikeholdes og oppdateres ved endringer.
 * **Sikkerhetskonfigurasjon**: Konfigurasjoner som er sikkerhetskritiske skal dokumenteres, slik at de ikke utilsiktet endres eller utelates ved oppgradering og nyoppsett.
 * **Hendelseslogg og avvik**: Sikkerhetshendelser og avvik bør loggføres og dokumenteres, inkludert hva som ble gjort og hvilke læringspunkter som ble identifisert.

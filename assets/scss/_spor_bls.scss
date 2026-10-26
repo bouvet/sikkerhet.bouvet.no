@@ -1,0 +1,403 @@
+// ---------------------------------------------------------------------------
+// The BirdBot chat (assets/js/spor-bls.js). Only added to the page for
+// employees in the chat group; everyone else never gets these elements.
+// Copied from ai.bouvet.no («Spør BLS»), class names kept.
+//
+// Wide screens: BirdBot is the button, and the chat opens as a speech
+// bubble above it. Narrow screens (bird hidden): a plain button in the corner
+// and the chat in full screen.
+// ---------------------------------------------------------------------------
+
+// Bird geometry from .birdbot in _redesign.scss: the bird is 100px wide at
+// right 30px / bottom 80px and peeks over the 120px high nest.
+$spor-bls-lift: 22px;        // how far the bird rises on hover and while talking
+$spor-bls-tail-right: 72px;  // tail position, measured from the bubble's right edge
+$spor-bls-sink: 40px;        // how far above the nest the bird lands (SINK in the script)
+$spor-bls-flight: 1100ms;    // length of the flight (FLIGHT_MS in the script)
+
+// --- The bird as button ------------------------------------------------------
+
+// Transparent hit area over the visible part of the bird.
+.birdbot__knapp {
+  position: absolute;
+  right: 26px;
+  bottom: 112px;
+  z-index: 3;
+  width: 108px;
+  height: 72px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  &:focus-visible { outline: 3px solid var(--eyebrow); outline-offset: 2px; }
+}
+
+.birdbot--aktiv .birdbot__bird {
+  transition: transform 260ms cubic-bezier(.3, 1.5, .6, 1);
+}
+// The bird rises out of the nest on hover, on keyboard focus and while the
+// chat is open.
+.birdbot__knapp:hover ~ .birdbot__bird,
+.birdbot__knapp:focus-visible ~ .birdbot__bird,
+.birdbot--snakker .birdbot__bird {
+  transform: scaleX(-1) translateY(-$spor-bls-lift);
+}
+
+// «Spør meg!» next to the bird's head, on hover and keyboard focus. It sits
+// inside the button, so hovering or clicking it counts as the button.
+.birdbot__hint {
+  position: absolute;
+  right: 102px;
+  bottom: 38px;
+  padding: 7px 14px;
+  background: var(--btn-primary-bg);
+  border-radius: 16px 16px 4px 16px;
+  color: var(--btn-primary-fg);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(17, 19, 60, .22);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 160ms ease-out, transform 160ms ease-out;
+  pointer-events: none;
+}
+.birdbot__knapp:hover .birdbot__hint,
+.birdbot__knapp:focus-visible .birdbot__hint {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+// Hidden while the chat is open, and after Escape (until the pointer or focus
+// leaves the bird).
+.birdbot--snakker .birdbot__hint,
+.birdbot--stille .birdbot__hint { display: none; }
+
+// The nest stands empty while the bird is in the intro dialog and in the air.
+// Nothing to hover, point at or click until it has landed.
+.birdbot--borte {
+  .birdbot__bird { opacity: 0; }
+  .birdbot__hint { display: none; }
+  .birdbot__knapp { pointer-events: none; }
+}
+
+// The frame where the bird is handed back from the flight to the nest: it is
+// put where the flight ended, without a transition, and the class is removed
+// on the next frame so it sinks the last $spor-bls-sink into the nest. Comes
+// after the hover rules on purpose, so a pointer resting over the bird does
+// not win the landing.
+.birdbot--aktiv.birdbot--lander .birdbot__bird {
+  transform: scaleX(-1) translateY(-$spor-bls-sink);
+  transition: none;
+}
+
+// --- Plain button (narrow screens, where the bird is hidden) -----------------
+
+.spor-bls-knapp {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 41;
+  display: none;
+  align-items: center;
+  height: 44px;
+  padding: 0 18px;
+  background: var(--btn-primary-bg);
+  border: 0;
+  border-radius: 22px;
+  color: var(--btn-primary-fg);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(17, 19, 60, .22);
+  cursor: pointer;
+
+  &:hover { background: var(--btn-primary-bg-hover); }
+  &:focus-visible { outline: 3px solid var(--eyebrow); outline-offset: 2px; }
+}
+
+// --- The chat as a speech bubble above the bird ------------------------------
+
+.spor-bls-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 196px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  // Escaped so Hugo's Sass passes CSS min() through instead of evaluating it
+  // (same pattern as _redesign.scss).
+  width: #{"min(420px, calc(100vw - 48px))"};
+  height: #{"min(640px, calc(100vh - 220px))"};
+  // The chat page follows the browser's light/dark setting: white, or the navy
+  // #0e1033 in dark. The bubble and its tail use the same colour so they match.
+  --spor-bls-chat-bg: #ffffff;
+  background: var(--spor-bls-chat-bg);
+  border: 1px solid var(--border-2);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(17, 19, 60, .28);
+  transform-origin: calc(100% - #{$spor-bls-tail-right}) 100%;
+  animation: spor-bls-inn 180ms ease-out;
+
+  &[hidden] { display: none; }
+
+  // The tail pointing down at the bird.
+  &::after {
+    content: "";
+    position: absolute;
+    right: $spor-bls-tail-right;
+    bottom: -9px;
+    width: 16px;
+    height: 16px;
+    background: var(--spor-bls-chat-bg);
+    border-right: 1px solid var(--border-2);
+    border-bottom: 1px solid var(--border-2);
+    transform: rotate(45deg);
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 0 8px 0 16px;
+    background: var(--brand-navy);
+    border-radius: 13px 13px 0 0;
+    color: #fff;
+  }
+  &__title { font-weight: 700; }
+  &__close {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    &:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+  }
+  &__frame {
+    flex: 1;
+    width: 100%;
+    border: 0;
+    border-radius: 0 0 13px 13px;
+    background: var(--spor-bls-chat-bg);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .spor-bls-panel { --spor-bls-chat-bg: #0e1033; }
+}
+
+@keyframes spor-bls-inn {
+  from { opacity: 0; transform: translateY(8px) scale(.96); }
+  to { opacity: 1; transform: none; }
+}
+
+// --- Intro dialog (first visit only) -----------------------------------------
+//
+// Presents the bird, then gets out of the way: closing it sends the bird
+// flying down to the nest and writes a flag to localStorage, so it is shown
+// once per browser. Square corners, as in the design sketch.
+
+.bls-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(7, 8, 28, .7);
+  backdrop-filter: blur(4px);
+  animation: bls-intro-bakgrunn 200ms ease-out;
+
+  &__dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: #{"min(560px, 100%)"};
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    background: var(--bg-3);
+    border: 1px solid var(--border-2);
+    animation: bls-intro-inn 240ms cubic-bezier(.2, .8, .3, 1);
+  }
+
+  &__lukk {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--brand-navy);
+    cursor: pointer;
+
+    &:hover { background: var(--cream-deep); }
+    &:focus-visible { outline: 3px solid var(--eyebrow); outline-offset: -3px; }
+  }
+
+  // The bird sits here until the dialog is closed.
+  &__bilde {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: #{"clamp(120px, 28vh, 220px)"};
+    background: var(--cream);
+
+    img { display: block; width: auto; height: 56%; }
+  }
+
+  &__tekst {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+  }
+  &__merkelapp {
+    margin: 0;
+    color: var(--eyebrow);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  &__tittel {
+    margin: 0;
+    color: var(--fg-1);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.025em;
+  }
+  &__avsnitt {
+    margin: 0;
+    color: var(--fg-2);
+    font-size: 16px;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  &__knapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  &__primar, &__sekundar {
+    height: 48px;
+    padding: 0 20px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:active { transform: scale(.97); }
+    &:focus-visible { outline: 3px solid var(--eyebrow); outline-offset: 2px; }
+  }
+  &__primar {
+    background: var(--btn-primary-bg);
+    border: 0;
+    color: var(--btn-primary-fg);
+    &:hover { background: var(--btn-primary-bg-hover); }
+  }
+  &__sekundar {
+    background: transparent;
+    border: 1px solid var(--border-3);
+    color: var(--fg-1);
+    &:hover { background: var(--bg-4); }
+  }
+}
+
+@keyframes bls-intro-bakgrunn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes bls-intro-inn {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
+
+// --- The flight from the dialog to the nest ----------------------------------
+//
+// Built by the script: an outer element moves horizontally, an inner one
+// vertically. Two easings on two axes is what bends the path into an arc; the
+// vertical one overshoots upwards first, so the bird lifts before it dives.
+
+.bls-flukt {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1070;
+  pointer-events: none;
+
+  &__fugl {
+    display: block;
+    transform-origin: 50% 50%;
+  }
+
+  &--flyr {
+    transition: transform $spor-bls-flight cubic-bezier(.45, 0, .3, 1);
+    .bls-flukt__y { transition: transform $spor-bls-flight cubic-bezier(.5, -.45, .6, 1); }
+    .bls-flukt__fugl { transition: transform $spor-bls-flight ease-in-out; }
+  }
+}
+
+// Wide but short screens: no room above the bird, so the bubble uses the
+// height of the window and covers the bird.
+@media (min-width: 980px) and (max-height: 640px) {
+  .spor-bls-panel {
+    bottom: 24px;
+    height: calc(100vh - 48px);
+    &::after { display: none; }
+  }
+}
+
+// Phones and small tablets: the bird is hidden (_redesign.scss), so the plain
+// button shows and the chat takes the full screen.
+@media (max-width: 979px) {
+  .spor-bls-knapp { display: inline-flex; }
+  .spor-bls-panel {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    &::after { display: none; }
+  }
+  .spor-bls-panel__bar,
+  .spor-bls-panel__frame { border-radius: 0; }
+
+  .bls-intro {
+    padding: 0;
+    align-items: flex-end;
+    &__dialog { width: 100%; max-height: 100%; }
+    &__tekst { padding: 24px 20px 28px; }
+    &__tittel { font-size: 26px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .birdbot--aktiv .birdbot__bird,
+  .birdbot__hint { transition: none; }
+  .spor-bls-panel { animation: none; }
+  // The script skips the flight entirely here; this covers the dialog itself.
+  .bls-intro, .bls-intro__dialog { animation: none; }
+  .bls-intro__primar:active, .bls-intro__sekundar:active { transform: none; }
+}
+
+@media print {
+  .spor-bls-knapp, .spor-bls-panel,
+  .bls-intro, .bls-flukt { display: none !important; }
+}

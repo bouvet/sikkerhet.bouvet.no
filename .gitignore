@@ -33,3 +33,16 @@ resources/
 node_modules/
 package-lock.json
 .hugo_build.lock
+
+# Working notes, kept locally rather than in the repo
+/BIRDBOT-NOTAT.md
+/FORFATTERE.md
+/PROMPT-forfatterliste.md
+
+# Genereres ved bygg
+/lenker.json
+
+# data/forfattere.json er med vilje IKKE ignorert. Cloudflare Pages kjører
+# `hugo` direkte, uten npm, så byggsteget i package.json kjøres ikke i
+# produksjon. Fila må derfor ligge i repoet for at bylinen skal vises.
+# .github/workflows/update-article-authors.yaml holder den oppdatert.

@@ -1,4 +1,10 @@
-<div class="tip-box">
-    <strong>{{ .Get "title" }}</strong>
-    <p>{{ .Inner | markdownify }}</p>
+{{- /* The label is the author's own `title` when there is one; `note_tip` is
+       only a fallback, so the box never adds a word the author did not write. */ -}}
+{{- $label := .Get "title" | default (T "note_tip") -}}
+<div class="sb-note sb-note--tip" role="note">
+  {{ partial "icon.html" "lightbulb" -}}
+  <span class="sb-note__label">{{ $label }}</span>
+  <div class="sb-note__body">
+    {{ .Inner | .Page.RenderString (dict "display" "block") }}
+  </div>
 </div>

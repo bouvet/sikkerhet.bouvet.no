@@ -8,7 +8,7 @@ description: >
 Git er idag standard i de fleste prosjekter som kjøres i Bouvet, men skulle du havne i et prosjekt som bruker noe annet vil mange av prinsippene likevel være overførbare. Git i seg selv er selve versjonskontrollverktøyet som håndterer historikk og versjonering, mens Github håndterer alt rundt som CI/CD, sikkerhetstesting og liknende. Azure DevOps har mange de samme funksjonene som beskrives under; selv om Github er brukt som eksempel bør du anta at det samme gjelder for Azure DevOps. 
 
 {{< tip title="Kildekode er kritisk" >}}
-Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< ref "business-continuity.md" >}})!
+Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< relref "business-continuity.md" >}})!
 {{< /tip >}}
 
 ## .gitignore
@@ -17,7 +17,7 @@ Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold t
 __Ikke__ baser deg på at du skal "huske" å ikke inkludere filer når du committer; det er fort gjort å bomme når du skal fikse noe i forbifarten. .gitignore sjekkes inn som med andre filer, slik at andre i teamet også kan få glede av den. Husk bare på at den kun gjelder nye filer; dersom du også vil ekskludere filer som allerede ligger i repoet må de først slettes fra githistorikken. 
 
 ## Hemmeligheter og historikk
-Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike [hemmeligheter]({{< ref "hemmeligheter.md" >}})!, og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
+Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike [hemmeligheter]({{< relref "hemmeligheter.md" >}})!, og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
 
 Å overskrive i git er ikke nok; historikken vil fremdeles være tilgjengelig for alle med tilgang. Alle som har klonet repoet vil også ha en kopi av historikken; selv om det finnes en teknisk mulighet for å omskrive historikken vil dette i mange tilfeller kunne være [vanskelig eller umulig](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#side-effects-of-rewriting-history). 
 
@@ -57,11 +57,11 @@ Vær obs på at workflows spinner opp en VM eller en container på baksiden der 
 Git støtter ulike former for branching, avhengig av hvor kompleks arbeidsflyt en trenger. Uavhengig av hva en går for, er det viktig å ha et forhold til hvordan arbeidsflyten vil være dersom det plutselig dukker opp svakheter eller sårbarheter som _må_ fikses, uavhengig av hva en ellers jobber med. 
 
 En typisk tilnærming er å operere med en produksjonsbranch, ofte `main` eller `master`. Denne bør være beskyttet slik at alle endringer skjer i egne feature-branches som så merges inn via pull-request med dertilhørende review fra andre i teamet. Produksjonsbranchen blir så grunnlaget for alle deployments videre. 
-{{< figure src="../src_trunk.png" alt="Trunk-based merging">}}
+{{< branching-trunk >}}
 
 Det finnes andre og mer komplekse tilnærminger også, eksempelvis med separate branches samt tagging av versjoner. Denne er spesielt nyttig dersom en vedlikeholder flere ulike versjoner i ulike miljø, trenger mulighet for hotfixer eller liknende: 
 
-{{< figure src="../src_advanced.png" alt="More advanced merging" style="max-width: 800px; height: auto;" >}}
+{{< branching-advanced >}}
 
 I dette eksempelet jobber alle utviklere i egne feature branches mot develop-branchen, som beskyttes mot direkte endringer. Denne deployes til dev-miljøet for å verifisere at alt fungerer som det skal. 
 

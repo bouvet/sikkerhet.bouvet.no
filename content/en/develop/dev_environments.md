@@ -1,6 +1,6 @@
 ---
 title: "Development Environment, Tools, and Build Environment"
-weight: 1
+weight: 5
 translationKey: toolsenv
 description: >
   The environments and tools we work with are essential for the project. The team should standardize tool usage, document configuration, and reduce risk in the development and build chain.
@@ -14,7 +14,7 @@ A typical team uses:
 * an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) and extensions
 * version control, typically [git](https://git-scm.com/)
 * AI-based code assistants
-* a [CI/CD]({{< ref "deploy/cicd.md" >}}) tool
+* a [CI/CD]({{< relref "deploy/cicd.md" >}}) tool
 * other services the team operates or consumes, such as messaging services, file transfer, and AI tools
 
 These tools have significant impact on the security and quality of the delivery. The team should therefore clarify which tools are permitted, how they are configured, and how changes or updates are handled where relevant.
@@ -31,7 +31,7 @@ Extensions are, however, a major attack vector. It is important to have some gui
 As with everything on the internet: stars, ratings, and reviews cannot be trusted and should not be the sole basis for deciding whether to adopt something.
 
 ### AI in the development environment
-Generative [AI tools]({{< ref "plan/ai.md" >}}) can increase development velocity, but also introduce new risks. Use of AI _must_ be agreed with the customer before tools are adopted.
+Generative [AI tools]({{< relref "plan/ai.md" >}}) can increase development velocity, but also introduce new risks. Use of AI _must_ be agreed with the customer before tools are adopted.
 
 Key points to clarify:
 
@@ -43,22 +43,12 @@ Key points to clarify:
 A simple rule of thumb: treat code, architecture, logs, and configuration as sensitive information until otherwise agreed.
 
 ### Version control
-Version control provides traceability and control over changes, but the security benefit depends on how the workflow is used in practice. Repositories and branching strategy should be configured to the project's needs.
+Version control provides traceability and control over changes, but the security benefit depends on how the workflow is used in practice. Setting up repositories, branching strategy, signing and hooks is described in [Version Control]({{< relref "develop/git.md" >}}).
 
-Source code is a critical asset in the project and should be considered in the context of [disaster recovery and backups]({{< ref "plan/business-continuity.md" >}}).
+Source code is a critical asset in the project and should be considered in the context of [disaster recovery and backups]({{< relref "plan/business-continuity.md" >}}).
 
 ### CI/CD as a security control
-A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< ref "deploy/cicd.md" >}}) can significantly increase security by automating quality and security controls early in the chain.
-
-Relevant controls include:
-
-* [Software Composition Analysis (SCA)]({{< ref "develop/software-supply-chain.md" >}})
-* Testing authorization and 401/403 responses
-* Validating JWT handling
-* [Static code analysis (SAST)]({{< ref "develop/security-testing.md" >}})
-* [Secret scanning]({{< ref "develop/secrets.md" >}})
-
-Several controls require additional tools and licenses. Be particularly mindful of tools that send code to external services for analysis. It is also important to be aware that actions used as part of CI/CD are an attack vector and must be assessed and treated like any other component in the supply chain.
+A good [CI/CD system (Continuous Integration / Continuous Deployment)]({{< relref "deploy/cicd.md" >}}) can significantly increase security by automating quality and security controls early in the chain. Which controls the pipeline should run, and how third-party actions must be treated as part of the supply chain, is described in the CI/CD article.
 
 ## Supply chain security in practice
 Modern software is built from many dependencies. The team must therefore have control over the entire supply chain, not only its own code. Remember that the supply chain covers all dependencies the team has, not just packages and libraries.

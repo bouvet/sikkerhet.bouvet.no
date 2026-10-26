@@ -67,7 +67,7 @@ For MCP-baserte integrasjoner (Model Context Protocol) gjelder de samme prinsipp
 - klienten bør bare få tilgang til nødvendige MCP-servere, og tilgang bør kunne trekkes tilbake raskt
 - kall mot MCP-verktøy bør logges med hvem/hva/hvorfor, slik at misbruk kan spores
 
-Tilgangsstyring påvirker også operasjonell risiko: For brede agenttilganger gjør hendelser vanskeligere å oppdage og konsekvensene større. Derfor bør tilgangsendringer for agenter logges og følges opp sammen med øvrig driftsovervåking, se [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}).
+Tilgangsstyring påvirker også operasjonell risiko: For brede agenttilganger gjør hendelser vanskeligere å oppdage og konsekvensene større. Derfor bør tilgangsendringer for agenter logges og følges opp sammen med øvrig driftsovervåking, se [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md" >}}).
 
 ## Veien videre
 * [Wikipedia: Authentication](https://en.wikipedia.org/wiki/Authentication)

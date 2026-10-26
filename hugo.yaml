@@ -3,9 +3,10 @@ title: sikkerhet.bouvet.no
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
-# Language settings
-contentDir: content/en
-defaultContentLanguage: en
+# Language settings. Norsk er standardspråket og serveres fra roten; engelsk
+# ligger under /en/.
+contentDir: content/no
+defaultContentLanguage: 'no'
 defaultContentLanguageInSubdir: false
 # Useful when translating.
 enableMissingTranslationPlaceholders: true
@@ -44,20 +45,24 @@ imaging:
 
 # Language configuration
 languages:
-  en:
-    label: English
-    title: Sikkerhet.bouvet.no - For Security Champions in Bouvet
-    params:
-      description: sikkerhet.bouvet.no is a resource for Security Champions at Bouvet
   # cSpell:disable
   'no':
     label: Norsk
+    weight: 1
     contentDir: content/no
     title: Sikkerhet.bouvet.no - For Security Champions i Bouvet
     params:
       description: sikkerhet.bouvet.no er en ressurs for Security Champions i Bouvet
       time_format_default: 02.01.2006
       time_format_blog: 02.01.2006
+  # cSpell:enable
+  en:
+    label: English
+    weight: 2
+    contentDir: content/en
+    title: Sikkerhet.bouvet.no - For Security Champions in Bouvet
+    params:
+      description: sikkerhet.bouvet.no is a resource for Security Champions at Bouvet
 markup:
   goldmark:
     parser:
@@ -94,6 +99,10 @@ params:
 
   privacy_policy: https://www.bouvet.no/om-bouvet/informasjonskapsler-og-personvern
 
+  # Shown in the top bar next to the Bouvet logo. The first dot-separated part
+  # is set in bold and underlined: **sikkerhet**.bouvet.no
+  brand_name: sikkerhet.bouvet.no
+
   # First one is picked as the Twitter card image if not set on page.
   # images: [images/project-illustration.png]
 
@@ -118,6 +127,10 @@ params:
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
   github_repo: https://github.com/bouvet/sikkerhet.bouvet.no
 
+  # The Slack channel behind the feedback pill in the top bar. The channel name
+  # itself lives in the `feedback_slack*` strings in i18n/.
+  feedback_slack_url: https://bouvet.slack.com/archives/C0447R83U6M
+
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
 
@@ -135,7 +148,7 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Sikkerhet.bouvet.no | [MIT](https://opensource.org/license/MIT) |
+    authors: Sikkerhet.bouvet.no | [MIT](https://opensource.org/license/MIT)
     from_year: 2022
 
   # User interface configuration
@@ -148,8 +161,12 @@ params:
     navbar_translucent_over_cover_disable: false
     # Enable to show the side bar menu in its compact state.
     sidebar_menu_compact: false
-    # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-    sidebar_search_disable: false
+    # Seksjoner i venstremenyen kan slås sammen og ut. Pilen stiles i
+    # `_redesign.scss`; Docsys egen Font Awesome-pil er slått av.
+    sidebar_menu_foldable: true
+    # The redesign has search in the top bar only. The sidebar search box is
+    # still rendered on narrow screens, where the top bar hides it.
+    sidebar_search_disable: true
     # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
     # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
     # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,

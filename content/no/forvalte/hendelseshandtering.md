@@ -19,7 +19,7 @@ Denne artikkelen handler om overordnet hendelseshåndtering og beredskap:
 * hvordan varsling og eskalering skal skje
 * hvilke logger og hvilken monitorering som må være på plass
 
-Operativ gjenoppretting etter destruktive hendelser er beskrevet i artikkelen om [gjenoppretting]({{< ref "forvalte/preparedness.md" >}}).
+Operativ gjenoppretting etter destruktive hendelser er beskrevet i artikkelen om [gjenoppretting]({{< relref "forvalte/preparedness.md" >}}).
 
 ## Dette må teamet ha kontroll på
 Før en hendelse oppstår må følgende være avklart og dokumentert:
@@ -28,6 +28,8 @@ Før en hendelse oppstår må følgende være avklart og dokumentert:
 * hvem som kan beslutte tiltak, nedetid og kommunikasjon utad
 * hvilke krav som gjelder for rapportering, revisjon og avvik
 * hvilke avhengigheter løsningen har mot andre systemer
+
+Alle kunder i Bouvet skal ha et definert kontaktpunkt for hendelser i Kunder (CRM). Har teamet andre kontaktpunkter inn mot kunden, som et sikkerhetssenter (SOC), bør også disse dokumenteres slik at en hendelse kan løses så raskt som mulig. Andre veien er leveranseleder normalt det formelle kontaktpunktet i Bouvet-teamet når kunden trenger å nå dere.
 
 Dette må være kjent i hele teamet, ikke bare hos enkeltpersoner.
 
@@ -40,9 +42,9 @@ For løsninger med AI-komponenter betyr dette i tillegg:
 * varsling ved uventet endring i kvalitet, respons eller adferd
 * sporbarhet for beslutninger som påvirker sikkerhet eller etterlevelse
 
-Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i ISO 420001.
+Dette støtter kontrollområder som "AI system operation and monitoring" og "AI system recording of event logs" i ISO 42001.
 
-Se også [Logging og monitorering]({{< ref "forvalte/logging-monitorering.md" >}}) for mer detaljert informasjon rundt temaet.
+Se også [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md" >}}) for mer detaljert informasjon rundt temaet.
 
 ## Når en hendelse inntreffer
 Hendelser kan ta mange former: sårbarheter i applikasjon eller avhengigheter, driftsavvik eller aktive angrep.

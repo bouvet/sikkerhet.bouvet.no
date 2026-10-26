@@ -1,0 +1,44 @@
+# Kanoniske forfatternavn.
+#
+# Flere bidragsytere har både et GitHub-håndtak og sitt fulle navn, eller flere
+# e-postadresser, og splittes derfor i `git shortlog`, `git blame` og alt annet
+# som teller bidrag. Denne fila retter visningsnavnet uten å endre historikken.
+#
+# Format:  Kanonisk Navn <kanonisk@e-post>  Gammelt Navn <gammel@e-post>
+#
+# Bouvet-adresser er alltid fornavn.etternavn@bouvet.no, så navnet er utledet
+# derfra der det finnes en slik adresse. Har noen skrevet et lengre navn enn
+# adressen tilsier, for eksempel med mellomnavn, er det lange brukt.
+
+Christoffer Hafsahl <christoffer.hafsahl@bouvet.no> <chris@chrish.no>
+Christoffer Hafsahl <christoffer.hafsahl@bouvet.no> <chris@bjelleklang.org>
+Christoffer Hafsahl <christoffer.hafsahl@bouvet.no> chrish <christoffer.hafsahl@bouvet.no>
+Christoffer Hafsahl <christoffer.hafsahl@bouvet.no> chrish-bouvet <christoffer.hafsahl@bouvet.no>
+
+Andreas Skaret <andreas.skaret@bouvet.no> andreas.skaret <andreas.skaret@bouvet.no>
+
+Morten Amundsen <morten.amundsen@bouvet.no> netr0m <morten.amundsen@bouvet.no>
+Morten Amundsen <morten.amundsen@bouvet.no> <netr0m@pm.me>
+
+Jostein Tveit <jostein.tveit@bouvet.no> <jostein.tveit@dsb.no>
+
+Kjetil Vinorum <kjetil.vinorum@bouvet.no> <50859479+kjetvin@users.noreply.github.com>
+
+Inge Halvorsen <inge.halvorsen@bouvet.no> bouvet-inge-halvorsen <inge.halvorsen@bouvet.no>
+Inge Halvorsen <inge.halvorsen@bouvet.no> <108091120+HalvorsenInge@users.noreply.github.com>
+
+John Sverre Solem <john.solem@bouvet.no> JohnSverreSolem <john.solem@bouvet.no>
+
+# Samme GitHub-konto (id 3600521), to skrivemåter.
+Knut Erik Hollund <3600521+knut-erik@users.noreply.github.com> Knut Erik <3600521+knu73r1k@users.noreply.github.com>
+
+# Samme e-post, to skrivemåter. Den lengste er kanonisk.
+Stig Oskar Ofstad <stigofstad@gmail.com> Stig Ofstad <stigofstad@gmail.com>
+
+# Avdelingssuffiks fjernet.
+Magnus Longva <61229595+magnus-longva-bouvet@users.noreply.github.com> Magnus Longva (IT MSS LID) <magnus@longva.email>
+
+# Ikke mappet, fordi det ikke finnes grunnlag i repoet for å utlede navnet:
+#   thomfre   <10846906+thomfre@users.noreply.github.com>
+#   AtleFBerg <90725592+AtleFBerg@users.noreply.github.com>
+#   eivamu    <eha@eha.no>

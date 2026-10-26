@@ -13,9 +13,9 @@ Uavhengig av hvordan prosjektet gjennomføres er det viktig at vi har kontroll p
 * At vi har kontaktpunkt hos alle involverte parter
 * Kan følge opp avvik raskt slik at vi unngår misforståelser eller problemer senere i prosjektløpet
 
-{{< important title="Viktig" >}}
+{{< tip title="Merk" >}}
 Rollen <strong>leveranseansvarlig</strong> har ansvar for sikkerheten i leveransen, og er ansvarlig for at dette følges opp. 
-{{< /important >}}
+{{< /tip >}}
 
 ## Utvikling, Drift og forvaltning av løsning 
 ### Bouvet
@@ -35,9 +35,9 @@ Dersom vi kun har ansvar for utvikling av løsningen, er det viktig at vi har g�
 * Hvordan håndterer vi at nødvendig hardware og kapasitet er satt opp
 * Hvordan sikrer vi at behov for deployments, driftshendelser, feilrettinger og liknende kommuniseres til begge parter? 
 
-{{< important title="Tips" >}}
+{{< tip title="Tips" >}}
 Dokumenter ansvarsfordeling og annen relevant informasjon i kildekodesystemet sammen med resten av det som produseres i prosjektet. Det øker synligheten og alle vet til enhver tid hvor informasjonen finnes.
-{{< /important >}}
+{{< /tip >}}
 
 ## Bruk av KI
 Dersom KI inngår i leveransen, må dere også gå opp hvordan dette reguleres i avtalen. KI åpner for mange muligheter, men introduserer også ny risiko i tillegg til å forsterke eksisterende risiko, spesielt knytttet til personvern. KI-loven er per nå ikke innført i Norge, men antagelsen er at denne kommer i nær fremtid, og prosjekter som bygger løsninger som omfattes av denne bør sikre at de er i samsvar med den [foreslåtte KI-loven](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/) i Norge. 

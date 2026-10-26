@@ -17,26 +17,28 @@ For mange prosjekter kan en grundigere gjennomgang være nødvendig. Da vil vi a
 Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
 {{< /tip >}}
 
-## Hva er Informasjonssikkerhet?
+## Hva er en SSDLC?
 
-_Informasjonssikkerhet_ handler om å sikre disse aspektene ved et IT-system:
+_SSDLC_ – Secure Software Development Lifecycle – er en utviklingslivssyklus der sikkerhet hører hjemme i hver fase, ikke som en kontroll til slutt. Fasene er de samme som i et hvilket som helst prosjekt: en planlegger, designer, utvikler, deployer og forvalter. Forskjellen er at hver fase også har sikkerhetsoppgaver knyttet til seg.
 
-__Konfidensialitet__  
-Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte.
-> Eksempel på utfordringer her kan være et miskonfigurert adgangskontrollsystem, det som i OWASP Top 10 kalles - "Broken Access Control"
+Grunnen til at det lønner seg er at de færreste alvorlige sikkerhetsproblemer oppstår i koden – de oppstår i beslutningene. En penetrasjonstest to uker før lansering finner symptomene på et designvalg som ble tatt lenge før, og da er det både dyrt og vanskelig å rette opp.
 
-__Tilgjengelighet__  
-Funksjonene systemet tilbyr er tilgjengelige når brukerne trenger det.
-> Her vil alt fra at en virtuell maskin fryser pga. en full disk, til et målrettet DDoS-angrep være ting å tenke på
+Kapitlene på disse sidene følger fasene, og hvert kapittel har sin egen introduksjon:
 
-__Integritet__  
-Dataene systemet behandler er korrekte.
-> Integriteten kan bli kompromitert for eksempel via et SQL-injeksjons angrep, eller en svakt sikret SSH-server, hvor uautoriserte får tilgang til å endre datene.
+* __[Planlegg]({{< relref "/planlegge" >}})__ – Avklar ansvar, klassifiser data og sett krav til tilgjengelighet og gjenoppretting før arbeidet starter.
+* __[Design]({{< relref "/designe" >}})__ – Gjør kravene om til arkitektur: trusselmodell, nettverk, segregering av miljø og tilgangsstyring.
+* __[Utvikle]({{< relref "/utvikle" >}})__ – Skriv koden med OWASP Top 10 i bakhodet, håndter hemmeligheter forsvarlig og valider data som kommer utenfra.
+* __[Deploye]({{< relref "/deploye" >}})__ – Bygg et artefakt som kan verifiseres, og test løsningen før den settes i drift.
+* __[Forvalte]({{< relref "/forvalte" >}})__ – Logg og monitorer, følg med på svakheter i avhengighetene, og vit hvem som gjør hva når noe skjer.
 
+En SSDLC er ikke en port en passerer én gang. Fasene gjentas for hver endring av betydning, og et designvalg som var riktig ved oppstart kan være feil to år senere.
+
+Omfanget bør stå i forhold til risikoen. Et internt verktøy uten personopplysninger trenger ikke den samme innsatsen som en løsning som behandler sensitive data for mange brukere – men begge bør ha vært gjennom en vurdering, slik at omfanget er et valg og ikke en forglemmelse.
+
+Vil dere ha et mer formelt rammeverk å måle dere mot, er [OWASP SAMM](https://owaspsamm.org/), [NIST SSDF](https://csrc.nist.gov/projects/ssdf) og [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl) gode steder å se.
 
 ## Hvordan bruke sikkerhet.bouvet.no?
 
-_sikkerhet.bouvet.no_ er bygd opp i kapitler avgrenset av domenene de omhandler.  
 Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
 Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
 

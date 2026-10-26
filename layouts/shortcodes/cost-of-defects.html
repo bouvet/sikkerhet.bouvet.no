@@ -1,0 +1,42 @@
+{{- /* Relativ kostnad ved å rette en svakhet, etter hvilken fase den blir
+       oppdaget i. Tegnet som inline SVG i stedet for en bildefil.
+
+       Liggende søyler, ikke stående: skalaen er lineær fordi det er hele
+       poenget — 100 mot 1 — men da blir den første søyla en hårstrek. Liggende
+       får hver søyle verdien sin lesbar rett ved enden.
+
+       Tallene er relative til design = 1 og kommer fra IBM-studien artikkelen
+       lenker til. Desimaltegnet er ulikt på de to språkene, så 6,5 hentes fra
+       i18n og ikke fra malen.
+
+       {{< cost-of-defects >}} */ -}}
+{{- $m := printf "kd-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 900 250" style="--sbd-min: 620px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "kost_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "kost_desc" }}</desc>
+
+      {{- /* Grunnlinja søylene måles fra. */}}
+      <path class="sbd-akse" d="M180 18 V229" />
+
+      <text class="sbd-title sbd-slutt" x="160" y="46">Design</text>
+      <rect class="sbd-bar" style="--sbd-c: var(--sbd-kost-1)" x="180" y="24" width="6.4" height="34" />
+      <text class="sbd-verdi sbd-start" x="196" y="46">1</text>
+
+      <text class="sbd-title sbd-slutt" x="160" y="101">{{ T "kost_impl" }}</text>
+      <rect class="sbd-bar" style="--sbd-c: var(--sbd-kost-2)" x="180" y="79" width="41.6" height="34" />
+      <text class="sbd-verdi sbd-start" x="232" y="101">{{ T "kost_v_impl" }}</text>
+
+      <text class="sbd-title sbd-slutt" x="160" y="156">Testing</text>
+      <rect class="sbd-bar" style="--sbd-c: var(--sbd-kost-3)" x="180" y="134" width="96" height="34" />
+      <text class="sbd-verdi sbd-start" x="286" y="156">15</text>
+
+      <text class="sbd-title sbd-slutt" x="160" y="211">{{ T "kost_drift" }}</text>
+      <rect class="sbd-bar" style="--sbd-c: var(--sbd-kost-4)" x="180" y="189" width="640" height="34" />
+      <text class="sbd-verdi sbd-start" x="830" y="211">100</text>
+    </svg>
+  </div>
+  <figcaption>{{ T "kost_caption" }}</figcaption>
+</figure>

@@ -8,7 +8,7 @@ description: >
 
 Bygging er steget der kildekode blir til et deploybart artefakt. Målet er at artefaktet skal kunne reproduseres, kontrolleres og spores tilbake til en konkret commit og pipeline-kjøring.
 
-Denne artikkelen fokuserer på selve byggingen. Overordnet pipeline-styring er beskrevet i [CI/CD]({{< ref "deploye/cicd.md" >}}), og utrulling til miljø er beskrevet i [Deployering]({{< ref "deploye/deploy.md" >}}).
+Denne artikkelen fokuserer på selve byggingen. Overordnet pipeline-styring er beskrevet i [CI/CD]({{< relref "deploye/cicd.md" >}}), og utrulling til miljø er beskrevet i [Deployering]({{< relref "deploye/deploy.md" >}}).
 
 ## Byggmiljø og byggeagenter
 Byggagenter kommer ofte i to hovedformer:
@@ -29,7 +29,7 @@ Et robust byggoppsett bør minimum ha:
 * **Kontroll på byggverktøy**: Kompilatorer, baseimages og plugins bør versjonstyres og godkjennes.
 * **Sporbarhet**: Artefaktet må kunne kobles til commit, pipeline-kjøring og byggkonfigurasjon.
 
-Risiko i tredjepartsavhengigheter er beskrevet i [Forsyningskjedesikkerhet]({{< ref "utvikle/software-supply-chain.md" >}}).
+Risiko i tredjepartsavhengigheter er beskrevet i [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}).
 
 ## Signering og artefaktintegritet
 Ja, signering hører naturlig hjemme i bygg-fasen. Signering bør gjøres rett etter at artefaktet er produsert og verifisert.

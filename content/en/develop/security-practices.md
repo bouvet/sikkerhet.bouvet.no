@@ -47,7 +47,7 @@ For projects with AI components, the team should also use:
 * [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 * [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
 
-Details on safe use of AI in the development process are described in [Use of Artificial Intelligence]({{< ref "plan/ai.md" >}}). Risks around dependencies, artifacts, and the build chain are described in [Software Supply Chain]({{< ref "develop/software-supply-chain.md" >}}).
+Details on safe use of AI in the development process are described in [Use of Artificial Intelligence]({{< relref "plan/ai.md" >}}). Risks around dependencies, artifacts, and the build chain are described in [Software Supply Chain]({{< relref "develop/software-supply-chain.md" >}}).
 
 OWASP publishes much more in addition, including other Top 10 lists and what they call ["cheat sheets"](https://cheatsheetseries.owasp.org/), which provide more detailed information on specific security topics.
 

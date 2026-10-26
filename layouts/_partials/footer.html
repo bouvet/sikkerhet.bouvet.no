@@ -1,0 +1,12 @@
+{{/* One navy strip: copyright, licence and privacy policy. */ -}}
+<footer class="td-footer d-print-none">
+  <div class="td-footer__inner">
+    <div class="td-footer__group">
+      {{ partial "footer/copyright.html" . -}}
+      {{ with .Site.Params.privacy_policy -}}
+        <span class="td-footer__sep">|</span>
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a>
+      {{- end }}
+    </div>
+  </div>
+</footer>

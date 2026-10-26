@@ -1,0 +1,52 @@
+{{- /* Trunk-based branching, tegnet som inline SVG i stedet for en bildefil.
+       Produksjonsbranchen i midten, feature-brancher over og under, som i en
+       vanlig gitgraf.
+
+       Hver bane er en <g> med `--sbd-c`, så linja og commitene på den deler
+       farge uten en egen klasse per gren.
+
+       {{< branching-trunk >}} */ -}}
+{{- $m := printf "bt-%d" .Ordinal -}}
+<figure class="sb-diagram">
+  <div class="sb-diagram__scroll">
+    <svg viewBox="0 0 1000 290" style="--sbd-min: 760px"
+         role="img" aria-labelledby="{{ $m }}-t {{ $m }}-d">
+      <title id="{{ $m }}-t">{{ T "gittrunk_title" }}</title>
+      <desc id="{{ $m }}-d">{{ T "gittrunk_desc" }}</desc>
+
+      <text class="sbd-title" x="20" y="54">{{ T "git_feature" }}</text>
+      <text class="sbd-title" x="20" y="149">{{ T "git_production" }}</text>
+      <text class="sbd-title" x="20" y="244">{{ T "git_feature" }}</text>
+
+      {{- /* Produksjonsbranchen. Alt annet greiner ut fra og tilbake til den. */}}
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-2)">
+        <path class="sbd-gren" d="M200 145 H960" />
+        <circle class="sbd-node" cx="240" cy="145" r="9" />
+        <circle class="sbd-node" cx="420" cy="145" r="9" />
+        <circle class="sbd-node" cx="600" cy="145" r="9" />
+        <circle class="sbd-node" cx="780" cy="145" r="9" />
+        <circle class="sbd-node" cx="940" cy="145" r="9" />
+      </g>
+
+      {{- /* Feature-brancher over: én pågående som merges inn, så én ny. */}}
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-1)">
+        <path class="sbd-gren" d="M200 50 H280 C350 50 350 145 420 145" />
+        <path class="sbd-gren" d="M420 145 C465 145 465 50 510 50 H690 C735 50 735 145 780 145" />
+        <circle class="sbd-node" cx="250" cy="50" r="9" />
+        <circle class="sbd-node" cx="540" cy="50" r="9" />
+        <circle class="sbd-node" cx="600" cy="50" r="9" />
+        <circle class="sbd-node" cx="660" cy="50" r="9" />
+      </g>
+
+      {{- /* Feature-brancher under, i parallell med dem over. */}}
+      <g class="sbd-lane" style="--sbd-c: var(--sbd-gren-1)">
+        <path class="sbd-gren" d="M240 145 C285 145 285 240 330 240 H510 C555 240 555 145 600 145" />
+        <path class="sbd-gren" d="M780 145 C815 145 815 240 850 240 H870 C905 240 905 145 940 145" />
+        <circle class="sbd-node" cx="370" cy="240" r="9" />
+        <circle class="sbd-node" cx="450" cy="240" r="9" />
+        <circle class="sbd-node" cx="860" cy="240" r="9" />
+      </g>
+    </svg>
+  </div>
+  <figcaption>{{ T "gittrunk_caption" }}</figcaption>
+</figure>

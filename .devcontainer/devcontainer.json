@@ -1,21 +1,32 @@
+// GENERERT for stack "base" (scripts/generate-consumer-configs.sh i devcontainer-base).
+// Bruk: kopier HELE .devcontainer/-mappa inn i rota av prosjektrepoet ditt;
+// rediger fritt etterpå. Nett-isolasjon, herding og ressursgrenser styres av
+// docker-compose.yml; egress-allowlisten av proxy/allowed-domains.txt.
 {
-    "name": "Node.js",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
-  
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-  
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [3000],
-  
-   "portsAttributes": {
-    "3000": {
-       "label": "WebSitePreview",
-       "onAutoForward": "openPreview"
-     }
-   },
-    // install dependencies and start app
-    "updateContentCommand": "npm install",
-    "postAttachCommand": "npm run start"
+  // Compose styrer bygg, nett-isolasjon, herding og ressursgrenser.
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
 
+  // compose-fila holder containeren i live (command: sleep infinity).
+  "overrideCommand": false,
+
+  "remoteUser": "node",
+
+  // Porter forwardes ikke automatisk til verten; legg dem her.
+  "forwardPorts": [1313],
+  "postStartCommand": "sandbox-selftest --summary",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "remote.autoForwardPorts": false,
+        "remote.restoreForwardedPorts": false
+      }
+    }
   }
+}

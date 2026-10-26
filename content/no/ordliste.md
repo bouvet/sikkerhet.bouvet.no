@@ -1,6 +1,6 @@
 ---
 title: "Ordliste"
-weight: 10
+weight: 11
 translationKey: wordlist
 description: >
   Liste med vanlige ord og uttrykk relatert til applikasjonssikkerhet
@@ -185,6 +185,8 @@ description: >
 **Spear phishing** Phishingangrep rettet mot enkeltpersoner, eksempelvis lederen i en bedrift.
 
 **Software Bill of Materials (SBOM)** Maskinlesbar oversikt over hvilke komponenter og versjoner som inngår i et programvareprodukt eller artefakt.
+
+**Software Composition Analysis (SCA)** Analyse som kartlegger hvilke tredjepartskomponenter en løsning bruker — både direkte og transitive avhengigheter — og risikoen knyttet til dem.
 
 **Software Supply Chain** Hele kjeden av avhengigheter, verktøy, byggsteg og distribusjon som brukes for å utvikle og levere programvare.
 

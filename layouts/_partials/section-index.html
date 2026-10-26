@@ -1,0 +1,27 @@
+{{ $page := .Page -}}
+{{ $pages := (where .Site.Pages "Section" .Section).ByWeight -}}
+{{ $pages = (where $pages "Type" "!=" "search") -}}
+{{ $pages = (where $pages ".Params.hide_summary" "!=" true) -}}
+{{ $pages = (where $pages ".Parent" "!=" nil) -}}
+{{ $pages = (where $pages ".Parent.File" "!=" nil) -}}
+{{ if $page.File -}}
+  {{ $pages = (where $pages "Parent.File.UniqueID" "==" $page.File.UniqueID) -}}
+{{ end -}}
+
+{{ if or $page.Params.no_list (eq (len $pages) 0) -}}
+{{/* Nothing to list. */}}
+{{ else -}}
+<div class="section-index">
+  <span class="section-index__label">{{ T "section_index_label" }}</span>
+  {{ if $page.Params.simple_list -}}
+  <ul>
+    {{ range $pages -}}
+      {{ $manualLink := cond (isset .Params "manuallink") .Params.manualLink (cond (isset .Params "manuallinkrelref") (relref . .Params.manualLinkRelref) .RelPermalink) -}}
+      <li><a href="{{ $manualLink }}">{{ .Title }}</a></li>
+    {{ end -}}
+  </ul>
+  {{ else -}}
+  {{ partial "tiles.html" $pages -}}
+  {{ end -}}
+</div>
+{{ end -}}

@@ -28,9 +28,9 @@ This needs to be clarified with the client at the start of the project to ensure
 ## Privacy
 If the delivery team is to handle personally sensitive information, it is important that the team familiarizes itself with the requirements surrounding this. The Norwegian Data Protection Authority has published a guide for ["Software development with built-in privacy" (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/) which provides useful insight into the issue.
 
-{{< important title="Important" >}}
+{{< caution title="Important" >}}
 Norway has implemented GDPR into Norwegian law through Personopplysningsloven. All our deliveries have to consider the definitions and requirements which follow from this. Also remember that we are likely to be subject to data processing agreements that might carry even stricter requirements. 
-{{< /important >}}
+{{< /caution >}}
 
 The purpose of the GDPR is to ensure the privacy rights of individuals through regulating the use of Personally Identifiable Information (PII). The GDPR has a number of requirements that define how PII can be used and for what. PII is defined as 
 

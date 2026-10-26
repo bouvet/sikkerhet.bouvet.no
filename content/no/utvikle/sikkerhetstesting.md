@@ -16,7 +16,7 @@ Dersom dette ikke tas hensyn til kan det få konsekvenser, både for kundeforhol
 {{< /caution >}}
 
 ## Testmiljø
-Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt]({{< ref "designe/segregering.md" >}}) kan en risikere å påvirke andre miljø enn tiltenkt.
+Når en skal bedrive sikkerhetstesting mot et kjørende miljø er det viktig at en alltid avklarer dette godt i forkant. Mange typer testing kan være destruktiv, så dersom [miljøene ikke er godt nok adskilt]({{< relref "designe/segregering.md" >}}) kan en risikere å påvirke andre miljø enn tiltenkt.
 
 En god løsning, spesielt dersom en bruker infrastruktur-som-kode (IAC) er å ha en pipeline som deployer et eget miljø som kan brukes for sikkerhetstesting. Dersom dette designes inn i leveransen fra starten, vil det ofte være enkelt å sette opp miljø som er identiske med produksjonsmiljøet, der en også kan kopiere databaser og eventuelt kjøre anonymiseringsprosesser mot dataene. 
 
@@ -51,12 +51,12 @@ I tillegg til modellvalidering må løsningen som helhet testes for:
 Disse truslene må håndteres med samme rigor som tradisjonelle applikasjonssikkerhetstester. For prosjekter med KI-komponenter bør teamet bruke [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) som grunnlag.
 
 ## Penetrasjonstesting
-En penetrasjonstest går dypere enn SAST og DAST ved å teste systemet som en helhet, inkludert infrastruktur, nettverk og muligens også fysisk sikring. Der DAST primært fokuserer på webapplikasjoner, vil en pentest være mer omfattende og ofte avdekke sårbarheter som bare blir synlige når flere trusler kombineres.
+En penetrasjonstest går dypere enn SAST og DAST ved å teste systemet som en helhet, inkludert infrastruktur, nettverk og i noen tilfeller fysisk sikring — der testerne kan forsøke å ta seg inn i lokaler for å avdekke svakheter i fysiske barrierer eller rutiner. Der DAST primært fokuserer på webapplikasjoner, vil en pentest være mer omfattende og ofte avdekke sårbarheter som bare blir synlige når flere trusler kombineres.
 
 En penetrasjonstest vil alltid ha et avtalt omfang som regulerer hva pentesterne kan gjøre, når de kan gjøre det og hvilke ressurser som kan testes. Det er ikke mulig å bevise at en løsning er sikker, kun at den ikke er sårbar mot gitte angrep. Pentesting er derfor særlig nyttig når løsningen har strenge sikkerhetskrav eller opererer innenfor et avtaleverk som krever uavhengig verifisering.
 
 ### Planlegging og omfang
-En pentest krever kompetanse og skal ikke gjennomføres på egen hånd uten relevant erfaring. Som team må dere sikre at miljøet som skal testes er tydelig identifisert, og at omfanget er godt definert før testingen starter. Det må være mulig å skille et faktisk angrep fra en avtalt test. Dersom du ser tegn på aktivitet mot et miljø som ikke er en del av testen og dere har [segregert miljøene]({{< ref "designe/segregering.md" >}}), bør dette håndteres som en reell hendelse.
+En pentest krever kompetanse og skal ikke gjennomføres på egen hånd uten relevant erfaring. Som team må dere sikre at miljøet som skal testes er tydelig identifisert, og at omfanget er godt definert før testingen starter. Det må være mulig å skille et faktisk angrep fra en avtalt test. Dersom du ser tegn på aktivitet mot et miljø som ikke er en del av testen og dere har [segregert miljøene]({{< relref "designe/segregering.md" >}}), bør dette håndteres som en reell hendelse.
 
 Som en del av planleggingen må dere også avklare kundens rutiner for pentesting. Mange virksomheter har et sikkerhetssenter (SOC) og/eller nettverkssenter (NOC) som overvåker infrastrukturen kontinuerlig. Disse må være informert når testen er varslet, slik at en avtalt test ikke utløser unødvendig eskalering.
 
@@ -68,7 +68,7 @@ I en perfekt verden ville en gjennomført pentest ved alle større endringer, me
 ### Oppfølging under og etter test
 Dersom testen er varslet i forkant, er det en god anledning til å følge med på logger og monitorering for å se om hendelsene blir fanget opp. Dersom funnene i rapporten kan korreleres med det dere observerer i logger og alarmer, gir det et godt grunnlag for å forbedre deteksjon og varsling.
 
-Etter testen vil teamet normalt motta en rapport som beskriver hva som er testet, hvordan testen ble gjennomført og hvilke funn som ble gjort. Funnene må gjennomgås med produkteier, klassifiseres og legges i backloggen. Noen funn må lukkes raskt, mens andre kan aksepteres eller planlegges senere dersom andre tiltak reduserer risikoen. Sikkerhet er ikke et individuelt ansvar; det er teamets ansvar å følge opp kravene som gjelder for løsningen.
+Etter testen vil teamet normalt motta en rapport som beskriver hva som er testet, hvordan testen ble gjennomført og hvilke funn som ble gjort. Funnene må gjennomgås med produkteier, klassifiseres og legges i backloggen. Noen funn må lukkes raskt, mens andre kan aksepteres eller planlegges senere dersom andre tiltak reduserer risikoen. Sikkerhet er ikke et individuelt ansvar: leveranseansvarlig har ansvar for at sikkerhetstiltak blir innført, men det er teamets felles ansvar å følge opp kravene som gjelder for løsningen.
 
 ### AI-fokuserte penetrasjonstester
 Dersom løsningen inkluderer AI-komponenter, bør pentestingen også dekke:
@@ -82,6 +82,7 @@ For løsninger med AI-komponenter bør pentestingen også vurdere prompt injecti
 ## Veien videre
 * [Wikipedia: Static application security testing](https://en.wikipedia.org/wiki/Static_application_security_testing)
 * [Wikipedia: Dynamic application security testing](https://en.wikipedia.org/wiki/Dynamic_application_security_testing)
+* [Wikipedia: Penetration test](https://en.wikipedia.org/wiki/Penetration_test)
 * [OWASP: Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
 * [OWASP: Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
 * [OWASP: Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

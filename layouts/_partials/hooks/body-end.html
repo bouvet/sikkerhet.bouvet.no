@@ -1,0 +1,28 @@
+{{- /* BirdBot chat: BirdBot becomes a chat button for employees in the chat
+       group. The script asks /api/chat/me (behind Cloudflare Access) and does
+       nothing for anyone else. The strings live in i18n/ so the chat and its
+       intro dialog follow the language of the page. */ -}}
+{{- $tekst := dict
+  "navn"            (T "bls_navn")
+  "lukk"            (T "bls_lukk")
+  "sporMeg"         (T "bls_spor_meg")
+  "introMerkelapp"  (T "bls_intro_merkelapp")
+  "introTittel"     (T "bls_intro_tittel")
+  "introIngress"    (T "bls_intro_ingress")
+  "introRede"       (T "bls_intro_rede")
+  "introSporsmal"   (T "bls_intro_sporsmal")
+  "introOk"         (T "bls_intro_ok")
+-}}
+<script type="application/json" id="spor-bls-tekst">{{ $tekst | jsonify | safeJS }}</script>
+{{- /* Local stand-in for Cloudflare, so the chat can be tried out on
+       `hugo server`. hugo.IsServer is false for every build, including the
+       `-e dev` preview build, so this never reaches a deployed site. It must
+       load before spor-bls.js: both are deferred, so document order decides. */ -}}
+{{- if hugo.IsServer }}
+{{- with resources.Get "js/spor-bls-dev.js" }}
+<script src="{{ .RelPermalink }}" defer></script>
+{{- end }}
+{{- end }}
+{{- with resources.Get "js/spor-bls.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}
