@@ -803,22 +803,35 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     }
   }
 
-  // Indent by depth. Docsy's own `ps-0` is removed in our copy of
-  // `sidebar-tree.html`, otherwise these paddings are cancelled with
-  // `!important`.
+  // Innrykk, størrelse og vekt følger dybden. Docsy's own `ps-0` is removed in
+  // our copy of `sidebar-tree.html`, otherwise these paddings are cancelled
+  // with `!important`.
+  //
+  // Det er nivået som bestemmer utseendet, ikke om punktet har undermeny.
+  // Docsy merker hver lenke `__page` eller `__section` etter om den har barn,
+  // og styrer vi på den, får et toppnivåpunkt uten undermeny samme stil som et
+  // undermenypunkt — «Introduksjon» ble seende ut som «Ansvarsfordeling», selv
+  // om de ligger på hvert sitt nivå. Derfor står `__page` ustylet.
   .ul-1 > li > a,
   .ul-1 > li > label > a {
     padding-left: 0.75rem;
   }
 
+  // Undermenyene er underordnet gjennom innrykk, størrelse og vekt — ikke
+  // gjennom farge. Alle nivåene deler `--fg-2`; `--fg-3` ga blått på blått i
+  // mørk modus (6,4:1) og svak kontrast i lys modus (5,7:1).
   .ul-2 > li > a,
   .ul-2 > li > label > a {
     padding-left: 1.625rem;
+    font-size: 0.875rem;
+    font-weight: 400;
   }
 
   .ul-3 > li > a,
   .ul-3 > li > label > a {
     padding-left: 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
   }
 
   .td-sidebar-link {
@@ -836,12 +849,6 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
       background: var(--bg-3);
       color: var(--fg-1);
       text-decoration: none;
-    }
-
-    &__page {
-      color: var(--fg-3);
-      font-size: 0.875rem;
-      font-weight: 400;
     }
 
     &.active {
@@ -909,7 +916,8 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
       width: 1.25rem;
       height: 1.25rem;
       transform: translateY(-50%);
-      background-color: var(--fg-3);
+      // Samme grunn som for lenkene over: `--fg-3` er den blå-på-blå-tonen.
+      background-color: var(--fg-2);
       -webkit-mask-image: $sb-chevron;
       mask-image: $sb-chevron;
       -webkit-mask-repeat: no-repeat;
@@ -988,7 +996,9 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     margin-left: -1px;
     padding: 0.4375rem 0.75rem 0.4375rem 0.875rem;
     border-left: 2px solid transparent;
-    color: var(--fg-3);
+    // Samme farge som sidemenyen. `--fg-3` var blått på blått i mørk modus;
+    // innholdsfortegnelsen holdes underordnet med størrelse og vekt i stedet.
+    color: var(--fg-2);
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.4;
@@ -1006,12 +1016,31 @@ $pill-glow-lit: 0 0 20px rgba(249, 168, 111, 0.8), 0 0 10px rgba(249, 234, 212, 
     padding-left: 1.625rem;
     font-size: 0.8125rem;
   }
+
+  // Fargen må settes om igjen her, med id-en i selektoren. Docsy fargelegger
+  // lenkene med `#TableOfContents a` og hover med `#TableOfContents a:focus,
+  // ...:hover { color: initial }`. En id slår et hvilket som helst antall
+  // klasser uansett rekkefølge, så `a`-blokka over taper mot begge: i hvile ble
+  // det Docsys `--bs-secondary-color` (som peker på `--fg-3`), og på hover
+  // `initial` i stedet for `--fg-1`. Her er spesifisiteten lik og vi kommer
+  // sist, så disse vinner.
+  #TableOfContents a {
+    color: var(--fg-2);
+
+    // Docsy bruker `:focus`; vi tar begge, ellers blir en klikket lenke
+    // stående igjen med `initial`.
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: var(--fg-1);
+    }
+  }
 }
 
 .sb-toc-title {
   @extend .sb-eyebrow;
 
-  color: var(--fg-3);
+  color: var(--fg-2);
 }
 
 // -----------------------------------------------------------------------------
