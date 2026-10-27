@@ -49,6 +49,15 @@ Praktiske hovedregler:
 - bruk private endepunkter/VPN der det er mulig
 - legg offentlige tjenester bak relevante sikkerhetslag (for eksempel WAF/API-gateway)
 
+## Rate limiting og misbruk
+Et sikkerhetslag foran en offentlig tjeneste må konfigureres til å gjøre noe. Rate limiting er det viktigste: en grense for hvor mye en klient får gjøre per tidsenhet.
+
+- **Per IP alene holder ikke.** Mange legitime brukere kan dele én IP, og en angriper kan ha mange. Begrens også per bruker, per token og per endepunkt.
+- **Noen operasjoner er dyrere enn andre.** Søk, rapportuttrekk, filopplasting og pakkede filformater koster langt mer enn en vanlig forespørsel. Sett egne grenser der, og vurder både maksimal filstørrelse og utpakket størrelse.
+- **Kostnadsmisbruk.** Mot et [KI-endepunkt]({{< relref "planlegge/ai.md" >}}) er dette samme problem med en regning i andre enden. Grenser og budsjettvarsling bør være på plass før tjenesten eksponeres.
+
+Samme mekanisme beskytter [pålogging mot passordgjetting]({{< relref "designe/autentisering.md#rate-limiting-og-beskyttelse-mot-gjetting" >}}).
+
 ## AI-tjenester og nettverkskontroll
 For AI-løsninger bør valg av driftsmodell vurderes opp mot krav til kontroll på ingress og egress.
 
