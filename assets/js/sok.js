@@ -84,6 +84,10 @@
       item.append(el('small', 'd-block text-body-secondary', r.section || new URL(target).pathname));
       const link = el('a', 'd-block', r.title);
       link.href = target;
+      // A hit on this page only jumps to the section; close the box so it does not cover it.
+      link.addEventListener('click', (e) => {
+        if (!(e.ctrlKey || e.metaKey || e.shiftKey)) dispose(input);
+      });
       link.style.fontSize = '1.2rem';
       item.append(link);
       if (r.snippet) item.append(el('p', null, r.snippet));
@@ -116,13 +120,15 @@
       dispose(input);
       if (!query) return;
       const mine = ++latest;
+      // An answer counts only if it is the newest search and the field still holds its words.
+      const current = () => mine === latest && input.value.trim() === query;
       try {
         const results = await search(query);
-        if (mine !== latest) return;
+        if (!current()) return;
         show(input, query, results);
         input.blur();
       } catch {
-        if (mine === latest) docsy.forEach((handler) => handler.call(input, event));
+        if (current()) docsy.forEach((handler) => handler.call(input, event));
       }
     });
   }
