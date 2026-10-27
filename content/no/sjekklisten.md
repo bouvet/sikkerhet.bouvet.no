@@ -43,7 +43,8 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< relref "forvalte/avhengighetshandtering.md#interne-komponenter-som-teamet-drifter-selv" >}})
 7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< relref "utvikle/sikkerhetstesting.md#statisk-kodeanalyse-sast" >}})
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?]({{< relref "utvikle/dokumentasjon.md" >}})
-9.	[Dersom løsningen bruker KI, er modeller, treningsdata og evalueringsresultater dokumentert?]({{< relref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
+9.	[Er det rutiner for kodegjennomgang, og vet teamet hva de skal se etter?]({{< relref "utvikle/kodegjennomgang.md" >}})
+10. [Dersom løsningen bruker KI, er modeller, treningsdata og evalueringsresultater dokumentert?]({{< relref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
 
 ## Deploye
 1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< relref "deploye/cicd.md#bruk-av-cicd" >}})

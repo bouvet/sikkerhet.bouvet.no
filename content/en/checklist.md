@@ -43,7 +43,8 @@ Download the checklist and implement it as part of the source code in your proje
 6. [Are there routines to secure internal components operated by the team?]({{< relref "manage/dependency-management.md#internal-components-operated-by-the-team" >}})
 7. [Is security analyzed through testing or other forms of analysis?]({{< relref "develop/security-testing.md" >}})
 8. [Is necessary information about the system documented, updated, and stored securely?]({{< relref "develop/documentation.md" >}})
-9. [If the solution uses AI, are models, training data, and evaluation results documented?]({{< relref "develop/documentation.md#documentation-of-ai-systems" >}})
+9. [Are there routines for code review, and does the team know what to look for?]({{< relref "develop/code-review.md" >}})
+10. [If the solution uses AI, are models, training data, and evaluation results documented?]({{< relref "develop/documentation.md#documentation-of-ai-systems" >}})
 
 ## Deploy
 1. [Have automated security measures been set up?]({{< relref "deploy/cicd.md" >}})
