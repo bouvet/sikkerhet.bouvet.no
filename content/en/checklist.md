@@ -36,7 +36,7 @@ Download the checklist and implement it as part of the source code in your proje
 
 ## Develop
 1. [Are the development environments well described?]({{< relref "develop/dev_environments.md" >}})
-2. [Are secrets and similar items handled according to best practices?]({{< relref "develop/secrets.md" >}})
+2. [Are secrets, keys, and certificates handled according to best practices?]({{< relref "develop/secrets.md" >}})
 3. [Is data from other systems validated?]({{< relref "develop/data-validation.md" >}})
 4. [Are there routines to protect against today’s most common attack types?]({{< relref "develop/security-practices.md" >}})
 5. [Are there routines to protect against software supply chain attacks?]({{< relref "develop/software-supply-chain.md" >}})

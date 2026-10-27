@@ -36,7 +36,7 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 
 ## Utvikle
 1.	[Er utviklingsmiljøene godt beskrevet?]({{< relref "utvikle/utviklingsmiljoer.md#minimum-som-bør-dokumenteres" >}})
-2.	[Håndteres hemmeligheter og liknende i henhold til gjeldende best-practice?]({{< relref "utvikle/hemmeligheter.md" >}})
+2.	[Håndteres hemmeligheter, nøkler og sertifikater i henhold til gjeldende best-practice?]({{< relref "utvikle/hemmeligheter.md" >}})
 3.	[Valideres data som hentes fra andre systemer?]({{< relref "utvikle/datavalidering.md" >}})
 4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?]({{< relref "utvikle/sikkerhetspraksiser.md" >}})
 5.	[Er det rutiner for å sikre seg mot software supply chain angrep?]({{< relref "utvikle/software-supply-chain.md" >}})
