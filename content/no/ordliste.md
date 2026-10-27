@@ -13,6 +13,12 @@ description: >
 
 **AI-agent** Programvarekomponent som bruker KI-modeller til å utføre oppgaver, ofte med tilgang til verktøy, data eller API-er. 
 
+**Application Security Verification Standard (ASVS)** Standard fra OWASP med konkrete, testbare sikkerhetskrav til applikasjoner. Delt inn i nivåer, slik at kravene kan tilpasses hvor høy sikkerhet løsningen trenger.
+
+**Artefakt** Det ferdigbygde resultatet av et byggsteg — eksempelvis en container, en pakke eller en binærfil — som versjoneres og deployes videre uten å bygges på nytt.
+
+**Artificial Intelligence Security Verification Standard (AISVS)** Standard fra OWASP med sikkerhetskrav rettet spesifikt mot KI-systemer. Et sidestykke til ASVS for løsninger som bruker modeller, agenter og treningsdata.
+
 **Asymmetrisk kryptering** Kryptering med åpen og privat nøkkel. Avsender kan kryptere en melding med mottakers åpne nøkkel, meldingen kan kun dekrypteres med den private nøkkelen. 
 
 **Autentisering** Å verifisere at brukeren er den hen utgir seg for å være. Ofte forkortet _authn_
@@ -20,6 +26,8 @@ description: >
 **Autorisering** Å verifisere at en autentisert bruker har tilgang til å utføre en handling. Ofte forkortet _authz_
 
 ## B
+**Backup** Sikkerhetskopi av data eller systemer som gjør det mulig å gjenopprette etter sletting, feil eller angrep. En backup som ikke er testet, er ingen backup.
+
 **Blacklisting** Prosess for å nekte spesifikke elementer, f.eks. tilgang til en ressurs fra gitte IP-adresser. Impliserer at alle andre har tilgang som standard. Bør ikke brukes, da det bryter med **Principle of least privilege**
 
 **Botnet** Løst sammensatt gruppe med digitale enheter infisert av ondsinnet programvare, utfører kommandoer fra en eller flere sentrale Command & Control (C2) servere. 
@@ -36,6 +44,8 @@ description: >
 **Certification Authority (CA)** Organisasjon som validerer identiteter til enheter som eksempelvis nettsteder, e-postadresser eller brukere for å utstede kryptografiske sertifikat for dette. 
 
 **CIA-triaden** Grunnleggende sikkerhetskonsept. Består av **C**onfidentiality, **I**ntegrity og **A**vailability - Konfidensialitet, integritet og tilgjengelighet på norsk. 
+
+**CI/CD** Continuous Integration / Continuous Delivery (eller Deployment). Praksis der kode bygges, testes og rulles ut automatisk gjennom en pipeline, slik at endringer kan leveres hyppig og forutsigbart.
 
 **Command & Control (C2)** Beskriver infrastruktur og noder som utgjør styringsmekanismen for eksempelvis Botnet, slik at en angriper kan instruere dette til å gjennomføre f.eks. DDoS-angrep mot nettsteder. 
 
@@ -62,7 +72,11 @@ description: >
 
 **Denial-of-Service** Ofte forkortet DoS. Tjenestenektangrep der en angriper oversømmer et mål med mye trafikk fra en enkelt kilde i håp om at angrepsmålet skal bli utilgjengelig for andre. 
 
+**Disaster recovery** Planer og rutiner for å gjenopprette drift etter alvorlige hendelser som datatap, nedetid eller kompromittering. Måles typisk mot RTO og RPO.
+
 **Distributed Denial-of-Service** Ofte forkortet DDoS. Tjenestenektangrep der en angriper oversømmer et mål med mye trafikk fra mange kilder i håp om at angrepsmålet skal bli utilgjengelig for andre. Gjennomføres ofte ved hjelp av botnet. 
+
+**Dynamic Application Security Testing (DAST)** Sikkerhetstesting av en kjørende applikasjon utenfra, uten tilgang til kildekoden. Finner svakheter som først viser seg når løsningen kjører. Motstykket til SAST.
 
 ## E
 **Eksfiltrering** Prosessen med å hente ut noe; typisk en angriper som henter ut data fra et angrepsmål i det skjulte. 
@@ -87,6 +101,10 @@ description: >
 
 ## I
 
+**Identity and Access Management (IAM)** Samlebetegnelse for hvordan identiteter opprettes, forvaltes og gis tilgang til ressurser — inkludert roller, rettigheter og livsløpet til en konto.
+
+**Identitetsleverandør (IdP)** Tjeneste som autentiserer brukere og utsteder identitetsbevis til applikasjoner, eksempelvis gjennom SAML eller OIDC. Entra ID er et vanlig eksempel.
+
 **IDS** Intrustion Detection System. System som overvåker og varsler om inntrengingsforsøk. 
 
 **IP** Internet Protocol. Standardprotokoll som håndterer overføring av pakker (TCP eller UDP) mellom IP-adresser. Lag 3 i OSI-modellen.
@@ -97,7 +115,13 @@ description: >
 
 **Integritet** Grunnleggende sikkerhetsbegrep, del av CIA-triaden. I hvor stor grad du kan stole på at informasjon er uendret. 
 
+**ISO 27001** Internasjonal standard for ledelsessystem for informasjonssikkerhet (ISMS). Beskriver krav til styring, risikovurdering og hvilke kontroller som skal vurderes.
+
+**ISO 42001** Internasjonal standard for ledelsessystem for kunstig intelligens. Tilsvarer ISO 27001, men retter seg mot styring og kontroll av KI.
+
 ## J
+
+**JSON Web Token (JWT)** Signert token som brukes til å overføre informasjon om en autentisert bruker mellom tjenester. Signaturen må valideres før innholdet brukes — og innholdet er kodet, ikke kryptert.
 
 **Juice Shop** Nettbutikk laget for å demonstrere sårbarhetene beskrevet i OWASP Top 10. 
 
@@ -115,6 +139,8 @@ description: >
 ## L
 **Large Language Model (LLM)** Stor språkmodell trent på store mengder tekst for å forstå og generere naturlig språk.
 
+**Lightweight Directory Access Protocol (LDAP)** Protokoll for oppslag mot katalogtjenester, typisk for å hente brukere, grupper og attributter fra Active Directory eller tilsvarende.
+
 **Local Area Network (LAN)** Nettverk som dekker et begrenset fysisk område, som et bolighus, noen kontorer eller en bygning. 
 
 ## M
@@ -125,6 +151,9 @@ description: >
 **Model Context Protocol (MCP)** Åpen protokoll for å koble KI-agenter til eksterne verktøy og datakilder på en standardisert måte.
 
 **Modelldrift (Model drift)** Gradvis endring i modellens kvalitet eller oppførsel over tid, ofte som følge av endringer i data, kontekst eller bruksmønster.
+
+## N
+**NSM** Nasjonal sikkerhetsmyndighet. Norsk fagmyndighet for sikkerhet, kjent for blant annet Grunnprinsipper for IKT-sikkerhet.
 
 ## O
 
@@ -145,6 +174,8 @@ description: >
 
 **Phishing** Forsøk på å hente ut informasjon eller utføre handlinger ved å lure mottaker. Spiller ofte på ulike elementer som tidspress, autoritet, belønning og annet. Angrepsforsøkene er generiske og rettes ikke mot enkeltpersoner.
 
+**Pipeline** Den automatiserte kjeden av steg som bygger, tester og deployer en løsning i CI/CD. Har ofte tilgang til både hemmeligheter og produksjonsmiljøer, og er derfor et attraktivt angrepsmål.
+
 **Principle of least privilege** Grunnleggende sikkerhetsprinsipp som tilsier at brukere eller enheter ikke får mer tilgang enn de absolutt trenger for å gjøre jobben sin. 
 
 **Prompt injection** Angrepsteknikk der input forsøker å overstyre instruksjoner og få en KI-modell eller agent til å utføre uønsket atferd.
@@ -163,6 +194,10 @@ description: >
 
 **RBAC** Role-based Access Control. Brukere gis en rolle ut ifra oppgaver eller tilhørighet som definerer tilgangen de har, ofte basert på gruppemedlemsskap i AD eller Entra ID. 
 
+**Recovery Point Objective (RPO)** Hvor mye data en løsning kan tåle å miste, målt som tid tilbake fra hendelsen. Styrer hvor ofte det må tas backup.
+
+**Recovery Time Objective (RTO)** Hvor lang tid det maksimalt skal ta å gjenopprette normal drift etter en hendelse.
+
 **Retrieval-Augmented Generation (RAG)** Tilnærming der en språkmodell henter relevant kontekst fra eksterne kilder før den genererer svar.
 
 **Risiko** Et element av usikkerhet kombinert med uønsket konsekvens. Ofte uttrykket med formelen _sannsynlighet_*_konsekvens_
@@ -172,6 +207,8 @@ description: >
 ## S
 **Same-origin Policy (SOP)** Grunnleggende mekanisme i sikkerhetsmodellen for WWW for å sikre at ressurser hentes fra samme origin; dvs kombinasjon av protokoll, host og port. 
 
+**Secure Software Development Lifecycle (SSDLC)** Utviklingslivssyklus der sikkerhet hører hjemme i hver fase — planlegge, designe, utvikle, deploye og forvalte — i stedet for å være en kontroll til slutt.
+
 **Security Assertion Markup Language (SAML)** Åpen standard for utveksling av autentisering og autorisering mellom en identitetsleverandør (IDP) og en tjenesteleverandør eller applikasjon.
 
 **Security Champion** En person med interesse og engasjement innenfor sikkerhet. Ikke nødvendigvis en ekspert, men en person som bidrar til å fokusere på sikkerhet innad i et prosjekt. 
@@ -179,6 +216,8 @@ description: >
 **Sertifikat** Kryptografisk bevis på at en server, bruker eller applikasjon er den de utgir seg for å være. 
 
 **Signatur** Meldinger eller dokumenter kan signeres elektronisk ved hjelp av kryptografiske nøkler, slik at det i etterkant kan verifiseres at objektet ble signert av en person med tilgang til en spesifikk nøkkel. 
+
+**Single sign-on (SSO)** Ordning der brukeren autentiserer seg én gang hos en identitetsleverandør og får tilgang til flere applikasjoner uten å logge inn på nytt.
 
 **Social engineering** Manipulering av mennesker for å få tilgang på informasjon eller en lokasjon. En angriper kan eksempelvis skaffe seg tilgang til et kontorlokale ved å utgi seg for å være en håndtverker på oppdrag.
 
@@ -193,6 +232,8 @@ description: >
 **SQL Injeksjon** Angrepsform der angriper utnytter en sårbarhet for å modifisere eller kjøre egne SQL-spørringer mot backend. 
 
 **SSL** Secure Sockets Layer; sikkerhetslag tidligere brukt for å kryptere forbindelser. Nå erstattet av TLS. 
+
+**Static Application Security Testing (SAST)** Automatisert analyse av kildekoden for å finne sårbare mønstre før koden kjøres. Motstykket til DAST.
 
 **Symmetrisk kryptering** Kryptering der mottaker og avsender bruker samme nøkkel for å kryptere/dekryptere en melding.
 
