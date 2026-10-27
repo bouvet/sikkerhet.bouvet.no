@@ -46,6 +46,15 @@ Practical ground rules:
 - use private endpoints or VPN where possible
 - place public services behind relevant security layers (for example WAF or API gateway)
 
+## Rate limiting and abuse
+A security layer in front of a public service has to be configured to actually do something. Rate limiting is the most important part: a cap on how much a client is allowed to do per unit of time.
+
+- **Per IP alone is not enough.** Many legitimate users can share a single IP, and an attacker can have many. Limit per user, per token, and per endpoint as well.
+- **Some operations cost far more than others.** Searches, report extracts, file uploads, and compressed file formats are far more expensive than an ordinary request. Set separate limits there, and consider both the maximum file size and the uncompressed size.
+- **Cost abuse.** Against an [AI endpoint]({{< relref "plan/ai.md" >}}) this is the same problem with a bill at the other end. Limits and budget alerts should be in place before the service is exposed.
+
+The same mechanism protects [login against password guessing]({{< relref "design/authentication-and-authorization.md#rate-limiting-and-protection-against-guessing" >}}).
+
 ## AI services and network control
 For AI solutions, your operating model should be evaluated against requirements for ingress and egress control.
 

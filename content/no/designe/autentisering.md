@@ -24,6 +24,15 @@ Vanlige løsninger for å håndtere pålogging er å benytte seg av biblioteker 
 
 Her er det viktig at en setter seg inn i behovene til løsningen og hvilke autentiseringsmetoder som er tilgjengelige og eventuelt ønskelige.
 
+### Rate limiting og beskyttelse mot gjetting
+Et innloggingsskjema uten begrensninger er et passordgjetteverktøy med pent grensesnitt. Etablerte autentiseringsløsninger har som regel dette innebygd, men det må skrus på og tilpasses løsningen.
+
+* **Brute force** er gjetting mot én konto. **Credential stuffing** er det motsatte: angriperen prøver brukernavn og passord som allerede er lekket fra andre tjenester, ofte med bare ett forsøk per konto. Teller dere kun forsøk per konto, ser dere ikke det siste.
+* **Kontosperring** stopper angrepet, men gjør det samtidig mulig å låse ute legitime brukere med vilje. Progressiv forsinkelse, der hvert nye forsøk tar lengre tid, gir ofte en bedre balanse.
+* **Brukerenumerering** handler om at feilmeldinger, responstider og statuskoder ikke skal avsløre om en konto finnes. «Feil brukernavn eller passord» er ett svar, ikke to.
+
+Begrensninger hører hjemme i resten av løsningen også, ikke bare i påloggingen — se [rate limiting og misbruk]({{< relref "designe/nettverk.md#rate-limiting-og-misbruk" >}}).
+
 ## Autorisering
 Skillet mellom autentisering og autorisering ligger i at autentiseringen bekrefter hvem du er, mens man i autoriseringen sjekker at du har lov til å utføre en handling. 
 

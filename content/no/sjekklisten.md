@@ -36,14 +36,15 @@ Last ned sjekklisten og implementer den som en del av kildekoden i ditt prosjekt
 
 ## Utvikle
 1.	[Er utviklingsmiljøene godt beskrevet?]({{< relref "utvikle/utviklingsmiljoer.md#minimum-som-bør-dokumenteres" >}})
-2.	[Håndteres hemmeligheter og liknende i henhold til gjeldende best-practice?]({{< relref "utvikle/hemmeligheter.md" >}})
+2.	[Håndteres hemmeligheter, nøkler og sertifikater i henhold til gjeldende best-practice?]({{< relref "utvikle/hemmeligheter.md" >}})
 3.	[Valideres data som hentes fra andre systemer?]({{< relref "utvikle/datavalidering.md" >}})
 4.	[Er det rutiner for å sikre mot dagens vanligste angrepstyper?]({{< relref "utvikle/sikkerhetspraksiser.md" >}})
 5.	[Er det rutiner for å sikre seg mot software supply chain angrep?]({{< relref "utvikle/software-supply-chain.md" >}})
 6.	[Er det rutiner for å sikre interne komponenter som driftes av teamet?]({{< relref "forvalte/avhengighetshandtering.md#interne-komponenter-som-teamet-drifter-selv" >}})
 7.	[Analyseres sikkerheten gjennom testing eller annen form for analyse?]({{< relref "utvikle/sikkerhetstesting.md#statisk-kodeanalyse-sast" >}})
 8.	[Er nødvendig informasjon om systemet dokumentert, oppdatert og lagret på et sikkert sted?]({{< relref "utvikle/dokumentasjon.md" >}})
-9.	[Dersom løsningen bruker KI, er modeller, treningsdata og evalueringsresultater dokumentert?]({{< relref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
+9.	[Er det rutiner for kodegjennomgang, og vet teamet hva de skal se etter?]({{< relref "utvikle/kodegjennomgang.md" >}})
+10. [Dersom løsningen bruker KI, er modeller, treningsdata og evalueringsresultater dokumentert?]({{< relref "utvikle/dokumentasjon.md#dokumentasjon-av-ki-systemer" >}})
 
 ## Deploye
 1.	[Er det satt opp automatiserte sikkerhetstiltak?]({{< relref "deploye/cicd.md#bruk-av-cicd" >}})

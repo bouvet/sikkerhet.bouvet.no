@@ -25,6 +25,15 @@ Common solutions for handling login are to use libraries that take care of the e
 
 It is important to understand the needs of the solution and which authentication methods are available and possibly desirable.
 
+### Rate limiting and protection against guessing
+A login form without limits is a password guessing tool with a nice interface. Established authentication solutions usually have this built in, but it has to be switched on and tuned to the solution.
+
+* **Brute force** is guessing against a single account. **Credential stuffing** is the opposite: the attacker tries usernames and passwords already leaked from other services, often with only one attempt per account. If you only count attempts per account, you will not see the latter.
+* **Account lockout** stops the attack, but it also makes it possible to lock out legitimate users on purpose. Progressive delay, where each new attempt takes longer, often strikes a better balance.
+* **User enumeration** is about making sure error messages, response times, and status codes do not reveal whether an account exists. "Wrong username or password" is one answer, not two.
+
+Limits belong in the rest of the solution as well, not only in the login — see [rate limiting and abuse]({{< relref "design/networking.md#rate-limiting-and-abuse" >}}).
+
 ## Authorization
 The distinction between authentication and authorization is that authentication confirms who you are, while authorization checks that you are allowed to perform an action.
 
