@@ -1,5 +1,10 @@
 entries:
-  - date: 2026-05-07
-    title: "AI Security Updates"
+  - date: 2026-10-27
+    title: "Design- og innholdsoppdatering"
     changes:
-      - "Checklist and most articles revised to add information on using AI securely"
+      - "Redesign og oppdatering/oppstramming av innhold ifm lansering av nytt (foreløpig) internt initiativ knyttet til KI"
+
+  - date: 2026-05-07
+    title: "Oppdateringer for KI-sikkerhet"
+    changes:
+      - "Sjekklisten og de fleste artiklene er revidert med informasjon om sikker bruk av KI"

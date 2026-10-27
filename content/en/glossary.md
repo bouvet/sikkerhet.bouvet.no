@@ -15,6 +15,12 @@ description: >
 
 **AI agent** A software component that uses AI models to perform tasks, often with access to tools, data, or APIs.
 
+**Application Security Verification Standard (ASVS)** An OWASP standard of concrete, testable security requirements for applications. Organized into levels so the requirements can be matched to how much security the solution needs.
+
+**Artifact** The finished output of a build step — a container, a package, or a binary, for example — that is versioned and deployed onwards without being rebuilt.
+
+**Artificial Intelligence Security Verification Standard (AISVS)** An OWASP standard of security requirements aimed specifically at AI systems. A counterpart to ASVS for solutions that use models, agents, and training data.
+
 **Asymmetric encryption** Encryption using a public and private key. The sender can encrypt a message with the recipient’s public key, and the message can only be decrypted with the private key.
 
 **Authentication** Verifying that the user is who they claim to be. Also known as _authn_
@@ -24,6 +30,8 @@ description: >
 **Availability** A core security principle in the CIA triad, referring to the accessibility of information when needed.
 
 ## B
+**Backup** A copy of data or systems that makes it possible to recover after deletion, failure, or an attack. A backup that has not been tested is not a backup.
+
 **Blacklisting** The process of denying specific items (e.g., access to a resource from certain IP addresses). Implies that all others have access by default. Should be avoided as it conflicts with the **Principle of least privilege**.
 
 **Botnet** A loosely connected group of digital devices infected with malicious software, carrying out commands from one or more central Command & Control (C2) servers.
@@ -40,6 +48,8 @@ description: >
 **Certification Authority (CA)** An organization that validates the identities of entities (websites, email addresses, or users) in order to issue cryptographic certificates.
 
 **CIA triad** A fundamental security concept consisting of **C**onfidentiality, **I**ntegrity, and **A**vailability.
+
+**CI/CD** Continuous Integration / Continuous Delivery (or Deployment). The practice of building, testing, and rolling out code automatically through a pipeline, so changes can be delivered frequently and predictably.
 
 **Command & Control (C2)** Describes the infrastructure and nodes that form the control mechanism for, e.g., a botnet, allowing an attacker to instruct it to launch, for example, DDoS attacks.
 
@@ -66,7 +76,11 @@ description: >
 
 **Denial of Service (DoS)** An attack where a single source overwhelms a target with traffic, aiming to make the target unavailable to other users.
 
+**Disaster recovery** Plans and procedures for restoring operations after serious incidents such as data loss, downtime, or compromise. Typically measured against RTO and RPO.
+
 **Distributed Denial of Service (DDoS)** An attack that overwhelms a target with traffic from multiple sources, often a botnet, intending to render it unavailable.
+
+**Dynamic Application Security Testing (DAST)** Security testing of a running application from the outside, without access to the source code. Finds weaknesses that only surface once the solution is running. The counterpart to SAST.
 
 
 ## E
@@ -92,6 +106,10 @@ description: >
 **Hugo** A documentation generator that builds a web portal from Markdown files.
 
 ## I
+**Identity and Access Management (IAM)** A collective term for how identities are created, managed, and granted access to resources — including roles, permissions, and the lifecycle of an account.
+
+**Identity provider (IdP)** A service that authenticates users and issues identity assertions to applications, for example through SAML or OIDC. Entra ID is a common example.
+
 **IDS** Intrusion Detection System. A system that monitors for and alerts on intrusion attempts.
 
 **IP** Internet Protocol. Handles the transmission of packets (TCP or UDP) between IP addresses. Layer 3 of the OSI model.
@@ -102,8 +120,13 @@ description: >
 
 **Integrity** A core security principle in the CIA triad. Ensures information remains unaltered and trustworthy.
 
+**ISO 27001** International standard for an information security management system (ISMS). Defines requirements for governance, risk assessment, and the controls to be considered.
+
+**ISO 42001** International standard for an artificial intelligence management system. The counterpart to ISO 27001, aimed at the governance and control of AI.
 
 ## J
+**JSON Web Token (JWT)** A signed token used to carry information about an authenticated user between services. The signature must be validated before the contents are used — and the contents are encoded, not encrypted.
+
 **Juice Shop** A web-based application created by OWASP to demonstrate the vulnerabilities described in the OWASP Top 10.
 
 ## K
@@ -119,6 +142,8 @@ description: >
 ## L
 **Large Language Model (LLM)** A language model trained on large text corpora to understand and generate natural language.
 
+**Lightweight Directory Access Protocol (LDAP)** A protocol for querying directory services, typically to retrieve users, groups, and attributes from Active Directory or similar.
+
 **Local Area Network (LAN)** A network that spans a small physical area, such as a home, a set of offices, or a building.
 
 ## M
@@ -131,6 +156,9 @@ description: >
 **Model Context Protocol (MCP)** An open protocol for connecting AI agents to external tools and data sources in a standardized way.
 
 **Model drift** A gradual change in model quality or behavior over time, often caused by changes in data, context, or usage patterns.
+
+## N
+**NSM** Nasjonal sikkerhetsmyndighet, the Norwegian National Security Authority. Best known for its Basic Principles for ICT Security (Grunnprinsipper for IKT-sikkerhet).
 
 ## O
 **OpenID Connect (OIDC)** An authentication layer on top of OAuth that also provides user identity information.
@@ -147,6 +175,8 @@ description: >
 **Penetration testing** A systematic attempt to identify vulnerabilities in applications, infrastructure, or related systems.
 
 **Phishing** Attacks aiming to trick users into divulging information or performing actions, often relying on urgency, authority, or reward. Typically not targeted at specific individuals.
+
+**Pipeline** The automated chain of steps that builds, tests, and deploys a solution in CI/CD. It often has access to both secrets and production environments, which makes it an attractive target.
 
 **Principle of least privilege** A fundamental security principle dictating that users or systems have only the minimal access rights needed to perform their tasks.
 
@@ -166,6 +196,10 @@ description: >
 
 **RBAC** Role-Based Access Control. Users are assigned roles (often via group memberships in AD or Entra ID) that define their permissions.
 
+**Recovery Point Objective (RPO)** How much data a solution can afford to lose, measured as time back from the incident. Determines how often backups must be taken.
+
+**Recovery Time Objective (RTO)** The maximum time it should take to restore normal operations after an incident.
+
 **Retrieval-Augmented Generation (RAG)** An approach where a language model retrieves relevant context from external sources before generating a response.
 
 **Risk** An element of uncertainty combined with an unwanted consequence, often expressed as _probability × consequence_.
@@ -175,11 +209,15 @@ description: >
 ## S
 **Same-Origin Policy (SOP)** A fundamental web security mechanism restricting resource sharing to the same origin (protocol, host, and port).
 
+**Secure Software Development Lifecycle (SSDLC)** A development lifecycle where security belongs in every phase — plan, design, develop, deploy, and manage — rather than being a review at the end.
+
 **Security Assertion Markup Language (SAML)** Open standard for authentication and authorization, typically between an identity provider and a service provider or application. 
 
 **Security Champion** An individual within a project who champions security best practices and awareness, though not necessarily an expert.
 
 **Signature** Electronic documents or messages can be signed using cryptographic keys, allowing verification that the signer had access to a specific private key.
+
+**Single sign-on (SSO)** An arrangement where the user authenticates once with an identity provider and gains access to several applications without logging in again.
 
 **Social engineering** Manipulating people to gain access to information or locations. For example, an attacker posing as a contractor to enter an office building.
 
@@ -194,6 +232,8 @@ description: >
 **SQL injection** An attack that exploits vulnerabilities to modify or run custom SQL queries on the backend.
 
 **SSL** Secure Sockets Layer; a precursor to TLS for encrypting connections. Now considered outdated.
+
+**Static Application Security Testing (SAST)** Automated analysis of source code to find vulnerable patterns before the code is run. The counterpart to DAST.
 
 **Symmetric encryption** Encryption where both sender and recipient use the same key to encrypt and decrypt messages.
 
