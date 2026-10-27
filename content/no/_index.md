@@ -26,8 +26,8 @@ description: >
 <section class="home-section">
   <h2>Hva ser du etter?</h2>
   <ul class="home-tiles">
-    <li><a href="{{< relref "/planlegge" >}}">Planlegg</a></li>
-    <li><a href="{{< relref "/designe" >}}">Design</a></li>
+    <li><a href="{{< relref "/planlegge" >}}">Planlegge</a></li>
+    <li><a href="{{< relref "/designe" >}}">Designe</a></li>
     <li><a href="{{< relref "/utvikle" >}}">Utvikle</a></li>
     <li><a href="{{< relref "/deploye" >}}">Deploye</a></li>
     <li><a href="{{< relref "/forvalte" >}}">Forvalte</a></li>

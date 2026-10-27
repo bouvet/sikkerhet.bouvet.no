@@ -1,10 +1,10 @@
 ---
-title: "Design"
+title: "Designe"
 weight: 7
 translationKey: design
 menu:
   sidebar:
-    name: "Design"
+    name: "Designe"
     weight: 3
 ---
 En sikker løsning begynner med et godt design! Mye av grunnlaget for å vurdere om en løsning er sikker, kommer fra designfasen hvor det må gjøres viktige avveininger mellom kost, nytte og risiko.

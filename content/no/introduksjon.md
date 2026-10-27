@@ -25,8 +25,8 @@ Grunnen til at det lønner seg er at de færreste alvorlige sikkerhetsproblemer 
 
 Kapitlene på disse sidene følger fasene, og hvert kapittel har sin egen introduksjon:
 
-* __[Planlegg]({{< relref "/planlegge" >}})__ – Avklar ansvar, klassifiser data og sett krav til tilgjengelighet og gjenoppretting før arbeidet starter.
-* __[Design]({{< relref "/designe" >}})__ – Gjør kravene om til arkitektur: trusselmodell, nettverk, segregering av miljø og tilgangsstyring.
+* __[Planlegge]({{< relref "/planlegge" >}})__ – Avklar ansvar, klassifiser data og sett krav til tilgjengelighet og gjenoppretting før arbeidet starter.
+* __[Designe]({{< relref "/designe" >}})__ – Gjør kravene om til arkitektur: trusselmodell, nettverk, segregering av miljø og tilgangsstyring.
 * __[Utvikle]({{< relref "/utvikle" >}})__ – Skriv koden med OWASP Top 10 i bakhodet, håndter hemmeligheter forsvarlig og valider data som kommer utenfra.
 * __[Deploye]({{< relref "/deploye" >}})__ – Bygg et artefakt som kan verifiseres, og test løsningen før den settes i drift.
 * __[Forvalte]({{< relref "/forvalte" >}})__ – Logg og monitorer, følg med på svakheter i avhengighetene, og vit hvem som gjør hva når noe skjer.
