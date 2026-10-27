@@ -26,3 +26,8 @@
 {{- with resources.Get "js/spor-bls.js" | minify | fingerprint }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
 {{- end }}
+{{- /* Semantisk søk i søkefeltet: spør nettstedets eget /mcp (fag-mcp), og
+       faller tilbake til Docsys innebygde søk hvis /mcp ikke svarer. */ -}}
+{{- with resources.Get "js/sok.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}
