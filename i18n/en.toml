@@ -66,6 +66,9 @@ other = "Close"
 [bls_spor_meg]
 other = "Ask me!"
 
+[bls_spor_knapp]
+other = "Ask BirdBot"
+
 [bls_intro_merkelapp]
 other = "New on sikkerhet.bouvet.no"
 

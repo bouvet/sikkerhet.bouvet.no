@@ -12,6 +12,7 @@ import fs from 'fs';
 const JS = fs.readFileSync(new URL('./assets/js/spor-bls.js', import.meta.url), 'utf8');
 const TEKST = JSON.stringify({
   navn: 'Bouvet BirdBot', lukk: 'Lukk', sporMeg: 'Spør meg!',
+  sporKnapp: 'Spør BirdBot',
   introMerkelapp: 'Ny på sikkerhet.bouvet.no', introTittel: 'Møt Bouvet BirdBot',
   introIngress: 'Ingress.', introRede: 'Redet.',
   introSporsmal: 'Still et spørsmål', introOk: 'Ok, skjønner',
@@ -157,7 +158,11 @@ async function lag({ reduceMotion = false, birdSynlig = true, lagret = null,
   ok('dialogen vises på smal skjerm', !!w.document.querySelector('.bls-intro'));
   w.document.querySelector('.bls-intro__sekundar').click();
   ok('ingen flytur når redet er skjult', !w.document.querySelector('.bls-flukt'));
-  ok('fokus går til den vanlige knappen', w.document.activeElement === w.document.querySelector('.spor-bls-knapp'));
+  const vanlig = w.document.querySelector('.spor-bls-knapp');
+  ok('fokus går til den vanlige knappen', w.document.activeElement === vanlig);
+  // Uten fuglen ved siden av må knappen si hva den gjør, ikke bare hva den heter.
+  ok('knappen er merket «Spør BirdBot»', vanlig.textContent === 'Spør BirdBot');
+  ok('knappen åpner chatpanelet', vanlig.getAttribute('aria-controls') === 'spor-bls-panel');
 }
 
 // --- 8. Tab stays inside the dialog -----------------------------------------

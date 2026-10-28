@@ -30,6 +30,7 @@
     navn: 'Bouvet BirdBot',
     lukk: 'Lukk',
     sporMeg: 'Spør meg!',
+    sporKnapp: 'Spør BirdBot',
     introMerkelapp: '',
     introTittel: 'Møt Bouvet BirdBot',
     introIngress: '',
@@ -87,9 +88,11 @@
     if (!bird) return;
     const birdImg = bird.querySelector('.birdbot__bird');
 
-    // Plain button for narrow screens, where the bird is hidden.
+    // Plain button for narrow screens, where the bird is hidden. It carries its
+    // own label: with no bird beside it, «Bouvet BirdBot» reads as a name, not
+    // as something to press.
     const button = opener('spor-bls-knapp');
-    button.textContent = TEKST.navn;
+    button.textContent = TEKST.sporKnapp;
 
     const panel = document.createElement('div');
     panel.className = 'spor-bls-panel';
