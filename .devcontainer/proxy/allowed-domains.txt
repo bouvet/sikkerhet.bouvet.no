@@ -27,3 +27,6 @@ update.code.visualstudio.com # VS Code server/oppdatering
 proxy.golang.org             # modulnedlasting (docsy m/avhengigheter)
 sum.golang.org               # sjekksumdatabase – kreves for modulverifisering
 github.com
+
+ai.bouvet.dev
+ai.bouvet.no

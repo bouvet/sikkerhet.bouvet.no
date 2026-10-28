@@ -365,8 +365,11 @@ $spor-bls-flight: 1100ms;    // length of the flight (FLIGHT_MS in the script)
 }
 
 // Phones and small tablets: the bird is hidden (_redesign.scss), so the plain
-// button shows and the chat takes the full screen.
-@media (max-width: 979px) {
+// button shows and the chat takes the full screen. The breakpoint must be the
+// same 979.98px `.birdbot` uses — at a fractional width like 979.5px (browser
+// zoom, some devices) a plain `979px` here leaves neither the bird nor the
+// button on screen.
+@media (max-width: 979.98px) {
   .spor-bls-knapp { display: inline-flex; }
   .spor-bls-panel {
     inset: 0;

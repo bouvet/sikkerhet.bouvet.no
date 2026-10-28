@@ -47,6 +47,13 @@ igjen, `?bls=av` skrur chatten av, `?bls=utenwarp` gir chat uten intro).
 Fuglen fjernes ved å ta bort `{{ partial "birdbot.html" . }}` i
 `layouts/*/baseof.html`.
 
+Under 980 px er det ikke plass til fuglen, så den skjules og en vanlig knapp
+merket «Spør BirdBot» tar plassen nede til høyre. Knappen er styrt av det
+samme Access-svaret som fuglen: er du ikke innlogget, finnes den ikke i det
+hele tatt. Det er derfor sida kan se tom ut på en telefon selv om chatten
+virker på maskina – nettstedet er offentlig, så en telefon uten
+Access-sesjon blir aldri bedt om å logge inn.
+
 # Kjøring
 
 Portalen kan kjøres lokalt med `hugo serve`. For publisering bruker vi Cloudflare Pages administrert av IIT&S, dersom du forker og vil kjøre i github pages for testing ligger det en egen action for dette som kan brukes.  
