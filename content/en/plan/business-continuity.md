@@ -6,7 +6,7 @@ description: >
   If a catastrophic event occurs, we must know who to contact and what requirements the solution and delivery team must adhere to. This not only includes typical availability requirements but also how long recovery can take, how it should be done, and what is an acceptable data loss.
 ---
 
-_Business Continuity Planning_ is _not_ an IT-technical subject. But it is our responsibility as suppliers of an IT system to remind the customer that the system can become unavailable.
+_Business Continuity Planning_ is _not_ solely an IT-technical subject. But it is our responsibility as suppliers of an IT system to remind the customer that the system can become unavailable.
 The answer from this planning will help describe the requirements for the solution's robustness and security level, and is crucial for finding the right balance of cost and performance for the system.
 
 Here it is important to consider
@@ -18,6 +18,8 @@ Here it is important to consider
 Do we have a Service Level Agreement with the customer that regulates uptime, availability, and similar, or does the customer have implicit expectations for this?
 
 This must be clarified so that the team is aware of the consequences of downtime. In many projects, cloud components are used, where not all variables are under one's control. Therefore, it is important early in the project to clarify the actual needs with the customer. We can ensure redundancy on all fronts if the customer wants it, but it will then cost accordingly.
+
+If this is clarified in advance, it is easier to refer to documentation and agreements when the solution becomes unavailable, which helps avoid bad feelings.
 
 ## Backup
 Backup matters in every project. Even where we have no operational responsibility we should know the routines and limitations that apply. Where we do have it, we are also responsible for making sure backups actually run.
@@ -36,7 +38,7 @@ Backups that are not tested have no value - implement a strategy that includes t
 
 
 ## Disaster Recovery
-_Disaster Recovery_ in the planning phase involves developing a plan for what should be done to return to normal state as quickly as possible. It can be useful to think of this as "actions on," i.e.; _"If X happens, we do Y"_.
+_Disaster Recovery_ in the planning phase involves developing a plan for what should be done to return to normal state as quickly as possible. It can be useful to think of this as "actions on", i.e.: _"If X happens, we do Y"_.
 
 ### Recovery
 

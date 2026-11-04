@@ -6,7 +6,7 @@ description: >
   Det er viktig med et godt underlag når vi skal bygge gode løsninger, og skisser og diagrammer som viser oppbygningen av infrastruktur, dataflyt, nettverk og tilgangsstyring er viktige elementer. Uten denne informasjonen er det vanskelig å validere om sluttresultatet matcher intensjonen.
 ---
 
-Når vi designer en løsning, er det viktig med gode og oversiktlige skisser og diagrammer som viser designet slik at det planlagt. Dette gjøres allerede av mange utviklerteam uten at det nødvendigvis stilles krav til det, men det er likevel greit å nevne her. 
+Når vi designer en løsning, er det viktig med gode og oversiktlige skisser og diagrammer som viser designet slik det er planlagt. Dette gjøres allerede av mange utviklerteam uten at det nødvendigvis stilles krav til det, men det er likevel greit å nevne her. 
 
 Systemskissene bør gi nok informasjon til at en i etterkant kan 
 * Validere at implementasjonen er som designet
@@ -14,7 +14,7 @@ Systemskissene bør gi nok informasjon til at en i etterkant kan
 * Brukes av den/de som forvalter løsningen for å få en god oversikt over komponenter og dataflyt
 * Brukes av leveranseteamet for onboarding av nye kollegaer eller handover til andre team. 
 
-Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste her: 
+Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste: 
 * **Overordnet systemskisse** med de viktigste logiske komponentene
 * **Detaljert nettverksskisse** med ressurser, tjenester og nettverk
 * **Dataflytdiagram** viser hvordan data flyter mellom komponenter i løsningen
@@ -23,19 +23,19 @@ Selv om det er mye som kan dokumenteres her, fokuserer vi bare på det viktigste
 
 
 ## Bruk av KI-komponenter
-Dersom løsningen inneholder kunstig intelligens eller maskinlæring-modeller, må disse være eksplisitt dokumentert i systemdokumentasjonen:
+Dersom løsningen inneholder kunstig intelligens eller maskinlæringsmodeller, må disse være eksplisitt dokumentert i systemdokumentasjonen:
 
 * I **dataflytdiagrammet**: Viser hvor treningsdata og inferensinput kommer fra, og hvordan resultater flyter videre
 * I **nettverksdiagrammet**: Dokumenter hvor modellen kjører (cloud API, edge device, on-prem server) og nettverkskonnektivitet
 * I **avhengighetslisten**: Eierskap av modeller, versjonering, og hvor de oppdateres
-* I **IAM-diagrammet**: Hvem kan deploye, oppdate eller monitorere modellen
+* I **IAM-diagrammet**: Hvem kan deploye, oppdatere eller monitorere modellen
 
 Uten denne informasjonen er det vanskelig å få oversikt over risiko, dataflyt og compliance rundt AI-komponenter.
 
 ## Eksempler
 Under finner du eksempler på punktene listet ovenfor. Diagrammene du produserer trenger ikke å være like, det viktigste er at de inneholder nok informasjon til at de kan brukes for det tiltenkte formålet og at de er forståelige for teamet. 
 
-For enkelt å komme igang med design av diagrammer og skisser kan verktøy som Miro eller Draw.io brukes. Sistnevnte er gratis og tilbyr lagring av tegniner i nettleser, lokalt på maskinen som XML og mye annet. 
+For enkelt å komme i gang med design av diagrammer og skisser kan verktøy som Miro eller Draw.io brukes. Sistnevnte er gratis og tilbyr lagring av tegninger i nettleser, lokalt på maskinen som XML og mye annet. 
 
 {{< tip title="Husk" >}}
 Diagrammene trenger ikke å være perfekte, eller inneholde alle tenkelige detaljer. Vurder behovet og jobb med gradvise forbedringer over tid. 

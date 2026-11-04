@@ -9,9 +9,9 @@ description: >
 When we build software, we depend on a multitude of different third-party packages from ecosystems like npmjs, nuget, PyPi and similar. In CI/CD pipelines we have actions and code that carry out testing, building, deployment and the like. All of this is code and components that come from third parties, where our level of security is at the mercy of how those actors work. A weakness in a dependency can result in our project leaking data, or in code being manipulated or used for malicious purposes.
 
 ## Security Risks
-When we take third-party components into use, it is important to have a conscious relationship with risk. Useful questions to ask are
+When we take third-party components into use, it is important to have a conscious relationship with risk. Useful questions to ask are:
 
-* Who is behind it
+* Who is behind it?
 * Do we _really_ need this component?
 * Is it actively maintained?
 * Does the publisher have a track record that suggests security is taken seriously?
@@ -34,7 +34,7 @@ In some cases we can solve the problem by upgrading the packages to the latest v
 There are many different license models for available components; some are completely free and impose no requirements for use, while others like AGPL and GPL can have significant consequences for what you develop. Most ecosystems also allow the use of proprietary licenses, which can limit what you can use a package for without a valid license. Some have specific requirements in the license, others are free for personal use but require you to purchase a license if used commercially.
 
 ## How Do We Secure Ourselves?
-To protect the system against these threats, there are several effective measures we can take. Many of these are already covered elsewhere, but there are still some threats unique to external packages.
+To protect the system against these threats, there are several effective measures we can take. Many of these are already covered elsewhere, but there are still some that are unique to external packages.
 
 ### Threat Model and Complexity
 In many cases, we depend on many packages that we do not use directly, so-called transitive dependencies. Each package runs in the same context as our own code, and can use the same resources and accesses it has. Every dependency therefore represents an increase in complexity and attack surface, increasing the chance that something will go wrong at a later stage.

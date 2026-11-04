@@ -3,11 +3,11 @@ title: "Business Continuity"
 translationKey: bc
 weight: 3
 description: >
-  Dersom en katastrofal hendelse oppstår må vi vite hvem som skal kontaktes, og hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og hva som er akseptabelt tap av data.
+  Dersom en katastrofal hendelse oppstår må vi vite hvem som skal kontaktes, og hvilke krav løsningen og leveranseteamet må forholde seg til. Dette går ikke bare på typiske krav relatert til tilgjengelighet, men også hvor lang tid en kan bruke på gjenoppretting, hvordan dette skal gjøres og hva som er akseptabelt tap av data.
 
 ---
 _Business Continuity Planning_ er _ikke_ utelukkende et IT-teknisk anliggende, men det er vårt ansvar som leverandører av et IT-system å minne kunden på at systemet kan bli utilgjengelig.  
-Svaret fra denne planleggingen vil være med å beskrive hvilke krav som stilles til løsningens robusthet og sikkerhetsnivå, og er avgjørende for å finne riktig balanse på kostnad og ytelse hos systemet. 
+Svaret fra denne planleggingen vil være med på å beskrive hvilke krav som stilles til løsningens robusthet og sikkerhetsnivå, og er avgjørende for å finne riktig balanse på kostnad og ytelse hos systemet. 
 
 Her er det viktig å ha et forhold til 
 * Kritikaliteten av løsningen
@@ -37,7 +37,7 @@ Backup som ikke testes har ingen verdi - innfør rutiner for å teste at du kan 
 {{< /tip >}}
 
 ## Disaster recovery
-_Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å raskest mulig komme tilbake til normaltilstand. Det kan være nyttig å tenkte på dette som "actions on", altså; _"Hvis X inntreffer, så gjør vi Y"_.
+_Disaster Recovery_ i planleggingsfasen handler om å utvikle et planverk for hva som skal gjøres for å raskest mulig komme tilbake til normaltilstand. Det kan være nyttig å tenke på dette som "actions on", altså: _"Hvis X inntreffer, så gjør vi Y"_.
 
 ### Gjenoppretting
 
@@ -45,7 +45,7 @@ Det vil ikke være nødvendig å gjenskape tjenestene i alle _disaster_ hendelse
 
 * **Fysisk infrastruktur** (brann, flom, jordskjelv): Har dere maskinvare et annet sted dere kan bruke, eller kan dere flytte til et alternativt datasenter?
 * **Virtuell infrastruktur**: Kan den gjenskapes korrekt og raskt nok? Dokumenter ressurser, avhengigheter og operasjonelle prosedyrer. Infrastruktur som kode er det viktigste bidraget her.
-* **Data og databaser**: Dere må kunne gjenopprette både hele volumer og en enkelt fil. Det er sjelden samme prosedyre, og begge bør være prøvd.
+* **Data og databaser**: Dere må kunne gjenopprette både hele volumer og en enkelt fil, tabell, rad eller kolonne. Det er sjelden samme prosedyre, og begge bør være prøvd.
 * **Støttesystemer**: Git, CI-pipeline, logging og monitorering er også en del av systemet, og må kunne erstattes eller gjenopprettes ved en hendelse.
 
 ### Scenarier som kan diskuteres

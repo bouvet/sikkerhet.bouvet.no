@@ -37,7 +37,7 @@ Several of these controls require additional tools and licenses. Be particularly
 ## Branching and promotion model
 Branching is closely connected to CI/CD, but the details belong in the [Git article]({{< relref "develop/git.md#branching-strategy" >}}).
 
-In CI/CD context, the main points are:
+In a CI/CD context, the main points are:
 
 * Code to production should go via pull request and protected main branch
 * Deployment to production should require passing controls and approval
@@ -85,7 +85,7 @@ CI/CD implementation should be done gradually:
 
 ## Further reading
 * [Microsoft: Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops)
-* [Github: Github Actions](https://docs.github.com/en/actions)
+* [GitHub: GitHub Actions](https://docs.github.com/en/actions)
 * [OWASP: Top 10 CI/CD Security Risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/)
 * [OWASP: CI/CD Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CI_CD_Security_Cheat_Sheet.html)
 * [Google: MLOps Continuous Delivery and Automation Pipelines in Machine Learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)

@@ -6,7 +6,7 @@ description: >
   How can one build security into a solution if there are no well-defined security requirements?
 ---
 
-Some requirements are implicit, such as the use of HTTPS/TLS, while others will be explicit and defined by customers or third parties. Even if the customer has no specific requirements, it is still important for the delivery team to create a list of requirements to ensure that the project's framework is documented.
+Some requirements are implicit, such as the use of HTTPS/TLS, while others will be explicit and defined by legislation, customers or third parties. Even if the customer has no specific requirements, it is still important for the delivery team to create a list of requirements to ensure that the project's framework is documented.
 
 Most projects must adhere to various requirements from Bouvet, the customer, and external parties. All development teams must have control over the requirements that apply to the delivery:
 * From Bouvet (where applicable)
@@ -21,7 +21,7 @@ In many cases, it is clear to both Bouvet and the customer what applies, but it 
 
 If no other security requirements have been defined, the [security checklist]({{< relref "checklist.md" >}}) can be a good starting point. It covers the major elements and can be completed by most teams without outside assistance. By using this checklist, the team gets an overview of the delivery status, including potential weaknesses and threats.
 
-If the delivery requires a more thorough checklist, [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) might be a good alternative. This is a more comprehensive checklist that offers three levels of testing:
+If the delivery requires a more thorough checklist, [OWASPs Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) might be a good alternative. This is a more comprehensive checklist that offers three levels of testing:
 
 * Level 1: Black box - all testing is done against the running system
 * Level 2: Everything from level 1, with additional checks targeting process, technology and the implementation.
@@ -42,6 +42,6 @@ For detailed implementation guidance, see [Using Artificial Intelligence]({{< re
 * [Lovdata: Lov om digital sikkerhet (digitalsikkerhetsloven, in Norwegian)](https://lovdata.no/dokument/NL/lov/2023-12-20-108)
 * [Datatilsynet: Programvareutvikling med innebygd personvern - Krav (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/krav/)
 * [Security Checklist]({{< relref "checklist.md" >}})
-* [OWASPs Application Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
+* [OWASPs Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
 * [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
 * [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)

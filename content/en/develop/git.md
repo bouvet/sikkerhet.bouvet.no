@@ -12,7 +12,7 @@ Remember that source code is part of the project, and must be considered in rela
 {{< /tip >}}
 
 ## .gitignore
- The first thing you should do in a new or existing repository is check that there is a ._gitignore file_. This is used to exclude files from git so that they can live in your local folders without being committed to git. There are ready-made templates for most programming languages that ensure build artifacts, .env files and other items that may contain sensitive information are not committed to git. 
+ The first thing you should do in a new or existing repository is check that there is a _.gitignore_ file. This is used to exclude files from git so that they can live in your local folders without being committed to git. There are ready-made templates for most programming languages that ensure build artifacts, .env files and other items that may contain sensitive information are not committed to git. 
 
 __Do not__ rely on remembering not to include files when you commit; it is easy to miss when you are fixing something in passing. .gitignore is checked in like other files so that others in the team can benefit from it. Just remember that it only applies to new files; if you also want to exclude files that already exist in the repo they must first be removed from the git history. 
 
@@ -33,14 +33,14 @@ GitHub also supports the use of various actions that can perform tasks on checke
 Access control is the first item on the agenda in a new project. Who should have access to the repo - individual users, the organization, or should it be public? Be aware that we are only allowed to create private repos by default, and if it should be opened up this must be done via a BSD case. 
 
 ## Code signing
-Git by itself has no form of access control; anyone can configure their git client and call themselves `Pelle Pellesen` with the email `pelle@bouvet.no@`, and that is normally what will be shown in the history. Depending on the project and any customer requirements one should consider using [`signed commits`](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) to ensure that all commits are signed cryptographically. 
+Git by itself has no form of access control; anyone can configure their git client and call themselves `Pelle Pellesen` with the email `pelle@bouvet.no`, and that is normally what will be shown in the history. Depending on the project and any customer requirements one should consider using [`signed commits`](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) to ensure that all commits are signed cryptographically. 
 {{< figure src="../git-signing.png" alt="Signed code">}}
 The image above shows, for example, how a commit to this very article appears when it is signed. 
 
 ## Git hooks
 Git hooks are scripts that typically run client side and are triggered by various actions so that you can run linting, code scanning and other checks to ensure the quality of what is being developed. Although there are both client side and server side hooks it is important to be aware that GitHub does not support running server side hooks. 
 
-Hooks normally live under `.git`; since this is not version controlled scripts should be placed under other folders so they can be shared across the team. Remember that hooks must be set up by each developer, so do not rely solely on them for critical checks!
+Hooks normally live under `.git`; since this is not version controlled, scripts should be placed under other folders so they can be shared across the team. Remember that hooks must be set up by each developer, so do not rely solely on them for critical checks!
 
 ## Workflows 
 Workflows run on GitHub and can be triggered by various events such as pushing code, in connection with pull requests, tags and more. A workflow can consist of a series of different actions that run against the codebase. Workflows are often used to validate, test, build or deploy; for a pull request you can for example run a number of tests to ensure that changes do not break existing functionality, before running a separate workflow after merging to main that builds and deploys the code to the desired target. 

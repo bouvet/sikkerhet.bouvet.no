@@ -6,16 +6,16 @@ description: >
   Status på avhengighetene vi har vil endre seg over tid, og det er ikke til å unngå at svakheter oppdages som må mitigeres av oss. Denne jobben kan være så enkel som at vi oppdaterer til en ny versjon, men kan også kreve større endringer i applikasjonen.
 ---
 
-Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}). Dere vil komme i situasjoner der 
+Når teamet er i forvaltningsmodus gjelder fremdeles de fleste problemstillingene nevnt i artikkelen om [Forsyningskjedesikkerhet]({{< relref "utvikle/software-supply-chain.md" >}}). Dere vil komme i situasjoner der:
 * det oppdages en kritisk sårbarhet i en pakke dere bruker
 * pakker deprekeres og erstattes med noe nytt som ikke er direkte kompatibelt med det gamle
 * utviklere bak pakker slutter å vedlikeholde pakkene
 * ondsinnede aktører overtar en pakke og bruker den for å spre malware
 
-....og helt sikkert andre varianter som resulterer i at dere må gjøre _noe_. For å sikre at pakker som treffer ett eller flere av punktene over tas tak i. Verktøy som Sonatype og andre gir muligheten til å overvåke ulike steg i livssyklusen, med mulighet til å varsle når sårbarheter eller andre hendelser som påvirker kvaliteten inntreffer. 
+....og helt sikkert andre varianter som resulterer i at dere må gjøre _noe_. For å sikre at pakker som treffer ett eller flere av punktene over tas tak i, gir verktøy som Sonatype og andre muligheten til å overvåke ulike steg i livssyklusen, med mulighet til å varsle når sårbarheter eller andre hendelser som påvirker kvaliteten inntreffer. 
 
 ## Bruk av CDN
-Content-delivery-networks for å distribuere Javascript-bibliotek har blitt brukt av mange som en enkel måte å inkludere disse i koden uten å måtte inkludere dette i build eller deploy-prosessen. Tanken er god, men du får da en direkte avhengighet til en kilde du ikke har noen kontroll på som kan [misbrukes til å spre malware](https://sansec.io/research/polyfill-supply-chain-attack).
+Content-delivery-networks for å distribuere Javascript-bibliotek har blitt brukt av mange som en enkel måte å inkludere disse i koden uten å måtte inkludere dette i build- eller deploy-prosessen. Tanken er god, men du får da en direkte avhengighet til en kilde du ikke har noen kontroll på, som kan [misbrukes til å spre malware](https://sansec.io/research/polyfill-supply-chain-attack).
 
 ## Interne speil og fork av kritiske avhengigheter
 For spesielt kritiske avhengigheter kan det være riktig å hoste artefakter i interne registre eller bruke fork av pakker, actions og andre byggkomponenter. Dette reduserer eksponering mot hendelser hos tredjepart, men øker samtidig forvaltningsansvaret internt.

@@ -8,7 +8,7 @@ description: >
 I Bouvet kjører vi jevnlige samlinger - Bouvet One - der det kjøres foredrag om alt mellom himmel og jord, ofte med egne sikkerhetsspor. Vi har også kjørt egne Bouvet One dedikert til sikkerhet. Her er det fritt frem til å bidra - alle foredrag blir satt pris på, uansett hvor enkelt du selv mener noe måtte være. 
 
 ## Engasjer deg i Security Champions regionalt
-Flere regioner i Bouvet har egne Security Champions samlinger på jevnlig basis, der en deler kunnskap, tips, triks og mye annet. Engasjer deg her, og bidra til å bygge opp sikkerhetskultur i utviklerteamene! Vi har også faste månedlige samlinger under navnet AppSec Caffeine for alle Security Champions i Bouvet, der vi går gjennom relevante nyheter, faginnlegg og korte quizer. 
+Flere regioner i Bouvet har egne Security Champions-samlinger på jevnlig basis, der en deler kunnskap, tips, triks og mye annet. Engasjer deg her, og bidra til å bygge opp sikkerhetskultur i utviklerteamene! Vi har også faste månedlige samlinger under navnet AppSec Caffeine for alle Security Champions i Bouvet, der vi går gjennom relevante nyheter, faginnlegg og korte quizer. 
 
 Alle utviklere bør kjenne til grunnprinsipper for sikkerhet og sikker utvikling, men for at vi skal oppnå dette er vi nødt til å gå ut blant folk og dele kunnskap. [OWASP Top 10]({{< relref "utvikle/sikkerhetspraksiser.md" >}}) er alltid relevant, så om du føler for det - sett opp en gjennomgang med kollegaer i enhetene rundt deg. Du kan gjøre den superfancy og kjøre demoer av hvert eneste punkt, men du kan like fint gjøre den lavterskel og bare prate gjennom punktene. 
 

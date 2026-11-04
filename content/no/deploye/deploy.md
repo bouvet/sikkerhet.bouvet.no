@@ -35,8 +35,8 @@ En moden deployprosess bør minimum dekke:
 ## Tilgangsstyring og miljøsikkerhet
 Deploy-tilgang må behandles som en privilegert operasjon:
 
-* **Minst privilegie for deploy-identiteter**: Gi kun tilgangene som er nødvendige for utrulling.
-* **Skille mellom roller**: Skille roller for utvikling og produksjonsutrulling der det er mulig.
+* **Minste privilegium for deploy-identiteter**: Gi kun tilgangene som er nødvendige for utrulling.
+* **Skille mellom roller**: Skill roller for utvikling og produksjonsutrulling der det er mulig.
 * **Begrens trigging av produksjonsdeploy**: Begrens hvem som kan starte deployering til produksjon.
 * **Sporbarhet på utrullinger**: Logg hvem som deployet hva, når og til hvilket miljø.
 

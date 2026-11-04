@@ -49,9 +49,9 @@ If we process this type of information on behalf of clients, they will normally 
 ## Data for Use During Development and Testing
 If data is used in connection with development and testing, it is important to consider classification and sensitivity. Development environments often have a different level of security than production environments, and this practically means that we cannot always use real data for development.
 
-The team must check the need for anonymizing the data before it is used outside the production environment, so as to maintain the need for data amount, filling rate, and quality while ensuring that the client's data does not go astray.
+The team must check the need for anonymizing the data before it is used outside the production environment, so as to maintain the need for data amount, filling rate, and quality while ensuring that the client's data does not go astray. Quality and metadata related to the information used as a starting point should be documented, so that any deviations can be reviewed afterwards and the data basis improved.
 
-This is especially important if development occurs in Bouvet's infrastructure but with a production environment located at the client's site. In such cases, it is vital that Bouvet has documented routines regulating where and how data is stored and used, and how and when it should be deleted. This must be clarified in consultation with the client so that there is no doubt about responsibility, duties, and risk.
+This is especially important if development occurs in Bouvet's infrastructure, but it is also relevant if the production environment is located at the client's site. In such cases, it is vital that Bouvet has documented routines regulating where and how data is stored and used, and how and when it should be deleted. This must be clarified in consultation with the client so that there is no doubt about responsibility, duties, and risk as regulated in the agreement.
 
 ## Artificial Intelligence and Data
 
@@ -66,5 +66,5 @@ If you have questions about using AI, you can create a case through [BSD](https:
 ## More Information
 * [Datatilsynet: Programvareutvikling med innebygd personvern (in Norwegian)](https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/programvareutvikling-med-innebygd-personvern/)
 * [NSM: Kartlegg enheter og programvare (in Norwegian)](https://nsm.no/regelverk-og-hjelp/rad-og-anbefalinger/grunnprinsipper-for-ikt-sikkerhet/identifisere-og-kartlegge/kartlegg-enheter-og-programvare/)
-* [Lovdata: Personopplysningslovel (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38) (in Norwegian)
+* [Lovdata: Personopplysningsloven (GDPR)](https://lovdata.no/dokument/NL/lov/2018-06-15-38) (in Norwegian)
 * [Government of Norway: Proposed AI law in Norway](https://www.regjeringen.no/no/aktuelt/lov-om-kunstig-intelligens-i-norge-sendes-na-pa-horing/id3113732/)

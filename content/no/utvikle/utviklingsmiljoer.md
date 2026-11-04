@@ -22,13 +22,13 @@ Disse verktøyene har stor betydning for sikkerhet og kvalitet i leveransen. Der
 ### Utvidelser og extensions
 Mange verktøy tillater bruk av ulike utvidelser for å tilby funksjonalitet fra tredjepart som ikke er bygd inn i verktøyet fra leverandøren. Dette gjør det mulig å bruke standardverktøy som VS Code, som tilpasses til hvert enkelt prosjekt med de utvidelsene som er relevante for teknologivalg og arbeidsprosess. 
 
-Utvidelser er imidlertid en stor angrepsvektor, så det er viktig å ha noen grunnprinsipper som hjelper teamet å vurdere kvaliteten dem. Leverandører som KOI tilbyr løsninger for å hjelpe med dette, men i mangel av verktøy er det noen grunnprinsipper som kan hjelpe:
+Utvidelser er imidlertid en stor angrepsvektor, så det er viktig å ha noen grunnprinsipper som hjelper teamet å vurdere kvaliteten på dem. Leverandører som KOI tilbyr løsninger for å hjelpe med dette, men i mangel av verktøy er det noen grunnprinsipper som kan hjelpe:
 
-* Ikka ta utvidelser ukritisk i bruk. Vurder historikk, opphav og oppdateringsfrekvens. 
+* Ikke ta utvidelser ukritisk i bruk. Vurder historikk, opphav og oppdateringsfrekvens. 
 * Har utvidelsen historikk i form av tidligere sårbarheter eller liknende; dersom ja, hvordan ble de håndtert? 
 * Følg med på utvidelsene du har, sett deg inn i endringer før du oppdaterer. Vurder også å avvente oppdatering til noen dager etter at den er tilgjengelig. 
 
-Som med alt annet på internett; stjerner, ratings og omtaler kan ikke stoles på og bør ikke være grunnlag for å avgjøre hvorvidt noe skal tas i bruk eller ei. 
+Som med alt annet på internett: stjerner, ratings og omtaler kan ikke stoles på og bør ikke være eneste grunnlag for å avgjøre hvorvidt noe skal tas i bruk eller ei. 
 
 
 ### KI i utviklingsmiljøet

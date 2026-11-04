@@ -40,7 +40,7 @@ Use code fencing to show examples and break up the content with headings (no one
 ```
 
 ## External Links
-Use permalinks where possible. The purpose of the _Further Reading_ section is to point to resources with more in-depth content so that it is possible to delve further into a topic after getting a taste from an article.
+Use permalinks where possible. The purpose of the _More information_ section is to point to resources with more in-depth content so that it is possible to delve further into a topic after getting a taste from an article.
 
 If you use text from another article or source, it must be referenced.
 
@@ -51,4 +51,4 @@ Need help with Markdown?
 - [Markdown Emojis](https://gist.github.com/rxaviers/7360908)
 - [Hugo](https://gohugo.io/about/features/)
 
-Any questions about content, what you can contribute, etc.? Contact us on [Slack](https://bouvet.slack.com/archives/C0447R83U6M)!
+Any questions about content, what you can contribute, etc.? Contact us on [Slack](https://bouvet.slack.com/archives/C0447R83U6M) or see [the following issue](https://github.com/bouvet/sikkerhet.bouvet.no/issues/22)!

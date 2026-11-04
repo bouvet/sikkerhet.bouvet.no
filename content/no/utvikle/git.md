@@ -5,19 +5,19 @@ translationKey: git
 description: >
   Versjonskontroll er et essensielt verktøy i alle utviklingsprosjekt, men hvordan bruker du det effektivt og hva bør du tenke på?
 ---
-Git er idag standard i de fleste prosjekter som kjøres i Bouvet, men skulle du havne i et prosjekt som bruker noe annet vil mange av prinsippene likevel være overførbare. Git i seg selv er selve versjonskontrollverktøyet som håndterer historikk og versjonering, mens Github håndterer alt rundt som CI/CD, sikkerhetstesting og liknende. Azure DevOps har mange de samme funksjonene som beskrives under; selv om Github er brukt som eksempel bør du anta at det samme gjelder for Azure DevOps. 
+Git er i dag standard i de fleste prosjekter som kjøres i Bouvet, men skulle du havne i et prosjekt som bruker noe annet vil mange av prinsippene likevel være overførbare. Git i seg selv er selve versjonskontrollverktøyet som håndterer historikk og versjonering, mens Github håndterer alt rundt som CI/CD, sikkerhetstesting og liknende. Azure DevOps har mange av de samme funksjonene som beskrives under; selv om Github er brukt som eksempel bør du anta at det samme gjelder for Azure DevOps. 
 
 {{< tip title="Kildekode er kritisk" >}}
 Husk også på at kildekode er en del av prosjektet, og må vurderes i forhold til [disaster recovery og backups]({{< relref "business-continuity.md" >}})!
 {{< /tip >}}
 
 ## .gitignore
- Det første du bør gjøre i et nytt eller eksisterende repository, er å sjekke at det finnes en ._gitignore-fil_. Denne brukes for å ekskludere filer fra git, slik at de kan leve i mappene dine lokalt uten å bli sjekket inn til git. Det finnes ferdige templates for de fleste programmeringsspråk, som sikrer at byggfiler, .env-filer og annet som kan inneholde sensitiv informasjon ikke sjekkes inn i git. 
+ Det første du bør gjøre i et nytt eller eksisterende repository, er å sjekke at det finnes en _.gitignore_-fil. Denne brukes for å ekskludere filer fra git, slik at de kan leve i mappene dine lokalt uten å bli sjekket inn til git. Det finnes ferdige templates for de fleste programmeringsspråk, som sikrer at byggfiler, .env-filer og annet som kan inneholde sensitiv informasjon ikke sjekkes inn i git. 
 
 __Ikke__ baser deg på at du skal "huske" å ikke inkludere filer når du committer; det er fort gjort å bomme når du skal fikse noe i forbifarten. .gitignore sjekkes inn som med andre filer, slik at andre i teamet også kan få glede av den. Husk bare på at den kun gjelder nye filer; dersom du også vil ekskludere filer som allerede ligger i repoet må de først slettes fra githistorikken. 
 
 ## Hemmeligheter og historikk
-Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike [hemmeligheter]({{< relref "hemmeligheter.md" >}})!, og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
+Mange tester lokalt på egen maskin mens de utvikler, og har gjerne nøkler og liknende hardkodet mens de tester. Det skjer forholdsvis ofte at man glemmer å slette slike [hemmeligheter]({{< relref "hemmeligheter.md" >}}), og at de sjekkes inn som med annen kode. Dersom dette skjer, må hemmeligheten ugyldiggjøres. Nøkler, passord, sertifikater og liknende __må__ roteres slik at det som havnet i git ikke lenger er gyldig. 
 
 Å overskrive i git er ikke nok; historikken vil fremdeles være tilgjengelig for alle med tilgang. Alle som har klonet repoet vil også ha en kopi av historikken; selv om det finnes en teknisk mulighet for å omskrive historikken vil dette i mange tilfeller kunne være [vanskelig eller umulig](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#side-effects-of-rewriting-history). 
 
@@ -26,8 +26,7 @@ Bruk passordhvelv for å håndtere hemmeligheter: Du refererer til hemmeligheten
 {{< /tip >}}
 
 ### Secret scanning
-Vurder å sette opp workflows som scanner repoet for hemmeligheter, eksempelvis ved bruk av [Trufflehog]
-(https://github.com/marketplace/actions/trufflehog-oss) eller liknende slik at merge blokkeres ved funn av hemmeligheter. Det vil ikke kunne være en perfekt løsning, men vil varsle ved funn og forhindre at hemmeligheter havner i main.
+Vurder å sette opp workflows som scanner repoet for hemmeligheter, eksempelvis ved bruk av [Trufflehog](https://github.com/marketplace/actions/trufflehog-oss) eller liknende slik at merge blokkeres ved funn av hemmeligheter. Det vil ikke kunne være en perfekt løsning, men vil varsle ved funn og forhindre at hemmeligheter havner i main.
 
 Github støtter også bruk av ulike actions, som kan utføre oppgaver på kode som sjekkes inn, som CI/CD, sikkerhetstesting og mye annet. 
 
@@ -36,7 +35,7 @@ Tilgangsstyring er første punkt på agendaen i et nytt prosjekt. Hvem skal ha t
 
 ## Kodesignering
 
-Git i selg selv har ingen form for tilgangsstyring; alle kan konfigurere git-klienten sin og kan kalle seg `Pelle Pellesen`, med eposten `pelle@bouvet.no@`, og det dette som normalt vil vises i historikken. Avhengig av prosjektet og eventuelle kundekrav bør en vurdere bruk av [`signed commits`](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) for å sikre at alle commits signeres kryptografisk. 
+Git i seg selv har ingen form for tilgangsstyring; alle kan konfigurere git-klienten sin og kan kalle seg `Pelle Pellesen`, med eposten `pelle@bouvet.no`, og det er dette som normalt vil vises i historikken. Avhengig av prosjektet og eventuelle kundekrav bør en vurdere bruk av [`signed commits`](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) for å sikre at alle commits signeres kryptografisk. 
 
 {{< figure src="../git-signing.png" alt="Signed code">}}
 
@@ -65,7 +64,7 @@ Det finnes andre og mer komplekse tilnærminger også, eksempelvis med separate 
 
 I dette eksempelet jobber alle utviklere i egne feature branches mot develop-branchen, som beskyttes mot direkte endringer. Denne deployes til dev-miljøet for å verifisere at alt fungerer som det skal. 
 
-Når teamet er fornøyed med tilstanden på develop, merges denne til test via en egen pipeline som håndterer tagging av versjonsnummer automatisk. Denne pipelinen kan kreve godkjenning for å kjøre, slik at det trengs en person for å starte den, og en annen for å godkjenne. 
+Når teamet er fornøyd med tilstanden på develop, merges denne til test via en egen pipeline som håndterer tagging av versjonsnummer automatisk. Denne pipelinen kan kreve godkjenning for å kjøre, slik at det trengs en person for å starte den, og en annen for å godkjenne. 
 
 Test-branchen deployes til testmiljøet, og når kunden er fornøyd med det som er levert merges den til prod-branchen på samme måte som til test. For både test og prod bruker vi versjonsnummeret som en del av branchnavnet, slik at vi kan ha branchen Test/v1 og Test/v2, som korresponderer med Prod/v1 og Prod/v2.
 

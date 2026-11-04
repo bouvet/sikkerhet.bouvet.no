@@ -5,7 +5,7 @@ translationKey: contribute
 description: >
   Så fint at du vil bidra med innhold!
 ---
-Siden alt som skrives på denne siden er fritt tilgjengelig på Internet, er det viktig å følge noen enkle regler og retningslinjer for innhold. 
+Siden alt som skrives på denne siden er fritt tilgjengelig på Internett, er det viktig å følge noen enkle regler og retningslinjer for innhold. 
 
 ## Språk og stil
 
@@ -15,7 +15,7 @@ Husk også at alle artikler skal ha en inngress som skal kunne leses og forstås
 
 ## Artikkeloppbygging
 
-Alle artiklene skal ha følgende oppbygning
+Alle artiklene skal ha følgende oppbygning:
 
 ```
 ---
@@ -54,4 +54,4 @@ Trenger du hjelp med Markdown?
 - [Markdown emojis](https://gist.github.com/rxaviers/7360908)
 - [Hugo](https://gohugo.io/about/features/)
 
-Noe du lurer på angående innhold, hva du kan bidra med osv? Ta kontakt med oss på [Slack](https://bouvet.slack.com/archives/C0447R83U6M) eller se [følgende issue](https://github.com/bouvet/sikkerhet.bouvet.no/issues/22)
+Noe du lurer på angående innhold, hva du kan bidra med osv? Ta kontakt med oss på [Slack](https://bouvet.slack.com/archives/C0447R83U6M) eller se [følgende issue](https://github.com/bouvet/sikkerhet.bouvet.no/issues/22).

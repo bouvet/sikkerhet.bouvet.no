@@ -4,15 +4,15 @@ weight: 1
 toc_hide: true
 hide_summary: true
 description: >
-  Sikkerhet.bouvet.no is used by system developers, infrastructure engineers, DevOps practitioners, and others in Bouvet to find information to support the operation, development, and maintenance of secure IT systems for our customers.
+  Sikkerhet.bouvet.no is used by system developers, infrastructure engineers, DevOps practitioners, and others at Bouvet to find information to support the operation, development, and maintenance of secure IT systems for our customers.
 ---
 <div class="home">
 <section class="home-hero">
   <div class="home-hero__text">
     <span class="sb-eyebrow">sikkerhet.bouvet.no</span>
     <h1>Welcome!</h1>
-    <p>Here, system developers, infrastructure engineers, DevOps practitioners, and others at Bouvet will find information to support the operation, development, and maintenance of secure IT systems for our customers. The overarching content and themes discussed on these pages also supports project managers, advisors, and others who need to follow up on security in projects.</p>
-    <p>The information on this site is by no means exhaustive on any subject, but aims to use simple language to describe various measures that covers the most common weaknesses.</p>
+    <p>Here, system developers, infrastructure engineers, DevOps practitioners, and others at Bouvet will find information to support the operation, development, and maintenance of secure IT systems for our customers. The overarching content and themes discussed on these pages also support project managers, advisors, and others who need to follow up on security in projects.</p>
+    <p>The information on this site is by no means exhaustive on any subject, but aims to use simple language to describe various measures that cover the most common weaknesses.</p>
     <div class="home-cta">
       <span class="home-cta__hint">If you are new to sikkerhet.bouvet.no, we recommend reading the introduction first</span>
       <a class="sb-button sb-button--soft" href="{{< relref "introduction.md" >}}">Read the introduction <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
