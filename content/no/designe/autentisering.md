@@ -9,18 +9,18 @@ description: >
 Autentisering og autorisering er viktig i alle utviklingsprosjekter. Kort fortalt går _autentisering_ ut på at en skal validere at en bruker representerer den identiteten den hevder å representere, typisk gjennom å sjekke brukernavn og tilhørende passord. _Autorisering_ går ut på å sjekke at brukeren har lov til å gjøre det den prøver på. Disse er ofte forkortet til _authn_ for autentisering og _authz_ for autorisering.
 
 ## Autentisering
-Når en skal validere en bruker, er det viktigste at en *ikke* lager en egen autentiseringsløsning! Å sikre at slike løsninger faktisk er sikre er en kjempejobb, og man bør istedet benytte seg av etablerte løsninger for dette!
+Når en skal validere en bruker, er det viktigste at en *ikke* lager en egen autentiseringsløsning! Å sikre at slike løsninger faktisk er sikre er en kjempejobb, og man bør i stedet benytte seg av etablerte løsninger for dette!
 
-Single sign-on er en vanlig løsning for å unngå at enkelttjenester må håndtere autentisering i bedriftsmiljø. Bruker autentiseres via en sentralt styrt tjeneste eller operativsystemet, hver applikasjon brukeren så åpner gjenbruker denne konteksten slik at en unngår å måtte logge på manuelt. Brukeropplevelsen strømlinjeformes, og brukerne 'trenes' opp til at applikasjoner ikke skal be om brukernavn og passord. Dersom en angriper forsøker å phishe slik informasjon vil det oppfattes som unormalt og suspekt. 
+Single sign-on er en vanlig løsning for å unngå at enkelttjenester må håndtere autentisering i bedriftsmiljø. Bruker autentiseres via en sentralt styrt tjeneste eller operativsystemet; hver applikasjon brukeren så åpner gjenbruker denne konteksten slik at en unngår å måtte logge på manuelt. Brukeropplevelsen strømlinjeformes, og brukerne 'trenes' opp til at applikasjoner ikke skal be om brukernavn og passord. Dersom en angriper forsøker å phishe slik informasjon, vil det oppfattes som unormalt og suspekt. 
 
-Vanlige tilnærminger for å håndtere autentisering kan være bruk av tredjepartstjenester, eller protokoller som håndterer autentisering mot kundens AD/Entra. I mange tilfeller ønsker vi å benytte [Single-Sign-On](https://en.wikipedia.org/wiki/Single_sign-on)(SSO) for å unngå at brukeren må taste inn brukernavn og passord, spesielt for interne forretningsapplikasjoner. 
+Vanlige tilnærminger for å håndtere autentisering kan være bruk av tredjepartstjenester, eller protokoller som håndterer autentisering mot kundens AD/Entra. I mange tilfeller ønsker vi å benytte [Single-Sign-On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) for å unngå at brukeren må taste inn brukernavn og passord, spesielt for interne forretningsapplikasjoner. 
 
-Vanlige løsninger for å håndtere pålogging er å benytte seg av biblioteker som tar seg av hele flyten, som eksempelvis `Microsoft.Identity.Web`. Andre alternativer kan være bruk av 
+Vanlige løsninger for å håndtere pålogging er å benytte seg av biblioteker som tar seg av hele flyten, som eksempelvis `Microsoft.Identity.Web`. Andre alternativer kan være bruk av:
 * SAML - XML-basert løsning som primært brukes for Single Sign-On og autorisering. 
-* Oauth 2.0 - Autorisasjonsløsning der en identitetsløsning (IDP) deler ut aksesstokens som så sjekkes og håndteres av Oauth
-* OpenID Connect (OIDC) - Autentiseringslag oppå Oauth, som muliggjør innhenting av informasjon relatert til bruker og sesjon fra IDP. 
+* OAuth 2.0 - Autorisasjonsløsning der en identitetsløsning (IDP) deler ut aksesstokens som så sjekkes og håndteres av OAuth.
+* OpenID Connect (OIDC) - Autentiseringslag oppå OAuth, som muliggjør innhenting av informasjon relatert til bruker og sesjon fra IDP. 
 * Kerberos - Autentiseringsprotokoll mye brukt i OS-sammenheng. 
-* LDAP - Autentisering- og autoriseringsløning brukt mot ulike katalogløsninger som Active Directory. 
+* LDAP - Autentiserings- og autoriseringsløsning brukt mot ulike katalogløsninger som Active Directory. 
 
 Her er det viktig at en setter seg inn i behovene til løsningen og hvilke autentiseringsmetoder som er tilgjengelige og eventuelt ønskelige.
 
@@ -50,7 +50,7 @@ Dersom en bruker forsøker å utføre en handling, skal det alltid sjekkes hvorv
 Også kjent som _principle of least privilege_. En bruker skal aldri få mer tilgang enn det som trengs for å utføre en spesifikk oppgave. Dette gjøres for å redusere angrepsflaten dersom en bruker kompromitteres, slik at skadeomfanget kan begrenses. 
 
 ### Rollebasert brukertilgang
-Bruk av roller, _role based access control_ (RBAC) er en vanlig tilnærming for å gi brukertilgang. Målet er å definere standardroller for en applikasjon, slik at tilgang kan baseres på disse. En vanlig måte å håndtere dette på eksempelvis med Entra eller AD er å ha 
+Bruk av roller, _role based access control_ (RBAC), er en vanlig tilnærming for å gi brukertilgang. Målet er å definere standardroller for en applikasjon, slik at tilgang kan baseres på disse. En vanlig måte å håndtere dette på eksempelvis med Entra eller AD er å ha 
 * aksessgrupper med alle brukerne. Aksessgruppene legges som medlemmer i 
 * rollegrupper, som gis tilgangen i applikasjonen. 
 

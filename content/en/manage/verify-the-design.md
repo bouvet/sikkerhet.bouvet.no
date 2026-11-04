@@ -13,7 +13,7 @@ Documentation is crucial for understanding how a solution is set up and how it w
 ## What Should We Check?
 One of the most important aspects is everything around the code that may not necessarily be in code form. This includes the resources we use, network setup, and firewall openings. We should also review IAM and the permissions granted to resources and applications.
 
-When design is verified during the operations phase, the team should at minimum check:
+When the design is verified during the operations phase, the team should at minimum check:
 * that implemented components actually match [system diagrams]({{< relref "design/system-diagrams-and-drawings.md" >}})
 * that the requirements in [security requirements]({{< relref "design/security-requirements.md" >}}) are covered in the solution and operations
 * that network, identities, roles, and access rules align with the design

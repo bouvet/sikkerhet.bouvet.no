@@ -23,9 +23,9 @@ description: >
 
 **Asymmetric encryption** Encryption using a public and private key. The sender can encrypt a message with the recipient’s public key, and the message can only be decrypted with the private key.
 
-**Authentication** Verifying that the user is who they claim to be. Also known as _authn_
+**Authentication** Verifying that the user is who they claim to be. Also known as _authn_.
 
-**Authorization** Verifying that an authenticated user has permission to perform an action. Also known as _authz_
+**Authorization** Verifying that an authenticated user has permission to perform an action. Also known as _authz_.
 
 **Availability** A core security principle in the CIA triad, referring to the accessibility of information when needed.
 

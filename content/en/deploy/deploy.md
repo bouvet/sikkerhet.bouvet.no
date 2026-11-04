@@ -47,7 +47,7 @@ For AI solutions, the deployment process must also handle model behavior and dat
 * **Clear version linkage**: Your running solution should be traceable to the exact model version, code version, and configuration.
 * **Verification in target environment**: Run relevant quality and security checks in the target environment after deployment, not just during the build phase.
 * **Operational monitoring**: Watch model quality, response time, and signs of data or output drift.
-* **Fast rollback**: Have clear procedure to switch back to previous model version if issues occur.
+* **Fast rollback**: Have a clear procedure to switch back to the previous model version if issues occur.
 
 ## Further reading
 * [Microsoft: Deployment jobs](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops)

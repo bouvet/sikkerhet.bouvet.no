@@ -52,7 +52,7 @@ Lista er ment som en huskeliste, ikke et skjema som skal fylles ut:
 Med KI-assistert utvikling har det blitt svært billig å produsere kode, mens gjennomgang er like dyrt som før. Et team som leverer tre ganger så mange endringer, har ikke tre ganger så mye kapasitet til å gjennomgå dem. 
 Det finnes ingen måte å lese seg ut av dette på. Løsningen er å bruke kapasiteten der den gir mest:
 
-* **Differensier på risiko.** Alt trenger en gjennomgang, men ikke alt trenger samme dybde. Kategoriene over går til noen som kan området; resten holder det med et raskt blikk.
+* **Differensier på risiko.** Alt trenger en gjennomgang, men ikke alt trenger samme dybde. Kategoriene over går til noen som kan området; for resten holder det med et raskt blikk.
 * **Hold endringene små.** KI gjør store pull requests nesten gratis, men lesekostnaden er uendret. En gjennomgang av 2000 linjer er ikke en gjennomgang.
 * **Flytt det mekaniske til verktøy.** Formatering, kjente mønstre, hemmeligheter på avveie og sårbare avhengigheter skal fanges av [automatiske kontroller]({{< relref "utvikle/sikkerhetstesting.md" >}}) i pipeline. Hvert funn et verktøy tar, er oppmerksomhet frigjort.
 * **Krev at forfatteren kan forklare endringen.** Det flytter arbeidet dit det er billigst, og er det mest effektive filteret mot kode ingen egentlig har vurdert.

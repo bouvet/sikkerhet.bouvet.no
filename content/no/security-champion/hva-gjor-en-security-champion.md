@@ -7,10 +7,10 @@ description: >
 ---
 
 ## Hvorfor "Security Champion"
-Begrepet "Security Champion" har etterhvert blitt et etablert begrep for å favne om folk som ikke nødvendigvis jobber direkte med sikkerhet, men som kan være en brobygger mellom de formelle sikkerhetsrollene og utviklerteamene. I Bouvet har vi valgt en løsning inspirert av [NAV](https://sikkerhet.nav.no/docs/bli-security-champion/) og [Equinor](https://equinor.github.io/appsec/security-champion/), og prøver å holde det hele mest mulig uformellt. 
+Begrepet "Security Champion" har etter hvert blitt et etablert begrep for å favne om folk som ikke nødvendigvis jobber direkte med sikkerhet, men som kan være en brobygger mellom de formelle sikkerhetsrollene og utviklerteamene. I Bouvet har vi valgt en løsning inspirert av [NAV](https://sikkerhet.nav.no/docs/bli-security-champion/) og [Equinor](https://equinor.github.io/appsec/security-champion/), og prøver å holde det hele mest mulig uformelt. 
 
 ## Slik ser rollen ut i Bouvet
-Her vil det variere mellom regioner, enheter og team, men en typisk Security Champion vil ta opp saker og spørsmål relatert til sikkerhet, og hjelper teamet å fokusere på- og prioritere mellom saker relatert til sikkerhet og alt annet. Slack-kanalen ```#security-champions``` brukes for å annonsere eventer, dele nyttig informasjon og liknende som angår Security Champions i Bouvet. Hver måned kjører vi også det vi kaller AppSec Caffeine der vi samler Security Champions i Bouvet for et sammendrag av relevante nyheter, et faglig innlegg og en quiz med en symbolsk premie. Påmelding skjer via Bouvets egen [eventløsning](https://event.bouvet.no) (krever Bouvet-innlogging). 
+Her vil det variere mellom regioner, enheter og team, men en typisk Security Champion vil ta opp saker og spørsmål relatert til sikkerhet, og hjelpe teamet å fokusere på og prioritere mellom saker relatert til sikkerhet og alt annet. Slack-kanalen ```#security-champions``` brukes for å annonsere eventer, dele nyttig informasjon og liknende som angår Security Champions i Bouvet. Hver måned kjører vi også det vi kaller AppSec Caffeine der vi samler Security Champions i Bouvet for et sammendrag av relevante nyheter, et faglig innlegg og en quiz med en symbolsk premie. Påmelding skjer via Bouvets egen [eventløsning](https://event.bouvet.no) (krever Bouvet-innlogging). 
 
 Bouvet begynner å bli et stort selskap med stort spenn i prosjektene vi jobber med, og sikkerhet er et enormt fagområde der alle har noe nytt å lære hver dag. Vi digger kompetansedeling, så det er kjempekult om akkurat _DU_ har lyst til å engasjere deg og dele det du vet med andre - uansett hvor lav eller høy terskelen for å forstå det måtte være.
 
@@ -21,7 +21,7 @@ Kompetansebygging er viktig, også som Security Champion. Vi er flere i Bouvet s
 
 ## Hvordan praktiserer jeg rollen?
 ### 1. Skap bevissthet i leveranseteamet
-Du kan gjerne begynne med å stille deg selv noen spørsmål?
+Du kan gjerne begynne med å stille deg selv noen spørsmål:
 
 * Hva gjør dette prosjektet jeg jobber med egentlig?
 * Hva er kritisk for at systemet skal fungere, og hvordan kan systemet misbrukes eller manipuleres?
@@ -29,13 +29,13 @@ Du kan gjerne begynne med å stille deg selv noen spørsmål?
 
 Begynn med å etablere en mental modell av prosjektet, så kan du bygge videre på denne. 
 
-* En god start er ofte å gjennomføre en trusselmodellerings-øvelse. Du trenger ikke kunne mye om trusselmodellering, men du kan få litt støtte i [artikkelen om trusselmodellering]({{< relref "designe/trusselmodellering.md" >}}) og hos [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). 
+* En god start er ofte å gjennomføre en trusselmodelleringsøvelse. Du trenger ikke kunne mye om trusselmodellering, men du kan få litt støtte i [artikkelen om trusselmodellering]({{< relref "designe/trusselmodellering.md" >}}) og hos [Threatmodeling manifesto](https://www.threatmodelingmanifesto.org/). 
 
 * Prat med andre Security Champions i Bouvet. Hør med dem hva de har gjort som funker, og hva som ikke funker. 
 
 * Husk at du alltid kan spørre Security Champions-nettverket om støtte, tips og veiledning.
 
-Vær litt kreativ og forsøk å få med teamet, en Security Champion som ikke får med seg teamet får ofte ikke gjort så mye som han/hun ønsker.
+Vær litt kreativ og forsøk å få med teamet; en Security Champion som ikke får med seg teamet får ofte ikke gjort så mye som han/hun ønsker.
 
 ### 2. Har vi kontroll på hele prosjektet vårt?
 

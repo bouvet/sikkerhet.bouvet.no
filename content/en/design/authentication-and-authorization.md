@@ -11,7 +11,7 @@ Authentication and authorization are crucial in all development projects. In sho
 ## Authentication
 When validating a user, the most important thing is to *not* create your own authentication solution! Ensuring that such solutions are actually secure is a huge task, and one should instead use established solutions for this!
 
-Single sign-on is a common solution used to avoid having individual applications handling usernames and passwords in corporate environments. The user authenticates via a central platform or the operating system; every application the user opens will then run in the context of that session so that the users avoid manual logins. The user experience is streamlined as a result, and the users are 'trained' to not having to log on. Any attempts to phish credentials will then appear as out of the ordinary and suspicious.
+Single sign-on is a common solution used to avoid having individual applications handling usernames and passwords in corporate environments. The user authenticates via a central platform or the operating system; every application the user opens will then run in the context of that session so that the users avoid manual logins. The user experience is streamlined as a result, and the users are 'trained' to expect not having to log on. Any attempts to phish credentials will then appear as out of the ordinary and suspicious.
 
 Common approaches for handling authentication can be the use of third-party services or protocols that handle authentication against the customer's AD/Entra. In many cases, we want to use [Single Sign-On](https://en.wikipedia.org/wiki/Single_sign-on) (SSO) to avoid the user having to enter username and password, especially for internal business applications.
 
@@ -62,7 +62,7 @@ For solutions with AI agents, it is not enough to control end-user access alone.
 
 Practical principles:
 
-- use a dedicated service identity for the  agent; do not reuse user or admin accounts
+- use a dedicated service identity for the agent; do not reuse user or admin accounts
 - apply least privilege per tool (_tool access_), so the agent can only call functions it actually needs
 - separate read, write, and administrative operations
 - limit access per environment (dev/test/prod) and per dataset or service

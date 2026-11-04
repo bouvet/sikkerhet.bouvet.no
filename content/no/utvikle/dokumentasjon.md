@@ -8,7 +8,7 @@ description: >
 
 Dokumentasjon er ofte nedprioritert under leveranse, men manglende dokumentasjon skaper reell risiko. Kildekode beskriver *hvordan* noe fungerer, men ikke *hvorfor* valg ble tatt, hvilke trusler som er vurdert, eller hvilke forutsetninger løsningen er avhengig av.
 
-Sikkerhetskontekst som kun finnes i hodet på enkeltpersoner er en sårbarhet. Sikkerhetsmekanismer som ikke er dokumentert risikerer man at fjernes uten at noen forstår konsekvensen. Trusselmodeller som ikke er skrevet ned kan heller ikke vedlikeholdes eller revideres.
+Sikkerhetskontekst som kun finnes i hodet på enkeltpersoner er en sårbarhet. Sikkerhetsmekanismer som ikke er dokumentert risikerer å bli fjernet uten at noen forstår konsekvensen. Trusselmodeller som ikke er skrevet ned kan heller ikke vedlikeholdes eller revideres.
 
 God dokumentasjon gir teamet mulighet til å vurdere risiko over tid, ikke bare ved ferdigstilling.
 
@@ -65,6 +65,6 @@ Denne dokumentasjonen er nødvendig både for intern kontroll og for å kunne de
 * [Why documentation matters, and why you should include it in your code](https://www.freecodecamp.org/news/why-documentation-matters-and-why-you-should-include-it-in-your-code-41ef62dd5c2f/)
 * [Dokumentasjonsløsning: Hugo](https://gohugo.io/)
 * [Dokumentasjonsløsning: docs-as-code](https://docsascode.org/)
-* [EU AI Act – krav til teknisk dokumentasjon for høyrisikoystemer](https://artificialintelligenceact.eu/article/11/)
+* [EU AI Act – krav til teknisk dokumentasjon for høyrisikosystemer](https://artificialintelligenceact.eu/article/11/)
 * [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/)
 * [Atlassian: How to ace internal documentation](https://www.atlassian.com/work-management/knowledge-sharing/documentation)

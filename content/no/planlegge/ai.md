@@ -3,7 +3,7 @@ title: "Bruk av kunstig intelligens"
 weight: 4
 translationKey: ai
 description: >
-  Bruken av kunstig intelligens (KI) har eksplodert de siste årene, og teknologien har kommet så langt at den kan være et nyttig verktøy for å brainstorme løsninger, skrive,feilsøke eller vurdere kode. Men hva betyr dette for sikkerheten?
+  Bruken av kunstig intelligens (KI) har eksplodert de siste årene, og teknologien har kommet så langt at den kan være et nyttig verktøy for å brainstorme løsninger, skrive, feilsøke eller vurdere kode. Men hva betyr dette for sikkerheten?
 ---
  
 Denne siden handler om bruk av KI i utviklingsløpet, ikke generell bruk av KI-løsninger. Målet er å bruke KI som et produktivitetsverktøy uten å miste kontroll på sikkerhet, kvalitet og etterprøvbarhet.
@@ -29,7 +29,7 @@ For å få verdi av KI i utvikling uten å øke risiko unødig, bør teamet ha n
 ### Dette bør vi gjøre
 
 * bruk KI på avgrensede oppgaver med tydelig mål og ferdig definert rammeverk
-* behandle KI-bidrag som kode fra tredjepart: Du skal forstå og være i stand til å forklare koden før den merges eller kjøres. 
+* behandle KI-bidrag som kode fra tredjepart: Du skal forstå og være i stand til å forklare koden før den merges eller kjøres
 * dokumenter KI-bruk der det er relevant for sporbarhet og revisjon
 * bruk minst mulig data i prompt (dataminimering), og del kun det som trengs for oppgaven
 * begrens tilganger for KI-verktøy til minste nødvendige nivå
@@ -85,7 +85,7 @@ Gode prompt-rutiner reduserer risiko og øker kvaliteten. Et nyttig prinsipp er 
 
 Med mindre det er eksplisitt godkjent, skal KI-verktøy ikke få tilgang til data utover det som trengs for oppgaven.
 
-Sjekk at repoet ikke inneholder datafiler, hemmeligheter eller annen sensitiv informasjon. Bruk [`.gitignore`]({{< relref "utvikle/git.md" >}}) , git pre-commit hook med hemmelighetsdeteksjon samt nøkkelhvelv for å redusere risiko for lekkasje.
+Sjekk at repoet ikke inneholder datafiler, hemmeligheter eller annen sensitiv informasjon. Bruk [`.gitignore`]({{< relref "utvikle/git.md" >}}), git pre-commit hook med hemmelighetsdeteksjon samt nøkkelhvelv for å redusere risiko for lekkasje.
 
 ## KI-spesifikke trusler i utviklingsløpet
 Når KI brukes i utvikling, oppstår trusler som ikke alltid dekkes av tradisjonelle kontroller:
@@ -105,7 +105,7 @@ Agentiske verktøy kan analysere kodebase, foreslå endringer, opprette pull req
 Noen KI-verktøy kan commite og pushe kode automatisk. Sikre at sensitiv informasjon som passord, sertifikater og data ikke kommer på avveie.
 {{< /caution >}}
 
-For team som vil komme raskt i gang med tryggere agentisk utvikling, finnes det et internt Bouvet-repo med eksempler og mønstre: [bouvet-ai-harness](https://github.com/Bouvet-AI/bouvet-ai-harness). Repoet tilbyr et sett med repoartefakter og arbeidsformer som gjør KI-assistert utvikling mer konsistent, effektiv og målbart, og kan brukes som et praktisk utgangspunkt for instruksjonsfiler, arbeidsflyt og målbare kvalitetskriterier.
+For team som vil komme raskt i gang med tryggere agentisk utvikling, finnes det et internt Bouvet-repo med eksempler og mønstre: [bouvet-ai-harness](https://github.com/Bouvet-AI/bouvet-ai-harness). Repoet tilbyr et sett med repoartefakter og arbeidsformer som gjør KI-assistert utvikling mer konsistent, effektiv og målbar, og kan brukes som et praktisk utgangspunkt for instruksjonsfiler, arbeidsflyt og målbare kvalitetskriterier.
 
 Anbefalte guardrails:
 
@@ -115,7 +115,7 @@ Anbefalte guardrails:
 * krev menneskelig review før merge og deploy
 * blokker automatiske endringer i sikkerhetskritiske filer uten eksplisitt godkjenning
 * logg agentens handlinger slik at bidrag er sporbare og etterprøvbare
-* bruk hooks i fra git og KI-verktøy for å etablere ekstra guardrails
+* bruk hooks fra git og KI-verktøy for å etablere ekstra guardrails
 
 For team som bruker instruksjonsfiler aktivt, bør disse behandles som en sikkerhetskontroll på linje med policy i CI/CD.
 

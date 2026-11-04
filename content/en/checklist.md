@@ -6,7 +6,7 @@ description: >
   Security isn't just about technical measures and code scanning, but much more. This checklist provides a starting point for assessing the level of security, responsibility and risk in deliveries. All development teams should relate to its content unless otherwise agreed with the customer.
 ---
 
-It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
+It's not a given that all points are relevant for every project, or that implementing all measures is desirable. Each team and delivery manager must assess cost/benefit and what responsibility and risk is assumed by not introducing measures. Security requires continuous work, so review the checklist regularly to see if there are measures that can or should be introduced so that nothing is overlooked.
 
 Download the checklist and implement it as part of the source code in your project!
 
@@ -50,7 +50,7 @@ Download the checklist and implement it as part of the source code in your proje
 1. [Have automated security measures been set up?]({{< relref "deploy/cicd.md" >}})
 2. [Does the team have procedures to secure the build environment?]({{< relref "deploy/building.md" >}})
 3. [Is a review conducted before deployment?]({{< relref "deploy/deploy.md" >}})
-4. [Is security testing, including penetration testing planned for as part of the deployment?]({{< relref "develop/security-testing.md#when-penetration-testing-is-relevant" >}})
+4. [Is security testing, including penetration testing, planned for as part of the deployment?]({{< relref "develop/security-testing.md#when-penetration-testing-is-relevant" >}})
 5. [If the solution uses AI, has it been verified that AI components and models function as expected?]({{< relref "manage/verify-the-design.md#verification-of-ai-systems" >}})
 
 ## Manage

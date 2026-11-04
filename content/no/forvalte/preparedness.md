@@ -38,15 +38,15 @@ En tenkt oppskrift for løsningen tegnet opp i [artikkelen om systemskisser]({{<
     * Konfigurer Azure Pipelines slik at de deployer til disse 
     * Verifiser at alle Entra-grupper er tilgjengelige
 2. Deploy infrastruktur-som-kode
-3. Konfigurer NSG'er og brannmurer (dersom dette ikke gjøres som kode)
+3. Konfigurer NSG-er og brannmurer (dersom dette ikke gjøres som kode)
     * Skru av aksess utenfor leveranseteamet for å unngå at brukere forstyrrer restoreprosessen
-4. Verifiser at ressursene har tilgang til dataplatformen
+4. Verifiser at ressursene har tilgang til dataplattformen
 5. Verifiser tilganger til database
 6. Restore applikasjon og data: 
     1. Restore data til database fra siste backup 
     2. Deploy backend
     3. Deploy frontend
-7. Verifiser at applikasjon fungerer
+7. Verifiser at applikasjonen fungerer
 8. Publiser PowerBI-rapport
     * Verifiser at den kan lese data fra backend
 9. Skru på aksess for sluttbrukere slik at de kan bruke applikasjonen igjen.

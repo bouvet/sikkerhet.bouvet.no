@@ -23,7 +23,7 @@ En enkel arbeidsflyt er:
 
 - avgrens systemet og kritiske verdier
 - identifiser trusler og misbruksscenarier
-- prioriter risiko og beslutning om tiltak
+- prioriter risiko og ta beslutning om tiltak
 - verifiser at tiltak faktisk virker
 - oppdater modellen jevnlig
 
@@ -67,7 +67,7 @@ For eksempel kan en identifisert trussel føre til behov for:
 
 For KI-systemer bør trusselmodellen også brukes når man vurderer endringer i modell, datakilder, promptmaler, evalueringssett og overvåking. Endringer her kan gi nye trusler selv om applikasjonskoden ellers er uendret.
 
-Trusselmodellen må versjoneres og holdes oppdatert. Når en har identifisert trusler må mottiltak beskrives og effekten av disse vurderes. En vanlige tilnærming er å gi trusselen en verdi som indikerer alvorlighetsgrad, eksempelvis 1-10 der 10 er verst. Mottiltak vurderes tilsvarende, men med motsatt skala der 1 er liten effekt og 10 (eller opp til kritikalitet) er høyest effekt. Summen av disse gir en residuell risiko som sier noe om hva en sitter igjen med: 
+Trusselmodellen må versjoneres og holdes oppdatert. Når en har identifisert trusler må mottiltak beskrives og effekten av disse vurderes. En vanlig tilnærming er å gi trusselen en verdi som indikerer alvorlighetsgrad, eksempelvis 1-10 der 10 er verst. Mottiltak vurderes tilsvarende, men med motsatt skala der 1 er liten effekt og 10 (eller opp til kritikalitet) er høyest effekt. Differansen mellom disse (kritikalitet minus mottiltak) gir en residuell risiko som sier noe om hva en sitter igjen med: 
 ```
 Identifiserte trusler       Kritikalitet    Mottiltak   Gjenstående risiko
 Trussel 1                   8               8           0
@@ -86,9 +86,9 @@ For systemer i aktiv drift bør trusselmodellen også brukes når man vurderer h
 ### Verktøy
 
 - [Microsoft Threat Modeling Tool](https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool) gir deg en kick-start ved at en del vanlige trusler for diverse tjenester allerede er beskrevet. Dette verktøyet er særlig nyttig dersom man opererer i Microsoft Azure.
-- [OWASP Threat Dragon](https://www.owasp.org/index.php/OWASP_Threat_Dragon) er et tilsvarende open source verktøy, som det kan være verdt å ta en titt på.
+- [OWASP Threat Dragon](https://www.owasp.org/index.php/OWASP_Threat_Dragon) er et tilsvarende open source-verktøy, som det kan være verdt å ta en titt på.
 - [Draw.io](https://draw.io) med denne pakken [drawio-threatmodeling](https://github.com/michenriksen/drawio-threatmodeling) er et verktøy som fungerer både på web og i de vanligste klientene.
-- [OWASP pytm](https://github.com/OWASP/pytm) er et open source rammeverk for "threat modeling as code" i Python, nyttig for team som vil versjonere modeller sammen med kode.
+- [OWASP pytm](https://github.com/OWASP/pytm) er et open source-rammeverk for "threat modeling as code" i Python, nyttig for team som vil versjonere modeller sammen med kode.
 
 ### Kortstokker og workshop-hjelpemidler
 
@@ -99,13 +99,13 @@ For systemer i aktiv drift bør trusselmodellen også brukes når man vurderer h
 
 ### Kurs og foredrag
 
-- [Threat Modeling Fundamentals (pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
+- [Threat Modeling Fundamentals (Pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
 - [Trusselmodellering - hva er det? (Bouvet One 2020, intern lenke)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
 - [An Introduction to threat modeling (Javazone 2018)](https://vimeo.com/234010802)
 - [Threat Modeling in 2019 (RSA Conference 2019)](https://www.youtube.com/watch?v=ZoxHIpzaZ6U)
 
 ### Andre kilder
-- [Threat Modelling Manifesto](https://www.threatmodelingmanifesto.org)
+- [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
 - [Trusselmodellering](https://infosec.sintef.no/informasjonssikkerhet/2018/06/trusselmodellering/) - Martin Gilje Jaatun, Seniorforsker, Dr. Philos, SINTEF
 - [OWASP Application Threat Modeling](https://www.owasp.org/index.php/Application_Threat_Modeling)
 - [Attack Trees (Bruce Schneier)](https://www.schneier.com/academic/archives/1999/12/attack_trees.html)

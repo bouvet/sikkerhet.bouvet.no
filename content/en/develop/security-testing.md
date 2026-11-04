@@ -3,7 +3,7 @@ title: "Security Testing"
 weight: 8
 translationKey: sectesting
 description: >
-  In line with other elements associated with team _quality_, we depend on testing to verify that we have achieved the goal. Security testing is an important part of this, as it allows us to demonstrate that the delivery is not vulnerable to certain attack methods.
+  In line with other elements associated with the topic of _quality_, we depend on testing to verify that we have achieved the goal. Security testing is an important part of this, as it allows us to demonstrate that the delivery is not vulnerable to certain attack methods.
 ---
 
 Security testing should always be an element of all deliveries. Many associate security testing with penetration testing, but it is much more than that. Some forms of testing can be done automatically as part of CICD, while others are more manual and typically performed against a deployed solution.

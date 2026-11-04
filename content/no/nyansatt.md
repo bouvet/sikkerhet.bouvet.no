@@ -3,11 +3,11 @@ title: "Nyansatt i Bouvet?"
 weight: 3
 translationKey: nyansatt
 description: >
-  Er du nyansatt i Bouvet? Her finner du informasjon om hvordan vi gjør sikkerhet i leveransene våre, og hvordan du selv kommer igang. 
+  Er du nyansatt i Bouvet? Her finner du informasjon om hvordan vi gjør sikkerhet i leveransene våre, og hvordan du selv kommer i gang. 
 ---
 Som nyansatt i Bouvet er det mye du skal sette deg inn i. Sikkerheten i våre leveranser håndteres i utgangspunktet av leveranseteamet - det er de som kjenner løsningene og kunden best. 
 
-Sikkerhet skal være en del av håndtverket vi leverer - uavhengig av kontekst. Du som ansatt må sette deg inn i hvordan sikkerhet påvirker din rolle og dine oppgaver, men ikke være redd for å spørre de rundt deg eller nærmeste Security Champion. 
+Sikkerhet skal være en del av håndverket vi leverer - uavhengig av kontekst. Du som ansatt må sette deg inn i hvordan sikkerhet påvirker din rolle og dine oppgaver, men ikke være redd for å spørre de rundt deg eller nærmeste Security Champion. 
 
 ## Sikkerhetsopplæring
 
@@ -21,6 +21,6 @@ Vi skal gjøre vårt beste for å levere de sikreste tjenestene og løsningene
 
 ## Hjelp - jeg sitter fast!
 
-Dersom du sitter fast et sted, eller er usikker - ring en venn. Prat med nærmeste leder, lokale Security Champions eller bruk Slack. Kanalen `#security-journey-support` er opprettet for å supportere bruken av Security Journey - der vil du helt sikker finne noen som kan svare. 
+Dersom du sitter fast et sted, eller er usikker - ring en venn. Prat med nærmeste leder, lokale Security Champions eller bruk Slack. Kanalen `#security-journey-support` er opprettet for å supportere bruken av Security Journey - der vil du helt sikkert finne noen som kan svare. 
 
 Hvis du vil ha en kortere og mer uformell forklaring på hvorfor dette er nyttig, kan du lese [Alle trenger en sikkerhetsvenn](https://www.bouvet.no/bouvet-deler/alle-trenger-en-sikkerhetsvenn).

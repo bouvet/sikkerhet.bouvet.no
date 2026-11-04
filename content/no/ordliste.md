@@ -21,14 +21,14 @@ description: >
 
 **Asymmetrisk kryptering** Kryptering med åpen og privat nøkkel. Avsender kan kryptere en melding med mottakers åpne nøkkel, meldingen kan kun dekrypteres med den private nøkkelen. 
 
-**Autentisering** Å verifisere at brukeren er den hen utgir seg for å være. Ofte forkortet _authn_
+**Autentisering** Å verifisere at brukeren er den hen utgir seg for å være. Ofte forkortet _authn_.
 
-**Autorisering** Å verifisere at en autentisert bruker har tilgang til å utføre en handling. Ofte forkortet _authz_
+**Autorisering** Å verifisere at en autentisert bruker har tilgang til å utføre en handling. Ofte forkortet _authz_.
 
 ## B
 **Backup** Sikkerhetskopi av data eller systemer som gjør det mulig å gjenopprette etter sletting, feil eller angrep. En backup som ikke er testet, er ingen backup.
 
-**Blacklisting** Prosess for å nekte spesifikke elementer, f.eks. tilgang til en ressurs fra gitte IP-adresser. Impliserer at alle andre har tilgang som standard. Bør ikke brukes, da det bryter med **Principle of least privilege**
+**Blacklisting** Prosess for å nekte spesifikke elementer, f.eks. tilgang til en ressurs fra gitte IP-adresser. Impliserer at alle andre har tilgang som standard. Bør ikke brukes, da det bryter med **Principle of least privilege**.
 
 **Botnet** Løst sammensatt gruppe med digitale enheter infisert av ondsinnet programvare, utfører kommandoer fra en eller flere sentrale Command & Control (C2) servere. 
 
@@ -51,7 +51,7 @@ description: >
 
 **Common Vulnerabilities and Exposures (CVE)** Internasjonal innsats for å registrere sårbarheter i programvare. Sårbarheter tildeles unike nummer og publiseres slik at interessenter kan følge disse opp og håndtere hendelser med en koordinert innsats. Peker ofte på rotårsak i form av CWE og en kritikalitetsscore gjennom CVSS.  
 
-**Common Vulnerability Scoring System (CVSS)** Scoringsystem for å tallfeste kritikaliteten til en sårbarhet basert på elementer som CIA, angrepsvektorer, kompleksitet og annet. Brukes typisk for å vurdere CVE. 
+**Common Vulnerability Scoring System (CVSS)** Scoringssystem for å tallfeste kritikaliteten til en sårbarhet basert på elementer som CIA, angrepsvektorer, kompleksitet og annet. Brukes typisk for å vurdere CVE. 
 
 **Common Weakness Enumeration (CWE)** Kategorisystem for å beskrive typiske svakheter og sårbarheter i programvare. Brukes ofte for å kategorisere CVE.  
 
@@ -59,22 +59,22 @@ description: >
 
 **Cross-Site Request Forgery (CSRF)** Angrepsteknikk der en angriper forsøker å utnytte tilgangen brukeren av et nettsted har til å gjennomføre angrep ved å lure brukeren til å sende falske forespørsler. Kan mitigeres med såkalte CSRF-tokens.  
 
-**Cross Site Scripting (XSS)** Et angrep som injiserer ondsinnede skript gjennom URL eller inputfelt som ikke valideres.
+**Cross-Site Scripting (XSS)** Et angrep som injiserer ondsinnede skript gjennom URL eller inputfelt som ikke valideres.
 
 **CSIRT** Cyber Security Incident Response Team. Spesialisert team som er ansvarlig for håndtering av sikkerhetshendelser. Kan også beskrives som CERT.
 
 ## D
-**Dataintegritet** Mekanisme som forhindrer endring eller ødelgellse av data under transport eller lagring.
+**Dataintegritet** Mekanisme som forhindrer endring eller ødeleggelse av data under transport eller lagring.
 
 **Data poisoning** Manipulering av trenings- eller evalueringsdata for å påvirke modellens oppførsel i en uønsket retning.
 
 **Dekryptering** Å transformere en kryptert melding tilbake til det originale formatet ved hjelp av en nøkkel.
 
-**Denial-of-Service** Ofte forkortet DoS. Tjenestenektangrep der en angriper oversømmer et mål med mye trafikk fra en enkelt kilde i håp om at angrepsmålet skal bli utilgjengelig for andre. 
+**Denial-of-Service** Ofte forkortet DoS. Tjenestenektangrep der en angriper oversvømmer et mål med mye trafikk fra en enkelt kilde i håp om at angrepsmålet skal bli utilgjengelig for andre. 
 
 **Disaster recovery** Planer og rutiner for å gjenopprette drift etter alvorlige hendelser som datatap, nedetid eller kompromittering. Måles typisk mot RTO og RPO.
 
-**Distributed Denial-of-Service** Ofte forkortet DDoS. Tjenestenektangrep der en angriper oversømmer et mål med mye trafikk fra mange kilder i håp om at angrepsmålet skal bli utilgjengelig for andre. Gjennomføres ofte ved hjelp av botnet. 
+**Distributed Denial-of-Service** Ofte forkortet DDoS. Tjenestenektangrep der en angriper oversvømmer et mål med mye trafikk fra mange kilder i håp om at angrepsmålet skal bli utilgjengelig for andre. Gjennomføres ofte ved hjelp av botnet. 
 
 **Dynamic Application Security Testing (DAST)** Sikkerhetstesting av en kjørende applikasjon utenfra, uten tilgang til kildekoden. Finner svakheter som først viser seg når løsningen kjører. Motstykket til SAST.
 
@@ -93,7 +93,7 @@ description: >
 ## H
 **Hashing** Kryptografisk funksjon for å generere en tekststreng som representerer et objekt. Brukes i forbindelse med integritetssjekking. 
 
-**HTTP** Hyper Text Transfer Protocol; definerer en rekke standardoperasjoner som GET, POST og liknende. Lag 7 i OSI-modellen. 
+**HTTP** Hypertext Transfer Protocol; definerer en rekke standardoperasjoner som GET, POST og liknende. Lag 7 i OSI-modellen. 
 
 **HTTPS** HTTP sikret ved hjelp av kryptografiske sertifikater for å kryptere trafikk mellom klient og tjener. 
 
@@ -105,7 +105,7 @@ description: >
 
 **Identitetsleverandør (IdP)** Tjeneste som autentiserer brukere og utsteder identitetsbevis til applikasjoner, eksempelvis gjennom SAML eller OIDC. Entra ID er et vanlig eksempel.
 
-**IDS** Intrustion Detection System. System som overvåker og varsler om inntrengingsforsøk. 
+**IDS** Intrusion Detection System. System som overvåker og varsler om inntrengingsforsøk. 
 
 **IP** Internet Protocol. Standardprotokoll som håndterer overføring av pakker (TCP eller UDP) mellom IP-adresser. Lag 3 i OSI-modellen.
 
@@ -130,7 +130,7 @@ description: >
 
 **Kunstig intelligens (KI)** Samlebetegnelse for metoder og systemer som kan utføre oppgaver som normalt krever menneskelig vurdering, for eksempel tekstforståelse, prediksjon og beslutningsstøtte.
 
-**Konfidensialitet** Grunnleggende sikkerhetsbegrep, del av CIA-triaden. I hvor stor grad informasjon kan holdes hemmelig
+**Konfidensialitet** Grunnleggende sikkerhetsbegrep, del av CIA-triaden. I hvor stor grad informasjon kan holdes hemmelig.
 
 **Kryptering** Mekanisme der data gjøres uleselig uten korrekt nøkkel. Se også asymmetrisk og symmetrisk kryptering. 
 
@@ -161,13 +161,13 @@ description: >
 
 **Open Authorization (OAuth)** Åpen standard for å delegere autorisering for nettsteder; typisk ved å la tredjepartstjenester som Facebook, Google eller Microsoft håndtere autentisering. Nettstedet brukeren registrerer seg på håndterer da bare autorisering selv. 
 
-**Obfuskering** Forsøk på å skjule informasjon uten bruk av kryptografi, eksempelvis ved å endre alle variabelnavn i en applikasjon til a, b, c, etc for å gjøre koden vanskeligere å forstå. 
+**Obfuskering** Forsøk på å skjule informasjon uten bruk av kryptografi, eksempelvis ved å endre alle variabelnavn i en applikasjon til a, b, c, etc. for å gjøre koden vanskeligere å forstå. 
 
 **Ondsinnet programvare** Ofte omtalt som malware, skadevare, virus, trojaner, orm. Programvare laget med onde hensikter. 
 
 **OSI-modellen** Referansemodell for å beskrive elektronisk kommunikasjon, bestående av 7 lag: Applikasjon, presentasjon, sesjon, transport, nettverk, datalink, fysisk. 
 
-**OWASP** Open Worldwide Appliation Security Project. Organisasjon som jobber for å øke fokus på sikkerhet. Mest kjent for OWASP Top 10. 
+**OWASP** Open Worldwide Application Security Project. Organisasjon som jobber for å øke fokus på sikkerhet. Mest kjent for OWASP Top 10. 
 
 ## P
 **Penetrasjonstesting** Metodisk forsøk på å finne svakheter i applikasjoner, infrastruktur eller relaterte systemer. 
@@ -180,11 +180,11 @@ description: >
 
 **Prompt injection** Angrepsteknikk der input forsøker å overstyre instruksjoner og få en KI-modell eller agent til å utføre uønsket atferd.
 
-**Public key** Åpen nøkkel brukt i forbindelse med asymmetrisk kryptering. Meldinger til en mottaker krypteres med åpne nøkkelen, men kan kun dekrypteres med den private nøkkelen. 
+**Public key** Åpen nøkkel brukt i forbindelse med asymmetrisk kryptering. Meldinger til en mottaker krypteres med den åpne nøkkelen, men kan kun dekrypteres med den private nøkkelen. 
 
 **Public Key Infrastructure (PKI)** Infrastruktur brukt for å publisere og distribuere public keys, slik at det er mulig å validere identitet. 
 
-**Private key** Hemmelig nøkkel brukt i forbindelse med asymmetrisk kryptering. Meldinger til en mottaker krypteres med åpne nøkkelen, men kan kun dekrypteres med den private nøkkelen. Private nøkler skal holdes hemmelige, og beskyttes typisk med passord.
+**Private key** Hemmelig nøkkel brukt i forbindelse med asymmetrisk kryptering. Meldinger til en mottaker krypteres med den åpne nøkkelen, men kan kun dekrypteres med den private nøkkelen. Private nøkler skal holdes hemmelige, og beskyttes typisk med passord.
 
 ## Q
 **Quality of Service (QoS)** Mekanisme som prioriterer enkelte typer trafikk i et nettverk, slik at eksempelvis meldinger fra overvåkningstjenester får prioritet over kattevideoer. 
@@ -192,7 +192,7 @@ description: >
 ## R
 **Ransomware** Ondsinnet programvare som krypterer et system på vegne av en angriper, slik at det blir ubrukelig for offeret. Målet er at offeret skal betale for å få nøkkelen til å dekryptere dataene. 
 
-**RBAC** Role-based Access Control. Brukere gis en rolle ut ifra oppgaver eller tilhørighet som definerer tilgangen de har, ofte basert på gruppemedlemsskap i AD eller Entra ID. 
+**RBAC** Role-based Access Control. Brukere gis en rolle ut ifra oppgaver eller tilhørighet som definerer tilgangen de har, ofte basert på gruppemedlemskap i AD eller Entra ID. 
 
 **Recovery Point Objective (RPO)** Hvor mye data en løsning kan tåle å miste, målt som tid tilbake fra hendelsen. Styrer hvor ofte det må tas backup.
 
@@ -200,16 +200,16 @@ description: >
 
 **Retrieval-Augmented Generation (RAG)** Tilnærming der en språkmodell henter relevant kontekst fra eksterne kilder før den genererer svar.
 
-**Risiko** Et element av usikkerhet kombinert med uønsket konsekvens. Ofte uttrykket med formelen _sannsynlighet_*_konsekvens_
+**Risiko** Et element av usikkerhet kombinert med uønsket konsekvens. Ofte uttrykt med formelen _sannsynlighet_*_konsekvens_
 
 **ROS-analyse** Risiko- og sårbarhetsanalyse. En metodisk analyse som avdekker risiko og foreslår mitigerende tiltak.
 
 ## S
-**Same-origin Policy (SOP)** Grunnleggende mekanisme i sikkerhetsmodellen for WWW for å sikre at ressurser hentes fra samme origin; dvs kombinasjon av protokoll, host og port. 
+**Same-origin Policy (SOP)** Grunnleggende mekanisme i sikkerhetsmodellen for WWW for å sikre at ressurser hentes fra samme origin; dvs. kombinasjon av protokoll, host og port. 
 
 **Secure Software Development Lifecycle (SSDLC)** Utviklingslivssyklus der sikkerhet hører hjemme i hver fase — planlegge, designe, utvikle, deploye og forvalte — i stedet for å være en kontroll til slutt.
 
-**Security Assertion Markup Language (SAML)** Åpen standard for utveksling av autentisering og autorisering mellom en identitetsleverandør (IDP) og en tjenesteleverandør eller applikasjon.
+**Security Assertion Markup Language (SAML)** Åpen standard for utveksling av autentisering og autorisering mellom en identitetsleverandør (IdP) og en tjenesteleverandør eller applikasjon.
 
 **Security Champion** En person med interesse og engasjement innenfor sikkerhet. Ikke nødvendigvis en ekspert, men en person som bidrar til å fokusere på sikkerhet innad i et prosjekt. 
 
@@ -219,7 +219,7 @@ description: >
 
 **Single sign-on (SSO)** Ordning der brukeren autentiserer seg én gang hos en identitetsleverandør og får tilgang til flere applikasjoner uten å logge inn på nytt.
 
-**Social engineering** Manipulering av mennesker for å få tilgang på informasjon eller en lokasjon. En angriper kan eksempelvis skaffe seg tilgang til et kontorlokale ved å utgi seg for å være en håndtverker på oppdrag.
+**Social engineering** Manipulering av mennesker for å få tilgang på informasjon eller en lokasjon. En angriper kan eksempelvis skaffe seg tilgang til et kontorlokale ved å utgi seg for å være en håndverker på oppdrag.
 
 **Spear phishing** Phishingangrep rettet mot enkeltpersoner, eksempelvis lederen i en bedrift.
 
@@ -229,7 +229,7 @@ description: >
 
 **Software Supply Chain** Hele kjeden av avhengigheter, verktøy, byggsteg og distribusjon som brukes for å utvikle og levere programvare.
 
-**SQL Injeksjon** Angrepsform der angriper utnytter en sårbarhet for å modifisere eller kjøre egne SQL-spørringer mot backend. 
+**SQL-injeksjon** Angrepsform der angriper utnytter en sårbarhet for å modifisere eller kjøre egne SQL-spørringer mot backend. 
 
 **SSL** Secure Sockets Layer; sikkerhetslag tidligere brukt for å kryptere forbindelser. Nå erstattet av TLS. 
 

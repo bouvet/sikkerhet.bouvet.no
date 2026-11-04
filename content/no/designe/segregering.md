@@ -6,7 +6,7 @@ description: >
   Utviklingsprosjekter benytter flere ulike miljø til ulike formål. Det er viktig å skille på disse slik at en unngår sammenblanding, datalekkasjer eller andre uønskede hendelser.
 ---
 
-Når vi bygger løsninger setter vi ofte opp flere miljø, ofte for dev, test og prod slik at vi kan utvikle samtidig som at produkteier tester ny funksjonalitet og sluttbrukere bruker systemet i prod. Det er viktig at vi skiller mellom disse miljøene, slik at vi unngår å komme i situasjoner der endringer i ett miljø påvirker bruken av et annet. 
+Når vi bygger løsninger setter vi ofte opp flere miljø, ofte for dev, test og prod slik at vi kan utvikle samtidig som produkteier tester ny funksjonalitet og sluttbrukere bruker systemet i prod. Det er viktig at vi skiller mellom disse miljøene, slik at vi unngår å komme i situasjoner der endringer i ett miljø påvirker bruken av et annet. 
 
 Separate kontoer/abonnement/prosjekter per miljø gir et naturlig sikkerhetsskille fordi miljøene er isolert fra hverandre med mindre du eksplisitt oppretter tilganger mellom dem. Dette medfører noe mer overhead i administrasjon, men gir til gjengjeld sterkere isolasjon enn de andre mønstrene.
 For de fleste prosjekter av en viss størrelse, eller der det stilles krav til sikkerhet, er dette det anbefalte utgangspunktet. Selv i mindre prosjekter er det verdt å vurdere — kostnaden ved å separere tidlig er langt lavere enn å migrere senere når behovet oppstår.
@@ -43,7 +43,7 @@ Når nye modeller eller større endringer skal innføres, bør teamet vurdere me
 
 ## Veien videre
 * [Nettverkskonsepter]({{< relref "designe/nettverk" >}})
-* [ISO27001:2022 - Seksjon 8.22 - Segregation of networks - Krever Bouvetbruker](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Kvalitet%20i%20leveranser%20-%20Bouvets%20kvalitetssystem/Roller%20Kvalitet%20i%20leveranser/Leveranseansvarlig/)
+* [ISO27001:2022 - Seksjon 8.22 - Segregation of networks - Krever Bouvetbruker](https://info.bouvet.no/bin/view/Bouvet%20Ledelsessystem%20-%20BLS/Ledelsessystem%20for%20Informasjonssikkerhet%20%28ISMS%29/Nettverksikkerhet/)
 * [Microsoft Cloud Adoption Framework - Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/)
 * [AWS Well-Architected Framework - Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
 * [Google Cloud Architecture Framework](https://cloud.google.com/architecture/framework)

@@ -58,12 +58,12 @@ The data flow diagram shows the data flow of the solution. This should include a
 {{< dataflow-diagram >}}
 
 ### IAM Diagram
-An IAM-diagram describes where users originate, and the roles and permissions assigned to users, services and devices on the various resources. 
+An IAM diagram describes where users originate, and the roles and permissions assigned to users, services and devices on the various resources. 
 
 {{< iam-diagram >}}
 
 ### Dependencies
-This can also be drawn, but often a simple list is enough. This should contain all direct dependencies of the solution being developed, with a brief summary containing descriptions of what the team depend on. 
+This can also be drawn, but often a simple list is enough. This should contain all direct dependencies of the solution being developed, with a brief summary containing descriptions of what the team depends on. 
 
 * On-prem database server _production-sql-01_
     * Uses three views maintained by the team

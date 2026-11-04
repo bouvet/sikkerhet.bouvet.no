@@ -8,7 +8,7 @@ description: >
 
 Many people think of security incidents as targeted attacks where _someone_ attacks a solution by _hacking_ it. In some cases, this may be correct, but an incident can be much more.
 
-NSM defines a security incident as _"A deviation situation where there is a potential for loss of confidentiality, integrity, and/or availability of information or ICT services. A security incident can occur as a result of a data attack, technical failure, or unintentional errors."_ In other words, an incident can be almost anything that affects confidentiality, integrity, and availability. Different customers have different requirements for when to notify, escalate, and report, and to whom.
+NSM defines a security incident as _"A deviation situation where there is a potential for loss of confidentiality, integrity, and/or availability of information or ICT services. A security incident can occur as a result of a data attack, technical failure, or unintentional errors."_ In other words, an incident can be almost anything that affects confidentiality, integrity, or availability. Different customers have different requirements for when to notify, escalate, and report, and to whom.
 
 ## What This Article Covers
 This article addresses overall incident response and preparedness:

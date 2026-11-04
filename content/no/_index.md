@@ -41,7 +41,7 @@ description: >
       <div class="home-kit__item">
         <span class="home-kit__key">K</span>
         <span class="home-kit__term">Konfidensialitet</span>
-        <span class="home-kit__desc">Dataene systemet behandler skal ikke være tilgjengelig for uautoriserte.</span>
+        <span class="home-kit__desc">Dataene systemet behandler skal ikke være tilgjengelige for uautoriserte.</span>
       </div>
       <div class="home-kit__item">
         <span class="home-kit__key">I</span>
@@ -59,7 +59,7 @@ description: >
     <h3>Security Champion</h3>
     <p class="home-card__lead">Er du, eller vil du bli en helt?</p>
     <p>En Security Champion er en person som fungerer som en pådriver og motivator for sikkerhetsarbeidet i et team eller en avdeling/enhet. Ansvaret for sikkerheten ligger på teamet i sin helhet, men som Security Champion bidrar du til bevisstgjøring og fokus.</p>
-    <p>Et godt sted å starte, uavhengig om du er eller vil bli en helt - er vår infopakke for Security Champions.</p>
+    <p>Et godt sted å starte, uavhengig av om du er eller vil bli en helt, er vår infopakke for Security Champions.</p>
     <div class="home-card__spacer"></div>
     <a class="sb-button sb-button--ghost" href="{{< relref "/security-champion" >}}">Infopakke for Security Champions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
   </article>

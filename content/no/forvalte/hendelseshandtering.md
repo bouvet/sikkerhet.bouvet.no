@@ -49,9 +49,9 @@ Se også [Logging og monitorering]({{< relref "forvalte/logging-monitorering.md"
 ## Når en hendelse inntreffer
 Hendelser kan ta mange former: sårbarheter i applikasjon eller avhengigheter, driftsavvik eller aktive angrep.
 
-Dersom dere oppdager, eller har grunn til å tro at en løsning er under angrep må dette varsles til kunden umiddelbart. Det er ikke alltid tilfelle at løsningen som angripes er den som er målet, i mange tilfeller er en løsning bare et springbrett videre til en annen. Derfor er det også viktig å vite hvilke tilganger og nettverksåpninger denne har til andre løsninger, slik at kundens IT-organisasjon kan analysere disse for å se etter tegn på angrep der. 
+Dersom dere oppdager, eller har grunn til å tro at en løsning er under angrep, må dette varsles til kunden umiddelbart. Det er ikke alltid tilfelle at løsningen som angripes er den som er målet; i mange tilfeller er en løsning bare et springbrett videre til en annen. Derfor er det også viktig å vite hvilke tilganger og nettverksåpninger denne har til andre løsninger, slik at kundens IT-organisasjon kan analysere disse for å se etter tegn på angrep der. 
 
-Om dere kommer over tegn på at en løsning har blitt angrepet eller brukt til et angrep er det også viktig å si ifra, slik at kunden kan sikre informasjon og bevis på dette for videre etterforskning. 
+Om dere kommer over tegn på at en løsning har blitt angrepet eller brukt til et angrep, er det også viktig å si ifra, slik at kunden kan sikre informasjon og bevis på dette for videre etterforskning. 
 
 {{< caution title="Husk" >}}
 Håndtering av, og etterforskning av hendelser er et eget fagfelt. Dersom dere kommer over tegn på at noe kan ha skjedd, _si ifra_ til deres kontaktpunkt og avvent beskjed fra denne _før_ dere gjør noe.

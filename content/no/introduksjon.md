@@ -7,7 +7,7 @@ description: >
 ---
 Det overordnede innholdet og temaene som diskuteres på disse sidene er også støttende for prosjektledere, rådgivere og andre som skal følge opp sikkerhet i prosjekter.
 
-Bouvet er [sertifisert under ISO27001](https://www.bouvet.no/om-bouvet/vare-iso-sertifiseringer), som også stiller krav til sikkerhet i leveranser. [Sjekklista](./sjekklisten.md) vil gi deg et godt utgangspunkt for tiltak som dekker vanlige sikkerhetshull og hjelper til å sikre kvalitet i leveransen. Hvert av punktene i sjekklista dekkes av mer utfyllende informasjon slik at det skal være lett å komme igang uten forkunnskaper om et tema. 
+Bouvet er [sertifisert under ISO27001](https://www.bouvet.no/om-bouvet/vare-iso-sertifiseringer), som også stiller krav til sikkerhet i leveranser. [Sjekklista](./sjekklisten.md) vil gi deg et godt utgangspunkt for tiltak som dekker vanlige sikkerhetshull og hjelper til å sikre kvalitet i leveransen. Hvert av punktene i sjekklista dekkes av mer utfyllende informasjon slik at det skal være lett å komme i gang uten forkunnskaper om et tema. 
 
 Målet er ikke at __sikkerhet.bouvet.no__ skal dekke absolutt alt, men du skal sitte igjen med forslag til tiltak og et vokabular som hjelper deg videre. Alle tema som presenteres skal også peke videre på eksterne ressurser som kan gi enda mer informasjon. 
 
@@ -39,7 +39,7 @@ Vil dere ha et mer formelt rammeverk å måle dere mot, er [OWASP SAMM](https://
 
 ## Hvordan bruke sikkerhet.bouvet.no?
 
-Du kan enten klikke deg inn å lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
-Eventuelt kan du og ditt team kan gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
+Du kan enten klikke deg inn og lese om et enkelt emne du er usikker på, eller ønsker tips rundt.  
+Eventuelt kan du og ditt team gå systematisk gjennom hvert kapittel og notere hva som er i orden og hva som bør utbedres i deres prosjekt.  
 
-[Sjekklisten for sikkerhet](sjekklisten) kan brukes som et startpunkt for å vurdere prosjektets sikkerhet. Hvert punkt refererer videre til mer utfyllende informasjon. Den kan også lastes ned og implementeres som en del av kildekoden i ditt prosjektet.
+[Sjekklisten for sikkerhet](sjekklisten) kan brukes som et startpunkt for å vurdere prosjektets sikkerhet. Hvert punkt refererer videre til mer utfyllende informasjon. Den kan også lastes ned og implementeres som en del av kildekoden i ditt prosjekt.

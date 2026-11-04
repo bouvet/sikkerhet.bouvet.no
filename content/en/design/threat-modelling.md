@@ -10,7 +10,7 @@ __This is a brief introduction to threat modeling. Methods and tools are mention
 
 You may have already done simple threat modeling without realizing it. For example, have you ever thought about why the users of the system you're creating need to log in with a username and password?
 
-When these choices were made, you automatically performed simple threat modeling. You certainly don't want unauthorized individuals to access data in your system, and you don't want anyone to see the data transferred between your users and your website.
+When these choices were made, you automatically performed simple threat modeling. You certainly don't want unauthorized individuals to access data in your system, and you don't want just anyone to see the data transferred between your users and your website.
 
 The whole point of threat modeling is to think like an attacker.
 
@@ -67,13 +67,13 @@ For example, an identified threat can lead to a need for:
 
 For AI systems, the threat model should also be used when assessing changes to models, data sources, prompt templates, evaluation sets, and monitoring. Changes here can introduce new threats even if application code is unchanged.
 
-The threat model must be versioned and kept up to date. Once threats have been identified, countermeasures must be described, and their effectiveness assessed. A common approach is to give the threat a value indicating severity, for example, 1-10 where 10 is the worst. Countermeasures are assessed similarly but with the opposite scale where 1 has little effect and 10 (or up to criticality) has the highest effect. The sum of these gives a residual risk that indicates the remaining risk:
+The threat model must be versioned and kept up to date. Once threats have been identified, countermeasures must be described, and their effectiveness assessed. A common approach is to give the threat a value indicating severity, for example, 1-10 where 10 is the worst. Countermeasures are assessed similarly but with the opposite scale where 1 has little effect and 10 (or up to criticality) has the highest effect. The difference between these (criticality minus countermeasures) gives a residual risk that indicates the remaining risk:
 
 ```
 Identified Threats          Criticality     Countermeasures Residual Risk
-Threat  1                   8               8               0
-Threat  2                   2               0               2
-Threat  3                   4               3               1
+Threat 1                    8               8               0
+Threat 2                    2               0               2
+Threat 3                    4               3               1
 Total                       14              11              3
 ```
 
@@ -100,13 +100,13 @@ For systems in active operation, the threat model should also be used when decid
 
 ### Courses and Lectures
 
-- [Threat Modeling Fundamentals (pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
+- [Threat Modeling Fundamentals (Pluralsight)](https://app.pluralsight.com/library/courses/threat-modeling-fundamentals/)
 - [Threat Modeling - what is it? (Bouvet One 2020, internal link)](https://web.microsoftstream.com/video/fda76058-2cf6-4eda-91e2-56aea56d0628)
 - [An Introduction to threat modeling (Javazone 2018)](https://vimeo.com/234010802)
 - [Threat Modeling in 2019 (RSA Conference 2019)](https://www.youtube.com/watch?v=ZoxHIpzaZ6U)
 
 ### Other Sources
-- [Threat Modelling Manifesto](https://www.threatmodelingmanifesto.org)
+- [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
 - [Threat modeling](https://infosec.sintef.no/informasjonssikkerhet/2018/06/trusselmodellering/) - Martin Gilje Jaatun, Senior Researcher, Dr. Philos, SINTEF
 - [OWASP Application Threat Modeling](https://www.owasp.org/index.php/Application_Threat_Modeling)
 - [Attack Trees (Bruce Schneier)](https://www.schneier.com/academic/archives/1999/12/attack_trees.html)

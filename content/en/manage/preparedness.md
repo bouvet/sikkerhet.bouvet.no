@@ -51,7 +51,7 @@ An example recipe for the solution outlined in the [article on system diagrams](
 7. Verify that the application works
 8. Publish PowerBI report
     * Verify that it can read data from the backend
-9. Turn on access for end-users so they can use the application again
+9. Turn on access for end users so they can use the application again
 
 It is worth mentioning that each of the points may need additional information, with references to access packages or group memberships for the person restoring to gain the necessary access.
 

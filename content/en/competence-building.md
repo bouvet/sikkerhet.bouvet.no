@@ -12,12 +12,13 @@ It is important that the team reviews the entire development process in all phas
 
 We have many different security environments and individuals with high competence who can contribute within Bouvet; if your team needs help, feel free to bring it up in your local Security Champions channel on Bouvet-Slack, ```#sikkerhet``` or with your regional quality leader.
 
+For teams that want to work more systematically with culture and awareness, [Tips for Building a Good Security Culture](https://www.bouvet.no/bouvet-deler/Tips-til-%C3%A5-bygge-god-sikkerhetskultur) (in Norwegian) can be a useful supplement. The podcast episode [Is Change Management the Key to a Secure Organization?](https://www.bouvet.no/podcasts/endringsledelseogsikkerhet) (in Norwegian) is also relevant for teams and leaders who want to understand how security must be anchored more broadly than in technology alone.
 
 ## Training courses
 Bouvet offers training courses in many different areas, also including security. If your team needs training outside of what Security Journey has to offer, this might be an option. Please contact the [training department](https://kurs.bouvet.no) if you cannot find a suitable training course.
 
 ## Security Journey
-Bouvet has purchased licenses for Security Journey, which offers security-related training in many different areas. Each training course consists of multiple modules, which contains either a video+text followed by a short quiz, _or_ a coding challenge which gives you VS Code, a proxy and a browser. The coding challenges can be solved using any of the major programming languages, ensuring that most developers should be comfortable giving them a try. All training courses are delivered through your browser, and requires no local installation.
+Bouvet has purchased licenses for Security Journey, which offers security-related training in many different areas. Each training course consists of multiple modules, which contain either a video+text followed by a short quiz, _or_ a coding challenge which gives you VS Code, a proxy and a browser. The coding challenges can be solved using any of the major programming languages, ensuring that most developers should be comfortable giving them a try. All training courses are delivered through your browser, and require no local installation.
 
 Below is a list of the most relevant training courses for us. We're currently deploying the platform, more information on how to obtain a license will be published on Min Side in the near future.
 
